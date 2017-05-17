@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14"
+            class="CIM.CIMPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#IEC61970"
+            class="CIM.IEC61970.IEC61970Package"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#OperationalLimits"
+            class="CIM.IEC61970.OperationalLimits.OperationalLimitsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#EnergyScheduling"
+            class="CIM.IEC61970.Informative.EnergyScheduling.EnergySchedulingPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfERPSupport"
+            class="CIM.IEC61970.Informative.InfERPSupport.InfERPSupportPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfAssetModels"
+            class="CIM.IEC61970.Informative.InfAssetModels.InfAssetModelsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfAssets"
+            class="CIM.IEC61970.Informative.InfAssets.InfAssetsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfGMLSupport"
+            class="CIM.IEC61970.Informative.InfGMLSupport.InfGMLSupportPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfCore"
+            class="CIM.IEC61970.Informative.InfCore.InfCorePackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#MarketOperations"
+            class="CIM.IEC61970.Informative.MarketOperations.MarketOperationsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfOperations"
+            class="CIM.IEC61970.Informative.InfOperations.InfOperationsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfWork"
+            class="CIM.IEC61970.Informative.InfWork.InfWorkPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfPaymentMetering"
+            class="CIM.IEC61970.Informative.InfPaymentMetering.InfPaymentMeteringPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfCommon"
+            class="CIM.IEC61970.Informative.InfCommon.InfCommonPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfLocations"
+            class="CIM.IEC61970.Informative.InfLocations.InfLocationsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Financial"
+            class="CIM.IEC61970.Informative.Financial.FinancialPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Reservation"
+            class="CIM.IEC61970.Informative.Reservation.ReservationPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfMetering"
+            class="CIM.IEC61970.Informative.InfMetering.InfMeteringPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfCustomers"
+            class="CIM.IEC61970.Informative.InfCustomers.InfCustomersPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfLoadControl"
+            class="CIM.IEC61970.Informative.InfLoadControl.InfLoadControlPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#InfTypeAsset"
+            class="CIM.IEC61970.Informative.InfTypeAsset.InfTypeAssetPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Meas"
+            class="CIM.IEC61970.Meas.MeasPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#GenerationDynamics"
+            class="CIM.IEC61970.Generation.GenerationDynamics.GenerationDynamicsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Production"
+            class="CIM.IEC61970.Generation.Production.ProductionPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#SCADA"
+            class="CIM.IEC61970.SCADA.SCADAPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Wires"
+            class="CIM.IEC61970.Wires.WiresPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Core"
+            class="CIM.IEC61970.Core.CorePackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#StateVariables"
+            class="CIM.IEC61970.StateVariables.StateVariablesPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Equivalents"
+            class="CIM.IEC61970.Equivalents.EquivalentsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Domain"
+            class="CIM.IEC61970.Domain.DomainPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#LoadModel"
+            class="CIM.IEC61970.LoadModel.LoadModelPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Protection"
+            class="CIM.IEC61970.Protection.ProtectionPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Outage"
+            class="CIM.IEC61970.Outage.OutagePackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#ControlArea"
+            class="CIM.IEC61970.ControlArea.ControlAreaPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Contingency"
+            class="CIM.IEC61970.Contingency.ContingencyPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Topology"
+            class="CIM.IEC61970.Topology.TopologyPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#PackageDependencies"
+            class="CIM.PackageDependencies.PackageDependenciesPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#IEC61968"
+            class="CIM.IEC61968.IEC61968Package"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Metering"
+            class="CIM.IEC61968.Metering.MeteringPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#WiresExt"
+            class="CIM.IEC61968.WiresExt.WiresExtPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Common"
+            class="CIM.IEC61968.Common.CommonPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#AssetModels"
+            class="CIM.IEC61968.AssetModels.AssetModelsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#PaymentMetering"
+            class="CIM.IEC61968.PaymentMetering.PaymentMeteringPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Customers"
+            class="CIM.IEC61968.Customers.CustomersPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#LoadControl"
+            class="CIM.IEC61968.LoadControl.LoadControlPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Assets"
+            class="CIM.IEC61968.Assets.AssetsPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated CIM -->
+      <package
+            uri="http://iec.ch/TC57/2009/CIM-schema-cim14#Work"
+            class="CIM.IEC61968.Work.WorkPackage"
+            genModel="model/CIM.genmodel"/>
+   </extension>
+
+</plugin>

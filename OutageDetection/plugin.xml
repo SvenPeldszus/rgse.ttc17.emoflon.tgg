@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated outageDetection -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/ConsumerReachabilityView"
+            class="outageDetectionJointarget.OutageDetectionJointargetPackage"
+            genModel="model/outageDetection.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated outageDetection -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/ConsumerReachabilityView.trace"
+            class="outageDetectionMjtrace.OutageDetectionMjtracePackage"
+            genModel="model/outageDetection.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OutageDetection -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/ConsumerReachabilityView"
+            class="outageDetection.outageDetectionJointarget.OutageDetectionJointargetPackage"
+            genModel="model/OutageDetection.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated OutageDetection -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/ConsumerReachabilityView.trace"
+            class="outageDetection.outageDetectionMjtrace.OutageDetectionMjtracePackage"
+            genModel="model/OutageDetection.genmodel"/>
+   </extension>
+</plugin>

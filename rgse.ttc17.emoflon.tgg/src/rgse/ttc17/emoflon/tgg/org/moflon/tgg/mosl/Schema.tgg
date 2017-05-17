@@ -1,0 +1,43 @@
+// Add imports here
+#import "platform:/plugin/rgse.ttc17.gluemodel/model/gluemodel.ecore"
+#import "platform:/plugin/COSEM/model/COSEM.ecore"
+#import "platform:/plugin/CIM/model/CIM.ecore"
+#import "platform:/plugin/OutageDetection/model/OutageDetection.ecore"
+
+#schema tcc.tgg
+	
+#source {
+	COSEM
+	CIM
+	gluemodel
+}
+
+#target { 
+	outageDetection.outageDetectionJointarget
+} 
+
+#correspondence {
+	positionPointToPositionPoint {
+		#src-> PositionPoint
+		#trg-> PositionPoint
+	}
+	
+	locationToLocation {
+		#src->Location
+		#trg->Location
+	}
+	
+	meterAssetToEnergyConsumer{
+		#src->MeterAsset
+		#trg->EnergyConsumer
+	}
+	physicalDeviceToEnergyConsumer{
+		#src->PhysicalDevice
+		#trg->EnergyConsumer
+	}
+	
+}
+
+#attributeConditions {
+	
+}

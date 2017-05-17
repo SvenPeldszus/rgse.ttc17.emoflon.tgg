@@ -1,0 +1,75 @@
+#using tcc.tgg.*
+#using AttrCondDefLibrary.*
+
+#abstract #rule Base #with tcc.tgg
+
+#source { 
+	root : Root {
+		-cosem->cosem
+		-cim->cim
+	}
+
+	cosem : COSEMRoot {
+		++-PhysicalDevice->device
+	}
+	++ device: PhysicalDevice {
+		
+	}
+	
+	cim :CIMRoot{
+		++-IDobject->positionPoint
+	}
+	++ positionPoint : PositionPoint {
+		++-Location->location
+	}
+	++ location : Location {
+		++-Assets->asset
+	}
+	++asset : MeterAsset {
+		++-ServiceDeliveryPoint->deliver
+	}
+	deliver:ServiceDeliveryPoint {
+		-EnergyConsumer->energy
+	}
+	energy : EnergyConsumer{
+		
+	}
+}
+
+#target {
+	++ trgPositionPoint : PositionPoint {
+		
+	}
+	++ trgLocation : Location {
+		++-Position->trgPositionPoint
+	}
+	++ trgConsumer : EnergyConsumer {
+		++ -Location->trgLocation
+	}
+}
+
+#correspondence {
+	++ positionCorr :positionPointToPositionPoint {
+		#src->positionPoint
+		#trg->trgPositionPoint
+	}
+	++ locationCorr : locationToLocation {
+		#src->location
+		#trg->trgLocation
+	}
+	++ deviceCorr : physicalDeviceToEnergyConsumer {
+		#src->device
+		#trg->trgConsumer
+	}
+	++ assetCorr :meterAssetToEnergyConsumer{
+		#src->asset
+		#trg->trgConsumer
+	}
+}
+
+#attributeConditions {
+	eq(device.ID, asset.mRID)
+	eq(positionPoint.xPosition,trgPositionPoint.xPosition)
+	eq(positionPoint.yPosition,trgPositionPoint.yPosition)
+	eq(positionPoint.zPosition,trgPositionPoint.zPosition)
+}
