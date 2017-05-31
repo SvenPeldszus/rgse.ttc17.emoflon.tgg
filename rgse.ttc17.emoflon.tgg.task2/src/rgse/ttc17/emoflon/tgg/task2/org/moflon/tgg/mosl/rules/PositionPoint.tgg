@@ -1,0 +1,27 @@
+#using rgse.ttc17.emoflon.tgg.task2.*
+#using AttrCondDefLibrary.*
+
+#rule PositionPoint  #with rgse.ttc17.emoflon.tgg.task2
+
+#source {
+	++ positionPoint : PositionPoint {
+	}
+}
+
+#target {
+	++ trgPositionPoint : PositionPoint {
+	}
+}
+
+#correspondence {
+	++ positionCorr : PositionPointToPositionPoint {
+		#src->positionPoint
+		#trg->trgPositionPoint
+	}
+}
+
+#attributeConditions {
+	eq(positionPoint.xPosition, trgPositionPoint.xPosition)
+	eq(positionPoint.yPosition, trgPositionPoint.yPosition)
+	eq(positionPoint.zPosition, trgPositionPoint.zPosition)
+}

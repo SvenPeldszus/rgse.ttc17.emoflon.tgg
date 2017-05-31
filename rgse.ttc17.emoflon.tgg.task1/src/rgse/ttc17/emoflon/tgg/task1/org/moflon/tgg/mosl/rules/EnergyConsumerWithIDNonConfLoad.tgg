@@ -1,0 +1,69 @@
+#using rgse.ttc17.emoflon.tgg.task1.*
+#using AttrCondDefLibrary.*
+
+#rule EnergyConsumerWithIDNonConfLoad #extends EnergyConsumerWithID #with rgse.ttc17.emoflon.tgg.task1
+
+#source { 
+	root : Root {
+		-cosem->cosem
+		++-assets->asset
+	}
+	cosem : COSEMRoot {
+		++-PhysicalDevice->device
+	}	
+	++ device: PhysicalDevice {
+		++-AutoConnect->connect	
+		++-ElectricityValues->electric
+	}
+	connect : AutoConnectObject {
+		
+	}
+	electric : ElectricityValues{
+		
+	}
+	
+	++asset : MeterAsset {
+		++-ServiceDeliveryPoint->deliver
+	}
+	deliver : ServiceDeliveryPoint{
+		-EnergyConsumer->consumer
+	}
+	consumer : NonConformLoad {
+		-LoadGroup->group	
+	}
+	group : NonConformLoadGroup{
+		-SubLoadArea->area
+	}
+	area : SubLoadArea {
+		-ControlArea->control
+	}
+	control : ControlArea{
+		
+	}
+}
+
+#target {
+	++ trgConsumer : EnergyConsumer {
+		
+	}
+}
+
+#correspondence {
+	++ deviceCorr : PhysicalDeviceToEnergyConsumer {
+		#src->device
+		#trg->trgConsumer
+	}
+	++ assetCorr :MeterAssetToEnergyConsumer{
+		#src->asset
+		#trg->trgConsumer
+	}
+	
+}
+
+#attributeConditions {
+	eq(control.mRID, trgConsumer.ControlAreaID)
+	eq(asset.mRID, device.ID)
+	setReachability(connect.Connection, trgConsumer.Reachability)
+	eq(electric.ApparentPowermL1, trgConsumer.PowerA)
+	eq(consumer.mRID, trgConsumer.ID)
+}

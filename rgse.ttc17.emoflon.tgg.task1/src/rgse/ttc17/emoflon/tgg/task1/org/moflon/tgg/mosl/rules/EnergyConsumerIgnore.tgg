@@ -1,0 +1,30 @@
+#using rgse.ttc17.emoflon.tgg.task1.*
+#using AttrCondDefLibrary.*
+
+#rule EnergyConsumerIgnore #with rgse.ttc17.emoflon.tgg.task1
+
+#source { 
+	root : Root {
+		++-assets->asset
+	}
+	++asset : MeterAsset {
+		
+	}
+}
+
+#target {
+	++ trgConsumer : EnergyConsumer {
+		ID:="#DeleteMe"
+	}
+}
+
+#correspondence {
+	++ assetCorr :MeterAssetToEnergyConsumer{
+		#src->asset
+		#trg->trgConsumer
+	}
+	
+}
+
+#attributeConditions {
+}
