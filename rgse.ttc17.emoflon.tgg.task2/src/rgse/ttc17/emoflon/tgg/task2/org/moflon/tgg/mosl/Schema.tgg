@@ -1,6 +1,6 @@
 // Add imports here
 #import "platform:/plugin/rgse.ttc17.metamodels.src/model/Gluemodel.ecore"
-#import "platform:/plugin/rgse.ttc17.metamodels.trg/model/outageDetection-target.ecore"
+#import "platform:/plugin/rgse.ttc17.metamodels.trg.outage.prevention/model/outagePrevention-target.ecore"
 
 #schema rgse.ttc17.emoflon.tgg.task2
 	
@@ -9,7 +9,7 @@
 }
 
 #target { 
-	outageDetectionJointarget
+	outagePreventionJointarget
 } 
 
 #correspondence {

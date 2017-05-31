@@ -18,9 +18,9 @@ Require-Bundle: org.eclipse.emf.ecore,
  SDMLanguage,
  org.moflon.tgg.language,
  org.moflon.tgg.runtime,
- rgse.ttc17.metamodels.trg,
  rgse.ttc17.metamodels.src;bundle-version="0.1.0",
- org.junit
+ org.junit,
+ rgse.ttc17.metamodels.trg.outage.prevention;bundle-version="0.1.0"
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

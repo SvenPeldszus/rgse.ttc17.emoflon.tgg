@@ -34,9 +34,6 @@ import gluemodel.Root;
 import gluemodel.CIM.CIMRoot;
 import gluemodel.CIM.IEC61968.Metering.MeterAsset;
 import gluemodel.COSEM.COSEMRoot;
-import outageDetectionJointarget.PositionPoint;
-import rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumer;
-import rgse.ttc17.emoflon.tgg.task2.Rules.Location;
 import rgse.ttc17.emoflon.tgg.task2.org.moflon.tie.Task2Trafo;
 
 public class GlueModelCreator {
@@ -52,16 +49,7 @@ public class GlueModelCreator {
 			@Override
 			public RuleResult chooseOne(Collection<RuleResult> alternatives) {
 				System.err.println("chooseOne");
-				for(RuleResult rule : alternatives){
-					if(rule.isRule(EnergyConsumer.class.getSimpleName())){
-						return rule;
-					}
-				}
-				for(RuleResult rule : alternatives){
-					if(rule.isRule(Location.class.getSimpleName())){
-						return rule;
-					}
-				}
+				
 				return alternatives.stream().findAny().get();
 			}
 		});
@@ -122,20 +110,7 @@ public class GlueModelCreator {
 		if (trg instanceof TempOutputContainer) {
 			TempOutputContainer container = (TempOutputContainer) trg;
 			for(EObject eObject : container.getPotentialRoots()){
-				if (eObject instanceof outageDetectionJointarget.EnergyConsumer) {
-					outageDetectionJointarget.EnergyConsumer consumer = (outageDetectionJointarget.EnergyConsumer) eObject;
-					if(consumer.getID() == null || !"#DeleteMe".contentEquals(consumer.getID())){
-						keep.add(consumer);
-						outageDetectionJointarget.Location location = consumer.getLocation();
-						if(location != null){
-							keep.add(location);
-							PositionPoint position = location.getPosition();
-							if(position != null){
-								keep.add(position);
-							}
-						}
-					}
-				}
+				
 			}
 			
 		}

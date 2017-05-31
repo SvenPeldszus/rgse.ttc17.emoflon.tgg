@@ -17,7 +17,7 @@ Require-Bundle: org.eclipse.emf.ecore,
  SDMLanguage,
  org.moflon.tgg.language,
  org.moflon.tgg.runtime,
- rgse.ttc17.metamodels.trg,
+ rgse.ttc17.metamodels.trg.outage.detection,
  rgse.ttc17.metamodels.src;bundle-version="0.1.0",
  org.junit
 Bundle-ManifestVersion: 2

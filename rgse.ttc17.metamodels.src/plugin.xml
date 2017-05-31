@@ -422,4 +422,108 @@
             genModel="model/Gluemodel.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard"
+            class="gluemodel.substationStandard.SubstationStandardPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/DomainLNs"
+            class="gluemodel.substationStandard.LNNodes.DomainLNs.DomainLNsPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupP"
+            class="gluemodel.substationStandard.LNNodes.LNGroupP.LNGroupPPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupR"
+            class="gluemodel.substationStandard.LNNodes.LNGroupR.LNGroupRPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupC"
+            class="gluemodel.substationStandard.LNNodes.LNGroupC.LNGroupCPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupA"
+            class="gluemodel.substationStandard.LNNodes.LNGroupA.LNGroupAPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupM"
+            class="gluemodel.substationStandard.LNNodes.LNGroupM.LNGroupMPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupX"
+            class="gluemodel.substationStandard.LNNodes.LNGroupX.LNGroupXPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupT"
+            class="gluemodel.substationStandard.LNNodes.LNGroupT.LNGroupTPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupY"
+            class="gluemodel.substationStandard.LNNodes.LNGroupY.LNGroupYPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/substationStandard/groupZ"
+            class="gluemodel.substationStandard.LNNodes.LNGroupZ.LNGroupZPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/dataclasses"
+            class="gluemodel.substationStandard.Dataclasses.DataclassesPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Gluemodel -->
+      <package
+            uri="http://www.transformation-tool-contest.eu/2017/smartGrids/enumerations"
+            class="gluemodel.substationStandard.Enumerations.EnumerationsPackage"
+            genModel="model/Gluemodel.genmodel"/>
+   </extension>
+
 </plugin>

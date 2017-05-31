@@ -1,28 +1,27 @@
 #using rgse.ttc17.emoflon.tgg.task2.*
 #using AttrCondDefLibrary.*
 
-#rule EnergyConsumerIgnore #with rgse.ttc17.emoflon.tgg.task2
+#rule PMUVoltageMeter #with rgse.ttc17.emoflon.tgg.task2
 
 #source { 
 	root : Root {
+		-substandard->substandard
 		++-assets->asset
 	}
+	substandard : Substandard {
+	}	
+	
 	++asset : MeterAsset {
-		
 	}
 }
 
 #target {
-	++ trgConsumer : EnergyConsumer {
-		ID:="#DeleteMe"
+	++ meter : PMUVoltageMeter {
+		
 	}
 }
 
 #correspondence {
-	++ assetCorr :MeterAssetToEnergyConsumer{
-		#src->asset
-		#trg->trgConsumer
-	}
 	
 }
 
