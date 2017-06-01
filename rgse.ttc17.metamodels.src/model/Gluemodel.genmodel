@@ -19,6 +19,18 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetMMXUPair/a"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetMMXUPair/b"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/AMag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/AAng"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/BMag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/BAng"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/CMag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/CAng"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/NeutMag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/NeutAng"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/NetMag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/NetAng"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/ResMag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/ResAng"/>
     </genClasses>
     <genClasses ecoreClass="Gluemodel.ecore#//MeterAssetPhysicalDevicePair">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetPhysicalDevicePair/a"/>

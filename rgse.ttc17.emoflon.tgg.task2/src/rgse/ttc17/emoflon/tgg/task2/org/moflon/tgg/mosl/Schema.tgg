@@ -13,13 +13,18 @@
 } 
 
 #correspondence {
-	ControlAreaToEnergyConsumer {
-		#src->ControlArea
-		#trg->EnergyConsumer
+	MeterAssetToMMXUToVoltageMeter {
+		#src->MeterAssetMMXUPair
+		#trg->PMUVoltageMeter
 	}
-	PositionPointToPositionPoint {
-		#src-> PositionPoint
-		#trg-> PositionPoint
+	MeterAssetToPMUVoltageMeter {
+		#src->MeterAsset
+		#trg->PMUVoltageMeter
+	}
+	
+	MMXUToPMUVoltageMeter {
+		#src->MMXU
+		#trg->PMUVoltageMeter
 	}
 	
 	LocationToLocation {
@@ -27,21 +32,66 @@
 		#trg->Location
 	}
 	
-	MeterAssetToEnergyConsumer{
-		#src->MeterAsset
-		#trg->EnergyConsumer
-	}
-	PhysicalDeviceToEnergyConsumer{
-		#src->PhysicalDevice
-		#trg->EnergyConsumer
+	PositionPointToPositionPoint {
+		#src->PositionPoint
+		#trg->PositionPoint
 	}
 	
+	PowerSystemResourceToPowerSystemResource {
+		#src->PowerSystemResource
+		#trg->PowerSystemResource
+	}
+	
+	TerminalToTerminal {
+		#src->Terminal
+		#trg->Terminal
+	}
+	
+	TieFlowToTieFlow {
+		#src->TieFlow
+		#trg->TieFlow
+	}
+	ControlAreaToControlSrea {
+		#src->ControlArea
+		#trg->ControlArea
+	}
+	MeterAssetToPrivateMeterVoltage {
+		#src->MeterAsset
+		#trg->PrivateMeterVoltage
+	}
+	PhysicalDeviceToPrivateMeterVoltage {
+		#src->PhysicalDevice
+		#trg->PrivateMeterVoltage
+	}
+	ServiceDeliveryPointToServiceDeliveryPoint {
+		#src->ServiceDeliveryPoint
+		#trg->ServiceDeliveryPoint
+	}
+	EnergyConsumerToEnergyConsumer {
+		#src->EnergyConsumer
+		#trg->EnergyConsumer
+	}
+	ConformLoadGroupToConformLoadGroup {
+		#src->ConformLoadGroup
+		#trg->ConformLoadGroup
+	}
+	NonConformLoadGroupNonToConformLoadGroup {
+		#src->NonConformLoadGroup
+		#trg->NonConformLoadGroup
+	}
+	SubLoadAreaToSubLoadArea {
+		#src->SubLoadArea
+		#trg->SubLoadArea
+	}
+	LoadAreaToLoadArea {
+		#src->LoadArea
+		#trg->LoadArea
+	}
 }
 
 #attributeConditions {
-	
 	#userDefined
-	setReachability(0:EBoolean,1:EInt){
+	eqFloatDouble(0:EFloat, 1:EDouble){
 		#sync: BB, BF
 		#gen:
 	}
