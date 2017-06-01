@@ -11,6 +11,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//Root/cosem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//Root/assets"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//Root/substandard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//Root/mmxus"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//Root/meterAssetToPhysicalDevice"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//Root/meterAssetToMXXU"/>
+    </genClasses>
+    <genClasses ecoreClass="Gluemodel.ecore#//MeterAssetMMXUPair">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetMMXUPair/a"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetMMXUPair/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetMMXUPair/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Gluemodel.ecore#//MeterAssetPhysicalDevicePair">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetPhysicalDevicePair/a"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Gluemodel.ecore#//MeterAssetPhysicalDevicePair/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Gluemodel.ecore#//MeterAssetPhysicalDevicePair/name"/>
     </genClasses>
     <nestedGenPackages prefix="COSEM" disposableProviderFactory="true" ecorePackage="Gluemodel.ecore#//COSEM">
       <genClasses ecoreClass="Gluemodel.ecore#//COSEM/LogicalDevice">

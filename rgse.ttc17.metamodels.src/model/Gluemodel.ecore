@@ -11,6 +11,22 @@
         eType="#//CIM/IEC61968/Metering/MeterAsset"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="substandard" eType="#//substationStandard/Substandard"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mmxus" upperBound="-1"
+        eType="#//substationStandard/LNNodes/LNGroupM/MMXU"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meterAssetToPhysicalDevice"
+        upperBound="-1" eType="#//MeterAssetPhysicalDevicePair" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="meterAssetToMXXU" upperBound="-1"
+        eType="#//MeterAssetMMXUPair" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeterAssetMMXUPair">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//CIM/IEC61968/Metering/MeterAsset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//substationStandard/LNNodes/LNGroupM/MMXU"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeterAssetPhysicalDevicePair">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//CIM/IEC61968/Metering/MeterAsset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//COSEM/PhysicalDevice"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eSubpackages name="COSEM" nsURI="http://www.transformation-tool-contest.eu/2017/smartGrids/cosem"
       nsPrefix="cosem">
