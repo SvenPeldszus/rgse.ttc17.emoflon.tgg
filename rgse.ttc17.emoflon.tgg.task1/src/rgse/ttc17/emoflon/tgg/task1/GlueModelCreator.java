@@ -83,20 +83,8 @@ public class GlueModelCreator {
 		
 		fwdResource.getContents().add(root);
 		
-		
-		File folder = new File("instances");
-		folder.mkdirs();
-		File file = new File(folder, "fwd.src.xmi");
-		try {
-			file.createNewFile();
-			fwdResource.save(new java.io.FileOutputStream(file), Collections.EMPTY_MAP);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		
 		tgg.setSrc(root);
-		tgg.performForward();
+		tgg.integrateForward();
 		
 		EObject trg = tgg.getTrg();
 		
