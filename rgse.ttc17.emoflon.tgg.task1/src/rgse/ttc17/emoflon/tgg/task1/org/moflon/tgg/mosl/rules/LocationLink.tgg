@@ -4,6 +4,9 @@
 #rule LocationLink #with rgse.ttc17.emoflon.tgg.task1
 
 #source { 
+	pair : MeterAssetPhysicalDevicePair {
+		-a->asset
+	}
 	asset : MeterAsset{
 		++-Location->location
 	}

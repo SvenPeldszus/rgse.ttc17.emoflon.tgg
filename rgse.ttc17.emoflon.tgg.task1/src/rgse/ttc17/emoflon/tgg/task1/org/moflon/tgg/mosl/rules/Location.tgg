@@ -4,22 +4,69 @@
 #rule Location #with rgse.ttc17.emoflon.tgg.task1
 
 #source { 
-	++location : Location {
+	pair : MeterAssetPhysicalDevicePair {
+		-a->asset
+	}
+	asset : MeterAsset{
+		++-Location->srcLocation
+	}
+	++srcLocation : Location {
 		
 	}
 }
 
 #target {
-	++ trgLocation : Location {
+	consumer : EnergyConsumer {
+		++-Location->trgLocation
+	}
+	++trgLocation : Location {
 	}
 }
 
 #correspondence {
-	++ locationCorr : LocationToLocation {
-		#src->location
+	assetToConumer : MeterAssetToEnergyConsumer {
+		#src->asset
+		#trg->consumer
+	}
+	++srcLocationCorr : LocationToLocation {
+		#src->srcLocation
 		#trg->trgLocation
 	}
 }
 
 #attributeConditions {
 }
+
+#rule SDPLocation #extends Location #with rgse.ttc17.emoflon.tgg.task1
+
+#source { 
+	++srcLocation : SDPLocation {
+		
+	}
+}
+
+#rule ServiceLocation #extends Location #with rgse.ttc17.emoflon.tgg.task1
+
+#source { 
+	++srcLocation : ServiceLocation {
+		
+	}
+}
+
+#rule WorkLocation #extends Location #with rgse.ttc17.emoflon.tgg.task1
+
+#source { 
+	++srcLocation : WorkLocation {
+		
+	}
+}
+
+#rule Zone #extends Location #with rgse.ttc17.emoflon.tgg.task1
+
+#source { 
+	++srcLocation : Zone {
+		
+	}
+}
+
+

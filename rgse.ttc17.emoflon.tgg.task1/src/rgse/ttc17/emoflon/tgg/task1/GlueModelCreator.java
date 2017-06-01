@@ -49,26 +49,7 @@ public class GlueModelCreator {
 		String cimString = "CIM_DCIM.xmi";
 		String cosemString = "COSEM.xmi";
 		
-		Task1Trafo tgg = new Task1Trafo();
-		tgg.setConfigurator(new Configurator(){
-			
-			@Override
-			public RuleResult chooseOne(Collection<RuleResult> alternatives) {
-				System.err.println("chooseOne");
-				for(RuleResult rule : alternatives){
-					if(rule.isRule(EnergyConsumer.class.getSimpleName())){
-						return rule;
-					}
-				}
-				for(RuleResult rule : alternatives){
-					if(rule.isRule(Location.class.getSimpleName())){
-						return rule;
-					}
-				}
-				return alternatives.stream().findAny().get();
-			}
-		});
-				
+		Task1Trafo tgg = new Task1Trafo();				
 		ResourceSet rs = tgg.getResourceSet();
 		
 		Bundle plugin = Platform.getBundle("rgse.ttc17.emoflon.tgg.task1");
@@ -93,10 +74,6 @@ public class GlueModelCreator {
 		COSEMRoot cosem = (COSEMRoot) cosemResource.getContents().get(0);
 		
 		Resource fwdResource = rs.createResource(URI.createURI("fwd.src.xmi"));
-//		fwdResource.getContents().addAll(cimResource.getContents());
-//		cimResource.unload();
-//		fwdResource.getContents().addAll(cosemResource.getContents());
-//		cosemResource.unload();
 		
 		Root root = GluemodelFactory.eINSTANCE.createRoot();
 		root.setCim(cim);
@@ -126,23 +103,7 @@ public class GlueModelCreator {
 		Set<EObject> keep = new HashSet<EObject>();
 		if (trg instanceof TempOutputContainer) {
 			TempOutputContainer container = (TempOutputContainer) trg;
-			for(EObject eObject : container.getPotentialRoots()){
-				if (eObject instanceof outageDetectionJointarget.EnergyConsumer) {
-					outageDetectionJointarget.EnergyConsumer consumer = (outageDetectionJointarget.EnergyConsumer) eObject;
-					if(consumer.getID() == null || !"#DeleteMe".contentEquals(consumer.getID())){
-						keep.add(consumer);
-						outageDetectionJointarget.Location location = consumer.getLocation();
-						if(location != null){
-							keep.add(location);
-							PositionPoint position = location.getPosition();
-							if(position != null){
-								keep.add(position);
-							}
-						}
-					}
-				}
-			}
-			
+			keep.addAll(container.getPotentialRoots());
 		}
 		
 		Resource targetResource = new ResourceSetImpl().createResource(URI.createURI("instances/target.xmi"));

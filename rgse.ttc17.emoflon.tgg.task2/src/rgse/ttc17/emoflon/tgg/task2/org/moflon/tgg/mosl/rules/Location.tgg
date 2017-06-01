@@ -8,9 +8,9 @@
 		-a->asset
 	}
 	asset : MeterAsset {
-		++-Location->location
+		++-Location->srcLocation
 	}
-	++ location : Location {
+	++ srcLocation : Location {
 		
 	}
 }
@@ -29,10 +29,42 @@
 		#trg->consumer
 	}
 	++locationCorr : LocationToLocation {
-		#src->location
+		#src->srcLocation
 		#trg->trgLocation
 	}
 }
 
 #attributeConditions {
+}
+
+#rule SDPLocation #extends Location #with rgse.ttc17.emoflon.tgg.task2
+
+#source { 
+	++srcLocation : SDPLocation {
+		
+	}
+}
+
+#rule ServiceLocation #extends Location #with rgse.ttc17.emoflon.tgg.task2
+
+#source { 
+	++srcLocation : ServiceLocation {
+		
+	}
+}
+
+#rule WorkLocation #extends Location #with rgse.ttc17.emoflon.tgg.task2
+
+#source { 
+	++srcLocation : WorkLocation {
+		
+	}
+}
+
+#rule Zone #extends Location #with rgse.ttc17.emoflon.tgg.task2
+
+#source { 
+	++srcLocation : Zone {
+		
+	}
 }

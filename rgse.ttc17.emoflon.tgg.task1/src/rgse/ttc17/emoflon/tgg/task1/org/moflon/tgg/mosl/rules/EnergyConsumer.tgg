@@ -4,18 +4,10 @@
 #rule EnergyConsumer #with rgse.ttc17.emoflon.tgg.task1
 
 #source { 
-	root : Root {
-		-cosem->cosem
-		++-assets->asset
-		++-meterAssetToPhysicalDevice->pair
-	}
 	++pair : MeterAssetPhysicalDevicePair {
 		++-a->asset
 		++-b->device
 	}
-	cosem : COSEMRoot {
-		-PhysicalDevice->device
-	}	
 	device: PhysicalDevice {
 		-AutoConnect->connect	
 		-ElectricityValues->electric
@@ -53,7 +45,6 @@
 }
 
 #attributeConditions {
-	eq(asset.mRID, device.ID)
 	setReachability(connect.Connection, trgConsumer.Reachability)
 	eq(electric.ApparentPowermL1, trgConsumer.PowerA)
 }
