@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -30,10 +31,12 @@ import org.moflon.tgg.language.algorithm.TempOutputContainer;
 import org.osgi.framework.Bundle;
 
 import gluemodel.GluemodelFactory;
+import gluemodel.MeterAssetPhysicalDevicePair;
 import gluemodel.Root;
 import gluemodel.CIM.CIMRoot;
 import gluemodel.CIM.IEC61968.Metering.MeterAsset;
 import gluemodel.COSEM.COSEMRoot;
+import gluemodel.COSEM.PhysicalDevice;
 import outageDetectionJointarget.PositionPoint;
 import rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer;
 import rgse.ttc17.emoflon.tgg.task1.Rules.Location;
@@ -99,8 +102,10 @@ public class GlueModelCreator {
 		root.setCim(cim);
 		root.setCosem(cosem);
 		root.getAssets().addAll(getAllMeterAssets(cimResource));
+		createMeterAssetsAndPhysicalDevicesPairs(root);
 		
 		fwdResource.getContents().add(root);
+		
 		
 		File folder = new File("instances");
 		folder.mkdirs();
@@ -149,7 +154,24 @@ public class GlueModelCreator {
 			e.printStackTrace();
 		}
 		
-		assertTrue(targetResource.getContents().size()==51);
+		assertEquals(51, targetResource.getContents().size());
+	}
+
+	private void createMeterAssetsAndPhysicalDevicesPairs(Root root) {
+		Map<String,MeterAsset> name2asset = new HashMap<String, MeterAsset>();
+		for (MeterAsset asset : root.getAssets()) {
+			name2asset.put(asset.getMRID(), asset);
+		}
+		for (PhysicalDevice device : root.getCosem().getPhysicalDevice()) {
+			MeterAsset asset = name2asset.get(device.getID());
+			if (asset != null)  {
+				MeterAssetPhysicalDevicePair pair = GluemodelFactory.eINSTANCE.createMeterAssetPhysicalDevicePair();
+				pair.setA(asset);
+				pair.setB(device);
+				pair.setName(device.getID());
+				root.getMeterAssetToPhysicalDevice().add(pair);
+			}
+		}
 	}
 
 	private HashSet<MeterAsset> getAllMeterAssets(Resource resource) {

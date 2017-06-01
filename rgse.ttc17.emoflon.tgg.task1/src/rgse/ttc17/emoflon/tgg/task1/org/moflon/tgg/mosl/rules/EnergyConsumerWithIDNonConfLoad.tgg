@@ -7,13 +7,18 @@
 	root : Root {
 		-cosem->cosem
 		++-assets->asset
+		++-meterAssetToPhysicalDevice->pair
+	}
+	++pair : MeterAssetPhysicalDevicePair {
+		++-a->asset
+		++-b->device
 	}
 	cosem : COSEMRoot {
-		++-PhysicalDevice->device
+		-PhysicalDevice->device
 	}	
-	++ device: PhysicalDevice {
-		++-AutoConnect->connect	
-		++-ElectricityValues->electric
+	device: PhysicalDevice {
+		-AutoConnect->connect	
+		-ElectricityValues->electric
 	}
 	connect : AutoConnectObject {
 		
@@ -22,8 +27,8 @@
 		
 	}
 	
-	++asset : MeterAsset {
-		++-ServiceDeliveryPoint->deliver
+	asset : MeterAsset {
+		-ServiceDeliveryPoint->deliver
 	}
 	deliver : ServiceDeliveryPoint{
 		-EnergyConsumer->consumer
