@@ -18,5 +18,17 @@ Prerequisites
     * Under *Work with...* enter the eMoflon 2.30.0 update site - http://emoflon.github.io/eclipse-plugin/emoflon_2.30.0/updatesite
     * Install all items from the main (non-experimental) category
     * After the installation, restart Eclipse.
- * To see the graphical visualization of the rules, you need to have Graphviz installed as well: [Windows download site](http://www.graphviz.org/Download_windows.php). 
+ * To view the graphical visualization of the rules, Graphviz must be installed on your system: [Windows download site](http://www.graphviz.org/Download_windows.php). 
 * Use the Git perspective to duplicate this repository to your local system, and to import the contained projects into your Eclipse workspace. 
+
+
+
+### View and edit the transformation rules ###
+
+The transformation rules can be found in the following directories:
+  * Task 1: Project *rgse.ttc17.emoflon.tgg.task1* ->  directory *src/rgse.ttc17.emoflon.tgg.task1.org.moflon.tgg.mosl.rules*
+  * Task 2: Project *rgse.ttc17.emoflon.tgg.task2* -> directory *src/rgse.ttc17.emoflon.tgg.task2.org.moflon.tgg.mosl.rules*
+
+To open the visualization of a specific rule, open this rule in the editor and then open the PlantUML view. In the eMoflon perspective, the PlantUML view is found on the right and top of the screen. Alternatively, do *Window -> Show View -> Other -> type "PlantUML"*.
+  
+
