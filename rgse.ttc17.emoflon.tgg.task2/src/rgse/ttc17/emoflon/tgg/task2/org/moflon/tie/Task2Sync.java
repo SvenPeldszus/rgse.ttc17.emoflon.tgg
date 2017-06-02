@@ -1,6 +1,12 @@
 package rgse.ttc17.emoflon.tgg.task2.org.moflon.tie;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.util.Collections;
+
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -43,8 +49,11 @@ public class Task2Sync extends SynchronizationHelper {
 					+ MoflonUtil.getDefaultNameOfFileInProjectWithoutExtension("Task2") + ".sma.xmi", true), true);
 			setRules((StaticAnalysis) r.getContents().get(0));
 		} else {
-			loadRulesFromJarArchive(Task2Sync.class.getProtectionDomain().getCodeSource().getLocation().getPath(),
-					"Task2.sma.xmi");
+			InputStream in = getClass().getResourceAsStream("/model/Task2.sma.xmi");
+			Files.copy(in, new File("Task2.sma.xmi").toPath());
+			Resource r = set.createResource(URI.createURI("Task2.sma.xmi"));
+			r.load(in, Collections.EMPTY_MAP);
+			setRules((StaticAnalysis) r.getContents().get(0));
 		}
 		configurator = new Configurator() {
 		};
