@@ -46,34 +46,24 @@
 #rule ConformLoad #extends EnergyConsumer #with rgse.ttc17.emoflon.tgg.task2
 
 #source { 
-	++srcConsumer : ConformLoad {
-		
-	}
+	++srcConsumer : ConformLoad { }
 }
 #target { 
-	++trgConsumer : ConformLoad {
-		
-	}
+	++trgConsumer : ConformLoad { }
 }
 
 #rule NonConformLoad #extends EnergyConsumer #with rgse.ttc17.emoflon.tgg.task2
 
 #source { 
-	++srcConsumer : NonConformLoad {
-		
-	}
+	++srcConsumer : NonConformLoad { }
 
 }
 #target { 
-	++trgConsumer : NonConformLoad {
-		
-	}
+	++trgConsumer : NonConformLoad { }
 }
 
 #rule StationSupply #extends EnergyConsumer #with rgse.ttc17.emoflon.tgg.task2
 
 #source { 
-	++srcConsumer : StationSupply {
-		
-	}
+	++srcConsumer : StationSupply {	}
 }

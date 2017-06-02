@@ -483,7 +483,7 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_57(EMoflonEdge _edge_b) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_135(EMoflonEdge _edge_b) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerWithIDImpl
 				.pattern_EnergyConsumerWithID_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -700,8 +700,8 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 			return null;
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID___IS_APPROPRIATE_FWD_EMOFLON_EDGE_57__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_57((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID___IS_APPROPRIATE_FWD_EMOFLON_EDGE_135__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_135((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID___IS_APPLICABLE_CC__MATCH_MATCH:

@@ -17,7 +17,6 @@
 		++-LoadGroup->srcGroup
 	}
 	++ srcGroup : ConformLoadGroup{
-		
 	}
 }
 
@@ -26,9 +25,7 @@
 		++-LoadGroup->trgGroup
 	}
 	++trgGroup : ConformLoadGroup {
-		
 	}
-	
 }
 
 #correspondence {

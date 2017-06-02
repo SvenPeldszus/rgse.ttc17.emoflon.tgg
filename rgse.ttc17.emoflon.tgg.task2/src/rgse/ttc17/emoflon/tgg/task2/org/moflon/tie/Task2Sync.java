@@ -1,19 +1,19 @@
 package rgse.ttc17.emoflon.tgg.task2.org.moflon.tie;
 
 import java.io.IOException;
-import org.apache.log4j.BasicConfigurator;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.moflon.core.utilities.MoflonUtil;
+import org.moflon.core.utilities.eMoflonEMFUtil;
+import org.moflon.tgg.algorithm.configuration.Configurator;
+import org.moflon.tgg.algorithm.delta.Delta;
+import org.moflon.tgg.algorithm.synchronization.ForwardSynchronizer;
 import org.moflon.tgg.algorithm.synchronization.SynchronizationHelper;
+import org.moflon.tgg.language.analysis.StaticAnalysis;
 import org.moflon.tgg.runtime.AttributeDelta;
-import org.moflon.tgg.runtime.CorrespondenceModel;
 import org.moflon.tgg.runtime.DeltaSpecification;
 import org.moflon.tgg.runtime.EMoflonEdge;
 
@@ -21,105 +21,82 @@ import Changes.ChangesPackage;
 import gluemodel.GluemodelPackage;
 import outagePreventionJointarget.OutagePreventionJointargetPackage;
 
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-
 import rgse.ttc17.emoflon.tgg.task2.Task2Package;
 
 public class Task2Sync extends SynchronizationHelper {
+	
+	public Task2Sync(ResourceSet rs, boolean debug) throws IOException{
+		this.set = rs;
+		initialize(debug);
+	}
+	
+	public Task2Sync(boolean debug) throws IOException {
+		this.set = eMoflonEMFUtil.createDefaultResourceSet();
+		initialize(debug);
+	}
 
-	public Task2Sync() throws IOException {
-		super(Task2Package.eINSTANCE, ".");
-
+	private void initialize(boolean debug) throws IOException {
+		setCorrPackage(Task2Package.eINSTANCE);
+		if (debug) {
+			String pathToProject = "../rgse.ttc17.emoflon.tgg.task2";
+			Resource r = set.getResource(eMoflonEMFUtil.createFileURI(pathToProject + "/model/"
+					+ MoflonUtil.getDefaultNameOfFileInProjectWithoutExtension("Task2") + ".sma.xmi", true), true);
+			setRules((StaticAnalysis) r.getContents().get(0));
+		} else {
+			loadRulesFromJarArchive(Task2Sync.class.getProtectionDomain().getCodeSource().getLocation().getPath(),
+					"Task2.sma.xmi");
+		}
+		configurator = new Configurator() {
+		};
+		changeSrc = (root -> {
+		});
+		changeTrg = (root -> {
+		});
+		
 		recursiveLoad(GluemodelPackage.eINSTANCE, getResourceSet());
 		recursiveLoad(ChangesPackage.eINSTANCE, getResourceSet());
 		recursiveLoad(OutagePreventionJointargetPackage.eINSTANCE, getResourceSet());
-		
-		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap()
-		.put(Resource.Factory.Registry.DEFAULT_EXTENSION,new XMIResourceFactoryImpl());
-		
-		Resource gluemodel = getResourceSet().createResource(URI.createFileURI("../rgse.ttc17.metamodels.src/model/Gluemodel.ecore"));
-		gluemodel.load(null);
-
-		Resource changes = getResourceSet().createResource(URI.createFileURI("../rgse.ttc17.metamodels.changes/model/Changes.ecore"));
-		changes.load(null);
-		
-		Resource detection = getResourceSet().createResource(URI.createFileURI("../rgse.ttc17.metamodels.trg.outage.detection/model/outageDetection-target.ecore"));
-		detection.load(null);
-		
 		EcoreUtil.resolveAll(getResourceSet());
 	}
 
-	private static void recursiveLoad(EPackage pack, ResourceSet resSet) {
+	public static void recursiveLoad(EPackage pack, ResourceSet resSet) {
 		pack.eClass();
-        resSet.getPackageRegistry().put(pack.getNsURI(), pack);
-        for (EPackage sub : pack.getESubpackages()) {
-            recursiveLoad(sub, resSet);
-        }
-    } 
-	
-	public void syncForward(String corr, String delta) {
-		setChangeSrc(executeDeltaSpec(delta));
-		loadTriple(corr);
-		loadSynchronizationProtocol("instances/fwd.protocol.xmi");
-		integrateForward();
-		saveResult("fwd");
-
-		System.out.println("Completed forward synchronization");
-	}
-
-	private void loadTriple(String corr) {
-		try {
-			loadCorr(corr);
-			CorrespondenceModel corrModel = (CorrespondenceModel) getCorr();
-			setSrc(corrModel.getSource());
-			setTrg(corrModel.getTarget());
-		} catch (IllegalArgumentException iae) {
-			System.err.println("Unable to load input triple for " + corr + ", " + iae.getMessage());
+		resSet.getPackageRegistry().put(pack.getNsURI(), pack);
+		for (EPackage sub : pack.getESubpackages()) {
+			recursiveLoad(sub, resSet);
 		}
 	}
 
-	private void saveResult(String direction) {
-		saveSrc("instances/" + direction + ".src.xmi");
-		saveTrg("instances/" + direction + ".trg.xmi");
-		saveCorr("instances/" + direction + ".corr.xmi");
-		saveSynchronizationProtocol("instances/" + direction + ".protocol.xmi");
-	}
+	public void sync(DeltaSpecification emoflonDelta) {
+		Delta delta = new Delta();
+		for (EMoflonEdge edge : emoflonDelta.getDeletedEdges()) {
+			delta.deleteEdge(edge);
+		}
+		for (EObject node : emoflonDelta.getDeletedNodes()) {
+			delta.deleteNode(node);
+		}
+		for (EObject node : emoflonDelta.getAddedNodes()) {
+			delta.addNode(node);
+		}
+		for (EMoflonEdge edge : emoflonDelta.getAddedEdges()) {
+			delta.addEdge(edge);
+		}
+		for (AttributeDelta attrib : emoflonDelta.getAttributeChanges()) {
+			delta.changeAttribute(attrib.getAffectedAttribute(), attrib.getOldValue(), attrib.getNewValue(),
+					attrib.getAffectedNode());
+		}
+		setDelta(delta);
+		sanityCheckDelta();
 
-	public Consumer<EObject> sync(DeltaSpecification localDeltaSpec) {
-		EcoreUtil.resolveAll(localDeltaSpec);
-		deltaSpec = EcoreUtil.copy(localDeltaSpec);
-
-		return (Consumer) -> {
-			// Added edges (nodes are indirectly added)
-			for (EMoflonEdge ae : localDeltaSpec.getAddedEdges())
-				performActionOnFeature(ae, (f, o) -> ((EList) ae.getSrc().eGet(f)).add(o), ae.getSrc()::eSet);
-
-			// Edge deletion
-			for (EMoflonEdge de : localDeltaSpec.getDeletedEdges())
-				performActionOnFeature(de, (f, o) -> ((EList) de.getSrc().eGet(f)).remove(o),
-						(f, o) -> de.getSrc().eUnset(f));
-
-			// Node deletion
-			for (EObject delObj : localDeltaSpec.getDeletedNodes())
-				EcoreUtil.delete(delObj);
-
-			// Attribute deltas
-			for (AttributeDelta ac : localDeltaSpec.getAttributeChanges())
-				ac.getAffectedNode().eSet(ac.getAffectedAttribute(),
-						EcoreUtil.createFromString(ac.getAffectedAttribute().getEAttributeType(), ac.getNewValue()));
-		};
-	}
-
-	private void performActionOnFeature(EMoflonEdge e, BiConsumer<EStructuralFeature, EObject> actionMany,
-			BiConsumer<EStructuralFeature, EObject> actionOne) {
-		EStructuralFeature feature = e.getSrc().eClass().getEStructuralFeature(e.getName());
-		if (!feature.isDerived()) {
-			if (feature.isMany()) {
-				actionMany.accept(feature, e.getTrg());
-			} else
-				actionOne.accept(feature, e.getTrg());
+		if (noChangesWereMade() && protocol == null) {
+			throw new RuntimeException();
+		} else {
+			batchMode = false;
 		}
 
+		establishTranslationProtocol();
+
+		performSynchronization(new ForwardSynchronizer(corr, delta, protocol, configurator, determineLookupMethods(),
+				tempOutputContainer));
 	}
 }

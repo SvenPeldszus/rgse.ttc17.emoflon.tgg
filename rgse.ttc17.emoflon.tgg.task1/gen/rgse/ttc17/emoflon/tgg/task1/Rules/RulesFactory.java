@@ -22,13 +22,13 @@ public interface RulesFactory extends EFactory {
 	RulesFactory eINSTANCE = rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Position Point Link</em>'.
+	 * Returns a new object of class '<em>Energy Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Position Point Link</em>'.
+	 * @return a new object of class '<em>Energy Consumer</em>'.
 	 * @generated
 	 */
-	PositionPointLink createPositionPointLink();
+	EnergyConsumer createEnergyConsumer();
 
 	/**
 	 * Returns a new object of class '<em>Energy Consumer With ID Non Conf Load</em>'.
@@ -40,67 +40,13 @@ public interface RulesFactory extends EFactory {
 	EnergyConsumerWithIDNonConfLoad createEnergyConsumerWithIDNonConfLoad();
 
 	/**
-	 * Returns a new object of class '<em>Energy Consumer</em>'.
+	 * Returns a new object of class '<em>Position Point Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer</em>'.
+	 * @return a new object of class '<em>Position Point Link</em>'.
 	 * @generated
 	 */
-	EnergyConsumer createEnergyConsumer();
-
-	/**
-	 * Returns a new object of class '<em>Gml Position</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Gml Position</em>'.
-	 * @generated
-	 */
-	GmlPosition createGmlPosition();
-
-	/**
-	 * Returns a new object of class '<em>Position Point</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Position Point</em>'.
-	 * @generated
-	 */
-	PositionPoint createPositionPoint();
-
-	/**
-	 * Returns a new object of class '<em>Energy Consumer With ID</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer With ID</em>'.
-	 * @generated
-	 */
-	EnergyConsumerWithID createEnergyConsumerWithID();
-
-	/**
-	 * Returns a new object of class '<em>SDP Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>SDP Location</em>'.
-	 * @generated
-	 */
-	SDPLocation createSDPLocation();
-
-	/**
-	 * Returns a new object of class '<em>Energy Consumer With ID Conf Load</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer With ID Conf Load</em>'.
-	 * @generated
-	 */
-	EnergyConsumerWithIDConfLoad createEnergyConsumerWithIDConfLoad();
-
-	/**
-	 * Returns a new object of class '<em>Service Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service Location</em>'.
-	 * @generated
-	 */
-	ServiceLocation createServiceLocation();
+	PositionPointLink createPositionPointLink();
 
 	/**
 	 * Returns a new object of class '<em>Location</em>'.
@@ -112,13 +58,58 @@ public interface RulesFactory extends EFactory {
 	Location createLocation();
 
 	/**
-	 * Returns a new object of class '<em>Work Location</em>'.
+	 * Returns a new object of class '<em>Energy Consumer With ID</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Work Location</em>'.
+	 * @return a new object of class '<em>Energy Consumer With ID</em>'.
 	 * @generated
 	 */
-	WorkLocation createWorkLocation();
+	EnergyConsumerWithID createEnergyConsumerWithID();
+
+	/**
+	 * Returns a new object of class '<em>Zone</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Zone</em>'.
+	 * @generated
+	 */
+	Zone createZone();
+
+	/**
+	 * Returns a new object of class '<em>Service Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service Location</em>'.
+	 * @generated
+	 */
+	ServiceLocation createServiceLocation();
+
+	/**
+	 * Returns a new object of class '<em>Energy Consumer With ID Conf Load</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Energy Consumer With ID Conf Load</em>'.
+	 * @generated
+	 */
+	EnergyConsumerWithIDConfLoad createEnergyConsumerWithIDConfLoad();
+
+	/**
+	 * Returns a new object of class '<em>Position Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Position Point</em>'.
+	 * @generated
+	 */
+	PositionPoint createPositionPoint();
+
+	/**
+	 * Returns a new object of class '<em>Gml Position</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gml Position</em>'.
+	 * @generated
+	 */
+	GmlPosition createGmlPosition();
 
 	/**
 	 * Returns a new object of class '<em>Location Link</em>'.
@@ -130,13 +121,22 @@ public interface RulesFactory extends EFactory {
 	LocationLink createLocationLink();
 
 	/**
-	 * Returns a new object of class '<em>Zone</em>'.
+	 * Returns a new object of class '<em>SDP Location</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Zone</em>'.
+	 * @return a new object of class '<em>SDP Location</em>'.
 	 * @generated
 	 */
-	Zone createZone();
+	SDPLocation createSDPLocation();
+
+	/**
+	 * Returns a new object of class '<em>Work Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Work Location</em>'.
+	 * @generated
+	 */
+	WorkLocation createWorkLocation();
 
 	/**
 	 * Returns the package supported by this factory.

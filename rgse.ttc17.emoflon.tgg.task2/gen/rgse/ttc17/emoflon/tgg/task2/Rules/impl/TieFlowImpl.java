@@ -92,27 +92,27 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
+	public boolean isAppropriate_FWD(Match match, Location srcLocation, MeterAsset meter,
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			ConductingEquipment srcResource) {
 		// initial bindings
-		Object[] result1_black = TieFlowImpl.pattern_TieFlow_0_1_initialbindings_blackBBBBBBBB(this, match, pair,
-				srcTerminal, srcLocation, srcResource, srcFlow, meter);
+		Object[] result1_black = TieFlowImpl.pattern_TieFlow_0_1_initialbindings_blackBBBBBBBB(this, match, srcLocation,
+				meter, srcFlow, pair, srcTerminal, srcResource);
 		if (result1_black == null) {
-			throw new RuntimeException(
-					"Pattern matching in node [initial bindings] failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = " + srcTerminal
-							+ ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = " + srcResource + ", "
-							+ "[srcFlow] = " + srcFlow + ", " + "[meter] = " + meter + ".");
+			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcLocation] = " + srcLocation + ", "
+					+ "[meter] = " + meter + ", " + "[srcFlow] = " + srcFlow + ", " + "[pair] = " + pair + ", "
+					+ "[srcTerminal] = " + srcTerminal + ", " + "[srcResource] = " + srcResource + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = TieFlowImpl.pattern_TieFlow_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(this,
-				match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter);
+				match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
-					+ srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = " + srcResource
-					+ ", " + "[srcFlow] = " + srcFlow + ", " + "[meter] = " + meter + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[srcLocation] = " + srcLocation + ", " + "[meter] = "
+					+ meter + ", " + "[srcFlow] = " + srcFlow + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
+					+ srcTerminal + ", " + "[srcResource] = " + srcResource + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -120,39 +120,39 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 
 			// collect elements to be translated
 			Object[] result4_black = TieFlowImpl.pattern_TieFlow_0_4_collectelementstobetranslated_blackBBBBBBB(match,
-					pair, srcTerminal, srcLocation, srcResource, srcFlow, meter);
+					srcLocation, meter, srcFlow, pair, srcTerminal, srcResource);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
-						+ srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = "
-						+ srcResource + ", " + "[srcFlow] = " + srcFlow + ", " + "[meter] = " + meter + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[srcLocation] = " + srcLocation + ", "
+						+ "[meter] = " + meter + ", " + "[srcFlow] = " + srcFlow + ", " + "[pair] = " + pair + ", "
+						+ "[srcTerminal] = " + srcTerminal + ", " + "[srcResource] = " + srcResource + ".");
 			}
-			TieFlowImpl.pattern_TieFlow_0_4_collectelementstobetranslated_greenBBBFF(match, srcTerminal, srcFlow);
+			TieFlowImpl.pattern_TieFlow_0_4_collectelementstobetranslated_greenBBBFF(match, srcFlow, srcTerminal);
 			// EMoflonEdge srcTerminal__srcFlow____TieFlow = (EMoflonEdge) result4_green[3];
 			// EMoflonEdge srcFlow__srcTerminal____Terminal = (EMoflonEdge) result4_green[4];
 
 			// collect context elements
-			Object[] result5_black = TieFlowImpl.pattern_TieFlow_0_5_collectcontextelements_blackBBBBBBB(match, pair,
-					srcTerminal, srcLocation, srcResource, srcFlow, meter);
+			Object[] result5_black = TieFlowImpl.pattern_TieFlow_0_5_collectcontextelements_blackBBBBBBB(match,
+					srcLocation, meter, srcFlow, pair, srcTerminal, srcResource);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
-						+ srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = "
-						+ srcResource + ", " + "[srcFlow] = " + srcFlow + ", " + "[meter] = " + meter + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[srcLocation] = " + srcLocation + ", "
+						+ "[meter] = " + meter + ", " + "[srcFlow] = " + srcFlow + ", " + "[pair] = " + pair + ", "
+						+ "[srcTerminal] = " + srcTerminal + ", " + "[srcResource] = " + srcResource + ".");
 			}
-			TieFlowImpl.pattern_TieFlow_0_5_collectcontextelements_greenBBBBBBFFFFFFF(match, pair, srcTerminal,
-					srcLocation, srcResource, meter);
+			TieFlowImpl.pattern_TieFlow_0_5_collectcontextelements_greenBBBBBBFFFFFFF(match, srcLocation, meter, pair,
+					srcTerminal, srcResource);
 			// EMoflonEdge srcLocation__srcResource____PowerSystemResources = (EMoflonEdge) result5_green[6];
 			// EMoflonEdge srcResource__srcLocation____Location = (EMoflonEdge) result5_green[7];
-			// EMoflonEdge pair__meter____a = (EMoflonEdge) result5_green[8];
-			// EMoflonEdge meter__srcLocation____Location = (EMoflonEdge) result5_green[9];
-			// EMoflonEdge srcLocation__meter____Assets = (EMoflonEdge) result5_green[10];
+			// EMoflonEdge meter__srcLocation____Location = (EMoflonEdge) result5_green[8];
+			// EMoflonEdge srcLocation__meter____Assets = (EMoflonEdge) result5_green[9];
+			// EMoflonEdge pair__meter____a = (EMoflonEdge) result5_green[10];
 			// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result5_green[11];
 			// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result5_green[12];
 
 			// register objects to match
-			TieFlowImpl.pattern_TieFlow_0_6_registerobjectstomatch_expressionBBBBBBBB(this, match, pair, srcTerminal,
-					srcLocation, srcResource, srcFlow, meter);
+			TieFlowImpl.pattern_TieFlow_0_6_registerobjectstomatch_expressionBBBBBBBB(this, match, srcLocation, meter,
+					srcFlow, pair, srcTerminal, srcResource);
 			return TieFlowImpl.pattern_TieFlow_0_7_expressionF();
 		} else {
 			return TieFlowImpl.pattern_TieFlow_0_8_expressionF();
@@ -173,14 +173,14 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[0];
-		Terminal srcTerminal = (Terminal) result1_bindingAndBlack[1];
-		Location srcLocation = (Location) result1_bindingAndBlack[2];
-		ConductingEquipment srcResource = (ConductingEquipment) result1_bindingAndBlack[3];
-		gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result1_bindingAndBlack[4];
-		TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result1_bindingAndBlack[5];
-		MeterAsset meter = (MeterAsset) result1_bindingAndBlack[6];
-		outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result1_bindingAndBlack[7];
+		Location srcLocation = (Location) result1_bindingAndBlack[0];
+		TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result1_bindingAndBlack[1];
+		MeterAsset meter = (MeterAsset) result1_bindingAndBlack[2];
+		gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result1_bindingAndBlack[3];
+		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[4];
+		Terminal srcTerminal = (Terminal) result1_bindingAndBlack[5];
+		outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result1_bindingAndBlack[6];
+		ConductingEquipment srcResource = (ConductingEquipment) result1_bindingAndBlack[7];
 		// CSP csp = (CSP) result1_bindingAndBlack[8];
 		Object[] result1_green = TieFlowImpl.pattern_TieFlow_1_1_performtransformation_greenFBFB(srcFlow, trgTerminal);
 		outagePreventionJointarget.TieFlow trgFlow = (outagePreventionJointarget.TieFlow) result1_green[0];
@@ -200,28 +200,28 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 
 		// bookkeeping for edges
 		Object[] result3_black = TieFlowImpl.pattern_TieFlow_1_3_bookkeepingforedges_blackBBBBBBBBBBB(ruleresult,
-				trgFlow, pair, srcTerminal, srcLocation, srcResource, srcFlow, flowToFlow, terminalToTerminal, meter,
-				trgTerminal);
+				srcLocation, terminalToTerminal, meter, trgFlow, srcFlow, flowToFlow, pair, srcTerminal, trgTerminal,
+				srcResource);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[trgFlow] = " + trgFlow + ", " + "[pair] = " + pair
-					+ ", " + "[srcTerminal] = " + srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", "
-					+ "[srcResource] = " + srcResource + ", " + "[srcFlow] = " + srcFlow + ", " + "[flowToFlow] = "
-					+ flowToFlow + ", " + "[terminalToTerminal] = " + terminalToTerminal + ", " + "[meter] = " + meter
-					+ ", " + "[trgTerminal] = " + trgTerminal + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[srcLocation] = " + srcLocation + ", "
+					+ "[terminalToTerminal] = " + terminalToTerminal + ", " + "[meter] = " + meter + ", "
+					+ "[trgFlow] = " + trgFlow + ", " + "[srcFlow] = " + srcFlow + ", " + "[flowToFlow] = " + flowToFlow
+					+ ", " + "[pair] = " + pair + ", " + "[srcTerminal] = " + srcTerminal + ", " + "[trgTerminal] = "
+					+ trgTerminal + ", " + "[srcResource] = " + srcResource + ".");
 		}
-		TieFlowImpl.pattern_TieFlow_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, trgFlow, srcTerminal, srcFlow,
-				flowToFlow, trgTerminal);
-		// EMoflonEdge srcTerminal__srcFlow____TieFlow = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge srcFlow__srcTerminal____Terminal = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge flowToFlow__srcFlow____source = (EMoflonEdge) result3_green[8];
-		// EMoflonEdge flowToFlow__trgFlow____target = (EMoflonEdge) result3_green[9];
-		// EMoflonEdge trgTerminal__trgFlow____TieFlow = (EMoflonEdge) result3_green[10];
+		TieFlowImpl.pattern_TieFlow_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, trgFlow, srcFlow, flowToFlow,
+				srcTerminal, trgTerminal);
+		// EMoflonEdge flowToFlow__trgFlow____target = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge flowToFlow__srcFlow____source = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge trgTerminal__trgFlow____TieFlow = (EMoflonEdge) result3_green[8];
+		// EMoflonEdge srcTerminal__srcFlow____TieFlow = (EMoflonEdge) result3_green[9];
+		// EMoflonEdge srcFlow__srcTerminal____Terminal = (EMoflonEdge) result3_green[10];
 
 		// perform postprocessing story node is empty
 		// register objects
-		TieFlowImpl.pattern_TieFlow_1_5_registerobjects_expressionBBBBBBBBBBBB(this, ruleresult, trgFlow, pair,
-				srcTerminal, srcLocation, srcResource, srcFlow, flowToFlow, terminalToTerminal, meter, trgTerminal);
+		TieFlowImpl.pattern_TieFlow_1_5_registerobjects_expressionBBBBBBBBBBBB(this, ruleresult, srcLocation,
+				terminalToTerminal, meter, trgFlow, srcFlow, flowToFlow, pair, srcTerminal, trgTerminal, srcResource);
 		return TieFlowImpl.pattern_TieFlow_1_6_expressionFB(ruleresult);
 	}
 
@@ -248,45 +248,45 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_binding[0];
-		Terminal srcTerminal = (Terminal) result2_binding[1];
-		Location srcLocation = (Location) result2_binding[2];
-		ConductingEquipment srcResource = (ConductingEquipment) result2_binding[3];
-		gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result2_binding[4];
-		MeterAsset meter = (MeterAsset) result2_binding[5];
-		for (Object[] result2_black : TieFlowImpl.pattern_TieFlow_2_2_corematch_blackBBBBBFBFB(pair, srcTerminal,
-				srcLocation, srcResource, srcFlow, meter, match)) {
-			TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result2_black[5];
-			outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result2_black[7];
+		Location srcLocation = (Location) result2_binding[0];
+		MeterAsset meter = (MeterAsset) result2_binding[1];
+		gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result2_binding[2];
+		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_binding[3];
+		Terminal srcTerminal = (Terminal) result2_binding[4];
+		ConductingEquipment srcResource = (ConductingEquipment) result2_binding[5];
+		for (Object[] result2_black : TieFlowImpl.pattern_TieFlow_2_2_corematch_blackBFBBBBFBB(srcLocation, meter,
+				srcFlow, pair, srcTerminal, srcResource, match)) {
+			TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result2_black[1];
+			outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result2_black[6];
 			// ForEach find context
-			for (Object[] result3_black : TieFlowImpl.pattern_TieFlow_2_3_findcontext_blackBBBBBBBB(pair, srcTerminal,
-					srcLocation, srcResource, srcFlow, terminalToTerminal, meter, trgTerminal)) {
-				Object[] result3_green = TieFlowImpl.pattern_TieFlow_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(pair,
-						srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal, meter, trgTerminal);
+			for (Object[] result3_black : TieFlowImpl.pattern_TieFlow_2_3_findcontext_blackBBBBBBBB(srcLocation,
+					terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal, srcResource)) {
+				Object[] result3_green = TieFlowImpl.pattern_TieFlow_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(
+						srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal, srcResource);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[8];
-				// EMoflonEdge srcTerminal__srcFlow____TieFlow = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge srcFlow__srcTerminal____Terminal = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge srcLocation__srcResource____PowerSystemResources = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge srcResource__srcLocation____Location = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge srcLocation__srcResource____PowerSystemResources = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge srcResource__srcLocation____Location = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge meter__srcLocation____Location = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge srcLocation__meter____Assets = (EMoflonEdge) result3_green[12];
 				// EMoflonEdge pair__meter____a = (EMoflonEdge) result3_green[13];
 				// EMoflonEdge terminalToTerminal__srcTerminal____source = (EMoflonEdge) result3_green[14];
-				// EMoflonEdge meter__srcLocation____Location = (EMoflonEdge) result3_green[15];
-				// EMoflonEdge srcLocation__meter____Assets = (EMoflonEdge) result3_green[16];
-				// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result3_green[17];
-				// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result3_green[18];
-				// EMoflonEdge terminalToTerminal__trgTerminal____target = (EMoflonEdge) result3_green[19];
+				// EMoflonEdge terminalToTerminal__trgTerminal____target = (EMoflonEdge) result3_green[15];
+				// EMoflonEdge srcTerminal__srcFlow____TieFlow = (EMoflonEdge) result3_green[16];
+				// EMoflonEdge srcFlow__srcTerminal____Terminal = (EMoflonEdge) result3_green[17];
+				// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result3_green[18];
+				// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result3_green[19];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = TieFlowImpl.pattern_TieFlow_2_4_solveCSP_bindingAndBlackFBBBBBBBBBB(
-						this, isApplicableMatch, pair, srcTerminal, srcLocation, srcResource, srcFlow,
-						terminalToTerminal, meter, trgTerminal);
+						this, isApplicableMatch, srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal,
+						trgTerminal, srcResource);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[pair] = " + pair + ", " + "[srcTerminal] = " + srcTerminal + ", " + "[srcLocation] = "
-							+ srcLocation + ", " + "[srcResource] = " + srcResource + ", " + "[srcFlow] = " + srcFlow
-							+ ", " + "[terminalToTerminal] = " + terminalToTerminal + ", " + "[meter] = " + meter + ", "
-							+ "[trgTerminal] = " + trgTerminal + ".");
+							+ "[srcLocation] = " + srcLocation + ", " + "[terminalToTerminal] = " + terminalToTerminal
+							+ ", " + "[meter] = " + meter + ", " + "[srcFlow] = " + srcFlow + ", " + "[pair] = " + pair
+							+ ", " + "[srcTerminal] = " + srcTerminal + ", " + "[trgTerminal] = " + trgTerminal + ", "
+							+ "[srcResource] = " + srcResource + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -316,15 +316,15 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair, Terminal srcTerminal,
-			Location srcLocation, ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
-			MeterAsset meter) {
+	public void registerObjectsToMatch_FWD(Match match, Location srcLocation, MeterAsset meter,
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			ConductingEquipment srcResource) {
+		match.registerObject("srcLocation", srcLocation);
+		match.registerObject("meter", meter);
+		match.registerObject("srcFlow", srcFlow);
 		match.registerObject("pair", pair);
 		match.registerObject("srcTerminal", srcTerminal);
-		match.registerObject("srcLocation", srcLocation);
 		match.registerObject("srcResource", srcResource);
-		match.registerObject("srcFlow", srcFlow);
-		match.registerObject("meter", meter);
 
 	}
 
@@ -333,9 +333,9 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair, Terminal srcTerminal,
-			Location srcLocation, ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
-			MeterAsset meter) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, Location srcLocation, MeterAsset meter,
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			ConductingEquipment srcResource) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -364,10 +364,10 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
-			Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, TerminalToTerminal terminalToTerminal, MeterAsset meter,
-			outagePreventionJointarget.Terminal trgTerminal) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Location srcLocation,
+			TerminalToTerminal terminalToTerminal, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
+			ConductingEquipment srcResource) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -382,14 +382,14 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("pair", pair);
-		isApplicableMatch.registerObject("srcTerminal", srcTerminal);
 		isApplicableMatch.registerObject("srcLocation", srcLocation);
-		isApplicableMatch.registerObject("srcResource", srcResource);
-		isApplicableMatch.registerObject("srcFlow", srcFlow);
 		isApplicableMatch.registerObject("terminalToTerminal", terminalToTerminal);
 		isApplicableMatch.registerObject("meter", meter);
+		isApplicableMatch.registerObject("srcFlow", srcFlow);
+		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("srcTerminal", srcTerminal);
 		isApplicableMatch.registerObject("trgTerminal", trgTerminal);
+		isApplicableMatch.registerObject("srcResource", srcResource);
 		return csp;
 	}
 
@@ -407,19 +407,19 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgFlow, EObject pair, EObject srcTerminal,
-			EObject srcLocation, EObject srcResource, EObject srcFlow, EObject flowToFlow, EObject terminalToTerminal,
-			EObject meter, EObject trgTerminal) {
-		ruleresult.registerObject("trgFlow", trgFlow);
-		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("srcTerminal", srcTerminal);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcLocation, EObject terminalToTerminal,
+			EObject meter, EObject trgFlow, EObject srcFlow, EObject flowToFlow, EObject pair, EObject srcTerminal,
+			EObject trgTerminal, EObject srcResource) {
 		ruleresult.registerObject("srcLocation", srcLocation);
-		ruleresult.registerObject("srcResource", srcResource);
-		ruleresult.registerObject("srcFlow", srcFlow);
-		ruleresult.registerObject("flowToFlow", flowToFlow);
 		ruleresult.registerObject("terminalToTerminal", terminalToTerminal);
 		ruleresult.registerObject("meter", meter);
+		ruleresult.registerObject("trgFlow", trgFlow);
+		ruleresult.registerObject("srcFlow", srcFlow);
+		ruleresult.registerObject("flowToFlow", flowToFlow);
+		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("srcTerminal", srcTerminal);
 		ruleresult.registerObject("trgTerminal", trgTerminal);
+		ruleresult.registerObject("srcResource", srcResource);
 
 	}
 
@@ -438,7 +438,7 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_37(EMoflonEdge _edge_TieFlow) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_155(EMoflonEdge _edge_TieFlow) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = TieFlowImpl
 				.pattern_TieFlow_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -455,18 +455,18 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		// ForEach test core match and DECs
 		for (Object[] result2_black : TieFlowImpl
 				.pattern_TieFlow_10_2_testcorematchandDECs_blackFFFFFFB(_edge_TieFlow)) {
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_black[0];
-			Terminal srcTerminal = (Terminal) result2_black[1];
-			Location srcLocation = (Location) result2_black[2];
-			ConductingEquipment srcResource = (ConductingEquipment) result2_black[3];
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result2_black[4];
-			MeterAsset meter = (MeterAsset) result2_black[5];
+			Location srcLocation = (Location) result2_black[0];
+			MeterAsset meter = (MeterAsset) result2_black[1];
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result2_black[2];
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_black[3];
+			Terminal srcTerminal = (Terminal) result2_black[4];
+			ConductingEquipment srcResource = (ConductingEquipment) result2_black[5];
 			Object[] result2_green = TieFlowImpl.pattern_TieFlow_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
 
 			// bookkeeping with generic isAppropriate method
 			if (TieFlowImpl.pattern_TieFlow_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBB(this,
-					match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter)) {
+					match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource)) {
 				// Ensure that the correct types of elements are matched
 				if (TieFlowImpl.pattern_TieFlow_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
 						match)) {
@@ -540,10 +540,11 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {// match tgg pattern
-		Object[] result1_black = TieFlowImpl.pattern_TieFlow_13_1_matchtggpattern_blackBBBBBB(pair, srcTerminal,
-				srcLocation, srcResource, srcFlow, meter);
+	public boolean checkDEC_FWD(Location srcLocation, MeterAsset meter,
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			ConductingEquipment srcResource) {// match tgg pattern
+		Object[] result1_black = TieFlowImpl.pattern_TieFlow_13_1_matchtggpattern_blackBBBBBB(srcLocation, meter,
+				srcFlow, pair, srcTerminal, srcResource);
 		if (result1_black != null) {
 			return TieFlowImpl.pattern_TieFlow_13_2_expressionF();
 		} else {
@@ -560,32 +561,34 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_FWD__MATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_TIEFLOW_METERASSET:
-			return isAppropriate_FWD((Match) arguments.get(0), (MeterAssetMMXUPair) arguments.get(1),
-					(Terminal) arguments.get(2), (Location) arguments.get(3), (ConductingEquipment) arguments.get(4),
-					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(5), (MeterAsset) arguments.get(6));
+		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_FWD__MATCH_LOCATION_METERASSET_TIEFLOW_METERASSETMMXUPAIR_TERMINAL_CONDUCTINGEQUIPMENT:
+			return isAppropriate_FWD((Match) arguments.get(0), (Location) arguments.get(1),
+					(MeterAsset) arguments.get(2), (gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(3),
+					(MeterAssetMMXUPair) arguments.get(4), (Terminal) arguments.get(5),
+					(ConductingEquipment) arguments.get(6));
 		case RulesPackage.TIE_FLOW___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.TIE_FLOW___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.TIE_FLOW___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_TIEFLOW_METERASSET:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAssetMMXUPair) arguments.get(1),
-					(Terminal) arguments.get(2), (Location) arguments.get(3), (ConductingEquipment) arguments.get(4),
-					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(5), (MeterAsset) arguments.get(6));
+		case RulesPackage.TIE_FLOW___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_LOCATION_METERASSET_TIEFLOW_METERASSETMMXUPAIR_TERMINAL_CONDUCTINGEQUIPMENT:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (Location) arguments.get(1),
+					(MeterAsset) arguments.get(2), (gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(3),
+					(MeterAssetMMXUPair) arguments.get(4), (Terminal) arguments.get(5),
+					(ConductingEquipment) arguments.get(6));
 			return null;
-		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_TIEFLOW_METERASSET:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAssetMMXUPair) arguments.get(1),
-					(Terminal) arguments.get(2), (Location) arguments.get(3), (ConductingEquipment) arguments.get(4),
-					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(5), (MeterAsset) arguments.get(6));
+		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_LOCATION_METERASSET_TIEFLOW_METERASSETMMXUPAIR_TERMINAL_CONDUCTINGEQUIPMENT:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (Location) arguments.get(1),
+					(MeterAsset) arguments.get(2), (gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(3),
+					(MeterAssetMMXUPair) arguments.get(4), (Terminal) arguments.get(5),
+					(ConductingEquipment) arguments.get(6));
 		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.TIE_FLOW___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_TIEFLOW_TERMINALTOTERMINAL_METERASSET_TERMINAL:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(MeterAssetMMXUPair) arguments.get(1), (Terminal) arguments.get(2), (Location) arguments.get(3),
-					(ConductingEquipment) arguments.get(4),
-					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(5),
-					(TerminalToTerminal) arguments.get(6), (MeterAsset) arguments.get(7),
-					(outagePreventionJointarget.Terminal) arguments.get(8));
+		case RulesPackage.TIE_FLOW___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_LOCATION_TERMINALTOTERMINAL_METERASSET_TIEFLOW_METERASSETMMXUPAIR_TERMINAL_TERMINAL_CONDUCTINGEQUIPMENT:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (Location) arguments.get(1),
+					(TerminalToTerminal) arguments.get(2), (MeterAsset) arguments.get(3),
+					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(4),
+					(MeterAssetMMXUPair) arguments.get(5), (Terminal) arguments.get(6),
+					(outagePreventionJointarget.Terminal) arguments.get(7), (ConductingEquipment) arguments.get(8));
 		case RulesPackage.TIE_FLOW___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.TIE_FLOW___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -596,34 +599,35 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 			return null;
 		case RulesPackage.TIE_FLOW___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_FWD_EMOFLON_EDGE_37__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_37((EMoflonEdge) arguments.get(0));
+		case RulesPackage.TIE_FLOW___IS_APPROPRIATE_FWD_EMOFLON_EDGE_155__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_155((EMoflonEdge) arguments.get(0));
 		case RulesPackage.TIE_FLOW___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.TIE_FLOW___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.TIE_FLOW___CHECK_DEC_FWD__METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_TIEFLOW_METERASSET:
-			return checkDEC_FWD((MeterAssetMMXUPair) arguments.get(0), (Terminal) arguments.get(1),
-					(Location) arguments.get(2), (ConductingEquipment) arguments.get(3),
-					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(4), (MeterAsset) arguments.get(5));
+		case RulesPackage.TIE_FLOW___CHECK_DEC_FWD__LOCATION_METERASSET_TIEFLOW_METERASSETMMXUPAIR_TERMINAL_CONDUCTINGEQUIPMENT:
+			return checkDEC_FWD((Location) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61970.ControlArea.TieFlow) arguments.get(2),
+					(MeterAssetMMXUPair) arguments.get(3), (Terminal) arguments.get(4),
+					(ConductingEquipment) arguments.get(5));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_TieFlow_0_1_initialbindings_blackBBBBBBBB(TieFlow _this, Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		return new Object[] { _this, match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter };
+			Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource) {
+		return new Object[] { _this, match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource };
 	}
 
 	public static final Object[] pattern_TieFlow_0_2_SolveCSP_bindingFBBBBBBBB(TieFlow _this, Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, pair, srcTerminal, srcLocation, srcResource,
-				srcFlow, meter);
+			Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcLocation, meter, srcFlow, pair, srcTerminal,
+				srcResource);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter };
+			return new Object[] { csp, _this, match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource };
 		}
 		return null;
 	}
@@ -633,17 +637,17 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final Object[] pattern_TieFlow_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(TieFlow _this, Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
+			Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource) {
 		Object[] result_pattern_TieFlow_0_2_SolveCSP_binding = pattern_TieFlow_0_2_SolveCSP_bindingFBBBBBBBB(_this,
-				match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter);
+				match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource);
 		if (result_pattern_TieFlow_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_TieFlow_0_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_TieFlow_0_2_SolveCSP_black = pattern_TieFlow_0_2_SolveCSP_blackB(csp);
 			if (result_pattern_TieFlow_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter };
+				return new Object[] { csp, _this, match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource };
 			}
 		}
 		return null;
@@ -656,13 +660,13 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final Object[] pattern_TieFlow_0_4_collectelementstobetranslated_blackBBBBBBB(Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		return new Object[] { match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter };
+			Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource) {
+		return new Object[] { match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource };
 	}
 
 	public static final Object[] pattern_TieFlow_0_4_collectelementstobetranslated_greenBBBFF(Match match,
-			Terminal srcTerminal, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow) {
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, Terminal srcTerminal) {
 		EMoflonEdge srcTerminal__srcFlow____TieFlow = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcFlow__srcTerminal____Terminal = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(srcFlow);
@@ -676,36 +680,36 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		match.getToBeTranslatedEdges().add(srcFlow__srcTerminal____Terminal);
 		srcTerminal__srcFlow____TieFlow.setName(srcTerminal__srcFlow____TieFlow_name_prime);
 		srcFlow__srcTerminal____Terminal.setName(srcFlow__srcTerminal____Terminal_name_prime);
-		return new Object[] { match, srcTerminal, srcFlow, srcTerminal__srcFlow____TieFlow,
+		return new Object[] { match, srcFlow, srcTerminal, srcTerminal__srcFlow____TieFlow,
 				srcFlow__srcTerminal____Terminal };
 	}
 
 	public static final Object[] pattern_TieFlow_0_5_collectcontextelements_blackBBBBBBB(Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		return new Object[] { match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter };
+			Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource) {
+		return new Object[] { match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource };
 	}
 
 	public static final Object[] pattern_TieFlow_0_5_collectcontextelements_greenBBBBBBFFFFFFF(Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			MeterAsset meter) {
+			Location srcLocation, MeterAsset meter, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			ConductingEquipment srcResource) {
 		EMoflonEdge srcLocation__srcResource____PowerSystemResources = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge meter__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__meter____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcTerminal____Terminals = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcTerminal__srcResource____ConductingEquipment = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		match.getContextNodes().add(srcLocation);
+		match.getContextNodes().add(meter);
 		match.getContextNodes().add(pair);
 		match.getContextNodes().add(srcTerminal);
-		match.getContextNodes().add(srcLocation);
 		match.getContextNodes().add(srcResource);
-		match.getContextNodes().add(meter);
 		String srcLocation__srcResource____PowerSystemResources_name_prime = "PowerSystemResources";
 		String srcResource__srcLocation____Location_name_prime = "Location";
-		String pair__meter____a_name_prime = "a";
 		String meter__srcLocation____Location_name_prime = "Location";
 		String srcLocation__meter____Assets_name_prime = "Assets";
+		String pair__meter____a_name_prime = "a";
 		String srcResource__srcTerminal____Terminals_name_prime = "Terminals";
 		String srcTerminal__srcResource____ConductingEquipment_name_prime = "ConductingEquipment";
 		srcLocation__srcResource____PowerSystemResources.setSrc(srcLocation);
@@ -714,15 +718,15 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		srcResource__srcLocation____Location.setSrc(srcResource);
 		srcResource__srcLocation____Location.setTrg(srcLocation);
 		match.getContextEdges().add(srcResource__srcLocation____Location);
-		pair__meter____a.setSrc(pair);
-		pair__meter____a.setTrg(meter);
-		match.getContextEdges().add(pair__meter____a);
 		meter__srcLocation____Location.setSrc(meter);
 		meter__srcLocation____Location.setTrg(srcLocation);
 		match.getContextEdges().add(meter__srcLocation____Location);
 		srcLocation__meter____Assets.setSrc(srcLocation);
 		srcLocation__meter____Assets.setTrg(meter);
 		match.getContextEdges().add(srcLocation__meter____Assets);
+		pair__meter____a.setSrc(pair);
+		pair__meter____a.setTrg(meter);
+		match.getContextEdges().add(pair__meter____a);
 		srcResource__srcTerminal____Terminals.setSrc(srcResource);
 		srcResource__srcTerminal____Terminals.setTrg(srcTerminal);
 		match.getContextEdges().add(srcResource__srcTerminal____Terminals);
@@ -732,22 +736,22 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		srcLocation__srcResource____PowerSystemResources
 				.setName(srcLocation__srcResource____PowerSystemResources_name_prime);
 		srcResource__srcLocation____Location.setName(srcResource__srcLocation____Location_name_prime);
-		pair__meter____a.setName(pair__meter____a_name_prime);
 		meter__srcLocation____Location.setName(meter__srcLocation____Location_name_prime);
 		srcLocation__meter____Assets.setName(srcLocation__meter____Assets_name_prime);
+		pair__meter____a.setName(pair__meter____a_name_prime);
 		srcResource__srcTerminal____Terminals.setName(srcResource__srcTerminal____Terminals_name_prime);
 		srcTerminal__srcResource____ConductingEquipment
 				.setName(srcTerminal__srcResource____ConductingEquipment_name_prime);
-		return new Object[] { match, pair, srcTerminal, srcLocation, srcResource, meter,
+		return new Object[] { match, srcLocation, meter, pair, srcTerminal, srcResource,
 				srcLocation__srcResource____PowerSystemResources, srcResource__srcLocation____Location,
-				pair__meter____a, meter__srcLocation____Location, srcLocation__meter____Assets,
+				meter__srcLocation____Location, srcLocation__meter____Assets, pair__meter____a,
 				srcResource__srcTerminal____Terminals, srcTerminal__srcResource____ConductingEquipment };
 	}
 
 	public static final void pattern_TieFlow_0_6_registerobjectstomatch_expressionBBBBBBBB(TieFlow _this, Match match,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		_this.registerObjectsToMatch_FWD(match, pair, srcTerminal, srcLocation, srcResource, srcFlow, meter);
+			Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource) {
+		_this.registerObjectsToMatch_FWD(match, srcLocation, meter, srcFlow, pair, srcTerminal, srcResource);
 
 	}
 
@@ -763,40 +767,40 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 
 	public static final Object[] pattern_TieFlow_1_1_performtransformation_bindingFFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_1 = isApplicableMatch.getObject("srcTerminal");
-		EObject _localVariable_2 = isApplicableMatch.getObject("srcLocation");
-		EObject _localVariable_3 = isApplicableMatch.getObject("srcResource");
-		EObject _localVariable_4 = isApplicableMatch.getObject("srcFlow");
-		EObject _localVariable_5 = isApplicableMatch.getObject("terminalToTerminal");
-		EObject _localVariable_6 = isApplicableMatch.getObject("meter");
-		EObject _localVariable_7 = isApplicableMatch.getObject("trgTerminal");
-		EObject tmpPair = _localVariable_0;
-		EObject tmpSrcTerminal = _localVariable_1;
-		EObject tmpSrcLocation = _localVariable_2;
-		EObject tmpSrcResource = _localVariable_3;
-		EObject tmpSrcFlow = _localVariable_4;
-		EObject tmpTerminalToTerminal = _localVariable_5;
-		EObject tmpMeter = _localVariable_6;
-		EObject tmpTrgTerminal = _localVariable_7;
-		if (tmpPair instanceof MeterAssetMMXUPair) {
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
-			if (tmpSrcTerminal instanceof Terminal) {
-				Terminal srcTerminal = (Terminal) tmpSrcTerminal;
-				if (tmpSrcLocation instanceof Location) {
-					Location srcLocation = (Location) tmpSrcLocation;
-					if (tmpSrcResource instanceof ConductingEquipment) {
-						ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
-						if (tmpSrcFlow instanceof gluemodel.CIM.IEC61970.ControlArea.TieFlow) {
-							gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) tmpSrcFlow;
-							if (tmpTerminalToTerminal instanceof TerminalToTerminal) {
-								TerminalToTerminal terminalToTerminal = (TerminalToTerminal) tmpTerminalToTerminal;
-								if (tmpMeter instanceof MeterAsset) {
-									MeterAsset meter = (MeterAsset) tmpMeter;
-									if (tmpTrgTerminal instanceof outagePreventionJointarget.Terminal) {
-										outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) tmpTrgTerminal;
-										return new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow,
-												terminalToTerminal, meter, trgTerminal, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("srcLocation");
+		EObject _localVariable_1 = isApplicableMatch.getObject("terminalToTerminal");
+		EObject _localVariable_2 = isApplicableMatch.getObject("meter");
+		EObject _localVariable_3 = isApplicableMatch.getObject("srcFlow");
+		EObject _localVariable_4 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_5 = isApplicableMatch.getObject("srcTerminal");
+		EObject _localVariable_6 = isApplicableMatch.getObject("trgTerminal");
+		EObject _localVariable_7 = isApplicableMatch.getObject("srcResource");
+		EObject tmpSrcLocation = _localVariable_0;
+		EObject tmpTerminalToTerminal = _localVariable_1;
+		EObject tmpMeter = _localVariable_2;
+		EObject tmpSrcFlow = _localVariable_3;
+		EObject tmpPair = _localVariable_4;
+		EObject tmpSrcTerminal = _localVariable_5;
+		EObject tmpTrgTerminal = _localVariable_6;
+		EObject tmpSrcResource = _localVariable_7;
+		if (tmpSrcLocation instanceof Location) {
+			Location srcLocation = (Location) tmpSrcLocation;
+			if (tmpTerminalToTerminal instanceof TerminalToTerminal) {
+				TerminalToTerminal terminalToTerminal = (TerminalToTerminal) tmpTerminalToTerminal;
+				if (tmpMeter instanceof MeterAsset) {
+					MeterAsset meter = (MeterAsset) tmpMeter;
+					if (tmpSrcFlow instanceof gluemodel.CIM.IEC61970.ControlArea.TieFlow) {
+						gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) tmpSrcFlow;
+						if (tmpPair instanceof MeterAssetMMXUPair) {
+							MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
+							if (tmpSrcTerminal instanceof Terminal) {
+								Terminal srcTerminal = (Terminal) tmpSrcTerminal;
+								if (tmpTrgTerminal instanceof outagePreventionJointarget.Terminal) {
+									outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) tmpTrgTerminal;
+									if (tmpSrcResource instanceof ConductingEquipment) {
+										ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
+										return new Object[] { srcLocation, terminalToTerminal, meter, srcFlow, pair,
+												srcTerminal, trgTerminal, srcResource, isApplicableMatch };
 									}
 								}
 							}
@@ -808,15 +812,15 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		return null;
 	}
 
-	public static final Object[] pattern_TieFlow_1_1_performtransformation_blackBBBBBBBBFBB(MeterAssetMMXUPair pair,
-			Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, TerminalToTerminal terminalToTerminal, MeterAsset meter,
-			outagePreventionJointarget.Terminal trgTerminal, TieFlow _this, IsApplicableMatch isApplicableMatch) {
+	public static final Object[] pattern_TieFlow_1_1_performtransformation_blackBBBBBBBBFBB(Location srcLocation,
+			TerminalToTerminal terminalToTerminal, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
+			ConductingEquipment srcResource, TieFlow _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal, meter,
-						trgTerminal, csp, _this, isApplicableMatch };
+				return new Object[] { srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal,
+						srcResource, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -827,23 +831,23 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		Object[] result_pattern_TieFlow_1_1_performtransformation_binding = pattern_TieFlow_1_1_performtransformation_bindingFFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_TieFlow_1_1_performtransformation_binding != null) {
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_TieFlow_1_1_performtransformation_binding[0];
-			Terminal srcTerminal = (Terminal) result_pattern_TieFlow_1_1_performtransformation_binding[1];
-			Location srcLocation = (Location) result_pattern_TieFlow_1_1_performtransformation_binding[2];
-			ConductingEquipment srcResource = (ConductingEquipment) result_pattern_TieFlow_1_1_performtransformation_binding[3];
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result_pattern_TieFlow_1_1_performtransformation_binding[4];
-			TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result_pattern_TieFlow_1_1_performtransformation_binding[5];
-			MeterAsset meter = (MeterAsset) result_pattern_TieFlow_1_1_performtransformation_binding[6];
-			outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result_pattern_TieFlow_1_1_performtransformation_binding[7];
+			Location srcLocation = (Location) result_pattern_TieFlow_1_1_performtransformation_binding[0];
+			TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result_pattern_TieFlow_1_1_performtransformation_binding[1];
+			MeterAsset meter = (MeterAsset) result_pattern_TieFlow_1_1_performtransformation_binding[2];
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) result_pattern_TieFlow_1_1_performtransformation_binding[3];
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_TieFlow_1_1_performtransformation_binding[4];
+			Terminal srcTerminal = (Terminal) result_pattern_TieFlow_1_1_performtransformation_binding[5];
+			outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result_pattern_TieFlow_1_1_performtransformation_binding[6];
+			ConductingEquipment srcResource = (ConductingEquipment) result_pattern_TieFlow_1_1_performtransformation_binding[7];
 
 			Object[] result_pattern_TieFlow_1_1_performtransformation_black = pattern_TieFlow_1_1_performtransformation_blackBBBBBBBBFBB(
-					pair, srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal, meter, trgTerminal, _this,
+					srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal, srcResource, _this,
 					isApplicableMatch);
 			if (result_pattern_TieFlow_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_TieFlow_1_1_performtransformation_black[8];
 
-				return new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal, meter,
-						trgTerminal, csp, _this, isApplicableMatch };
+				return new Object[] { srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal,
+						srcResource, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -854,8 +858,8 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		outagePreventionJointarget.TieFlow trgFlow = OutagePreventionJointargetFactory.eINSTANCE.createTieFlow();
 		TieFlowToTieFlow flowToFlow = Task2Factory.eINSTANCE.createTieFlowToTieFlow();
 		trgTerminal.getTieFlow().add(trgFlow);
-		flowToFlow.setSource(srcFlow);
 		flowToFlow.setTarget(trgFlow);
+		flowToFlow.setSource(srcFlow);
 		return new Object[] { trgFlow, srcFlow, flowToFlow, trgTerminal };
 	}
 
@@ -876,91 +880,90 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final Object[] pattern_TieFlow_1_3_bookkeepingforedges_blackBBBBBBBBBBB(PerformRuleResult ruleresult,
-			EObject trgFlow, EObject pair, EObject srcTerminal, EObject srcLocation, EObject srcResource,
-			EObject srcFlow, EObject flowToFlow, EObject terminalToTerminal, EObject meter, EObject trgTerminal) {
-		if (!trgFlow.equals(trgTerminal)) {
-			if (!pair.equals(trgFlow)) {
-				if (!pair.equals(srcTerminal)) {
-					if (!pair.equals(srcLocation)) {
-						if (!pair.equals(srcResource)) {
-							if (!pair.equals(srcFlow)) {
-								if (!pair.equals(terminalToTerminal)) {
-									if (!pair.equals(trgTerminal)) {
-										if (!srcTerminal.equals(trgFlow)) {
-											if (!srcTerminal.equals(terminalToTerminal)) {
-												if (!srcTerminal.equals(trgTerminal)) {
-													if (!srcLocation.equals(trgFlow)) {
-														if (!srcLocation.equals(srcTerminal)) {
-															if (!srcLocation.equals(srcResource)) {
-																if (!srcLocation.equals(terminalToTerminal)) {
-																	if (!srcLocation.equals(trgTerminal)) {
-																		if (!srcResource.equals(trgFlow)) {
-																			if (!srcResource.equals(srcTerminal)) {
-																				if (!srcResource
-																						.equals(terminalToTerminal)) {
-																					if (!srcResource
-																							.equals(trgTerminal)) {
-																						if (!srcFlow.equals(trgFlow)) {
+			EObject srcLocation, EObject terminalToTerminal, EObject meter, EObject trgFlow, EObject srcFlow,
+			EObject flowToFlow, EObject pair, EObject srcTerminal, EObject trgTerminal, EObject srcResource) {
+		if (!srcLocation.equals(terminalToTerminal)) {
+			if (!srcLocation.equals(trgFlow)) {
+				if (!srcLocation.equals(srcTerminal)) {
+					if (!srcLocation.equals(trgTerminal)) {
+						if (!srcLocation.equals(srcResource)) {
+							if (!terminalToTerminal.equals(trgFlow)) {
+								if (!terminalToTerminal.equals(trgTerminal)) {
+									if (!meter.equals(srcLocation)) {
+										if (!meter.equals(terminalToTerminal)) {
+											if (!meter.equals(trgFlow)) {
+												if (!meter.equals(srcFlow)) {
+													if (!meter.equals(pair)) {
+														if (!meter.equals(srcTerminal)) {
+															if (!meter.equals(trgTerminal)) {
+																if (!meter.equals(srcResource)) {
+																	if (!trgFlow.equals(trgTerminal)) {
+																		if (!srcFlow.equals(srcLocation)) {
+																			if (!srcFlow.equals(terminalToTerminal)) {
+																				if (!srcFlow.equals(trgFlow)) {
+																					if (!srcFlow.equals(srcTerminal)) {
+																						if (!srcFlow
+																								.equals(trgTerminal)) {
 																							if (!srcFlow.equals(
-																									srcTerminal)) {
-																								if (!srcFlow.equals(
+																									srcResource)) {
+																								if (!flowToFlow.equals(
 																										srcLocation)) {
-																									if (!srcFlow.equals(
-																											srcResource)) {
-																										if (!srcFlow
-																												.equals(terminalToTerminal)) {
-																											if (!srcFlow
-																													.equals(trgTerminal)) {
+																									if (!flowToFlow
+																											.equals(terminalToTerminal)) {
+																										if (!flowToFlow
+																												.equals(meter)) {
+																											if (!flowToFlow
+																													.equals(trgFlow)) {
 																												if (!flowToFlow
-																														.equals(trgFlow)) {
+																														.equals(srcFlow)) {
 																													if (!flowToFlow
 																															.equals(pair)) {
 																														if (!flowToFlow
 																																.equals(srcTerminal)) {
 																															if (!flowToFlow
-																																	.equals(srcLocation)) {
+																																	.equals(trgTerminal)) {
 																																if (!flowToFlow
 																																		.equals(srcResource)) {
-																																	if (!flowToFlow
-																																			.equals(srcFlow)) {
-																																		if (!flowToFlow
+																																	if (!pair
+																																			.equals(srcLocation)) {
+																																		if (!pair
 																																				.equals(terminalToTerminal)) {
-																																			if (!flowToFlow
-																																					.equals(meter)) {
-																																				if (!flowToFlow
-																																						.equals(trgTerminal)) {
-																																					if (!terminalToTerminal
-																																							.equals(trgFlow)) {
-																																						if (!terminalToTerminal
+																																			if (!pair
+																																					.equals(trgFlow)) {
+																																				if (!pair
+																																						.equals(srcFlow)) {
+																																					if (!pair
+																																							.equals(srcTerminal)) {
+																																						if (!pair
 																																								.equals(trgTerminal)) {
-																																							if (!meter
-																																									.equals(trgFlow)) {
-																																								if (!meter
-																																										.equals(pair)) {
-																																									if (!meter
-																																											.equals(srcTerminal)) {
-																																										if (!meter
-																																												.equals(srcLocation)) {
-																																											if (!meter
-																																													.equals(srcResource)) {
-																																												if (!meter
-																																														.equals(srcFlow)) {
-																																													if (!meter
-																																															.equals(terminalToTerminal)) {
-																																														if (!meter
+																																							if (!pair
+																																									.equals(srcResource)) {
+																																								if (!srcTerminal
+																																										.equals(terminalToTerminal)) {
+																																									if (!srcTerminal
+																																											.equals(trgFlow)) {
+																																										if (!srcTerminal
+																																												.equals(trgTerminal)) {
+																																											if (!srcResource
+																																													.equals(terminalToTerminal)) {
+																																												if (!srcResource
+																																														.equals(trgFlow)) {
+																																													if (!srcResource
+																																															.equals(srcTerminal)) {
+																																														if (!srcResource
 																																																.equals(trgTerminal)) {
 																																															return new Object[] {
 																																																	ruleresult,
-																																																	trgFlow,
-																																																	pair,
-																																																	srcTerminal,
 																																																	srcLocation,
-																																																	srcResource,
-																																																	srcFlow,
-																																																	flowToFlow,
 																																																	terminalToTerminal,
 																																																	meter,
-																																																	trgTerminal };
+																																																	trgFlow,
+																																																	srcFlow,
+																																																	flowToFlow,
+																																																	pair,
+																																																	srcTerminal,
+																																																	trgTerminal,
+																																																	srcResource };
 																																														}
 																																													}
 																																												}
@@ -1010,50 +1013,50 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final Object[] pattern_TieFlow_1_3_bookkeepingforedges_greenBBBBBBFFFFF(PerformRuleResult ruleresult,
-			EObject trgFlow, EObject srcTerminal, EObject srcFlow, EObject flowToFlow, EObject trgTerminal) {
+			EObject trgFlow, EObject srcFlow, EObject flowToFlow, EObject srcTerminal, EObject trgTerminal) {
+		EMoflonEdge flowToFlow__trgFlow____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge flowToFlow__srcFlow____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge trgTerminal__trgFlow____TieFlow = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcTerminal__srcFlow____TieFlow = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcFlow__srcTerminal____Terminal = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge flowToFlow__srcFlow____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge flowToFlow__trgFlow____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge trgTerminal__trgFlow____TieFlow = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "TieFlow";
+		String flowToFlow__trgFlow____target_name_prime = "target";
+		String flowToFlow__srcFlow____source_name_prime = "source";
+		String trgTerminal__trgFlow____TieFlow_name_prime = "TieFlow";
 		String srcTerminal__srcFlow____TieFlow_name_prime = "TieFlow";
 		String srcFlow__srcTerminal____Terminal_name_prime = "Terminal";
-		String flowToFlow__srcFlow____source_name_prime = "source";
-		String flowToFlow__trgFlow____target_name_prime = "target";
-		String trgTerminal__trgFlow____TieFlow_name_prime = "TieFlow";
+		flowToFlow__trgFlow____target.setSrc(flowToFlow);
+		flowToFlow__trgFlow____target.setTrg(trgFlow);
+		ruleresult.getCreatedEdges().add(flowToFlow__trgFlow____target);
+		flowToFlow__srcFlow____source.setSrc(flowToFlow);
+		flowToFlow__srcFlow____source.setTrg(srcFlow);
+		ruleresult.getCreatedEdges().add(flowToFlow__srcFlow____source);
+		trgTerminal__trgFlow____TieFlow.setSrc(trgTerminal);
+		trgTerminal__trgFlow____TieFlow.setTrg(trgFlow);
+		ruleresult.getCreatedEdges().add(trgTerminal__trgFlow____TieFlow);
 		srcTerminal__srcFlow____TieFlow.setSrc(srcTerminal);
 		srcTerminal__srcFlow____TieFlow.setTrg(srcFlow);
 		ruleresult.getTranslatedEdges().add(srcTerminal__srcFlow____TieFlow);
 		srcFlow__srcTerminal____Terminal.setSrc(srcFlow);
 		srcFlow__srcTerminal____Terminal.setTrg(srcTerminal);
 		ruleresult.getTranslatedEdges().add(srcFlow__srcTerminal____Terminal);
-		flowToFlow__srcFlow____source.setSrc(flowToFlow);
-		flowToFlow__srcFlow____source.setTrg(srcFlow);
-		ruleresult.getCreatedEdges().add(flowToFlow__srcFlow____source);
-		flowToFlow__trgFlow____target.setSrc(flowToFlow);
-		flowToFlow__trgFlow____target.setTrg(trgFlow);
-		ruleresult.getCreatedEdges().add(flowToFlow__trgFlow____target);
-		trgTerminal__trgFlow____TieFlow.setSrc(trgTerminal);
-		trgTerminal__trgFlow____TieFlow.setTrg(trgFlow);
-		ruleresult.getCreatedEdges().add(trgTerminal__trgFlow____TieFlow);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
+		flowToFlow__trgFlow____target.setName(flowToFlow__trgFlow____target_name_prime);
+		flowToFlow__srcFlow____source.setName(flowToFlow__srcFlow____source_name_prime);
+		trgTerminal__trgFlow____TieFlow.setName(trgTerminal__trgFlow____TieFlow_name_prime);
 		srcTerminal__srcFlow____TieFlow.setName(srcTerminal__srcFlow____TieFlow_name_prime);
 		srcFlow__srcTerminal____Terminal.setName(srcFlow__srcTerminal____Terminal_name_prime);
-		flowToFlow__srcFlow____source.setName(flowToFlow__srcFlow____source_name_prime);
-		flowToFlow__trgFlow____target.setName(flowToFlow__trgFlow____target_name_prime);
-		trgTerminal__trgFlow____TieFlow.setName(trgTerminal__trgFlow____TieFlow_name_prime);
-		return new Object[] { ruleresult, trgFlow, srcTerminal, srcFlow, flowToFlow, trgTerminal,
-				srcTerminal__srcFlow____TieFlow, srcFlow__srcTerminal____Terminal, flowToFlow__srcFlow____source,
-				flowToFlow__trgFlow____target, trgTerminal__trgFlow____TieFlow };
+		return new Object[] { ruleresult, trgFlow, srcFlow, flowToFlow, srcTerminal, trgTerminal,
+				flowToFlow__trgFlow____target, flowToFlow__srcFlow____source, trgTerminal__trgFlow____TieFlow,
+				srcTerminal__srcFlow____TieFlow, srcFlow__srcTerminal____Terminal };
 	}
 
 	public static final void pattern_TieFlow_1_5_registerobjects_expressionBBBBBBBBBBBB(TieFlow _this,
-			PerformRuleResult ruleresult, EObject trgFlow, EObject pair, EObject srcTerminal, EObject srcLocation,
-			EObject srcResource, EObject srcFlow, EObject flowToFlow, EObject terminalToTerminal, EObject meter,
-			EObject trgTerminal) {
-		_this.registerObjects_FWD(ruleresult, trgFlow, pair, srcTerminal, srcLocation, srcResource, srcFlow, flowToFlow,
-				terminalToTerminal, meter, trgTerminal);
+			PerformRuleResult ruleresult, EObject srcLocation, EObject terminalToTerminal, EObject meter,
+			EObject trgFlow, EObject srcFlow, EObject flowToFlow, EObject pair, EObject srcTerminal,
+			EObject trgTerminal, EObject srcResource) {
+		_this.registerObjects_FWD(ruleresult, srcLocation, terminalToTerminal, meter, trgFlow, srcFlow, flowToFlow,
+				pair, srcTerminal, trgTerminal, srcResource);
 
 	}
 
@@ -1110,31 +1113,31 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final Object[] pattern_TieFlow_2_2_corematch_bindingFFFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("pair");
-		EObject _localVariable_1 = match.getObject("srcTerminal");
-		EObject _localVariable_2 = match.getObject("srcLocation");
-		EObject _localVariable_3 = match.getObject("srcResource");
-		EObject _localVariable_4 = match.getObject("srcFlow");
-		EObject _localVariable_5 = match.getObject("meter");
-		EObject tmpPair = _localVariable_0;
-		EObject tmpSrcTerminal = _localVariable_1;
-		EObject tmpSrcLocation = _localVariable_2;
-		EObject tmpSrcResource = _localVariable_3;
-		EObject tmpSrcFlow = _localVariable_4;
-		EObject tmpMeter = _localVariable_5;
-		if (tmpPair instanceof MeterAssetMMXUPair) {
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
-			if (tmpSrcTerminal instanceof Terminal) {
-				Terminal srcTerminal = (Terminal) tmpSrcTerminal;
-				if (tmpSrcLocation instanceof Location) {
-					Location srcLocation = (Location) tmpSrcLocation;
-					if (tmpSrcResource instanceof ConductingEquipment) {
-						ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
-						if (tmpSrcFlow instanceof gluemodel.CIM.IEC61970.ControlArea.TieFlow) {
-							gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) tmpSrcFlow;
-							if (tmpMeter instanceof MeterAsset) {
-								MeterAsset meter = (MeterAsset) tmpMeter;
-								return new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow, meter,
+		EObject _localVariable_0 = match.getObject("srcLocation");
+		EObject _localVariable_1 = match.getObject("meter");
+		EObject _localVariable_2 = match.getObject("srcFlow");
+		EObject _localVariable_3 = match.getObject("pair");
+		EObject _localVariable_4 = match.getObject("srcTerminal");
+		EObject _localVariable_5 = match.getObject("srcResource");
+		EObject tmpSrcLocation = _localVariable_0;
+		EObject tmpMeter = _localVariable_1;
+		EObject tmpSrcFlow = _localVariable_2;
+		EObject tmpPair = _localVariable_3;
+		EObject tmpSrcTerminal = _localVariable_4;
+		EObject tmpSrcResource = _localVariable_5;
+		if (tmpSrcLocation instanceof Location) {
+			Location srcLocation = (Location) tmpSrcLocation;
+			if (tmpMeter instanceof MeterAsset) {
+				MeterAsset meter = (MeterAsset) tmpMeter;
+				if (tmpSrcFlow instanceof gluemodel.CIM.IEC61970.ControlArea.TieFlow) {
+					gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow = (gluemodel.CIM.IEC61970.ControlArea.TieFlow) tmpSrcFlow;
+					if (tmpPair instanceof MeterAssetMMXUPair) {
+						MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
+						if (tmpSrcTerminal instanceof Terminal) {
+							Terminal srcTerminal = (Terminal) tmpSrcTerminal;
+							if (tmpSrcResource instanceof ConductingEquipment) {
+								ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
+								return new Object[] { srcLocation, meter, srcFlow, pair, srcTerminal, srcResource,
 										match };
 							}
 						}
@@ -1145,36 +1148,36 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_TieFlow_2_2_corematch_blackBBBBBFBFB(MeterAssetMMXUPair pair,
-			Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter, Match match) {
+	public static final Iterable<Object[]> pattern_TieFlow_2_2_corematch_blackBFBBBBFBB(Location srcLocation,
+			MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair,
+			Terminal srcTerminal, ConductingEquipment srcResource, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (TerminalToTerminal terminalToTerminal : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcTerminal, TerminalToTerminal.class, "source")) {
 			outagePreventionJointarget.Terminal trgTerminal = terminalToTerminal.getTarget();
 			if (trgTerminal != null) {
-				_result.add(new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal,
-						meter, trgTerminal, match });
+				_result.add(new Object[] { srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal,
+						trgTerminal, srcResource, match });
 			}
 
 		}
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_TieFlow_2_3_findcontext_blackBBBBBBBB(MeterAssetMMXUPair pair,
-			Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, TerminalToTerminal terminalToTerminal, MeterAsset meter,
-			outagePreventionJointarget.Terminal trgTerminal) {
+	public static final Iterable<Object[]> pattern_TieFlow_2_3_findcontext_blackBBBBBBBB(Location srcLocation,
+			TerminalToTerminal terminalToTerminal, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
+			ConductingEquipment srcResource) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (srcTerminal.getTieFlow().contains(srcFlow)) {
-			if (srcLocation.getPowerSystemResources().contains(srcResource)) {
+		if (srcLocation.getPowerSystemResources().contains(srcResource)) {
+			if (srcLocation.equals(meter.getLocation())) {
 				if (meter.equals(pair.getA())) {
 					if (srcTerminal.equals(terminalToTerminal.getSource())) {
-						if (srcLocation.equals(meter.getLocation())) {
-							if (srcResource.getTerminals().contains(srcTerminal)) {
-								if (trgTerminal.equals(terminalToTerminal.getTarget())) {
-									_result.add(new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow,
-											terminalToTerminal, meter, trgTerminal });
+						if (trgTerminal.equals(terminalToTerminal.getTarget())) {
+							if (srcTerminal.getTieFlow().contains(srcFlow)) {
+								if (srcResource.getTerminals().contains(srcTerminal)) {
+									_result.add(new Object[] { srcLocation, terminalToTerminal, meter, srcFlow, pair,
+											srcTerminal, trgTerminal, srcResource });
 								}
 							}
 						}
@@ -1185,105 +1188,105 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		return _result;
 	}
 
-	public static final Object[] pattern_TieFlow_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(MeterAssetMMXUPair pair,
-			Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, TerminalToTerminal terminalToTerminal, MeterAsset meter,
-			outagePreventionJointarget.Terminal trgTerminal) {
+	public static final Object[] pattern_TieFlow_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(Location srcLocation,
+			TerminalToTerminal terminalToTerminal, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			MeterAssetMMXUPair pair, Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
+			ConductingEquipment srcResource) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge srcTerminal__srcFlow____TieFlow = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcFlow__srcTerminal____Terminal = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__srcResource____PowerSystemResources = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge terminalToTerminal__srcTerminal____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge meter__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__meter____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge terminalToTerminal__srcTerminal____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge terminalToTerminal__trgTerminal____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcTerminal__srcFlow____TieFlow = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcFlow__srcTerminal____Terminal = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcTerminal____Terminals = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcTerminal__srcResource____ConductingEquipment = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge terminalToTerminal__trgTerminal____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String srcTerminal__srcFlow____TieFlow_name_prime = "TieFlow";
-		String srcFlow__srcTerminal____Terminal_name_prime = "Terminal";
 		String srcLocation__srcResource____PowerSystemResources_name_prime = "PowerSystemResources";
 		String srcResource__srcLocation____Location_name_prime = "Location";
-		String pair__meter____a_name_prime = "a";
-		String terminalToTerminal__srcTerminal____source_name_prime = "source";
 		String meter__srcLocation____Location_name_prime = "Location";
 		String srcLocation__meter____Assets_name_prime = "Assets";
+		String pair__meter____a_name_prime = "a";
+		String terminalToTerminal__srcTerminal____source_name_prime = "source";
+		String terminalToTerminal__trgTerminal____target_name_prime = "target";
+		String srcTerminal__srcFlow____TieFlow_name_prime = "TieFlow";
+		String srcFlow__srcTerminal____Terminal_name_prime = "Terminal";
 		String srcResource__srcTerminal____Terminals_name_prime = "Terminals";
 		String srcTerminal__srcResource____ConductingEquipment_name_prime = "ConductingEquipment";
-		String terminalToTerminal__trgTerminal____target_name_prime = "target";
-		isApplicableMatch.getAllContextElements().add(pair);
-		isApplicableMatch.getAllContextElements().add(srcTerminal);
 		isApplicableMatch.getAllContextElements().add(srcLocation);
-		isApplicableMatch.getAllContextElements().add(srcResource);
-		isApplicableMatch.getAllContextElements().add(srcFlow);
 		isApplicableMatch.getAllContextElements().add(terminalToTerminal);
 		isApplicableMatch.getAllContextElements().add(meter);
+		isApplicableMatch.getAllContextElements().add(srcFlow);
+		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(srcTerminal);
 		isApplicableMatch.getAllContextElements().add(trgTerminal);
-		srcTerminal__srcFlow____TieFlow.setSrc(srcTerminal);
-		srcTerminal__srcFlow____TieFlow.setTrg(srcFlow);
-		isApplicableMatch.getAllContextElements().add(srcTerminal__srcFlow____TieFlow);
-		srcFlow__srcTerminal____Terminal.setSrc(srcFlow);
-		srcFlow__srcTerminal____Terminal.setTrg(srcTerminal);
-		isApplicableMatch.getAllContextElements().add(srcFlow__srcTerminal____Terminal);
+		isApplicableMatch.getAllContextElements().add(srcResource);
 		srcLocation__srcResource____PowerSystemResources.setSrc(srcLocation);
 		srcLocation__srcResource____PowerSystemResources.setTrg(srcResource);
 		isApplicableMatch.getAllContextElements().add(srcLocation__srcResource____PowerSystemResources);
 		srcResource__srcLocation____Location.setSrc(srcResource);
 		srcResource__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(srcResource__srcLocation____Location);
-		pair__meter____a.setSrc(pair);
-		pair__meter____a.setTrg(meter);
-		isApplicableMatch.getAllContextElements().add(pair__meter____a);
-		terminalToTerminal__srcTerminal____source.setSrc(terminalToTerminal);
-		terminalToTerminal__srcTerminal____source.setTrg(srcTerminal);
-		isApplicableMatch.getAllContextElements().add(terminalToTerminal__srcTerminal____source);
 		meter__srcLocation____Location.setSrc(meter);
 		meter__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(meter__srcLocation____Location);
 		srcLocation__meter____Assets.setSrc(srcLocation);
 		srcLocation__meter____Assets.setTrg(meter);
 		isApplicableMatch.getAllContextElements().add(srcLocation__meter____Assets);
+		pair__meter____a.setSrc(pair);
+		pair__meter____a.setTrg(meter);
+		isApplicableMatch.getAllContextElements().add(pair__meter____a);
+		terminalToTerminal__srcTerminal____source.setSrc(terminalToTerminal);
+		terminalToTerminal__srcTerminal____source.setTrg(srcTerminal);
+		isApplicableMatch.getAllContextElements().add(terminalToTerminal__srcTerminal____source);
+		terminalToTerminal__trgTerminal____target.setSrc(terminalToTerminal);
+		terminalToTerminal__trgTerminal____target.setTrg(trgTerminal);
+		isApplicableMatch.getAllContextElements().add(terminalToTerminal__trgTerminal____target);
+		srcTerminal__srcFlow____TieFlow.setSrc(srcTerminal);
+		srcTerminal__srcFlow____TieFlow.setTrg(srcFlow);
+		isApplicableMatch.getAllContextElements().add(srcTerminal__srcFlow____TieFlow);
+		srcFlow__srcTerminal____Terminal.setSrc(srcFlow);
+		srcFlow__srcTerminal____Terminal.setTrg(srcTerminal);
+		isApplicableMatch.getAllContextElements().add(srcFlow__srcTerminal____Terminal);
 		srcResource__srcTerminal____Terminals.setSrc(srcResource);
 		srcResource__srcTerminal____Terminals.setTrg(srcTerminal);
 		isApplicableMatch.getAllContextElements().add(srcResource__srcTerminal____Terminals);
 		srcTerminal__srcResource____ConductingEquipment.setSrc(srcTerminal);
 		srcTerminal__srcResource____ConductingEquipment.setTrg(srcResource);
 		isApplicableMatch.getAllContextElements().add(srcTerminal__srcResource____ConductingEquipment);
-		terminalToTerminal__trgTerminal____target.setSrc(terminalToTerminal);
-		terminalToTerminal__trgTerminal____target.setTrg(trgTerminal);
-		isApplicableMatch.getAllContextElements().add(terminalToTerminal__trgTerminal____target);
-		srcTerminal__srcFlow____TieFlow.setName(srcTerminal__srcFlow____TieFlow_name_prime);
-		srcFlow__srcTerminal____Terminal.setName(srcFlow__srcTerminal____Terminal_name_prime);
 		srcLocation__srcResource____PowerSystemResources
 				.setName(srcLocation__srcResource____PowerSystemResources_name_prime);
 		srcResource__srcLocation____Location.setName(srcResource__srcLocation____Location_name_prime);
-		pair__meter____a.setName(pair__meter____a_name_prime);
-		terminalToTerminal__srcTerminal____source.setName(terminalToTerminal__srcTerminal____source_name_prime);
 		meter__srcLocation____Location.setName(meter__srcLocation____Location_name_prime);
 		srcLocation__meter____Assets.setName(srcLocation__meter____Assets_name_prime);
+		pair__meter____a.setName(pair__meter____a_name_prime);
+		terminalToTerminal__srcTerminal____source.setName(terminalToTerminal__srcTerminal____source_name_prime);
+		terminalToTerminal__trgTerminal____target.setName(terminalToTerminal__trgTerminal____target_name_prime);
+		srcTerminal__srcFlow____TieFlow.setName(srcTerminal__srcFlow____TieFlow_name_prime);
+		srcFlow__srcTerminal____Terminal.setName(srcFlow__srcTerminal____Terminal_name_prime);
 		srcResource__srcTerminal____Terminals.setName(srcResource__srcTerminal____Terminals_name_prime);
 		srcTerminal__srcResource____ConductingEquipment
 				.setName(srcTerminal__srcResource____ConductingEquipment_name_prime);
-		terminalToTerminal__trgTerminal____target.setName(terminalToTerminal__trgTerminal____target_name_prime);
-		return new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal, meter,
-				trgTerminal, isApplicableMatch, srcTerminal__srcFlow____TieFlow, srcFlow__srcTerminal____Terminal,
-				srcLocation__srcResource____PowerSystemResources, srcResource__srcLocation____Location,
-				pair__meter____a, terminalToTerminal__srcTerminal____source, meter__srcLocation____Location,
-				srcLocation__meter____Assets, srcResource__srcTerminal____Terminals,
-				srcTerminal__srcResource____ConductingEquipment, terminalToTerminal__trgTerminal____target };
+		return new Object[] { srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal,
+				srcResource, isApplicableMatch, srcLocation__srcResource____PowerSystemResources,
+				srcResource__srcLocation____Location, meter__srcLocation____Location, srcLocation__meter____Assets,
+				pair__meter____a, terminalToTerminal__srcTerminal____source, terminalToTerminal__trgTerminal____target,
+				srcTerminal__srcFlow____TieFlow, srcFlow__srcTerminal____Terminal,
+				srcResource__srcTerminal____Terminals, srcTerminal__srcResource____ConductingEquipment };
 	}
 
 	public static final Object[] pattern_TieFlow_2_4_solveCSP_bindingFBBBBBBBBBB(TieFlow _this,
-			IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
-			TerminalToTerminal terminalToTerminal, MeterAsset meter, outagePreventionJointarget.Terminal trgTerminal) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, pair, srcTerminal, srcLocation,
-				srcResource, srcFlow, terminalToTerminal, meter, trgTerminal);
+			IsApplicableMatch isApplicableMatch, Location srcLocation, TerminalToTerminal terminalToTerminal,
+			MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair,
+			Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal, ConductingEquipment srcResource) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcLocation, terminalToTerminal,
+				meter, srcFlow, pair, srcTerminal, trgTerminal, srcResource);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, pair, srcTerminal, srcLocation, srcResource, srcFlow,
-					terminalToTerminal, meter, trgTerminal };
+			return new Object[] { csp, _this, isApplicableMatch, srcLocation, terminalToTerminal, meter, srcFlow, pair,
+					srcTerminal, trgTerminal, srcResource };
 		}
 		return null;
 	}
@@ -1293,20 +1296,20 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final Object[] pattern_TieFlow_2_4_solveCSP_bindingAndBlackFBBBBBBBBBB(TieFlow _this,
-			IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
-			TerminalToTerminal terminalToTerminal, MeterAsset meter, outagePreventionJointarget.Terminal trgTerminal) {
+			IsApplicableMatch isApplicableMatch, Location srcLocation, TerminalToTerminal terminalToTerminal,
+			MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair,
+			Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal, ConductingEquipment srcResource) {
 		Object[] result_pattern_TieFlow_2_4_solveCSP_binding = pattern_TieFlow_2_4_solveCSP_bindingFBBBBBBBBBB(_this,
-				isApplicableMatch, pair, srcTerminal, srcLocation, srcResource, srcFlow, terminalToTerminal, meter,
-				trgTerminal);
+				isApplicableMatch, srcLocation, terminalToTerminal, meter, srcFlow, pair, srcTerminal, trgTerminal,
+				srcResource);
 		if (result_pattern_TieFlow_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_TieFlow_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_TieFlow_2_4_solveCSP_black = pattern_TieFlow_2_4_solveCSP_blackB(csp);
 			if (result_pattern_TieFlow_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, pair, srcTerminal, srcLocation, srcResource,
-						srcFlow, terminalToTerminal, meter, trgTerminal };
+				return new Object[] { csp, _this, isApplicableMatch, srcLocation, terminalToTerminal, meter, srcFlow,
+						pair, srcTerminal, trgTerminal, srcResource };
 			}
 		}
 		return null;
@@ -1408,8 +1411,8 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 									MeterAsset meter = (MeterAsset) tmpMeter;
 									for (MeterAssetMMXUPair pair : org.moflon.core.utilities.eMoflonEMFUtil
 											.getOppositeReferenceTyped(meter, MeterAssetMMXUPair.class, "a")) {
-										_result.add(new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow,
-												meter, _edge_TieFlow });
+										_result.add(new Object[] { srcLocation, meter, srcFlow, pair, srcTerminal,
+												srcResource, _edge_TieFlow });
 									}
 								}
 							}
@@ -1435,10 +1438,11 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 	}
 
 	public static final boolean pattern_TieFlow_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBB(
-			TieFlow _this, Match match, MeterAssetMMXUPair pair, Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, pair, srcTerminal, srcLocation, srcResource, srcFlow,
-				meter);
+			TieFlow _this, Match match, Location srcLocation, MeterAsset meter,
+			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			ConductingEquipment srcResource) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcLocation, meter, srcFlow, pair, srcTerminal,
+				srcResource);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1471,15 +1475,15 @@ public class TieFlowImpl extends AbstractRuleImpl implements TieFlow {
 		return _result;
 	}
 
-	public static final Object[] pattern_TieFlow_13_1_matchtggpattern_blackBBBBBB(MeterAssetMMXUPair pair,
-			Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAsset meter) {
-		if (srcTerminal.getTieFlow().contains(srcFlow)) {
-			if (srcLocation.getPowerSystemResources().contains(srcResource)) {
+	public static final Object[] pattern_TieFlow_13_1_matchtggpattern_blackBBBBBB(Location srcLocation,
+			MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair,
+			Terminal srcTerminal, ConductingEquipment srcResource) {
+		if (srcLocation.getPowerSystemResources().contains(srcResource)) {
+			if (srcLocation.equals(meter.getLocation())) {
 				if (meter.equals(pair.getA())) {
-					if (srcLocation.equals(meter.getLocation())) {
+					if (srcTerminal.getTieFlow().contains(srcFlow)) {
 						if (srcResource.getTerminals().contains(srcTerminal)) {
-							return new Object[] { pair, srcTerminal, srcLocation, srcResource, srcFlow, meter };
+							return new Object[] { srcLocation, meter, srcFlow, pair, srcTerminal, srcResource };
 						}
 					}
 				}

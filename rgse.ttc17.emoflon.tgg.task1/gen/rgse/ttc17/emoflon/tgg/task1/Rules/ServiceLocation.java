@@ -129,7 +129,7 @@ public interface ServiceLocation extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_60(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_137(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

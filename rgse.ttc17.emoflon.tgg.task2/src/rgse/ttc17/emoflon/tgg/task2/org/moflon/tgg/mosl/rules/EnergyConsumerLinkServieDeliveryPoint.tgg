@@ -14,7 +14,6 @@
 		++-EnergyConsumer->srcConsumer
 	}
 	srcConsumer : EnergyConsumer {
-		
 	}
 }
 
@@ -23,9 +22,7 @@
 		++-EnergyConsumer->trgConsumer
 	}
 	trgConsumer : EnergyConsumer{
-		
-	}
-	
+	}	
 }
 
 #correspondence {

@@ -15,7 +15,6 @@
 		++ -PowerSystemResources->srcResource
 	}
 	srcResource : PowerSystemResource {
-		
 	}
 }
 
@@ -24,9 +23,7 @@
 		++-PowerSystemResources->trgResource
 	}
 	++ trgResource : PowerSystemResource {
-		
-	}
-	
+	}	
 }
 
 #correspondence {
@@ -41,5 +38,4 @@
 }
 
 #attributeConditions {
-	
 }

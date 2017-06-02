@@ -22,22 +22,13 @@ public interface Task1Factory extends EFactory {
 	Task1Factory eINSTANCE = rgse.ttc17.emoflon.tgg.task1.impl.Task1FactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Physical Device To Energy Consumer</em>'.
+	 * Returns a new object of class '<em>Control Area To Energy Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Physical Device To Energy Consumer</em>'.
+	 * @return a new object of class '<em>Control Area To Energy Consumer</em>'.
 	 * @generated
 	 */
-	PhysicalDeviceToEnergyConsumer createPhysicalDeviceToEnergyConsumer();
-
-	/**
-	 * Returns a new object of class '<em>Meter Asset To Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Meter Asset To Energy Consumer</em>'.
-	 * @generated
-	 */
-	MeterAssetToEnergyConsumer createMeterAssetToEnergyConsumer();
+	ControlAreaToEnergyConsumer createControlAreaToEnergyConsumer();
 
 	/**
 	 * Returns a new object of class '<em>Location To Location</em>'.
@@ -49,6 +40,24 @@ public interface Task1Factory extends EFactory {
 	LocationToLocation createLocationToLocation();
 
 	/**
+	 * Returns a new object of class '<em>Meter Asset To Energy Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Meter Asset To Energy Consumer</em>'.
+	 * @generated
+	 */
+	MeterAssetToEnergyConsumer createMeterAssetToEnergyConsumer();
+
+	/**
+	 * Returns a new object of class '<em>Physical Device To Energy Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Physical Device To Energy Consumer</em>'.
+	 * @generated
+	 */
+	PhysicalDeviceToEnergyConsumer createPhysicalDeviceToEnergyConsumer();
+
+	/**
 	 * Returns a new object of class '<em>Position Point To Position Point</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,15 +65,6 @@ public interface Task1Factory extends EFactory {
 	 * @generated
 	 */
 	PositionPointToPositionPoint createPositionPointToPositionPoint();
-
-	/**
-	 * Returns a new object of class '<em>Control Area To Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Control Area To Energy Consumer</em>'.
-	 * @generated
-	 */
-	ControlAreaToEnergyConsumer createControlAreaToEnergyConsumer();
 
 	/**
 	 * Returns the package supported by this factory.

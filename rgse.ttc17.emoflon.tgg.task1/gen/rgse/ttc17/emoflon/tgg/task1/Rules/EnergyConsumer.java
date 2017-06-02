@@ -45,8 +45,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ServiceDeliveryPoint deliver, ElectricityValues electric, MeterAsset asset);
+	boolean isAppropriate_FWD(Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ServiceDeliveryPoint deliver, ElectricityValues electric, MeterAsset asset);
+	void registerObjectsToMatch_FWD(Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,8 +79,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ServiceDeliveryPoint deliver, ElectricityValues electric, MeterAsset asset);
+	CSP isAppropriate_solveCsp_FWD(Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,8 +97,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ServiceDeliveryPoint deliver,
-			ElectricityValues electric, MeterAsset asset);
+			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, ElectricityValues electric);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,8 +114,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgConsumer, EObject device, EObject pair,
-			EObject deviceCorr, EObject connect, EObject deliver, EObject electric, EObject asset, EObject assetCorr);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject deviceCorr, EObject trgConsumer, EObject device,
+			EObject assetCorr, EObject deliver, EObject asset, EObject pair, EObject connect, EObject electric);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,7 +131,7 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_54(EMoflonEdge _edge_b);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_131(EMoflonEdge _edge_a);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,8 +155,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(PhysicalDevice device, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
-			ServiceDeliveryPoint deliver, ElectricityValues electric, MeterAsset asset);
+	boolean checkDEC_FWD(PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

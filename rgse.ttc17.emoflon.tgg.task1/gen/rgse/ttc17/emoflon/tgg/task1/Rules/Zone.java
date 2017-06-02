@@ -129,7 +129,7 @@ public interface Zone extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_64(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_136(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

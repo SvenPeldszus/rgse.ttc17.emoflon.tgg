@@ -428,7 +428,7 @@ public class StationSupplyImpl extends AbstractRuleImpl implements StationSupply
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_38(EMoflonEdge _edge_EnergyConsumer) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_165(EMoflonEdge _edge_EnergyConsumer) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = StationSupplyImpl
 				.pattern_StationSupply_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -500,13 +500,13 @@ public class StationSupplyImpl extends AbstractRuleImpl implements StationSupply
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_mRID.setValue(__helper.getValue("trgConsumer", "mRID"));
-		var_trgConsumer_mRID.setType("String");
-
 		Variable var_srcConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("srcConsumer", true, csp);
 		var_srcConsumer_mRID.setValue(__helper.getValue("srcConsumer", "mRID"));
 		var_srcConsumer_mRID.setType("String");
+
+		Variable var_trgConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_mRID.setValue(__helper.getValue("trgConsumer", "mRID"));
+		var_trgConsumer_mRID.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -608,8 +608,8 @@ public class StationSupplyImpl extends AbstractRuleImpl implements StationSupply
 			return null;
 		case RulesPackage.STATION_SUPPLY___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.STATION_SUPPLY___IS_APPROPRIATE_FWD_EMOFLON_EDGE_38__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_38((EMoflonEdge) arguments.get(0));
+		case RulesPackage.STATION_SUPPLY___IS_APPROPRIATE_FWD_EMOFLON_EDGE_165__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_165((EMoflonEdge) arguments.get(0));
 		case RulesPackage.STATION_SUPPLY___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.STATION_SUPPLY___IS_APPLICABLE_CC__MATCH_MATCH:

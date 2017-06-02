@@ -137,7 +137,7 @@ public interface EnergyConsumerWithID extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_57(EMoflonEdge _edge_b);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_135(EMoflonEdge _edge_b);
 
 	/**
 	 * <!-- begin-user-doc -->

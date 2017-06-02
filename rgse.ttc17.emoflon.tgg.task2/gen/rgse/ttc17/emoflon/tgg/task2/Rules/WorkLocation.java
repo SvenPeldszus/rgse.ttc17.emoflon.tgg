@@ -96,7 +96,7 @@ public interface WorkLocation extends EObject, AbstractRule {
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
 			gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation srcLocation, MeterAsset asset,
-			MeterAssetToPMUVoltageMeter assetToPMU, MeterAssetMMXUPair pair, PMUVoltageMeter consumer);
+			MeterAssetMMXUPair pair, PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public interface WorkLocation extends EObject, AbstractRule {
 	 * @generated
 	 */
 	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject asset,
-			EObject assetToPMU, EObject pair, EObject consumer, EObject locationCorr);
+			EObject pair, EObject consumer, EObject assetToPMU, EObject locationCorr);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface WorkLocation extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_27(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_144(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

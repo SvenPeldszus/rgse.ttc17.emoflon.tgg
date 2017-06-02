@@ -90,25 +90,25 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
+	public boolean isAppropriate_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {
 		// initial bindings
 		Object[] result1_black = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_0_1_initialbindings_blackBBBBBB(this, match, values, device, pair, asset);
+				.pattern_PrivateMeterVoltage_0_1_initialbindings_blackBBBBBB(this, match, device, pair, asset, values);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[values] = " + values + ", "
-					+ "[device] = " + device + ", " + "[pair] = " + pair + ", " + "[asset] = " + asset + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[device] = " + device + ", "
+					+ "[pair] = " + pair + ", " + "[asset] = " + asset + ", " + "[values] = " + values + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_0_2_SolveCSP_bindingAndBlackFBBBBBB(this, match, values, device, pair,
-						asset);
+				.pattern_PrivateMeterVoltage_0_2_SolveCSP_bindingAndBlackFBBBBBB(this, match, device, pair, asset,
+						values);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[values] = " + values + ", " + "[device] = " + device
-					+ ", " + "[pair] = " + pair + ", " + "[asset] = " + asset + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[device] = " + device + ", " + "[pair] = " + pair
+					+ ", " + "[asset] = " + asset + ", " + "[values] = " + values + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -116,34 +116,34 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 
 			// collect elements to be translated
 			Object[] result4_black = PrivateMeterVoltageImpl
-					.pattern_PrivateMeterVoltage_0_4_collectelementstobetranslated_blackBBBBB(match, values, device,
-							pair, asset);
+					.pattern_PrivateMeterVoltage_0_4_collectelementstobetranslated_blackBBBBB(match, device, pair,
+							asset, values);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[values] = " + values + ", " + "[device] = "
-						+ device + ", " + "[pair] = " + pair + ", " + "[asset] = " + asset + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[device] = " + device + ", " + "[pair] = "
+						+ pair + ", " + "[asset] = " + asset + ", " + "[values] = " + values + ".");
 			}
 			PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_0_4_collectelementstobetranslated_greenBBBBFF(match,
 					device, pair, asset);
-			// EMoflonEdge pair__device____b = (EMoflonEdge) result4_green[4];
-			// EMoflonEdge pair__asset____a = (EMoflonEdge) result4_green[5];
+			// EMoflonEdge pair__asset____a = (EMoflonEdge) result4_green[4];
+			// EMoflonEdge pair__device____b = (EMoflonEdge) result4_green[5];
 
 			// collect context elements
 			Object[] result5_black = PrivateMeterVoltageImpl
-					.pattern_PrivateMeterVoltage_0_5_collectcontextelements_blackBBBBB(match, values, device, pair,
-							asset);
+					.pattern_PrivateMeterVoltage_0_5_collectcontextelements_blackBBBBB(match, device, pair, asset,
+							values);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[values] = " + values + ", " + "[device] = "
-						+ device + ", " + "[pair] = " + pair + ", " + "[asset] = " + asset + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[device] = " + device + ", " + "[pair] = "
+						+ pair + ", " + "[asset] = " + asset + ", " + "[values] = " + values + ".");
 			}
-			PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_0_5_collectcontextelements_greenBBBBF(match, values,
-					device, asset);
+			PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_0_5_collectcontextelements_greenBBBBF(match, device,
+					asset, values);
 			// EMoflonEdge device__values____ElectricityValues = (EMoflonEdge) result5_green[4];
 
 			// register objects to match
 			PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_0_6_registerobjectstomatch_expressionBBBBBB(this, match,
-					values, device, pair, asset);
+					device, pair, asset, values);
 			return PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_0_7_expressionF();
 		} else {
 			return PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_0_8_expressionF();
@@ -164,54 +164,54 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		ElectricityValues values = (ElectricityValues) result1_bindingAndBlack[0];
-		PhysicalDevice device = (PhysicalDevice) result1_bindingAndBlack[1];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[2];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[3];
+		PhysicalDevice device = (PhysicalDevice) result1_bindingAndBlack[0];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[1];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[2];
+		ElectricityValues values = (ElectricityValues) result1_bindingAndBlack[3];
 		CSP csp = (CSP) result1_bindingAndBlack[4];
 		Object[] result1_green = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_1_1_performtransformation_greenFBBFFB(device, asset, csp);
+				.pattern_PrivateMeterVoltage_1_1_performtransformation_greenFFBFBB(device, asset, csp);
 		MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result1_green[0];
+		PhysicalDeviceToPrivateMeterVoltage mmxuToMeter = (PhysicalDeviceToPrivateMeterVoltage) result1_green[1];
 		outagePreventionJointarget.PrivateMeterVoltage meter = (outagePreventionJointarget.PrivateMeterVoltage) result1_green[3];
-		PhysicalDeviceToPrivateMeterVoltage mmxuToMeter = (PhysicalDeviceToPrivateMeterVoltage) result1_green[4];
 
 		// collect translated elements
 		Object[] result2_black = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_1_2_collecttranslatedelements_blackBBBB(assetToMeter, pair, meter,
-						mmxuToMeter);
+				.pattern_PrivateMeterVoltage_1_2_collecttranslatedelements_blackBBBB(assetToMeter, mmxuToMeter, meter,
+						pair);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[assetToMeter] = " + assetToMeter + ", " + "[pair] = " + pair + ", " + "[meter] = " + meter
-					+ ", " + "[mmxuToMeter] = " + mmxuToMeter + ".");
+					+ "[assetToMeter] = " + assetToMeter + ", " + "[mmxuToMeter] = " + mmxuToMeter + ", " + "[meter] = "
+					+ meter + ", " + "[pair] = " + pair + ".");
 		}
 		Object[] result2_green = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_1_2_collecttranslatedelements_greenFBBBB(assetToMeter, pair, meter,
-						mmxuToMeter);
+				.pattern_PrivateMeterVoltage_1_2_collecttranslatedelements_greenFBBBB(assetToMeter, mmxuToMeter, meter,
+						pair);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_1_3_bookkeepingforedges_blackBBBBBBBB(ruleresult, values, assetToMeter,
-						device, pair, asset, meter, mmxuToMeter);
+				.pattern_PrivateMeterVoltage_1_3_bookkeepingforedges_blackBBBBBBBB(ruleresult, assetToMeter,
+						mmxuToMeter, device, meter, pair, asset, values);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[values] = " + values + ", " + "[assetToMeter] = "
-					+ assetToMeter + ", " + "[device] = " + device + ", " + "[pair] = " + pair + ", " + "[asset] = "
-					+ asset + ", " + "[meter] = " + meter + ", " + "[mmxuToMeter] = " + mmxuToMeter + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[assetToMeter] = " + assetToMeter + ", "
+					+ "[mmxuToMeter] = " + mmxuToMeter + ", " + "[device] = " + device + ", " + "[meter] = " + meter
+					+ ", " + "[pair] = " + pair + ", " + "[asset] = " + asset + ", " + "[values] = " + values + ".");
 		}
 		PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(ruleresult,
-				assetToMeter, device, pair, asset, meter, mmxuToMeter);
-		// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge assetToMeter__asset____source = (EMoflonEdge) result3_green[8];
+				assetToMeter, mmxuToMeter, device, meter, pair, asset);
+		// EMoflonEdge mmxuToMeter__device____source = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge mmxuToMeter__meter____target = (EMoflonEdge) result3_green[8];
 		// EMoflonEdge assetToMeter__meter____target = (EMoflonEdge) result3_green[9];
-		// EMoflonEdge mmxuToMeter__meter____target = (EMoflonEdge) result3_green[10];
-		// EMoflonEdge mmxuToMeter__device____source = (EMoflonEdge) result3_green[11];
-		// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[12];
+		// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[10];
+		// EMoflonEdge assetToMeter__asset____source = (EMoflonEdge) result3_green[11];
+		// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[12];
 
 		// perform postprocessing story node is empty
 		// register objects
 		PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_1_5_registerobjects_expressionBBBBBBBBB(this, ruleresult,
-				values, assetToMeter, device, pair, asset, meter, mmxuToMeter);
+				assetToMeter, mmxuToMeter, device, meter, pair, asset, values);
 		return PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_1_6_expressionFB(ruleresult);
 	}
 
@@ -241,31 +241,31 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		ElectricityValues values = (ElectricityValues) result2_binding[0];
-		PhysicalDevice device = (PhysicalDevice) result2_binding[1];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
-		MeterAsset asset = (MeterAsset) result2_binding[3];
+		PhysicalDevice device = (PhysicalDevice) result2_binding[0];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[1];
+		MeterAsset asset = (MeterAsset) result2_binding[2];
+		ElectricityValues values = (ElectricityValues) result2_binding[3];
 		for (Object[] result2_black : PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_2_2_corematch_blackBBBBB(values, device, pair, asset, match)) {
+				.pattern_PrivateMeterVoltage_2_2_corematch_blackBBBBB(device, pair, asset, values, match)) {
 			// ForEach find context
 			for (Object[] result3_black : PrivateMeterVoltageImpl
-					.pattern_PrivateMeterVoltage_2_3_findcontext_blackBBBB(values, device, pair, asset)) {
+					.pattern_PrivateMeterVoltage_2_3_findcontext_blackBBBB(device, pair, asset, values)) {
 				Object[] result3_green = PrivateMeterVoltageImpl
-						.pattern_PrivateMeterVoltage_2_3_findcontext_greenBBBBFFFF(values, device, pair, asset);
+						.pattern_PrivateMeterVoltage_2_3_findcontext_greenBBBBFFFF(device, pair, asset, values);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[4];
-				// EMoflonEdge device__values____ElectricityValues = (EMoflonEdge) result3_green[5];
-				// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[6];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[7];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[5];
+				// EMoflonEdge device__values____ElectricityValues = (EMoflonEdge) result3_green[6];
+				// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[7];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = PrivateMeterVoltageImpl
 						.pattern_PrivateMeterVoltage_2_4_solveCSP_bindingAndBlackFBBBBBB(this, isApplicableMatch,
-								values, device, pair, asset);
+								device, pair, asset, values);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[values] = " + values + ", " + "[device] = " + device + ", " + "[pair] = " + pair + ", "
-							+ "[asset] = " + asset + ".");
+							+ "[device] = " + device + ", " + "[pair] = " + pair + ", " + "[asset] = " + asset + ", "
+							+ "[values] = " + values + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -297,12 +297,12 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		match.registerObject("values", values);
+	public void registerObjectsToMatch_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {
 		match.registerObject("device", device);
 		match.registerObject("pair", pair);
 		match.registerObject("asset", asset);
+		match.registerObject("values", values);
 
 	}
 
@@ -311,8 +311,8 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -341,36 +341,36 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ElectricityValues values,
-			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, PhysicalDevice device,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
 		// Create literals
 
 		// Create attribute variables
-		Variable var_values_VoltageL2 = CSPFactoryHelper.eINSTANCE.createVariable("values.VoltageL2", true, csp);
-		var_values_VoltageL2.setValue(values.getVoltageL2());
-		var_values_VoltageL2.setType("double");
 		Variable var_device_ID = CSPFactoryHelper.eINSTANCE.createVariable("device.ID", true, csp);
 		var_device_ID.setValue(device.getID());
 		var_device_ID.setType("String");
-		Variable var_values_VoltageL1 = CSPFactoryHelper.eINSTANCE.createVariable("values.VoltageL1", true, csp);
-		var_values_VoltageL1.setValue(values.getVoltageL1());
-		var_values_VoltageL1.setType("double");
 		Variable var_values_VoltageL3 = CSPFactoryHelper.eINSTANCE.createVariable("values.VoltageL3", true, csp);
 		var_values_VoltageL3.setValue(values.getVoltageL3());
 		var_values_VoltageL3.setType("double");
+		Variable var_values_VoltageL1 = CSPFactoryHelper.eINSTANCE.createVariable("values.VoltageL1", true, csp);
+		var_values_VoltageL1.setValue(values.getVoltageL1());
+		var_values_VoltageL1.setType("double");
+		Variable var_values_VoltageL2 = CSPFactoryHelper.eINSTANCE.createVariable("values.VoltageL2", true, csp);
+		var_values_VoltageL2.setValue(values.getVoltageL2());
+		var_values_VoltageL2.setType("double");
 
 		// Create unbound variables
-		Variable var_meter_VoltageB = CSPFactoryHelper.eINSTANCE.createVariable("meter.VoltageB", csp);
-		var_meter_VoltageB.setType("double");
 		Variable var_meter_ID = CSPFactoryHelper.eINSTANCE.createVariable("meter.ID", csp);
 		var_meter_ID.setType("String");
-		Variable var_meter_VoltageA = CSPFactoryHelper.eINSTANCE.createVariable("meter.VoltageA", csp);
-		var_meter_VoltageA.setType("double");
 		Variable var_meter_VoltageC = CSPFactoryHelper.eINSTANCE.createVariable("meter.VoltageC", csp);
 		var_meter_VoltageC.setType("double");
+		Variable var_meter_VoltageA = CSPFactoryHelper.eINSTANCE.createVariable("meter.VoltageA", csp);
+		var_meter_VoltageA.setType("double");
+		Variable var_meter_VoltageB = CSPFactoryHelper.eINSTANCE.createVariable("meter.VoltageB", csp);
+		var_meter_VoltageB.setType("double");
 
 		// Create constraints
 		Eq eq = new Eq();
@@ -385,19 +385,19 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 
 		// Solve CSP
 		eq.setRuleName("NoRuleName");
-		eq.solve(var_values_VoltageL2, var_meter_VoltageB);
+		eq.solve(var_device_ID, var_meter_ID);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_device_ID, var_meter_ID);
+		eq_0.solve(var_values_VoltageL3, var_meter_VoltageC);
 		eq_1.setRuleName("NoRuleName");
 		eq_1.solve(var_values_VoltageL1, var_meter_VoltageA);
 		eq_2.setRuleName("NoRuleName");
-		eq_2.solve(var_values_VoltageL3, var_meter_VoltageC);
+		eq_2.solve(var_values_VoltageL2, var_meter_VoltageB);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("values", values);
 		isApplicableMatch.registerObject("device", device);
 		isApplicableMatch.registerObject("pair", pair);
 		isApplicableMatch.registerObject("asset", asset);
+		isApplicableMatch.registerObject("values", values);
 		return csp;
 	}
 
@@ -415,15 +415,15 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject values, EObject assetToMeter, EObject device,
-			EObject pair, EObject asset, EObject meter, EObject mmxuToMeter) {
-		ruleresult.registerObject("values", values);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject assetToMeter, EObject mmxuToMeter,
+			EObject device, EObject meter, EObject pair, EObject asset, EObject values) {
 		ruleresult.registerObject("assetToMeter", assetToMeter);
+		ruleresult.registerObject("mmxuToMeter", mmxuToMeter);
 		ruleresult.registerObject("device", device);
+		ruleresult.registerObject("meter", meter);
 		ruleresult.registerObject("pair", pair);
 		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("meter", meter);
-		ruleresult.registerObject("mmxuToMeter", mmxuToMeter);
+		ruleresult.registerObject("values", values);
 
 	}
 
@@ -442,7 +442,7 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_35(EMoflonEdge _edge_b) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_152(EMoflonEdge _edge_a) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = PrivateMeterVoltageImpl
 				.pattern_PrivateMeterVoltage_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -458,11 +458,11 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 
 		// ForEach test core match and DECs
 		for (Object[] result2_black : PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_10_2_testcorematchandDECs_blackFFFFB(_edge_b)) {
-			ElectricityValues values = (ElectricityValues) result2_black[0];
-			PhysicalDevice device = (PhysicalDevice) result2_black[1];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[2];
-			MeterAsset asset = (MeterAsset) result2_black[3];
+				.pattern_PrivateMeterVoltage_10_2_testcorematchandDECs_blackFFFFB(_edge_a)) {
+			PhysicalDevice device = (PhysicalDevice) result2_black[0];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[1];
+			MeterAsset asset = (MeterAsset) result2_black[2];
+			ElectricityValues values = (ElectricityValues) result2_black[3];
 			Object[] result2_green = PrivateMeterVoltageImpl
 					.pattern_PrivateMeterVoltage_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -470,7 +470,7 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 			// bookkeeping with generic isAppropriate method
 			if (PrivateMeterVoltageImpl
 					.pattern_PrivateMeterVoltage_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBB(this,
-							match, values, device, pair, asset)) {
+							match, device, pair, asset, values)) {
 				// Ensure that the correct types of elements are matched
 				if (PrivateMeterVoltageImpl
 						.pattern_PrivateMeterVoltage_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -518,33 +518,33 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 		var_meter_ID.setValue(__helper.getValue("meter", "ID"));
 		var_meter_ID.setType("String");
 
-		Variable var_values_VoltageL2 = CSPFactoryHelper.eINSTANCE.createVariable("values", true, csp);
-		var_values_VoltageL2.setValue(__helper.getValue("values", "VoltageL2"));
-		var_values_VoltageL2.setType("double");
-
-		Variable var_device_ID = CSPFactoryHelper.eINSTANCE.createVariable("device", true, csp);
-		var_device_ID.setValue(__helper.getValue("device", "ID"));
-		var_device_ID.setType("String");
-
-		Variable var_meter_VoltageA = CSPFactoryHelper.eINSTANCE.createVariable("meter", true, csp);
-		var_meter_VoltageA.setValue(__helper.getValue("meter", "VoltageA"));
-		var_meter_VoltageA.setType("double");
-
-		Variable var_values_VoltageL1 = CSPFactoryHelper.eINSTANCE.createVariable("values", true, csp);
-		var_values_VoltageL1.setValue(__helper.getValue("values", "VoltageL1"));
-		var_values_VoltageL1.setType("double");
-
-		Variable var_meter_VoltageB = CSPFactoryHelper.eINSTANCE.createVariable("meter", true, csp);
-		var_meter_VoltageB.setValue(__helper.getValue("meter", "VoltageB"));
-		var_meter_VoltageB.setType("double");
+		Variable var_meter_VoltageC = CSPFactoryHelper.eINSTANCE.createVariable("meter", true, csp);
+		var_meter_VoltageC.setValue(__helper.getValue("meter", "VoltageC"));
+		var_meter_VoltageC.setType("double");
 
 		Variable var_values_VoltageL3 = CSPFactoryHelper.eINSTANCE.createVariable("values", true, csp);
 		var_values_VoltageL3.setValue(__helper.getValue("values", "VoltageL3"));
 		var_values_VoltageL3.setType("double");
 
-		Variable var_meter_VoltageC = CSPFactoryHelper.eINSTANCE.createVariable("meter", true, csp);
-		var_meter_VoltageC.setValue(__helper.getValue("meter", "VoltageC"));
-		var_meter_VoltageC.setType("double");
+		Variable var_values_VoltageL1 = CSPFactoryHelper.eINSTANCE.createVariable("values", true, csp);
+		var_values_VoltageL1.setValue(__helper.getValue("values", "VoltageL1"));
+		var_values_VoltageL1.setType("double");
+
+		Variable var_meter_VoltageA = CSPFactoryHelper.eINSTANCE.createVariable("meter", true, csp);
+		var_meter_VoltageA.setValue(__helper.getValue("meter", "VoltageA"));
+		var_meter_VoltageA.setType("double");
+
+		Variable var_device_ID = CSPFactoryHelper.eINSTANCE.createVariable("device", true, csp);
+		var_device_ID.setValue(__helper.getValue("device", "ID"));
+		var_device_ID.setType("String");
+
+		Variable var_meter_VoltageB = CSPFactoryHelper.eINSTANCE.createVariable("meter", true, csp);
+		var_meter_VoltageB.setValue(__helper.getValue("meter", "VoltageB"));
+		var_meter_VoltageB.setType("double");
+
+		Variable var_values_VoltageL2 = CSPFactoryHelper.eINSTANCE.createVariable("values", true, csp);
+		var_values_VoltageL2.setValue(__helper.getValue("values", "VoltageL2"));
+		var_values_VoltageL2.setType("double");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -559,35 +559,35 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 		csp.getConstraints().add(eq3);
 
 		eq0.setRuleName("PrivateMeterVoltage");
-		eq0.solve(var_values_VoltageL2, var_meter_VoltageB);
+		eq0.solve(var_device_ID, var_meter_ID);
 
 		eq1.setRuleName("PrivateMeterVoltage");
-		eq1.solve(var_device_ID, var_meter_ID);
+		eq1.solve(var_values_VoltageL3, var_meter_VoltageC);
 
 		eq2.setRuleName("PrivateMeterVoltage");
 		eq2.solve(var_values_VoltageL1, var_meter_VoltageA);
 
 		eq3.setRuleName("PrivateMeterVoltage");
-		eq3.solve(var_values_VoltageL3, var_meter_VoltageC);
+		eq3.solve(var_values_VoltageL2, var_meter_VoltageB);
 
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
-			var_meter_VoltageB.setBound(false);
 			var_meter_ID.setBound(false);
-			var_meter_VoltageA.setBound(false);
 			var_meter_VoltageC.setBound(false);
-			eq0.solve(var_values_VoltageL2, var_meter_VoltageB);
-			eq1.solve(var_device_ID, var_meter_ID);
+			var_meter_VoltageA.setBound(false);
+			var_meter_VoltageB.setBound(false);
+			eq0.solve(var_device_ID, var_meter_ID);
+			eq1.solve(var_values_VoltageL3, var_meter_VoltageC);
 			eq2.solve(var_values_VoltageL1, var_meter_VoltageA);
-			eq3.solve(var_values_VoltageL3, var_meter_VoltageC);
+			eq3.solve(var_values_VoltageL2, var_meter_VoltageB);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
-				__helper.setValue("meter", "VoltageB", var_meter_VoltageB.getValue());
 				__helper.setValue("meter", "ID", var_meter_ID.getValue());
-				__helper.setValue("meter", "VoltageA", var_meter_VoltageA.getValue());
 				__helper.setValue("meter", "VoltageC", var_meter_VoltageC.getValue());
+				__helper.setValue("meter", "VoltageA", var_meter_VoltageA.getValue());
+				__helper.setValue("meter", "VoltageB", var_meter_VoltageB.getValue());
 			} else {
 				ruleResult.setSuccess(false);
 				return ruleResult;
@@ -614,10 +614,10 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset) {// match tgg pattern
+	public boolean checkDEC_FWD(PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
+			ElectricityValues values) {// match tgg pattern
 		Object[] result1_black = PrivateMeterVoltageImpl
-				.pattern_PrivateMeterVoltage_13_1_matchtggpattern_blackBBBB(values, device, pair, asset);
+				.pattern_PrivateMeterVoltage_13_1_matchtggpattern_blackBBBB(device, pair, asset, values);
 		if (result1_black != null) {
 			return PrivateMeterVoltageImpl.pattern_PrivateMeterVoltage_13_2_expressionF();
 		} else {
@@ -634,29 +634,29 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_FWD__MATCH_ELECTRICITYVALUES_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET:
-			return isAppropriate_FWD((Match) arguments.get(0), (ElectricityValues) arguments.get(1),
-					(PhysicalDevice) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_FWD__MATCH_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET_ELECTRICITYVALUES:
+			return isAppropriate_FWD((Match) arguments.get(0), (PhysicalDevice) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (MeterAsset) arguments.get(3),
+					(ElectricityValues) arguments.get(4));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.PRIVATE_METER_VOLTAGE___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_ELECTRICITYVALUES_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (ElectricityValues) arguments.get(1),
-					(PhysicalDevice) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.PRIVATE_METER_VOLTAGE___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET_ELECTRICITYVALUES:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (PhysicalDevice) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (MeterAsset) arguments.get(3),
+					(ElectricityValues) arguments.get(4));
 			return null;
-		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_ELECTRICITYVALUES_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (ElectricityValues) arguments.get(1),
-					(PhysicalDevice) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET_ELECTRICITYVALUES:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (PhysicalDevice) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (MeterAsset) arguments.get(3),
+					(ElectricityValues) arguments.get(4));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_ELECTRICITYVALUES_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (ElectricityValues) arguments.get(1),
-					(PhysicalDevice) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET_ELECTRICITYVALUES:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (PhysicalDevice) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (MeterAsset) arguments.get(3),
+					(ElectricityValues) arguments.get(4));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -666,32 +666,32 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 			return null;
 		case RulesPackage.PRIVATE_METER_VOLTAGE___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_35__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_35((EMoflonEdge) arguments.get(0));
+		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_152__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_152((EMoflonEdge) arguments.get(0));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.PRIVATE_METER_VOLTAGE___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.PRIVATE_METER_VOLTAGE___CHECK_DEC_FWD__ELECTRICITYVALUES_PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET:
-			return checkDEC_FWD((ElectricityValues) arguments.get(0), (PhysicalDevice) arguments.get(1),
-					(MeterAssetPhysicalDevicePair) arguments.get(2), (MeterAsset) arguments.get(3));
+		case RulesPackage.PRIVATE_METER_VOLTAGE___CHECK_DEC_FWD__PHYSICALDEVICE_METERASSETPHYSICALDEVICEPAIR_METERASSET_ELECTRICITYVALUES:
+			return checkDEC_FWD((PhysicalDevice) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
+					(MeterAsset) arguments.get(2), (ElectricityValues) arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_1_initialbindings_blackBBBBBB(PrivateMeterVoltage _this,
-			Match match, ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset) {
-		return new Object[] { _this, match, values, device, pair, asset };
+			Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
+			ElectricityValues values) {
+		return new Object[] { _this, match, device, pair, asset, values };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_2_SolveCSP_bindingFBBBBBB(PrivateMeterVoltage _this,
-			Match match, ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, values, device, pair, asset);
+			Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
+			ElectricityValues values) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, device, pair, asset, values);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, values, device, pair, asset };
+			return new Object[] { csp, _this, match, device, pair, asset, values };
 		}
 		return null;
 	}
@@ -701,10 +701,10 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_2_SolveCSP_bindingAndBlackFBBBBBB(
-			PrivateMeterVoltage _this, Match match, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
+			PrivateMeterVoltage _this, Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {
 		Object[] result_pattern_PrivateMeterVoltage_0_2_SolveCSP_binding = pattern_PrivateMeterVoltage_0_2_SolveCSP_bindingFBBBBBB(
-				_this, match, values, device, pair, asset);
+				_this, match, device, pair, asset, values);
 		if (result_pattern_PrivateMeterVoltage_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_PrivateMeterVoltage_0_2_SolveCSP_binding[0];
 
@@ -712,7 +712,7 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 					csp);
 			if (result_pattern_PrivateMeterVoltage_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, values, device, pair, asset };
+				return new Object[] { csp, _this, match, device, pair, asset, values };
 			}
 		}
 		return null;
@@ -726,51 +726,51 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_4_collectelementstobetranslated_blackBBBBB(Match match,
-			ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		return new Object[] { match, values, device, pair, asset };
+			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {
+		return new Object[] { match, device, pair, asset, values };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_4_collectelementstobetranslated_greenBBBBFF(Match match,
 			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(pair);
-		String pair__device____b_name_prime = "b";
 		String pair__asset____a_name_prime = "a";
-		pair__device____b.setSrc(pair);
-		pair__device____b.setTrg(device);
-		match.getToBeTranslatedEdges().add(pair__device____b);
+		String pair__device____b_name_prime = "b";
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		match.getToBeTranslatedEdges().add(pair__asset____a);
-		pair__device____b.setName(pair__device____b_name_prime);
+		pair__device____b.setSrc(pair);
+		pair__device____b.setTrg(device);
+		match.getToBeTranslatedEdges().add(pair__device____b);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { match, device, pair, asset, pair__device____b, pair__asset____a };
+		pair__device____b.setName(pair__device____b_name_prime);
+		return new Object[] { match, device, pair, asset, pair__asset____a, pair__device____b };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_5_collectcontextelements_blackBBBBB(Match match,
-			ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		return new Object[] { match, values, device, pair, asset };
+			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {
+		return new Object[] { match, device, pair, asset, values };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_0_5_collectcontextelements_greenBBBBF(Match match,
-			ElectricityValues values, PhysicalDevice device, MeterAsset asset) {
+			PhysicalDevice device, MeterAsset asset, ElectricityValues values) {
 		EMoflonEdge device__values____ElectricityValues = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(values);
 		match.getContextNodes().add(device);
 		match.getContextNodes().add(asset);
+		match.getContextNodes().add(values);
 		String device__values____ElectricityValues_name_prime = "ElectricityValues";
 		device__values____ElectricityValues.setSrc(device);
 		device__values____ElectricityValues.setTrg(values);
 		match.getContextEdges().add(device__values____ElectricityValues);
 		device__values____ElectricityValues.setName(device__values____ElectricityValues_name_prime);
-		return new Object[] { match, values, device, asset, device__values____ElectricityValues };
+		return new Object[] { match, device, asset, values, device__values____ElectricityValues };
 	}
 
 	public static final void pattern_PrivateMeterVoltage_0_6_registerobjectstomatch_expressionBBBBBB(
-			PrivateMeterVoltage _this, Match match, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		_this.registerObjectsToMatch_FWD(match, values, device, pair, asset);
+			PrivateMeterVoltage _this, Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {
+		_this.registerObjectsToMatch_FWD(match, device, pair, asset, values);
 
 	}
 
@@ -786,23 +786,23 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 
 	public static final Object[] pattern_PrivateMeterVoltage_1_1_performtransformation_bindingFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("values");
-		EObject _localVariable_1 = isApplicableMatch.getObject("device");
-		EObject _localVariable_2 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_3 = isApplicableMatch.getObject("asset");
-		EObject tmpValues = _localVariable_0;
-		EObject tmpDevice = _localVariable_1;
-		EObject tmpPair = _localVariable_2;
-		EObject tmpAsset = _localVariable_3;
-		if (tmpValues instanceof ElectricityValues) {
-			ElectricityValues values = (ElectricityValues) tmpValues;
-			if (tmpDevice instanceof PhysicalDevice) {
-				PhysicalDevice device = (PhysicalDevice) tmpDevice;
-				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-					if (tmpAsset instanceof MeterAsset) {
-						MeterAsset asset = (MeterAsset) tmpAsset;
-						return new Object[] { values, device, pair, asset, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("device");
+		EObject _localVariable_1 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_2 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_3 = isApplicableMatch.getObject("values");
+		EObject tmpDevice = _localVariable_0;
+		EObject tmpPair = _localVariable_1;
+		EObject tmpAsset = _localVariable_2;
+		EObject tmpValues = _localVariable_3;
+		if (tmpDevice instanceof PhysicalDevice) {
+			PhysicalDevice device = (PhysicalDevice) tmpDevice;
+			if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+				MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+				if (tmpAsset instanceof MeterAsset) {
+					MeterAsset asset = (MeterAsset) tmpAsset;
+					if (tmpValues instanceof ElectricityValues) {
+						ElectricityValues values = (ElectricityValues) tmpValues;
+						return new Object[] { device, pair, asset, values, isApplicableMatch };
 					}
 				}
 			}
@@ -811,12 +811,12 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_1_1_performtransformation_blackBBBBFBB(
-			ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
+			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values,
 			PrivateMeterVoltage _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { values, device, pair, asset, csp, _this, isApplicableMatch };
+				return new Object[] { device, pair, asset, values, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -827,95 +827,95 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 		Object[] result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding = pattern_PrivateMeterVoltage_1_1_performtransformation_bindingFFFFB(
 				isApplicableMatch);
 		if (result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding != null) {
-			ElectricityValues values = (ElectricityValues) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[0];
-			PhysicalDevice device = (PhysicalDevice) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[1];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[2];
-			MeterAsset asset = (MeterAsset) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[3];
+			PhysicalDevice device = (PhysicalDevice) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[0];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[1];
+			MeterAsset asset = (MeterAsset) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[2];
+			ElectricityValues values = (ElectricityValues) result_pattern_PrivateMeterVoltage_1_1_performtransformation_binding[3];
 
 			Object[] result_pattern_PrivateMeterVoltage_1_1_performtransformation_black = pattern_PrivateMeterVoltage_1_1_performtransformation_blackBBBBFBB(
-					values, device, pair, asset, _this, isApplicableMatch);
+					device, pair, asset, values, _this, isApplicableMatch);
 			if (result_pattern_PrivateMeterVoltage_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_PrivateMeterVoltage_1_1_performtransformation_black[4];
 
-				return new Object[] { values, device, pair, asset, csp, _this, isApplicableMatch };
+				return new Object[] { device, pair, asset, values, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_PrivateMeterVoltage_1_1_performtransformation_greenFBBFFB(
+	public static final Object[] pattern_PrivateMeterVoltage_1_1_performtransformation_greenFFBFBB(
 			PhysicalDevice device, MeterAsset asset, CSP csp) {
 		MeterAssetToPrivateMeterVoltage assetToMeter = Task2Factory.eINSTANCE.createMeterAssetToPrivateMeterVoltage();
-		outagePreventionJointarget.PrivateMeterVoltage meter = OutagePreventionJointargetFactory.eINSTANCE
-				.createPrivateMeterVoltage();
 		PhysicalDeviceToPrivateMeterVoltage mmxuToMeter = Task2Factory.eINSTANCE
 				.createPhysicalDeviceToPrivateMeterVoltage();
-		Object _localVariable_0 = csp.getValue("meter", "VoltageB");
-		Object _localVariable_1 = csp.getValue("meter", "ID");
+		outagePreventionJointarget.PrivateMeterVoltage meter = OutagePreventionJointargetFactory.eINSTANCE
+				.createPrivateMeterVoltage();
+		Object _localVariable_0 = csp.getValue("meter", "ID");
+		Object _localVariable_1 = csp.getValue("meter", "VoltageC");
 		Object _localVariable_2 = csp.getValue("meter", "VoltageA");
-		Object _localVariable_3 = csp.getValue("meter", "VoltageC");
+		Object _localVariable_3 = csp.getValue("meter", "VoltageB");
 		assetToMeter.setSource(asset);
-		assetToMeter.setTarget(meter);
-		mmxuToMeter.setTarget(meter);
 		mmxuToMeter.setSource(device);
-		double meter_VoltageB_prime = (double) _localVariable_0;
-		String meter_ID_prime = (String) _localVariable_1;
+		mmxuToMeter.setTarget(meter);
+		assetToMeter.setTarget(meter);
+		String meter_ID_prime = (String) _localVariable_0;
+		double meter_VoltageC_prime = (double) _localVariable_1;
 		double meter_VoltageA_prime = (double) _localVariable_2;
-		double meter_VoltageC_prime = (double) _localVariable_3;
-		meter.setVoltageB(Double.valueOf(meter_VoltageB_prime));
+		double meter_VoltageB_prime = (double) _localVariable_3;
 		meter.setID(meter_ID_prime);
-		meter.setVoltageA(Double.valueOf(meter_VoltageA_prime));
 		meter.setVoltageC(Double.valueOf(meter_VoltageC_prime));
-		return new Object[] { assetToMeter, device, asset, meter, mmxuToMeter, csp };
+		meter.setVoltageA(Double.valueOf(meter_VoltageA_prime));
+		meter.setVoltageB(Double.valueOf(meter_VoltageB_prime));
+		return new Object[] { assetToMeter, mmxuToMeter, device, meter, asset, csp };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_1_2_collecttranslatedelements_blackBBBB(
-			MeterAssetToPrivateMeterVoltage assetToMeter, MeterAssetPhysicalDevicePair pair,
-			outagePreventionJointarget.PrivateMeterVoltage meter, PhysicalDeviceToPrivateMeterVoltage mmxuToMeter) {
-		return new Object[] { assetToMeter, pair, meter, mmxuToMeter };
+			MeterAssetToPrivateMeterVoltage assetToMeter, PhysicalDeviceToPrivateMeterVoltage mmxuToMeter,
+			outagePreventionJointarget.PrivateMeterVoltage meter, MeterAssetPhysicalDevicePair pair) {
+		return new Object[] { assetToMeter, mmxuToMeter, meter, pair };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_1_2_collecttranslatedelements_greenFBBBB(
-			MeterAssetToPrivateMeterVoltage assetToMeter, MeterAssetPhysicalDevicePair pair,
-			outagePreventionJointarget.PrivateMeterVoltage meter, PhysicalDeviceToPrivateMeterVoltage mmxuToMeter) {
+			MeterAssetToPrivateMeterVoltage assetToMeter, PhysicalDeviceToPrivateMeterVoltage mmxuToMeter,
+			outagePreventionJointarget.PrivateMeterVoltage meter, MeterAssetPhysicalDevicePair pair) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getCreatedLinkElements().add(assetToMeter);
-		ruleresult.getTranslatedElements().add(pair);
-		ruleresult.getCreatedElements().add(meter);
 		ruleresult.getCreatedLinkElements().add(mmxuToMeter);
-		return new Object[] { ruleresult, assetToMeter, pair, meter, mmxuToMeter };
+		ruleresult.getCreatedElements().add(meter);
+		ruleresult.getTranslatedElements().add(pair);
+		return new Object[] { ruleresult, assetToMeter, mmxuToMeter, meter, pair };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_1_3_bookkeepingforedges_blackBBBBBBBB(
-			PerformRuleResult ruleresult, EObject values, EObject assetToMeter, EObject device, EObject pair,
-			EObject asset, EObject meter, EObject mmxuToMeter) {
-		if (!assetToMeter.equals(values)) {
+			PerformRuleResult ruleresult, EObject assetToMeter, EObject mmxuToMeter, EObject device, EObject meter,
+			EObject pair, EObject asset, EObject values) {
+		if (!assetToMeter.equals(mmxuToMeter)) {
 			if (!assetToMeter.equals(device)) {
-				if (!assetToMeter.equals(pair)) {
-					if (!assetToMeter.equals(meter)) {
-						if (!assetToMeter.equals(mmxuToMeter)) {
-							if (!device.equals(values)) {
-								if (!device.equals(pair)) {
-									if (!device.equals(meter)) {
-										if (!device.equals(mmxuToMeter)) {
-											if (!pair.equals(values)) {
-												if (!asset.equals(values)) {
-													if (!asset.equals(assetToMeter)) {
-														if (!asset.equals(device)) {
-															if (!asset.equals(pair)) {
-																if (!asset.equals(meter)) {
-																	if (!asset.equals(mmxuToMeter)) {
-																		if (!meter.equals(values)) {
-																			if (!meter.equals(pair)) {
-																				if (!meter.equals(mmxuToMeter)) {
-																					if (!mmxuToMeter.equals(values)) {
-																						if (!mmxuToMeter.equals(pair)) {
+				if (!assetToMeter.equals(meter)) {
+					if (!assetToMeter.equals(pair)) {
+						if (!assetToMeter.equals(values)) {
+							if (!mmxuToMeter.equals(pair)) {
+								if (!mmxuToMeter.equals(values)) {
+									if (!device.equals(mmxuToMeter)) {
+										if (!device.equals(meter)) {
+											if (!device.equals(pair)) {
+												if (!device.equals(values)) {
+													if (!meter.equals(mmxuToMeter)) {
+														if (!meter.equals(pair)) {
+															if (!meter.equals(values)) {
+																if (!pair.equals(values)) {
+																	if (!asset.equals(assetToMeter)) {
+																		if (!asset.equals(mmxuToMeter)) {
+																			if (!asset.equals(device)) {
+																				if (!asset.equals(meter)) {
+																					if (!asset.equals(pair)) {
+																						if (!asset.equals(values)) {
 																							return new Object[] {
-																									ruleresult, values,
+																									ruleresult,
 																									assetToMeter,
-																									device, pair, asset,
-																									meter,
-																									mmxuToMeter };
+																									mmxuToMeter, device,
+																									meter, pair, asset,
+																									values };
 																						}
 																					}
 																				}
@@ -941,55 +941,55 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(
-			PerformRuleResult ruleresult, EObject assetToMeter, EObject device, EObject pair, EObject asset,
-			EObject meter, EObject mmxuToMeter) {
-		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge assetToMeter__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge assetToMeter__meter____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge mmxuToMeter__meter____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject assetToMeter, EObject mmxuToMeter, EObject device, EObject meter,
+			EObject pair, EObject asset) {
 		EMoflonEdge mmxuToMeter__device____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge mmxuToMeter__meter____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge assetToMeter__meter____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge assetToMeter__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "PrivateMeterVoltage";
-		String pair__device____b_name_prime = "b";
-		String assetToMeter__asset____source_name_prime = "source";
-		String assetToMeter__meter____target_name_prime = "target";
-		String mmxuToMeter__meter____target_name_prime = "target";
 		String mmxuToMeter__device____source_name_prime = "source";
+		String mmxuToMeter__meter____target_name_prime = "target";
+		String assetToMeter__meter____target_name_prime = "target";
 		String pair__asset____a_name_prime = "a";
-		pair__device____b.setSrc(pair);
-		pair__device____b.setTrg(device);
-		ruleresult.getTranslatedEdges().add(pair__device____b);
-		assetToMeter__asset____source.setSrc(assetToMeter);
-		assetToMeter__asset____source.setTrg(asset);
-		ruleresult.getCreatedEdges().add(assetToMeter__asset____source);
-		assetToMeter__meter____target.setSrc(assetToMeter);
-		assetToMeter__meter____target.setTrg(meter);
-		ruleresult.getCreatedEdges().add(assetToMeter__meter____target);
-		mmxuToMeter__meter____target.setSrc(mmxuToMeter);
-		mmxuToMeter__meter____target.setTrg(meter);
-		ruleresult.getCreatedEdges().add(mmxuToMeter__meter____target);
+		String assetToMeter__asset____source_name_prime = "source";
+		String pair__device____b_name_prime = "b";
 		mmxuToMeter__device____source.setSrc(mmxuToMeter);
 		mmxuToMeter__device____source.setTrg(device);
 		ruleresult.getCreatedEdges().add(mmxuToMeter__device____source);
+		mmxuToMeter__meter____target.setSrc(mmxuToMeter);
+		mmxuToMeter__meter____target.setTrg(meter);
+		ruleresult.getCreatedEdges().add(mmxuToMeter__meter____target);
+		assetToMeter__meter____target.setSrc(assetToMeter);
+		assetToMeter__meter____target.setTrg(meter);
+		ruleresult.getCreatedEdges().add(assetToMeter__meter____target);
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		ruleresult.getTranslatedEdges().add(pair__asset____a);
+		assetToMeter__asset____source.setSrc(assetToMeter);
+		assetToMeter__asset____source.setTrg(asset);
+		ruleresult.getCreatedEdges().add(assetToMeter__asset____source);
+		pair__device____b.setSrc(pair);
+		pair__device____b.setTrg(device);
+		ruleresult.getTranslatedEdges().add(pair__device____b);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		pair__device____b.setName(pair__device____b_name_prime);
-		assetToMeter__asset____source.setName(assetToMeter__asset____source_name_prime);
-		assetToMeter__meter____target.setName(assetToMeter__meter____target_name_prime);
-		mmxuToMeter__meter____target.setName(mmxuToMeter__meter____target_name_prime);
 		mmxuToMeter__device____source.setName(mmxuToMeter__device____source_name_prime);
+		mmxuToMeter__meter____target.setName(mmxuToMeter__meter____target_name_prime);
+		assetToMeter__meter____target.setName(assetToMeter__meter____target_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { ruleresult, assetToMeter, device, pair, asset, meter, mmxuToMeter, pair__device____b,
-				assetToMeter__asset____source, assetToMeter__meter____target, mmxuToMeter__meter____target,
-				mmxuToMeter__device____source, pair__asset____a };
+		assetToMeter__asset____source.setName(assetToMeter__asset____source_name_prime);
+		pair__device____b.setName(pair__device____b_name_prime);
+		return new Object[] { ruleresult, assetToMeter, mmxuToMeter, device, meter, pair, asset,
+				mmxuToMeter__device____source, mmxuToMeter__meter____target, assetToMeter__meter____target,
+				pair__asset____a, assetToMeter__asset____source, pair__device____b };
 	}
 
 	public static final void pattern_PrivateMeterVoltage_1_5_registerobjects_expressionBBBBBBBBB(
-			PrivateMeterVoltage _this, PerformRuleResult ruleresult, EObject values, EObject assetToMeter,
-			EObject device, EObject pair, EObject asset, EObject meter, EObject mmxuToMeter) {
-		_this.registerObjects_FWD(ruleresult, values, assetToMeter, device, pair, asset, meter, mmxuToMeter);
+			PrivateMeterVoltage _this, PerformRuleResult ruleresult, EObject assetToMeter, EObject mmxuToMeter,
+			EObject device, EObject meter, EObject pair, EObject asset, EObject values) {
+		_this.registerObjects_FWD(ruleresult, assetToMeter, mmxuToMeter, device, meter, pair, asset, values);
 
 	}
 
@@ -1050,23 +1050,23 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_2_2_corematch_bindingFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("values");
-		EObject _localVariable_1 = match.getObject("device");
-		EObject _localVariable_2 = match.getObject("pair");
-		EObject _localVariable_3 = match.getObject("asset");
-		EObject tmpValues = _localVariable_0;
-		EObject tmpDevice = _localVariable_1;
-		EObject tmpPair = _localVariable_2;
-		EObject tmpAsset = _localVariable_3;
-		if (tmpValues instanceof ElectricityValues) {
-			ElectricityValues values = (ElectricityValues) tmpValues;
-			if (tmpDevice instanceof PhysicalDevice) {
-				PhysicalDevice device = (PhysicalDevice) tmpDevice;
-				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-					if (tmpAsset instanceof MeterAsset) {
-						MeterAsset asset = (MeterAsset) tmpAsset;
-						return new Object[] { values, device, pair, asset, match };
+		EObject _localVariable_0 = match.getObject("device");
+		EObject _localVariable_1 = match.getObject("pair");
+		EObject _localVariable_2 = match.getObject("asset");
+		EObject _localVariable_3 = match.getObject("values");
+		EObject tmpDevice = _localVariable_0;
+		EObject tmpPair = _localVariable_1;
+		EObject tmpAsset = _localVariable_2;
+		EObject tmpValues = _localVariable_3;
+		if (tmpDevice instanceof PhysicalDevice) {
+			PhysicalDevice device = (PhysicalDevice) tmpDevice;
+			if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+				MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+				if (tmpAsset instanceof MeterAsset) {
+					MeterAsset asset = (MeterAsset) tmpAsset;
+					if (tmpValues instanceof ElectricityValues) {
+						ElectricityValues values = (ElectricityValues) tmpValues;
+						return new Object[] { device, pair, asset, values, match };
 					}
 				}
 			}
@@ -1074,63 +1074,62 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_PrivateMeterVoltage_2_2_corematch_blackBBBBB(
-			ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
-			Match match) {
+	public static final Iterable<Object[]> pattern_PrivateMeterVoltage_2_2_corematch_blackBBBBB(PhysicalDevice device,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		_result.add(new Object[] { values, device, pair, asset, match });
+		_result.add(new Object[] { device, pair, asset, values, match });
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_PrivateMeterVoltage_2_3_findcontext_blackBBBB(
-			ElectricityValues values, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
+	public static final Iterable<Object[]> pattern_PrivateMeterVoltage_2_3_findcontext_blackBBBB(PhysicalDevice device,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (values.equals(device.getElectricityValues())) {
-			if (device.equals(pair.getB())) {
-				if (asset.equals(pair.getA())) {
-					_result.add(new Object[] { values, device, pair, asset });
+		if (asset.equals(pair.getA())) {
+			if (values.equals(device.getElectricityValues())) {
+				if (device.equals(pair.getB())) {
+					_result.add(new Object[] { device, pair, asset, values });
 				}
 			}
 		}
 		return _result;
 	}
 
-	public static final Object[] pattern_PrivateMeterVoltage_2_3_findcontext_greenBBBBFFFF(ElectricityValues values,
-			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
+	public static final Object[] pattern_PrivateMeterVoltage_2_3_findcontext_greenBBBBFFFF(PhysicalDevice device,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge device__values____ElectricityValues = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String pair__asset____a_name_prime = "a";
 		String device__values____ElectricityValues_name_prime = "ElectricityValues";
 		String pair__device____b_name_prime = "b";
-		String pair__asset____a_name_prime = "a";
-		isApplicableMatch.getAllContextElements().add(values);
 		isApplicableMatch.getAllContextElements().add(device);
 		isApplicableMatch.getAllContextElements().add(pair);
 		isApplicableMatch.getAllContextElements().add(asset);
+		isApplicableMatch.getAllContextElements().add(values);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
 		device__values____ElectricityValues.setSrc(device);
 		device__values____ElectricityValues.setTrg(values);
 		isApplicableMatch.getAllContextElements().add(device__values____ElectricityValues);
 		pair__device____b.setSrc(pair);
 		pair__device____b.setTrg(device);
 		isApplicableMatch.getAllContextElements().add(pair__device____b);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
+		pair__asset____a.setName(pair__asset____a_name_prime);
 		device__values____ElectricityValues.setName(device__values____ElectricityValues_name_prime);
 		pair__device____b.setName(pair__device____b_name_prime);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { values, device, pair, asset, isApplicableMatch, device__values____ElectricityValues,
-				pair__device____b, pair__asset____a };
+		return new Object[] { device, pair, asset, values, isApplicableMatch, pair__asset____a,
+				device__values____ElectricityValues, pair__device____b };
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_2_4_solveCSP_bindingFBBBBBB(PrivateMeterVoltage _this,
-			IsApplicableMatch isApplicableMatch, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, values, device, pair, asset);
+			IsApplicableMatch isApplicableMatch, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, device, pair, asset, values);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, values, device, pair, asset };
+			return new Object[] { csp, _this, isApplicableMatch, device, pair, asset, values };
 		}
 		return null;
 	}
@@ -1140,10 +1139,10 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Object[] pattern_PrivateMeterVoltage_2_4_solveCSP_bindingAndBlackFBBBBBB(
-			PrivateMeterVoltage _this, IsApplicableMatch isApplicableMatch, ElectricityValues values,
-			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
+			PrivateMeterVoltage _this, IsApplicableMatch isApplicableMatch, PhysicalDevice device,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {
 		Object[] result_pattern_PrivateMeterVoltage_2_4_solveCSP_binding = pattern_PrivateMeterVoltage_2_4_solveCSP_bindingFBBBBBB(
-				_this, isApplicableMatch, values, device, pair, asset);
+				_this, isApplicableMatch, device, pair, asset, values);
 		if (result_pattern_PrivateMeterVoltage_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_PrivateMeterVoltage_2_4_solveCSP_binding[0];
 
@@ -1151,7 +1150,7 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 					csp);
 			if (result_pattern_PrivateMeterVoltage_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, values, device, pair, asset };
+				return new Object[] { csp, _this, isApplicableMatch, device, pair, asset, values };
 			}
 		}
 		return null;
@@ -1240,20 +1239,20 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final Iterable<Object[]> pattern_PrivateMeterVoltage_10_2_testcorematchandDECs_blackFFFFB(
-			EMoflonEdge _edge_b) {
+			EMoflonEdge _edge_a) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		EObject tmpPair = _edge_b.getSrc();
+		EObject tmpPair = _edge_a.getSrc();
 		if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
 			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-			EObject tmpDevice = _edge_b.getTrg();
-			if (tmpDevice instanceof PhysicalDevice) {
-				PhysicalDevice device = (PhysicalDevice) tmpDevice;
-				if (device.equals(pair.getB())) {
-					MeterAsset asset = pair.getA();
-					if (asset != null) {
+			EObject tmpAsset = _edge_a.getTrg();
+			if (tmpAsset instanceof MeterAsset) {
+				MeterAsset asset = (MeterAsset) tmpAsset;
+				if (asset.equals(pair.getA())) {
+					PhysicalDevice device = pair.getB();
+					if (device != null) {
 						ElectricityValues values = device.getElectricityValues();
 						if (values != null) {
-							_result.add(new Object[] { values, device, pair, asset, _edge_b });
+							_result.add(new Object[] { device, pair, asset, values, _edge_a });
 						}
 
 					}
@@ -1276,9 +1275,9 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 	}
 
 	public static final boolean pattern_PrivateMeterVoltage_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBB(
-			PrivateMeterVoltage _this, Match match, ElectricityValues values, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, values, device, pair, asset);
+			PrivateMeterVoltage _this, Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
+			MeterAsset asset, ElectricityValues values) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, device, pair, asset, values);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1311,12 +1310,12 @@ public class PrivateMeterVoltageImpl extends AbstractRuleImpl implements Private
 		return _result;
 	}
 
-	public static final Object[] pattern_PrivateMeterVoltage_13_1_matchtggpattern_blackBBBB(ElectricityValues values,
-			PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset) {
-		if (values.equals(device.getElectricityValues())) {
-			if (device.equals(pair.getB())) {
-				if (asset.equals(pair.getA())) {
-					return new Object[] { values, device, pair, asset };
+	public static final Object[] pattern_PrivateMeterVoltage_13_1_matchtggpattern_blackBBBB(PhysicalDevice device,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values) {
+		if (asset.equals(pair.getA())) {
+			if (values.equals(device.getElectricityValues())) {
+				if (device.equals(pair.getB())) {
+					return new Object[] { device, pair, asset, values };
 				}
 			}
 		}

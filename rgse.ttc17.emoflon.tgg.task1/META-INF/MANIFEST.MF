@@ -1,11 +1,12 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: rgse.ttc17.emoflon.tgg.task1;singleton:=true
-Export-Package: rgse.ttc17.emoflon.tgg.task1.impl,
- rgse.ttc17.emoflon.tgg.task1.util,
+Export-Package: rgse.ttc17.emoflon.tgg.task1,
  rgse.ttc17.emoflon.tgg.task1.Rules,
  rgse.ttc17.emoflon.tgg.task1.Rules.impl,
  rgse.ttc17.emoflon.tgg.task1.Rules.util,
- rgse.ttc17.emoflon.tgg.task1
+ rgse.ttc17.emoflon.tgg.task1.impl,
+ rgse.ttc17.emoflon.tgg.task1.org.moflon.tie,
+ rgse.ttc17.emoflon.tgg.task1.util
 Bundle-Name: tcc.tgg
 Bundle-Version: 1.0
 Require-Bundle: org.eclipse.emf.ecore,
@@ -19,7 +20,8 @@ Require-Bundle: org.eclipse.emf.ecore,
  org.moflon.tgg.runtime,
  rgse.ttc17.metamodels.trg.outage.detection,
  rgse.ttc17.metamodels.src,
- org.junit
+ org.junit,
+ rgse.ttc17.metamodels.changes
 Bundle-ManifestVersion: 2
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -22,40 +22,13 @@ public interface Task2Factory extends EFactory {
 	Task2Factory eINSTANCE = rgse.ttc17.emoflon.tgg.task2.impl.Task2FactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Load Area To Load Area</em>'.
+	 * Returns a new object of class '<em>MMXU To PMU Voltage Meter</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Load Area To Load Area</em>'.
+	 * @return a new object of class '<em>MMXU To PMU Voltage Meter</em>'.
 	 * @generated
 	 */
-	LoadAreaToLoadArea createLoadAreaToLoadArea();
-
-	/**
-	 * Returns a new object of class '<em>Power System Resource To Power System Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Power System Resource To Power System Resource</em>'.
-	 * @generated
-	 */
-	PowerSystemResourceToPowerSystemResource createPowerSystemResourceToPowerSystemResource();
-
-	/**
-	 * Returns a new object of class '<em>Service Delivery Point To Service Delivery Point</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service Delivery Point To Service Delivery Point</em>'.
-	 * @generated
-	 */
-	ServiceDeliveryPointToServiceDeliveryPoint createServiceDeliveryPointToServiceDeliveryPoint();
-
-	/**
-	 * Returns a new object of class '<em>Meter Asset To PMU Voltage Meter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Meter Asset To PMU Voltage Meter</em>'.
-	 * @generated
-	 */
-	MeterAssetToPMUVoltageMeter createMeterAssetToPMUVoltageMeter();
+	MMXUToPMUVoltageMeter createMMXUToPMUVoltageMeter();
 
 	/**
 	 * Returns a new object of class '<em>Location To Location</em>'.
@@ -67,49 +40,13 @@ public interface Task2Factory extends EFactory {
 	LocationToLocation createLocationToLocation();
 
 	/**
-	 * Returns a new object of class '<em>Tie Flow To Tie Flow</em>'.
+	 * Returns a new object of class '<em>Physical Device To Private Meter Voltage</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tie Flow To Tie Flow</em>'.
+	 * @return a new object of class '<em>Physical Device To Private Meter Voltage</em>'.
 	 * @generated
 	 */
-	TieFlowToTieFlow createTieFlowToTieFlow();
-
-	/**
-	 * Returns a new object of class '<em>Conform Load Group To Conform Load Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conform Load Group To Conform Load Group</em>'.
-	 * @generated
-	 */
-	ConformLoadGroupToConformLoadGroup createConformLoadGroupToConformLoadGroup();
-
-	/**
-	 * Returns a new object of class '<em>Sub Load Area To Sub Load Area</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sub Load Area To Sub Load Area</em>'.
-	 * @generated
-	 */
-	SubLoadAreaToSubLoadArea createSubLoadAreaToSubLoadArea();
-
-	/**
-	 * Returns a new object of class '<em>Meter Asset To MMXU To Voltage Meter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Meter Asset To MMXU To Voltage Meter</em>'.
-	 * @generated
-	 */
-	MeterAssetToMMXUToVoltageMeter createMeterAssetToMMXUToVoltageMeter();
-
-	/**
-	 * Returns a new object of class '<em>Meter Asset To Private Meter Voltage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Meter Asset To Private Meter Voltage</em>'.
-	 * @generated
-	 */
-	MeterAssetToPrivateMeterVoltage createMeterAssetToPrivateMeterVoltage();
+	PhysicalDeviceToPrivateMeterVoltage createPhysicalDeviceToPrivateMeterVoltage();
 
 	/**
 	 * Returns a new object of class '<em>Non Conform Load Group Non To Conform Load Group</em>'.
@@ -130,6 +67,42 @@ public interface Task2Factory extends EFactory {
 	ControlAreaToControlSrea createControlAreaToControlSrea();
 
 	/**
+	 * Returns a new object of class '<em>Load Area To Load Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Load Area To Load Area</em>'.
+	 * @generated
+	 */
+	LoadAreaToLoadArea createLoadAreaToLoadArea();
+
+	/**
+	 * Returns a new object of class '<em>Meter Asset To PMU Voltage Meter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Meter Asset To PMU Voltage Meter</em>'.
+	 * @generated
+	 */
+	MeterAssetToPMUVoltageMeter createMeterAssetToPMUVoltageMeter();
+
+	/**
+	 * Returns a new object of class '<em>Meter Asset To MMXU To Voltage Meter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Meter Asset To MMXU To Voltage Meter</em>'.
+	 * @generated
+	 */
+	MeterAssetToMMXUToVoltageMeter createMeterAssetToMMXUToVoltageMeter();
+
+	/**
+	 * Returns a new object of class '<em>Power System Resource To Power System Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Power System Resource To Power System Resource</em>'.
+	 * @generated
+	 */
+	PowerSystemResourceToPowerSystemResource createPowerSystemResourceToPowerSystemResource();
+
+	/**
 	 * Returns a new object of class '<em>Energy Consumer To Energy Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,22 +112,31 @@ public interface Task2Factory extends EFactory {
 	EnergyConsumerToEnergyConsumer createEnergyConsumerToEnergyConsumer();
 
 	/**
-	 * Returns a new object of class '<em>Physical Device To Private Meter Voltage</em>'.
+	 * Returns a new object of class '<em>Tie Flow To Tie Flow</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Physical Device To Private Meter Voltage</em>'.
+	 * @return a new object of class '<em>Tie Flow To Tie Flow</em>'.
 	 * @generated
 	 */
-	PhysicalDeviceToPrivateMeterVoltage createPhysicalDeviceToPrivateMeterVoltage();
+	TieFlowToTieFlow createTieFlowToTieFlow();
 
 	/**
-	 * Returns a new object of class '<em>Terminal To Terminal</em>'.
+	 * Returns a new object of class '<em>Sub Load Area To Sub Load Area</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Terminal To Terminal</em>'.
+	 * @return a new object of class '<em>Sub Load Area To Sub Load Area</em>'.
 	 * @generated
 	 */
-	TerminalToTerminal createTerminalToTerminal();
+	SubLoadAreaToSubLoadArea createSubLoadAreaToSubLoadArea();
+
+	/**
+	 * Returns a new object of class '<em>Service Delivery Point To Service Delivery Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service Delivery Point To Service Delivery Point</em>'.
+	 * @generated
+	 */
+	ServiceDeliveryPointToServiceDeliveryPoint createServiceDeliveryPointToServiceDeliveryPoint();
 
 	/**
 	 * Returns a new object of class '<em>Position Point To Position Point</em>'.
@@ -166,13 +148,31 @@ public interface Task2Factory extends EFactory {
 	PositionPointToPositionPoint createPositionPointToPositionPoint();
 
 	/**
-	 * Returns a new object of class '<em>MMXU To PMU Voltage Meter</em>'.
+	 * Returns a new object of class '<em>Conform Load Group To Conform Load Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>MMXU To PMU Voltage Meter</em>'.
+	 * @return a new object of class '<em>Conform Load Group To Conform Load Group</em>'.
 	 * @generated
 	 */
-	MMXUToPMUVoltageMeter createMMXUToPMUVoltageMeter();
+	ConformLoadGroupToConformLoadGroup createConformLoadGroupToConformLoadGroup();
+
+	/**
+	 * Returns a new object of class '<em>Terminal To Terminal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Terminal To Terminal</em>'.
+	 * @generated
+	 */
+	TerminalToTerminal createTerminalToTerminal();
+
+	/**
+	 * Returns a new object of class '<em>Meter Asset To Private Meter Voltage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Meter Asset To Private Meter Voltage</em>'.
+	 * @generated
+	 */
+	MeterAssetToPrivateMeterVoltage createMeterAssetToPrivateMeterVoltage();
 
 	/**
 	 * Returns the package supported by this factory.

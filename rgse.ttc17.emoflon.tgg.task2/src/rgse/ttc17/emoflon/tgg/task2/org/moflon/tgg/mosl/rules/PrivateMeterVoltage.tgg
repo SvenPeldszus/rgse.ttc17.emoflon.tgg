@@ -11,16 +11,14 @@
 	device : PhysicalDevice {
 		-ElectricityValues->values
 	}	
-	values : ElectricityValues {
-		
+	values : ElectricityValues {	
 	}
 	asset : MeterAsset {
 	}
 }
 
 #target {
-	++ meter : PrivateMeterVoltage {
-		
+	++ meter : PrivateMeterVoltage {	
 	}
 }
 

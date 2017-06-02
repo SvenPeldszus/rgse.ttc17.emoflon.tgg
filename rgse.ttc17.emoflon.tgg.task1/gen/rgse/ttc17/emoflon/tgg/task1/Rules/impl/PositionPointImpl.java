@@ -90,25 +90,26 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
+	public boolean isAppropriate_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation) {
 		// initial bindings
 		Object[] result1_black = PositionPointImpl.pattern_PositionPoint_0_1_initialbindings_blackBBBBBB(this, match,
-				pair, srcLocation, positionPoint, asset);
+				asset, positionPoint, pair, srcLocation);
 		if (result1_black == null) {
-			throw new RuntimeException(
-					"Pattern matching in node [initial bindings] failed." + " Variables: " + "[this] = " + this + ", "
-							+ "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcLocation] = " + srcLocation
-							+ ", " + "[positionPoint] = " + positionPoint + ", " + "[asset] = " + asset + ".");
+			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", "
+					+ "[positionPoint] = " + positionPoint + ", " + "[pair] = " + pair + ", " + "[srcLocation] = "
+					+ srcLocation + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = PositionPointImpl.pattern_PositionPoint_0_2_SolveCSP_bindingAndBlackFBBBBBB(
-				this, match, pair, srcLocation, positionPoint, asset);
+				this, match, asset, positionPoint, pair, srcLocation);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcLocation] = "
-					+ srcLocation + ", " + "[positionPoint] = " + positionPoint + ", " + "[asset] = " + asset + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[positionPoint] = "
+					+ positionPoint + ", " + "[pair] = " + pair + ", " + "[srcLocation] = " + srcLocation + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -116,36 +117,36 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 
 			// collect elements to be translated
 			Object[] result4_black = PositionPointImpl
-					.pattern_PositionPoint_0_4_collectelementstobetranslated_blackBBBBB(match, pair, srcLocation,
-							positionPoint, asset);
+					.pattern_PositionPoint_0_4_collectelementstobetranslated_blackBBBBB(match, asset, positionPoint,
+							pair, srcLocation);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcLocation] = "
-						+ srcLocation + ", " + "[positionPoint] = " + positionPoint + ", " + "[asset] = " + asset
-						+ ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", "
+						+ "[positionPoint] = " + positionPoint + ", " + "[pair] = " + pair + ", " + "[srcLocation] = "
+						+ srcLocation + ".");
 			}
-			PositionPointImpl.pattern_PositionPoint_0_4_collectelementstobetranslated_greenBBBF(match, srcLocation,
-					positionPoint);
+			PositionPointImpl.pattern_PositionPoint_0_4_collectelementstobetranslated_greenBBBF(match, positionPoint,
+					srcLocation);
 			// EMoflonEdge srcLocation__positionPoint____Position = (EMoflonEdge) result4_green[3];
 
 			// collect context elements
 			Object[] result5_black = PositionPointImpl.pattern_PositionPoint_0_5_collectcontextelements_blackBBBBB(
-					match, pair, srcLocation, positionPoint, asset);
+					match, asset, positionPoint, pair, srcLocation);
 			if (result5_black == null) {
 				throw new RuntimeException(
 						"Pattern matching in node [collect context elements] failed." + " Variables: " + "[match] = "
-								+ match + ", " + "[pair] = " + pair + ", " + "[srcLocation] = " + srcLocation + ", "
-								+ "[positionPoint] = " + positionPoint + ", " + "[asset] = " + asset + ".");
+								+ match + ", " + "[asset] = " + asset + ", " + "[positionPoint] = " + positionPoint
+								+ ", " + "[pair] = " + pair + ", " + "[srcLocation] = " + srcLocation + ".");
 			}
-			PositionPointImpl.pattern_PositionPoint_0_5_collectcontextelements_greenBBBBFFF(match, pair, srcLocation,
-					asset);
-			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[4];
-			// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result5_green[5];
-			// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result5_green[6];
+			PositionPointImpl.pattern_PositionPoint_0_5_collectcontextelements_greenBBBBFFF(match, asset, pair,
+					srcLocation);
+			// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result5_green[4];
+			// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result5_green[5];
+			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[6];
 
 			// register objects to match
-			PositionPointImpl.pattern_PositionPoint_0_6_registerobjectstomatch_expressionBBBBBB(this, match, pair,
-					srcLocation, positionPoint, asset);
+			PositionPointImpl.pattern_PositionPoint_0_6_registerobjectstomatch_expressionBBBBBB(this, match, asset,
+					positionPoint, pair, srcLocation);
 			return PositionPointImpl.pattern_PositionPoint_0_7_expressionF();
 		} else {
 			return PositionPointImpl.pattern_PositionPoint_0_8_expressionF();
@@ -166,53 +167,52 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[0];
-		outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) result1_bindingAndBlack[1];
-		Location srcLocation = (Location) result1_bindingAndBlack[2];
-		gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result1_bindingAndBlack[3];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[0];
+		gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result1_bindingAndBlack[1];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[2];
+		Location srcLocation = (Location) result1_bindingAndBlack[3];
 		LocationToLocation locationToLocation = (LocationToLocation) result1_bindingAndBlack[4];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[5];
+		outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) result1_bindingAndBlack[5];
 		CSP csp = (CSP) result1_bindingAndBlack[6];
 		Object[] result1_green = PositionPointImpl
-				.pattern_PositionPoint_1_1_performtransformation_greenBBFFB(trgLocation, positionPoint, csp);
+				.pattern_PositionPoint_1_1_performtransformation_greenFBFBB(positionPoint, trgLocation, csp);
+		PositionPointToPositionPoint positionCorr = (PositionPointToPositionPoint) result1_green[0];
 		outageDetectionJointarget.PositionPoint trgPositionPoint = (outageDetectionJointarget.PositionPoint) result1_green[2];
-		PositionPointToPositionPoint positionCorr = (PositionPointToPositionPoint) result1_green[3];
 
 		// collect translated elements
 		Object[] result2_black = PositionPointImpl.pattern_PositionPoint_1_2_collecttranslatedelements_blackBBB(
-				positionPoint, trgPositionPoint, positionCorr);
+				positionCorr, positionPoint, trgPositionPoint);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[positionPoint] = " + positionPoint + ", " + "[trgPositionPoint] = " + trgPositionPoint + ", "
-					+ "[positionCorr] = " + positionCorr + ".");
+					+ "[positionCorr] = " + positionCorr + ", " + "[positionPoint] = " + positionPoint + ", "
+					+ "[trgPositionPoint] = " + trgPositionPoint + ".");
 		}
 		Object[] result2_green = PositionPointImpl.pattern_PositionPoint_1_2_collecttranslatedelements_greenFBBB(
-				positionPoint, trgPositionPoint, positionCorr);
+				positionCorr, positionPoint, trgPositionPoint);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = PositionPointImpl.pattern_PositionPoint_1_3_bookkeepingforedges_blackBBBBBBBBB(
-				ruleresult, pair, trgLocation, srcLocation, positionPoint, trgPositionPoint, locationToLocation, asset,
-				positionCorr);
+				ruleresult, asset, positionCorr, positionPoint, pair, srcLocation, trgPositionPoint, locationToLocation,
+				trgLocation);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[pair] = " + pair + ", " + "[trgLocation] = "
-					+ trgLocation + ", " + "[srcLocation] = " + srcLocation + ", " + "[positionPoint] = "
-					+ positionPoint + ", " + "[trgPositionPoint] = " + trgPositionPoint + ", "
-					+ "[locationToLocation] = " + locationToLocation + ", " + "[asset] = " + asset + ", "
-					+ "[positionCorr] = " + positionCorr + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[asset] = " + asset + ", " + "[positionCorr] = "
+					+ positionCorr + ", " + "[positionPoint] = " + positionPoint + ", " + "[pair] = " + pair + ", "
+					+ "[srcLocation] = " + srcLocation + ", " + "[trgPositionPoint] = " + trgPositionPoint + ", "
+					+ "[locationToLocation] = " + locationToLocation + ", " + "[trgLocation] = " + trgLocation + ".");
 		}
-		PositionPointImpl.pattern_PositionPoint_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, trgLocation,
-				srcLocation, positionPoint, trgPositionPoint, positionCorr);
-		// EMoflonEdge srcLocation__positionPoint____Position = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge positionCorr__trgPositionPoint____target = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge positionCorr__positionPoint____source = (EMoflonEdge) result3_green[8];
+		PositionPointImpl.pattern_PositionPoint_1_3_bookkeepingforedges_greenBBBBBBFFFF(ruleresult, positionCorr,
+				positionPoint, srcLocation, trgPositionPoint, trgLocation);
+		// EMoflonEdge positionCorr__positionPoint____source = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge srcLocation__positionPoint____Position = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge positionCorr__trgPositionPoint____target = (EMoflonEdge) result3_green[8];
 		// EMoflonEdge trgLocation__trgPositionPoint____Position = (EMoflonEdge) result3_green[9];
 
 		// perform postprocessing story node is empty
 		// register objects
-		PositionPointImpl.pattern_PositionPoint_1_5_registerobjects_expressionBBBBBBBBBB(this, ruleresult, pair,
-				trgLocation, srcLocation, positionPoint, trgPositionPoint, locationToLocation, asset, positionCorr);
+		PositionPointImpl.pattern_PositionPoint_1_5_registerobjects_expressionBBBBBBBBBB(this, ruleresult, asset,
+				positionCorr, positionPoint, pair, srcLocation, trgPositionPoint, locationToLocation, trgLocation);
 		return PositionPointImpl.pattern_PositionPoint_1_6_expressionFB(ruleresult);
 	}
 
@@ -241,37 +241,37 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[0];
-		Location srcLocation = (Location) result2_binding[1];
-		gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result2_binding[2];
-		MeterAsset asset = (MeterAsset) result2_binding[3];
-		for (Object[] result2_black : PositionPointImpl.pattern_PositionPoint_2_2_corematch_blackBFBBFBB(pair,
-				srcLocation, positionPoint, asset, match)) {
-			outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) result2_black[1];
+		MeterAsset asset = (MeterAsset) result2_binding[0];
+		gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result2_binding[1];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
+		Location srcLocation = (Location) result2_binding[3];
+		for (Object[] result2_black : PositionPointImpl.pattern_PositionPoint_2_2_corematch_blackBBBBFFB(asset,
+				positionPoint, pair, srcLocation, match)) {
 			LocationToLocation locationToLocation = (LocationToLocation) result2_black[4];
+			outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) result2_black[5];
 			// ForEach find context
-			for (Object[] result3_black : PositionPointImpl.pattern_PositionPoint_2_3_findcontext_blackBBBBBB(pair,
-					trgLocation, srcLocation, positionPoint, locationToLocation, asset)) {
+			for (Object[] result3_black : PositionPointImpl.pattern_PositionPoint_2_3_findcontext_blackBBBBBB(asset,
+					positionPoint, pair, srcLocation, locationToLocation, trgLocation)) {
 				Object[] result3_green = PositionPointImpl.pattern_PositionPoint_2_3_findcontext_greenBBBBBBFFFFFFF(
-						pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset);
+						asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[6];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[7];
-				// EMoflonEdge locationToLocation__trgLocation____target = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge srcLocation__positionPoint____Position = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge locationToLocation__srcLocation____source = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result3_green[7];
+				// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge srcLocation__positionPoint____Position = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge locationToLocation__srcLocation____source = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge locationToLocation__trgLocation____target = (EMoflonEdge) result3_green[12];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = PositionPointImpl
-						.pattern_PositionPoint_2_4_solveCSP_bindingAndBlackFBBBBBBBB(this, isApplicableMatch, pair,
-								trgLocation, srcLocation, positionPoint, locationToLocation, asset);
+						.pattern_PositionPoint_2_4_solveCSP_bindingAndBlackFBBBBBBBB(this, isApplicableMatch, asset,
+								positionPoint, pair, srcLocation, locationToLocation, trgLocation);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[pair] = " + pair + ", " + "[trgLocation] = " + trgLocation + ", " + "[srcLocation] = "
-							+ srcLocation + ", " + "[positionPoint] = " + positionPoint + ", "
-							+ "[locationToLocation] = " + locationToLocation + ", " + "[asset] = " + asset + ".");
+							+ "[asset] = " + asset + ", " + "[positionPoint] = " + positionPoint + ", " + "[pair] = "
+							+ pair + ", " + "[srcLocation] = " + srcLocation + ", " + "[locationToLocation] = "
+							+ locationToLocation + ", " + "[trgLocation] = " + trgLocation + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -302,12 +302,13 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
+	public void registerObjectsToMatch_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation) {
+		match.registerObject("asset", asset);
+		match.registerObject("positionPoint", positionPoint);
 		match.registerObject("pair", pair);
 		match.registerObject("srcLocation", srcLocation);
-		match.registerObject("positionPoint", positionPoint);
-		match.registerObject("asset", asset);
 
 	}
 
@@ -316,8 +317,9 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -346,10 +348,10 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetPhysicalDevicePair pair,
-			outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation,
+			outageDetectionJointarget.Location trgLocation) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -398,12 +400,12 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		eq_1.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("pair", pair);
-		isApplicableMatch.registerObject("trgLocation", trgLocation);
-		isApplicableMatch.registerObject("srcLocation", srcLocation);
-		isApplicableMatch.registerObject("positionPoint", positionPoint);
-		isApplicableMatch.registerObject("locationToLocation", locationToLocation);
 		isApplicableMatch.registerObject("asset", asset);
+		isApplicableMatch.registerObject("positionPoint", positionPoint);
+		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("srcLocation", srcLocation);
+		isApplicableMatch.registerObject("locationToLocation", locationToLocation);
+		isApplicableMatch.registerObject("trgLocation", trgLocation);
 		return csp;
 	}
 
@@ -421,17 +423,17 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject trgLocation,
-			EObject srcLocation, EObject positionPoint, EObject trgPositionPoint, EObject locationToLocation,
-			EObject asset, EObject positionCorr) {
-		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("trgLocation", trgLocation);
-		ruleresult.registerObject("srcLocation", srcLocation);
-		ruleresult.registerObject("positionPoint", positionPoint);
-		ruleresult.registerObject("trgPositionPoint", trgPositionPoint);
-		ruleresult.registerObject("locationToLocation", locationToLocation);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject positionCorr,
+			EObject positionPoint, EObject pair, EObject srcLocation, EObject trgPositionPoint,
+			EObject locationToLocation, EObject trgLocation) {
 		ruleresult.registerObject("asset", asset);
 		ruleresult.registerObject("positionCorr", positionCorr);
+		ruleresult.registerObject("positionPoint", positionPoint);
+		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("srcLocation", srcLocation);
+		ruleresult.registerObject("trgPositionPoint", trgPositionPoint);
+		ruleresult.registerObject("locationToLocation", locationToLocation);
+		ruleresult.registerObject("trgLocation", trgLocation);
 
 	}
 
@@ -450,7 +452,7 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_56(EMoflonEdge _edge_Position) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_139(EMoflonEdge _edge_Position) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = PositionPointImpl
 				.pattern_PositionPoint_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -467,10 +469,10 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		// ForEach test core match and DECs
 		for (Object[] result2_black : PositionPointImpl
 				.pattern_PositionPoint_10_2_testcorematchandDECs_blackFFFFB(_edge_Position)) {
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[0];
-			Location srcLocation = (Location) result2_black[1];
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result2_black[2];
-			MeterAsset asset = (MeterAsset) result2_black[3];
+			MeterAsset asset = (MeterAsset) result2_black[0];
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result2_black[1];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[2];
+			Location srcLocation = (Location) result2_black[3];
 			Object[] result2_green = PositionPointImpl
 					.pattern_PositionPoint_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -478,7 +480,7 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 			// bookkeeping with generic isAppropriate method
 			if (PositionPointImpl
 					.pattern_PositionPoint_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBB(this, match,
-							pair, srcLocation, positionPoint, asset)) {
+							asset, positionPoint, pair, srcLocation)) {
 				// Ensure that the correct types of elements are matched
 				if (PositionPointImpl
 						.pattern_PositionPoint_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
@@ -522,10 +524,10 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgPositionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
+		Variable var_trgPositionPoint_yPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
 				csp);
-		var_trgPositionPoint_zPosition.setValue(__helper.getValue("trgPositionPoint", "zPosition"));
-		var_trgPositionPoint_zPosition.setType("String");
+		var_trgPositionPoint_yPosition.setValue(__helper.getValue("trgPositionPoint", "yPosition"));
+		var_trgPositionPoint_yPosition.setType("String");
 
 		Variable var_positionPoint_yPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint", true, csp);
 		var_positionPoint_yPosition.setValue(__helper.getValue("positionPoint", "yPosition"));
@@ -535,10 +537,10 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		var_positionPoint_zPosition.setValue(__helper.getValue("positionPoint", "zPosition"));
 		var_positionPoint_zPosition.setType("String");
 
-		Variable var_trgPositionPoint_yPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
+		Variable var_trgPositionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
 				csp);
-		var_trgPositionPoint_yPosition.setValue(__helper.getValue("trgPositionPoint", "yPosition"));
-		var_trgPositionPoint_yPosition.setType("String");
+		var_trgPositionPoint_zPosition.setValue(__helper.getValue("trgPositionPoint", "zPosition"));
+		var_trgPositionPoint_zPosition.setType("String");
 
 		Variable var_trgPositionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
 				csp);
@@ -608,10 +610,10 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {// match tgg pattern
-		Object[] result1_black = PositionPointImpl.pattern_PositionPoint_13_1_matchtggpattern_blackBBBB(pair,
-				srcLocation, positionPoint, asset);
+	public boolean checkDEC_FWD(MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {// match tgg pattern
+		Object[] result1_black = PositionPointImpl.pattern_PositionPoint_13_1_matchtggpattern_blackBBBB(asset,
+				positionPoint, pair, srcLocation);
 		if (result1_black != null) {
 			return PositionPointImpl.pattern_PositionPoint_13_2_expressionF();
 		} else {
@@ -628,31 +630,30 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_POSITIONPOINT_METERASSET:
-			return isAppropriate_FWD((Match) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(Location) arguments.get(2), (gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_FWD__MATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION:
+			return isAppropriate_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (Location) arguments.get(4));
 		case RulesPackage.POSITION_POINT___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.POSITION_POINT___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.POSITION_POINT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_POSITIONPOINT_METERASSET:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(Location) arguments.get(2), (gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.POSITION_POINT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (Location) arguments.get(4));
 			return null;
-		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_POSITIONPOINT_METERASSET:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(Location) arguments.get(2), (gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (Location) arguments.get(4));
 		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.POSITION_POINT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_LOCATION_POSITIONPOINT_LOCATIONTOLOCATION_METERASSET:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(MeterAssetPhysicalDevicePair) arguments.get(1),
-					(outageDetectionJointarget.Location) arguments.get(2), (Location) arguments.get(3),
-					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(4),
-					(LocationToLocation) arguments.get(5), (MeterAsset) arguments.get(6));
+		case RulesPackage.POSITION_POINT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION_LOCATIONTOLOCATION_LOCATION:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (Location) arguments.get(4),
+					(LocationToLocation) arguments.get(5), (outageDetectionJointarget.Location) arguments.get(6));
 		case RulesPackage.POSITION_POINT___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.POSITION_POINT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -663,32 +664,33 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 			return null;
 		case RulesPackage.POSITION_POINT___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_56__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_56((EMoflonEdge) arguments.get(0));
+		case RulesPackage.POSITION_POINT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_139__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_139((EMoflonEdge) arguments.get(0));
 		case RulesPackage.POSITION_POINT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.POSITION_POINT___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.POSITION_POINT___CHECK_DEC_FWD__METERASSETPHYSICALDEVICEPAIR_LOCATION_POSITIONPOINT_METERASSET:
-			return checkDEC_FWD((MeterAssetPhysicalDevicePair) arguments.get(0), (Location) arguments.get(1),
-					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(2), (MeterAsset) arguments.get(3));
+		case RulesPackage.POSITION_POINT___CHECK_DEC_FWD__METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION:
+			return checkDEC_FWD((MeterAsset) arguments.get(0),
+					(gluemodel.CIM.IEC61968.Common.PositionPoint) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (Location) arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_PositionPoint_0_1_initialbindings_blackBBBBBB(PositionPoint _this, Match match,
-			MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		return new Object[] { _this, match, pair, srcLocation, positionPoint, asset };
+			MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {
+		return new Object[] { _this, match, asset, positionPoint, pair, srcLocation };
 	}
 
 	public static final Object[] pattern_PositionPoint_0_2_SolveCSP_bindingFBBBBBB(PositionPoint _this, Match match,
-			MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, pair, srcLocation, positionPoint, asset);
+			MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, asset, positionPoint, pair, srcLocation);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, pair, srcLocation, positionPoint, asset };
+			return new Object[] { csp, _this, match, asset, positionPoint, pair, srcLocation };
 		}
 		return null;
 	}
@@ -698,17 +700,17 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	}
 
 	public static final Object[] pattern_PositionPoint_0_2_SolveCSP_bindingAndBlackFBBBBBB(PositionPoint _this,
-			Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
+			Match match, MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {
 		Object[] result_pattern_PositionPoint_0_2_SolveCSP_binding = pattern_PositionPoint_0_2_SolveCSP_bindingFBBBBBB(
-				_this, match, pair, srcLocation, positionPoint, asset);
+				_this, match, asset, positionPoint, pair, srcLocation);
 		if (result_pattern_PositionPoint_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_PositionPoint_0_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_PositionPoint_0_2_SolveCSP_black = pattern_PositionPoint_0_2_SolveCSP_blackB(csp);
 			if (result_pattern_PositionPoint_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, pair, srcLocation, positionPoint, asset };
+				return new Object[] { csp, _this, match, asset, positionPoint, pair, srcLocation };
 			}
 		}
 		return null;
@@ -721,13 +723,13 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	}
 
 	public static final Object[] pattern_PositionPoint_0_4_collectelementstobetranslated_blackBBBBB(Match match,
-			MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		return new Object[] { match, pair, srcLocation, positionPoint, asset };
+			MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {
+		return new Object[] { match, asset, positionPoint, pair, srcLocation };
 	}
 
 	public static final Object[] pattern_PositionPoint_0_4_collectelementstobetranslated_greenBBBF(Match match,
-			Location srcLocation, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint) {
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, Location srcLocation) {
 		EMoflonEdge srcLocation__positionPoint____Position = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(positionPoint);
 		String srcLocation__positionPoint____Position_name_prime = "Position";
@@ -735,46 +737,46 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		srcLocation__positionPoint____Position.setTrg(positionPoint);
 		match.getToBeTranslatedEdges().add(srcLocation__positionPoint____Position);
 		srcLocation__positionPoint____Position.setName(srcLocation__positionPoint____Position_name_prime);
-		return new Object[] { match, srcLocation, positionPoint, srcLocation__positionPoint____Position };
+		return new Object[] { match, positionPoint, srcLocation, srcLocation__positionPoint____Position };
 	}
 
 	public static final Object[] pattern_PositionPoint_0_5_collectcontextelements_blackBBBBB(Match match,
-			MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		return new Object[] { match, pair, srcLocation, positionPoint, asset };
+			MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {
+		return new Object[] { match, asset, positionPoint, pair, srcLocation };
 	}
 
 	public static final Object[] pattern_PositionPoint_0_5_collectcontextelements_greenBBBBFFF(Match match,
-			MeterAssetPhysicalDevicePair pair, Location srcLocation, MeterAsset asset) {
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, Location srcLocation) {
 		EMoflonEdge asset__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__asset____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		match.getContextNodes().add(asset);
 		match.getContextNodes().add(pair);
 		match.getContextNodes().add(srcLocation);
-		match.getContextNodes().add(asset);
-		String pair__asset____a_name_prime = "a";
 		String asset__srcLocation____Location_name_prime = "Location";
 		String srcLocation__asset____Assets_name_prime = "Assets";
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		match.getContextEdges().add(pair__asset____a);
+		String pair__asset____a_name_prime = "a";
 		asset__srcLocation____Location.setSrc(asset);
 		asset__srcLocation____Location.setTrg(srcLocation);
 		match.getContextEdges().add(asset__srcLocation____Location);
 		srcLocation__asset____Assets.setSrc(srcLocation);
 		srcLocation__asset____Assets.setTrg(asset);
 		match.getContextEdges().add(srcLocation__asset____Assets);
-		pair__asset____a.setName(pair__asset____a_name_prime);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		match.getContextEdges().add(pair__asset____a);
 		asset__srcLocation____Location.setName(asset__srcLocation____Location_name_prime);
 		srcLocation__asset____Assets.setName(srcLocation__asset____Assets_name_prime);
-		return new Object[] { match, pair, srcLocation, asset, pair__asset____a, asset__srcLocation____Location,
-				srcLocation__asset____Assets };
+		pair__asset____a.setName(pair__asset____a_name_prime);
+		return new Object[] { match, asset, pair, srcLocation, asset__srcLocation____Location,
+				srcLocation__asset____Assets, pair__asset____a };
 	}
 
 	public static final void pattern_PositionPoint_0_6_registerobjectstomatch_expressionBBBBBB(PositionPoint _this,
-			Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		_this.registerObjectsToMatch_FWD(match, pair, srcLocation, positionPoint, asset);
+			Match match, MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation) {
+		_this.registerObjectsToMatch_FWD(match, asset, positionPoint, pair, srcLocation);
 
 	}
 
@@ -790,32 +792,32 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 
 	public static final Object[] pattern_PositionPoint_1_1_performtransformation_bindingFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_1 = isApplicableMatch.getObject("trgLocation");
-		EObject _localVariable_2 = isApplicableMatch.getObject("srcLocation");
-		EObject _localVariable_3 = isApplicableMatch.getObject("positionPoint");
+		EObject _localVariable_0 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_1 = isApplicableMatch.getObject("positionPoint");
+		EObject _localVariable_2 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_3 = isApplicableMatch.getObject("srcLocation");
 		EObject _localVariable_4 = isApplicableMatch.getObject("locationToLocation");
-		EObject _localVariable_5 = isApplicableMatch.getObject("asset");
-		EObject tmpPair = _localVariable_0;
-		EObject tmpTrgLocation = _localVariable_1;
-		EObject tmpSrcLocation = _localVariable_2;
-		EObject tmpPositionPoint = _localVariable_3;
+		EObject _localVariable_5 = isApplicableMatch.getObject("trgLocation");
+		EObject tmpAsset = _localVariable_0;
+		EObject tmpPositionPoint = _localVariable_1;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpSrcLocation = _localVariable_3;
 		EObject tmpLocationToLocation = _localVariable_4;
-		EObject tmpAsset = _localVariable_5;
-		if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-			if (tmpTrgLocation instanceof outageDetectionJointarget.Location) {
-				outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) tmpTrgLocation;
-				if (tmpSrcLocation instanceof Location) {
-					Location srcLocation = (Location) tmpSrcLocation;
-					if (tmpPositionPoint instanceof gluemodel.CIM.IEC61968.Common.PositionPoint) {
-						gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) tmpPositionPoint;
+		EObject tmpTrgLocation = _localVariable_5;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
+			if (tmpPositionPoint instanceof gluemodel.CIM.IEC61968.Common.PositionPoint) {
+				gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) tmpPositionPoint;
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					if (tmpSrcLocation instanceof Location) {
+						Location srcLocation = (Location) tmpSrcLocation;
 						if (tmpLocationToLocation instanceof LocationToLocation) {
 							LocationToLocation locationToLocation = (LocationToLocation) tmpLocationToLocation;
-							if (tmpAsset instanceof MeterAsset) {
-								MeterAsset asset = (MeterAsset) tmpAsset;
-								return new Object[] { pair, trgLocation, srcLocation, positionPoint, locationToLocation,
-										asset, isApplicableMatch };
+							if (tmpTrgLocation instanceof outageDetectionJointarget.Location) {
+								outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) tmpTrgLocation;
+								return new Object[] { asset, positionPoint, pair, srcLocation, locationToLocation,
+										trgLocation, isApplicableMatch };
 							}
 						}
 					}
@@ -825,14 +827,14 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		return null;
 	}
 
-	public static final Object[] pattern_PositionPoint_1_1_performtransformation_blackBBBBBBFBB(
-			MeterAssetPhysicalDevicePair pair, outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset, PositionPoint _this, IsApplicableMatch isApplicableMatch) {
+	public static final Object[] pattern_PositionPoint_1_1_performtransformation_blackBBBBBBFBB(MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation, outageDetectionJointarget.Location trgLocation,
+			PositionPoint _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset, csp,
+				return new Object[] { asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation, csp,
 						_this, isApplicableMatch };
 			}
 		}
@@ -844,111 +846,112 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		Object[] result_pattern_PositionPoint_1_1_performtransformation_binding = pattern_PositionPoint_1_1_performtransformation_bindingFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_PositionPoint_1_1_performtransformation_binding != null) {
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_PositionPoint_1_1_performtransformation_binding[0];
-			outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) result_pattern_PositionPoint_1_1_performtransformation_binding[1];
-			Location srcLocation = (Location) result_pattern_PositionPoint_1_1_performtransformation_binding[2];
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result_pattern_PositionPoint_1_1_performtransformation_binding[3];
+			MeterAsset asset = (MeterAsset) result_pattern_PositionPoint_1_1_performtransformation_binding[0];
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) result_pattern_PositionPoint_1_1_performtransformation_binding[1];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_PositionPoint_1_1_performtransformation_binding[2];
+			Location srcLocation = (Location) result_pattern_PositionPoint_1_1_performtransformation_binding[3];
 			LocationToLocation locationToLocation = (LocationToLocation) result_pattern_PositionPoint_1_1_performtransformation_binding[4];
-			MeterAsset asset = (MeterAsset) result_pattern_PositionPoint_1_1_performtransformation_binding[5];
+			outageDetectionJointarget.Location trgLocation = (outageDetectionJointarget.Location) result_pattern_PositionPoint_1_1_performtransformation_binding[5];
 
 			Object[] result_pattern_PositionPoint_1_1_performtransformation_black = pattern_PositionPoint_1_1_performtransformation_blackBBBBBBFBB(
-					pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset, _this, isApplicableMatch);
+					asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation, _this, isApplicableMatch);
 			if (result_pattern_PositionPoint_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_PositionPoint_1_1_performtransformation_black[6];
 
-				return new Object[] { pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset, csp,
+				return new Object[] { asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation, csp,
 						_this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_PositionPoint_1_1_performtransformation_greenBBFFB(
-			outageDetectionJointarget.Location trgLocation, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+	public static final Object[] pattern_PositionPoint_1_1_performtransformation_greenFBFBB(
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, outageDetectionJointarget.Location trgLocation,
 			CSP csp) {
+		PositionPointToPositionPoint positionCorr = Task1Factory.eINSTANCE.createPositionPointToPositionPoint();
 		outageDetectionJointarget.PositionPoint trgPositionPoint = OutageDetectionJointargetFactory.eINSTANCE
 				.createPositionPoint();
-		PositionPointToPositionPoint positionCorr = Task1Factory.eINSTANCE.createPositionPointToPositionPoint();
 		Object _localVariable_0 = csp.getValue("trgPositionPoint", "yPosition");
 		Object _localVariable_1 = csp.getValue("trgPositionPoint", "zPosition");
 		Object _localVariable_2 = csp.getValue("trgPositionPoint", "xPosition");
-		trgLocation.setPosition(trgPositionPoint);
-		positionCorr.setTarget(trgPositionPoint);
 		positionCorr.setSource(positionPoint);
+		positionCorr.setTarget(trgPositionPoint);
+		trgLocation.setPosition(trgPositionPoint);
 		String trgPositionPoint_yPosition_prime = (String) _localVariable_0;
 		String trgPositionPoint_zPosition_prime = (String) _localVariable_1;
 		String trgPositionPoint_xPosition_prime = (String) _localVariable_2;
 		trgPositionPoint.setYPosition(trgPositionPoint_yPosition_prime);
 		trgPositionPoint.setZPosition(trgPositionPoint_zPosition_prime);
 		trgPositionPoint.setXPosition(trgPositionPoint_xPosition_prime);
-		return new Object[] { trgLocation, positionPoint, trgPositionPoint, positionCorr, csp };
+		return new Object[] { positionCorr, positionPoint, trgPositionPoint, trgLocation, csp };
 	}
 
 	public static final Object[] pattern_PositionPoint_1_2_collecttranslatedelements_blackBBB(
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
-			outageDetectionJointarget.PositionPoint trgPositionPoint, PositionPointToPositionPoint positionCorr) {
-		return new Object[] { positionPoint, trgPositionPoint, positionCorr };
+			PositionPointToPositionPoint positionCorr, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			outageDetectionJointarget.PositionPoint trgPositionPoint) {
+		return new Object[] { positionCorr, positionPoint, trgPositionPoint };
 	}
 
 	public static final Object[] pattern_PositionPoint_1_2_collecttranslatedelements_greenFBBB(
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
-			outageDetectionJointarget.PositionPoint trgPositionPoint, PositionPointToPositionPoint positionCorr) {
+			PositionPointToPositionPoint positionCorr, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			outageDetectionJointarget.PositionPoint trgPositionPoint) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
+		ruleresult.getCreatedLinkElements().add(positionCorr);
 		ruleresult.getTranslatedElements().add(positionPoint);
 		ruleresult.getCreatedElements().add(trgPositionPoint);
-		ruleresult.getCreatedLinkElements().add(positionCorr);
-		return new Object[] { ruleresult, positionPoint, trgPositionPoint, positionCorr };
+		return new Object[] { ruleresult, positionCorr, positionPoint, trgPositionPoint };
 	}
 
 	public static final Object[] pattern_PositionPoint_1_3_bookkeepingforedges_blackBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject srcLocation, EObject positionPoint,
-			EObject trgPositionPoint, EObject locationToLocation, EObject asset, EObject positionCorr) {
-		if (!pair.equals(trgLocation)) {
-			if (!pair.equals(srcLocation)) {
-				if (!pair.equals(positionPoint)) {
-					if (!pair.equals(trgPositionPoint)) {
-						if (!pair.equals(positionCorr)) {
-							if (!trgLocation.equals(trgPositionPoint)) {
-								if (!srcLocation.equals(trgLocation)) {
-									if (!srcLocation.equals(trgPositionPoint)) {
-										if (!positionPoint.equals(trgLocation)) {
-											if (!positionPoint.equals(srcLocation)) {
-												if (!positionPoint.equals(trgPositionPoint)) {
-													if (!locationToLocation.equals(pair)) {
-														if (!locationToLocation.equals(trgLocation)) {
-															if (!locationToLocation.equals(srcLocation)) {
-																if (!locationToLocation.equals(positionPoint)) {
-																	if (!locationToLocation.equals(trgPositionPoint)) {
-																		if (!locationToLocation.equals(positionCorr)) {
-																			if (!asset.equals(pair)) {
-																				if (!asset.equals(trgLocation)) {
-																					if (!asset.equals(srcLocation)) {
-																						if (!asset.equals(
-																								positionPoint)) {
-																							if (!asset.equals(
-																									trgPositionPoint)) {
-																								if (!asset.equals(
-																										locationToLocation)) {
-																									if (!asset.equals(
-																											positionCorr)) {
-																										if (!positionCorr
-																												.equals(trgLocation)) {
-																											if (!positionCorr
-																													.equals(srcLocation)) {
-																												if (!positionCorr
-																														.equals(positionPoint)) {
-																													if (!positionCorr
+			PerformRuleResult ruleresult, EObject asset, EObject positionCorr, EObject positionPoint, EObject pair,
+			EObject srcLocation, EObject trgPositionPoint, EObject locationToLocation, EObject trgLocation) {
+		if (!asset.equals(positionCorr)) {
+			if (!asset.equals(positionPoint)) {
+				if (!asset.equals(pair)) {
+					if (!asset.equals(srcLocation)) {
+						if (!asset.equals(trgPositionPoint)) {
+							if (!asset.equals(locationToLocation)) {
+								if (!asset.equals(trgLocation)) {
+									if (!positionCorr.equals(positionPoint)) {
+										if (!positionCorr.equals(srcLocation)) {
+											if (!positionCorr.equals(trgPositionPoint)) {
+												if (!positionCorr.equals(trgLocation)) {
+													if (!positionPoint.equals(srcLocation)) {
+														if (!positionPoint.equals(trgPositionPoint)) {
+															if (!positionPoint.equals(trgLocation)) {
+																if (!pair.equals(positionCorr)) {
+																	if (!pair.equals(positionPoint)) {
+																		if (!pair.equals(srcLocation)) {
+																			if (!pair.equals(trgPositionPoint)) {
+																				if (!pair.equals(trgLocation)) {
+																					if (!srcLocation
+																							.equals(trgPositionPoint)) {
+																						if (!srcLocation
+																								.equals(trgLocation)) {
+																							if (!locationToLocation
+																									.equals(positionCorr)) {
+																								if (!locationToLocation
+																										.equals(positionPoint)) {
+																									if (!locationToLocation
+																											.equals(pair)) {
+																										if (!locationToLocation
+																												.equals(srcLocation)) {
+																											if (!locationToLocation
+																													.equals(trgPositionPoint)) {
+																												if (!locationToLocation
+																														.equals(trgLocation)) {
+																													if (!trgLocation
 																															.equals(trgPositionPoint)) {
 																														return new Object[] {
 																																ruleresult,
-																																pair,
-																																trgLocation,
-																																srcLocation,
+																																asset,
+																																positionCorr,
 																																positionPoint,
+																																pair,
+																																srcLocation,
 																																trgPositionPoint,
 																																locationToLocation,
-																																asset,
-																																positionCorr };
+																																trgLocation };
 																													}
 																												}
 																											}
@@ -981,44 +984,44 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	}
 
 	public static final Object[] pattern_PositionPoint_1_3_bookkeepingforedges_greenBBBBBBFFFF(
-			PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject positionPoint,
-			EObject trgPositionPoint, EObject positionCorr) {
+			PerformRuleResult ruleresult, EObject positionCorr, EObject positionPoint, EObject srcLocation,
+			EObject trgPositionPoint, EObject trgLocation) {
+		EMoflonEdge positionCorr__positionPoint____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__positionPoint____Position = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge positionCorr__trgPositionPoint____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge positionCorr__positionPoint____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge trgLocation__trgPositionPoint____Position = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "PositionPoint";
+		String positionCorr__positionPoint____source_name_prime = "source";
 		String srcLocation__positionPoint____Position_name_prime = "Position";
 		String positionCorr__trgPositionPoint____target_name_prime = "target";
-		String positionCorr__positionPoint____source_name_prime = "source";
 		String trgLocation__trgPositionPoint____Position_name_prime = "Position";
+		positionCorr__positionPoint____source.setSrc(positionCorr);
+		positionCorr__positionPoint____source.setTrg(positionPoint);
+		ruleresult.getCreatedEdges().add(positionCorr__positionPoint____source);
 		srcLocation__positionPoint____Position.setSrc(srcLocation);
 		srcLocation__positionPoint____Position.setTrg(positionPoint);
 		ruleresult.getTranslatedEdges().add(srcLocation__positionPoint____Position);
 		positionCorr__trgPositionPoint____target.setSrc(positionCorr);
 		positionCorr__trgPositionPoint____target.setTrg(trgPositionPoint);
 		ruleresult.getCreatedEdges().add(positionCorr__trgPositionPoint____target);
-		positionCorr__positionPoint____source.setSrc(positionCorr);
-		positionCorr__positionPoint____source.setTrg(positionPoint);
-		ruleresult.getCreatedEdges().add(positionCorr__positionPoint____source);
 		trgLocation__trgPositionPoint____Position.setSrc(trgLocation);
 		trgLocation__trgPositionPoint____Position.setTrg(trgPositionPoint);
 		ruleresult.getCreatedEdges().add(trgLocation__trgPositionPoint____Position);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
+		positionCorr__positionPoint____source.setName(positionCorr__positionPoint____source_name_prime);
 		srcLocation__positionPoint____Position.setName(srcLocation__positionPoint____Position_name_prime);
 		positionCorr__trgPositionPoint____target.setName(positionCorr__trgPositionPoint____target_name_prime);
-		positionCorr__positionPoint____source.setName(positionCorr__positionPoint____source_name_prime);
 		trgLocation__trgPositionPoint____Position.setName(trgLocation__trgPositionPoint____Position_name_prime);
-		return new Object[] { ruleresult, trgLocation, srcLocation, positionPoint, trgPositionPoint, positionCorr,
-				srcLocation__positionPoint____Position, positionCorr__trgPositionPoint____target,
-				positionCorr__positionPoint____source, trgLocation__trgPositionPoint____Position };
+		return new Object[] { ruleresult, positionCorr, positionPoint, srcLocation, trgPositionPoint, trgLocation,
+				positionCorr__positionPoint____source, srcLocation__positionPoint____Position,
+				positionCorr__trgPositionPoint____target, trgLocation__trgPositionPoint____Position };
 	}
 
 	public static final void pattern_PositionPoint_1_5_registerobjects_expressionBBBBBBBBBB(PositionPoint _this,
-			PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject srcLocation, EObject positionPoint,
-			EObject trgPositionPoint, EObject locationToLocation, EObject asset, EObject positionCorr) {
-		_this.registerObjects_FWD(ruleresult, pair, trgLocation, srcLocation, positionPoint, trgPositionPoint,
-				locationToLocation, asset, positionCorr);
+			PerformRuleResult ruleresult, EObject asset, EObject positionCorr, EObject positionPoint, EObject pair,
+			EObject srcLocation, EObject trgPositionPoint, EObject locationToLocation, EObject trgLocation) {
+		_this.registerObjects_FWD(ruleresult, asset, positionCorr, positionPoint, pair, srcLocation, trgPositionPoint,
+				locationToLocation, trgLocation);
 
 	}
 
@@ -1076,23 +1079,23 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	}
 
 	public static final Object[] pattern_PositionPoint_2_2_corematch_bindingFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("pair");
-		EObject _localVariable_1 = match.getObject("srcLocation");
-		EObject _localVariable_2 = match.getObject("positionPoint");
-		EObject _localVariable_3 = match.getObject("asset");
-		EObject tmpPair = _localVariable_0;
-		EObject tmpSrcLocation = _localVariable_1;
-		EObject tmpPositionPoint = _localVariable_2;
-		EObject tmpAsset = _localVariable_3;
-		if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-			if (tmpSrcLocation instanceof Location) {
-				Location srcLocation = (Location) tmpSrcLocation;
-				if (tmpPositionPoint instanceof gluemodel.CIM.IEC61968.Common.PositionPoint) {
-					gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) tmpPositionPoint;
-					if (tmpAsset instanceof MeterAsset) {
-						MeterAsset asset = (MeterAsset) tmpAsset;
-						return new Object[] { pair, srcLocation, positionPoint, asset, match };
+		EObject _localVariable_0 = match.getObject("asset");
+		EObject _localVariable_1 = match.getObject("positionPoint");
+		EObject _localVariable_2 = match.getObject("pair");
+		EObject _localVariable_3 = match.getObject("srcLocation");
+		EObject tmpAsset = _localVariable_0;
+		EObject tmpPositionPoint = _localVariable_1;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpSrcLocation = _localVariable_3;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
+			if (tmpPositionPoint instanceof gluemodel.CIM.IEC61968.Common.PositionPoint) {
+				gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint = (gluemodel.CIM.IEC61968.Common.PositionPoint) tmpPositionPoint;
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					if (tmpSrcLocation instanceof Location) {
+						Location srcLocation = (Location) tmpSrcLocation;
+						return new Object[] { asset, positionPoint, pair, srcLocation, match };
 					}
 				}
 			}
@@ -1100,15 +1103,15 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_PositionPoint_2_2_corematch_blackBFBBFBB(
-			MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset, Match match) {
+	public static final Iterable<Object[]> pattern_PositionPoint_2_2_corematch_blackBBBBFFB(MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (LocationToLocation locationToLocation : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcLocation, LocationToLocation.class, "source")) {
 			outageDetectionJointarget.Location trgLocation = locationToLocation.getTarget();
 			if (trgLocation != null) {
-				_result.add(new Object[] { pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset,
+				_result.add(new Object[] { asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation,
 						match });
 			}
 
@@ -1116,18 +1119,18 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_PositionPoint_2_3_findcontext_blackBBBBBB(
-			MeterAssetPhysicalDevicePair pair, outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset) {
+	public static final Iterable<Object[]> pattern_PositionPoint_2_3_findcontext_blackBBBBBB(MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation,
+			outageDetectionJointarget.Location trgLocation) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (asset.equals(pair.getA())) {
-			if (trgLocation.equals(locationToLocation.getTarget())) {
-				if (srcLocation.equals(asset.getLocation())) {
-					if (positionPoint.equals(srcLocation.getPosition())) {
-						if (srcLocation.equals(locationToLocation.getSource())) {
-							_result.add(new Object[] { pair, trgLocation, srcLocation, positionPoint,
-									locationToLocation, asset });
+		if (srcLocation.equals(asset.getLocation())) {
+			if (positionPoint.equals(srcLocation.getPosition())) {
+				if (asset.equals(pair.getA())) {
+					if (srcLocation.equals(locationToLocation.getSource())) {
+						if (trgLocation.equals(locationToLocation.getTarget())) {
+							_result.add(new Object[] { asset, positionPoint, pair, srcLocation, locationToLocation,
+									trgLocation });
 						}
 					}
 				}
@@ -1136,35 +1139,29 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		return _result;
 	}
 
-	public static final Object[] pattern_PositionPoint_2_3_findcontext_greenBBBBBBFFFFFFF(
-			MeterAssetPhysicalDevicePair pair, outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset) {
+	public static final Object[] pattern_PositionPoint_2_3_findcontext_greenBBBBBBFFFFFFF(MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation,
+			outageDetectionJointarget.Location trgLocation) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge locationToLocation__trgLocation____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__asset____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__positionPoint____Position = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge locationToLocation__srcLocation____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String pair__asset____a_name_prime = "a";
-		String locationToLocation__trgLocation____target_name_prime = "target";
+		EMoflonEdge locationToLocation__trgLocation____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String asset__srcLocation____Location_name_prime = "Location";
 		String srcLocation__asset____Assets_name_prime = "Assets";
 		String srcLocation__positionPoint____Position_name_prime = "Position";
+		String pair__asset____a_name_prime = "a";
 		String locationToLocation__srcLocation____source_name_prime = "source";
-		isApplicableMatch.getAllContextElements().add(pair);
-		isApplicableMatch.getAllContextElements().add(trgLocation);
-		isApplicableMatch.getAllContextElements().add(srcLocation);
-		isApplicableMatch.getAllContextElements().add(positionPoint);
-		isApplicableMatch.getAllContextElements().add(locationToLocation);
+		String locationToLocation__trgLocation____target_name_prime = "target";
 		isApplicableMatch.getAllContextElements().add(asset);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		locationToLocation__trgLocation____target.setSrc(locationToLocation);
-		locationToLocation__trgLocation____target.setTrg(trgLocation);
-		isApplicableMatch.getAllContextElements().add(locationToLocation__trgLocation____target);
+		isApplicableMatch.getAllContextElements().add(positionPoint);
+		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(srcLocation);
+		isApplicableMatch.getAllContextElements().add(locationToLocation);
+		isApplicableMatch.getAllContextElements().add(trgLocation);
 		asset__srcLocation____Location.setSrc(asset);
 		asset__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(asset__srcLocation____Location);
@@ -1174,32 +1171,38 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		srcLocation__positionPoint____Position.setSrc(srcLocation);
 		srcLocation__positionPoint____Position.setTrg(positionPoint);
 		isApplicableMatch.getAllContextElements().add(srcLocation__positionPoint____Position);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
 		locationToLocation__srcLocation____source.setSrc(locationToLocation);
 		locationToLocation__srcLocation____source.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(locationToLocation__srcLocation____source);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		locationToLocation__trgLocation____target.setName(locationToLocation__trgLocation____target_name_prime);
+		locationToLocation__trgLocation____target.setSrc(locationToLocation);
+		locationToLocation__trgLocation____target.setTrg(trgLocation);
+		isApplicableMatch.getAllContextElements().add(locationToLocation__trgLocation____target);
 		asset__srcLocation____Location.setName(asset__srcLocation____Location_name_prime);
 		srcLocation__asset____Assets.setName(srcLocation__asset____Assets_name_prime);
 		srcLocation__positionPoint____Position.setName(srcLocation__positionPoint____Position_name_prime);
+		pair__asset____a.setName(pair__asset____a_name_prime);
 		locationToLocation__srcLocation____source.setName(locationToLocation__srcLocation____source_name_prime);
-		return new Object[] { pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset,
-				isApplicableMatch, pair__asset____a, locationToLocation__trgLocation____target,
-				asset__srcLocation____Location, srcLocation__asset____Assets, srcLocation__positionPoint____Position,
-				locationToLocation__srcLocation____source };
+		locationToLocation__trgLocation____target.setName(locationToLocation__trgLocation____target_name_prime);
+		return new Object[] { asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation,
+				isApplicableMatch, asset__srcLocation____Location, srcLocation__asset____Assets,
+				srcLocation__positionPoint____Position, pair__asset____a, locationToLocation__srcLocation____source,
+				locationToLocation__trgLocation____target };
 	}
 
 	public static final Object[] pattern_PositionPoint_2_4_solveCSP_bindingFBBBBBBBB(PositionPoint _this,
-			IsApplicableMatch isApplicableMatch, MeterAssetPhysicalDevicePair pair,
-			outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, pair, trgLocation, srcLocation,
-				positionPoint, locationToLocation, asset);
+			IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation,
+			outageDetectionJointarget.Location trgLocation) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, asset, positionPoint, pair,
+				srcLocation, locationToLocation, trgLocation);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, pair, trgLocation, srcLocation, positionPoint,
-					locationToLocation, asset };
+			return new Object[] { csp, _this, isApplicableMatch, asset, positionPoint, pair, srcLocation,
+					locationToLocation, trgLocation };
 		}
 		return null;
 	}
@@ -1209,20 +1212,20 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	}
 
 	public static final Object[] pattern_PositionPoint_2_4_solveCSP_bindingAndBlackFBBBBBBBB(PositionPoint _this,
-			IsApplicableMatch isApplicableMatch, MeterAssetPhysicalDevicePair pair,
-			outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset) {
+			IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation,
+			outageDetectionJointarget.Location trgLocation) {
 		Object[] result_pattern_PositionPoint_2_4_solveCSP_binding = pattern_PositionPoint_2_4_solveCSP_bindingFBBBBBBBB(
-				_this, isApplicableMatch, pair, trgLocation, srcLocation, positionPoint, locationToLocation, asset);
+				_this, isApplicableMatch, asset, positionPoint, pair, srcLocation, locationToLocation, trgLocation);
 		if (result_pattern_PositionPoint_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_PositionPoint_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_PositionPoint_2_4_solveCSP_black = pattern_PositionPoint_2_4_solveCSP_blackB(csp);
 			if (result_pattern_PositionPoint_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, pair, trgLocation, srcLocation, positionPoint,
-						locationToLocation, asset };
+				return new Object[] { csp, _this, isApplicableMatch, asset, positionPoint, pair, srcLocation,
+						locationToLocation, trgLocation };
 			}
 		}
 		return null;
@@ -1323,7 +1326,7 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 							MeterAsset asset = (MeterAsset) tmpAsset;
 							for (MeterAssetPhysicalDevicePair pair : org.moflon.core.utilities.eMoflonEMFUtil
 									.getOppositeReferenceTyped(asset, MeterAssetPhysicalDevicePair.class, "a")) {
-								_result.add(new Object[] { pair, srcLocation, positionPoint, asset, _edge_Position });
+								_result.add(new Object[] { asset, positionPoint, pair, srcLocation, _edge_Position });
 							}
 						}
 					}
@@ -1345,9 +1348,10 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 	}
 
 	public static final boolean pattern_PositionPoint_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBB(
-			PositionPoint _this, Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, pair, srcLocation, positionPoint, asset);
+			PositionPoint _this, Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, asset, positionPoint, pair, srcLocation);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1380,12 +1384,13 @@ public class PositionPointImpl extends AbstractRuleImpl implements PositionPoint
 		return _result;
 	}
 
-	public static final Object[] pattern_PositionPoint_13_1_matchtggpattern_blackBBBB(MeterAssetPhysicalDevicePair pair,
-			Location srcLocation, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset) {
-		if (asset.equals(pair.getA())) {
-			if (srcLocation.equals(asset.getLocation())) {
-				if (positionPoint.equals(srcLocation.getPosition())) {
-					return new Object[] { pair, srcLocation, positionPoint, asset };
+	public static final Object[] pattern_PositionPoint_13_1_matchtggpattern_blackBBBB(MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation) {
+		if (srcLocation.equals(asset.getLocation())) {
+			if (positionPoint.equals(srcLocation.getPosition())) {
+				if (asset.equals(pair.getA())) {
+					return new Object[] { asset, positionPoint, pair, srcLocation };
 				}
 			}
 		}

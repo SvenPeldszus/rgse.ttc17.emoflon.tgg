@@ -129,7 +129,7 @@ public interface SDPLocation extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_58(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_142(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

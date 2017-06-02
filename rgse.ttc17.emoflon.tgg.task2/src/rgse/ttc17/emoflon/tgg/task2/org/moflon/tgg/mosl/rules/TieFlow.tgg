@@ -19,8 +19,7 @@
 	srcTerminal : Terminal {
 		++ -TieFlow->srcFlow
 	}
-	++ srcFlow : TieFlow {
-		
+	++ srcFlow : TieFlow {	
 	}
 }
 
@@ -28,8 +27,7 @@
 	trgTerminal : Terminal {
 		++-TieFlow->trgFlow
 	}
-	++ trgFlow : TieFlow {
-		
+	++ trgFlow : TieFlow {	
 	}
 }
 
@@ -45,5 +43,4 @@
 }
 
 #attributeConditions {
-	
 }

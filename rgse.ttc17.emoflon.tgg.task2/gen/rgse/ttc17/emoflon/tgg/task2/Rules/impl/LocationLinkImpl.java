@@ -154,13 +154,13 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) result1_bindingAndBlack[0];
-		LocationToLocation locationCorr = (LocationToLocation) result1_bindingAndBlack[1];
-		PMUVoltageMeter consumer = (PMUVoltageMeter) result1_bindingAndBlack[2];
-		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[3];
-		Location location = (Location) result1_bindingAndBlack[4];
+		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[0];
+		outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) result1_bindingAndBlack[1];
+		Location location = (Location) result1_bindingAndBlack[2];
+		MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result1_bindingAndBlack[3];
+		LocationToLocation locationCorr = (LocationToLocation) result1_bindingAndBlack[4];
 		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[5];
-		MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result1_bindingAndBlack[6];
+		PMUVoltageMeter consumer = (PMUVoltageMeter) result1_bindingAndBlack[6];
 		// CSP csp = (CSP) result1_bindingAndBlack[7];
 		LocationLinkImpl.pattern_LocationLink_1_1_performtransformation_greenBB(trgLocation, consumer);
 
@@ -173,24 +173,24 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 
 		// bookkeeping for edges
 		Object[] result3_black = LocationLinkImpl.pattern_LocationLink_1_3_bookkeepingforedges_blackBBBBBBBB(ruleresult,
-				trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU);
+				pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[trgLocation] = " + trgLocation + ", "
-					+ "[locationCorr] = " + locationCorr + ", " + "[consumer] = " + consumer + ", " + "[pair] = " + pair
-					+ ", " + "[location] = " + location + ", " + "[asset] = " + asset + ", " + "[assetToPMU] = "
-					+ assetToPMU + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[pair] = " + pair + ", " + "[trgLocation] = "
+					+ trgLocation + ", " + "[location] = " + location + ", " + "[assetToPMU] = " + assetToPMU + ", "
+					+ "[locationCorr] = " + locationCorr + ", " + "[asset] = " + asset + ", " + "[consumer] = "
+					+ consumer + ".");
 		}
-		LocationLinkImpl.pattern_LocationLink_1_3_bookkeepingforedges_greenBBBBBFFF(ruleresult, trgLocation, consumer,
-				location, asset);
-		// EMoflonEdge consumer__trgLocation____Location = (EMoflonEdge) result3_green[5];
-		// EMoflonEdge asset__location____Location = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge location__asset____Assets = (EMoflonEdge) result3_green[7];
+		LocationLinkImpl.pattern_LocationLink_1_3_bookkeepingforedges_greenBBBBBFFF(ruleresult, trgLocation, location,
+				asset, consumer);
+		// EMoflonEdge asset__location____Location = (EMoflonEdge) result3_green[5];
+		// EMoflonEdge location__asset____Assets = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge consumer__trgLocation____Location = (EMoflonEdge) result3_green[7];
 
 		// perform postprocessing story node is empty
 		// register objects
-		LocationLinkImpl.pattern_LocationLink_1_5_registerobjects_expressionBBBBBBBBB(this, ruleresult, trgLocation,
-				locationCorr, consumer, pair, location, asset, assetToPMU);
+		LocationLinkImpl.pattern_LocationLink_1_5_registerobjects_expressionBBBBBBBBB(this, ruleresult, pair,
+				trgLocation, location, assetToPMU, locationCorr, asset, consumer);
 		return LocationLinkImpl.pattern_LocationLink_1_6_expressionFB(ruleresult);
 	}
 
@@ -221,36 +221,36 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_binding[0];
 		Location location = (Location) result2_binding[1];
 		MeterAsset asset = (MeterAsset) result2_binding[2];
-		for (Object[] result2_black : LocationLinkImpl.pattern_LocationLink_2_2_corematch_blackFFFBBBFB(pair, location,
+		for (Object[] result2_black : LocationLinkImpl.pattern_LocationLink_2_2_corematch_blackBFBFFBFB(pair, location,
 				asset, match)) {
-			outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) result2_black[0];
-			LocationToLocation locationCorr = (LocationToLocation) result2_black[1];
-			PMUVoltageMeter consumer = (PMUVoltageMeter) result2_black[2];
-			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result2_black[6];
+			outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) result2_black[1];
+			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result2_black[3];
+			LocationToLocation locationCorr = (LocationToLocation) result2_black[4];
+			PMUVoltageMeter consumer = (PMUVoltageMeter) result2_black[6];
 			// ForEach find context
-			for (Object[] result3_black : LocationLinkImpl.pattern_LocationLink_2_3_findcontext_blackBBBBBBB(
-					trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU)) {
+			for (Object[] result3_black : LocationLinkImpl.pattern_LocationLink_2_3_findcontext_blackBBBBBBB(pair,
+					trgLocation, location, assetToPMU, locationCorr, asset, consumer)) {
 				Object[] result3_green = LocationLinkImpl.pattern_LocationLink_2_3_findcontext_greenBBBBBBBFFFFFFFF(
-						trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU);
+						pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[7];
-				// EMoflonEdge locationCorr__trgLocation____target = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge locationCorr__location____source = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge assetToPMU__asset____source = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge asset__location____Location = (EMoflonEdge) result3_green[12];
-				// EMoflonEdge location__asset____Assets = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge locationCorr__trgLocation____target = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge assetToPMU__asset____source = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge asset__location____Location = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge location__asset____Assets = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge locationCorr__location____source = (EMoflonEdge) result3_green[13];
 				// EMoflonEdge assetToPMU__consumer____target = (EMoflonEdge) result3_green[14];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = LocationLinkImpl
-						.pattern_LocationLink_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(this, isApplicableMatch,
-								trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU);
+						.pattern_LocationLink_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(this, isApplicableMatch, pair,
+								trgLocation, location, assetToPMU, locationCorr, asset, consumer);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[trgLocation] = " + trgLocation + ", " + "[locationCorr] = " + locationCorr + ", "
-							+ "[consumer] = " + consumer + ", " + "[pair] = " + pair + ", " + "[location] = " + location
-							+ ", " + "[asset] = " + asset + ", " + "[assetToPMU] = " + assetToPMU + ".");
+							+ "[pair] = " + pair + ", " + "[trgLocation] = " + trgLocation + ", " + "[location] = "
+							+ location + ", " + "[assetToPMU] = " + assetToPMU + ", " + "[locationCorr] = "
+							+ locationCorr + ", " + "[asset] = " + asset + ", " + "[consumer] = " + consumer + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -322,9 +322,9 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.Location trgLocation, LocationToLocation locationCorr, PMUVoltageMeter consumer,
-			MeterAssetMMXUPair pair, Location location, MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -339,13 +339,13 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("trgLocation", trgLocation);
-		isApplicableMatch.registerObject("locationCorr", locationCorr);
-		isApplicableMatch.registerObject("consumer", consumer);
 		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("trgLocation", trgLocation);
 		isApplicableMatch.registerObject("location", location);
-		isApplicableMatch.registerObject("asset", asset);
 		isApplicableMatch.registerObject("assetToPMU", assetToPMU);
+		isApplicableMatch.registerObject("locationCorr", locationCorr);
+		isApplicableMatch.registerObject("asset", asset);
+		isApplicableMatch.registerObject("consumer", consumer);
 		return csp;
 	}
 
@@ -363,15 +363,15 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject locationCorr,
-			EObject consumer, EObject pair, EObject location, EObject asset, EObject assetToPMU) {
-		ruleresult.registerObject("trgLocation", trgLocation);
-		ruleresult.registerObject("locationCorr", locationCorr);
-		ruleresult.registerObject("consumer", consumer);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject location,
+			EObject assetToPMU, EObject locationCorr, EObject asset, EObject consumer) {
 		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("trgLocation", trgLocation);
 		ruleresult.registerObject("location", location);
-		ruleresult.registerObject("asset", asset);
 		ruleresult.registerObject("assetToPMU", assetToPMU);
+		ruleresult.registerObject("locationCorr", locationCorr);
+		ruleresult.registerObject("asset", asset);
+		ruleresult.registerObject("consumer", consumer);
 
 	}
 
@@ -389,7 +389,7 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_48(EMoflonEdge _edge_Location) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_158(EMoflonEdge _edge_Location) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = LocationLinkImpl
 				.pattern_LocationLink_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -524,12 +524,12 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 					(Location) arguments.get(2), (MeterAsset) arguments.get(3));
 		case RulesPackage.LOCATION_LINK___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.LOCATION_LINK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_LOCATION_LOCATIONTOLOCATION_PMUVOLTAGEMETER_METERASSETMMXUPAIR_LOCATION_METERASSET_METERASSETTOPMUVOLTAGEMETER:
+		case RulesPackage.LOCATION_LINK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETMMXUPAIR_LOCATION_LOCATION_METERASSETTOPMUVOLTAGEMETER_LOCATIONTOLOCATION_METERASSET_PMUVOLTAGEMETER:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(outagePreventionJointarget.Location) arguments.get(1), (LocationToLocation) arguments.get(2),
-					(PMUVoltageMeter) arguments.get(3), (MeterAssetMMXUPair) arguments.get(4),
-					(Location) arguments.get(5), (MeterAsset) arguments.get(6),
-					(MeterAssetToPMUVoltageMeter) arguments.get(7));
+					(MeterAssetMMXUPair) arguments.get(1), (outagePreventionJointarget.Location) arguments.get(2),
+					(Location) arguments.get(3), (MeterAssetToPMUVoltageMeter) arguments.get(4),
+					(LocationToLocation) arguments.get(5), (MeterAsset) arguments.get(6),
+					(PMUVoltageMeter) arguments.get(7));
 		case RulesPackage.LOCATION_LINK___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.LOCATION_LINK___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -539,8 +539,8 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 			return null;
 		case RulesPackage.LOCATION_LINK___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.LOCATION_LINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_48__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_48((EMoflonEdge) arguments.get(0));
+		case RulesPackage.LOCATION_LINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_158__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_158((EMoflonEdge) arguments.get(0));
 		case RulesPackage.LOCATION_LINK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.LOCATION_LINK___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -652,36 +652,36 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 
 	public static final Object[] pattern_LocationLink_1_1_performtransformation_bindingFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("trgLocation");
-		EObject _localVariable_1 = isApplicableMatch.getObject("locationCorr");
-		EObject _localVariable_2 = isApplicableMatch.getObject("consumer");
-		EObject _localVariable_3 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_4 = isApplicableMatch.getObject("location");
+		EObject _localVariable_0 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_1 = isApplicableMatch.getObject("trgLocation");
+		EObject _localVariable_2 = isApplicableMatch.getObject("location");
+		EObject _localVariable_3 = isApplicableMatch.getObject("assetToPMU");
+		EObject _localVariable_4 = isApplicableMatch.getObject("locationCorr");
 		EObject _localVariable_5 = isApplicableMatch.getObject("asset");
-		EObject _localVariable_6 = isApplicableMatch.getObject("assetToPMU");
-		EObject tmpTrgLocation = _localVariable_0;
-		EObject tmpLocationCorr = _localVariable_1;
-		EObject tmpConsumer = _localVariable_2;
-		EObject tmpPair = _localVariable_3;
-		EObject tmpLocation = _localVariable_4;
+		EObject _localVariable_6 = isApplicableMatch.getObject("consumer");
+		EObject tmpPair = _localVariable_0;
+		EObject tmpTrgLocation = _localVariable_1;
+		EObject tmpLocation = _localVariable_2;
+		EObject tmpAssetToPMU = _localVariable_3;
+		EObject tmpLocationCorr = _localVariable_4;
 		EObject tmpAsset = _localVariable_5;
-		EObject tmpAssetToPMU = _localVariable_6;
-		if (tmpTrgLocation instanceof outagePreventionJointarget.Location) {
-			outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) tmpTrgLocation;
-			if (tmpLocationCorr instanceof LocationToLocation) {
-				LocationToLocation locationCorr = (LocationToLocation) tmpLocationCorr;
-				if (tmpConsumer instanceof PMUVoltageMeter) {
-					PMUVoltageMeter consumer = (PMUVoltageMeter) tmpConsumer;
-					if (tmpPair instanceof MeterAssetMMXUPair) {
-						MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
-						if (tmpLocation instanceof Location) {
-							Location location = (Location) tmpLocation;
+		EObject tmpConsumer = _localVariable_6;
+		if (tmpPair instanceof MeterAssetMMXUPair) {
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
+			if (tmpTrgLocation instanceof outagePreventionJointarget.Location) {
+				outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) tmpTrgLocation;
+				if (tmpLocation instanceof Location) {
+					Location location = (Location) tmpLocation;
+					if (tmpAssetToPMU instanceof MeterAssetToPMUVoltageMeter) {
+						MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) tmpAssetToPMU;
+						if (tmpLocationCorr instanceof LocationToLocation) {
+							LocationToLocation locationCorr = (LocationToLocation) tmpLocationCorr;
 							if (tmpAsset instanceof MeterAsset) {
 								MeterAsset asset = (MeterAsset) tmpAsset;
-								if (tmpAssetToPMU instanceof MeterAssetToPMUVoltageMeter) {
-									MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) tmpAssetToPMU;
-									return new Object[] { trgLocation, locationCorr, consumer, pair, location, asset,
-											assetToPMU, isApplicableMatch };
+								if (tmpConsumer instanceof PMUVoltageMeter) {
+									PMUVoltageMeter consumer = (PMUVoltageMeter) tmpConsumer;
+									return new Object[] { pair, trgLocation, location, assetToPMU, locationCorr, asset,
+											consumer, isApplicableMatch };
 								}
 							}
 						}
@@ -692,14 +692,14 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		return null;
 	}
 
-	public static final Object[] pattern_LocationLink_1_1_performtransformation_blackBBBBBBBFBB(
-			outagePreventionJointarget.Location trgLocation, LocationToLocation locationCorr, PMUVoltageMeter consumer,
-			MeterAssetMMXUPair pair, Location location, MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU,
-			LocationLink _this, IsApplicableMatch isApplicableMatch) {
+	public static final Object[] pattern_LocationLink_1_1_performtransformation_blackBBBBBBBFBB(MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer, LocationLink _this,
+			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU, csp,
+				return new Object[] { pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer, csp,
 						_this, isApplicableMatch };
 			}
 		}
@@ -711,20 +711,20 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		Object[] result_pattern_LocationLink_1_1_performtransformation_binding = pattern_LocationLink_1_1_performtransformation_bindingFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_LocationLink_1_1_performtransformation_binding != null) {
-			outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) result_pattern_LocationLink_1_1_performtransformation_binding[0];
-			LocationToLocation locationCorr = (LocationToLocation) result_pattern_LocationLink_1_1_performtransformation_binding[1];
-			PMUVoltageMeter consumer = (PMUVoltageMeter) result_pattern_LocationLink_1_1_performtransformation_binding[2];
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_LocationLink_1_1_performtransformation_binding[3];
-			Location location = (Location) result_pattern_LocationLink_1_1_performtransformation_binding[4];
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_LocationLink_1_1_performtransformation_binding[0];
+			outagePreventionJointarget.Location trgLocation = (outagePreventionJointarget.Location) result_pattern_LocationLink_1_1_performtransformation_binding[1];
+			Location location = (Location) result_pattern_LocationLink_1_1_performtransformation_binding[2];
+			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result_pattern_LocationLink_1_1_performtransformation_binding[3];
+			LocationToLocation locationCorr = (LocationToLocation) result_pattern_LocationLink_1_1_performtransformation_binding[4];
 			MeterAsset asset = (MeterAsset) result_pattern_LocationLink_1_1_performtransformation_binding[5];
-			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result_pattern_LocationLink_1_1_performtransformation_binding[6];
+			PMUVoltageMeter consumer = (PMUVoltageMeter) result_pattern_LocationLink_1_1_performtransformation_binding[6];
 
 			Object[] result_pattern_LocationLink_1_1_performtransformation_black = pattern_LocationLink_1_1_performtransformation_blackBBBBBBBFBB(
-					trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU, _this, isApplicableMatch);
+					pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer, _this, isApplicableMatch);
 			if (result_pattern_LocationLink_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_LocationLink_1_1_performtransformation_black[7];
 
-				return new Object[] { trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU, csp,
+				return new Object[] { pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer, csp,
 						_this, isApplicableMatch };
 			}
 		}
@@ -743,37 +743,37 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 	}
 
 	public static final Object[] pattern_LocationLink_1_3_bookkeepingforedges_blackBBBBBBBB(
-			PerformRuleResult ruleresult, EObject trgLocation, EObject locationCorr, EObject consumer, EObject pair,
-			EObject location, EObject asset, EObject assetToPMU) {
-		if (!locationCorr.equals(trgLocation)) {
-			if (!locationCorr.equals(pair)) {
-				if (!consumer.equals(trgLocation)) {
-					if (!consumer.equals(locationCorr)) {
-						if (!consumer.equals(pair)) {
-							if (!consumer.equals(location)) {
-								if (!pair.equals(trgLocation)) {
-									if (!location.equals(trgLocation)) {
-										if (!location.equals(locationCorr)) {
-											if (!location.equals(pair)) {
-												if (!asset.equals(trgLocation)) {
-													if (!asset.equals(locationCorr)) {
-														if (!asset.equals(consumer)) {
-															if (!asset.equals(pair)) {
-																if (!asset.equals(location)) {
-																	if (!asset.equals(assetToPMU)) {
-																		if (!assetToPMU.equals(trgLocation)) {
-																			if (!assetToPMU.equals(locationCorr)) {
-																				if (!assetToPMU.equals(consumer)) {
-																					if (!assetToPMU.equals(pair)) {
-																						if (!assetToPMU
-																								.equals(location)) {
+			PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject location, EObject assetToPMU,
+			EObject locationCorr, EObject asset, EObject consumer) {
+		if (!pair.equals(trgLocation)) {
+			if (!location.equals(pair)) {
+				if (!location.equals(trgLocation)) {
+					if (!location.equals(locationCorr)) {
+						if (!assetToPMU.equals(pair)) {
+							if (!assetToPMU.equals(trgLocation)) {
+								if (!assetToPMU.equals(location)) {
+									if (!assetToPMU.equals(locationCorr)) {
+										if (!assetToPMU.equals(consumer)) {
+											if (!locationCorr.equals(pair)) {
+												if (!locationCorr.equals(trgLocation)) {
+													if (!asset.equals(pair)) {
+														if (!asset.equals(trgLocation)) {
+															if (!asset.equals(location)) {
+																if (!asset.equals(assetToPMU)) {
+																	if (!asset.equals(locationCorr)) {
+																		if (!asset.equals(consumer)) {
+																			if (!consumer.equals(pair)) {
+																				if (!consumer.equals(trgLocation)) {
+																					if (!consumer.equals(location)) {
+																						if (!consumer
+																								.equals(locationCorr)) {
 																							return new Object[] {
-																									ruleresult,
+																									ruleresult, pair,
 																									trgLocation,
-																									locationCorr,
-																									consumer, pair,
-																									location, asset,
-																									assetToPMU };
+																									location,
+																									assetToPMU,
+																									locationCorr, asset,
+																									consumer };
 																						}
 																					}
 																				}
@@ -799,35 +799,35 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 	}
 
 	public static final Object[] pattern_LocationLink_1_3_bookkeepingforedges_greenBBBBBFFF(
-			PerformRuleResult ruleresult, EObject trgLocation, EObject consumer, EObject location, EObject asset) {
-		EMoflonEdge consumer__trgLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject trgLocation, EObject location, EObject asset, EObject consumer) {
 		EMoflonEdge asset__location____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge location__asset____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge consumer__trgLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "LocationLink";
-		String consumer__trgLocation____Location_name_prime = "Location";
 		String asset__location____Location_name_prime = "Location";
 		String location__asset____Assets_name_prime = "Assets";
-		consumer__trgLocation____Location.setSrc(consumer);
-		consumer__trgLocation____Location.setTrg(trgLocation);
-		ruleresult.getCreatedEdges().add(consumer__trgLocation____Location);
+		String consumer__trgLocation____Location_name_prime = "Location";
 		asset__location____Location.setSrc(asset);
 		asset__location____Location.setTrg(location);
 		ruleresult.getTranslatedEdges().add(asset__location____Location);
 		location__asset____Assets.setSrc(location);
 		location__asset____Assets.setTrg(asset);
 		ruleresult.getTranslatedEdges().add(location__asset____Assets);
+		consumer__trgLocation____Location.setSrc(consumer);
+		consumer__trgLocation____Location.setTrg(trgLocation);
+		ruleresult.getCreatedEdges().add(consumer__trgLocation____Location);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		consumer__trgLocation____Location.setName(consumer__trgLocation____Location_name_prime);
 		asset__location____Location.setName(asset__location____Location_name_prime);
 		location__asset____Assets.setName(location__asset____Assets_name_prime);
-		return new Object[] { ruleresult, trgLocation, consumer, location, asset, consumer__trgLocation____Location,
-				asset__location____Location, location__asset____Assets };
+		consumer__trgLocation____Location.setName(consumer__trgLocation____Location_name_prime);
+		return new Object[] { ruleresult, trgLocation, location, asset, consumer, asset__location____Location,
+				location__asset____Assets, consumer__trgLocation____Location };
 	}
 
 	public static final void pattern_LocationLink_1_5_registerobjects_expressionBBBBBBBBB(LocationLink _this,
-			PerformRuleResult ruleresult, EObject trgLocation, EObject locationCorr, EObject consumer, EObject pair,
-			EObject location, EObject asset, EObject assetToPMU) {
-		_this.registerObjects_FWD(ruleresult, trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU);
+			PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject location, EObject assetToPMU,
+			EObject locationCorr, EObject asset, EObject consumer) {
+		_this.registerObjects_FWD(ruleresult, pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer);
 
 	}
 
@@ -904,19 +904,19 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_LocationLink_2_2_corematch_blackFFFBBBFB(MeterAssetMMXUPair pair,
+	public static final Iterable<Object[]> pattern_LocationLink_2_2_corematch_blackBFBFFBFB(MeterAssetMMXUPair pair,
 			Location location, MeterAsset asset, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		for (LocationToLocation locationCorr : org.moflon.core.utilities.eMoflonEMFUtil
-				.getOppositeReferenceTyped(location, LocationToLocation.class, "source")) {
-			outagePreventionJointarget.Location trgLocation = locationCorr.getTarget();
-			if (trgLocation != null) {
-				for (MeterAssetToPMUVoltageMeter assetToPMU : org.moflon.core.utilities.eMoflonEMFUtil
-						.getOppositeReferenceTyped(asset, MeterAssetToPMUVoltageMeter.class, "source")) {
-					PMUVoltageMeter consumer = assetToPMU.getTarget();
-					if (consumer != null) {
-						_result.add(new Object[] { trgLocation, locationCorr, consumer, pair, location, asset,
-								assetToPMU, match });
+		for (MeterAssetToPMUVoltageMeter assetToPMU : org.moflon.core.utilities.eMoflonEMFUtil
+				.getOppositeReferenceTyped(asset, MeterAssetToPMUVoltageMeter.class, "source")) {
+			PMUVoltageMeter consumer = assetToPMU.getTarget();
+			if (consumer != null) {
+				for (LocationToLocation locationCorr : org.moflon.core.utilities.eMoflonEMFUtil
+						.getOppositeReferenceTyped(location, LocationToLocation.class, "source")) {
+					outagePreventionJointarget.Location trgLocation = locationCorr.getTarget();
+					if (trgLocation != null) {
+						_result.add(new Object[] { pair, trgLocation, location, assetToPMU, locationCorr, asset,
+								consumer, match });
 					}
 
 				}
@@ -926,18 +926,18 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_LocationLink_2_3_findcontext_blackBBBBBBB(
-			outagePreventionJointarget.Location trgLocation, LocationToLocation locationCorr, PMUVoltageMeter consumer,
-			MeterAssetMMXUPair pair, Location location, MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU) {
+	public static final Iterable<Object[]> pattern_LocationLink_2_3_findcontext_blackBBBBBBB(MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (trgLocation.equals(locationCorr.getTarget())) {
-			if (asset.equals(pair.getA())) {
-				if (location.equals(locationCorr.getSource())) {
-					if (asset.equals(assetToPMU.getSource())) {
-						if (location.equals(asset.getLocation())) {
+		if (asset.equals(pair.getA())) {
+			if (trgLocation.equals(locationCorr.getTarget())) {
+				if (asset.equals(assetToPMU.getSource())) {
+					if (location.equals(asset.getLocation())) {
+						if (location.equals(locationCorr.getSource())) {
 							if (consumer.equals(assetToPMU.getTarget())) {
-								_result.add(new Object[] { trgLocation, locationCorr, consumer, pair, location, asset,
-										assetToPMU });
+								_result.add(new Object[] { pair, trgLocation, location, assetToPMU, locationCorr, asset,
+										consumer });
 							}
 						}
 					}
@@ -947,40 +947,37 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		return _result;
 	}
 
-	public static final Object[] pattern_LocationLink_2_3_findcontext_greenBBBBBBBFFFFFFFF(
-			outagePreventionJointarget.Location trgLocation, LocationToLocation locationCorr, PMUVoltageMeter consumer,
-			MeterAssetMMXUPair pair, Location location, MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU) {
+	public static final Object[] pattern_LocationLink_2_3_findcontext_greenBBBBBBBFFFFFFFF(MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge locationCorr__trgLocation____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge locationCorr__location____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge locationCorr__trgLocation____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge assetToPMU__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__location____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge location__asset____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge locationCorr__location____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge assetToPMU__consumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String locationCorr__trgLocation____target_name_prime = "target";
 		String pair__asset____a_name_prime = "a";
-		String locationCorr__location____source_name_prime = "source";
+		String locationCorr__trgLocation____target_name_prime = "target";
 		String assetToPMU__asset____source_name_prime = "source";
 		String asset__location____Location_name_prime = "Location";
 		String location__asset____Assets_name_prime = "Assets";
+		String locationCorr__location____source_name_prime = "source";
 		String assetToPMU__consumer____target_name_prime = "target";
-		isApplicableMatch.getAllContextElements().add(trgLocation);
-		isApplicableMatch.getAllContextElements().add(locationCorr);
-		isApplicableMatch.getAllContextElements().add(consumer);
 		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(trgLocation);
 		isApplicableMatch.getAllContextElements().add(location);
-		isApplicableMatch.getAllContextElements().add(asset);
 		isApplicableMatch.getAllContextElements().add(assetToPMU);
-		locationCorr__trgLocation____target.setSrc(locationCorr);
-		locationCorr__trgLocation____target.setTrg(trgLocation);
-		isApplicableMatch.getAllContextElements().add(locationCorr__trgLocation____target);
+		isApplicableMatch.getAllContextElements().add(locationCorr);
+		isApplicableMatch.getAllContextElements().add(asset);
+		isApplicableMatch.getAllContextElements().add(consumer);
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		locationCorr__location____source.setSrc(locationCorr);
-		locationCorr__location____source.setTrg(location);
-		isApplicableMatch.getAllContextElements().add(locationCorr__location____source);
+		locationCorr__trgLocation____target.setSrc(locationCorr);
+		locationCorr__trgLocation____target.setTrg(trgLocation);
+		isApplicableMatch.getAllContextElements().add(locationCorr__trgLocation____target);
 		assetToPMU__asset____source.setSrc(assetToPMU);
 		assetToPMU__asset____source.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(assetToPMU__asset____source);
@@ -990,32 +987,35 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 		location__asset____Assets.setSrc(location);
 		location__asset____Assets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(location__asset____Assets);
+		locationCorr__location____source.setSrc(locationCorr);
+		locationCorr__location____source.setTrg(location);
+		isApplicableMatch.getAllContextElements().add(locationCorr__location____source);
 		assetToPMU__consumer____target.setSrc(assetToPMU);
 		assetToPMU__consumer____target.setTrg(consumer);
 		isApplicableMatch.getAllContextElements().add(assetToPMU__consumer____target);
-		locationCorr__trgLocation____target.setName(locationCorr__trgLocation____target_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		locationCorr__location____source.setName(locationCorr__location____source_name_prime);
+		locationCorr__trgLocation____target.setName(locationCorr__trgLocation____target_name_prime);
 		assetToPMU__asset____source.setName(assetToPMU__asset____source_name_prime);
 		asset__location____Location.setName(asset__location____Location_name_prime);
 		location__asset____Assets.setName(location__asset____Assets_name_prime);
+		locationCorr__location____source.setName(locationCorr__location____source_name_prime);
 		assetToPMU__consumer____target.setName(assetToPMU__consumer____target_name_prime);
-		return new Object[] { trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU, isApplicableMatch,
-				locationCorr__trgLocation____target, pair__asset____a, locationCorr__location____source,
-				assetToPMU__asset____source, asset__location____Location, location__asset____Assets,
+		return new Object[] { pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer, isApplicableMatch,
+				pair__asset____a, locationCorr__trgLocation____target, assetToPMU__asset____source,
+				asset__location____Location, location__asset____Assets, locationCorr__location____source,
 				assetToPMU__consumer____target };
 	}
 
 	public static final Object[] pattern_LocationLink_2_4_solveCSP_bindingFBBBBBBBBB(LocationLink _this,
-			IsApplicableMatch isApplicableMatch, outagePreventionJointarget.Location trgLocation,
-			LocationToLocation locationCorr, PMUVoltageMeter consumer, MeterAssetMMXUPair pair, Location location,
-			MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, trgLocation, locationCorr, consumer,
-				pair, location, asset, assetToPMU);
+			IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, pair, trgLocation, location,
+				assetToPMU, locationCorr, asset, consumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, trgLocation, locationCorr, consumer, pair, location,
-					asset, assetToPMU };
+			return new Object[] { csp, _this, isApplicableMatch, pair, trgLocation, location, assetToPMU, locationCorr,
+					asset, consumer };
 		}
 		return null;
 	}
@@ -1025,19 +1025,19 @@ public class LocationLinkImpl extends AbstractRuleImpl implements LocationLink {
 	}
 
 	public static final Object[] pattern_LocationLink_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(LocationLink _this,
-			IsApplicableMatch isApplicableMatch, outagePreventionJointarget.Location trgLocation,
-			LocationToLocation locationCorr, PMUVoltageMeter consumer, MeterAssetMMXUPair pair, Location location,
-			MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU) {
+			IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer) {
 		Object[] result_pattern_LocationLink_2_4_solveCSP_binding = pattern_LocationLink_2_4_solveCSP_bindingFBBBBBBBBB(
-				_this, isApplicableMatch, trgLocation, locationCorr, consumer, pair, location, asset, assetToPMU);
+				_this, isApplicableMatch, pair, trgLocation, location, assetToPMU, locationCorr, asset, consumer);
 		if (result_pattern_LocationLink_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_LocationLink_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_LocationLink_2_4_solveCSP_black = pattern_LocationLink_2_4_solveCSP_blackB(csp);
 			if (result_pattern_LocationLink_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, trgLocation, locationCorr, consumer, pair,
-						location, asset, assetToPMU };
+				return new Object[] { csp, _this, isApplicableMatch, pair, trgLocation, location, assetToPMU,
+						locationCorr, asset, consumer };
 			}
 		}
 		return null;

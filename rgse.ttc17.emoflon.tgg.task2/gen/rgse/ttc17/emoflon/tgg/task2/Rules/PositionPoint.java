@@ -43,8 +43,8 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAsset meter, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, Location location);
+	boolean isAppropriate_FWD(Match match, Location location, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAsset meter, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +68,8 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAsset meter, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, Location location);
+	void registerObjectsToMatch_FWD(Match match, Location location,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset meter, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,8 +77,8 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset meter, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, Location location);
+	CSP isAppropriate_solveCsp_FWD(Match match, Location location,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset meter, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,9 +94,9 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, outagePreventionJointarget.Location trgLocation,
-			MeterAsset meter, MeterAssetMMXUPair pair, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
-			LocationToLocation locationCorr, Location location);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Location location,
+			LocationToLocation locationCorr, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			outagePreventionJointarget.Location trgLocation, MeterAsset meter, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +112,9 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgPositionPoint, EObject trgLocation, EObject meter,
-			EObject positionCorr, EObject pair, EObject positionPoint, EObject locationCorr, EObject location);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject location, EObject locationCorr,
+			EObject trgPositionPoint, EObject positionPoint, EObject trgLocation, EObject meter, EObject positionCorr,
+			EObject pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +130,7 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_32(EMoflonEdge _edge_Position);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_147(EMoflonEdge _edge_Position);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,8 +154,8 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAsset meter, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, Location location);
+	boolean checkDEC_FWD(Location location, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset meter,
+			MeterAssetMMXUPair pair);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

@@ -95,8 +95,8 @@ public interface SDPLocation extends EObject, AbstractRule {
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			gluemodel.CIM.IEC61968.Metering.SDPLocation srcLocation, MeterAsset asset,
-			MeterAssetToPMUVoltageMeter assetToPMU, MeterAssetMMXUPair pair, PMUVoltageMeter consumer);
+			gluemodel.CIM.IEC61968.Metering.SDPLocation srcLocation, MeterAsset asset, MeterAssetMMXUPair pair,
+			PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public interface SDPLocation extends EObject, AbstractRule {
 	 * @generated
 	 */
 	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject asset,
-			EObject assetToPMU, EObject pair, EObject consumer, EObject locationCorr);
+			EObject pair, EObject consumer, EObject assetToPMU, EObject locationCorr);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface SDPLocation extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_47(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_151(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

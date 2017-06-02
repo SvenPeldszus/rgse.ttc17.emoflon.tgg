@@ -45,7 +45,7 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAsset asset, Location srcLocation, PositionPoint positionPoint,
+	boolean isAppropriate_FWD(Match match, Location srcLocation, MeterAsset asset, PositionPoint positionPoint,
 			MeterAssetPhysicalDevicePair pair);
 
 	/**
@@ -70,7 +70,7 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, Location srcLocation, PositionPoint positionPoint,
+	void registerObjectsToMatch_FWD(Match match, Location srcLocation, MeterAsset asset, PositionPoint positionPoint,
 			MeterAssetPhysicalDevicePair pair);
 
 	/**
@@ -79,7 +79,7 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, Location srcLocation, PositionPoint positionPoint,
+	CSP isAppropriate_solveCsp_FWD(Match match, Location srcLocation, MeterAsset asset, PositionPoint positionPoint,
 			MeterAssetPhysicalDevicePair pair);
 
 	/**
@@ -97,9 +97,9 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, LocationToLocation locationToLocation,
-			outageDetectionJointarget.Location trgLocation, MeterAsset asset,
-			outageDetectionJointarget.PositionPoint trgPositionPoint, PositionPointToPositionPoint positionCorr,
-			Location srcLocation, PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair);
+			Location srcLocation, PositionPointToPositionPoint positionCorr, MeterAsset asset,
+			outageDetectionJointarget.Location trgLocation, outageDetectionJointarget.PositionPoint trgPositionPoint,
+			PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,8 +115,8 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject locationToLocation, EObject trgLocation,
-			EObject asset, EObject trgPositionPoint, EObject positionCorr, EObject srcLocation, EObject positionPoint,
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject locationToLocation, EObject srcLocation,
+			EObject positionCorr, EObject asset, EObject trgLocation, EObject trgPositionPoint, EObject positionPoint,
 			EObject pair);
 
 	/**
@@ -133,7 +133,7 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_52(EMoflonEdge _edge_Position);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_133(EMoflonEdge _edge_Position);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,7 +157,7 @@ public interface PositionPointLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAsset asset, Location srcLocation, PositionPoint positionPoint,
+	boolean checkDEC_FWD(Location srcLocation, MeterAsset asset, PositionPoint positionPoint,
 			MeterAssetPhysicalDevicePair pair);
 	// <-- [user code injected with eMoflon]
 

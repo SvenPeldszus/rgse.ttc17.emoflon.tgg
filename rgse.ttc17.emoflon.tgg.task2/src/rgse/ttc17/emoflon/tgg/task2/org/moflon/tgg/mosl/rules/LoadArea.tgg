@@ -23,7 +23,6 @@
 		++-LoadArea->srcLoadArea
 	}
 	++ srcLoadArea : LoadArea {
-		
 	}
 }
 
@@ -32,9 +31,7 @@
 		++-LoadArea->trgLoadArea
 	}
 	++trgLoadArea : LoadArea {
-		
 	}
-	
 }
 
 #correspondence {

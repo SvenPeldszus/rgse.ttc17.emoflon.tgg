@@ -354,7 +354,7 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_ControlArea_1(
+	public EObjectContainer isAppropriate_FWD_ControlArea_2(
 			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ControlAreaImpl
@@ -420,13 +420,13 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgControlArea_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgControlArea", true, csp);
-		var_trgControlArea_mRID.setValue(__helper.getValue("trgControlArea", "mRID"));
-		var_trgControlArea_mRID.setType("String");
-
 		Variable var_srcControlArea_mRID = CSPFactoryHelper.eINSTANCE.createVariable("srcControlArea", true, csp);
 		var_srcControlArea_mRID.setValue(__helper.getValue("srcControlArea", "mRID"));
 		var_srcControlArea_mRID.setType("String");
+
+		Variable var_trgControlArea_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgControlArea", true, csp);
+		var_trgControlArea_mRID.setValue(__helper.getValue("trgControlArea", "mRID"));
+		var_trgControlArea_mRID.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -514,8 +514,8 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 			return null;
 		case RulesPackage.CONTROL_AREA___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.CONTROL_AREA___IS_APPROPRIATE_FWD_CONTROL_AREA_1__CONTROLAREA:
-			return isAppropriate_FWD_ControlArea_1((gluemodel.CIM.IEC61970.ControlArea.ControlArea) arguments.get(0));
+		case RulesPackage.CONTROL_AREA___IS_APPROPRIATE_FWD_CONTROL_AREA_2__CONTROLAREA:
+			return isAppropriate_FWD_ControlArea_2((gluemodel.CIM.IEC61970.ControlArea.ControlArea) arguments.get(0));
 		case RulesPackage.CONTROL_AREA___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CONTROL_AREA___IS_APPLICABLE_CC__MATCH_MATCH:

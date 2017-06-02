@@ -396,7 +396,7 @@ public class SDPLocationImpl extends AbstractRuleImpl implements SDPLocation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_58(EMoflonEdge _edge_Location) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_142(EMoflonEdge _edge_Location) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = SDPLocationImpl
 				.pattern_SDPLocation_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -549,8 +549,8 @@ public class SDPLocationImpl extends AbstractRuleImpl implements SDPLocation {
 			return null;
 		case RulesPackage.SDP_LOCATION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.SDP_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_58__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_58((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SDP_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_142__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_142((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SDP_LOCATION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SDP_LOCATION___IS_APPLICABLE_CC__MATCH_MATCH:

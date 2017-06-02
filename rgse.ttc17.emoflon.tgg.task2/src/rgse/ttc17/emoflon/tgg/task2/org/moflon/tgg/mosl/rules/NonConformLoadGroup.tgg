@@ -25,10 +25,8 @@
 	trgConsumer : NonConformLoad {
 		++-LoadGroup->trgGroup
 	}
-	++trgGroup : NonConformLoadGroup {
-		
+	++trgGroup : NonConformLoadGroup {	
 	}
-	
 }
 
 #correspondence {

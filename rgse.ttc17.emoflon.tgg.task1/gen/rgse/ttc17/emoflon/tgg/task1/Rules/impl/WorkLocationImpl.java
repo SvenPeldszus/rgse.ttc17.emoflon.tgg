@@ -400,7 +400,7 @@ public class WorkLocationImpl extends AbstractRuleImpl implements WorkLocation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_62(EMoflonEdge _edge_Location) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_143(EMoflonEdge _edge_Location) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = WorkLocationImpl
 				.pattern_WorkLocation_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -554,8 +554,8 @@ public class WorkLocationImpl extends AbstractRuleImpl implements WorkLocation {
 			return null;
 		case RulesPackage.WORK_LOCATION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.WORK_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_62__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_62((EMoflonEdge) arguments.get(0));
+		case RulesPackage.WORK_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_143__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_143((EMoflonEdge) arguments.get(0));
 		case RulesPackage.WORK_LOCATION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.WORK_LOCATION___IS_APPLICABLE_CC__MATCH_MATCH:

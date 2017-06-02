@@ -422,7 +422,7 @@ public class ConformLoadImpl extends AbstractRuleImpl implements ConformLoad {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_30(EMoflonEdge _edge_EnergyConsumer) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_161(EMoflonEdge _edge_EnergyConsumer) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ConformLoadImpl
 				.pattern_ConformLoad_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -491,13 +491,13 @@ public class ConformLoadImpl extends AbstractRuleImpl implements ConformLoad {
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_mRID.setValue(__helper.getValue("trgConsumer", "mRID"));
-		var_trgConsumer_mRID.setType("String");
-
 		Variable var_srcConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("srcConsumer", true, csp);
 		var_srcConsumer_mRID.setValue(__helper.getValue("srcConsumer", "mRID"));
 		var_srcConsumer_mRID.setType("String");
+
+		Variable var_trgConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_mRID.setValue(__helper.getValue("trgConsumer", "mRID"));
+		var_trgConsumer_mRID.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -599,8 +599,8 @@ public class ConformLoadImpl extends AbstractRuleImpl implements ConformLoad {
 			return null;
 		case RulesPackage.CONFORM_LOAD___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.CONFORM_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_30__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_30((EMoflonEdge) arguments.get(0));
+		case RulesPackage.CONFORM_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_161__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_161((EMoflonEdge) arguments.get(0));
 		case RulesPackage.CONFORM_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CONFORM_LOAD___IS_APPLICABLE_CC__MATCH_MATCH:

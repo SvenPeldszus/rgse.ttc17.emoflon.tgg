@@ -52,28 +52,7 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass loadAreaToLoadAreaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass powerSystemResourceToPowerSystemResourceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass serviceDeliveryPointToServiceDeliveryPointEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass meterAssetToPMUVoltageMeterEClass = null;
+	private EClass mmxuToPMUVoltageMeterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,35 +66,7 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tieFlowToTieFlowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass conformLoadGroupToConformLoadGroupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass subLoadAreaToSubLoadAreaEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass meterAssetToMMXUToVoltageMeterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass meterAssetToPrivateMeterVoltageEClass = null;
+	private EClass physicalDeviceToPrivateMeterVoltageEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,6 +87,34 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass loadAreaToLoadAreaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass meterAssetToPMUVoltageMeterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass meterAssetToMMXUToVoltageMeterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass powerSystemResourceToPowerSystemResourceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass energyConsumerToEnergyConsumerEClass = null;
 
 	/**
@@ -143,14 +122,21 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass physicalDeviceToPrivateMeterVoltageEClass = null;
+	private EClass tieFlowToTieFlowEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass terminalToTerminalEClass = null;
+	private EClass subLoadAreaToSubLoadAreaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceDeliveryPointToServiceDeliveryPointEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,7 +150,21 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mmxuToPMUVoltageMeterEClass = null;
+	private EClass conformLoadGroupToConformLoadGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass terminalToTerminalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass meterAssetToPrivateMeterVoltageEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -243,12 +243,12 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLoadAreaToLoadArea() {
-		if (loadAreaToLoadAreaEClass == null) {
-			loadAreaToLoadAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+	public EClass getMMXUToPMUVoltageMeter() {
+		if (mmxuToPMUVoltageMeterEClass == null) {
+			mmxuToPMUVoltageMeterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
 					.getEClassifiers().get(0);
 		}
-		return loadAreaToLoadAreaEClass;
+		return mmxuToPMUVoltageMeterEClass;
 	}
 
 	/**
@@ -256,8 +256,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoadAreaToLoadArea_Source() {
-		return (EReference) getLoadAreaToLoadArea().getEStructuralFeatures().get(0);
+	public EReference getMMXUToPMUVoltageMeter_Source() {
+		return (EReference) getMMXUToPMUVoltageMeter().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -265,101 +265,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLoadAreaToLoadArea_Target() {
-		return (EReference) getLoadAreaToLoadArea().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPowerSystemResourceToPowerSystemResource() {
-		if (powerSystemResourceToPowerSystemResourceEClass == null) {
-			powerSystemResourceToPowerSystemResourceEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(1);
-		}
-		return powerSystemResourceToPowerSystemResourceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPowerSystemResourceToPowerSystemResource_Source() {
-		return (EReference) getPowerSystemResourceToPowerSystemResource().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getPowerSystemResourceToPowerSystemResource_Target() {
-		return (EReference) getPowerSystemResourceToPowerSystemResource().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getServiceDeliveryPointToServiceDeliveryPoint() {
-		if (serviceDeliveryPointToServiceDeliveryPointEClass == null) {
-			serviceDeliveryPointToServiceDeliveryPointEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(2);
-		}
-		return serviceDeliveryPointToServiceDeliveryPointEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getServiceDeliveryPointToServiceDeliveryPoint_Source() {
-		return (EReference) getServiceDeliveryPointToServiceDeliveryPoint().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getServiceDeliveryPointToServiceDeliveryPoint_Target() {
-		return (EReference) getServiceDeliveryPointToServiceDeliveryPoint().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMeterAssetToPMUVoltageMeter() {
-		if (meterAssetToPMUVoltageMeterEClass == null) {
-			meterAssetToPMUVoltageMeterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(3);
-		}
-		return meterAssetToPMUVoltageMeterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToPMUVoltageMeter_Source() {
-		return (EReference) getMeterAssetToPMUVoltageMeter().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToPMUVoltageMeter_Target() {
-		return (EReference) getMeterAssetToPMUVoltageMeter().getEStructuralFeatures().get(1);
+	public EReference getMMXUToPMUVoltageMeter_Target() {
+		return (EReference) getMMXUToPMUVoltageMeter().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -370,7 +277,7 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	public EClass getLocationToLocation() {
 		if (locationToLocationEClass == null) {
 			locationToLocationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(4);
+					.getEClassifiers().get(1);
 		}
 		return locationToLocationEClass;
 	}
@@ -398,12 +305,12 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTieFlowToTieFlow() {
-		if (tieFlowToTieFlowEClass == null) {
-			tieFlowToTieFlowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(5);
+	public EClass getPhysicalDeviceToPrivateMeterVoltage() {
+		if (physicalDeviceToPrivateMeterVoltageEClass == null) {
+			physicalDeviceToPrivateMeterVoltageEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(2);
 		}
-		return tieFlowToTieFlowEClass;
+		return physicalDeviceToPrivateMeterVoltageEClass;
 	}
 
 	/**
@@ -411,8 +318,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTieFlowToTieFlow_Source() {
-		return (EReference) getTieFlowToTieFlow().getEStructuralFeatures().get(0);
+	public EReference getPhysicalDeviceToPrivateMeterVoltage_Source() {
+		return (EReference) getPhysicalDeviceToPrivateMeterVoltage().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -420,132 +327,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTieFlowToTieFlow_Target() {
-		return (EReference) getTieFlowToTieFlow().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getConformLoadGroupToConformLoadGroup() {
-		if (conformLoadGroupToConformLoadGroupEClass == null) {
-			conformLoadGroupToConformLoadGroupEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(6);
-		}
-		return conformLoadGroupToConformLoadGroupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConformLoadGroupToConformLoadGroup_Source() {
-		return (EReference) getConformLoadGroupToConformLoadGroup().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getConformLoadGroupToConformLoadGroup_Target() {
-		return (EReference) getConformLoadGroupToConformLoadGroup().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSubLoadAreaToSubLoadArea() {
-		if (subLoadAreaToSubLoadAreaEClass == null) {
-			subLoadAreaToSubLoadAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(7);
-		}
-		return subLoadAreaToSubLoadAreaEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSubLoadAreaToSubLoadArea_Source() {
-		return (EReference) getSubLoadAreaToSubLoadArea().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSubLoadAreaToSubLoadArea_Target() {
-		return (EReference) getSubLoadAreaToSubLoadArea().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMeterAssetToMMXUToVoltageMeter() {
-		if (meterAssetToMMXUToVoltageMeterEClass == null) {
-			meterAssetToMMXUToVoltageMeterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(8);
-		}
-		return meterAssetToMMXUToVoltageMeterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToMMXUToVoltageMeter_Source() {
-		return (EReference) getMeterAssetToMMXUToVoltageMeter().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToMMXUToVoltageMeter_Target() {
-		return (EReference) getMeterAssetToMMXUToVoltageMeter().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMeterAssetToPrivateMeterVoltage() {
-		if (meterAssetToPrivateMeterVoltageEClass == null) {
-			meterAssetToPrivateMeterVoltageEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(9);
-		}
-		return meterAssetToPrivateMeterVoltageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToPrivateMeterVoltage_Source() {
-		return (EReference) getMeterAssetToPrivateMeterVoltage().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToPrivateMeterVoltage_Target() {
-		return (EReference) getMeterAssetToPrivateMeterVoltage().getEStructuralFeatures().get(1);
+	public EReference getPhysicalDeviceToPrivateMeterVoltage_Target() {
+		return (EReference) getPhysicalDeviceToPrivateMeterVoltage().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -556,7 +339,7 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	public EClass getNonConformLoadGroupNonToConformLoadGroup() {
 		if (nonConformLoadGroupNonToConformLoadGroupEClass == null) {
 			nonConformLoadGroupNonToConformLoadGroupEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(10);
+					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(3);
 		}
 		return nonConformLoadGroupNonToConformLoadGroupEClass;
 	}
@@ -587,7 +370,7 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	public EClass getControlAreaToControlSrea() {
 		if (controlAreaToControlSreaEClass == null) {
 			controlAreaToControlSreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(11);
+					.getEClassifiers().get(4);
 		}
 		return controlAreaToControlSreaEClass;
 	}
@@ -615,10 +398,134 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLoadAreaToLoadArea() {
+		if (loadAreaToLoadAreaEClass == null) {
+			loadAreaToLoadAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+					.getEClassifiers().get(5);
+		}
+		return loadAreaToLoadAreaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoadAreaToLoadArea_Source() {
+		return (EReference) getLoadAreaToLoadArea().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLoadAreaToLoadArea_Target() {
+		return (EReference) getLoadAreaToLoadArea().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMeterAssetToPMUVoltageMeter() {
+		if (meterAssetToPMUVoltageMeterEClass == null) {
+			meterAssetToPMUVoltageMeterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+					.getEClassifiers().get(6);
+		}
+		return meterAssetToPMUVoltageMeterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMeterAssetToPMUVoltageMeter_Source() {
+		return (EReference) getMeterAssetToPMUVoltageMeter().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMeterAssetToPMUVoltageMeter_Target() {
+		return (EReference) getMeterAssetToPMUVoltageMeter().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMeterAssetToMMXUToVoltageMeter() {
+		if (meterAssetToMMXUToVoltageMeterEClass == null) {
+			meterAssetToMMXUToVoltageMeterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+					.getEClassifiers().get(7);
+		}
+		return meterAssetToMMXUToVoltageMeterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMeterAssetToMMXUToVoltageMeter_Source() {
+		return (EReference) getMeterAssetToMMXUToVoltageMeter().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMeterAssetToMMXUToVoltageMeter_Target() {
+		return (EReference) getMeterAssetToMMXUToVoltageMeter().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPowerSystemResourceToPowerSystemResource() {
+		if (powerSystemResourceToPowerSystemResourceEClass == null) {
+			powerSystemResourceToPowerSystemResourceEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(8);
+		}
+		return powerSystemResourceToPowerSystemResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPowerSystemResourceToPowerSystemResource_Source() {
+		return (EReference) getPowerSystemResourceToPowerSystemResource().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPowerSystemResourceToPowerSystemResource_Target() {
+		return (EReference) getPowerSystemResourceToPowerSystemResource().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEnergyConsumerToEnergyConsumer() {
 		if (energyConsumerToEnergyConsumerEClass == null) {
 			energyConsumerToEnergyConsumerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(12);
+					.getEClassifiers().get(9);
 		}
 		return energyConsumerToEnergyConsumerEClass;
 	}
@@ -646,12 +553,12 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPhysicalDeviceToPrivateMeterVoltage() {
-		if (physicalDeviceToPrivateMeterVoltageEClass == null) {
-			physicalDeviceToPrivateMeterVoltageEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(13);
+	public EClass getTieFlowToTieFlow() {
+		if (tieFlowToTieFlowEClass == null) {
+			tieFlowToTieFlowEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+					.getEClassifiers().get(10);
 		}
-		return physicalDeviceToPrivateMeterVoltageEClass;
+		return tieFlowToTieFlowEClass;
 	}
 
 	/**
@@ -659,8 +566,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPhysicalDeviceToPrivateMeterVoltage_Source() {
-		return (EReference) getPhysicalDeviceToPrivateMeterVoltage().getEStructuralFeatures().get(0);
+	public EReference getTieFlowToTieFlow_Source() {
+		return (EReference) getTieFlowToTieFlow().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -668,8 +575,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPhysicalDeviceToPrivateMeterVoltage_Target() {
-		return (EReference) getPhysicalDeviceToPrivateMeterVoltage().getEStructuralFeatures().get(1);
+	public EReference getTieFlowToTieFlow_Target() {
+		return (EReference) getTieFlowToTieFlow().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -677,12 +584,12 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTerminalToTerminal() {
-		if (terminalToTerminalEClass == null) {
-			terminalToTerminalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(14);
+	public EClass getSubLoadAreaToSubLoadArea() {
+		if (subLoadAreaToSubLoadAreaEClass == null) {
+			subLoadAreaToSubLoadAreaEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+					.getEClassifiers().get(11);
 		}
-		return terminalToTerminalEClass;
+		return subLoadAreaToSubLoadAreaEClass;
 	}
 
 	/**
@@ -690,8 +597,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTerminalToTerminal_Source() {
-		return (EReference) getTerminalToTerminal().getEStructuralFeatures().get(0);
+	public EReference getSubLoadAreaToSubLoadArea_Source() {
+		return (EReference) getSubLoadAreaToSubLoadArea().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -699,8 +606,39 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTerminalToTerminal_Target() {
-		return (EReference) getTerminalToTerminal().getEStructuralFeatures().get(1);
+	public EReference getSubLoadAreaToSubLoadArea_Target() {
+		return (EReference) getSubLoadAreaToSubLoadArea().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getServiceDeliveryPointToServiceDeliveryPoint() {
+		if (serviceDeliveryPointToServiceDeliveryPointEClass == null) {
+			serviceDeliveryPointToServiceDeliveryPointEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(12);
+		}
+		return serviceDeliveryPointToServiceDeliveryPointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getServiceDeliveryPointToServiceDeliveryPoint_Source() {
+		return (EReference) getServiceDeliveryPointToServiceDeliveryPoint().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getServiceDeliveryPointToServiceDeliveryPoint_Target() {
+		return (EReference) getServiceDeliveryPointToServiceDeliveryPoint().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -711,7 +649,7 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	public EClass getPositionPointToPositionPoint() {
 		if (positionPointToPositionPointEClass == null) {
 			positionPointToPositionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(15);
+					.getEClassifiers().get(13);
 		}
 		return positionPointToPositionPointEClass;
 	}
@@ -739,12 +677,12 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMMXUToPMUVoltageMeter() {
-		if (mmxuToPMUVoltageMeterEClass == null) {
-			mmxuToPMUVoltageMeterEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
-					.getEClassifiers().get(16);
+	public EClass getConformLoadGroupToConformLoadGroup() {
+		if (conformLoadGroupToConformLoadGroupEClass == null) {
+			conformLoadGroupToConformLoadGroupEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(14);
 		}
-		return mmxuToPMUVoltageMeterEClass;
+		return conformLoadGroupToConformLoadGroupEClass;
 	}
 
 	/**
@@ -752,8 +690,8 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMMXUToPMUVoltageMeter_Source() {
-		return (EReference) getMMXUToPMUVoltageMeter().getEStructuralFeatures().get(0);
+	public EReference getConformLoadGroupToConformLoadGroup_Source() {
+		return (EReference) getConformLoadGroupToConformLoadGroup().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -761,8 +699,70 @@ public class Task2PackageImpl extends EPackageImpl implements Task2Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMMXUToPMUVoltageMeter_Target() {
-		return (EReference) getMMXUToPMUVoltageMeter().getEStructuralFeatures().get(1);
+	public EReference getConformLoadGroupToConformLoadGroup_Target() {
+		return (EReference) getConformLoadGroupToConformLoadGroup().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTerminalToTerminal() {
+		if (terminalToTerminalEClass == null) {
+			terminalToTerminalEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task2Package.eNS_URI)
+					.getEClassifiers().get(15);
+		}
+		return terminalToTerminalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTerminalToTerminal_Source() {
+		return (EReference) getTerminalToTerminal().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTerminalToTerminal_Target() {
+		return (EReference) getTerminalToTerminal().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMeterAssetToPrivateMeterVoltage() {
+		if (meterAssetToPrivateMeterVoltageEClass == null) {
+			meterAssetToPrivateMeterVoltageEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(Task2Package.eNS_URI).getEClassifiers().get(16);
+		}
+		return meterAssetToPrivateMeterVoltageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMeterAssetToPrivateMeterVoltage_Source() {
+		return (EReference) getMeterAssetToPrivateMeterVoltage().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMeterAssetToPrivateMeterVoltage_Target() {
+		return (EReference) getMeterAssetToPrivateMeterVoltage().getEStructuralFeatures().get(1);
 	}
 
 	/**

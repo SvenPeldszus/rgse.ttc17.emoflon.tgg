@@ -252,9 +252,9 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[6];
 				// EMoflonEdge locationCorr__trgLocation____target = (EMoflonEdge) result3_green[7];
 				// EMoflonEdge pair__meter____a = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge meter__location____Location = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge location__meter____Assets = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge location__positionPoint____Position = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge location__positionPoint____Position = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge meter__location____Location = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge location__meter____Assets = (EMoflonEdge) result3_green[11];
 				// EMoflonEdge locationCorr__location____source = (EMoflonEdge) result3_green[12];
 
 				// solve CSP
@@ -356,25 +356,25 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 				true, csp);
 		var_positionPoint_yPosition.setValue(positionPoint.getYPosition());
 		var_positionPoint_yPosition.setType("String");
-		Variable var_positionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint.zPosition",
-				true, csp);
-		var_positionPoint_zPosition.setValue(positionPoint.getZPosition());
-		var_positionPoint_zPosition.setType("String");
 		Variable var_positionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint.xPosition",
 				true, csp);
 		var_positionPoint_xPosition.setValue(positionPoint.getXPosition());
 		var_positionPoint_xPosition.setType("String");
+		Variable var_positionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint.zPosition",
+				true, csp);
+		var_positionPoint_zPosition.setValue(positionPoint.getZPosition());
+		var_positionPoint_zPosition.setType("String");
 
 		// Create unbound variables
 		Variable var_trgPositionPoint_yPosition = CSPFactoryHelper.eINSTANCE
 				.createVariable("trgPositionPoint.yPosition", csp);
 		var_trgPositionPoint_yPosition.setType("String");
-		Variable var_trgPositionPoint_zPosition = CSPFactoryHelper.eINSTANCE
-				.createVariable("trgPositionPoint.zPosition", csp);
-		var_trgPositionPoint_zPosition.setType("String");
 		Variable var_trgPositionPoint_xPosition = CSPFactoryHelper.eINSTANCE
 				.createVariable("trgPositionPoint.xPosition", csp);
 		var_trgPositionPoint_xPosition.setType("String");
+		Variable var_trgPositionPoint_zPosition = CSPFactoryHelper.eINSTANCE
+				.createVariable("trgPositionPoint.zPosition", csp);
+		var_trgPositionPoint_zPosition.setType("String");
 
 		// Create constraints
 		Eq eq = new Eq();
@@ -389,9 +389,9 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		eq.setRuleName("NoRuleName");
 		eq.solve(var_positionPoint_yPosition, var_trgPositionPoint_yPosition);
 		eq_0.setRuleName("NoRuleName");
-		eq_0.solve(var_positionPoint_zPosition, var_trgPositionPoint_zPosition);
+		eq_0.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
 		eq_1.setRuleName("NoRuleName");
-		eq_1.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
+		eq_1.solve(var_positionPoint_zPosition, var_trgPositionPoint_zPosition);
 
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("positionPoint", positionPoint);
@@ -446,7 +446,7 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_39(EMoflonEdge _edge_Position) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_168(EMoflonEdge _edge_Position) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = GmlPositionImpl
 				.pattern_GmlPosition_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -519,6 +519,15 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		var_positionPoint_yPosition.setValue(__helper.getValue("positionPoint", "yPosition"));
 		var_positionPoint_yPosition.setType("String");
 
+		Variable var_positionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint", true, csp);
+		var_positionPoint_xPosition.setValue(__helper.getValue("positionPoint", "xPosition"));
+		var_positionPoint_xPosition.setType("String");
+
+		Variable var_trgPositionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
+				csp);
+		var_trgPositionPoint_xPosition.setValue(__helper.getValue("trgPositionPoint", "xPosition"));
+		var_trgPositionPoint_xPosition.setType("String");
+
 		Variable var_positionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint", true, csp);
 		var_positionPoint_zPosition.setValue(__helper.getValue("positionPoint", "zPosition"));
 		var_positionPoint_zPosition.setType("String");
@@ -533,15 +542,6 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		var_trgPositionPoint_zPosition.setValue(__helper.getValue("trgPositionPoint", "zPosition"));
 		var_trgPositionPoint_zPosition.setType("String");
 
-		Variable var_positionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint", true, csp);
-		var_positionPoint_xPosition.setValue(__helper.getValue("positionPoint", "xPosition"));
-		var_positionPoint_xPosition.setType("String");
-
-		Variable var_trgPositionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
-				csp);
-		var_trgPositionPoint_xPosition.setValue(__helper.getValue("trgPositionPoint", "xPosition"));
-		var_trgPositionPoint_xPosition.setType("String");
-
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
 
@@ -555,26 +555,26 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		eq0.solve(var_positionPoint_yPosition, var_trgPositionPoint_yPosition);
 
 		eq1.setRuleName("GmlPosition");
-		eq1.solve(var_positionPoint_zPosition, var_trgPositionPoint_zPosition);
+		eq1.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
 
 		eq2.setRuleName("GmlPosition");
-		eq2.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
+		eq2.solve(var_positionPoint_zPosition, var_trgPositionPoint_zPosition);
 
 		if (csp.check()) {
 			ruleResult.setSuccess(true);
 		} else {
 			var_trgPositionPoint_yPosition.setBound(false);
-			var_trgPositionPoint_zPosition.setBound(false);
 			var_trgPositionPoint_xPosition.setBound(false);
+			var_trgPositionPoint_zPosition.setBound(false);
 			eq0.solve(var_positionPoint_yPosition, var_trgPositionPoint_yPosition);
-			eq1.solve(var_positionPoint_zPosition, var_trgPositionPoint_zPosition);
-			eq2.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
+			eq1.solve(var_positionPoint_xPosition, var_trgPositionPoint_xPosition);
+			eq2.solve(var_positionPoint_zPosition, var_trgPositionPoint_zPosition);
 			if (csp.check()) {
 				ruleResult.setSuccess(true);
 				ruleResult.setRequiredChange(true);
 				__helper.setValue("trgPositionPoint", "yPosition", var_trgPositionPoint_yPosition.getValue());
-				__helper.setValue("trgPositionPoint", "zPosition", var_trgPositionPoint_zPosition.getValue());
 				__helper.setValue("trgPositionPoint", "xPosition", var_trgPositionPoint_xPosition.getValue());
+				__helper.setValue("trgPositionPoint", "zPosition", var_trgPositionPoint_zPosition.getValue());
 			} else {
 				ruleResult.setSuccess(false);
 				return ruleResult;
@@ -656,8 +656,8 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 			return null;
 		case RulesPackage.GML_POSITION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.GML_POSITION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_39__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_39((EMoflonEdge) arguments.get(0));
+		case RulesPackage.GML_POSITION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_168__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_168((EMoflonEdge) arguments.get(0));
 		case RulesPackage.GML_POSITION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.GML_POSITION___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -863,17 +863,17 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		PositionPointToPositionPoint positionCorr = Task2Factory.eINSTANCE.createPositionPointToPositionPoint();
 		PositionPoint trgPositionPoint = OutagePreventionJointargetFactory.eINSTANCE.createPositionPoint();
 		Object _localVariable_0 = csp.getValue("trgPositionPoint", "yPosition");
-		Object _localVariable_1 = csp.getValue("trgPositionPoint", "zPosition");
-		Object _localVariable_2 = csp.getValue("trgPositionPoint", "xPosition");
+		Object _localVariable_1 = csp.getValue("trgPositionPoint", "xPosition");
+		Object _localVariable_2 = csp.getValue("trgPositionPoint", "zPosition");
 		positionCorr.setSource(positionPoint);
 		trgLocation.setPosition(trgPositionPoint);
 		positionCorr.setTarget(trgPositionPoint);
 		String trgPositionPoint_yPosition_prime = (String) _localVariable_0;
-		String trgPositionPoint_zPosition_prime = (String) _localVariable_1;
-		String trgPositionPoint_xPosition_prime = (String) _localVariable_2;
+		String trgPositionPoint_xPosition_prime = (String) _localVariable_1;
+		String trgPositionPoint_zPosition_prime = (String) _localVariable_2;
 		trgPositionPoint.setYPosition(trgPositionPoint_yPosition_prime);
-		trgPositionPoint.setZPosition(trgPositionPoint_zPosition_prime);
 		trgPositionPoint.setXPosition(trgPositionPoint_xPosition_prime);
+		trgPositionPoint.setZPosition(trgPositionPoint_zPosition_prime);
 		return new Object[] { positionPoint, positionCorr, trgLocation, trgPositionPoint, csp };
 	}
 
@@ -1113,8 +1113,8 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (trgLocation.equals(locationCorr.getTarget())) {
 			if (meter.equals(pair.getA())) {
-				if (location.equals(meter.getLocation())) {
-					if (positionPoint.equals(location.getPosition())) {
+				if (positionPoint.equals(location.getPosition())) {
+					if (location.equals(meter.getLocation())) {
 						if (location.equals(locationCorr.getSource())) {
 							_result.add(
 									new Object[] { positionPoint, trgLocation, meter, location, pair, locationCorr });
@@ -1133,15 +1133,15 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge locationCorr__trgLocation____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge location__positionPoint____Position = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge meter__location____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge location__meter____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge location__positionPoint____Position = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge locationCorr__location____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String locationCorr__trgLocation____target_name_prime = "target";
 		String pair__meter____a_name_prime = "a";
+		String location__positionPoint____Position_name_prime = "Position";
 		String meter__location____Location_name_prime = "Location";
 		String location__meter____Assets_name_prime = "Assets";
-		String location__positionPoint____Position_name_prime = "Position";
 		String locationCorr__location____source_name_prime = "source";
 		isApplicableMatch.getAllContextElements().add(positionPoint);
 		isApplicableMatch.getAllContextElements().add(trgLocation);
@@ -1155,27 +1155,27 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		pair__meter____a.setSrc(pair);
 		pair__meter____a.setTrg(meter);
 		isApplicableMatch.getAllContextElements().add(pair__meter____a);
+		location__positionPoint____Position.setSrc(location);
+		location__positionPoint____Position.setTrg(positionPoint);
+		isApplicableMatch.getAllContextElements().add(location__positionPoint____Position);
 		meter__location____Location.setSrc(meter);
 		meter__location____Location.setTrg(location);
 		isApplicableMatch.getAllContextElements().add(meter__location____Location);
 		location__meter____Assets.setSrc(location);
 		location__meter____Assets.setTrg(meter);
 		isApplicableMatch.getAllContextElements().add(location__meter____Assets);
-		location__positionPoint____Position.setSrc(location);
-		location__positionPoint____Position.setTrg(positionPoint);
-		isApplicableMatch.getAllContextElements().add(location__positionPoint____Position);
 		locationCorr__location____source.setSrc(locationCorr);
 		locationCorr__location____source.setTrg(location);
 		isApplicableMatch.getAllContextElements().add(locationCorr__location____source);
 		locationCorr__trgLocation____target.setName(locationCorr__trgLocation____target_name_prime);
 		pair__meter____a.setName(pair__meter____a_name_prime);
+		location__positionPoint____Position.setName(location__positionPoint____Position_name_prime);
 		meter__location____Location.setName(meter__location____Location_name_prime);
 		location__meter____Assets.setName(location__meter____Assets_name_prime);
-		location__positionPoint____Position.setName(location__positionPoint____Position_name_prime);
 		locationCorr__location____source.setName(locationCorr__location____source_name_prime);
 		return new Object[] { positionPoint, trgLocation, meter, location, pair, locationCorr, isApplicableMatch,
-				locationCorr__trgLocation____target, pair__meter____a, meter__location____Location,
-				location__meter____Assets, location__positionPoint____Position, locationCorr__location____source };
+				locationCorr__trgLocation____target, pair__meter____a, location__positionPoint____Position,
+				meter__location____Location, location__meter____Assets, locationCorr__location____source };
 	}
 
 	public static final Object[] pattern_GmlPosition_2_4_solveCSP_bindingFBBBBBBBB(GmlPosition _this,
@@ -1297,9 +1297,9 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 
 	public static final Object[] pattern_GmlPosition_10_2_testcorematchandDECs_black_nac_0BB(
 			gluemodel.CIM.IEC61970.Informative.InfGMLSupport.GmlPosition positionPoint, Location location) {
-		for (Location __DEC_positionPoint_Position_788125 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (Location __DEC_positionPoint_Position_38244 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(positionPoint, Location.class, "Position")) {
-			if (!location.equals(__DEC_positionPoint_Position_788125)) {
+			if (!location.equals(__DEC_positionPoint_Position_38244)) {
 				return new Object[] { positionPoint, location };
 			}
 		}
@@ -1382,9 +1382,9 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 
 	public static final Object[] pattern_GmlPosition_13_1_matchtggpattern_black_nac_0BB(
 			gluemodel.CIM.IEC61970.Informative.InfGMLSupport.GmlPosition positionPoint, Location location) {
-		for (Location __DEC_positionPoint_Position_224238 : org.moflon.core.utilities.eMoflonEMFUtil
+		for (Location __DEC_positionPoint_Position_583936 : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(positionPoint, Location.class, "Position")) {
-			if (!location.equals(__DEC_positionPoint_Position_224238)) {
+			if (!location.equals(__DEC_positionPoint_Position_583936)) {
 				return new Object[] { positionPoint, location };
 			}
 		}
@@ -1395,8 +1395,8 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 			gluemodel.CIM.IEC61970.Informative.InfGMLSupport.GmlPosition positionPoint, MeterAsset meter,
 			Location location, MeterAssetMMXUPair pair) {
 		if (meter.equals(pair.getA())) {
-			if (location.equals(meter.getLocation())) {
-				if (positionPoint.equals(location.getPosition())) {
+			if (positionPoint.equals(location.getPosition())) {
+				if (location.equals(meter.getLocation())) {
 					if (pattern_GmlPosition_13_1_matchtggpattern_black_nac_0BB(positionPoint, location) == null) {
 						return new Object[] { positionPoint, meter, location, pair };
 					}

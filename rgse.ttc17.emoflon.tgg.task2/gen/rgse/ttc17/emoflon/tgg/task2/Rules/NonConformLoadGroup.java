@@ -44,9 +44,9 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer,
-			MeterAssetPhysicalDevicePair pair);
+	boolean isAppropriate_FWD(Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,9 +70,9 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer,
-			MeterAssetPhysicalDevicePair pair);
+	void registerObjectsToMatch_FWD(Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,9 +80,9 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer,
-			MeterAssetPhysicalDevicePair pair);
+	CSP isAppropriate_solveCsp_FWD(Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,10 +98,10 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ServiceDeliveryPoint srcDeliver,
-			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.NonConformLoad trgConsumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, NonConformLoad srcConsumer,
+			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAssetPhysicalDevicePair pair,
+			outagePreventionJointarget.NonConformLoad trgConsumer, ServiceDeliveryPoint srcDeliver,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,9 +117,9 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcDeliver, EObject groupToGroup,
-			EObject consumerToConsumer, EObject asset, EObject srcGroup, EObject trgGroup, EObject srcConsumer,
-			EObject pair, EObject trgConsumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcConsumer, EObject consumerToConsumer,
+			EObject pair, EObject trgConsumer, EObject srcDeliver, EObject srcGroup, EObject asset, EObject trgGroup,
+			EObject groupToGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,7 +135,7 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_34(EMoflonEdge _edge_LoadGroup);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_154(EMoflonEdge _edge_LoadGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,9 +159,8 @@ public interface NonConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer,
-			MeterAssetPhysicalDevicePair pair);
+	boolean checkDEC_FWD(NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

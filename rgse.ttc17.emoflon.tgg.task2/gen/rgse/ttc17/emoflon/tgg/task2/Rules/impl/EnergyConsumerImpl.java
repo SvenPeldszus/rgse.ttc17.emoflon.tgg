@@ -88,25 +88,26 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
+	public boolean isAppropriate_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		// initial bindings
 		Object[] result1_black = EnergyConsumerImpl.pattern_EnergyConsumer_0_1_initialbindings_blackBBBBBB(this, match,
-				srcConsumer, srcDeliver, asset, pair);
+				asset, srcDeliver, pair, srcConsumer);
 		if (result1_black == null) {
-			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", "
-					+ "[srcDeliver] = " + srcDeliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ".");
+			throw new RuntimeException(
+					"Pattern matching in node [initial bindings] failed." + " Variables: " + "[this] = " + this + ", "
+							+ "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = " + srcDeliver
+							+ ", " + "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = EnergyConsumerImpl
-				.pattern_EnergyConsumer_0_2_SolveCSP_bindingAndBlackFBBBBBB(this, match, srcConsumer, srcDeliver, asset,
-						pair);
+				.pattern_EnergyConsumer_0_2_SolveCSP_bindingAndBlackFBBBBBB(this, match, asset, srcDeliver, pair,
+						srcConsumer);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", "
-					+ "[srcDeliver] = " + srcDeliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+					+ srcDeliver + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -114,37 +115,35 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 
 			// collect elements to be translated
 			Object[] result4_black = EnergyConsumerImpl
-					.pattern_EnergyConsumer_0_4_collectelementstobetranslated_blackBBBBB(match, srcConsumer, srcDeliver,
-							asset, pair);
+					.pattern_EnergyConsumer_0_4_collectelementstobetranslated_blackBBBBB(match, asset, srcDeliver, pair,
+							srcConsumer);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", "
-						+ "[srcDeliver] = " + srcDeliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair
-						+ ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+						+ srcDeliver + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
 			}
-			EnergyConsumerImpl.pattern_EnergyConsumer_0_4_collectelementstobetranslated_greenBBBFF(match, srcConsumer,
-					srcDeliver);
+			EnergyConsumerImpl.pattern_EnergyConsumer_0_4_collectelementstobetranslated_greenBBBFF(match, srcDeliver,
+					srcConsumer);
 			// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result4_green[3];
 			// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result4_green[4];
 
 			// collect context elements
 			Object[] result5_black = EnergyConsumerImpl.pattern_EnergyConsumer_0_5_collectcontextelements_blackBBBBB(
-					match, srcConsumer, srcDeliver, asset, pair);
+					match, asset, srcDeliver, pair, srcConsumer);
 			if (result5_black == null) {
-				throw new RuntimeException(
-						"Pattern matching in node [collect context elements] failed." + " Variables: " + "[match] = "
-								+ match + ", " + "[srcConsumer] = " + srcConsumer + ", " + "[srcDeliver] = "
-								+ srcDeliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ".");
+				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+						+ srcDeliver + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
 			}
-			EnergyConsumerImpl.pattern_EnergyConsumer_0_5_collectcontextelements_greenBBBBFFF(match, srcDeliver, asset,
+			EnergyConsumerImpl.pattern_EnergyConsumer_0_5_collectcontextelements_greenBBBBFFF(match, asset, srcDeliver,
 					pair);
-			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[4];
-			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[5];
-			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[6];
+			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[4];
+			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[5];
+			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[6];
 
 			// register objects to match
-			EnergyConsumerImpl.pattern_EnergyConsumer_0_6_registerobjectstomatch_expressionBBBBBB(this, match,
-					srcConsumer, srcDeliver, asset, pair);
+			EnergyConsumerImpl.pattern_EnergyConsumer_0_6_registerobjectstomatch_expressionBBBBBB(this, match, asset,
+					srcDeliver, pair, srcConsumer);
 			return EnergyConsumerImpl.pattern_EnergyConsumer_0_7_expressionF();
 		} else {
 			return EnergyConsumerImpl.pattern_EnergyConsumer_0_8_expressionF();
@@ -165,53 +164,53 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result1_bindingAndBlack[0];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[0];
 		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[1];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[2];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[3];
-		outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result1_bindingAndBlack[4];
-		ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result1_bindingAndBlack[5];
+		outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result1_bindingAndBlack[2];
+		ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result1_bindingAndBlack[3];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[4];
+		gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result1_bindingAndBlack[5];
 		CSP csp = (CSP) result1_bindingAndBlack[6];
 		Object[] result1_green = EnergyConsumerImpl
-				.pattern_EnergyConsumer_1_1_performtransformation_greenBFBFB(srcConsumer, trgDeliver, csp);
-		EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result1_green[1];
-		outagePreventionJointarget.EnergyConsumer trgConsumer = (outagePreventionJointarget.EnergyConsumer) result1_green[3];
+				.pattern_EnergyConsumer_1_1_performtransformation_greenFBBFB(trgDeliver, srcConsumer, csp);
+		outagePreventionJointarget.EnergyConsumer trgConsumer = (outagePreventionJointarget.EnergyConsumer) result1_green[0];
+		EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result1_green[3];
 
 		// collect translated elements
 		Object[] result2_black = EnergyConsumerImpl.pattern_EnergyConsumer_1_2_collecttranslatedelements_blackBBB(
-				srcConsumer, consumerToConsumer, trgConsumer);
+				trgConsumer, srcConsumer, consumerToConsumer);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[srcConsumer] = " + srcConsumer + ", " + "[consumerToConsumer] = " + consumerToConsumer + ", "
-					+ "[trgConsumer] = " + trgConsumer + ".");
+					+ "[trgConsumer] = " + trgConsumer + ", " + "[srcConsumer] = " + srcConsumer + ", "
+					+ "[consumerToConsumer] = " + consumerToConsumer + ".");
 		}
 		Object[] result2_green = EnergyConsumerImpl.pattern_EnergyConsumer_1_2_collecttranslatedelements_greenFBBB(
-				srcConsumer, consumerToConsumer, trgConsumer);
+				trgConsumer, srcConsumer, consumerToConsumer);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = EnergyConsumerImpl.pattern_EnergyConsumer_1_3_bookkeepingforedges_blackBBBBBBBBB(
-				ruleresult, srcConsumer, srcDeliver, asset, pair, consumerToConsumer, trgDeliver, trgConsumer,
-				deliverToDeliver);
+				ruleresult, asset, srcDeliver, trgConsumer, trgDeliver, deliverToDeliver, pair, srcConsumer,
+				consumerToConsumer);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[srcConsumer] = " + srcConsumer + ", "
-					+ "[srcDeliver] = " + srcDeliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
-					+ "[consumerToConsumer] = " + consumerToConsumer + ", " + "[trgDeliver] = " + trgDeliver + ", "
-					+ "[trgConsumer] = " + trgConsumer + ", " + "[deliverToDeliver] = " + deliverToDeliver + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+					+ srcDeliver + ", " + "[trgConsumer] = " + trgConsumer + ", " + "[trgDeliver] = " + trgDeliver
+					+ ", " + "[deliverToDeliver] = " + deliverToDeliver + ", " + "[pair] = " + pair + ", "
+					+ "[srcConsumer] = " + srcConsumer + ", " + "[consumerToConsumer] = " + consumerToConsumer + ".");
 		}
-		EnergyConsumerImpl.pattern_EnergyConsumer_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, srcConsumer,
-				srcDeliver, consumerToConsumer, trgDeliver, trgConsumer);
-		// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[7];
+		EnergyConsumerImpl.pattern_EnergyConsumer_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, srcDeliver,
+				trgConsumer, trgDeliver, srcConsumer, consumerToConsumer);
+		// EMoflonEdge trgDeliver__trgConsumer____EnergyConsumer = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge consumerToConsumer__trgConsumer____target = (EMoflonEdge) result3_green[7];
 		// EMoflonEdge consumerToConsumer__srcConsumer____source = (EMoflonEdge) result3_green[8];
-		// EMoflonEdge trgDeliver__trgConsumer____EnergyConsumer = (EMoflonEdge) result3_green[9];
-		// EMoflonEdge consumerToConsumer__trgConsumer____target = (EMoflonEdge) result3_green[10];
+		// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[9];
+		// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[10];
 
 		// perform postprocessing story node is empty
 		// register objects
-		EnergyConsumerImpl.pattern_EnergyConsumer_1_5_registerobjects_expressionBBBBBBBBBB(this, ruleresult,
-				srcConsumer, srcDeliver, asset, pair, consumerToConsumer, trgDeliver, trgConsumer, deliverToDeliver);
+		EnergyConsumerImpl.pattern_EnergyConsumer_1_5_registerobjects_expressionBBBBBBBBBB(this, ruleresult, asset,
+				srcDeliver, trgConsumer, trgDeliver, deliverToDeliver, pair, srcConsumer, consumerToConsumer);
 		return EnergyConsumerImpl.pattern_EnergyConsumer_1_6_expressionFB(ruleresult);
 	}
 
@@ -240,38 +239,38 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result2_binding[0];
+		MeterAsset asset = (MeterAsset) result2_binding[0];
 		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[1];
-		MeterAsset asset = (MeterAsset) result2_binding[2];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[3];
-		for (Object[] result2_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_2_corematch_blackBBBBFFB(srcConsumer,
-				srcDeliver, asset, pair, match)) {
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result2_black[4];
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result2_black[5];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
+		gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result2_binding[3];
+		for (Object[] result2_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_2_corematch_blackBBFFBBB(asset,
+				srcDeliver, pair, srcConsumer, match)) {
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result2_black[2];
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result2_black[3];
 			// ForEach find context
-			for (Object[] result3_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(
-					srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver)) {
+			for (Object[] result3_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(asset,
+					srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer)) {
 				Object[] result3_green = EnergyConsumerImpl.pattern_EnergyConsumer_2_3_findcontext_greenBBBBBBFFFFFFFF(
-						srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver);
+						asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[6];
-				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[7];
-				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge deliverToDeliver__trgDeliver____target = (EMoflonEdge) result3_green[12];
-				// EMoflonEdge deliverToDeliver__srcDeliver____source = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[7];
+				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge deliverToDeliver__srcDeliver____source = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge deliverToDeliver__trgDeliver____target = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[13];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = EnergyConsumerImpl
-						.pattern_EnergyConsumer_2_4_solveCSP_bindingAndBlackFBBBBBBBB(this, isApplicableMatch,
-								srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver);
+						.pattern_EnergyConsumer_2_4_solveCSP_bindingAndBlackFBBBBBBBB(this, isApplicableMatch, asset,
+								srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[srcConsumer] = " + srcConsumer + ", " + "[srcDeliver] = " + srcDeliver + ", "
-							+ "[asset] = " + asset + ", " + "[pair] = " + pair + ", " + "[trgDeliver] = " + trgDeliver
-							+ ", " + "[deliverToDeliver] = " + deliverToDeliver + ".");
+							+ "[asset] = " + asset + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[trgDeliver] = "
+							+ trgDeliver + ", " + "[deliverToDeliver] = " + deliverToDeliver + ", " + "[pair] = " + pair
+							+ ", " + "[srcConsumer] = " + srcConsumer + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -302,12 +301,12 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
-		match.registerObject("srcConsumer", srcConsumer);
-		match.registerObject("srcDeliver", srcDeliver);
+	public void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		match.registerObject("asset", asset);
+		match.registerObject("srcDeliver", srcDeliver);
 		match.registerObject("pair", pair);
+		match.registerObject("srcConsumer", srcConsumer);
 
 	}
 
@@ -316,8 +315,8 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -346,10 +345,10 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -374,12 +373,12 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		eq.solve(var_srcConsumer_mRID, var_trgConsumer_mRID);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("srcConsumer", srcConsumer);
-		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
 		isApplicableMatch.registerObject("asset", asset);
-		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
 		isApplicableMatch.registerObject("trgDeliver", trgDeliver);
 		isApplicableMatch.registerObject("deliverToDeliver", deliverToDeliver);
+		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("srcConsumer", srcConsumer);
 		return csp;
 	}
 
@@ -397,17 +396,17 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcConsumer, EObject srcDeliver,
-			EObject asset, EObject pair, EObject consumerToConsumer, EObject trgDeliver, EObject trgConsumer,
-			EObject deliverToDeliver) {
-		ruleresult.registerObject("srcConsumer", srcConsumer);
-		ruleresult.registerObject("srcDeliver", srcDeliver);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject srcDeliver,
+			EObject trgConsumer, EObject trgDeliver, EObject deliverToDeliver, EObject pair, EObject srcConsumer,
+			EObject consumerToConsumer) {
 		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("consumerToConsumer", consumerToConsumer);
-		ruleresult.registerObject("trgDeliver", trgDeliver);
+		ruleresult.registerObject("srcDeliver", srcDeliver);
 		ruleresult.registerObject("trgConsumer", trgConsumer);
+		ruleresult.registerObject("trgDeliver", trgDeliver);
 		ruleresult.registerObject("deliverToDeliver", deliverToDeliver);
+		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("srcConsumer", srcConsumer);
+		ruleresult.registerObject("consumerToConsumer", consumerToConsumer);
 
 	}
 
@@ -426,7 +425,7 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_26(EMoflonEdge _edge_EnergyConsumer) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_164(EMoflonEdge _edge_EnergyConsumer) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerImpl
 				.pattern_EnergyConsumer_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -443,10 +442,10 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		// ForEach test core match and DECs
 		for (Object[] result2_black : EnergyConsumerImpl
 				.pattern_EnergyConsumer_10_2_testcorematchandDECs_blackFFFFB(_edge_EnergyConsumer)) {
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result2_black[0];
+			MeterAsset asset = (MeterAsset) result2_black[0];
 			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[1];
-			MeterAsset asset = (MeterAsset) result2_black[2];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[3];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[2];
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result2_black[3];
 			Object[] result2_green = EnergyConsumerImpl
 					.pattern_EnergyConsumer_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -454,7 +453,7 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			// bookkeeping with generic isAppropriate method
 			if (EnergyConsumerImpl
 					.pattern_EnergyConsumer_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBB(this,
-							match, srcConsumer, srcDeliver, asset, pair)) {
+							match, asset, srcDeliver, pair, srcConsumer)) {
 				// Ensure that the correct types of elements are matched
 				if (EnergyConsumerImpl
 						.pattern_EnergyConsumer_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
@@ -498,13 +497,13 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_mRID.setValue(__helper.getValue("trgConsumer", "mRID"));
-		var_trgConsumer_mRID.setType("String");
-
 		Variable var_srcConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("srcConsumer", true, csp);
 		var_srcConsumer_mRID.setValue(__helper.getValue("srcConsumer", "mRID"));
 		var_srcConsumer_mRID.setType("String");
+
+		Variable var_trgConsumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_mRID.setValue(__helper.getValue("trgConsumer", "mRID"));
+		var_trgConsumer_mRID.setType("String");
 
 		Eq eq0 = new Eq();
 		csp.getConstraints().add(eq0);
@@ -547,10 +546,10 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {// match tgg pattern
-		Object[] result1_black = EnergyConsumerImpl.pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBB(srcConsumer,
-				srcDeliver, asset, pair);
+	public boolean checkDEC_FWD(MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {// match tgg pattern
+		Object[] result1_black = EnergyConsumerImpl.pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBB(asset,
+				srcDeliver, pair, srcConsumer);
 		if (result1_black != null) {
 			return EnergyConsumerImpl.pattern_EnergyConsumer_13_2_expressionF();
 		} else {
@@ -567,35 +566,32 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD__MATCH_ENERGYCONSUMER_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR:
-			return isAppropriate_FWD((Match) arguments.get(0),
-					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD__MATCH_METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER:
+			return isAppropriate_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(4));
 		case RulesPackage.ENERGY_CONSUMER___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_ENERGYCONSUMER_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR:
-			registerObjectsToMatch_FWD((Match) arguments.get(0),
-					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4));
+		case RulesPackage.ENERGY_CONSUMER___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(4));
 			return null;
-		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_ENERGYCONSUMER_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0),
-					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(4));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_ENERGYCONSUMER_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_SERVICEDELIVERYPOINTTOSERVICEDELIVERYPOINT:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4),
-					(outagePreventionJointarget.ServiceDeliveryPoint) arguments.get(5),
-					(ServiceDeliveryPointToServiceDeliveryPoint) arguments.get(6));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSET_SERVICEDELIVERYPOINT_SERVICEDELIVERYPOINT_SERVICEDELIVERYPOINTTOSERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2),
+					(outagePreventionJointarget.ServiceDeliveryPoint) arguments.get(3),
+					(ServiceDeliveryPointToServiceDeliveryPoint) arguments.get(4),
+					(MeterAssetPhysicalDevicePair) arguments.get(5),
+					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(6));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -606,33 +602,33 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			return null;
 		case RulesPackage.ENERGY_CONSUMER___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD_EMOFLON_EDGE_26__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_26((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD_EMOFLON_EDGE_164__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_164((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.ENERGY_CONSUMER___CHECK_DEC_FWD__ENERGYCONSUMER_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR:
-			return checkDEC_FWD((gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(0),
-					(ServiceDeliveryPoint) arguments.get(1), (MeterAsset) arguments.get(2),
-					(MeterAssetPhysicalDevicePair) arguments.get(3));
+		case RulesPackage.ENERGY_CONSUMER___CHECK_DEC_FWD__METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER:
+			return checkDEC_FWD((MeterAsset) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2),
+					(gluemodel.CIM.IEC61970.Wires.EnergyConsumer) arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_1_initialbindings_blackBBBBBB(EnergyConsumer _this,
-			Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
-		return new Object[] { _this, match, srcConsumer, srcDeliver, asset, pair };
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		return new Object[] { _this, match, asset, srcDeliver, pair, srcConsumer };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_2_SolveCSP_bindingFBBBBBB(EnergyConsumer _this, Match match,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcConsumer, srcDeliver, asset, pair);
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, asset, srcDeliver, pair, srcConsumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, srcConsumer, srcDeliver, asset, pair };
+			return new Object[] { csp, _this, match, asset, srcDeliver, pair, srcConsumer };
 		}
 		return null;
 	}
@@ -642,17 +638,17 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_2_SolveCSP_bindingAndBlackFBBBBBB(EnergyConsumer _this,
-			Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		Object[] result_pattern_EnergyConsumer_0_2_SolveCSP_binding = pattern_EnergyConsumer_0_2_SolveCSP_bindingFBBBBBB(
-				_this, match, srcConsumer, srcDeliver, asset, pair);
+				_this, match, asset, srcDeliver, pair, srcConsumer);
 		if (result_pattern_EnergyConsumer_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_EnergyConsumer_0_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_EnergyConsumer_0_2_SolveCSP_black = pattern_EnergyConsumer_0_2_SolveCSP_blackB(csp);
 			if (result_pattern_EnergyConsumer_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, srcConsumer, srcDeliver, asset, pair };
+				return new Object[] { csp, _this, match, asset, srcDeliver, pair, srcConsumer };
 			}
 		}
 		return null;
@@ -665,13 +661,13 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_4_collectelementstobetranslated_blackBBBBB(Match match,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair) {
-		return new Object[] { match, srcConsumer, srcDeliver, asset, pair };
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		return new Object[] { match, asset, srcDeliver, pair, srcConsumer };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_4_collectelementstobetranslated_greenBBBFF(Match match,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver) {
+			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(srcConsumer);
@@ -686,47 +682,47 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		return new Object[] { match, srcConsumer, srcDeliver, srcDeliver__srcConsumer____EnergyConsumer,
+		return new Object[] { match, srcDeliver, srcConsumer, srcDeliver__srcConsumer____EnergyConsumer,
 				srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_5_collectcontextelements_blackBBBBB(Match match,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair) {
-		return new Object[] { match, srcConsumer, srcDeliver, asset, pair };
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		return new Object[] { match, asset, srcDeliver, pair, srcConsumer };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_5_collectcontextelements_greenBBBBFFF(Match match,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair) {
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(srcDeliver);
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getContextNodes().add(asset);
+		match.getContextNodes().add(srcDeliver);
 		match.getContextNodes().add(pair);
-		String pair__asset____a_name_prime = "a";
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		match.getContextEdges().add(pair__asset____a);
+		String pair__asset____a_name_prime = "a";
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		match.getContextEdges().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		match.getContextEdges().add(srcDeliver__asset____EndDeviceAssets);
-		pair__asset____a.setName(pair__asset____a_name_prime);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		match.getContextEdges().add(pair__asset____a);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		return new Object[] { match, srcDeliver, asset, pair, pair__asset____a,
-				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets };
+		pair__asset____a.setName(pair__asset____a_name_prime);
+		return new Object[] { match, asset, srcDeliver, pair, asset__srcDeliver____ServiceDeliveryPoint,
+				srcDeliver__asset____EndDeviceAssets, pair__asset____a };
 	}
 
 	public static final void pattern_EnergyConsumer_0_6_registerobjectstomatch_expressionBBBBBB(EnergyConsumer _this,
-			Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
-		_this.registerObjectsToMatch_FWD(match, srcConsumer, srcDeliver, asset, pair);
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		_this.registerObjectsToMatch_FWD(match, asset, srcDeliver, pair, srcConsumer);
 
 	}
 
@@ -742,32 +738,32 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 
 	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_bindingFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("srcConsumer");
+		EObject _localVariable_0 = isApplicableMatch.getObject("asset");
 		EObject _localVariable_1 = isApplicableMatch.getObject("srcDeliver");
-		EObject _localVariable_2 = isApplicableMatch.getObject("asset");
-		EObject _localVariable_3 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_4 = isApplicableMatch.getObject("trgDeliver");
-		EObject _localVariable_5 = isApplicableMatch.getObject("deliverToDeliver");
-		EObject tmpSrcConsumer = _localVariable_0;
+		EObject _localVariable_2 = isApplicableMatch.getObject("trgDeliver");
+		EObject _localVariable_3 = isApplicableMatch.getObject("deliverToDeliver");
+		EObject _localVariable_4 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_5 = isApplicableMatch.getObject("srcConsumer");
+		EObject tmpAsset = _localVariable_0;
 		EObject tmpSrcDeliver = _localVariable_1;
-		EObject tmpAsset = _localVariable_2;
-		EObject tmpPair = _localVariable_3;
-		EObject tmpTrgDeliver = _localVariable_4;
-		EObject tmpDeliverToDeliver = _localVariable_5;
-		if (tmpSrcConsumer instanceof gluemodel.CIM.IEC61970.Wires.EnergyConsumer) {
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) tmpSrcConsumer;
+		EObject tmpTrgDeliver = _localVariable_2;
+		EObject tmpDeliverToDeliver = _localVariable_3;
+		EObject tmpPair = _localVariable_4;
+		EObject tmpSrcConsumer = _localVariable_5;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
 			if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
 				ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-				if (tmpAsset instanceof MeterAsset) {
-					MeterAsset asset = (MeterAsset) tmpAsset;
-					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-						if (tmpTrgDeliver instanceof outagePreventionJointarget.ServiceDeliveryPoint) {
-							outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) tmpTrgDeliver;
-							if (tmpDeliverToDeliver instanceof ServiceDeliveryPointToServiceDeliveryPoint) {
-								ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) tmpDeliverToDeliver;
-								return new Object[] { srcConsumer, srcDeliver, asset, pair, trgDeliver,
-										deliverToDeliver, isApplicableMatch };
+				if (tmpTrgDeliver instanceof outagePreventionJointarget.ServiceDeliveryPoint) {
+					outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) tmpTrgDeliver;
+					if (tmpDeliverToDeliver instanceof ServiceDeliveryPointToServiceDeliveryPoint) {
+						ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) tmpDeliverToDeliver;
+						if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+							MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+							if (tmpSrcConsumer instanceof gluemodel.CIM.IEC61970.Wires.EnergyConsumer) {
+								gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) tmpSrcConsumer;
+								return new Object[] { asset, srcDeliver, trgDeliver, deliverToDeliver, pair,
+										srcConsumer, isApplicableMatch };
 							}
 						}
 					}
@@ -777,15 +773,15 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return null;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_blackBBBBBBFBB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, EnergyConsumer _this,
+	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_blackBBBBBBFBB(MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, EnergyConsumer _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver, csp, _this,
+				return new Object[] { asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer, csp, _this,
 						isApplicableMatch };
 			}
 		}
@@ -797,108 +793,109 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		Object[] result_pattern_EnergyConsumer_1_1_performtransformation_binding = pattern_EnergyConsumer_1_1_performtransformation_bindingFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_EnergyConsumer_1_1_performtransformation_binding != null) {
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result_pattern_EnergyConsumer_1_1_performtransformation_binding[0];
+			MeterAsset asset = (MeterAsset) result_pattern_EnergyConsumer_1_1_performtransformation_binding[0];
 			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_EnergyConsumer_1_1_performtransformation_binding[1];
-			MeterAsset asset = (MeterAsset) result_pattern_EnergyConsumer_1_1_performtransformation_binding[2];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_EnergyConsumer_1_1_performtransformation_binding[3];
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result_pattern_EnergyConsumer_1_1_performtransformation_binding[4];
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result_pattern_EnergyConsumer_1_1_performtransformation_binding[5];
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result_pattern_EnergyConsumer_1_1_performtransformation_binding[2];
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result_pattern_EnergyConsumer_1_1_performtransformation_binding[3];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_EnergyConsumer_1_1_performtransformation_binding[4];
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) result_pattern_EnergyConsumer_1_1_performtransformation_binding[5];
 
 			Object[] result_pattern_EnergyConsumer_1_1_performtransformation_black = pattern_EnergyConsumer_1_1_performtransformation_blackBBBBBBFBB(
-					srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver, _this, isApplicableMatch);
+					asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer, _this, isApplicableMatch);
 			if (result_pattern_EnergyConsumer_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_EnergyConsumer_1_1_performtransformation_black[6];
 
-				return new Object[] { srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver, csp, _this,
+				return new Object[] { asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer, csp, _this,
 						isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_greenBFBFB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, CSP csp) {
-		EnergyConsumerToEnergyConsumer consumerToConsumer = Task2Factory.eINSTANCE
-				.createEnergyConsumerToEnergyConsumer();
+	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_greenFBBFB(
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, CSP csp) {
 		outagePreventionJointarget.EnergyConsumer trgConsumer = OutagePreventionJointargetFactory.eINSTANCE
 				.createEnergyConsumer();
+		EnergyConsumerToEnergyConsumer consumerToConsumer = Task2Factory.eINSTANCE
+				.createEnergyConsumerToEnergyConsumer();
 		Object _localVariable_0 = csp.getValue("trgConsumer", "mRID");
-		consumerToConsumer.setSource(srcConsumer);
 		trgDeliver.setEnergyConsumer(trgConsumer);
 		consumerToConsumer.setTarget(trgConsumer);
+		consumerToConsumer.setSource(srcConsumer);
 		String trgConsumer_mRID_prime = (String) _localVariable_0;
 		trgConsumer.setMRID(trgConsumer_mRID_prime);
-		return new Object[] { srcConsumer, consumerToConsumer, trgDeliver, trgConsumer, csp };
+		return new Object[] { trgConsumer, trgDeliver, srcConsumer, consumerToConsumer, csp };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_2_collecttranslatedelements_blackBBB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer,
-			outagePreventionJointarget.EnergyConsumer trgConsumer) {
-		return new Object[] { srcConsumer, consumerToConsumer, trgConsumer };
+			outagePreventionJointarget.EnergyConsumer trgConsumer,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
+			EnergyConsumerToEnergyConsumer consumerToConsumer) {
+		return new Object[] { trgConsumer, srcConsumer, consumerToConsumer };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_2_collecttranslatedelements_greenFBBB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer,
-			outagePreventionJointarget.EnergyConsumer trgConsumer) {
+			outagePreventionJointarget.EnergyConsumer trgConsumer,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
+			EnergyConsumerToEnergyConsumer consumerToConsumer) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
+		ruleresult.getCreatedElements().add(trgConsumer);
 		ruleresult.getTranslatedElements().add(srcConsumer);
 		ruleresult.getCreatedLinkElements().add(consumerToConsumer);
-		ruleresult.getCreatedElements().add(trgConsumer);
-		return new Object[] { ruleresult, srcConsumer, consumerToConsumer, trgConsumer };
+		return new Object[] { ruleresult, trgConsumer, srcConsumer, consumerToConsumer };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_3_bookkeepingforedges_blackBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject srcConsumer, EObject srcDeliver, EObject asset, EObject pair,
-			EObject consumerToConsumer, EObject trgDeliver, EObject trgConsumer, EObject deliverToDeliver) {
-		if (!srcConsumer.equals(srcDeliver)) {
-			if (!srcConsumer.equals(trgDeliver)) {
-				if (!srcConsumer.equals(trgConsumer)) {
-					if (!srcDeliver.equals(trgDeliver)) {
-						if (!srcDeliver.equals(trgConsumer)) {
+			PerformRuleResult ruleresult, EObject asset, EObject srcDeliver, EObject trgConsumer, EObject trgDeliver,
+			EObject deliverToDeliver, EObject pair, EObject srcConsumer, EObject consumerToConsumer) {
+		if (!asset.equals(srcDeliver)) {
+			if (!asset.equals(trgConsumer)) {
+				if (!asset.equals(trgDeliver)) {
+					if (!asset.equals(deliverToDeliver)) {
+						if (!asset.equals(pair)) {
 							if (!asset.equals(srcConsumer)) {
-								if (!asset.equals(srcDeliver)) {
-									if (!asset.equals(pair)) {
-										if (!asset.equals(consumerToConsumer)) {
-											if (!asset.equals(trgDeliver)) {
-												if (!asset.equals(trgConsumer)) {
-													if (!asset.equals(deliverToDeliver)) {
-														if (!pair.equals(srcConsumer)) {
-															if (!pair.equals(srcDeliver)) {
-																if (!pair.equals(trgDeliver)) {
-																	if (!pair.equals(trgConsumer)) {
-																		if (!consumerToConsumer.equals(srcConsumer)) {
-																			if (!consumerToConsumer
-																					.equals(srcDeliver)) {
-																				if (!consumerToConsumer.equals(pair)) {
-																					if (!consumerToConsumer
-																							.equals(trgDeliver)) {
-																						if (!consumerToConsumer
+								if (!asset.equals(consumerToConsumer)) {
+									if (!srcDeliver.equals(trgConsumer)) {
+										if (!srcDeliver.equals(trgDeliver)) {
+											if (!trgConsumer.equals(trgDeliver)) {
+												if (!deliverToDeliver.equals(srcDeliver)) {
+													if (!deliverToDeliver.equals(trgConsumer)) {
+														if (!deliverToDeliver.equals(trgDeliver)) {
+															if (!deliverToDeliver.equals(pair)) {
+																if (!deliverToDeliver.equals(srcConsumer)) {
+																	if (!pair.equals(srcDeliver)) {
+																		if (!pair.equals(trgConsumer)) {
+																			if (!pair.equals(trgDeliver)) {
+																				if (!pair.equals(srcConsumer)) {
+																					if (!srcConsumer
+																							.equals(srcDeliver)) {
+																						if (!srcConsumer
 																								.equals(trgConsumer)) {
-																							if (!consumerToConsumer
-																									.equals(deliverToDeliver)) {
-																								if (!trgConsumer.equals(
-																										trgDeliver)) {
-																									if (!deliverToDeliver
-																											.equals(srcConsumer)) {
-																										if (!deliverToDeliver
-																												.equals(srcDeliver)) {
-																											if (!deliverToDeliver
-																													.equals(pair)) {
-																												if (!deliverToDeliver
-																														.equals(trgDeliver)) {
-																													if (!deliverToDeliver
-																															.equals(trgConsumer)) {
+																							if (!srcConsumer.equals(
+																									trgDeliver)) {
+																								if (!consumerToConsumer
+																										.equals(srcDeliver)) {
+																									if (!consumerToConsumer
+																											.equals(trgConsumer)) {
+																										if (!consumerToConsumer
+																												.equals(trgDeliver)) {
+																											if (!consumerToConsumer
+																													.equals(deliverToDeliver)) {
+																												if (!consumerToConsumer
+																														.equals(pair)) {
+																													if (!consumerToConsumer
+																															.equals(srcConsumer)) {
 																														return new Object[] {
 																																ruleresult,
-																																srcConsumer,
-																																srcDeliver,
 																																asset,
-																																pair,
-																																consumerToConsumer,
-																																trgDeliver,
+																																srcDeliver,
 																																trgConsumer,
-																																deliverToDeliver };
+																																trgDeliver,
+																																deliverToDeliver,
+																																pair,
+																																srcConsumer,
+																																consumerToConsumer };
 																													}
 																												}
 																											}
@@ -931,52 +928,52 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_3_bookkeepingforedges_greenBBBBBBFFFFF(
-			PerformRuleResult ruleresult, EObject srcConsumer, EObject srcDeliver, EObject consumerToConsumer,
-			EObject trgDeliver, EObject trgConsumer) {
-		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge consumerToConsumer__srcConsumer____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject srcDeliver, EObject trgConsumer, EObject trgDeliver,
+			EObject srcConsumer, EObject consumerToConsumer) {
 		EMoflonEdge trgDeliver__trgConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge consumerToConsumer__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge consumerToConsumer__srcConsumer____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "EnergyConsumer";
-		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
-		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
-		String consumerToConsumer__srcConsumer____source_name_prime = "source";
 		String trgDeliver__trgConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
 		String consumerToConsumer__trgConsumer____target_name_prime = "target";
-		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
-		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
-		ruleresult.getTranslatedEdges().add(srcDeliver__srcConsumer____EnergyConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
-		ruleresult.getTranslatedEdges().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
-		consumerToConsumer__srcConsumer____source.setSrc(consumerToConsumer);
-		consumerToConsumer__srcConsumer____source.setTrg(srcConsumer);
-		ruleresult.getCreatedEdges().add(consumerToConsumer__srcConsumer____source);
+		String consumerToConsumer__srcConsumer____source_name_prime = "source";
+		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
+		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
 		trgDeliver__trgConsumer____EnergyConsumer.setSrc(trgDeliver);
 		trgDeliver__trgConsumer____EnergyConsumer.setTrg(trgConsumer);
 		ruleresult.getCreatedEdges().add(trgDeliver__trgConsumer____EnergyConsumer);
 		consumerToConsumer__trgConsumer____target.setSrc(consumerToConsumer);
 		consumerToConsumer__trgConsumer____target.setTrg(trgConsumer);
 		ruleresult.getCreatedEdges().add(consumerToConsumer__trgConsumer____target);
+		consumerToConsumer__srcConsumer____source.setSrc(consumerToConsumer);
+		consumerToConsumer__srcConsumer____source.setTrg(srcConsumer);
+		ruleresult.getCreatedEdges().add(consumerToConsumer__srcConsumer____source);
+		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
+		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
+		ruleresult.getTranslatedEdges().add(srcDeliver__srcConsumer____EnergyConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
+		ruleresult.getTranslatedEdges().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
+		trgDeliver__trgConsumer____EnergyConsumer.setName(trgDeliver__trgConsumer____EnergyConsumer_name_prime);
+		consumerToConsumer__trgConsumer____target.setName(consumerToConsumer__trgConsumer____target_name_prime);
+		consumerToConsumer__srcConsumer____source.setName(consumerToConsumer__srcConsumer____source_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		consumerToConsumer__srcConsumer____source.setName(consumerToConsumer__srcConsumer____source_name_prime);
-		trgDeliver__trgConsumer____EnergyConsumer.setName(trgDeliver__trgConsumer____EnergyConsumer_name_prime);
-		consumerToConsumer__trgConsumer____target.setName(consumerToConsumer__trgConsumer____target_name_prime);
-		return new Object[] { ruleresult, srcConsumer, srcDeliver, consumerToConsumer, trgDeliver, trgConsumer,
-				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints,
-				consumerToConsumer__srcConsumer____source, trgDeliver__trgConsumer____EnergyConsumer,
-				consumerToConsumer__trgConsumer____target };
+		return new Object[] { ruleresult, srcDeliver, trgConsumer, trgDeliver, srcConsumer, consumerToConsumer,
+				trgDeliver__trgConsumer____EnergyConsumer, consumerToConsumer__trgConsumer____target,
+				consumerToConsumer__srcConsumer____source, srcDeliver__srcConsumer____EnergyConsumer,
+				srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 
 	public static final void pattern_EnergyConsumer_1_5_registerobjects_expressionBBBBBBBBBB(EnergyConsumer _this,
-			PerformRuleResult ruleresult, EObject srcConsumer, EObject srcDeliver, EObject asset, EObject pair,
-			EObject consumerToConsumer, EObject trgDeliver, EObject trgConsumer, EObject deliverToDeliver) {
-		_this.registerObjects_FWD(ruleresult, srcConsumer, srcDeliver, asset, pair, consumerToConsumer, trgDeliver,
-				trgConsumer, deliverToDeliver);
+			PerformRuleResult ruleresult, EObject asset, EObject srcDeliver, EObject trgConsumer, EObject trgDeliver,
+			EObject deliverToDeliver, EObject pair, EObject srcConsumer, EObject consumerToConsumer) {
+		_this.registerObjects_FWD(ruleresult, asset, srcDeliver, trgConsumer, trgDeliver, deliverToDeliver, pair,
+				srcConsumer, consumerToConsumer);
 
 	}
 
@@ -1035,23 +1032,23 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_2_2_corematch_bindingFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("srcConsumer");
+		EObject _localVariable_0 = match.getObject("asset");
 		EObject _localVariable_1 = match.getObject("srcDeliver");
-		EObject _localVariable_2 = match.getObject("asset");
-		EObject _localVariable_3 = match.getObject("pair");
-		EObject tmpSrcConsumer = _localVariable_0;
+		EObject _localVariable_2 = match.getObject("pair");
+		EObject _localVariable_3 = match.getObject("srcConsumer");
+		EObject tmpAsset = _localVariable_0;
 		EObject tmpSrcDeliver = _localVariable_1;
-		EObject tmpAsset = _localVariable_2;
-		EObject tmpPair = _localVariable_3;
-		if (tmpSrcConsumer instanceof gluemodel.CIM.IEC61970.Wires.EnergyConsumer) {
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) tmpSrcConsumer;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpSrcConsumer = _localVariable_3;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
 			if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
 				ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-				if (tmpAsset instanceof MeterAsset) {
-					MeterAsset asset = (MeterAsset) tmpAsset;
-					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-						return new Object[] { srcConsumer, srcDeliver, asset, pair, match };
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					if (tmpSrcConsumer instanceof gluemodel.CIM.IEC61970.Wires.EnergyConsumer) {
+						gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer = (gluemodel.CIM.IEC61970.Wires.EnergyConsumer) tmpSrcConsumer;
+						return new Object[] { asset, srcDeliver, pair, srcConsumer, match };
 					}
 				}
 			}
@@ -1059,33 +1056,33 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_EnergyConsumer_2_2_corematch_blackBBBBFFB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, Match match) {
+	public static final Iterable<Object[]> pattern_EnergyConsumer_2_2_corematch_blackBBFFBBB(MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcDeliver, ServiceDeliveryPointToServiceDeliveryPoint.class, "source")) {
 			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = deliverToDeliver.getTarget();
 			if (trgDeliver != null) {
-				_result.add(new Object[] { srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver, match });
+				_result.add(new Object[] { asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer, match });
 			}
 
 		}
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver) {
+	public static final Iterable<Object[]> pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
-			if (asset.equals(pair.getA())) {
-				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-					if (trgDeliver.equals(deliverToDeliver.getTarget())) {
-						if (srcDeliver.equals(deliverToDeliver.getSource())) {
-							_result.add(new Object[] { srcConsumer, srcDeliver, asset, pair, trgDeliver,
-									deliverToDeliver });
+		if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+			if (srcDeliver.equals(deliverToDeliver.getSource())) {
+				if (trgDeliver.equals(deliverToDeliver.getTarget())) {
+					if (asset.equals(pair.getA())) {
+						if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+							_result.add(new Object[] { asset, srcDeliver, trgDeliver, deliverToDeliver, pair,
+									srcConsumer });
 						}
 					}
 				}
@@ -1094,77 +1091,77 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return _result;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_2_3_findcontext_greenBBBBBBFFFFFFFF(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver) {
+	public static final Object[] pattern_EnergyConsumer_2_3_findcontext_greenBBBBBBFFFFFFFF(MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge deliverToDeliver__trgDeliver____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge deliverToDeliver__srcDeliver____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
-		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
-		String pair__asset____a_name_prime = "a";
+		EMoflonEdge deliverToDeliver__trgDeliver____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
-		String deliverToDeliver__trgDeliver____target_name_prime = "target";
 		String deliverToDeliver__srcDeliver____source_name_prime = "source";
-		isApplicableMatch.getAllContextElements().add(srcConsumer);
-		isApplicableMatch.getAllContextElements().add(srcDeliver);
+		String deliverToDeliver__trgDeliver____target_name_prime = "target";
+		String pair__asset____a_name_prime = "a";
+		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
+		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
 		isApplicableMatch.getAllContextElements().add(asset);
-		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(trgDeliver);
 		isApplicableMatch.getAllContextElements().add(deliverToDeliver);
-		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
-		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
-		isApplicableMatch.getAllContextElements().add(srcDeliver__srcConsumer____EnergyConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
-		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
+		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(srcConsumer);
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
-		deliverToDeliver__trgDeliver____target.setSrc(deliverToDeliver);
-		deliverToDeliver__trgDeliver____target.setTrg(trgDeliver);
-		isApplicableMatch.getAllContextElements().add(deliverToDeliver__trgDeliver____target);
 		deliverToDeliver__srcDeliver____source.setSrc(deliverToDeliver);
 		deliverToDeliver__srcDeliver____source.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(deliverToDeliver__srcDeliver____source);
+		deliverToDeliver__trgDeliver____target.setSrc(deliverToDeliver);
+		deliverToDeliver__trgDeliver____target.setTrg(trgDeliver);
+		isApplicableMatch.getAllContextElements().add(deliverToDeliver__trgDeliver____target);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
+		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
+		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
+		isApplicableMatch.getAllContextElements().add(srcDeliver__srcConsumer____EnergyConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
+		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
+		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
+		deliverToDeliver__srcDeliver____source.setName(deliverToDeliver__srcDeliver____source_name_prime);
+		deliverToDeliver__trgDeliver____target.setName(deliverToDeliver__trgDeliver____target_name_prime);
+		pair__asset____a.setName(pair__asset____a_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
-		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		deliverToDeliver__trgDeliver____target.setName(deliverToDeliver__trgDeliver____target_name_prime);
-		deliverToDeliver__srcDeliver____source.setName(deliverToDeliver__srcDeliver____source_name_prime);
-		return new Object[] { srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver, isApplicableMatch,
-				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints,
-				pair__asset____a, asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
-				deliverToDeliver__trgDeliver____target, deliverToDeliver__srcDeliver____source };
+		return new Object[] { asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer, isApplicableMatch,
+				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
+				deliverToDeliver__srcDeliver____source, deliverToDeliver__trgDeliver____target, pair__asset____a,
+				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_2_4_solveCSP_bindingFBBBBBBBB(EnergyConsumer _this,
-			IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			IsApplicableMatch isApplicableMatch, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
 			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcConsumer, srcDeliver, asset, pair,
-				trgDeliver, deliverToDeliver);
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, asset, srcDeliver, trgDeliver,
+				deliverToDeliver, pair, srcConsumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, srcConsumer, srcDeliver, asset, pair, trgDeliver,
-					deliverToDeliver };
+			return new Object[] { csp, _this, isApplicableMatch, asset, srcDeliver, trgDeliver, deliverToDeliver, pair,
+					srcConsumer };
 		}
 		return null;
 	}
@@ -1174,20 +1171,20 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_2_4_solveCSP_bindingAndBlackFBBBBBBBB(EnergyConsumer _this,
-			IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			IsApplicableMatch isApplicableMatch, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
 			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver) {
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
 		Object[] result_pattern_EnergyConsumer_2_4_solveCSP_binding = pattern_EnergyConsumer_2_4_solveCSP_bindingFBBBBBBBB(
-				_this, isApplicableMatch, srcConsumer, srcDeliver, asset, pair, trgDeliver, deliverToDeliver);
+				_this, isApplicableMatch, asset, srcDeliver, trgDeliver, deliverToDeliver, pair, srcConsumer);
 		if (result_pattern_EnergyConsumer_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_EnergyConsumer_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_EnergyConsumer_2_4_solveCSP_black = pattern_EnergyConsumer_2_4_solveCSP_blackB(csp);
 			if (result_pattern_EnergyConsumer_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, srcConsumer, srcDeliver, asset, pair, trgDeliver,
-						deliverToDeliver };
+				return new Object[] { csp, _this, isApplicableMatch, asset, srcDeliver, trgDeliver, deliverToDeliver,
+						pair, srcConsumer };
 			}
 		}
 		return null;
@@ -1289,7 +1286,7 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 							for (MeterAssetPhysicalDevicePair pair : org.moflon.core.utilities.eMoflonEMFUtil
 									.getOppositeReferenceTyped(asset, MeterAssetPhysicalDevicePair.class, "a")) {
 								_result.add(
-										new Object[] { srcConsumer, srcDeliver, asset, pair, _edge_EnergyConsumer });
+										new Object[] { asset, srcDeliver, pair, srcConsumer, _edge_EnergyConsumer });
 							}
 						}
 					}
@@ -1311,9 +1308,9 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final boolean pattern_EnergyConsumer_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBB(
-			EnergyConsumer _this, Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcConsumer, srcDeliver, asset, pair);
+			EnergyConsumer _this, Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, asset, srcDeliver, pair, srcConsumer);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1346,13 +1343,13 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return _result;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBB(
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair) {
-		if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+	public static final Object[] pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBB(MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer) {
+		if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
 			if (asset.equals(pair.getA())) {
-				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-					return new Object[] { srcConsumer, srcDeliver, asset, pair };
+				if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+					return new Object[] { asset, srcDeliver, pair, srcConsumer };
 				}
 			}
 		}

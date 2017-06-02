@@ -129,7 +129,7 @@ public interface WorkLocation extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_62(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_143(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

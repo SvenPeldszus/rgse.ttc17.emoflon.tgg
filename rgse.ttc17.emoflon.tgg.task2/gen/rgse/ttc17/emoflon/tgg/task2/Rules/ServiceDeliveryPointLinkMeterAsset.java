@@ -45,8 +45,8 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,8 +79,8 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,10 +96,10 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetToPrivateMeterVoltage assetToMeter,
+			PrivateMeterVoltage meter, MeterAsset asset, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
+			ServiceDeliveryPoint srcDeliver, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
+			MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,8 +115,8 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgDeliver, EObject pair, EObject meter,
-			EObject deliverToDeliver, EObject assetToMeter, EObject srcDeliver, EObject asset);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject assetToMeter, EObject meter, EObject asset,
+			EObject trgDeliver, EObject srcDeliver, EObject deliverToDeliver, EObject pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,7 +132,7 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_36(EMoflonEdge _edge_ServiceDeliveryPoint);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_157(EMoflonEdge _edge_ServiceDeliveryPoint);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,7 +156,7 @@ public interface ServiceDeliveryPointLinkMeterAsset extends EObject, AbstractRul
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset);
+	boolean checkDEC_FWD(MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

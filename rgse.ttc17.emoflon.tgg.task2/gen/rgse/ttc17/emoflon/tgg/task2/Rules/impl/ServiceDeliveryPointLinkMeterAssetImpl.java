@@ -87,26 +87,26 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset) {
+	public boolean isAppropriate_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
 		// initial bindings
 		Object[] result1_black = ServiceDeliveryPointLinkMeterAssetImpl
-				.pattern_ServiceDeliveryPointLinkMeterAsset_0_1_initialbindings_blackBBBBB(this, match, pair,
-						srcDeliver, asset);
+				.pattern_ServiceDeliveryPointLinkMeterAsset_0_1_initialbindings_blackBBBBB(this, match, asset,
+						srcDeliver, pair);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[pair] = " + pair + ", "
-					+ "[srcDeliver] = " + srcDeliver + ", " + "[asset] = " + asset + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", "
+					+ "[srcDeliver] = " + srcDeliver + ", " + "[pair] = " + pair + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = ServiceDeliveryPointLinkMeterAssetImpl
-				.pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_bindingAndBlackFBBBBB(this, match, pair,
-						srcDeliver, asset);
+				.pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_bindingAndBlackFBBBBB(this, match, asset,
+						srcDeliver, pair);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = "
-					+ srcDeliver + ", " + "[asset] = " + asset + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+					+ srcDeliver + ", " + "[pair] = " + pair + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -115,37 +115,37 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 
 			// collect elements to be translated
 			Object[] result4_black = ServiceDeliveryPointLinkMeterAssetImpl
-					.pattern_ServiceDeliveryPointLinkMeterAsset_0_4_collectelementstobetranslated_blackBBBB(match, pair,
-							srcDeliver, asset);
+					.pattern_ServiceDeliveryPointLinkMeterAsset_0_4_collectelementstobetranslated_blackBBBB(match,
+							asset, srcDeliver, pair);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = "
-						+ srcDeliver + ", " + "[asset] = " + asset + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+						+ srcDeliver + ", " + "[pair] = " + pair + ".");
 			}
 			ServiceDeliveryPointLinkMeterAssetImpl
 					.pattern_ServiceDeliveryPointLinkMeterAsset_0_4_collectelementstobetranslated_greenBBBFF(match,
-							srcDeliver, asset);
+							asset, srcDeliver);
 			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result4_green[3];
 			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result4_green[4];
 
 			// collect context elements
 			Object[] result5_black = ServiceDeliveryPointLinkMeterAssetImpl
-					.pattern_ServiceDeliveryPointLinkMeterAsset_0_5_collectcontextelements_blackBBBB(match, pair,
-							srcDeliver, asset);
+					.pattern_ServiceDeliveryPointLinkMeterAsset_0_5_collectcontextelements_blackBBBB(match, asset,
+							srcDeliver, pair);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = "
-						+ srcDeliver + ", " + "[asset] = " + asset + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcDeliver] = "
+						+ srcDeliver + ", " + "[pair] = " + pair + ".");
 			}
 			ServiceDeliveryPointLinkMeterAssetImpl
-					.pattern_ServiceDeliveryPointLinkMeterAsset_0_5_collectcontextelements_greenBBBBF(match, pair,
-							srcDeliver, asset);
+					.pattern_ServiceDeliveryPointLinkMeterAsset_0_5_collectcontextelements_greenBBBBF(match, asset,
+							srcDeliver, pair);
 			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[4];
 
 			// register objects to match
 			ServiceDeliveryPointLinkMeterAssetImpl
 					.pattern_ServiceDeliveryPointLinkMeterAsset_0_6_registerobjectstomatch_expressionBBBBB(this, match,
-							pair, srcDeliver, asset);
+							asset, srcDeliver, pair);
 			return ServiceDeliveryPointLinkMeterAssetImpl.pattern_ServiceDeliveryPointLinkMeterAsset_0_7_expressionF();
 		} else {
 			return ServiceDeliveryPointLinkMeterAssetImpl.pattern_ServiceDeliveryPointLinkMeterAsset_0_8_expressionF();
@@ -167,16 +167,16 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result1_bindingAndBlack[0];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[1];
-		PrivateMeterVoltage meter = (PrivateMeterVoltage) result1_bindingAndBlack[2];
-		ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result1_bindingAndBlack[3];
-		MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result1_bindingAndBlack[4];
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[5];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[6];
+		MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result1_bindingAndBlack[0];
+		PrivateMeterVoltage meter = (PrivateMeterVoltage) result1_bindingAndBlack[1];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[2];
+		outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result1_bindingAndBlack[3];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[4];
+		ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result1_bindingAndBlack[5];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[6];
 		// CSP csp = (CSP) result1_bindingAndBlack[7];
 		ServiceDeliveryPointLinkMeterAssetImpl
-				.pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_greenBB(trgDeliver, meter);
+				.pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_greenBB(meter, trgDeliver);
 
 		// collect translated elements
 		Object[] result2_green = ServiceDeliveryPointLinkMeterAssetImpl
@@ -189,17 +189,17 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		// bookkeeping for edges
 		Object[] result3_black = ServiceDeliveryPointLinkMeterAssetImpl
 				.pattern_ServiceDeliveryPointLinkMeterAsset_1_3_bookkeepingforedges_blackBBBBBBBB(ruleresult,
-						trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset);
+						assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[trgDeliver] = " + trgDeliver + ", " + "[pair] = " + pair
-					+ ", " + "[meter] = " + meter + ", " + "[deliverToDeliver] = " + deliverToDeliver + ", "
-					+ "[assetToMeter] = " + assetToMeter + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[asset] = "
-					+ asset + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[assetToMeter] = " + assetToMeter + ", " + "[meter] = "
+					+ meter + ", " + "[asset] = " + asset + ", " + "[trgDeliver] = " + trgDeliver + ", "
+					+ "[srcDeliver] = " + srcDeliver + ", " + "[deliverToDeliver] = " + deliverToDeliver + ", "
+					+ "[pair] = " + pair + ".");
 		}
 		ServiceDeliveryPointLinkMeterAssetImpl
-				.pattern_ServiceDeliveryPointLinkMeterAsset_1_3_bookkeepingforedges_greenBBBBBFFF(ruleresult,
-						trgDeliver, meter, srcDeliver, asset);
+				.pattern_ServiceDeliveryPointLinkMeterAsset_1_3_bookkeepingforedges_greenBBBBBFFF(ruleresult, meter,
+						asset, trgDeliver, srcDeliver);
 		// EMoflonEdge meter__trgDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[5];
 		// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[6];
 		// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[7];
@@ -208,7 +208,7 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		// register objects
 		ServiceDeliveryPointLinkMeterAssetImpl
 				.pattern_ServiceDeliveryPointLinkMeterAsset_1_5_registerobjects_expressionBBBBBBBBB(this, ruleresult,
-						trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset);
+						assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair);
 		return ServiceDeliveryPointLinkMeterAssetImpl
 				.pattern_ServiceDeliveryPointLinkMeterAsset_1_6_expressionFB(ruleresult);
 	}
@@ -239,43 +239,43 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[0];
+		MeterAsset asset = (MeterAsset) result2_binding[0];
 		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[1];
-		MeterAsset asset = (MeterAsset) result2_binding[2];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
 		for (Object[] result2_black : ServiceDeliveryPointLinkMeterAssetImpl
-				.pattern_ServiceDeliveryPointLinkMeterAsset_2_2_corematch_blackFBFFFBBB(pair, srcDeliver, asset,
+				.pattern_ServiceDeliveryPointLinkMeterAsset_2_2_corematch_blackFFBFBFBB(asset, srcDeliver, pair,
 						match)) {
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result2_black[0];
-			PrivateMeterVoltage meter = (PrivateMeterVoltage) result2_black[2];
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result2_black[3];
-			MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result2_black[4];
+			MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result2_black[0];
+			PrivateMeterVoltage meter = (PrivateMeterVoltage) result2_black[1];
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result2_black[3];
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result2_black[5];
 			// ForEach find context
 			for (Object[] result3_black : ServiceDeliveryPointLinkMeterAssetImpl
-					.pattern_ServiceDeliveryPointLinkMeterAsset_2_3_findcontext_blackBBBBBBB(trgDeliver, pair, meter,
-							deliverToDeliver, assetToMeter, srcDeliver, asset)) {
+					.pattern_ServiceDeliveryPointLinkMeterAsset_2_3_findcontext_blackBBBBBBB(assetToMeter, meter, asset,
+							trgDeliver, srcDeliver, deliverToDeliver, pair)) {
 				Object[] result3_green = ServiceDeliveryPointLinkMeterAssetImpl
-						.pattern_ServiceDeliveryPointLinkMeterAsset_2_3_findcontext_greenBBBBBBBFFFFFFFF(trgDeliver,
-								pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset);
+						.pattern_ServiceDeliveryPointLinkMeterAsset_2_3_findcontext_greenBBBBBBBFFFFFFFF(assetToMeter,
+								meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[7];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge assetToMeter__asset____source = (EMoflonEdge) result3_green[8];
 				// EMoflonEdge assetToMeter__meter____target = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge deliverToDeliver__srcDeliver____source = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge deliverToDeliver__trgDeliver____target = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge assetToMeter__asset____source = (EMoflonEdge) result3_green[12];
-				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[13];
-				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[14];
+				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge deliverToDeliver__srcDeliver____source = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge deliverToDeliver__trgDeliver____target = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[14];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = ServiceDeliveryPointLinkMeterAssetImpl
 						.pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(this,
-								isApplicableMatch, trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver,
-								asset);
+								isApplicableMatch, assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver,
+								pair);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[trgDeliver] = " + trgDeliver + ", " + "[pair] = " + pair + ", " + "[meter] = " + meter
-							+ ", " + "[deliverToDeliver] = " + deliverToDeliver + ", " + "[assetToMeter] = "
-							+ assetToMeter + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[asset] = " + asset + ".");
+							+ "[assetToMeter] = " + assetToMeter + ", " + "[meter] = " + meter + ", " + "[asset] = "
+							+ asset + ", " + "[trgDeliver] = " + trgDeliver + ", " + "[srcDeliver] = " + srcDeliver
+							+ ", " + "[deliverToDeliver] = " + deliverToDeliver + ", " + "[pair] = " + pair + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -310,11 +310,11 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		match.registerObject("pair", pair);
-		match.registerObject("srcDeliver", srcDeliver);
+	public void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
 		match.registerObject("asset", asset);
+		match.registerObject("srcDeliver", srcDeliver);
+		match.registerObject("pair", pair);
 
 	}
 
@@ -323,8 +323,8 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -354,9 +354,9 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * @generated
 	 */
 	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {// Create CSP
+			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -371,13 +371,13 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("trgDeliver", trgDeliver);
-		isApplicableMatch.registerObject("pair", pair);
-		isApplicableMatch.registerObject("meter", meter);
-		isApplicableMatch.registerObject("deliverToDeliver", deliverToDeliver);
 		isApplicableMatch.registerObject("assetToMeter", assetToMeter);
-		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
+		isApplicableMatch.registerObject("meter", meter);
 		isApplicableMatch.registerObject("asset", asset);
+		isApplicableMatch.registerObject("trgDeliver", trgDeliver);
+		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
+		isApplicableMatch.registerObject("deliverToDeliver", deliverToDeliver);
+		isApplicableMatch.registerObject("pair", pair);
 		return csp;
 	}
 
@@ -395,15 +395,15 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgDeliver, EObject pair, EObject meter,
-			EObject deliverToDeliver, EObject assetToMeter, EObject srcDeliver, EObject asset) {
-		ruleresult.registerObject("trgDeliver", trgDeliver);
-		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("meter", meter);
-		ruleresult.registerObject("deliverToDeliver", deliverToDeliver);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject assetToMeter, EObject meter, EObject asset,
+			EObject trgDeliver, EObject srcDeliver, EObject deliverToDeliver, EObject pair) {
 		ruleresult.registerObject("assetToMeter", assetToMeter);
-		ruleresult.registerObject("srcDeliver", srcDeliver);
+		ruleresult.registerObject("meter", meter);
 		ruleresult.registerObject("asset", asset);
+		ruleresult.registerObject("trgDeliver", trgDeliver);
+		ruleresult.registerObject("srcDeliver", srcDeliver);
+		ruleresult.registerObject("deliverToDeliver", deliverToDeliver);
+		ruleresult.registerObject("pair", pair);
 
 	}
 
@@ -421,7 +421,7 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_36(EMoflonEdge _edge_ServiceDeliveryPoint) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_157(EMoflonEdge _edge_ServiceDeliveryPoint) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ServiceDeliveryPointLinkMeterAssetImpl
 				.pattern_ServiceDeliveryPointLinkMeterAsset_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -440,9 +440,9 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		for (Object[] result2_black : ServiceDeliveryPointLinkMeterAssetImpl
 				.pattern_ServiceDeliveryPointLinkMeterAsset_10_2_testcorematchandDECs_blackFFFB(
 						_edge_ServiceDeliveryPoint)) {
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[0];
+			MeterAsset asset = (MeterAsset) result2_black[0];
 			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[1];
-			MeterAsset asset = (MeterAsset) result2_black[2];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[2];
 			Object[] result2_green = ServiceDeliveryPointLinkMeterAssetImpl
 					.pattern_ServiceDeliveryPointLinkMeterAsset_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -450,7 +450,7 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 			// bookkeeping with generic isAppropriate method
 			if (ServiceDeliveryPointLinkMeterAssetImpl
 					.pattern_ServiceDeliveryPointLinkMeterAsset_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBB(
-							this, match, pair, srcDeliver, asset)) {
+							this, match, asset, srcDeliver, pair)) {
 				// Ensure that the correct types of elements are matched
 				if (ServiceDeliveryPointLinkMeterAssetImpl
 						.pattern_ServiceDeliveryPointLinkMeterAsset_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -528,9 +528,9 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {// match tgg pattern
+	public boolean checkDEC_FWD(MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair) {// match tgg pattern
 		Object[] result1_black = ServiceDeliveryPointLinkMeterAssetImpl
-				.pattern_ServiceDeliveryPointLinkMeterAsset_13_1_matchtggpattern_blackBBB(pair, srcDeliver, asset);
+				.pattern_ServiceDeliveryPointLinkMeterAsset_13_1_matchtggpattern_blackBBB(asset, srcDeliver, pair);
 		if (result1_black != null) {
 			return ServiceDeliveryPointLinkMeterAssetImpl.pattern_ServiceDeliveryPointLinkMeterAsset_13_2_expressionF();
 		} else {
@@ -547,29 +547,29 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_METERASSET:
-			return isAppropriate_FWD((Match) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3));
+		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_FWD__MATCH_METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR:
+			return isAppropriate_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_METERASSET:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3));
+		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3));
 			return null;
-		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_METERASSET:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3));
+		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_PRIVATEMETERVOLTAGE_SERVICEDELIVERYPOINTTOSERVICEDELIVERYPOINT_METERASSETTOPRIVATEMETERVOLTAGE_SERVICEDELIVERYPOINT_METERASSET:
+		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOPRIVATEMETERVOLTAGE_PRIVATEMETERVOLTAGE_METERASSET_SERVICEDELIVERYPOINT_SERVICEDELIVERYPOINT_SERVICEDELIVERYPOINTTOSERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(outagePreventionJointarget.ServiceDeliveryPoint) arguments.get(1),
-					(MeterAssetPhysicalDevicePair) arguments.get(2), (PrivateMeterVoltage) arguments.get(3),
-					(ServiceDeliveryPointToServiceDeliveryPoint) arguments.get(4),
-					(MeterAssetToPrivateMeterVoltage) arguments.get(5), (ServiceDeliveryPoint) arguments.get(6),
-					(MeterAsset) arguments.get(7));
+					(MeterAssetToPrivateMeterVoltage) arguments.get(1), (PrivateMeterVoltage) arguments.get(2),
+					(MeterAsset) arguments.get(3), (outagePreventionJointarget.ServiceDeliveryPoint) arguments.get(4),
+					(ServiceDeliveryPoint) arguments.get(5),
+					(ServiceDeliveryPointToServiceDeliveryPoint) arguments.get(6),
+					(MeterAssetPhysicalDevicePair) arguments.get(7));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -579,32 +579,32 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 			return null;
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_FWD_EMOFLON_EDGE_36__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_36((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPROPRIATE_FWD_EMOFLON_EDGE_157__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_157((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___CHECK_DEC_FWD__METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_METERASSET:
-			return checkDEC_FWD((MeterAssetPhysicalDevicePair) arguments.get(0),
-					(ServiceDeliveryPoint) arguments.get(1), (MeterAsset) arguments.get(2));
+		case RulesPackage.SERVICE_DELIVERY_POINT_LINK_METER_ASSET___CHECK_DEC_FWD__METERASSET_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR:
+			return checkDEC_FWD((MeterAsset) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_1_initialbindings_blackBBBBB(
-			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		return new Object[] { _this, match, pair, srcDeliver, asset };
+			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
+		return new Object[] { _this, match, asset, srcDeliver, pair };
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_bindingFBBBBB(
-			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, pair, srcDeliver, asset);
+			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, asset, srcDeliver, pair);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, pair, srcDeliver, asset };
+			return new Object[] { csp, _this, match, asset, srcDeliver, pair };
 		}
 		return null;
 	}
@@ -614,10 +614,10 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_bindingAndBlackFBBBBB(
-			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
+			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
 		Object[] result_pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_binding = pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_bindingFBBBBB(
-				_this, match, pair, srcDeliver, asset);
+				_this, match, asset, srcDeliver, pair);
 		if (result_pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_binding[0];
 
@@ -625,7 +625,7 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_ServiceDeliveryPointLinkMeterAsset_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, pair, srcDeliver, asset };
+				return new Object[] { csp, _this, match, asset, srcDeliver, pair };
 			}
 		}
 		return null;
@@ -639,12 +639,12 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_4_collectelementstobetranslated_blackBBBB(
-			Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		return new Object[] { match, pair, srcDeliver, asset };
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair) {
+		return new Object[] { match, asset, srcDeliver, pair };
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_4_collectelementstobetranslated_greenBBBFF(
-			Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver) {
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
@@ -657,33 +657,33 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		match.getToBeTranslatedEdges().add(srcDeliver__asset____EndDeviceAssets);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		return new Object[] { match, srcDeliver, asset, asset__srcDeliver____ServiceDeliveryPoint,
+		return new Object[] { match, asset, srcDeliver, asset__srcDeliver____ServiceDeliveryPoint,
 				srcDeliver__asset____EndDeviceAssets };
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_5_collectcontextelements_blackBBBB(
-			Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		return new Object[] { match, pair, srcDeliver, asset };
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair) {
+		return new Object[] { match, asset, srcDeliver, pair };
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_0_5_collectcontextelements_greenBBBBF(
-			Match match, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
+			Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair) {
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(pair);
-		match.getContextNodes().add(srcDeliver);
 		match.getContextNodes().add(asset);
+		match.getContextNodes().add(srcDeliver);
+		match.getContextNodes().add(pair);
 		String pair__asset____a_name_prime = "a";
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		match.getContextEdges().add(pair__asset____a);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { match, pair, srcDeliver, asset, pair__asset____a };
+		return new Object[] { match, asset, srcDeliver, pair, pair__asset____a };
 	}
 
 	public static final void pattern_ServiceDeliveryPointLinkMeterAsset_0_6_registerobjectstomatch_expressionBBBBB(
-			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		_this.registerObjectsToMatch_FWD(match, pair, srcDeliver, asset);
+			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
+		_this.registerObjectsToMatch_FWD(match, asset, srcDeliver, pair);
 
 	}
 
@@ -699,36 +699,36 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_bindingFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("trgDeliver");
-		EObject _localVariable_1 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_2 = isApplicableMatch.getObject("meter");
-		EObject _localVariable_3 = isApplicableMatch.getObject("deliverToDeliver");
-		EObject _localVariable_4 = isApplicableMatch.getObject("assetToMeter");
-		EObject _localVariable_5 = isApplicableMatch.getObject("srcDeliver");
-		EObject _localVariable_6 = isApplicableMatch.getObject("asset");
-		EObject tmpTrgDeliver = _localVariable_0;
-		EObject tmpPair = _localVariable_1;
-		EObject tmpMeter = _localVariable_2;
-		EObject tmpDeliverToDeliver = _localVariable_3;
-		EObject tmpAssetToMeter = _localVariable_4;
-		EObject tmpSrcDeliver = _localVariable_5;
-		EObject tmpAsset = _localVariable_6;
-		if (tmpTrgDeliver instanceof outagePreventionJointarget.ServiceDeliveryPoint) {
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) tmpTrgDeliver;
-			if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-				MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-				if (tmpMeter instanceof PrivateMeterVoltage) {
-					PrivateMeterVoltage meter = (PrivateMeterVoltage) tmpMeter;
-					if (tmpDeliverToDeliver instanceof ServiceDeliveryPointToServiceDeliveryPoint) {
-						ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) tmpDeliverToDeliver;
-						if (tmpAssetToMeter instanceof MeterAssetToPrivateMeterVoltage) {
-							MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) tmpAssetToMeter;
-							if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-								ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-								if (tmpAsset instanceof MeterAsset) {
-									MeterAsset asset = (MeterAsset) tmpAsset;
-									return new Object[] { trgDeliver, pair, meter, deliverToDeliver, assetToMeter,
-											srcDeliver, asset, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("assetToMeter");
+		EObject _localVariable_1 = isApplicableMatch.getObject("meter");
+		EObject _localVariable_2 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_3 = isApplicableMatch.getObject("trgDeliver");
+		EObject _localVariable_4 = isApplicableMatch.getObject("srcDeliver");
+		EObject _localVariable_5 = isApplicableMatch.getObject("deliverToDeliver");
+		EObject _localVariable_6 = isApplicableMatch.getObject("pair");
+		EObject tmpAssetToMeter = _localVariable_0;
+		EObject tmpMeter = _localVariable_1;
+		EObject tmpAsset = _localVariable_2;
+		EObject tmpTrgDeliver = _localVariable_3;
+		EObject tmpSrcDeliver = _localVariable_4;
+		EObject tmpDeliverToDeliver = _localVariable_5;
+		EObject tmpPair = _localVariable_6;
+		if (tmpAssetToMeter instanceof MeterAssetToPrivateMeterVoltage) {
+			MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) tmpAssetToMeter;
+			if (tmpMeter instanceof PrivateMeterVoltage) {
+				PrivateMeterVoltage meter = (PrivateMeterVoltage) tmpMeter;
+				if (tmpAsset instanceof MeterAsset) {
+					MeterAsset asset = (MeterAsset) tmpAsset;
+					if (tmpTrgDeliver instanceof outagePreventionJointarget.ServiceDeliveryPoint) {
+						outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) tmpTrgDeliver;
+						if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+							ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
+							if (tmpDeliverToDeliver instanceof ServiceDeliveryPointToServiceDeliveryPoint) {
+								ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) tmpDeliverToDeliver;
+								if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+									MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+									return new Object[] { assetToMeter, meter, asset, trgDeliver, srcDeliver,
+											deliverToDeliver, pair, isApplicableMatch };
 								}
 							}
 						}
@@ -740,14 +740,14 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_blackBBBBBBBFBB(
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
+			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
 			ServiceDeliveryPointLinkMeterAsset _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset, csp,
+				return new Object[] { assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair, csp,
 						_this, isApplicableMatch };
 			}
 		}
@@ -759,21 +759,21 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		Object[] result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding = pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_bindingFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding != null) {
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[0];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[1];
-			PrivateMeterVoltage meter = (PrivateMeterVoltage) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[2];
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[3];
-			MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[4];
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[5];
-			MeterAsset asset = (MeterAsset) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[6];
+			MeterAssetToPrivateMeterVoltage assetToMeter = (MeterAssetToPrivateMeterVoltage) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[0];
+			PrivateMeterVoltage meter = (PrivateMeterVoltage) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[1];
+			MeterAsset asset = (MeterAsset) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[2];
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = (outagePreventionJointarget.ServiceDeliveryPoint) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[3];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[4];
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver = (ServiceDeliveryPointToServiceDeliveryPoint) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[5];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_binding[6];
 
 			Object[] result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_black = pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_blackBBBBBBBFBB(
-					trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset, _this,
+					assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair, _this,
 					isApplicableMatch);
 			if (result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_black[7];
 
-				return new Object[] { trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset, csp,
+				return new Object[] { assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair, csp,
 						_this, isApplicableMatch };
 			}
 		}
@@ -781,9 +781,9 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_1_1_performtransformation_greenBB(
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, PrivateMeterVoltage meter) {
+			PrivateMeterVoltage meter, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver) {
 		meter.setServiceDeliveryPoint(trgDeliver);
-		return new Object[] { trgDeliver, meter };
+		return new Object[] { meter, trgDeliver };
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_1_2_collecttranslatedelements_greenF() {
@@ -792,36 +792,36 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_1_3_bookkeepingforedges_blackBBBBBBBB(
-			PerformRuleResult ruleresult, EObject trgDeliver, EObject pair, EObject meter, EObject deliverToDeliver,
-			EObject assetToMeter, EObject srcDeliver, EObject asset) {
-		if (!pair.equals(trgDeliver)) {
-			if (!pair.equals(srcDeliver)) {
-				if (!meter.equals(trgDeliver)) {
-					if (!meter.equals(pair)) {
-						if (!meter.equals(srcDeliver)) {
-							if (!deliverToDeliver.equals(trgDeliver)) {
-								if (!deliverToDeliver.equals(pair)) {
-									if (!deliverToDeliver.equals(meter)) {
-										if (!deliverToDeliver.equals(srcDeliver)) {
-											if (!assetToMeter.equals(trgDeliver)) {
-												if (!assetToMeter.equals(pair)) {
-													if (!assetToMeter.equals(meter)) {
-														if (!assetToMeter.equals(deliverToDeliver)) {
-															if (!assetToMeter.equals(srcDeliver)) {
+			PerformRuleResult ruleresult, EObject assetToMeter, EObject meter, EObject asset, EObject trgDeliver,
+			EObject srcDeliver, EObject deliverToDeliver, EObject pair) {
+		if (!assetToMeter.equals(meter)) {
+			if (!assetToMeter.equals(trgDeliver)) {
+				if (!assetToMeter.equals(srcDeliver)) {
+					if (!assetToMeter.equals(deliverToDeliver)) {
+						if (!assetToMeter.equals(pair)) {
+							if (!meter.equals(trgDeliver)) {
+								if (!meter.equals(srcDeliver)) {
+									if (!meter.equals(pair)) {
+										if (!asset.equals(assetToMeter)) {
+											if (!asset.equals(meter)) {
+												if (!asset.equals(trgDeliver)) {
+													if (!asset.equals(srcDeliver)) {
+														if (!asset.equals(deliverToDeliver)) {
+															if (!asset.equals(pair)) {
 																if (!srcDeliver.equals(trgDeliver)) {
-																	if (!asset.equals(trgDeliver)) {
-																		if (!asset.equals(pair)) {
-																			if (!asset.equals(meter)) {
-																				if (!asset.equals(deliverToDeliver)) {
-																					if (!asset.equals(assetToMeter)) {
-																						if (!asset.equals(srcDeliver)) {
+																	if (!deliverToDeliver.equals(meter)) {
+																		if (!deliverToDeliver.equals(trgDeliver)) {
+																			if (!deliverToDeliver.equals(srcDeliver)) {
+																				if (!deliverToDeliver.equals(pair)) {
+																					if (!pair.equals(trgDeliver)) {
+																						if (!pair.equals(srcDeliver)) {
 																							return new Object[] {
 																									ruleresult,
-																									trgDeliver, pair,
-																									meter,
+																									assetToMeter, meter,
+																									asset, trgDeliver,
+																									srcDeliver,
 																									deliverToDeliver,
-																									assetToMeter,
-																									srcDeliver, asset };
+																									pair };
 																						}
 																					}
 																				}
@@ -847,7 +847,7 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_1_3_bookkeepingforedges_greenBBBBBFFF(
-			PerformRuleResult ruleresult, EObject trgDeliver, EObject meter, EObject srcDeliver, EObject asset) {
+			PerformRuleResult ruleresult, EObject meter, EObject asset, EObject trgDeliver, EObject srcDeliver) {
 		EMoflonEdge meter__trgDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
@@ -868,16 +868,16 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 		meter__trgDeliver____ServiceDeliveryPoint.setName(meter__trgDeliver____ServiceDeliveryPoint_name_prime);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		return new Object[] { ruleresult, trgDeliver, meter, srcDeliver, asset,
+		return new Object[] { ruleresult, meter, asset, trgDeliver, srcDeliver,
 				meter__trgDeliver____ServiceDeliveryPoint, asset__srcDeliver____ServiceDeliveryPoint,
 				srcDeliver__asset____EndDeviceAssets };
 	}
 
 	public static final void pattern_ServiceDeliveryPointLinkMeterAsset_1_5_registerobjects_expressionBBBBBBBBB(
-			ServiceDeliveryPointLinkMeterAsset _this, PerformRuleResult ruleresult, EObject trgDeliver, EObject pair,
-			EObject meter, EObject deliverToDeliver, EObject assetToMeter, EObject srcDeliver, EObject asset) {
-		_this.registerObjects_FWD(ruleresult, trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver,
-				asset);
+			ServiceDeliveryPointLinkMeterAsset _this, PerformRuleResult ruleresult, EObject assetToMeter, EObject meter,
+			EObject asset, EObject trgDeliver, EObject srcDeliver, EObject deliverToDeliver, EObject pair) {
+		_this.registerObjects_FWD(ruleresult, assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver,
+				pair);
 
 	}
 
@@ -939,38 +939,39 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_2_2_corematch_bindingFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("pair");
+		EObject _localVariable_0 = match.getObject("asset");
 		EObject _localVariable_1 = match.getObject("srcDeliver");
-		EObject _localVariable_2 = match.getObject("asset");
-		EObject tmpPair = _localVariable_0;
+		EObject _localVariable_2 = match.getObject("pair");
+		EObject tmpAsset = _localVariable_0;
 		EObject tmpSrcDeliver = _localVariable_1;
-		EObject tmpAsset = _localVariable_2;
-		if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+		EObject tmpPair = _localVariable_2;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
 			if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
 				ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-				if (tmpAsset instanceof MeterAsset) {
-					MeterAsset asset = (MeterAsset) tmpAsset;
-					return new Object[] { pair, srcDeliver, asset, match };
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					return new Object[] { asset, srcDeliver, pair, match };
 				}
 			}
 		}
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_ServiceDeliveryPointLinkMeterAsset_2_2_corematch_blackFBFFFBBB(
-			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset, Match match) {
+	public static final Iterable<Object[]> pattern_ServiceDeliveryPointLinkMeterAsset_2_2_corematch_blackFFBFBFBB(
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		for (ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver : org.moflon.core.utilities.eMoflonEMFUtil
-				.getOppositeReferenceTyped(srcDeliver, ServiceDeliveryPointToServiceDeliveryPoint.class, "source")) {
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = deliverToDeliver.getTarget();
-			if (trgDeliver != null) {
-				for (MeterAssetToPrivateMeterVoltage assetToMeter : org.moflon.core.utilities.eMoflonEMFUtil
-						.getOppositeReferenceTyped(asset, MeterAssetToPrivateMeterVoltage.class, "source")) {
-					PrivateMeterVoltage meter = assetToMeter.getTarget();
-					if (meter != null) {
-						_result.add(new Object[] { trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver,
-								asset, match });
+		for (MeterAssetToPrivateMeterVoltage assetToMeter : org.moflon.core.utilities.eMoflonEMFUtil
+				.getOppositeReferenceTyped(asset, MeterAssetToPrivateMeterVoltage.class, "source")) {
+			PrivateMeterVoltage meter = assetToMeter.getTarget();
+			if (meter != null) {
+				for (ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver : org.moflon.core.utilities.eMoflonEMFUtil
+						.getOppositeReferenceTyped(srcDeliver, ServiceDeliveryPointToServiceDeliveryPoint.class,
+								"source")) {
+					outagePreventionJointarget.ServiceDeliveryPoint trgDeliver = deliverToDeliver.getTarget();
+					if (trgDeliver != null) {
+						_result.add(new Object[] { assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver,
+								pair, match });
 					}
 
 				}
@@ -981,18 +982,18 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Iterable<Object[]> pattern_ServiceDeliveryPointLinkMeterAsset_2_3_findcontext_blackBBBBBBB(
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
+			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (asset.equals(pair.getA())) {
+		if (asset.equals(assetToMeter.getSource())) {
 			if (meter.equals(assetToMeter.getTarget())) {
-				if (srcDeliver.equals(deliverToDeliver.getSource())) {
-					if (trgDeliver.equals(deliverToDeliver.getTarget())) {
-						if (asset.equals(assetToMeter.getSource())) {
-							if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-								_result.add(new Object[] { trgDeliver, pair, meter, deliverToDeliver, assetToMeter,
-										srcDeliver, asset });
+				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+					if (srcDeliver.equals(deliverToDeliver.getSource())) {
+						if (trgDeliver.equals(deliverToDeliver.getTarget())) {
+							if (asset.equals(pair.getA())) {
+								_result.add(new Object[] { assetToMeter, meter, asset, trgDeliver, srcDeliver,
+										deliverToDeliver, pair });
 							}
 						}
 					}
@@ -1003,77 +1004,76 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_2_3_findcontext_greenBBBBBBBFFFFFFFF(
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
+			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge assetToMeter__meter____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge deliverToDeliver__srcDeliver____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge deliverToDeliver__trgDeliver____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge assetToMeter__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge assetToMeter__meter____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String pair__asset____a_name_prime = "a";
-		String assetToMeter__meter____target_name_prime = "target";
-		String deliverToDeliver__srcDeliver____source_name_prime = "source";
-		String deliverToDeliver__trgDeliver____target_name_prime = "target";
+		EMoflonEdge deliverToDeliver__srcDeliver____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge deliverToDeliver__trgDeliver____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String assetToMeter__asset____source_name_prime = "source";
+		String assetToMeter__meter____target_name_prime = "target";
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
-		isApplicableMatch.getAllContextElements().add(trgDeliver);
-		isApplicableMatch.getAllContextElements().add(pair);
-		isApplicableMatch.getAllContextElements().add(meter);
-		isApplicableMatch.getAllContextElements().add(deliverToDeliver);
+		String deliverToDeliver__srcDeliver____source_name_prime = "source";
+		String deliverToDeliver__trgDeliver____target_name_prime = "target";
+		String pair__asset____a_name_prime = "a";
 		isApplicableMatch.getAllContextElements().add(assetToMeter);
-		isApplicableMatch.getAllContextElements().add(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(meter);
 		isApplicableMatch.getAllContextElements().add(asset);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		assetToMeter__meter____target.setSrc(assetToMeter);
-		assetToMeter__meter____target.setTrg(meter);
-		isApplicableMatch.getAllContextElements().add(assetToMeter__meter____target);
-		deliverToDeliver__srcDeliver____source.setSrc(deliverToDeliver);
-		deliverToDeliver__srcDeliver____source.setTrg(srcDeliver);
-		isApplicableMatch.getAllContextElements().add(deliverToDeliver__srcDeliver____source);
-		deliverToDeliver__trgDeliver____target.setSrc(deliverToDeliver);
-		deliverToDeliver__trgDeliver____target.setTrg(trgDeliver);
-		isApplicableMatch.getAllContextElements().add(deliverToDeliver__trgDeliver____target);
+		isApplicableMatch.getAllContextElements().add(trgDeliver);
+		isApplicableMatch.getAllContextElements().add(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(deliverToDeliver);
+		isApplicableMatch.getAllContextElements().add(pair);
 		assetToMeter__asset____source.setSrc(assetToMeter);
 		assetToMeter__asset____source.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(assetToMeter__asset____source);
+		assetToMeter__meter____target.setSrc(assetToMeter);
+		assetToMeter__meter____target.setTrg(meter);
+		isApplicableMatch.getAllContextElements().add(assetToMeter__meter____target);
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		assetToMeter__meter____target.setName(assetToMeter__meter____target_name_prime);
-		deliverToDeliver__srcDeliver____source.setName(deliverToDeliver__srcDeliver____source_name_prime);
-		deliverToDeliver__trgDeliver____target.setName(deliverToDeliver__trgDeliver____target_name_prime);
+		deliverToDeliver__srcDeliver____source.setSrc(deliverToDeliver);
+		deliverToDeliver__srcDeliver____source.setTrg(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(deliverToDeliver__srcDeliver____source);
+		deliverToDeliver__trgDeliver____target.setSrc(deliverToDeliver);
+		deliverToDeliver__trgDeliver____target.setTrg(trgDeliver);
+		isApplicableMatch.getAllContextElements().add(deliverToDeliver__trgDeliver____target);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
 		assetToMeter__asset____source.setName(assetToMeter__asset____source_name_prime);
+		assetToMeter__meter____target.setName(assetToMeter__meter____target_name_prime);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		return new Object[] { trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset,
-				isApplicableMatch, pair__asset____a, assetToMeter__meter____target,
-				deliverToDeliver__srcDeliver____source, deliverToDeliver__trgDeliver____target,
-				assetToMeter__asset____source, asset__srcDeliver____ServiceDeliveryPoint,
-				srcDeliver__asset____EndDeviceAssets };
+		deliverToDeliver__srcDeliver____source.setName(deliverToDeliver__srcDeliver____source_name_prime);
+		deliverToDeliver__trgDeliver____target.setName(deliverToDeliver__trgDeliver____target_name_prime);
+		pair__asset____a.setName(pair__asset____a_name_prime);
+		return new Object[] { assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair,
+				isApplicableMatch, assetToMeter__asset____source, assetToMeter__meter____target,
+				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
+				deliverToDeliver__srcDeliver____source, deliverToDeliver__trgDeliver____target, pair__asset____a };
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_bindingFBBBBBBBBB(
 			ServiceDeliveryPointLinkMeterAsset _this, IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, trgDeliver, pair, meter,
-				deliverToDeliver, assetToMeter, srcDeliver, asset);
+			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, assetToMeter, meter, asset,
+				trgDeliver, srcDeliver, deliverToDeliver, pair);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, trgDeliver, pair, meter, deliverToDeliver,
-					assetToMeter, srcDeliver, asset };
+			return new Object[] { csp, _this, isApplicableMatch, assetToMeter, meter, asset, trgDeliver, srcDeliver,
+					deliverToDeliver, pair };
 		}
 		return null;
 	}
@@ -1084,11 +1084,11 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(
 			ServiceDeliveryPointLinkMeterAsset _this, IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, MeterAssetPhysicalDevicePair pair,
-			PrivateMeterVoltage meter, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver,
-			MeterAssetToPrivateMeterVoltage assetToMeter, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
+			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair) {
 		Object[] result_pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_binding = pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_bindingFBBBBBBBBB(
-				_this, isApplicableMatch, trgDeliver, pair, meter, deliverToDeliver, assetToMeter, srcDeliver, asset);
+				_this, isApplicableMatch, assetToMeter, meter, asset, trgDeliver, srcDeliver, deliverToDeliver, pair);
 		if (result_pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_binding[0];
 
@@ -1096,8 +1096,8 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 					csp);
 			if (result_pattern_ServiceDeliveryPointLinkMeterAsset_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, trgDeliver, pair, meter, deliverToDeliver,
-						assetToMeter, srcDeliver, asset };
+				return new Object[] { csp, _this, isApplicableMatch, assetToMeter, meter, asset, trgDeliver, srcDeliver,
+						deliverToDeliver, pair };
 			}
 		}
 		return null;
@@ -1197,7 +1197,7 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
 					for (MeterAssetPhysicalDevicePair pair : org.moflon.core.utilities.eMoflonEMFUtil
 							.getOppositeReferenceTyped(asset, MeterAssetPhysicalDevicePair.class, "a")) {
-						_result.add(new Object[] { pair, srcDeliver, asset, _edge_ServiceDeliveryPoint });
+						_result.add(new Object[] { asset, srcDeliver, pair, _edge_ServiceDeliveryPoint });
 					}
 				}
 			}
@@ -1218,9 +1218,9 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final boolean pattern_ServiceDeliveryPointLinkMeterAsset_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBB(
-			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, pair, srcDeliver, asset);
+			ServiceDeliveryPointLinkMeterAsset _this, Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, asset, srcDeliver, pair);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1255,10 +1255,10 @@ public class ServiceDeliveryPointLinkMeterAssetImpl extends AbstractRuleImpl
 	}
 
 	public static final Object[] pattern_ServiceDeliveryPointLinkMeterAsset_13_1_matchtggpattern_blackBBB(
-			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, MeterAsset asset) {
-		if (asset.equals(pair.getA())) {
-			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-				return new Object[] { pair, srcDeliver, asset };
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair) {
+		if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+			if (asset.equals(pair.getA())) {
+				return new Object[] { asset, srcDeliver, pair };
 			}
 		}
 		return null;

@@ -20,7 +20,6 @@
 		++ -SubLoadArea->srcArea
 	}
 	++ srcArea : SubLoadArea {
-		
 	}
 }
 
@@ -29,9 +28,7 @@
 		++-SubLoadArea->trgArea
 	}
 	++ trgArea : SubLoadArea {
-		
 	}
-	
 }
 
 #correspondence {

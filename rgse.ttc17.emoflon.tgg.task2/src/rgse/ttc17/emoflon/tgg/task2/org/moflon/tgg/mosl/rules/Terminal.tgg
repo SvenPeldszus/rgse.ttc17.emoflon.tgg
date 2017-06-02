@@ -16,18 +16,14 @@
 	srcResource : ConductingEquipment {
 		++-Terminals->srcTerminal
 	}
-	++srcTerminal : Terminal {
-		
-	}
-	
+	++srcTerminal : Terminal {	
+	}	
 }
 
 #target {
-	trgResource : PowerSystemResource {
-		
+	trgResource : PowerSystemResource {		
 	}
-	++ trgTerminal : Terminal {
-		
+	++ trgTerminal : Terminal {		
 	}
 }
 
@@ -42,6 +38,5 @@
 	}
 }
 
-#attributeConditions {
-	
+#attributeConditions {	
 }

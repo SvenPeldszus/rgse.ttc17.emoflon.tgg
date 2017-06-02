@@ -43,8 +43,8 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +68,9 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,8 +78,9 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,10 +96,10 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetPhysicalDevicePair pair,
-			outageDetectionJointarget.Location trgLocation, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, LocationToLocation locationToLocation,
-			MeterAsset asset);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAssetPhysicalDevicePair pair,
+			Location srcLocation, LocationToLocation locationToLocation,
+			outageDetectionJointarget.Location trgLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,9 +115,9 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject srcLocation,
-			EObject positionPoint, EObject trgPositionPoint, EObject locationToLocation, EObject asset,
-			EObject positionCorr);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject positionCorr, EObject positionPoint,
+			EObject pair, EObject srcLocation, EObject trgPositionPoint, EObject locationToLocation,
+			EObject trgLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,7 +133,7 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_56(EMoflonEdge _edge_Position);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_139(EMoflonEdge _edge_Position);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,8 +157,8 @@ public interface PositionPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAssetPhysicalDevicePair pair, Location srcLocation,
-			gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint, MeterAsset asset);
+	boolean checkDEC_FWD(MeterAsset asset, gluemodel.CIM.IEC61968.Common.PositionPoint positionPoint,
+			MeterAssetPhysicalDevicePair pair, Location srcLocation);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

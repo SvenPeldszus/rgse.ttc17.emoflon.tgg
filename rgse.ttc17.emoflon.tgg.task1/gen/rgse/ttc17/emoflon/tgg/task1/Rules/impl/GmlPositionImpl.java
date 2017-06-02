@@ -450,7 +450,7 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_55(EMoflonEdge _edge_Position) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_140(EMoflonEdge _edge_Position) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = GmlPositionImpl
 				.pattern_GmlPosition_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -519,10 +519,10 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgPositionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
+		Variable var_trgPositionPoint_yPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
 				csp);
-		var_trgPositionPoint_zPosition.setValue(__helper.getValue("trgPositionPoint", "zPosition"));
-		var_trgPositionPoint_zPosition.setType("String");
+		var_trgPositionPoint_yPosition.setValue(__helper.getValue("trgPositionPoint", "yPosition"));
+		var_trgPositionPoint_yPosition.setType("String");
 
 		Variable var_positionPoint_yPosition = CSPFactoryHelper.eINSTANCE.createVariable("positionPoint", true, csp);
 		var_positionPoint_yPosition.setValue(__helper.getValue("positionPoint", "yPosition"));
@@ -532,10 +532,10 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 		var_positionPoint_zPosition.setValue(__helper.getValue("positionPoint", "zPosition"));
 		var_positionPoint_zPosition.setType("String");
 
-		Variable var_trgPositionPoint_yPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
+		Variable var_trgPositionPoint_zPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
 				csp);
-		var_trgPositionPoint_yPosition.setValue(__helper.getValue("trgPositionPoint", "yPosition"));
-		var_trgPositionPoint_yPosition.setType("String");
+		var_trgPositionPoint_zPosition.setValue(__helper.getValue("trgPositionPoint", "zPosition"));
+		var_trgPositionPoint_zPosition.setType("String");
 
 		Variable var_trgPositionPoint_xPosition = CSPFactoryHelper.eINSTANCE.createVariable("trgPositionPoint", true,
 				csp);
@@ -663,8 +663,8 @@ public class GmlPositionImpl extends AbstractRuleImpl implements GmlPosition {
 			return null;
 		case RulesPackage.GML_POSITION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.GML_POSITION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_55__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_55((EMoflonEdge) arguments.get(0));
+		case RulesPackage.GML_POSITION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_140__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_140((EMoflonEdge) arguments.get(0));
 		case RulesPackage.GML_POSITION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.GML_POSITION___IS_APPLICABLE_CC__MATCH_MATCH:

@@ -47,8 +47,8 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			ConductingEquipment srcResource, MeterAssetMMXUPair pair, Location srcLocation, MeterAsset meter);
+	boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			Location srcLocation, ConductingEquipment srcResource, MeterAsset meter);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,8 +72,9 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			ConductingEquipment srcResource, MeterAssetMMXUPair pair, Location srcLocation, MeterAsset meter);
+	void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair,
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
+			MeterAsset meter);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,8 +82,9 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			ConductingEquipment srcResource, MeterAssetMMXUPair pair, Location srcLocation, MeterAsset meter);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair,
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
+			MeterAsset meter);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -98,10 +100,10 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			ConductingEquipment srcResource, MeterAssetMMXUPair pair, Location srcLocation,
-			PowerSystemResource trgResource, MeterAsset meter,
-			PowerSystemResourceToPowerSystemResource resourceToTResource);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
+			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
+			PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
+			ConductingEquipment srcResource, MeterAsset meter);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,9 +119,9 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcTerminal, EObject trgTerminal,
-			EObject srcResource, EObject pair, EObject srcLocation, EObject trgResource, EObject terminalToTerminal,
-			EObject meter, EObject resourceToTResource);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject resourceToTResource, EObject pair,
+			EObject trgResource, EObject terminalToTerminal, EObject srcTerminal, EObject srcLocation,
+			EObject srcResource, EObject meter, EObject trgTerminal);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,7 +137,7 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_31(EMoflonEdge _edge_Terminals);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_167(EMoflonEdge _edge_Terminals);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,8 +161,8 @@ public interface Terminal extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, ConductingEquipment srcResource,
-			MeterAssetMMXUPair pair, Location srcLocation, MeterAsset meter);
+	boolean checkDEC_FWD(MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			Location srcLocation, ConductingEquipment srcResource, MeterAsset meter);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

@@ -116,7 +116,7 @@ public interface ControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_ControlArea_1(gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea);
+	EObjectContainer isAppropriate_FWD_ControlArea_2(gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -55,55 +55,35 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case RulesPackage.POSITION_POINT_LINK:
-			return createPositionPointLink();
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD:
-			return createEnergyConsumerWithIDNonConfLoad();
 		case RulesPackage.ENERGY_CONSUMER:
 			return createEnergyConsumer();
-		case RulesPackage.GML_POSITION:
-			return createGmlPosition();
-		case RulesPackage.POSITION_POINT:
-			return createPositionPoint();
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID:
-			return createEnergyConsumerWithID();
-		case RulesPackage.SDP_LOCATION:
-			return createSDPLocation();
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD:
-			return createEnergyConsumerWithIDConfLoad();
-		case RulesPackage.SERVICE_LOCATION:
-			return createServiceLocation();
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD:
+			return createEnergyConsumerWithIDNonConfLoad();
+		case RulesPackage.POSITION_POINT_LINK:
+			return createPositionPointLink();
 		case RulesPackage.LOCATION:
 			return createLocation();
-		case RulesPackage.WORK_LOCATION:
-			return createWorkLocation();
-		case RulesPackage.LOCATION_LINK:
-			return createLocationLink();
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID:
+			return createEnergyConsumerWithID();
 		case RulesPackage.ZONE:
 			return createZone();
+		case RulesPackage.SERVICE_LOCATION:
+			return createServiceLocation();
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD:
+			return createEnergyConsumerWithIDConfLoad();
+		case RulesPackage.POSITION_POINT:
+			return createPositionPoint();
+		case RulesPackage.GML_POSITION:
+			return createGmlPosition();
+		case RulesPackage.LOCATION_LINK:
+			return createLocationLink();
+		case RulesPackage.SDP_LOCATION:
+			return createSDPLocation();
+		case RulesPackage.WORK_LOCATION:
+			return createWorkLocation();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PositionPointLink createPositionPointLink() {
-		PositionPointLinkImpl positionPointLink = new PositionPointLinkImpl();
-		return positionPointLink;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EnergyConsumerWithIDNonConfLoad createEnergyConsumerWithIDNonConfLoad() {
-		EnergyConsumerWithIDNonConfLoadImpl energyConsumerWithIDNonConfLoad = new EnergyConsumerWithIDNonConfLoadImpl();
-		return energyConsumerWithIDNonConfLoad;
 	}
 
 	/**
@@ -121,9 +101,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GmlPosition createGmlPosition() {
-		GmlPositionImpl gmlPosition = new GmlPositionImpl();
-		return gmlPosition;
+	public EnergyConsumerWithIDNonConfLoad createEnergyConsumerWithIDNonConfLoad() {
+		EnergyConsumerWithIDNonConfLoadImpl energyConsumerWithIDNonConfLoad = new EnergyConsumerWithIDNonConfLoadImpl();
+		return energyConsumerWithIDNonConfLoad;
 	}
 
 	/**
@@ -131,49 +111,9 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PositionPoint createPositionPoint() {
-		PositionPointImpl positionPoint = new PositionPointImpl();
-		return positionPoint;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EnergyConsumerWithID createEnergyConsumerWithID() {
-		EnergyConsumerWithIDImpl energyConsumerWithID = new EnergyConsumerWithIDImpl();
-		return energyConsumerWithID;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SDPLocation createSDPLocation() {
-		SDPLocationImpl sdpLocation = new SDPLocationImpl();
-		return sdpLocation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EnergyConsumerWithIDConfLoad createEnergyConsumerWithIDConfLoad() {
-		EnergyConsumerWithIDConfLoadImpl energyConsumerWithIDConfLoad = new EnergyConsumerWithIDConfLoadImpl();
-		return energyConsumerWithIDConfLoad;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ServiceLocation createServiceLocation() {
-		ServiceLocationImpl serviceLocation = new ServiceLocationImpl();
-		return serviceLocation;
+	public PositionPointLink createPositionPointLink() {
+		PositionPointLinkImpl positionPointLink = new PositionPointLinkImpl();
+		return positionPointLink;
 	}
 
 	/**
@@ -191,9 +131,59 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorkLocation createWorkLocation() {
-		WorkLocationImpl workLocation = new WorkLocationImpl();
-		return workLocation;
+	public EnergyConsumerWithID createEnergyConsumerWithID() {
+		EnergyConsumerWithIDImpl energyConsumerWithID = new EnergyConsumerWithIDImpl();
+		return energyConsumerWithID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Zone createZone() {
+		ZoneImpl zone = new ZoneImpl();
+		return zone;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ServiceLocation createServiceLocation() {
+		ServiceLocationImpl serviceLocation = new ServiceLocationImpl();
+		return serviceLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnergyConsumerWithIDConfLoad createEnergyConsumerWithIDConfLoad() {
+		EnergyConsumerWithIDConfLoadImpl energyConsumerWithIDConfLoad = new EnergyConsumerWithIDConfLoadImpl();
+		return energyConsumerWithIDConfLoad;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionPoint createPositionPoint() {
+		PositionPointImpl positionPoint = new PositionPointImpl();
+		return positionPoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GmlPosition createGmlPosition() {
+		GmlPositionImpl gmlPosition = new GmlPositionImpl();
+		return gmlPosition;
 	}
 
 	/**
@@ -211,9 +201,19 @@ public class RulesFactoryImpl extends EFactoryImpl implements RulesFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Zone createZone() {
-		ZoneImpl zone = new ZoneImpl();
-		return zone;
+	public SDPLocation createSDPLocation() {
+		SDPLocationImpl sdpLocation = new SDPLocationImpl();
+		return sdpLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WorkLocation createWorkLocation() {
+		WorkLocationImpl workLocation = new WorkLocationImpl();
+		return workLocation;
 	}
 
 	/**

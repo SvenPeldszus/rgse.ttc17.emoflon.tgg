@@ -94,9 +94,9 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, outagePreventionJointarget.Location trgLocation,
-			LocationToLocation locationCorr, PMUVoltageMeter consumer, MeterAssetMMXUPair pair, Location location,
-			MeterAsset asset, MeterAssetToPMUVoltageMeter assetToPMU);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
+			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +112,8 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject locationCorr, EObject consumer,
-			EObject pair, EObject location, EObject asset, EObject assetToPMU);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject location,
+			EObject assetToPMU, EObject locationCorr, EObject asset, EObject consumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_48(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_158(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

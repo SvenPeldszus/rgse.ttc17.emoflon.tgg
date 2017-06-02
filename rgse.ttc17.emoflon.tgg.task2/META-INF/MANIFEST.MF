@@ -1,12 +1,12 @@
 Manifest-Version: 1.0
 Bundle-SymbolicName: rgse.ttc17.emoflon.tgg.task2;singleton:=true
-Export-Package: rgse.ttc17.emoflon.tgg.task2.Rules,
+Export-Package: rgse.ttc17.emoflon.tgg.task2,
+ rgse.ttc17.emoflon.tgg.task2.Rules,
  rgse.ttc17.emoflon.tgg.task2.Rules.impl,
  rgse.ttc17.emoflon.tgg.task2.Rules.util,
  rgse.ttc17.emoflon.tgg.task2.impl,
- rgse.ttc17.emoflon.tgg.task2.util,
- rgse.ttc17.emoflon.tgg.task2,
- rgse.ttc17.emoflon.tgg.task2
+ rgse.ttc17.emoflon.tgg.task2.org.moflon.tie,
+ rgse.ttc17.emoflon.tgg.task2.util
 Bundle-Name: tcc.tgg
 Bundle-Version: 1.0
 Require-Bundle: org.eclipse.emf.ecore,

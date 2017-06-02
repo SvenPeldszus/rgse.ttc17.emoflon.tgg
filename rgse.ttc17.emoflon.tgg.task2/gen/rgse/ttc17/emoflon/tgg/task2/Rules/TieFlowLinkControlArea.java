@@ -50,8 +50,8 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, ControlArea srcControlArea, MeterAsset meter,
-			ConductingEquipment srcResource, Location srcLocation, Terminal srcTerminal, TieFlow srcTieFlow);
+	boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, Terminal srcTerminal, TieFlow srcTieFlow,
+			ConductingEquipment srcResource, MeterAsset meter, Location srcLocation, ControlArea srcControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,8 +75,8 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair, ControlArea srcControlArea, MeterAsset meter,
-			ConductingEquipment srcResource, Location srcLocation, Terminal srcTerminal, TieFlow srcTieFlow);
+	void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair, Terminal srcTerminal, TieFlow srcTieFlow,
+			ConductingEquipment srcResource, MeterAsset meter, Location srcLocation, ControlArea srcControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -84,8 +84,8 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair, ControlArea srcControlArea, MeterAsset meter,
-			ConductingEquipment srcResource, Location srcLocation, Terminal srcTerminal, TieFlow srcTieFlow);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair, Terminal srcTerminal, TieFlow srcTieFlow,
+			ConductingEquipment srcResource, MeterAsset meter, Location srcLocation, ControlArea srcControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -101,11 +101,10 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			ControlAreaToControlSrea controlAreaToControlArea, MeterAssetMMXUPair pair, ControlArea srcControlArea,
-			outagePreventionJointarget.TieFlow trgTieFlow, MeterAsset meter, ConductingEquipment srcResource,
-			outagePreventionJointarget.ControlArea trgControlArea, TieFlowToTieFlow flowToFlow, Location srcLocation,
-			Terminal srcTerminal, TieFlow srcTieFlow);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, outagePreventionJointarget.TieFlow trgTieFlow,
+			outagePreventionJointarget.ControlArea trgControlArea, MeterAssetMMXUPair pair, Terminal srcTerminal,
+			TieFlowToTieFlow flowToFlow, TieFlow srcTieFlow, ConductingEquipment srcResource, MeterAsset meter,
+			Location srcLocation, ControlArea srcControlArea, ControlAreaToControlSrea controlAreaToControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,9 +120,9 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject controlAreaToControlArea, EObject pair,
-			EObject srcControlArea, EObject trgTieFlow, EObject meter, EObject srcResource, EObject trgControlArea,
-			EObject flowToFlow, EObject srcLocation, EObject srcTerminal, EObject srcTieFlow);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgTieFlow, EObject trgControlArea, EObject pair,
+			EObject srcTerminal, EObject flowToFlow, EObject srcTieFlow, EObject srcResource, EObject meter,
+			EObject srcLocation, EObject srcControlArea, EObject controlAreaToControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,7 +138,7 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_43(EMoflonEdge _edge_ControlArea);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_148(EMoflonEdge _edge_ControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,8 +162,8 @@ public interface TieFlowLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAssetMMXUPair pair, ControlArea srcControlArea, MeterAsset meter,
-			ConductingEquipment srcResource, Location srcLocation, Terminal srcTerminal, TieFlow srcTieFlow);
+	boolean checkDEC_FWD(MeterAssetMMXUPair pair, Terminal srcTerminal, TieFlow srcTieFlow,
+			ConductingEquipment srcResource, MeterAsset meter, Location srcLocation, ControlArea srcControlArea);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

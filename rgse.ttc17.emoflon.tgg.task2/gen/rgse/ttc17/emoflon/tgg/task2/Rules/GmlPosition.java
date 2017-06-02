@@ -133,7 +133,7 @@ public interface GmlPosition extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_39(EMoflonEdge _edge_Position);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_168(EMoflonEdge _edge_Position);
 
 	/**
 	 * <!-- begin-user-doc -->

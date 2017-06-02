@@ -542,7 +542,7 @@ public class EnergyConsumerWithIDNonConfLoadImpl extends AbstractRuleImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_53(EMoflonEdge _edge_a) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_132(EMoflonEdge _edge_a) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerWithIDNonConfLoadImpl
 				.pattern_EnergyConsumerWithIDNonConfLoad_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -787,8 +787,8 @@ public class EnergyConsumerWithIDNonConfLoadImpl extends AbstractRuleImpl implem
 			return null;
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_53__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_53((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_132__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_132((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_CC__MATCH_MATCH:

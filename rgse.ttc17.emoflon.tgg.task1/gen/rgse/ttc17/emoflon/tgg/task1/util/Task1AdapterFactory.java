@@ -69,13 +69,8 @@ public class Task1AdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Task1Switch<Adapter> modelSwitch = new Task1Switch<Adapter>() {
 		@Override
-		public Adapter casePhysicalDeviceToEnergyConsumer(PhysicalDeviceToEnergyConsumer object) {
-			return createPhysicalDeviceToEnergyConsumerAdapter();
-		}
-
-		@Override
-		public Adapter caseMeterAssetToEnergyConsumer(MeterAssetToEnergyConsumer object) {
-			return createMeterAssetToEnergyConsumerAdapter();
+		public Adapter caseControlAreaToEnergyConsumer(ControlAreaToEnergyConsumer object) {
+			return createControlAreaToEnergyConsumerAdapter();
 		}
 
 		@Override
@@ -84,13 +79,18 @@ public class Task1AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePositionPointToPositionPoint(PositionPointToPositionPoint object) {
-			return createPositionPointToPositionPointAdapter();
+		public Adapter caseMeterAssetToEnergyConsumer(MeterAssetToEnergyConsumer object) {
+			return createMeterAssetToEnergyConsumerAdapter();
 		}
 
 		@Override
-		public Adapter caseControlAreaToEnergyConsumer(ControlAreaToEnergyConsumer object) {
-			return createControlAreaToEnergyConsumerAdapter();
+		public Adapter casePhysicalDeviceToEnergyConsumer(PhysicalDeviceToEnergyConsumer object) {
+			return createPhysicalDeviceToEnergyConsumerAdapter();
+		}
+
+		@Override
+		public Adapter casePositionPointToPositionPoint(PositionPointToPositionPoint object) {
+			return createPositionPointToPositionPointAdapter();
 		}
 
 		@Override
@@ -118,30 +118,16 @@ public class Task1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.PhysicalDeviceToEnergyConsumer <em>Physical Device To Energy Consumer</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.ControlAreaToEnergyConsumer <em>Control Area To Energy Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.PhysicalDeviceToEnergyConsumer
+	 * @see rgse.ttc17.emoflon.tgg.task1.ControlAreaToEnergyConsumer
 	 * @generated
 	 */
-	public Adapter createPhysicalDeviceToEnergyConsumerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer <em>Meter Asset To Energy Consumer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer
-	 * @generated
-	 */
-	public Adapter createMeterAssetToEnergyConsumerAdapter() {
+	public Adapter createControlAreaToEnergyConsumerAdapter() {
 		return null;
 	}
 
@@ -160,6 +146,34 @@ public class Task1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer <em>Meter Asset To Energy Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer
+	 * @generated
+	 */
+	public Adapter createMeterAssetToEnergyConsumerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.PhysicalDeviceToEnergyConsumer <em>Physical Device To Energy Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task1.PhysicalDeviceToEnergyConsumer
+	 * @generated
+	 */
+	public Adapter createPhysicalDeviceToEnergyConsumerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.PositionPointToPositionPoint <em>Position Point To Position Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -170,20 +184,6 @@ public class Task1AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPositionPointToPositionPointAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.ControlAreaToEnergyConsumer <em>Control Area To Energy Consumer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.ControlAreaToEnergyConsumer
-	 * @generated
-	 */
-	public Adapter createControlAreaToEnergyConsumerAdapter() {
 		return null;
 	}
 

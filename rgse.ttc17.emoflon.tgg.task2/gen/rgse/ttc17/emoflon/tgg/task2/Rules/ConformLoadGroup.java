@@ -44,8 +44,8 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, ConformLoad srcConsumer);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
+			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,8 +69,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, ConformLoad srcConsumer);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ServiceDeliveryPoint srcDeliver,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,8 +79,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, ConformLoad srcConsumer);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ServiceDeliveryPoint srcDeliver,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,10 +97,11 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ConformLoad trgConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer,
-			ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, ConformLoad srcConsumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ServiceDeliveryPoint srcDeliver,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup,
+			outagePreventionJointarget.ConformLoad trgConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,9 +117,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgConsumer, EObject consumerToConsumer,
-			EObject srcDeliver, EObject trgGroup, EObject pair, EObject asset, EObject srcGroup, EObject groupToGroup,
-			EObject srcConsumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgGroup, EObject asset, EObject consumerToConsumer,
+			EObject pair, EObject groupToGroup, EObject srcConsumer, EObject srcDeliver, EObject srcGroup,
+			EObject trgConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,7 +135,7 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_29(EMoflonEdge _edge_LoadGroup);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_145(EMoflonEdge _edge_LoadGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,8 +159,8 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
-			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, ConformLoad srcConsumer);
+	boolean checkDEC_FWD(MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
+			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

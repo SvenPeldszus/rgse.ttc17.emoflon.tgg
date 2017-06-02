@@ -199,7 +199,8 @@ Export-Package: gluemodel,
  gluemodel.substationStandard.LNNodes.LNGroupZ.util,
  gluemodel.substationStandard.impl,
  gluemodel.substationStandard.util,
- gluemodel.util
+ gluemodel.util,
+ rgse.ttc17.metamodels.src
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport

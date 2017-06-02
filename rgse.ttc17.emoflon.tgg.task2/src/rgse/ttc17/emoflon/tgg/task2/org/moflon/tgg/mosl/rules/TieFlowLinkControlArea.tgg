@@ -23,13 +23,11 @@
 		++ -ControlArea->srcControlArea
 	}
 	srcControlArea : ControlArea {
-		
 	}
 }
 
 #target {
 	trgControlArea : ControlArea {
-		
 	}
 	trgTieFlow : TieFlow {
 		++-ControlArea->trgControlArea
@@ -48,5 +46,4 @@
 }
 
 #attributeConditions {
-	
 }

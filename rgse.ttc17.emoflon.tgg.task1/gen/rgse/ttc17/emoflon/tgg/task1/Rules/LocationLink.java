@@ -46,7 +46,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAsset asset, Location location, MeterAssetPhysicalDevicePair pair);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair, Location location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, Location location,
-			MeterAssetPhysicalDevicePair pair);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			Location location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, Location location, MeterAssetPhysicalDevicePair pair);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair, Location location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,9 +95,9 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetToEnergyConsumer assetToConumer,
-			outageDetectionJointarget.Location trgLocation, MeterAsset asset, Location location,
-			LocationToLocation locationCorr, MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset, EnergyConsumer consumer,
+			MeterAssetPhysicalDevicePair pair, outageDetectionJointarget.Location trgLocation,
+			LocationToLocation locationCorr, Location location, MeterAssetToEnergyConsumer assetToConumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,8 +113,8 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject assetToConumer, EObject trgLocation, EObject asset,
-			EObject location, EObject locationCorr, EObject pair, EObject consumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject consumer, EObject pair,
+			EObject trgLocation, EObject locationCorr, EObject location, EObject assetToConumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,7 +130,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_63(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_141(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,7 +154,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAsset asset, Location location, MeterAssetPhysicalDevicePair pair);
+	boolean checkDEC_FWD(MeterAsset asset, MeterAssetPhysicalDevicePair pair, Location location);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

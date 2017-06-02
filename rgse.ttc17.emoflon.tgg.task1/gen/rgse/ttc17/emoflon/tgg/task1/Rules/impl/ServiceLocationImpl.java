@@ -400,7 +400,7 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_60(EMoflonEdge _edge_Location) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_137(EMoflonEdge _edge_Location) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ServiceLocationImpl
 				.pattern_ServiceLocation_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -556,8 +556,8 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 			return null;
 		case RulesPackage.SERVICE_LOCATION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.SERVICE_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_60__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_60((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SERVICE_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_137__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_137((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SERVICE_LOCATION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SERVICE_LOCATION___IS_APPLICABLE_CC__MATCH_MATCH:
