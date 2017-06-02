@@ -50,9 +50,9 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl,
-			SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,9 +76,9 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl,
-			SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,9 +86,9 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl,
-			SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,12 +104,11 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ConformLoadGroup srcGroup,
-			ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ServiceDeliveryPoint srcDeliver,
+			SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad, outagePreventionJointarget.ControlArea trgControl,
+			outagePreventionJointarget.LoadArea trgLoadArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ControlAreaToControlSrea controlToControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,9 +124,9 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcGroup, EObject controlToControl, EObject asset,
-			EObject trgControl, EObject srcControl, EObject srcArea, EObject srcDeliver, EObject laodToLoad,
-			EObject srcLoadArea, EObject trgLoadArea, EObject pair, EObject srcConsumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcDeliver, EObject srcArea, EObject laodToLoad,
+			EObject trgControl, EObject trgLoadArea, EObject asset, EObject pair, EObject srcConsumer,
+			EObject srcControl, EObject controlToControl, EObject srcGroup, EObject srcLoadArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -143,7 +142,7 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_163(EMoflonEdge _edge_ControlArea);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_28(EMoflonEdge _edge_ControlArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,9 +166,9 @@ public interface LoadAreaLinkControlArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer);
+	boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

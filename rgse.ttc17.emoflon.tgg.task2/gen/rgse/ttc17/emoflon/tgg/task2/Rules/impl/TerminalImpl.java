@@ -93,27 +93,26 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			MeterAsset meter) {
+	public boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			MeterAssetMMXUPair pair, ConductingEquipment srcResource, MeterAsset meter, Location srcLocation) {
 		// initial bindings
-		Object[] result1_black = TerminalImpl.pattern_Terminal_0_1_initialbindings_blackBBBBBBB(this, match, pair,
-				srcTerminal, srcLocation, srcResource, meter);
+		Object[] result1_black = TerminalImpl.pattern_Terminal_0_1_initialbindings_blackBBBBBBB(this, match,
+				srcTerminal, pair, srcResource, meter, srcLocation);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[pair] = " + pair + ", "
-					+ "[srcTerminal] = " + srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", "
-					+ "[srcResource] = " + srcResource + ", " + "[meter] = " + meter + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcTerminal] = " + srcTerminal + ", "
+					+ "[pair] = " + pair + ", " + "[srcResource] = " + srcResource + ", " + "[meter] = " + meter + ", "
+					+ "[srcLocation] = " + srcLocation + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = TerminalImpl.pattern_Terminal_0_2_SolveCSP_bindingAndBlackFBBBBBBB(this,
-				match, pair, srcTerminal, srcLocation, srcResource, meter);
+				match, srcTerminal, pair, srcResource, meter, srcLocation);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
-					+ srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = " + srcResource
-					+ ", " + "[meter] = " + meter + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[srcTerminal] = " + srcTerminal + ", " + "[pair] = "
+					+ pair + ", " + "[srcResource] = " + srcResource + ", " + "[meter] = " + meter + ", "
+					+ "[srcLocation] = " + srcLocation + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -121,28 +120,28 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 
 			// collect elements to be translated
 			Object[] result4_black = TerminalImpl.pattern_Terminal_0_4_collectelementstobetranslated_blackBBBBBB(match,
-					pair, srcTerminal, srcLocation, srcResource, meter);
+					srcTerminal, pair, srcResource, meter, srcLocation);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
-						+ srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = "
-						+ srcResource + ", " + "[meter] = " + meter + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[srcTerminal] = " + srcTerminal + ", "
+						+ "[pair] = " + pair + ", " + "[srcResource] = " + srcResource + ", " + "[meter] = " + meter
+						+ ", " + "[srcLocation] = " + srcLocation + ".");
 			}
 			TerminalImpl.pattern_Terminal_0_4_collectelementstobetranslated_greenBBBFF(match, srcTerminal, srcResource);
 			// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result4_green[3];
 			// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result4_green[4];
 
 			// collect context elements
-			Object[] result5_black = TerminalImpl.pattern_Terminal_0_5_collectcontextelements_blackBBBBBB(match, pair,
-					srcTerminal, srcLocation, srcResource, meter);
+			Object[] result5_black = TerminalImpl.pattern_Terminal_0_5_collectcontextelements_blackBBBBBB(match,
+					srcTerminal, pair, srcResource, meter, srcLocation);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[pair] = " + pair + ", " + "[srcTerminal] = "
-						+ srcTerminal + ", " + "[srcLocation] = " + srcLocation + ", " + "[srcResource] = "
-						+ srcResource + ", " + "[meter] = " + meter + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[srcTerminal] = " + srcTerminal + ", "
+						+ "[pair] = " + pair + ", " + "[srcResource] = " + srcResource + ", " + "[meter] = " + meter
+						+ ", " + "[srcLocation] = " + srcLocation + ".");
 			}
-			TerminalImpl.pattern_Terminal_0_5_collectcontextelements_greenBBBBBFFFFF(match, pair, srcLocation,
-					srcResource, meter);
+			TerminalImpl.pattern_Terminal_0_5_collectcontextelements_greenBBBBBFFFFF(match, pair, srcResource, meter,
+					srcLocation);
 			// EMoflonEdge pair__meter____a = (EMoflonEdge) result5_green[5];
 			// EMoflonEdge meter__srcLocation____Location = (EMoflonEdge) result5_green[6];
 			// EMoflonEdge srcLocation__meter____Assets = (EMoflonEdge) result5_green[7];
@@ -150,8 +149,8 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 			// EMoflonEdge srcResource__srcLocation____Location = (EMoflonEdge) result5_green[9];
 
 			// register objects to match
-			TerminalImpl.pattern_Terminal_0_6_registerobjectstomatch_expressionBBBBBBB(this, match, pair, srcTerminal,
-					srcLocation, srcResource, meter);
+			TerminalImpl.pattern_Terminal_0_6_registerobjectstomatch_expressionBBBBBBB(this, match, srcTerminal, pair,
+					srcResource, meter, srcLocation);
 			return TerminalImpl.pattern_Terminal_0_7_expressionF();
 		} else {
 			return TerminalImpl.pattern_Terminal_0_8_expressionF();
@@ -172,53 +171,54 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) result1_bindingAndBlack[0];
-		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[1];
-		PowerSystemResource trgResource = (PowerSystemResource) result1_bindingAndBlack[2];
-		gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result1_bindingAndBlack[3];
-		Location srcLocation = (Location) result1_bindingAndBlack[4];
-		ConductingEquipment srcResource = (ConductingEquipment) result1_bindingAndBlack[5];
-		MeterAsset meter = (MeterAsset) result1_bindingAndBlack[6];
+		gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result1_bindingAndBlack[0];
+		PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) result1_bindingAndBlack[1];
+		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[2];
+		ConductingEquipment srcResource = (ConductingEquipment) result1_bindingAndBlack[3];
+		PowerSystemResource trgResource = (PowerSystemResource) result1_bindingAndBlack[4];
+		MeterAsset meter = (MeterAsset) result1_bindingAndBlack[5];
+		Location srcLocation = (Location) result1_bindingAndBlack[6];
 		// CSP csp = (CSP) result1_bindingAndBlack[7];
-		Object[] result1_green = TerminalImpl.pattern_Terminal_1_1_performtransformation_greenFBF(srcTerminal);
-		TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result1_green[0];
-		outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result1_green[2];
+		Object[] result1_green = TerminalImpl.pattern_Terminal_1_1_performtransformation_greenBFF(srcTerminal);
+		outagePreventionJointarget.Terminal trgTerminal = (outagePreventionJointarget.Terminal) result1_green[1];
+		TerminalToTerminal terminalToTerminal = (TerminalToTerminal) result1_green[2];
 
 		// collect translated elements
-		Object[] result2_black = TerminalImpl
-				.pattern_Terminal_1_2_collecttranslatedelements_blackBBB(terminalToTerminal, srcTerminal, trgTerminal);
+		Object[] result2_black = TerminalImpl.pattern_Terminal_1_2_collecttranslatedelements_blackBBB(srcTerminal,
+				trgTerminal, terminalToTerminal);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[terminalToTerminal] = " + terminalToTerminal + ", " + "[srcTerminal] = " + srcTerminal + ", "
-					+ "[trgTerminal] = " + trgTerminal + ".");
+					+ "[srcTerminal] = " + srcTerminal + ", " + "[trgTerminal] = " + trgTerminal + ", "
+					+ "[terminalToTerminal] = " + terminalToTerminal + ".");
 		}
-		Object[] result2_green = TerminalImpl
-				.pattern_Terminal_1_2_collecttranslatedelements_greenFBBB(terminalToTerminal, srcTerminal, trgTerminal);
+		Object[] result2_green = TerminalImpl.pattern_Terminal_1_2_collecttranslatedelements_greenFBBB(srcTerminal,
+				trgTerminal, terminalToTerminal);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = TerminalImpl.pattern_Terminal_1_3_bookkeepingforedges_blackBBBBBBBBBB(ruleresult,
-				resourceToTResource, pair, trgResource, terminalToTerminal, srcTerminal, srcLocation, srcResource,
-				meter, trgTerminal);
+				srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter, srcLocation, trgTerminal,
+				terminalToTerminal);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[resourceToTResource] = " + resourceToTResource + ", "
-					+ "[pair] = " + pair + ", " + "[trgResource] = " + trgResource + ", " + "[terminalToTerminal] = "
-					+ terminalToTerminal + ", " + "[srcTerminal] = " + srcTerminal + ", " + "[srcLocation] = "
-					+ srcLocation + ", " + "[srcResource] = " + srcResource + ", " + "[meter] = " + meter + ", "
-					+ "[trgTerminal] = " + trgTerminal + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[srcTerminal] = " + srcTerminal + ", "
+					+ "[resourceToTResource] = " + resourceToTResource + ", " + "[pair] = " + pair + ", "
+					+ "[srcResource] = " + srcResource + ", " + "[trgResource] = " + trgResource + ", " + "[meter] = "
+					+ meter + ", " + "[srcLocation] = " + srcLocation + ", " + "[trgTerminal] = " + trgTerminal + ", "
+					+ "[terminalToTerminal] = " + terminalToTerminal + ".");
 		}
-		TerminalImpl.pattern_Terminal_1_3_bookkeepingforedges_greenBBBBBFFFF(ruleresult, terminalToTerminal,
-				srcTerminal, srcResource, trgTerminal);
-		// EMoflonEdge terminalToTerminal__srcTerminal____source = (EMoflonEdge) result3_green[5];
-		// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge terminalToTerminal__trgTerminal____target = (EMoflonEdge) result3_green[8];
+		TerminalImpl.pattern_Terminal_1_3_bookkeepingforedges_greenBBBBBFFFF(ruleresult, srcTerminal, srcResource,
+				trgTerminal, terminalToTerminal);
+		// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result3_green[5];
+		// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge terminalToTerminal__trgTerminal____target = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge terminalToTerminal__srcTerminal____source = (EMoflonEdge) result3_green[8];
 
 		// perform postprocessing story node is empty
 		// register objects
-		TerminalImpl.pattern_Terminal_1_5_registerobjects_expressionBBBBBBBBBBB(this, ruleresult, resourceToTResource,
-				pair, trgResource, terminalToTerminal, srcTerminal, srcLocation, srcResource, meter, trgTerminal);
+		TerminalImpl.pattern_Terminal_1_5_registerobjects_expressionBBBBBBBBBBB(this, ruleresult, srcTerminal,
+				resourceToTResource, pair, srcResource, trgResource, meter, srcLocation, trgTerminal,
+				terminalToTerminal);
 		return TerminalImpl.pattern_Terminal_1_6_expressionFB(ruleresult);
 	}
 
@@ -246,42 +246,42 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_binding[0];
-		gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result2_binding[1];
-		Location srcLocation = (Location) result2_binding[2];
-		ConductingEquipment srcResource = (ConductingEquipment) result2_binding[3];
-		MeterAsset meter = (MeterAsset) result2_binding[4];
-		for (Object[] result2_black : TerminalImpl.pattern_Terminal_2_2_corematch_blackFBFBBBBB(pair, srcTerminal,
-				srcLocation, srcResource, meter, match)) {
-			PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) result2_black[0];
-			PowerSystemResource trgResource = (PowerSystemResource) result2_black[2];
+		gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result2_binding[0];
+		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_binding[1];
+		ConductingEquipment srcResource = (ConductingEquipment) result2_binding[2];
+		MeterAsset meter = (MeterAsset) result2_binding[3];
+		Location srcLocation = (Location) result2_binding[4];
+		for (Object[] result2_black : TerminalImpl.pattern_Terminal_2_2_corematch_blackBFBBFBBB(srcTerminal, pair,
+				srcResource, meter, srcLocation, match)) {
+			PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) result2_black[1];
+			PowerSystemResource trgResource = (PowerSystemResource) result2_black[4];
 			// ForEach find context
-			for (Object[] result3_black : TerminalImpl.pattern_Terminal_2_3_findcontext_blackBBBBBBB(
-					resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource, meter)) {
+			for (Object[] result3_black : TerminalImpl.pattern_Terminal_2_3_findcontext_blackBBBBBBB(srcTerminal,
+					resourceToTResource, pair, srcResource, trgResource, meter, srcLocation)) {
 				Object[] result3_green = TerminalImpl.pattern_Terminal_2_3_findcontext_greenBBBBBBBFFFFFFFFFF(
-						resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource, meter);
+						srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter, srcLocation);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[7];
 				// EMoflonEdge pair__meter____a = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge resourceToTResource__trgResource____target = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge resourceToTResource__srcResource____source = (EMoflonEdge) result3_green[9];
 				// EMoflonEdge meter__srcLocation____Location = (EMoflonEdge) result3_green[10];
 				// EMoflonEdge srcLocation__meter____Assets = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge resourceToTResource__srcResource____source = (EMoflonEdge) result3_green[12];
-				// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result3_green[13];
-				// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result3_green[14];
+				// EMoflonEdge srcResource__srcTerminal____Terminals = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge srcTerminal__srcResource____ConductingEquipment = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge resourceToTResource__trgResource____target = (EMoflonEdge) result3_green[14];
 				// EMoflonEdge srcLocation__srcResource____PowerSystemResources = (EMoflonEdge) result3_green[15];
 				// EMoflonEdge srcResource__srcLocation____Location = (EMoflonEdge) result3_green[16];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = TerminalImpl.pattern_Terminal_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(
-						this, isApplicableMatch, resourceToTResource, pair, trgResource, srcTerminal, srcLocation,
-						srcResource, meter);
+						this, isApplicableMatch, srcTerminal, resourceToTResource, pair, srcResource, trgResource,
+						meter, srcLocation);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[resourceToTResource] = " + resourceToTResource + ", " + "[pair] = " + pair + ", "
-							+ "[trgResource] = " + trgResource + ", " + "[srcTerminal] = " + srcTerminal + ", "
-							+ "[srcLocation] = " + srcLocation + ", " + "[srcResource] = " + srcResource + ", "
-							+ "[meter] = " + meter + ".");
+							+ "[srcTerminal] = " + srcTerminal + ", " + "[resourceToTResource] = " + resourceToTResource
+							+ ", " + "[pair] = " + pair + ", " + "[srcResource] = " + srcResource + ", "
+							+ "[trgResource] = " + trgResource + ", " + "[meter] = " + meter + ", " + "[srcLocation] = "
+							+ srcLocation + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -311,14 +311,13 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			MeterAsset meter) {
-		match.registerObject("pair", pair);
+	public void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			MeterAssetMMXUPair pair, ConductingEquipment srcResource, MeterAsset meter, Location srcLocation) {
 		match.registerObject("srcTerminal", srcTerminal);
-		match.registerObject("srcLocation", srcLocation);
+		match.registerObject("pair", pair);
 		match.registerObject("srcResource", srcResource);
 		match.registerObject("meter", meter);
+		match.registerObject("srcLocation", srcLocation);
 
 	}
 
@@ -327,9 +326,8 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			MeterAsset meter) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			MeterAssetMMXUPair pair, ConductingEquipment srcResource, MeterAsset meter, Location srcLocation) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -359,9 +357,9 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * @generated
 	 */
 	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
 			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
-			PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {// Create CSP
+			ConductingEquipment srcResource, PowerSystemResource trgResource, MeterAsset meter, Location srcLocation) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -376,13 +374,13 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
+		isApplicableMatch.registerObject("srcTerminal", srcTerminal);
 		isApplicableMatch.registerObject("resourceToTResource", resourceToTResource);
 		isApplicableMatch.registerObject("pair", pair);
-		isApplicableMatch.registerObject("trgResource", trgResource);
-		isApplicableMatch.registerObject("srcTerminal", srcTerminal);
-		isApplicableMatch.registerObject("srcLocation", srcLocation);
 		isApplicableMatch.registerObject("srcResource", srcResource);
+		isApplicableMatch.registerObject("trgResource", trgResource);
 		isApplicableMatch.registerObject("meter", meter);
+		isApplicableMatch.registerObject("srcLocation", srcLocation);
 		return csp;
 	}
 
@@ -400,18 +398,18 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject resourceToTResource, EObject pair,
-			EObject trgResource, EObject terminalToTerminal, EObject srcTerminal, EObject srcLocation,
-			EObject srcResource, EObject meter, EObject trgTerminal) {
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcTerminal, EObject resourceToTResource,
+			EObject pair, EObject srcResource, EObject trgResource, EObject meter, EObject srcLocation,
+			EObject trgTerminal, EObject terminalToTerminal) {
+		ruleresult.registerObject("srcTerminal", srcTerminal);
 		ruleresult.registerObject("resourceToTResource", resourceToTResource);
 		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("trgResource", trgResource);
-		ruleresult.registerObject("terminalToTerminal", terminalToTerminal);
-		ruleresult.registerObject("srcTerminal", srcTerminal);
-		ruleresult.registerObject("srcLocation", srcLocation);
 		ruleresult.registerObject("srcResource", srcResource);
+		ruleresult.registerObject("trgResource", trgResource);
 		ruleresult.registerObject("meter", meter);
+		ruleresult.registerObject("srcLocation", srcLocation);
 		ruleresult.registerObject("trgTerminal", trgTerminal);
+		ruleresult.registerObject("terminalToTerminal", terminalToTerminal);
 
 	}
 
@@ -430,7 +428,7 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_167(EMoflonEdge _edge_Terminals) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_25(EMoflonEdge _edge_Terminals) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = TerminalImpl
 				.pattern_Terminal_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -447,17 +445,17 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		// ForEach test core match and DECs
 		for (Object[] result2_black : TerminalImpl
 				.pattern_Terminal_10_2_testcorematchandDECs_blackFFFFFB(_edge_Terminals)) {
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_black[0];
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result2_black[1];
-			Location srcLocation = (Location) result2_black[2];
-			ConductingEquipment srcResource = (ConductingEquipment) result2_black[3];
-			MeterAsset meter = (MeterAsset) result2_black[4];
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result2_black[0];
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_black[1];
+			ConductingEquipment srcResource = (ConductingEquipment) result2_black[2];
+			MeterAsset meter = (MeterAsset) result2_black[3];
+			Location srcLocation = (Location) result2_black[4];
 			Object[] result2_green = TerminalImpl.pattern_Terminal_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
 
 			// bookkeeping with generic isAppropriate method
 			if (TerminalImpl.pattern_Terminal_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBB(this,
-					match, pair, srcTerminal, srcLocation, srcResource, meter)) {
+					match, srcTerminal, pair, srcResource, meter, srcLocation)) {
 				// Ensure that the correct types of elements are matched
 				if (TerminalImpl.pattern_Terminal_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
 						match)) {
@@ -531,10 +529,10 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			Location srcLocation, ConductingEquipment srcResource, MeterAsset meter) {// match tgg pattern
-		Object[] result1_black = TerminalImpl.pattern_Terminal_13_1_matchtggpattern_blackBBBBB(pair, srcTerminal,
-				srcLocation, srcResource, meter);
+	public boolean checkDEC_FWD(gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair,
+			ConductingEquipment srcResource, MeterAsset meter, Location srcLocation) {// match tgg pattern
+		Object[] result1_black = TerminalImpl.pattern_Terminal_13_1_matchtggpattern_blackBBBBB(srcTerminal, pair,
+				srcResource, meter, srcLocation);
 		if (result1_black != null) {
 			return TerminalImpl.pattern_Terminal_13_2_expressionF();
 		} else {
@@ -551,30 +549,31 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.TERMINAL___IS_APPROPRIATE_FWD__MATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_METERASSET:
-			return isAppropriate_FWD((Match) arguments.get(0), (MeterAssetMMXUPair) arguments.get(1),
-					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(2), (Location) arguments.get(3),
-					(ConductingEquipment) arguments.get(4), (MeterAsset) arguments.get(5));
+		case RulesPackage.TERMINAL___IS_APPROPRIATE_FWD__MATCH_TERMINAL_METERASSETMMXUPAIR_CONDUCTINGEQUIPMENT_METERASSET_LOCATION:
+			return isAppropriate_FWD((Match) arguments.get(0), (gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(1),
+					(MeterAssetMMXUPair) arguments.get(2), (ConductingEquipment) arguments.get(3),
+					(MeterAsset) arguments.get(4), (Location) arguments.get(5));
 		case RulesPackage.TERMINAL___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.TERMINAL___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.TERMINAL___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_METERASSET:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAssetMMXUPair) arguments.get(1),
-					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(2), (Location) arguments.get(3),
-					(ConductingEquipment) arguments.get(4), (MeterAsset) arguments.get(5));
+		case RulesPackage.TERMINAL___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_TERMINAL_METERASSETMMXUPAIR_CONDUCTINGEQUIPMENT_METERASSET_LOCATION:
+			registerObjectsToMatch_FWD((Match) arguments.get(0),
+					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(1), (MeterAssetMMXUPair) arguments.get(2),
+					(ConductingEquipment) arguments.get(3), (MeterAsset) arguments.get(4), (Location) arguments.get(5));
 			return null;
-		case RulesPackage.TERMINAL___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_METERASSET:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAssetMMXUPair) arguments.get(1),
-					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(2), (Location) arguments.get(3),
-					(ConductingEquipment) arguments.get(4), (MeterAsset) arguments.get(5));
+		case RulesPackage.TERMINAL___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_TERMINAL_METERASSETMMXUPAIR_CONDUCTINGEQUIPMENT_METERASSET_LOCATION:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0),
+					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(1), (MeterAssetMMXUPair) arguments.get(2),
+					(ConductingEquipment) arguments.get(3), (MeterAsset) arguments.get(4), (Location) arguments.get(5));
 		case RulesPackage.TERMINAL___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.TERMINAL___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_POWERSYSTEMRESOURCETOPOWERSYSTEMRESOURCE_METERASSETMMXUPAIR_POWERSYSTEMRESOURCE_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_METERASSET:
+		case RulesPackage.TERMINAL___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_TERMINAL_POWERSYSTEMRESOURCETOPOWERSYSTEMRESOURCE_METERASSETMMXUPAIR_CONDUCTINGEQUIPMENT_POWERSYSTEMRESOURCE_METERASSET_LOCATION:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(PowerSystemResourceToPowerSystemResource) arguments.get(1), (MeterAssetMMXUPair) arguments.get(2),
-					(PowerSystemResource) arguments.get(3), (gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(4),
-					(Location) arguments.get(5), (ConductingEquipment) arguments.get(6), (MeterAsset) arguments.get(7));
+					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(1),
+					(PowerSystemResourceToPowerSystemResource) arguments.get(2), (MeterAssetMMXUPair) arguments.get(3),
+					(ConductingEquipment) arguments.get(4), (PowerSystemResource) arguments.get(5),
+					(MeterAsset) arguments.get(6), (Location) arguments.get(7));
 		case RulesPackage.TERMINAL___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.TERMINAL___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -585,34 +584,34 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 			return null;
 		case RulesPackage.TERMINAL___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.TERMINAL___IS_APPROPRIATE_FWD_EMOFLON_EDGE_167__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_167((EMoflonEdge) arguments.get(0));
+		case RulesPackage.TERMINAL___IS_APPROPRIATE_FWD_EMOFLON_EDGE_25__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_25((EMoflonEdge) arguments.get(0));
 		case RulesPackage.TERMINAL___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.TERMINAL___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.TERMINAL___CHECK_DEC_FWD__METERASSETMMXUPAIR_TERMINAL_LOCATION_CONDUCTINGEQUIPMENT_METERASSET:
-			return checkDEC_FWD((MeterAssetMMXUPair) arguments.get(0),
-					(gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(1), (Location) arguments.get(2),
-					(ConductingEquipment) arguments.get(3), (MeterAsset) arguments.get(4));
+		case RulesPackage.TERMINAL___CHECK_DEC_FWD__TERMINAL_METERASSETMMXUPAIR_CONDUCTINGEQUIPMENT_METERASSET_LOCATION:
+			return checkDEC_FWD((gluemodel.CIM.IEC61970.Core.Terminal) arguments.get(0),
+					(MeterAssetMMXUPair) arguments.get(1), (ConductingEquipment) arguments.get(2),
+					(MeterAsset) arguments.get(3), (Location) arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_Terminal_0_1_initialbindings_blackBBBBBBB(Terminal _this, Match match,
-			MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
-		return new Object[] { _this, match, pair, srcTerminal, srcLocation, srcResource, meter };
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
+		return new Object[] { _this, match, srcTerminal, pair, srcResource, meter, srcLocation };
 	}
 
 	public static final Object[] pattern_Terminal_0_2_SolveCSP_bindingFBBBBBBB(Terminal _this, Match match,
-			MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, pair, srcTerminal, srcLocation, srcResource,
-				meter);
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcTerminal, pair, srcResource, meter,
+				srcLocation);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, pair, srcTerminal, srcLocation, srcResource, meter };
+			return new Object[] { csp, _this, match, srcTerminal, pair, srcResource, meter, srcLocation };
 		}
 		return null;
 	}
@@ -622,17 +621,17 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_0_2_SolveCSP_bindingAndBlackFBBBBBBB(Terminal _this, Match match,
-			MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
 		Object[] result_pattern_Terminal_0_2_SolveCSP_binding = pattern_Terminal_0_2_SolveCSP_bindingFBBBBBBB(_this,
-				match, pair, srcTerminal, srcLocation, srcResource, meter);
+				match, srcTerminal, pair, srcResource, meter, srcLocation);
 		if (result_pattern_Terminal_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_Terminal_0_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_Terminal_0_2_SolveCSP_black = pattern_Terminal_0_2_SolveCSP_blackB(csp);
 			if (result_pattern_Terminal_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, pair, srcTerminal, srcLocation, srcResource, meter };
+				return new Object[] { csp, _this, match, srcTerminal, pair, srcResource, meter, srcLocation };
 			}
 		}
 		return null;
@@ -645,9 +644,9 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_0_4_collectelementstobetranslated_blackBBBBBB(Match match,
-			MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
-		return new Object[] { match, pair, srcTerminal, srcLocation, srcResource, meter };
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
+		return new Object[] { match, srcTerminal, pair, srcResource, meter, srcLocation };
 	}
 
 	public static final Object[] pattern_Terminal_0_4_collectelementstobetranslated_greenBBBFF(Match match,
@@ -671,22 +670,22 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_0_5_collectcontextelements_blackBBBBBB(Match match,
-			MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
-		return new Object[] { match, pair, srcTerminal, srcLocation, srcResource, meter };
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
+		return new Object[] { match, srcTerminal, pair, srcResource, meter, srcLocation };
 	}
 
 	public static final Object[] pattern_Terminal_0_5_collectcontextelements_greenBBBBBFFFFF(Match match,
-			MeterAssetMMXUPair pair, Location srcLocation, ConductingEquipment srcResource, MeterAsset meter) {
+			MeterAssetMMXUPair pair, ConductingEquipment srcResource, MeterAsset meter, Location srcLocation) {
 		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge meter__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__meter____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__srcResource____PowerSystemResources = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getContextNodes().add(pair);
-		match.getContextNodes().add(srcLocation);
 		match.getContextNodes().add(srcResource);
 		match.getContextNodes().add(meter);
+		match.getContextNodes().add(srcLocation);
 		String pair__meter____a_name_prime = "a";
 		String meter__srcLocation____Location_name_prime = "Location";
 		String srcLocation__meter____Assets_name_prime = "Assets";
@@ -713,15 +712,15 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		srcLocation__srcResource____PowerSystemResources
 				.setName(srcLocation__srcResource____PowerSystemResources_name_prime);
 		srcResource__srcLocation____Location.setName(srcResource__srcLocation____Location_name_prime);
-		return new Object[] { match, pair, srcLocation, srcResource, meter, pair__meter____a,
+		return new Object[] { match, pair, srcResource, meter, srcLocation, pair__meter____a,
 				meter__srcLocation____Location, srcLocation__meter____Assets,
 				srcLocation__srcResource____PowerSystemResources, srcResource__srcLocation____Location };
 	}
 
 	public static final void pattern_Terminal_0_6_registerobjectstomatch_expressionBBBBBBB(Terminal _this, Match match,
-			MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
-		_this.registerObjectsToMatch_FWD(match, pair, srcTerminal, srcLocation, srcResource, meter);
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
+		_this.registerObjectsToMatch_FWD(match, srcTerminal, pair, srcResource, meter, srcLocation);
 
 	}
 
@@ -737,36 +736,36 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 
 	public static final Object[] pattern_Terminal_1_1_performtransformation_bindingFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("resourceToTResource");
-		EObject _localVariable_1 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_2 = isApplicableMatch.getObject("trgResource");
-		EObject _localVariable_3 = isApplicableMatch.getObject("srcTerminal");
-		EObject _localVariable_4 = isApplicableMatch.getObject("srcLocation");
-		EObject _localVariable_5 = isApplicableMatch.getObject("srcResource");
-		EObject _localVariable_6 = isApplicableMatch.getObject("meter");
-		EObject tmpResourceToTResource = _localVariable_0;
-		EObject tmpPair = _localVariable_1;
-		EObject tmpTrgResource = _localVariable_2;
-		EObject tmpSrcTerminal = _localVariable_3;
-		EObject tmpSrcLocation = _localVariable_4;
-		EObject tmpSrcResource = _localVariable_5;
-		EObject tmpMeter = _localVariable_6;
-		if (tmpResourceToTResource instanceof PowerSystemResourceToPowerSystemResource) {
-			PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) tmpResourceToTResource;
-			if (tmpPair instanceof MeterAssetMMXUPair) {
-				MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
-				if (tmpTrgResource instanceof PowerSystemResource) {
-					PowerSystemResource trgResource = (PowerSystemResource) tmpTrgResource;
-					if (tmpSrcTerminal instanceof gluemodel.CIM.IEC61970.Core.Terminal) {
-						gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) tmpSrcTerminal;
-						if (tmpSrcLocation instanceof Location) {
-							Location srcLocation = (Location) tmpSrcLocation;
-							if (tmpSrcResource instanceof ConductingEquipment) {
-								ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
-								if (tmpMeter instanceof MeterAsset) {
-									MeterAsset meter = (MeterAsset) tmpMeter;
-									return new Object[] { resourceToTResource, pair, trgResource, srcTerminal,
-											srcLocation, srcResource, meter, isApplicableMatch };
+		EObject _localVariable_0 = isApplicableMatch.getObject("srcTerminal");
+		EObject _localVariable_1 = isApplicableMatch.getObject("resourceToTResource");
+		EObject _localVariable_2 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_3 = isApplicableMatch.getObject("srcResource");
+		EObject _localVariable_4 = isApplicableMatch.getObject("trgResource");
+		EObject _localVariable_5 = isApplicableMatch.getObject("meter");
+		EObject _localVariable_6 = isApplicableMatch.getObject("srcLocation");
+		EObject tmpSrcTerminal = _localVariable_0;
+		EObject tmpResourceToTResource = _localVariable_1;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpSrcResource = _localVariable_3;
+		EObject tmpTrgResource = _localVariable_4;
+		EObject tmpMeter = _localVariable_5;
+		EObject tmpSrcLocation = _localVariable_6;
+		if (tmpSrcTerminal instanceof gluemodel.CIM.IEC61970.Core.Terminal) {
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) tmpSrcTerminal;
+			if (tmpResourceToTResource instanceof PowerSystemResourceToPowerSystemResource) {
+				PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) tmpResourceToTResource;
+				if (tmpPair instanceof MeterAssetMMXUPair) {
+					MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
+					if (tmpSrcResource instanceof ConductingEquipment) {
+						ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
+						if (tmpTrgResource instanceof PowerSystemResource) {
+							PowerSystemResource trgResource = (PowerSystemResource) tmpTrgResource;
+							if (tmpMeter instanceof MeterAsset) {
+								MeterAsset meter = (MeterAsset) tmpMeter;
+								if (tmpSrcLocation instanceof Location) {
+									Location srcLocation = (Location) tmpSrcLocation;
+									return new Object[] { srcTerminal, resourceToTResource, pair, srcResource,
+											trgResource, meter, srcLocation, isApplicableMatch };
 								}
 							}
 						}
@@ -778,14 +777,15 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_1_1_performtransformation_blackBBBBBBBFBB(
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
 			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
-			PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter, Terminal _this, IsApplicableMatch isApplicableMatch) {
+			ConductingEquipment srcResource, PowerSystemResource trgResource, MeterAsset meter, Location srcLocation,
+			Terminal _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource,
-						meter, csp, _this, isApplicableMatch };
+				return new Object[] { srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter,
+						srcLocation, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -796,120 +796,119 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		Object[] result_pattern_Terminal_1_1_performtransformation_binding = pattern_Terminal_1_1_performtransformation_bindingFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_Terminal_1_1_performtransformation_binding != null) {
-			PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) result_pattern_Terminal_1_1_performtransformation_binding[0];
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_Terminal_1_1_performtransformation_binding[1];
-			PowerSystemResource trgResource = (PowerSystemResource) result_pattern_Terminal_1_1_performtransformation_binding[2];
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result_pattern_Terminal_1_1_performtransformation_binding[3];
-			Location srcLocation = (Location) result_pattern_Terminal_1_1_performtransformation_binding[4];
-			ConductingEquipment srcResource = (ConductingEquipment) result_pattern_Terminal_1_1_performtransformation_binding[5];
-			MeterAsset meter = (MeterAsset) result_pattern_Terminal_1_1_performtransformation_binding[6];
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) result_pattern_Terminal_1_1_performtransformation_binding[0];
+			PowerSystemResourceToPowerSystemResource resourceToTResource = (PowerSystemResourceToPowerSystemResource) result_pattern_Terminal_1_1_performtransformation_binding[1];
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_Terminal_1_1_performtransformation_binding[2];
+			ConductingEquipment srcResource = (ConductingEquipment) result_pattern_Terminal_1_1_performtransformation_binding[3];
+			PowerSystemResource trgResource = (PowerSystemResource) result_pattern_Terminal_1_1_performtransformation_binding[4];
+			MeterAsset meter = (MeterAsset) result_pattern_Terminal_1_1_performtransformation_binding[5];
+			Location srcLocation = (Location) result_pattern_Terminal_1_1_performtransformation_binding[6];
 
 			Object[] result_pattern_Terminal_1_1_performtransformation_black = pattern_Terminal_1_1_performtransformation_blackBBBBBBBFBB(
-					resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource, meter, _this,
+					srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter, srcLocation, _this,
 					isApplicableMatch);
 			if (result_pattern_Terminal_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_Terminal_1_1_performtransformation_black[7];
 
-				return new Object[] { resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource,
-						meter, csp, _this, isApplicableMatch };
+				return new Object[] { srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter,
+						srcLocation, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_Terminal_1_1_performtransformation_greenFBF(
+	public static final Object[] pattern_Terminal_1_1_performtransformation_greenBFF(
 			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal) {
-		TerminalToTerminal terminalToTerminal = Task2Factory.eINSTANCE.createTerminalToTerminal();
 		outagePreventionJointarget.Terminal trgTerminal = OutagePreventionJointargetFactory.eINSTANCE.createTerminal();
-		terminalToTerminal.setSource(srcTerminal);
+		TerminalToTerminal terminalToTerminal = Task2Factory.eINSTANCE.createTerminalToTerminal();
 		terminalToTerminal.setTarget(trgTerminal);
-		return new Object[] { terminalToTerminal, srcTerminal, trgTerminal };
+		terminalToTerminal.setSource(srcTerminal);
+		return new Object[] { srcTerminal, trgTerminal, terminalToTerminal };
 	}
 
 	public static final Object[] pattern_Terminal_1_2_collecttranslatedelements_blackBBB(
-			TerminalToTerminal terminalToTerminal, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			outagePreventionJointarget.Terminal trgTerminal) {
-		return new Object[] { terminalToTerminal, srcTerminal, trgTerminal };
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
+			TerminalToTerminal terminalToTerminal) {
+		return new Object[] { srcTerminal, trgTerminal, terminalToTerminal };
 	}
 
 	public static final Object[] pattern_Terminal_1_2_collecttranslatedelements_greenFBBB(
-			TerminalToTerminal terminalToTerminal, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			outagePreventionJointarget.Terminal trgTerminal) {
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
+			TerminalToTerminal terminalToTerminal) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedLinkElements().add(terminalToTerminal);
 		ruleresult.getTranslatedElements().add(srcTerminal);
 		ruleresult.getCreatedElements().add(trgTerminal);
-		return new Object[] { ruleresult, terminalToTerminal, srcTerminal, trgTerminal };
+		ruleresult.getCreatedLinkElements().add(terminalToTerminal);
+		return new Object[] { ruleresult, srcTerminal, trgTerminal, terminalToTerminal };
 	}
 
 	public static final Object[] pattern_Terminal_1_3_bookkeepingforedges_blackBBBBBBBBBB(PerformRuleResult ruleresult,
-			EObject resourceToTResource, EObject pair, EObject trgResource, EObject terminalToTerminal,
-			EObject srcTerminal, EObject srcLocation, EObject srcResource, EObject meter, EObject trgTerminal) {
-		if (!resourceToTResource.equals(trgResource)) {
-			if (!resourceToTResource.equals(terminalToTerminal)) {
-				if (!resourceToTResource.equals(srcTerminal)) {
-					if (!resourceToTResource.equals(srcLocation)) {
+			EObject srcTerminal, EObject resourceToTResource, EObject pair, EObject srcResource, EObject trgResource,
+			EObject meter, EObject srcLocation, EObject trgTerminal, EObject terminalToTerminal) {
+		if (!srcTerminal.equals(trgResource)) {
+			if (!srcTerminal.equals(trgTerminal)) {
+				if (!srcTerminal.equals(terminalToTerminal)) {
+					if (!resourceToTResource.equals(srcTerminal)) {
 						if (!resourceToTResource.equals(srcResource)) {
-							if (!resourceToTResource.equals(trgTerminal)) {
-								if (!pair.equals(resourceToTResource)) {
-									if (!pair.equals(trgResource)) {
-										if (!pair.equals(terminalToTerminal)) {
+							if (!resourceToTResource.equals(trgResource)) {
+								if (!resourceToTResource.equals(srcLocation)) {
+									if (!resourceToTResource.equals(trgTerminal)) {
+										if (!resourceToTResource.equals(terminalToTerminal)) {
 											if (!pair.equals(srcTerminal)) {
-												if (!pair.equals(srcLocation)) {
+												if (!pair.equals(resourceToTResource)) {
 													if (!pair.equals(srcResource)) {
-														if (!pair.equals(trgTerminal)) {
-															if (!trgResource.equals(trgTerminal)) {
-																if (!terminalToTerminal.equals(trgResource)) {
-																	if (!terminalToTerminal.equals(trgTerminal)) {
-																		if (!srcTerminal.equals(trgResource)) {
-																			if (!srcTerminal
-																					.equals(terminalToTerminal)) {
-																				if (!srcTerminal.equals(trgTerminal)) {
-																					if (!srcLocation
-																							.equals(trgResource)) {
-																						if (!srcLocation.equals(
-																								terminalToTerminal)) {
-																							if (!srcLocation.equals(
+														if (!pair.equals(trgResource)) {
+															if (!pair.equals(srcLocation)) {
+																if (!pair.equals(trgTerminal)) {
+																	if (!pair.equals(terminalToTerminal)) {
+																		if (!srcResource.equals(srcTerminal)) {
+																			if (!srcResource.equals(trgResource)) {
+																				if (!srcResource.equals(trgTerminal)) {
+																					if (!srcResource.equals(
+																							terminalToTerminal)) {
+																						if (!trgResource
+																								.equals(trgTerminal)) {
+																							if (!meter.equals(
 																									srcTerminal)) {
-																								if (!srcLocation.equals(
-																										srcResource)) {
-																									if (!srcLocation
-																											.equals(trgTerminal)) {
-																										if (!srcResource
-																												.equals(trgResource)) {
-																											if (!srcResource
-																													.equals(terminalToTerminal)) {
-																												if (!srcResource
-																														.equals(srcTerminal)) {
-																													if (!srcResource
+																								if (!meter.equals(
+																										resourceToTResource)) {
+																									if (!meter.equals(
+																											pair)) {
+																										if (!meter
+																												.equals(srcResource)) {
+																											if (!meter
+																													.equals(trgResource)) {
+																												if (!meter
+																														.equals(srcLocation)) {
+																													if (!meter
 																															.equals(trgTerminal)) {
 																														if (!meter
-																																.equals(resourceToTResource)) {
-																															if (!meter
-																																	.equals(pair)) {
-																																if (!meter
-																																		.equals(trgResource)) {
-																																	if (!meter
-																																			.equals(terminalToTerminal)) {
-																																		if (!meter
-																																				.equals(srcTerminal)) {
-																																			if (!meter
-																																					.equals(srcLocation)) {
-																																				if (!meter
-																																						.equals(srcResource)) {
-																																					if (!meter
+																																.equals(terminalToTerminal)) {
+																															if (!srcLocation
+																																	.equals(srcTerminal)) {
+																																if (!srcLocation
+																																		.equals(srcResource)) {
+																																	if (!srcLocation
+																																			.equals(trgResource)) {
+																																		if (!srcLocation
+																																				.equals(trgTerminal)) {
+																																			if (!srcLocation
+																																					.equals(terminalToTerminal)) {
+																																				if (!terminalToTerminal
+																																						.equals(trgResource)) {
+																																					if (!terminalToTerminal
 																																							.equals(trgTerminal)) {
 																																						return new Object[] {
 																																								ruleresult,
+																																								srcTerminal,
 																																								resourceToTResource,
 																																								pair,
-																																								trgResource,
-																																								terminalToTerminal,
-																																								srcTerminal,
-																																								srcLocation,
 																																								srcResource,
+																																								trgResource,
 																																								meter,
-																																								trgTerminal };
+																																								srcLocation,
+																																								trgTerminal,
+																																								terminalToTerminal };
 																																					}
 																																				}
 																																			}
@@ -950,19 +949,16 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_1_3_bookkeepingforedges_greenBBBBBFFFF(PerformRuleResult ruleresult,
-			EObject terminalToTerminal, EObject srcTerminal, EObject srcResource, EObject trgTerminal) {
-		EMoflonEdge terminalToTerminal__srcTerminal____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			EObject srcTerminal, EObject srcResource, EObject trgTerminal, EObject terminalToTerminal) {
 		EMoflonEdge srcResource__srcTerminal____Terminals = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcTerminal__srcResource____ConductingEquipment = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge terminalToTerminal__trgTerminal____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge terminalToTerminal__srcTerminal____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "Terminal";
-		String terminalToTerminal__srcTerminal____source_name_prime = "source";
 		String srcResource__srcTerminal____Terminals_name_prime = "Terminals";
 		String srcTerminal__srcResource____ConductingEquipment_name_prime = "ConductingEquipment";
 		String terminalToTerminal__trgTerminal____target_name_prime = "target";
-		terminalToTerminal__srcTerminal____source.setSrc(terminalToTerminal);
-		terminalToTerminal__srcTerminal____source.setTrg(srcTerminal);
-		ruleresult.getCreatedEdges().add(terminalToTerminal__srcTerminal____source);
+		String terminalToTerminal__srcTerminal____source_name_prime = "source";
 		srcResource__srcTerminal____Terminals.setSrc(srcResource);
 		srcResource__srcTerminal____Terminals.setTrg(srcTerminal);
 		ruleresult.getTranslatedEdges().add(srcResource__srcTerminal____Terminals);
@@ -972,23 +968,26 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		terminalToTerminal__trgTerminal____target.setSrc(terminalToTerminal);
 		terminalToTerminal__trgTerminal____target.setTrg(trgTerminal);
 		ruleresult.getCreatedEdges().add(terminalToTerminal__trgTerminal____target);
+		terminalToTerminal__srcTerminal____source.setSrc(terminalToTerminal);
+		terminalToTerminal__srcTerminal____source.setTrg(srcTerminal);
+		ruleresult.getCreatedEdges().add(terminalToTerminal__srcTerminal____source);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		terminalToTerminal__srcTerminal____source.setName(terminalToTerminal__srcTerminal____source_name_prime);
 		srcResource__srcTerminal____Terminals.setName(srcResource__srcTerminal____Terminals_name_prime);
 		srcTerminal__srcResource____ConductingEquipment
 				.setName(srcTerminal__srcResource____ConductingEquipment_name_prime);
 		terminalToTerminal__trgTerminal____target.setName(terminalToTerminal__trgTerminal____target_name_prime);
-		return new Object[] { ruleresult, terminalToTerminal, srcTerminal, srcResource, trgTerminal,
-				terminalToTerminal__srcTerminal____source, srcResource__srcTerminal____Terminals,
-				srcTerminal__srcResource____ConductingEquipment, terminalToTerminal__trgTerminal____target };
+		terminalToTerminal__srcTerminal____source.setName(terminalToTerminal__srcTerminal____source_name_prime);
+		return new Object[] { ruleresult, srcTerminal, srcResource, trgTerminal, terminalToTerminal,
+				srcResource__srcTerminal____Terminals, srcTerminal__srcResource____ConductingEquipment,
+				terminalToTerminal__trgTerminal____target, terminalToTerminal__srcTerminal____source };
 	}
 
 	public static final void pattern_Terminal_1_5_registerobjects_expressionBBBBBBBBBBB(Terminal _this,
-			PerformRuleResult ruleresult, EObject resourceToTResource, EObject pair, EObject trgResource,
-			EObject terminalToTerminal, EObject srcTerminal, EObject srcLocation, EObject srcResource, EObject meter,
-			EObject trgTerminal) {
-		_this.registerObjects_FWD(ruleresult, resourceToTResource, pair, trgResource, terminalToTerminal, srcTerminal,
-				srcLocation, srcResource, meter, trgTerminal);
+			PerformRuleResult ruleresult, EObject srcTerminal, EObject resourceToTResource, EObject pair,
+			EObject srcResource, EObject trgResource, EObject meter, EObject srcLocation, EObject trgTerminal,
+			EObject terminalToTerminal) {
+		_this.registerObjects_FWD(ruleresult, srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter,
+				srcLocation, trgTerminal, terminalToTerminal);
 
 	}
 
@@ -1045,27 +1044,27 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_2_2_corematch_bindingFFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("pair");
-		EObject _localVariable_1 = match.getObject("srcTerminal");
-		EObject _localVariable_2 = match.getObject("srcLocation");
-		EObject _localVariable_3 = match.getObject("srcResource");
-		EObject _localVariable_4 = match.getObject("meter");
-		EObject tmpPair = _localVariable_0;
-		EObject tmpSrcTerminal = _localVariable_1;
-		EObject tmpSrcLocation = _localVariable_2;
-		EObject tmpSrcResource = _localVariable_3;
-		EObject tmpMeter = _localVariable_4;
-		if (tmpPair instanceof MeterAssetMMXUPair) {
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
-			if (tmpSrcTerminal instanceof gluemodel.CIM.IEC61970.Core.Terminal) {
-				gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) tmpSrcTerminal;
-				if (tmpSrcLocation instanceof Location) {
-					Location srcLocation = (Location) tmpSrcLocation;
-					if (tmpSrcResource instanceof ConductingEquipment) {
-						ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
-						if (tmpMeter instanceof MeterAsset) {
-							MeterAsset meter = (MeterAsset) tmpMeter;
-							return new Object[] { pair, srcTerminal, srcLocation, srcResource, meter, match };
+		EObject _localVariable_0 = match.getObject("srcTerminal");
+		EObject _localVariable_1 = match.getObject("pair");
+		EObject _localVariable_2 = match.getObject("srcResource");
+		EObject _localVariable_3 = match.getObject("meter");
+		EObject _localVariable_4 = match.getObject("srcLocation");
+		EObject tmpSrcTerminal = _localVariable_0;
+		EObject tmpPair = _localVariable_1;
+		EObject tmpSrcResource = _localVariable_2;
+		EObject tmpMeter = _localVariable_3;
+		EObject tmpSrcLocation = _localVariable_4;
+		if (tmpSrcTerminal instanceof gluemodel.CIM.IEC61970.Core.Terminal) {
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal = (gluemodel.CIM.IEC61970.Core.Terminal) tmpSrcTerminal;
+			if (tmpPair instanceof MeterAssetMMXUPair) {
+				MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
+				if (tmpSrcResource instanceof ConductingEquipment) {
+					ConductingEquipment srcResource = (ConductingEquipment) tmpSrcResource;
+					if (tmpMeter instanceof MeterAsset) {
+						MeterAsset meter = (MeterAsset) tmpMeter;
+						if (tmpSrcLocation instanceof Location) {
+							Location srcLocation = (Location) tmpSrcLocation;
+							return new Object[] { srcTerminal, pair, srcResource, meter, srcLocation, match };
 						}
 					}
 				}
@@ -1074,16 +1073,16 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_Terminal_2_2_corematch_blackFBFBBBBB(MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			MeterAsset meter, Match match) {
+	public static final Iterable<Object[]> pattern_Terminal_2_2_corematch_blackBFBBFBBB(
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (PowerSystemResourceToPowerSystemResource resourceToTResource : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcResource, PowerSystemResourceToPowerSystemResource.class, "source")) {
 			PowerSystemResource trgResource = resourceToTResource.getTarget();
 			if (trgResource != null) {
-				_result.add(new Object[] { resourceToTResource, pair, trgResource, srcTerminal, srcLocation,
-						srcResource, meter, match });
+				_result.add(new Object[] { srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter,
+						srcLocation, match });
 			}
 
 		}
@@ -1091,18 +1090,18 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Iterable<Object[]> pattern_Terminal_2_3_findcontext_blackBBBBBBB(
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
 			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
-			PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
+			ConductingEquipment srcResource, PowerSystemResource trgResource, MeterAsset meter, Location srcLocation) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (meter.equals(pair.getA())) {
-			if (trgResource.equals(resourceToTResource.getTarget())) {
+			if (srcResource.equals(resourceToTResource.getSource())) {
 				if (srcLocation.equals(meter.getLocation())) {
-					if (srcResource.equals(resourceToTResource.getSource())) {
-						if (srcResource.getTerminals().contains(srcTerminal)) {
+					if (srcResource.getTerminals().contains(srcTerminal)) {
+						if (trgResource.equals(resourceToTResource.getTarget())) {
 							if (srcLocation.getPowerSystemResources().contains(srcResource)) {
-								_result.add(new Object[] { resourceToTResource, pair, trgResource, srcTerminal,
-										srcLocation, srcResource, meter });
+								_result.add(new Object[] { srcTerminal, resourceToTResource, pair, srcResource,
+										trgResource, meter, srcLocation });
 							}
 						}
 					}
@@ -1113,56 +1112,56 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_2_3_findcontext_greenBBBBBBBFFFFFFFFFF(
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
 			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
-			PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation,
-			ConductingEquipment srcResource, MeterAsset meter) {
+			ConductingEquipment srcResource, PowerSystemResource trgResource, MeterAsset meter, Location srcLocation) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge pair__meter____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge resourceToTResource__trgResource____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge resourceToTResource__srcResource____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge meter__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__meter____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge resourceToTResource__srcResource____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcTerminal____Terminals = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcTerminal__srcResource____ConductingEquipment = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge resourceToTResource__trgResource____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__srcResource____PowerSystemResources = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcResource__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String pair__meter____a_name_prime = "a";
-		String resourceToTResource__trgResource____target_name_prime = "target";
+		String resourceToTResource__srcResource____source_name_prime = "source";
 		String meter__srcLocation____Location_name_prime = "Location";
 		String srcLocation__meter____Assets_name_prime = "Assets";
-		String resourceToTResource__srcResource____source_name_prime = "source";
 		String srcResource__srcTerminal____Terminals_name_prime = "Terminals";
 		String srcTerminal__srcResource____ConductingEquipment_name_prime = "ConductingEquipment";
+		String resourceToTResource__trgResource____target_name_prime = "target";
 		String srcLocation__srcResource____PowerSystemResources_name_prime = "PowerSystemResources";
 		String srcResource__srcLocation____Location_name_prime = "Location";
+		isApplicableMatch.getAllContextElements().add(srcTerminal);
 		isApplicableMatch.getAllContextElements().add(resourceToTResource);
 		isApplicableMatch.getAllContextElements().add(pair);
-		isApplicableMatch.getAllContextElements().add(trgResource);
-		isApplicableMatch.getAllContextElements().add(srcTerminal);
-		isApplicableMatch.getAllContextElements().add(srcLocation);
 		isApplicableMatch.getAllContextElements().add(srcResource);
+		isApplicableMatch.getAllContextElements().add(trgResource);
 		isApplicableMatch.getAllContextElements().add(meter);
+		isApplicableMatch.getAllContextElements().add(srcLocation);
 		pair__meter____a.setSrc(pair);
 		pair__meter____a.setTrg(meter);
 		isApplicableMatch.getAllContextElements().add(pair__meter____a);
-		resourceToTResource__trgResource____target.setSrc(resourceToTResource);
-		resourceToTResource__trgResource____target.setTrg(trgResource);
-		isApplicableMatch.getAllContextElements().add(resourceToTResource__trgResource____target);
+		resourceToTResource__srcResource____source.setSrc(resourceToTResource);
+		resourceToTResource__srcResource____source.setTrg(srcResource);
+		isApplicableMatch.getAllContextElements().add(resourceToTResource__srcResource____source);
 		meter__srcLocation____Location.setSrc(meter);
 		meter__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(meter__srcLocation____Location);
 		srcLocation__meter____Assets.setSrc(srcLocation);
 		srcLocation__meter____Assets.setTrg(meter);
 		isApplicableMatch.getAllContextElements().add(srcLocation__meter____Assets);
-		resourceToTResource__srcResource____source.setSrc(resourceToTResource);
-		resourceToTResource__srcResource____source.setTrg(srcResource);
-		isApplicableMatch.getAllContextElements().add(resourceToTResource__srcResource____source);
 		srcResource__srcTerminal____Terminals.setSrc(srcResource);
 		srcResource__srcTerminal____Terminals.setTrg(srcTerminal);
 		isApplicableMatch.getAllContextElements().add(srcResource__srcTerminal____Terminals);
 		srcTerminal__srcResource____ConductingEquipment.setSrc(srcTerminal);
 		srcTerminal__srcResource____ConductingEquipment.setTrg(srcResource);
 		isApplicableMatch.getAllContextElements().add(srcTerminal__srcResource____ConductingEquipment);
+		resourceToTResource__trgResource____target.setSrc(resourceToTResource);
+		resourceToTResource__trgResource____target.setTrg(trgResource);
+		isApplicableMatch.getAllContextElements().add(resourceToTResource__trgResource____target);
 		srcLocation__srcResource____PowerSystemResources.setSrc(srcLocation);
 		srcLocation__srcResource____PowerSystemResources.setTrg(srcResource);
 		isApplicableMatch.getAllContextElements().add(srcLocation__srcResource____PowerSystemResources);
@@ -1170,34 +1169,33 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		srcResource__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(srcResource__srcLocation____Location);
 		pair__meter____a.setName(pair__meter____a_name_prime);
-		resourceToTResource__trgResource____target.setName(resourceToTResource__trgResource____target_name_prime);
+		resourceToTResource__srcResource____source.setName(resourceToTResource__srcResource____source_name_prime);
 		meter__srcLocation____Location.setName(meter__srcLocation____Location_name_prime);
 		srcLocation__meter____Assets.setName(srcLocation__meter____Assets_name_prime);
-		resourceToTResource__srcResource____source.setName(resourceToTResource__srcResource____source_name_prime);
 		srcResource__srcTerminal____Terminals.setName(srcResource__srcTerminal____Terminals_name_prime);
 		srcTerminal__srcResource____ConductingEquipment
 				.setName(srcTerminal__srcResource____ConductingEquipment_name_prime);
+		resourceToTResource__trgResource____target.setName(resourceToTResource__trgResource____target_name_prime);
 		srcLocation__srcResource____PowerSystemResources
 				.setName(srcLocation__srcResource____PowerSystemResources_name_prime);
 		srcResource__srcLocation____Location.setName(srcResource__srcLocation____Location_name_prime);
-		return new Object[] { resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource, meter,
-				isApplicableMatch, pair__meter____a, resourceToTResource__trgResource____target,
-				meter__srcLocation____Location, srcLocation__meter____Assets,
-				resourceToTResource__srcResource____source, srcResource__srcTerminal____Terminals,
-				srcTerminal__srcResource____ConductingEquipment, srcLocation__srcResource____PowerSystemResources,
-				srcResource__srcLocation____Location };
+		return new Object[] { srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter, srcLocation,
+				isApplicableMatch, pair__meter____a, resourceToTResource__srcResource____source,
+				meter__srcLocation____Location, srcLocation__meter____Assets, srcResource__srcTerminal____Terminals,
+				srcTerminal__srcResource____ConductingEquipment, resourceToTResource__trgResource____target,
+				srcLocation__srcResource____PowerSystemResources, srcResource__srcLocation____Location };
 	}
 
 	public static final Object[] pattern_Terminal_2_4_solveCSP_bindingFBBBBBBBBB(Terminal _this,
-			IsApplicableMatch isApplicableMatch, PowerSystemResourceToPowerSystemResource resourceToTResource,
-			MeterAssetMMXUPair pair, PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			Location srcLocation, ConductingEquipment srcResource, MeterAsset meter) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, resourceToTResource, pair,
-				trgResource, srcTerminal, srcLocation, srcResource, meter);
+			IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
+			ConductingEquipment srcResource, PowerSystemResource trgResource, MeterAsset meter, Location srcLocation) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcTerminal, resourceToTResource,
+				pair, srcResource, trgResource, meter, srcLocation);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, resourceToTResource, pair, trgResource, srcTerminal,
-					srcLocation, srcResource, meter };
+			return new Object[] { csp, _this, isApplicableMatch, srcTerminal, resourceToTResource, pair, srcResource,
+					trgResource, meter, srcLocation };
 		}
 		return null;
 	}
@@ -1207,20 +1205,20 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final Object[] pattern_Terminal_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(Terminal _this,
-			IsApplicableMatch isApplicableMatch, PowerSystemResourceToPowerSystemResource resourceToTResource,
-			MeterAssetMMXUPair pair, PowerSystemResource trgResource, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			Location srcLocation, ConductingEquipment srcResource, MeterAsset meter) {
+			IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
+			PowerSystemResourceToPowerSystemResource resourceToTResource, MeterAssetMMXUPair pair,
+			ConductingEquipment srcResource, PowerSystemResource trgResource, MeterAsset meter, Location srcLocation) {
 		Object[] result_pattern_Terminal_2_4_solveCSP_binding = pattern_Terminal_2_4_solveCSP_bindingFBBBBBBBBB(_this,
-				isApplicableMatch, resourceToTResource, pair, trgResource, srcTerminal, srcLocation, srcResource,
-				meter);
+				isApplicableMatch, srcTerminal, resourceToTResource, pair, srcResource, trgResource, meter,
+				srcLocation);
 		if (result_pattern_Terminal_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_Terminal_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_Terminal_2_4_solveCSP_black = pattern_Terminal_2_4_solveCSP_blackB(csp);
 			if (result_pattern_Terminal_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, resourceToTResource, pair, trgResource,
-						srcTerminal, srcLocation, srcResource, meter };
+				return new Object[] { csp, _this, isApplicableMatch, srcTerminal, resourceToTResource, pair,
+						srcResource, trgResource, meter, srcLocation };
 			}
 		}
 		return null;
@@ -1305,9 +1303,9 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 
 	public static final Object[] pattern_Terminal_10_2_testcorematchandDECs_black_nac_0BB(
 			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, ConductingEquipment srcResource) {
-		ConductingEquipment __DEC_srcTerminal_Terminals_269296 = srcTerminal.getConductingEquipment();
-		if (__DEC_srcTerminal_Terminals_269296 != null) {
-			if (!srcResource.equals(__DEC_srcTerminal_Terminals_269296)) {
+		ConductingEquipment __DEC_srcTerminal_Terminals_45757 = srcTerminal.getConductingEquipment();
+		if (__DEC_srcTerminal_Terminals_45757 != null) {
+			if (!srcResource.equals(__DEC_srcTerminal_Terminals_45757)) {
 				return new Object[] { srcTerminal, srcResource };
 			}
 		}
@@ -1334,7 +1332,7 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 									MeterAsset meter = (MeterAsset) tmpMeter;
 									for (MeterAssetMMXUPair pair : org.moflon.core.utilities.eMoflonEMFUtil
 											.getOppositeReferenceTyped(meter, MeterAssetMMXUPair.class, "a")) {
-										_result.add(new Object[] { pair, srcTerminal, srcLocation, srcResource, meter,
+										_result.add(new Object[] { srcTerminal, pair, srcResource, meter, srcLocation,
 												_edge_Terminals });
 									}
 								}
@@ -1360,9 +1358,9 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 	}
 
 	public static final boolean pattern_Terminal_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBB(
-			Terminal _this, Match match, MeterAssetMMXUPair pair, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal,
-			Location srcLocation, ConductingEquipment srcResource, MeterAsset meter) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, pair, srcTerminal, srcLocation, srcResource, meter);
+			Terminal _this, Match match, gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair,
+			ConductingEquipment srcResource, MeterAsset meter, Location srcLocation) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcTerminal, pair, srcResource, meter, srcLocation);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1397,9 +1395,9 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 
 	public static final Object[] pattern_Terminal_13_1_matchtggpattern_black_nac_0BB(
 			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, ConductingEquipment srcResource) {
-		ConductingEquipment __DEC_srcTerminal_Terminals_964730 = srcTerminal.getConductingEquipment();
-		if (__DEC_srcTerminal_Terminals_964730 != null) {
-			if (!srcResource.equals(__DEC_srcTerminal_Terminals_964730)) {
+		ConductingEquipment __DEC_srcTerminal_Terminals_882695 = srcTerminal.getConductingEquipment();
+		if (__DEC_srcTerminal_Terminals_882695 != null) {
+			if (!srcResource.equals(__DEC_srcTerminal_Terminals_882695)) {
 				return new Object[] { srcTerminal, srcResource };
 			}
 		}
@@ -1407,15 +1405,15 @@ public class TerminalImpl extends AbstractRuleImpl implements Terminal {
 		return null;
 	}
 
-	public static final Object[] pattern_Terminal_13_1_matchtggpattern_blackBBBBB(MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, Location srcLocation, ConductingEquipment srcResource,
-			MeterAsset meter) {
+	public static final Object[] pattern_Terminal_13_1_matchtggpattern_blackBBBBB(
+			gluemodel.CIM.IEC61970.Core.Terminal srcTerminal, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Location srcLocation) {
 		if (meter.equals(pair.getA())) {
 			if (srcLocation.equals(meter.getLocation())) {
 				if (srcResource.getTerminals().contains(srcTerminal)) {
 					if (srcLocation.getPowerSystemResources().contains(srcResource)) {
 						if (pattern_Terminal_13_1_matchtggpattern_black_nac_0BB(srcTerminal, srcResource) == null) {
-							return new Object[] { pair, srcTerminal, srcLocation, srcResource, meter };
+							return new Object[] { srcTerminal, pair, srcResource, meter, srcLocation };
 						}
 					}
 				}

@@ -46,9 +46,8 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, Location srcLocation, MeterAsset meter,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
-			ConductingEquipment srcResource);
+	boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, ConductingEquipment srcResource, MeterAsset meter,
+			Terminal srcTerminal, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, Location srcLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -72,9 +71,9 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, Location srcLocation, MeterAsset meter,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
-			ConductingEquipment srcResource);
+	void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Terminal srcTerminal, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			Location srcLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,9 +81,9 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, Location srcLocation, MeterAsset meter,
-			gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, MeterAssetMMXUPair pair, Terminal srcTerminal,
-			ConductingEquipment srcResource);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair, ConductingEquipment srcResource,
+			MeterAsset meter, Terminal srcTerminal, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
+			Location srcLocation);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -100,10 +99,10 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Location srcLocation,
-			TerminalToTerminal terminalToTerminal, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, outagePreventionJointarget.Terminal trgTerminal,
-			ConductingEquipment srcResource);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
+			TerminalToTerminal terminalToTerminal, ConductingEquipment srcResource, MeterAsset meter,
+			Terminal srcTerminal, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, Location srcLocation,
+			outagePreventionJointarget.Terminal trgTerminal);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,9 +118,9 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcLocation, EObject terminalToTerminal,
-			EObject meter, EObject trgFlow, EObject srcFlow, EObject flowToFlow, EObject pair, EObject srcTerminal,
-			EObject trgTerminal, EObject srcResource);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject terminalToTerminal, EObject flowToFlow,
+			EObject srcResource, EObject meter, EObject srcTerminal, EObject srcFlow, EObject trgFlow,
+			EObject srcLocation, EObject trgTerminal);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,7 +136,7 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_155(EMoflonEdge _edge_TieFlow);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_13(EMoflonEdge _edge_TieFlow);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,8 +160,8 @@ public interface TieFlow extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(Location srcLocation, MeterAsset meter, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow,
-			MeterAssetMMXUPair pair, Terminal srcTerminal, ConductingEquipment srcResource);
+	boolean checkDEC_FWD(MeterAssetMMXUPair pair, ConductingEquipment srcResource, MeterAsset meter,
+			Terminal srcTerminal, gluemodel.CIM.IEC61970.ControlArea.TieFlow srcFlow, Location srcLocation);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

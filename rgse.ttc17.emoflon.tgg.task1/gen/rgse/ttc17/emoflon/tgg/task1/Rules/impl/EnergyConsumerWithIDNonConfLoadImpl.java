@@ -542,7 +542,7 @@ public class EnergyConsumerWithIDNonConfLoadImpl extends AbstractRuleImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_132(EMoflonEdge _edge_a) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_8(EMoflonEdge _edge_a) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerWithIDNonConfLoadImpl
 				.pattern_EnergyConsumerWithIDNonConfLoad_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -631,21 +631,21 @@ public class EnergyConsumerWithIDNonConfLoadImpl extends AbstractRuleImpl implem
 		var_control_mRID.setValue(__helper.getValue("control", "mRID"));
 		var_control_mRID.setType("String");
 
-		Variable var_trgConsumer_ID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_ID.setValue(__helper.getValue("trgConsumer", "ID"));
-		var_trgConsumer_ID.setType("String");
-
 		Variable var_consumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("consumer", true, csp);
 		var_consumer_mRID.setValue(__helper.getValue("consumer", "mRID"));
 		var_consumer_mRID.setType("String");
 
-		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
-		var_trgConsumer_PowerA.setType("double");
+		Variable var_trgConsumer_ID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_ID.setValue(__helper.getValue("trgConsumer", "ID"));
+		var_trgConsumer_ID.setType("String");
 
 		Variable var_electric_ApparentPowermL1 = CSPFactoryHelper.eINSTANCE.createVariable("electric", true, csp);
 		var_electric_ApparentPowermL1.setValue(__helper.getValue("electric", "ApparentPowermL1"));
 		var_electric_ApparentPowermL1.setType("double");
+
+		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
+		var_trgConsumer_PowerA.setType("double");
 
 		Variable var_trgConsumer_Reachability = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
 		var_trgConsumer_Reachability.setValue(__helper.getValue("trgConsumer", "Reachability"));
@@ -787,8 +787,8 @@ public class EnergyConsumerWithIDNonConfLoadImpl extends AbstractRuleImpl implem
 			return null;
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_132__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_132((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_8__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_8((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_CC__MATCH_MATCH:

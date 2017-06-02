@@ -125,7 +125,7 @@ public interface EnergyConsumerWithIDConfLoad extends EObject, AbstractRule {
 	 */
 	void registerObjects_FWD(PerformRuleResult ruleresult, EObject area, EObject assetCorr, EObject electric,
 			EObject deliver, EObject control, EObject deviceCorr, EObject pair, EObject asset, EObject device,
-			EObject consumer, EObject connect, EObject trgConsumer, EObject group);
+			EObject consumer, EObject connect, EObject group, EObject trgConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,7 +141,7 @@ public interface EnergyConsumerWithIDConfLoad extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_138(EMoflonEdge _edge_a);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_7(EMoflonEdge _edge_a);
 
 	/**
 	 * <!-- begin-user-doc -->

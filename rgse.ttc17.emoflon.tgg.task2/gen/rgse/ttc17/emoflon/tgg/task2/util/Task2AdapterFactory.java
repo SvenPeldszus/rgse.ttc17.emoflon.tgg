@@ -69,13 +69,19 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Task2Switch<Adapter> modelSwitch = new Task2Switch<Adapter>() {
 		@Override
-		public Adapter caseMMXUToPMUVoltageMeter(MMXUToPMUVoltageMeter object) {
-			return createMMXUToPMUVoltageMeterAdapter();
+		public Adapter caseControlAreaToControlSrea(ControlAreaToControlSrea object) {
+			return createControlAreaToControlSreaAdapter();
 		}
 
 		@Override
-		public Adapter caseLocationToLocation(LocationToLocation object) {
-			return createLocationToLocationAdapter();
+		public Adapter caseServiceDeliveryPointToServiceDeliveryPoint(
+				ServiceDeliveryPointToServiceDeliveryPoint object) {
+			return createServiceDeliveryPointToServiceDeliveryPointAdapter();
+		}
+
+		@Override
+		public Adapter casePowerSystemResourceToPowerSystemResource(PowerSystemResourceToPowerSystemResource object) {
+			return createPowerSystemResourceToPowerSystemResourceAdapter();
 		}
 
 		@Override
@@ -84,13 +90,38 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseNonConformLoadGroupNonToConformLoadGroup(NonConformLoadGroupNonToConformLoadGroup object) {
-			return createNonConformLoadGroupNonToConformLoadGroupAdapter();
+		public Adapter caseLocationToLocation(LocationToLocation object) {
+			return createLocationToLocationAdapter();
 		}
 
 		@Override
-		public Adapter caseControlAreaToControlSrea(ControlAreaToControlSrea object) {
-			return createControlAreaToControlSreaAdapter();
+		public Adapter caseEnergyConsumerToEnergyConsumer(EnergyConsumerToEnergyConsumer object) {
+			return createEnergyConsumerToEnergyConsumerAdapter();
+		}
+
+		@Override
+		public Adapter caseMeterAssetToPrivateMeterVoltage(MeterAssetToPrivateMeterVoltage object) {
+			return createMeterAssetToPrivateMeterVoltageAdapter();
+		}
+
+		@Override
+		public Adapter caseMeterAssetToMMXUToVoltageMeter(MeterAssetToMMXUToVoltageMeter object) {
+			return createMeterAssetToMMXUToVoltageMeterAdapter();
+		}
+
+		@Override
+		public Adapter caseMMXUToPMUVoltageMeter(MMXUToPMUVoltageMeter object) {
+			return createMMXUToPMUVoltageMeterAdapter();
+		}
+
+		@Override
+		public Adapter caseConformLoadGroupToConformLoadGroup(ConformLoadGroupToConformLoadGroup object) {
+			return createConformLoadGroupToConformLoadGroupAdapter();
+		}
+
+		@Override
+		public Adapter caseSubLoadAreaToSubLoadArea(SubLoadAreaToSubLoadArea object) {
+			return createSubLoadAreaToSubLoadAreaAdapter();
 		}
 
 		@Override
@@ -104,44 +135,13 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMeterAssetToMMXUToVoltageMeter(MeterAssetToMMXUToVoltageMeter object) {
-			return createMeterAssetToMMXUToVoltageMeterAdapter();
-		}
-
-		@Override
-		public Adapter casePowerSystemResourceToPowerSystemResource(PowerSystemResourceToPowerSystemResource object) {
-			return createPowerSystemResourceToPowerSystemResourceAdapter();
-		}
-
-		@Override
-		public Adapter caseEnergyConsumerToEnergyConsumer(EnergyConsumerToEnergyConsumer object) {
-			return createEnergyConsumerToEnergyConsumerAdapter();
-		}
-
-		@Override
-		public Adapter caseTieFlowToTieFlow(TieFlowToTieFlow object) {
-			return createTieFlowToTieFlowAdapter();
-		}
-
-		@Override
-		public Adapter caseSubLoadAreaToSubLoadArea(SubLoadAreaToSubLoadArea object) {
-			return createSubLoadAreaToSubLoadAreaAdapter();
-		}
-
-		@Override
-		public Adapter caseServiceDeliveryPointToServiceDeliveryPoint(
-				ServiceDeliveryPointToServiceDeliveryPoint object) {
-			return createServiceDeliveryPointToServiceDeliveryPointAdapter();
-		}
-
-		@Override
 		public Adapter casePositionPointToPositionPoint(PositionPointToPositionPoint object) {
 			return createPositionPointToPositionPointAdapter();
 		}
 
 		@Override
-		public Adapter caseConformLoadGroupToConformLoadGroup(ConformLoadGroupToConformLoadGroup object) {
-			return createConformLoadGroupToConformLoadGroupAdapter();
+		public Adapter caseNonConformLoadGroupNonToConformLoadGroup(NonConformLoadGroupNonToConformLoadGroup object) {
+			return createNonConformLoadGroupNonToConformLoadGroupAdapter();
 		}
 
 		@Override
@@ -150,8 +150,8 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMeterAssetToPrivateMeterVoltage(MeterAssetToPrivateMeterVoltage object) {
-			return createMeterAssetToPrivateMeterVoltageAdapter();
+		public Adapter caseTieFlowToTieFlow(TieFlowToTieFlow object) {
+			return createTieFlowToTieFlowAdapter();
 		}
 
 		@Override
@@ -179,30 +179,44 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.MMXUToPMUVoltageMeter <em>MMXU To PMU Voltage Meter</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.ControlAreaToControlSrea <em>Control Area To Control Srea</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.MMXUToPMUVoltageMeter
+	 * @see rgse.ttc17.emoflon.tgg.task2.ControlAreaToControlSrea
 	 * @generated
 	 */
-	public Adapter createMMXUToPMUVoltageMeterAdapter() {
+	public Adapter createControlAreaToControlSreaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.LocationToLocation <em>Location To Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.ServiceDeliveryPointToServiceDeliveryPoint <em>Service Delivery Point To Service Delivery Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.LocationToLocation
+	 * @see rgse.ttc17.emoflon.tgg.task2.ServiceDeliveryPointToServiceDeliveryPoint
 	 * @generated
 	 */
-	public Adapter createLocationToLocationAdapter() {
+	public Adapter createServiceDeliveryPointToServiceDeliveryPointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.PowerSystemResourceToPowerSystemResource <em>Power System Resource To Power System Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.PowerSystemResourceToPowerSystemResource
+	 * @generated
+	 */
+	public Adapter createPowerSystemResourceToPowerSystemResourceAdapter() {
 		return null;
 	}
 
@@ -221,30 +235,100 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.NonConformLoadGroupNonToConformLoadGroup <em>Non Conform Load Group Non To Conform Load Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.LocationToLocation <em>Location To Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.NonConformLoadGroupNonToConformLoadGroup
+	 * @see rgse.ttc17.emoflon.tgg.task2.LocationToLocation
 	 * @generated
 	 */
-	public Adapter createNonConformLoadGroupNonToConformLoadGroupAdapter() {
+	public Adapter createLocationToLocationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.ControlAreaToControlSrea <em>Control Area To Control Srea</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.EnergyConsumerToEnergyConsumer <em>Energy Consumer To Energy Consumer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.ControlAreaToControlSrea
+	 * @see rgse.ttc17.emoflon.tgg.task2.EnergyConsumerToEnergyConsumer
 	 * @generated
 	 */
-	public Adapter createControlAreaToControlSreaAdapter() {
+	public Adapter createEnergyConsumerToEnergyConsumerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.MeterAssetToPrivateMeterVoltage <em>Meter Asset To Private Meter Voltage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.MeterAssetToPrivateMeterVoltage
+	 * @generated
+	 */
+	public Adapter createMeterAssetToPrivateMeterVoltageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.MeterAssetToMMXUToVoltageMeter <em>Meter Asset To MMXU To Voltage Meter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.MeterAssetToMMXUToVoltageMeter
+	 * @generated
+	 */
+	public Adapter createMeterAssetToMMXUToVoltageMeterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.MMXUToPMUVoltageMeter <em>MMXU To PMU Voltage Meter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.MMXUToPMUVoltageMeter
+	 * @generated
+	 */
+	public Adapter createMMXUToPMUVoltageMeterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.ConformLoadGroupToConformLoadGroup <em>Conform Load Group To Conform Load Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.ConformLoadGroupToConformLoadGroup
+	 * @generated
+	 */
+	public Adapter createConformLoadGroupToConformLoadGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.SubLoadAreaToSubLoadArea <em>Sub Load Area To Sub Load Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.SubLoadAreaToSubLoadArea
+	 * @generated
+	 */
+	public Adapter createSubLoadAreaToSubLoadAreaAdapter() {
 		return null;
 	}
 
@@ -277,90 +361,6 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.MeterAssetToMMXUToVoltageMeter <em>Meter Asset To MMXU To Voltage Meter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.MeterAssetToMMXUToVoltageMeter
-	 * @generated
-	 */
-	public Adapter createMeterAssetToMMXUToVoltageMeterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.PowerSystemResourceToPowerSystemResource <em>Power System Resource To Power System Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.PowerSystemResourceToPowerSystemResource
-	 * @generated
-	 */
-	public Adapter createPowerSystemResourceToPowerSystemResourceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.EnergyConsumerToEnergyConsumer <em>Energy Consumer To Energy Consumer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.EnergyConsumerToEnergyConsumer
-	 * @generated
-	 */
-	public Adapter createEnergyConsumerToEnergyConsumerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.TieFlowToTieFlow <em>Tie Flow To Tie Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.TieFlowToTieFlow
-	 * @generated
-	 */
-	public Adapter createTieFlowToTieFlowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.SubLoadAreaToSubLoadArea <em>Sub Load Area To Sub Load Area</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.SubLoadAreaToSubLoadArea
-	 * @generated
-	 */
-	public Adapter createSubLoadAreaToSubLoadAreaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.ServiceDeliveryPointToServiceDeliveryPoint <em>Service Delivery Point To Service Delivery Point</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.ServiceDeliveryPointToServiceDeliveryPoint
-	 * @generated
-	 */
-	public Adapter createServiceDeliveryPointToServiceDeliveryPointAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.PositionPointToPositionPoint <em>Position Point To Position Point</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -375,16 +375,16 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.ConformLoadGroupToConformLoadGroup <em>Conform Load Group To Conform Load Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.NonConformLoadGroupNonToConformLoadGroup <em>Non Conform Load Group Non To Conform Load Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.ConformLoadGroupToConformLoadGroup
+	 * @see rgse.ttc17.emoflon.tgg.task2.NonConformLoadGroupNonToConformLoadGroup
 	 * @generated
 	 */
-	public Adapter createConformLoadGroupToConformLoadGroupAdapter() {
+	public Adapter createNonConformLoadGroupNonToConformLoadGroupAdapter() {
 		return null;
 	}
 
@@ -403,16 +403,16 @@ public class Task2AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.MeterAssetToPrivateMeterVoltage <em>Meter Asset To Private Meter Voltage</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.TieFlowToTieFlow <em>Tie Flow To Tie Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.MeterAssetToPrivateMeterVoltage
+	 * @see rgse.ttc17.emoflon.tgg.task2.TieFlowToTieFlow
 	 * @generated
 	 */
-	public Adapter createMeterAssetToPrivateMeterVoltageAdapter() {
+	public Adapter createTieFlowToTieFlowAdapter() {
 		return null;
 	}
 

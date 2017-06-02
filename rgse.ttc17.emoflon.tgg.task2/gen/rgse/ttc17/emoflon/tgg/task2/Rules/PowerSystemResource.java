@@ -43,8 +43,8 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, Location srcLocation, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource, MeterAsset meter);
+	boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource,
+			MeterAsset meter, Location srcLocation, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +68,8 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, Location srcLocation, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource, MeterAsset meter);
+	void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource,
+			MeterAsset meter, Location srcLocation, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,8 +77,8 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, Location srcLocation, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource, MeterAsset meter);
+	CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource,
+			MeterAsset meter, Location srcLocation, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,10 +94,10 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, Location srcLocation, MeterAssetMMXUPair pair,
-			outagePreventionJointarget.Location trgLocation,
-			gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource, MeterAsset meter,
-			LocationToLocation locationToLocation);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
+			gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource,
+			outagePreventionJointarget.Location trgLocation, MeterAsset meter, Location srcLocation,
+			LocationToLocation locationToLocation, MeterAssetMMXUPair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,9 +113,9 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcLocation, EObject pair, EObject trgLocation,
-			EObject srcResource, EObject resourceToResource, EObject trgResource, EObject meter,
-			EObject locationToLocation);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcResource, EObject trgLocation, EObject meter,
+			EObject trgResource, EObject srcLocation, EObject locationToLocation, EObject pair,
+			EObject resourceToResource);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,7 +131,7 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_146(EMoflonEdge _edge_PowerSystemResources);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_33(EMoflonEdge _edge_PowerSystemResources);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -155,8 +155,8 @@ public interface PowerSystemResource extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(Location srcLocation, MeterAssetMMXUPair pair,
-			gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource, MeterAsset meter);
+	boolean checkDEC_FWD(gluemodel.CIM.IEC61970.Core.PowerSystemResource srcResource, MeterAsset meter,
+			Location srcLocation, MeterAssetMMXUPair pair);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

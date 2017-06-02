@@ -142,41 +142,41 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 		}
 		gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea = (gluemodel.CIM.IEC61970.ControlArea.ControlArea) result1_bindingAndBlack[0];
 		CSP csp = (CSP) result1_bindingAndBlack[1];
-		Object[] result1_green = ControlAreaImpl.pattern_ControlArea_1_1_performtransformation_greenFFBB(srcControlArea,
+		Object[] result1_green = ControlAreaImpl.pattern_ControlArea_1_1_performtransformation_greenBFFB(srcControlArea,
 				csp);
-		ControlAreaToControlSrea controlAreaToControlArea = (ControlAreaToControlSrea) result1_green[0];
-		outagePreventionJointarget.ControlArea trgControlArea = (outagePreventionJointarget.ControlArea) result1_green[1];
+		ControlAreaToControlSrea controlAreaToControlArea = (ControlAreaToControlSrea) result1_green[1];
+		outagePreventionJointarget.ControlArea trgControlArea = (outagePreventionJointarget.ControlArea) result1_green[2];
 
 		// collect translated elements
 		Object[] result2_black = ControlAreaImpl.pattern_ControlArea_1_2_collecttranslatedelements_blackBBB(
-				controlAreaToControlArea, trgControlArea, srcControlArea);
+				srcControlArea, controlAreaToControlArea, trgControlArea);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[controlAreaToControlArea] = " + controlAreaToControlArea + ", " + "[trgControlArea] = "
-					+ trgControlArea + ", " + "[srcControlArea] = " + srcControlArea + ".");
+					+ "[srcControlArea] = " + srcControlArea + ", " + "[controlAreaToControlArea] = "
+					+ controlAreaToControlArea + ", " + "[trgControlArea] = " + trgControlArea + ".");
 		}
 		Object[] result2_green = ControlAreaImpl.pattern_ControlArea_1_2_collecttranslatedelements_greenFBBB(
-				controlAreaToControlArea, trgControlArea, srcControlArea);
+				srcControlArea, controlAreaToControlArea, trgControlArea);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = ControlAreaImpl.pattern_ControlArea_1_3_bookkeepingforedges_blackBBBB(ruleresult,
-				controlAreaToControlArea, trgControlArea, srcControlArea);
+				srcControlArea, controlAreaToControlArea, trgControlArea);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[controlAreaToControlArea] = " + controlAreaToControlArea
-					+ ", " + "[trgControlArea] = " + trgControlArea + ", " + "[srcControlArea] = " + srcControlArea
-					+ ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[srcControlArea] = " + srcControlArea + ", "
+					+ "[controlAreaToControlArea] = " + controlAreaToControlArea + ", " + "[trgControlArea] = "
+					+ trgControlArea + ".");
 		}
-		ControlAreaImpl.pattern_ControlArea_1_3_bookkeepingforedges_greenBBBBFF(ruleresult, controlAreaToControlArea,
-				trgControlArea, srcControlArea);
-		// EMoflonEdge controlAreaToControlArea__trgControlArea____target = (EMoflonEdge) result3_green[4];
-		// EMoflonEdge controlAreaToControlArea__srcControlArea____source = (EMoflonEdge) result3_green[5];
+		ControlAreaImpl.pattern_ControlArea_1_3_bookkeepingforedges_greenBBBBFF(ruleresult, srcControlArea,
+				controlAreaToControlArea, trgControlArea);
+		// EMoflonEdge controlAreaToControlArea__srcControlArea____source = (EMoflonEdge) result3_green[4];
+		// EMoflonEdge controlAreaToControlArea__trgControlArea____target = (EMoflonEdge) result3_green[5];
 
 		// perform postprocessing story node is empty
 		// register objects
-		ControlAreaImpl.pattern_ControlArea_1_5_registerobjects_expressionBBBBB(this, ruleresult,
-				controlAreaToControlArea, trgControlArea, srcControlArea);
+		ControlAreaImpl.pattern_ControlArea_1_5_registerobjects_expressionBBBBB(this, ruleresult, srcControlArea,
+				controlAreaToControlArea, trgControlArea);
 		return ControlAreaImpl.pattern_ControlArea_1_6_expressionFB(ruleresult);
 	}
 
@@ -331,11 +331,11 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject controlAreaToControlArea,
-			EObject trgControlArea, EObject srcControlArea) {
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcControlArea,
+			EObject controlAreaToControlArea, EObject trgControlArea) {
+		ruleresult.registerObject("srcControlArea", srcControlArea);
 		ruleresult.registerObject("controlAreaToControlArea", controlAreaToControlArea);
 		ruleresult.registerObject("trgControlArea", trgControlArea);
-		ruleresult.registerObject("srcControlArea", srcControlArea);
 
 	}
 
@@ -354,7 +354,7 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_ControlArea_2(
+	public EObjectContainer isAppropriate_FWD_ControlArea_0(
 			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ControlAreaImpl
@@ -514,8 +514,8 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 			return null;
 		case RulesPackage.CONTROL_AREA___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.CONTROL_AREA___IS_APPROPRIATE_FWD_CONTROL_AREA_2__CONTROLAREA:
-			return isAppropriate_FWD_ControlArea_2((gluemodel.CIM.IEC61970.ControlArea.ControlArea) arguments.get(0));
+		case RulesPackage.CONTROL_AREA___IS_APPROPRIATE_FWD_CONTROL_AREA_0__CONTROLAREA:
+			return isAppropriate_FWD_ControlArea_0((gluemodel.CIM.IEC61970.ControlArea.ControlArea) arguments.get(0));
 		case RulesPackage.CONTROL_AREA___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.CONTROL_AREA___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -640,7 +640,7 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 		return null;
 	}
 
-	public static final Object[] pattern_ControlArea_1_1_performtransformation_greenFFBB(
+	public static final Object[] pattern_ControlArea_1_1_performtransformation_greenBFFB(
 			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea, CSP csp) {
 		ControlAreaToControlSrea controlAreaToControlArea = Task2Factory.eINSTANCE.createControlAreaToControlSrea();
 		outagePreventionJointarget.ControlArea trgControlArea = OutagePreventionJointargetFactory.eINSTANCE
@@ -650,31 +650,31 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 		controlAreaToControlArea.setTarget(trgControlArea);
 		String trgControlArea_mRID_prime = (String) _localVariable_0;
 		trgControlArea.setMRID(trgControlArea_mRID_prime);
-		return new Object[] { controlAreaToControlArea, trgControlArea, srcControlArea, csp };
+		return new Object[] { srcControlArea, controlAreaToControlArea, trgControlArea, csp };
 	}
 
 	public static final Object[] pattern_ControlArea_1_2_collecttranslatedelements_blackBBB(
-			ControlAreaToControlSrea controlAreaToControlArea, outagePreventionJointarget.ControlArea trgControlArea,
-			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea) {
-		return new Object[] { controlAreaToControlArea, trgControlArea, srcControlArea };
+			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea,
+			ControlAreaToControlSrea controlAreaToControlArea, outagePreventionJointarget.ControlArea trgControlArea) {
+		return new Object[] { srcControlArea, controlAreaToControlArea, trgControlArea };
 	}
 
 	public static final Object[] pattern_ControlArea_1_2_collecttranslatedelements_greenFBBB(
-			ControlAreaToControlSrea controlAreaToControlArea, outagePreventionJointarget.ControlArea trgControlArea,
-			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea) {
+			gluemodel.CIM.IEC61970.ControlArea.ControlArea srcControlArea,
+			ControlAreaToControlSrea controlAreaToControlArea, outagePreventionJointarget.ControlArea trgControlArea) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
+		ruleresult.getTranslatedElements().add(srcControlArea);
 		ruleresult.getCreatedLinkElements().add(controlAreaToControlArea);
 		ruleresult.getCreatedElements().add(trgControlArea);
-		ruleresult.getTranslatedElements().add(srcControlArea);
-		return new Object[] { ruleresult, controlAreaToControlArea, trgControlArea, srcControlArea };
+		return new Object[] { ruleresult, srcControlArea, controlAreaToControlArea, trgControlArea };
 	}
 
 	public static final Object[] pattern_ControlArea_1_3_bookkeepingforedges_blackBBBB(PerformRuleResult ruleresult,
-			EObject controlAreaToControlArea, EObject trgControlArea, EObject srcControlArea) {
-		if (!controlAreaToControlArea.equals(trgControlArea)) {
+			EObject srcControlArea, EObject controlAreaToControlArea, EObject trgControlArea) {
+		if (!srcControlArea.equals(trgControlArea)) {
 			if (!controlAreaToControlArea.equals(srcControlArea)) {
-				if (!srcControlArea.equals(trgControlArea)) {
-					return new Object[] { ruleresult, controlAreaToControlArea, trgControlArea, srcControlArea };
+				if (!controlAreaToControlArea.equals(trgControlArea)) {
+					return new Object[] { ruleresult, srcControlArea, controlAreaToControlArea, trgControlArea };
 				}
 			}
 		}
@@ -682,32 +682,32 @@ public class ControlAreaImpl extends AbstractRuleImpl implements ControlArea {
 	}
 
 	public static final Object[] pattern_ControlArea_1_3_bookkeepingforedges_greenBBBBFF(PerformRuleResult ruleresult,
-			EObject controlAreaToControlArea, EObject trgControlArea, EObject srcControlArea) {
-		EMoflonEdge controlAreaToControlArea__trgControlArea____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			EObject srcControlArea, EObject controlAreaToControlArea, EObject trgControlArea) {
 		EMoflonEdge controlAreaToControlArea__srcControlArea____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge controlAreaToControlArea__trgControlArea____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "ControlArea";
-		String controlAreaToControlArea__trgControlArea____target_name_prime = "target";
 		String controlAreaToControlArea__srcControlArea____source_name_prime = "source";
-		controlAreaToControlArea__trgControlArea____target.setSrc(controlAreaToControlArea);
-		controlAreaToControlArea__trgControlArea____target.setTrg(trgControlArea);
-		ruleresult.getCreatedEdges().add(controlAreaToControlArea__trgControlArea____target);
+		String controlAreaToControlArea__trgControlArea____target_name_prime = "target";
 		controlAreaToControlArea__srcControlArea____source.setSrc(controlAreaToControlArea);
 		controlAreaToControlArea__srcControlArea____source.setTrg(srcControlArea);
 		ruleresult.getCreatedEdges().add(controlAreaToControlArea__srcControlArea____source);
+		controlAreaToControlArea__trgControlArea____target.setSrc(controlAreaToControlArea);
+		controlAreaToControlArea__trgControlArea____target.setTrg(trgControlArea);
+		ruleresult.getCreatedEdges().add(controlAreaToControlArea__trgControlArea____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		controlAreaToControlArea__trgControlArea____target
-				.setName(controlAreaToControlArea__trgControlArea____target_name_prime);
 		controlAreaToControlArea__srcControlArea____source
 				.setName(controlAreaToControlArea__srcControlArea____source_name_prime);
-		return new Object[] { ruleresult, controlAreaToControlArea, trgControlArea, srcControlArea,
-				controlAreaToControlArea__trgControlArea____target,
-				controlAreaToControlArea__srcControlArea____source };
+		controlAreaToControlArea__trgControlArea____target
+				.setName(controlAreaToControlArea__trgControlArea____target_name_prime);
+		return new Object[] { ruleresult, srcControlArea, controlAreaToControlArea, trgControlArea,
+				controlAreaToControlArea__srcControlArea____source,
+				controlAreaToControlArea__trgControlArea____target };
 	}
 
 	public static final void pattern_ControlArea_1_5_registerobjects_expressionBBBBB(ControlArea _this,
-			PerformRuleResult ruleresult, EObject controlAreaToControlArea, EObject trgControlArea,
-			EObject srcControlArea) {
-		_this.registerObjects_FWD(ruleresult, controlAreaToControlArea, trgControlArea, srcControlArea);
+			PerformRuleResult ruleresult, EObject srcControlArea, EObject controlAreaToControlArea,
+			EObject trgControlArea) {
+		_this.registerObjects_FWD(ruleresult, srcControlArea, controlAreaToControlArea, trgControlArea);
 
 	}
 

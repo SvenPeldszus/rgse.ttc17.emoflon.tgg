@@ -43,8 +43,8 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Common.Location srcLocation, MeterAsset asset);
+	boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61968.Common.Location srcLocation,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +68,8 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Common.Location srcLocation, MeterAsset asset);
+	void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61968.Common.Location srcLocation,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,8 +77,8 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Common.Location srcLocation, MeterAsset asset);
+	CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61968.Common.Location srcLocation,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,9 +94,9 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Common.Location srcLocation, MeterAsset asset, EnergyConsumer consumer,
-			MeterAssetToEnergyConsumer assetToConumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, EnergyConsumer consumer,
+			gluemodel.CIM.IEC61968.Common.Location srcLocation, MeterAssetToEnergyConsumer assetToConumer,
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +112,8 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcLocationCorr, EObject pair, EObject srcLocation,
-			EObject asset, EObject consumer, EObject assetToConumer, EObject trgLocation);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject consumer, EObject srcLocation,
+			EObject srcLocationCorr, EObject assetToConumer, EObject trgLocation, EObject pair, EObject asset);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_134(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_0(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,7 +153,7 @@ public interface Location extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61968.Common.Location srcLocation,
+	boolean checkDEC_FWD(gluemodel.CIM.IEC61968.Common.Location srcLocation, MeterAssetPhysicalDevicePair pair,
 			MeterAsset asset);
 	// <-- [user code injected with eMoflon]
 

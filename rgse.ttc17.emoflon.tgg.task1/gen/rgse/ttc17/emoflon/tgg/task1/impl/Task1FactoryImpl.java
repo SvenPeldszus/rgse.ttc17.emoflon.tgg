@@ -55,19 +55,29 @@ public class Task1FactoryImpl extends EFactoryImpl implements Task1Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+		case Task1Package.POSITION_POINT_TO_POSITION_POINT:
+			return createPositionPointToPositionPoint();
 		case Task1Package.CONTROL_AREA_TO_ENERGY_CONSUMER:
 			return createControlAreaToEnergyConsumer();
 		case Task1Package.LOCATION_TO_LOCATION:
 			return createLocationToLocation();
-		case Task1Package.METER_ASSET_TO_ENERGY_CONSUMER:
-			return createMeterAssetToEnergyConsumer();
 		case Task1Package.PHYSICAL_DEVICE_TO_ENERGY_CONSUMER:
 			return createPhysicalDeviceToEnergyConsumer();
-		case Task1Package.POSITION_POINT_TO_POSITION_POINT:
-			return createPositionPointToPositionPoint();
+		case Task1Package.METER_ASSET_TO_ENERGY_CONSUMER:
+			return createMeterAssetToEnergyConsumer();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PositionPointToPositionPoint createPositionPointToPositionPoint() {
+		PositionPointToPositionPointImpl positionPointToPositionPoint = new PositionPointToPositionPointImpl();
+		return positionPointToPositionPoint;
 	}
 
 	/**
@@ -95,16 +105,6 @@ public class Task1FactoryImpl extends EFactoryImpl implements Task1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MeterAssetToEnergyConsumer createMeterAssetToEnergyConsumer() {
-		MeterAssetToEnergyConsumerImpl meterAssetToEnergyConsumer = new MeterAssetToEnergyConsumerImpl();
-		return meterAssetToEnergyConsumer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PhysicalDeviceToEnergyConsumer createPhysicalDeviceToEnergyConsumer() {
 		PhysicalDeviceToEnergyConsumerImpl physicalDeviceToEnergyConsumer = new PhysicalDeviceToEnergyConsumerImpl();
 		return physicalDeviceToEnergyConsumer;
@@ -115,9 +115,9 @@ public class Task1FactoryImpl extends EFactoryImpl implements Task1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PositionPointToPositionPoint createPositionPointToPositionPoint() {
-		PositionPointToPositionPointImpl positionPointToPositionPoint = new PositionPointToPositionPointImpl();
-		return positionPointToPositionPoint;
+	public MeterAssetToEnergyConsumer createMeterAssetToEnergyConsumer() {
+		MeterAssetToEnergyConsumerImpl meterAssetToEnergyConsumer = new MeterAssetToEnergyConsumerImpl();
+		return meterAssetToEnergyConsumer;
 	}
 
 	/**

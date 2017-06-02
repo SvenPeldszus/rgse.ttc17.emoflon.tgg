@@ -58,496 +58,6 @@ public interface RulesPackage extends EPackage {
 	RulesPackage eINSTANCE = rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerImpl <em>Energy Consumer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerImpl
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getEnergyConsumer()
-	 * @generated
-	 */
-	int ENERGY_CONSUMER = 0;
-
-	/**
-	 * The number of structural features of the '<em>Energy Consumer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPROPRIATE_FWD__MATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 0;
-
-	/**
-	 * The operation id for the '<em>Perform FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 3;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 4;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 6;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>Register Objects FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 8;
-
-	/**
-	 * The operation id for the '<em>Check Types FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 131</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPROPRIATE_FWD_EMOFLON_EDGE_131__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
-
-	/**
-	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>Is Applicable CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>Check DEC FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER___CHECK_DEC_FWD__PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 13;
-
-	/**
-	 * The number of operations of the '<em>Energy Consumer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
-
-	/**
-	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerWithIDNonConfLoadImpl <em>Energy Consumer With ID Non Conf Load</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerWithIDNonConfLoadImpl
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getEnergyConsumerWithIDNonConfLoad()
-	 * @generated
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD = 1;
-
-	/**
-	 * The number of structural features of the '<em>Energy Consumer With ID Non Conf Load</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD__MATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 0;
-
-	/**
-	 * The operation id for the '<em>Perform FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 1;
-
-	/**
-	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 2;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 3;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 4;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 5;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 6;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 7;
-
-	/**
-	 * The operation id for the '<em>Register Objects FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 8;
-
-	/**
-	 * The operation id for the '<em>Check Types FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 9;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 132</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_132__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
-
-	/**
-	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 11;
-
-	/**
-	 * The operation id for the '<em>Is Applicable CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 12;
-
-	/**
-	 * The operation id for the '<em>Check DEC FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_DEC_FWD__SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 13;
-
-	/**
-	 * The number of operations of the '<em>Energy Consumer With ID Non Conf Load</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
-
-	/**
-	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointLinkImpl <em>Position Point Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointLinkImpl
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getPositionPointLink()
-	 * @generated
-	 */
-	int POSITION_POINT_LINK = 2;
-
-	/**
-	 * The number of structural features of the '<em>Position Point Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPROPRIATE_FWD__MATCH_LOCATION_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 0;
-
-	/**
-	 * The operation id for the '<em>Perform FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_LOCATION_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 3;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_LOCATION_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 4;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_LOCATIONTOLOCATION_LOCATION_POSITIONPOINTTOPOSITIONPOINT_METERASSET_LOCATION_POSITIONPOINT_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 6;
-
-	/**
-	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
-
-	/**
-	 * The operation id for the '<em>Register Objects FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 8;
-
-	/**
-	 * The operation id for the '<em>Check Types FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
-
-	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 133</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_133__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
-
-	/**
-	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
-
-	/**
-	 * The operation id for the '<em>Is Applicable CC</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
-
-	/**
-	 * The operation id for the '<em>Check DEC FWD</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK___CHECK_DEC_FWD__LOCATION_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 13;
-
-	/**
-	 * The number of operations of the '<em>Position Point Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POSITION_POINT_LINK_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
-
-	/**
 	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.LocationImpl <em>Location</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -555,7 +65,7 @@ public interface RulesPackage extends EPackage {
 	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getLocation()
 	 * @generated
 	 */
-	int LOCATION = 3;
+	int LOCATION = 0;
 
 	/**
 	 * The number of structural features of the '<em>Location</em>' class.
@@ -573,7 +83,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION___IS_APPROPRIATE_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION___IS_APPROPRIATE_FWD__MATCH_LOCATION_METERASSETPHYSICALDEVICEPAIR_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 0;
 
 	/**
@@ -601,7 +111,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_LOCATION_METERASSETPHYSICALDEVICEPAIR_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 3;
 
 	/**
@@ -611,7 +121,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_LOCATION_METERASSETPHYSICALDEVICEPAIR_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 4;
 
 	/**
@@ -630,7 +140,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETPHYSICALDEVICEPAIR_LOCATION_METERASSET_ENERGYCONSUMER_METERASSETTOENERGYCONSUMER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_ENERGYCONSUMER_LOCATION_METERASSETTOENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -662,13 +172,13 @@ public interface RulesPackage extends EPackage {
 	int LOCATION___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 134</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 0</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_134__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 10;
+	int LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_0__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
@@ -695,7 +205,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION___CHECK_DEC_FWD__METERASSETPHYSICALDEVICEPAIR_LOCATION_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION___CHECK_DEC_FWD__LOCATION_METERASSETPHYSICALDEVICEPAIR_METERASSET = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
@@ -708,6 +218,167 @@ public interface RulesPackage extends EPackage {
 	int LOCATION_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
+	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointImpl <em>Position Point</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointImpl
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getPositionPoint()
+	 * @generated
+	 */
+	int POSITION_POINT = 1;
+
+	/**
+	 * The number of structural features of the '<em>Position Point</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPROPRIATE_FWD__MATCH_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 0;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_POSITIONPOINT_LOCATION_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATIONTOLOCATION_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 6;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Register Objects FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 8;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 1</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_1__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
+
+	/**
+	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Is Applicable CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Check DEC FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT___CHECK_DEC_FWD__POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 13;
+
+	/**
+	 * The number of operations of the '<em>Position Point</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POSITION_POINT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+
+	/**
 	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerWithIDImpl <em>Energy Consumer With ID</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -715,7 +386,7 @@ public interface RulesPackage extends EPackage {
 	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getEnergyConsumerWithID()
 	 * @generated
 	 */
-	int ENERGY_CONSUMER_WITH_ID = 4;
+	int ENERGY_CONSUMER_WITH_ID = 2;
 
 	/**
 	 * The number of structural features of the '<em>Energy Consumer With ID</em>' class.
@@ -822,13 +493,13 @@ public interface RulesPackage extends EPackage {
 	int ENERGY_CONSUMER_WITH_ID___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 135</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 2</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGY_CONSUMER_WITH_ID___IS_APPROPRIATE_FWD_EMOFLON_EDGE_135__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID___IS_APPROPRIATE_FWD_EMOFLON_EDGE_2__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -869,23 +540,23 @@ public interface RulesPackage extends EPackage {
 	int ENERGY_CONSUMER_WITH_ID_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
-	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.ZoneImpl <em>Zone</em>}' class.
+	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointLinkImpl <em>Position Point Link</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.ZoneImpl
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getZone()
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointLinkImpl
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getPositionPointLink()
 	 * @generated
 	 */
-	int ZONE = 5;
+	int POSITION_POINT_LINK = 3;
 
 	/**
-	 * The number of structural features of the '<em>Zone</em>' class.
+	 * The number of structural features of the '<em>Position Point Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+	int POSITION_POINT_LINK_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
@@ -894,7 +565,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPROPRIATE_FWD__MATCH_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int POSITION_POINT_LINK___IS_APPROPRIATE_FWD__MATCH_POSITIONPOINT_METERASSET_LOCATION_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 0;
 
 	/**
@@ -904,7 +575,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+	int POSITION_POINT_LINK___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
@@ -913,7 +584,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+	int POSITION_POINT_LINK___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
@@ -922,7 +593,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int POSITION_POINT_LINK___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_POSITIONPOINT_METERASSET_LOCATION_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 3;
 
 	/**
@@ -932,7 +603,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int POSITION_POINT_LINK___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_POSITIONPOINT_METERASSET_LOCATION_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 4;
 
 	/**
@@ -942,7 +613,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+	int POSITION_POINT_LINK___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
@@ -951,7 +622,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int POSITION_POINT_LINK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_POSITIONPOINT_POSITIONPOINTTOPOSITIONPOINT_LOCATION_METERASSET_LOCATION_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATIONTOLOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -961,7 +632,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+	int POSITION_POINT_LINK___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Register Objects FWD</em>' operation.
@@ -970,7 +641,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int POSITION_POINT_LINK___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 8;
 
 	/**
@@ -980,16 +651,17 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+	int POSITION_POINT_LINK___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 136</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 3</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_136__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 10;
+	int POSITION_POINT_LINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_3__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
 
 	/**
 	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
@@ -998,7 +670,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+	int POSITION_POINT_LINK___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Is Applicable CC</em>' operation.
@@ -1007,7 +679,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+	int POSITION_POINT_LINK___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Check DEC FWD</em>' operation.
@@ -1016,17 +688,17 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE___CHECK_DEC_FWD__ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int POSITION_POINT_LINK___CHECK_DEC_FWD__POSITIONPOINT_METERASSET_LOCATION_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
-	 * The number of operations of the '<em>Zone</em>' class.
+	 * The number of operations of the '<em>Position Point Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ZONE_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+	int POSITION_POINT_LINK_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.ServiceLocationImpl <em>Service Location</em>}' class.
@@ -1036,7 +708,7 @@ public interface RulesPackage extends EPackage {
 	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getServiceLocation()
 	 * @generated
 	 */
-	int SERVICE_LOCATION = 6;
+	int SERVICE_LOCATION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Service Location</em>' class.
@@ -1111,7 +783,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_SERVICELOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SERVICE_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_SERVICELOCATION_METERASSET_ENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -1143,13 +815,13 @@ public interface RulesPackage extends EPackage {
 	int SERVICE_LOCATION___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 137</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 4</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_137__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SERVICE_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_4__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -1188,6 +860,328 @@ public interface RulesPackage extends EPackage {
 	 * @ordered
 	 */
 	int SERVICE_LOCATION_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+
+	/**
+	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.WorkLocationImpl <em>Work Location</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.WorkLocationImpl
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getWorkLocation()
+	 * @generated
+	 */
+	int WORK_LOCATION = 5;
+
+	/**
+	 * The number of structural features of the '<em>Work Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPROPRIATE_FWD__MATCH_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 0;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_WORKLOCATION_METERASSET_ENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 6;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Register Objects FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 8;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 5</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_5__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
+
+	/**
+	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Is Applicable CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Check DEC FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION___CHECK_DEC_FWD__WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 13;
+
+	/**
+	 * The number of operations of the '<em>Work Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WORK_LOCATION_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+
+	/**
+	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerImpl <em>Energy Consumer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerImpl
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getEnergyConsumer()
+	 * @generated
+	 */
+	int ENERGY_CONSUMER = 6;
+
+	/**
+	 * The number of structural features of the '<em>Energy Consumer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPROPRIATE_FWD__MATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 0;
+
+	/**
+	 * The operation id for the '<em>Perform FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 3;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 4;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 6;
+
+	/**
+	 * The operation id for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Register Objects FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 8;
+
+	/**
+	 * The operation id for the '<em>Check Types FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+
+	/**
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 6</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 10;
+
+	/**
+	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+
+	/**
+	 * The operation id for the '<em>Is Applicable CC</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Check DEC FWD</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER___CHECK_DEC_FWD__ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 13;
+
+	/**
+	 * The number of operations of the '<em>Energy Consumer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENERGY_CONSUMER_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerWithIDConfLoadImpl <em>Energy Consumer With ID Conf Load</em>}' class.
@@ -1307,13 +1301,13 @@ public interface RulesPackage extends EPackage {
 	int ENERGY_CONSUMER_WITH_ID_CONF_LOAD___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 138</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 7</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENERGY_CONSUMER_WITH_ID_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_138__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_7__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -1356,23 +1350,23 @@ public interface RulesPackage extends EPackage {
 	int ENERGY_CONSUMER_WITH_ID_CONF_LOAD_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
-	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointImpl <em>Position Point</em>}' class.
+	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerWithIDNonConfLoadImpl <em>Energy Consumer With ID Non Conf Load</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.PositionPointImpl
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getPositionPoint()
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.EnergyConsumerWithIDNonConfLoadImpl
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getEnergyConsumerWithIDNonConfLoad()
 	 * @generated
 	 */
-	int POSITION_POINT = 8;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD = 8;
 
 	/**
-	 * The number of structural features of the '<em>Position Point</em>' class.
+	 * The number of structural features of the '<em>Energy Consumer With ID Non Conf Load</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
@@ -1381,7 +1375,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPROPRIATE_FWD__MATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD__MATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 0;
 
 	/**
@@ -1391,7 +1385,8 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 1;
 
 	/**
 	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
@@ -1400,7 +1395,8 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 2;
 
 	/**
 	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
@@ -1409,7 +1405,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 3;
 
 	/**
@@ -1419,7 +1415,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 4;
 
 	/**
@@ -1429,7 +1425,8 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 5;
 
 	/**
 	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
@@ -1438,7 +1435,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION_LOCATIONTOLOCATION_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -1448,7 +1445,8 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 7;
 
 	/**
 	 * The operation id for the '<em>Register Objects FWD</em>' operation.
@@ -1457,7 +1455,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 8;
 
 	/**
@@ -1467,16 +1465,17 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 139</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 8</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPROPRIATE_FWD_EMOFLON_EDGE_139__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_8__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -1486,7 +1485,8 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 11;
 
 	/**
 	 * The operation id for the '<em>Is Applicable CC</em>' operation.
@@ -1495,7 +1495,8 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+			+ 12;
 
 	/**
 	 * The operation id for the '<em>Check DEC FWD</em>' operation.
@@ -1504,17 +1505,17 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT___CHECK_DEC_FWD__METERASSET_POSITIONPOINT_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD___CHECK_DEC_FWD__SUBLOADAREA_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_CONTROLAREA_METERASSETPHYSICALDEVICEPAIR_METERASSET_PHYSICALDEVICE_NONCONFORMLOAD_AUTOCONNECTOBJECT_NONCONFORMLOADGROUP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
-	 * The number of operations of the '<em>Position Point</em>' class.
+	 * The number of operations of the '<em>Energy Consumer With ID Non Conf Load</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITION_POINT_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
+	int ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
 	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.GmlPositionImpl <em>Gml Position</em>}' class.
@@ -1631,13 +1632,13 @@ public interface RulesPackage extends EPackage {
 	int GML_POSITION___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 140</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 9</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GML_POSITION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_140__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int GML_POSITION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_9__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -1703,7 +1704,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_LINK___IS_APPROPRIATE_FWD__MATCH_METERASSET_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION_LINK___IS_APPROPRIATE_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 0;
 
 	/**
@@ -1731,7 +1732,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_LINK___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION_LINK___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 3;
 
 	/**
@@ -1741,7 +1742,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_LINK___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION_LINK___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 4;
 
 	/**
@@ -1760,7 +1761,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_LINK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSET_ENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR_LOCATION_LOCATIONTOLOCATION_LOCATION_METERASSETTOENERGYCONSUMER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION_LINK___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_LOCATIONTOLOCATION_METERASSETTOENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER_LOCATION_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -1792,13 +1793,13 @@ public interface RulesPackage extends EPackage {
 	int LOCATION_LINK___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 141</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 10</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_LINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_141__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION_LINK___IS_APPROPRIATE_FWD_EMOFLON_EDGE_10__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -1826,7 +1827,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOCATION_LINK___CHECK_DEC_FWD__METERASSET_METERASSETPHYSICALDEVICEPAIR_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int LOCATION_LINK___CHECK_DEC_FWD__METERASSETPHYSICALDEVICEPAIR_METERASSET_LOCATION = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
@@ -1921,7 +1922,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SDP_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_SDPLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SDP_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_SDPLOCATION_METERASSET_ENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -1953,13 +1954,13 @@ public interface RulesPackage extends EPackage {
 	int SDP_LOCATION___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 142</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 11</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SDP_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_142__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int SDP_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_11__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 10;
 
 	/**
@@ -2000,23 +2001,23 @@ public interface RulesPackage extends EPackage {
 	int SDP_LOCATION_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
-	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.WorkLocationImpl <em>Work Location</em>}' class.
+	 * The meta object id for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.impl.ZoneImpl <em>Zone</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.WorkLocationImpl
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getWorkLocation()
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.ZoneImpl
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesPackageImpl#getZone()
 	 * @generated
 	 */
-	int WORK_LOCATION = 12;
+	int ZONE = 12;
 
 	/**
-	 * The number of structural features of the '<em>Work Location</em>' class.
+	 * The number of structural features of the '<em>Zone</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
+	int ZONE_FEATURE_COUNT = RuntimePackage.ABSTRACT_RULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Is Appropriate FWD</em>' operation.
@@ -2025,7 +2026,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPROPRIATE_FWD__MATCH_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ZONE___IS_APPROPRIATE_FWD__MATCH_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 0;
 
 	/**
@@ -2035,7 +2036,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
+	int ZONE___PERFORM_FWD__ISAPPLICABLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Is Applicable FWD</em>' operation.
@@ -2044,7 +2045,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
+	int ZONE___IS_APPLICABLE_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Register Objects To Match FWD</em>' operation.
@@ -2053,7 +2054,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ZONE___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 3;
 
 	/**
@@ -2063,7 +2064,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ZONE___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 4;
 
 	/**
@@ -2073,7 +2074,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
+	int ZONE___IS_APPROPRIATE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Is Applicable solve Csp FWD</em>' operation.
@@ -2082,7 +2083,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ZONE___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_ZONE_METERASSET_ENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 6;
 
 	/**
@@ -2092,7 +2093,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
+	int ZONE___IS_APPLICABLE_CHECK_CSP_FWD__CSP = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>Register Objects FWD</em>' operation.
@@ -2101,7 +2102,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ZONE___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 8;
 
 	/**
@@ -2111,17 +2112,16 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
+	int ZONE___CHECK_TYPES_FWD__MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 143</em>' operation.
+	 * The operation id for the '<em>Is Appropriate FWD EMoflon Edge 12</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_143__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
-			+ 10;
+	int ZONE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_12__EMOFLONEDGE = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Check Attributes FWD</em>' operation.
@@ -2130,7 +2130,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
+	int ZONE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Is Applicable CC</em>' operation.
@@ -2139,7 +2139,7 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
+	int ZONE___IS_APPLICABLE_CC__MATCH_MATCH = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Check DEC FWD</em>' operation.
@@ -2148,467 +2148,17 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION___CHECK_DEC_FWD__WORKLOCATION_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
+	int ZONE___CHECK_DEC_FWD__ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT
 			+ 13;
 
 	/**
-	 * The number of operations of the '<em>Work Location</em>' class.
+	 * The number of operations of the '<em>Zone</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WORK_LOCATION_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
-
-	/**
-	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer <em>Energy Consumer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Energy Consumer</em>'.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer
-	 * @generated
-	 */
-	EClass getEnergyConsumer();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues) <em>Is Appropriate FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsAppropriate_FWD__Match_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__Perform_FWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsApplicable_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues) <em>Register Objects To Match FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__RegisterObjectsToMatch_FWD__Match_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues) <em>Is Appropriate solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsAppropriate_solveCsp_FWD__Match_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsAppropriate_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues) <em>Is Applicable solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsApplicable_solveCsp_FWD__IsApplicableMatch_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsApplicable_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkTypes_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__CheckTypes_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD_EMoflonEdge_131(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 131</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 131</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD_EMoflonEdge_131(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsAppropriate_FWD_EMoflonEdge_131__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__CheckAttributes_FWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__IsApplicable_CC__Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkDEC_FWD(gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues) <em>Check DEC FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkDEC_FWD(gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.COSEM.COSEMObjects.ElectricityValues)
-	 * @generated
-	 */
-	EOperation getEnergyConsumer__CheckDEC_FWD__PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues();
-
-	/**
-	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad <em>Energy Consumer With ID Non Conf Load</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Energy Consumer With ID Non Conf Load</em>'.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad
-	 * @generated
-	 */
-	EClass getEnergyConsumerWithIDNonConfLoad();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Is Appropriate FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__Perform_FWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Register Objects To Match FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjectsToMatch_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Is Appropriate solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_solveCsp_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Is Applicable solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_solveCsp_FWD__IsApplicableMatch_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkTypes_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__CheckTypes_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD_EMoflonEdge_132(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 132</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 132</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD_EMoflonEdge_132(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD_EMoflonEdge_132__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__CheckAttributes_FWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_CC__Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkDEC_FWD(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Check DEC FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkDEC_FWD(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
-	 * @generated
-	 */
-	EOperation getEnergyConsumerWithIDNonConfLoad__CheckDEC_FWD__SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
-
-	/**
-	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink <em>Position Point Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Position Point Link</em>'.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink
-	 * @generated
-	 */
-	EClass getPositionPointLink();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsAppropriate_FWD__Match_Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__Perform_FWD__IsApplicableMatch();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsApplicable_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair) <em>Register Objects To Match FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__RegisterObjectsToMatch_FWD__Match_Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsAppropriate_solveCsp_FWD__Match_Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsAppropriate_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.PositionPointToPositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.Location, outageDetectionJointarget.PositionPoint, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Applicable solve Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.PositionPointToPositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.Location, outageDetectionJointarget.PositionPoint, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_LocationToLocation_Location_PositionPointToPositionPoint_MeterAsset_Location_PositionPoint_PositionPoint_MeterAssetPhysicalDevicePair();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsApplicable_checkCsp_FWD__CSP();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkTypes_FWD(org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__CheckTypes_FWD__Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD_EMoflonEdge_133(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 133</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 133</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD_EMoflonEdge_133(org.moflon.tgg.runtime.EMoflonEdge)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsAppropriate_FWD_EMoflonEdge_133__EMoflonEdge();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__CheckAttributes_FWD__TripleMatch();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__IsApplicable_CC__Match_Match();
-
-	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair) <em>Check DEC FWD</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair)
-	 * @generated
-	 */
-	EOperation getPositionPointLink__CheckDEC_FWD__Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair();
+	int ZONE_OPERATION_COUNT = RuntimePackage.ABSTRACT_RULE_OPERATION_COUNT + 14;
 
 	/**
 	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location <em>Location</em>}'.
@@ -2621,14 +2171,14 @@ public interface RulesPackage extends EPackage {
 	EClass getLocation();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Is Appropriate FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Is Appropriate FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset)
 	 * @generated
 	 */
-	EOperation getLocation__IsAppropriate_FWD__Match_MeterAssetPhysicalDevicePair_Location_MeterAsset();
+	EOperation getLocation__IsAppropriate_FWD__Match_Location_MeterAssetPhysicalDevicePair_MeterAsset();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
@@ -2651,24 +2201,24 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocation__IsApplicable_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Register Objects To Match FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Register Objects To Match FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset)
 	 * @generated
 	 */
-	EOperation getLocation__RegisterObjectsToMatch_FWD__Match_MeterAssetPhysicalDevicePair_Location_MeterAsset();
+	EOperation getLocation__RegisterObjectsToMatch_FWD__Match_Location_MeterAssetPhysicalDevicePair_MeterAsset();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Is Appropriate solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset)
 	 * @generated
 	 */
-	EOperation getLocation__IsAppropriate_solveCsp_FWD__Match_MeterAssetPhysicalDevicePair_Location_MeterAsset();
+	EOperation getLocation__IsAppropriate_solveCsp_FWD__Match_Location_MeterAssetPhysicalDevicePair_MeterAsset();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
@@ -2681,14 +2231,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocation__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, outageDetectionJointarget.EnergyConsumer, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, outageDetectionJointarget.EnergyConsumer, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset)
 	 * @generated
 	 */
-	EOperation getLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetPhysicalDevicePair_Location_MeterAsset_EnergyConsumer_MeterAssetToEnergyConsumer();
+	EOperation getLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_EnergyConsumer_Location_MeterAssetToEnergyConsumer_MeterAssetPhysicalDevicePair_MeterAsset();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
@@ -2721,14 +2271,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocation__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD_EMoflonEdge_134(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 134</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD_EMoflonEdge_0(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 0</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 134</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD_EMoflonEdge_134(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 0</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#isAppropriate_FWD_EMoflonEdge_0(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getLocation__IsAppropriate_FWD_EMoflonEdge_134__EMoflonEdge();
+	EOperation getLocation__IsAppropriate_FWD_EMoflonEdge_0__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -2751,14 +2301,164 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocation__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#checkDEC_FWD(gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Check DEC FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset) <em>Check DEC FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#checkDEC_FWD(gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Location#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset)
 	 * @generated
 	 */
-	EOperation getLocation__CheckDEC_FWD__MeterAssetPhysicalDevicePair_Location_MeterAsset();
+	EOperation getLocation__CheckDEC_FWD__Location_MeterAssetPhysicalDevicePair_MeterAsset();
+
+	/**
+	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint <em>Position Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Position Point</em>'.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint
+	 * @generated
+	 */
+	EClass getPositionPoint();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsAppropriate_FWD__Match_PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getPositionPoint__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Register Objects To Match FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
+	 * @generated
+	 */
+	EOperation getPositionPoint__RegisterObjectsToMatch_FWD__Match_PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsAppropriate_solveCsp_FWD__Match_PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsAppropriate_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Common.PositionPoint, outageDetectionJointarget.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, gluemodel.CIM.IEC61968.Common.Location) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Common.PositionPoint, outageDetectionJointarget.Location, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, gluemodel.CIM.IEC61968.Common.Location)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsApplicable_solveCsp_FWD__IsApplicableMatch_PositionPoint_Location_MeterAssetPhysicalDevicePair_MeterAsset_LocationToLocation_Location();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsApplicable_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getPositionPoint__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getPositionPoint__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD_EMoflonEdge_1(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 1</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 1</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD_EMoflonEdge_1(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsAppropriate_FWD_EMoflonEdge_1__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getPositionPoint__CheckAttributes_FWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getPositionPoint__IsApplicable_CC__Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Check DEC FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
+	 * @generated
+	 */
+	EOperation getPositionPoint__CheckDEC_FWD__PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location();
 
 	/**
 	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithID <em>Energy Consumer With ID</em>}'.
@@ -2871,14 +2571,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getEnergyConsumerWithID__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithID#isAppropriate_FWD_EMoflonEdge_135(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 135</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithID#isAppropriate_FWD_EMoflonEdge_2(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 2</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 135</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithID#isAppropriate_FWD_EMoflonEdge_135(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 2</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithID#isAppropriate_FWD_EMoflonEdge_2(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getEnergyConsumerWithID__IsAppropriate_FWD_EMoflonEdge_135__EMoflonEdge();
+	EOperation getEnergyConsumerWithID__IsAppropriate_FWD_EMoflonEdge_2__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithID#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -2911,154 +2611,154 @@ public interface RulesPackage extends EPackage {
 	EOperation getEnergyConsumerWithID__CheckDEC_FWD__ElectricityValues_ServiceDeliveryPoint_MeterAsset_PhysicalDevice_EnergyConsumer_MeterAssetPhysicalDevicePair_AutoConnectObject();
 
 	/**
-	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone <em>Zone</em>}'.
+	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink <em>Position Point Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Zone</em>'.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone
+	 * @return the meta object for class '<em>Position Point Link</em>'.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink
 	 * @generated
 	 */
-	EClass getZone();
+	EClass getPositionPointLink();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getZone__IsAppropriate_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getPositionPointLink__IsAppropriate_FWD__Match_PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
 	 * @generated
 	 */
-	EOperation getZone__Perform_FWD__IsApplicableMatch();
+	EOperation getPositionPointLink__Perform_FWD__IsApplicableMatch();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getZone__IsApplicable_FWD__Match();
+	EOperation getPositionPointLink__IsApplicable_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Register Objects To Match FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair) <em>Register Objects To Match FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getZone__RegisterObjectsToMatch_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getPositionPointLink__RegisterObjectsToMatch_FWD__Match_PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getZone__IsAppropriate_solveCsp_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getPositionPointLink__IsAppropriate_solveCsp_FWD__Match_PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getZone__IsAppropriate_checkCsp_FWD__CSP();
+	EOperation getPositionPointLink__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Common.PositionPoint, rgse.ttc17.emoflon.tgg.task1.PositionPointToPositionPoint, outageDetectionJointarget.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, outageDetectionJointarget.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, rgse.ttc17.emoflon.tgg.task1.LocationToLocation) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Common.PositionPoint, rgse.ttc17.emoflon.tgg.task1.PositionPointToPositionPoint, outageDetectionJointarget.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, outageDetectionJointarget.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, rgse.ttc17.emoflon.tgg.task1.LocationToLocation)
 	 * @generated
 	 */
-	EOperation getZone__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_Zone_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer();
+	EOperation getPositionPointLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_PositionPoint_PositionPointToPositionPoint_Location_MeterAsset_Location_PositionPoint_MeterAssetPhysicalDevicePair_LocationToLocation();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getZone__IsApplicable_checkCsp_FWD__CSP();
+	EOperation getPositionPointLink__IsApplicable_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getZone__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
+	EOperation getPositionPointLink__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkTypes_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getZone__CheckTypes_FWD__Match();
+	EOperation getPositionPointLink__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD_EMoflonEdge_136(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 136</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD_EMoflonEdge_3(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 3</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 136</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD_EMoflonEdge_136(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 3</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isAppropriate_FWD_EMoflonEdge_3(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getZone__IsAppropriate_FWD_EMoflonEdge_136__EMoflonEdge();
+	EOperation getPositionPointLink__IsAppropriate_FWD_EMoflonEdge_3__EMoflonEdge();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
 	 * @generated
 	 */
-	EOperation getZone__CheckAttributes_FWD__TripleMatch();
+	EOperation getPositionPointLink__CheckAttributes_FWD__TripleMatch();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getZone__IsApplicable_CC__Match_Match();
+	EOperation getPositionPointLink__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Check DEC FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair) <em>Check DEC FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink#checkDEC_FWD(gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getZone__CheckDEC_FWD__Zone_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getPositionPointLink__CheckDEC_FWD__PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair();
 
 	/**
 	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation <em>Service Location</em>}'.
@@ -3131,14 +2831,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getServiceLocation__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Customers.ServiceLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Customers.ServiceLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Customers.ServiceLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Customers.ServiceLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getServiceLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_ServiceLocation_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer();
+	EOperation getServiceLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_ServiceLocation_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
@@ -3171,14 +2871,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getServiceLocation__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isAppropriate_FWD_EMoflonEdge_137(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 137</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isAppropriate_FWD_EMoflonEdge_4(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 4</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 137</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isAppropriate_FWD_EMoflonEdge_137(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 4</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#isAppropriate_FWD_EMoflonEdge_4(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getServiceLocation__IsAppropriate_FWD_EMoflonEdge_137__EMoflonEdge();
+	EOperation getServiceLocation__IsAppropriate_FWD_EMoflonEdge_4__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.ServiceLocation#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -3209,6 +2909,306 @@ public interface RulesPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getServiceLocation__CheckDEC_FWD__ServiceLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+
+	/**
+	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation <em>Work Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Work Location</em>'.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation
+	 * @generated
+	 */
+	EClass getWorkLocation();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsAppropriate_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getWorkLocation__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Register Objects To Match FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @generated
+	 */
+	EOperation getWorkLocation__RegisterObjectsToMatch_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsAppropriate_solveCsp_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsAppropriate_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_WorkLocation_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsApplicable_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getWorkLocation__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getWorkLocation__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 5</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 5</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD_EMoflonEdge_5(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getWorkLocation__CheckAttributes_FWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getWorkLocation__IsApplicable_CC__Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Check DEC FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @generated
+	 */
+	EOperation getWorkLocation__CheckDEC_FWD__WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+
+	/**
+	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer <em>Energy Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Energy Consumer</em>'.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer
+	 * @generated
+	 */
+	EClass getEnergyConsumer();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice) <em>Is Appropriate FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsAppropriate_FWD__Match_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Perform FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__Perform_FWD__IsApplicableMatch();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsApplicable_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice) <em>Register Objects To Match FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__RegisterObjectsToMatch_FWD__Match_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsAppropriate_solveCsp_FWD__Match_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsAppropriate_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsApplicable_solveCsp_FWD__IsApplicableMatch_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsApplicable_checkCsp_FWD__CSP();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__CheckTypes_FWD__Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 6</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 6</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isAppropriate_FWD_EMoflonEdge_6(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__CheckAttributes_FWD__TripleMatch();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__IsApplicable_CC__Match_Match();
+
+	/**
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkDEC_FWD(gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice) <em>Check DEC FWD</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer#checkDEC_FWD(gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice)
+	 * @generated
+	 */
+	EOperation getEnergyConsumer__CheckDEC_FWD__ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice();
 
 	/**
 	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad <em>Energy Consumer With ID Conf Load</em>}'.
@@ -3321,14 +3321,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getEnergyConsumerWithIDConfLoad__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad#isAppropriate_FWD_EMoflonEdge_138(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 138</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad#isAppropriate_FWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 7</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 138</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad#isAppropriate_FWD_EMoflonEdge_138(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 7</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad#isAppropriate_FWD_EMoflonEdge_7(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getEnergyConsumerWithIDConfLoad__IsAppropriate_FWD_EMoflonEdge_138__EMoflonEdge();
+	EOperation getEnergyConsumerWithIDConfLoad__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -3361,154 +3361,154 @@ public interface RulesPackage extends EPackage {
 	EOperation getEnergyConsumerWithIDConfLoad__CheckDEC_FWD__SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_ConformLoad_AutoConnectObject_ConformLoadGroup();
 
 	/**
-	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint <em>Position Point</em>}'.
+	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad <em>Energy Consumer With ID Non Conf Load</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Position Point</em>'.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint
+	 * @return the meta object for class '<em>Energy Consumer With ID Non Conf Load</em>'.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad
 	 * @generated
 	 */
-	EClass getPositionPoint();
+	EClass getEnergyConsumerWithIDNonConfLoad();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Is Appropriate FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsAppropriate_FWD__Match_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
 	 * @generated
 	 */
-	EOperation getPositionPoint__Perform_FWD__IsApplicableMatch();
+	EOperation getEnergyConsumerWithIDNonConfLoad__Perform_FWD__IsApplicableMatch();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsApplicable_FWD__Match();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Register Objects To Match FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Register Objects To Match FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
 	 * @generated
 	 */
-	EOperation getPositionPoint__RegisterObjectsToMatch_FWD__Match_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location();
+	EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjectsToMatch_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Is Appropriate solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsAppropriate_solveCsp_FWD__Match_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_solveCsp_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsAppropriate_checkCsp_FWD__CSP();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, outageDetectionJointarget.Location) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, outageDetectionJointarget.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location_LocationToLocation_Location();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_solveCsp_FWD__IsApplicableMatch_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsApplicable_checkCsp_FWD__CSP();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getPositionPoint__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
+	EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkTypes_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getPositionPoint__CheckTypes_FWD__Match();
+	EOperation getEnergyConsumerWithIDNonConfLoad__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD_EMoflonEdge_139(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 139</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 8</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 139</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isAppropriate_FWD_EMoflonEdge_139(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 8</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isAppropriate_FWD_EMoflonEdge_8(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsAppropriate_FWD_EMoflonEdge_139__EMoflonEdge();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
 	 * @generated
 	 */
-	EOperation getPositionPoint__CheckAttributes_FWD__TripleMatch();
+	EOperation getEnergyConsumerWithIDNonConfLoad__CheckAttributes_FWD__TripleMatch();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getPositionPoint__IsApplicable_CC__Match_Match();
+	EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkDEC_FWD(gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Check DEC FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkDEC_FWD(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) <em>Check DEC FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint#checkDEC_FWD(gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.PositionPoint, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad#checkDEC_FWD(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea, gluemodel.COSEM.COSEMObjects.ElectricityValues, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint, gluemodel.CIM.IEC61970.ControlArea.ControlArea, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.COSEM.PhysicalDevice, gluemodel.CIM.IEC61970.LoadModel.NonConformLoad, gluemodel.COSEM.COSEMObjects.AutoConnectObject, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup)
 	 * @generated
 	 */
-	EOperation getPositionPoint__CheckDEC_FWD__MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location();
+	EOperation getEnergyConsumerWithIDNonConfLoad__CheckDEC_FWD__SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup();
 
 	/**
 	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.GmlPosition <em>Gml Position</em>}'.
@@ -3621,14 +3621,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getGmlPosition__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.GmlPosition#isAppropriate_FWD_EMoflonEdge_140(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 140</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.GmlPosition#isAppropriate_FWD_EMoflonEdge_9(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 9</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 140</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.GmlPosition#isAppropriate_FWD_EMoflonEdge_140(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 9</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.GmlPosition#isAppropriate_FWD_EMoflonEdge_9(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getGmlPosition__IsAppropriate_FWD_EMoflonEdge_140__EMoflonEdge();
+	EOperation getGmlPosition__IsAppropriate_FWD_EMoflonEdge_9__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.GmlPosition#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -3671,14 +3671,14 @@ public interface RulesPackage extends EPackage {
 	EClass getLocationLink();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
 	 * @generated
 	 */
-	EOperation getLocationLink__IsAppropriate_FWD__Match_MeterAsset_MeterAssetPhysicalDevicePair_Location();
+	EOperation getLocationLink__IsAppropriate_FWD__Match_MeterAssetPhysicalDevicePair_MeterAsset_Location();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
@@ -3701,24 +3701,24 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocationLink__IsApplicable_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Register Objects To Match FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Register Objects To Match FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
 	 * @generated
 	 */
-	EOperation getLocationLink__RegisterObjectsToMatch_FWD__Match_MeterAsset_MeterAssetPhysicalDevicePair_Location();
+	EOperation getLocationLink__RegisterObjectsToMatch_FWD__Match_MeterAssetPhysicalDevicePair_MeterAsset_Location();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Is Appropriate solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
 	 * @generated
 	 */
-	EOperation getLocationLink__IsAppropriate_solveCsp_FWD__Match_MeterAsset_MeterAssetPhysicalDevicePair_Location();
+	EOperation getLocationLink__IsAppropriate_solveCsp_FWD__Match_MeterAssetPhysicalDevicePair_MeterAsset_Location();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
@@ -3731,14 +3731,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocationLink__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.Location, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer, outageDetectionJointarget.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.Location, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, gluemodel.CIM.IEC61968.Common.Location, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.LocationToLocation, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer, outageDetectionJointarget.Location, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
 	 * @generated
 	 */
-	EOperation getLocationLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair_Location_LocationToLocation_Location_MeterAssetToEnergyConsumer();
+	EOperation getLocationLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_LocationToLocation_MeterAssetToEnergyConsumer_MeterAssetPhysicalDevicePair_EnergyConsumer_Location_MeterAsset_Location();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
@@ -3771,14 +3771,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocationLink__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD_EMoflonEdge_141(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 141</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD_EMoflonEdge_10(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 10</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 141</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD_EMoflonEdge_141(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 10</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#isAppropriate_FWD_EMoflonEdge_10(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getLocationLink__IsAppropriate_FWD_EMoflonEdge_141__EMoflonEdge();
+	EOperation getLocationLink__IsAppropriate_FWD_EMoflonEdge_10__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -3801,14 +3801,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getLocationLink__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#checkDEC_FWD(gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location) <em>Check DEC FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#checkDEC_FWD(gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location) <em>Check DEC FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#checkDEC_FWD(gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Common.Location)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.LocationLink#checkDEC_FWD(gluemodel.MeterAssetPhysicalDevicePair, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.CIM.IEC61968.Common.Location)
 	 * @generated
 	 */
-	EOperation getLocationLink__CheckDEC_FWD__MeterAsset_MeterAssetPhysicalDevicePair_Location();
+	EOperation getLocationLink__CheckDEC_FWD__MeterAssetPhysicalDevicePair_MeterAsset_Location();
 
 	/**
 	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation <em>SDP Location</em>}'.
@@ -3881,14 +3881,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getSDPLocation__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Metering.SDPLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Metering.SDPLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Metering.SDPLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61968.Metering.SDPLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getSDPLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_SDPLocation_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer();
+	EOperation getSDPLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_SDPLocation_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
@@ -3921,14 +3921,14 @@ public interface RulesPackage extends EPackage {
 	EOperation getSDPLocation__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isAppropriate_FWD_EMoflonEdge_142(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 142</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isAppropriate_FWD_EMoflonEdge_11(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 11</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 142</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isAppropriate_FWD_EMoflonEdge_142(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 11</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#isAppropriate_FWD_EMoflonEdge_11(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getSDPLocation__IsAppropriate_FWD_EMoflonEdge_142__EMoflonEdge();
+	EOperation getSDPLocation__IsAppropriate_FWD_EMoflonEdge_11__EMoflonEdge();
 
 	/**
 	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.SDPLocation#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
@@ -3961,154 +3961,154 @@ public interface RulesPackage extends EPackage {
 	EOperation getSDPLocation__CheckDEC_FWD__SDPLocation_MeterAsset_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation <em>Work Location</em>}'.
+	 * Returns the meta object for class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone <em>Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Work Location</em>'.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation
+	 * @return the meta object for class '<em>Zone</em>'.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone
 	 * @generated
 	 */
-	EClass getWorkLocation();
+	EClass getZone();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsAppropriate_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getZone__IsAppropriate_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch) <em>Perform FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Perform FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#perform_FWD(org.moflon.tgg.runtime.IsApplicableMatch)
 	 * @generated
 	 */
-	EOperation getWorkLocation__Perform_FWD__IsApplicableMatch();
+	EOperation getZone__Perform_FWD__IsApplicableMatch();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_FWD(org.moflon.tgg.runtime.Match) <em>Is Applicable FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_FWD(org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsApplicable_FWD__Match();
+	EOperation getZone__IsApplicable_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Register Objects To Match FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Register Objects To Match FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects To Match FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjectsToMatch_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getWorkLocation__RegisterObjectsToMatch_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getZone__RegisterObjectsToMatch_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Appropriate solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_solveCsp_FWD(org.moflon.tgg.runtime.Match, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsAppropriate_solveCsp_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getZone__IsAppropriate_solveCsp_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Appropriate check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Appropriate check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsAppropriate_checkCsp_FWD__CSP();
+	EOperation getZone__IsAppropriate_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer) <em>Is Applicable solve Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair) <em>Is Applicable solve Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable solve Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair, outageDetectionJointarget.EnergyConsumer)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_solveCsp_FWD(org.moflon.tgg.runtime.IsApplicableMatch, rgse.ttc17.emoflon.tgg.task1.MeterAssetToEnergyConsumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, outageDetectionJointarget.EnergyConsumer, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer();
+	EOperation getZone__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_Zone_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP) <em>Is Applicable check Csp FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable check Csp FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_checkCsp_FWD(org.moflon.tgg.language.csp.CSP)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsApplicable_checkCsp_FWD__CSP();
+	EOperation getZone__IsApplicable_checkCsp_FWD__CSP();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject) <em>Register Objects FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Register Objects FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#registerObjects_FWD(org.moflon.tgg.runtime.PerformRuleResult, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
-	EOperation getWorkLocation__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
+	EOperation getZone__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkTypes_FWD(org.moflon.tgg.runtime.Match) <em>Check Types FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Types FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkTypes_FWD(org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkTypes_FWD(org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getWorkLocation__CheckTypes_FWD__Match();
+	EOperation getZone__CheckTypes_FWD__Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD_EMoflonEdge_143(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 143</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD_EMoflonEdge_12(org.moflon.tgg.runtime.EMoflonEdge) <em>Is Appropriate FWD EMoflon Edge 12</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 143</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isAppropriate_FWD_EMoflonEdge_143(org.moflon.tgg.runtime.EMoflonEdge)
+	 * @return the meta object for the '<em>Is Appropriate FWD EMoflon Edge 12</em>' operation.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isAppropriate_FWD_EMoflonEdge_12(org.moflon.tgg.runtime.EMoflonEdge)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsAppropriate_FWD_EMoflonEdge_143__EMoflonEdge();
+	EOperation getZone__IsAppropriate_FWD_EMoflonEdge_12__EMoflonEdge();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch) <em>Check Attributes FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Attributes FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkAttributes_FWD(org.moflon.tgg.runtime.TripleMatch)
 	 * @generated
 	 */
-	EOperation getWorkLocation__CheckAttributes_FWD__TripleMatch();
+	EOperation getZone__CheckAttributes_FWD__TripleMatch();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match) <em>Is Applicable CC</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Applicable CC</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#isApplicable_CC(org.moflon.tgg.runtime.Match, org.moflon.tgg.runtime.Match)
 	 * @generated
 	 */
-	EOperation getWorkLocation__IsApplicable_CC__Match_Match();
+	EOperation getZone__IsApplicable_CC__Match_Match();
 
 	/**
-	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Check DEC FWD</em>}' operation.
+	 * Returns the meta object for the '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair) <em>Check DEC FWD</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check DEC FWD</em>' operation.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfWork.WorkLocation, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone#checkDEC_FWD(gluemodel.CIM.IEC61970.Informative.InfLocations.Zone, gluemodel.CIM.IEC61968.Metering.MeterAsset, gluemodel.MeterAssetPhysicalDevicePair)
 	 * @generated
 	 */
-	EOperation getWorkLocation__CheckDEC_FWD__WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair();
+	EOperation getZone__CheckDEC_FWD__Zone_MeterAsset_MeterAssetPhysicalDevicePair();
 
 	/**
 	 * Returns the factory that creates the instances of the model.

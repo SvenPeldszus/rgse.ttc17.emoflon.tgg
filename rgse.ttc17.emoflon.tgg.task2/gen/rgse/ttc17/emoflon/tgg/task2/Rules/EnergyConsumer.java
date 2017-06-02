@@ -42,8 +42,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
-			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer);
+	boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,8 +67,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
-			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer);
+	void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,8 +76,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ServiceDeliveryPoint srcDeliver,
-			MeterAssetPhysicalDevicePair pair, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer);
+	CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer,
+			MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,10 +93,10 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
-			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
+			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, MeterAsset asset,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, ServiceDeliveryPoint srcDeliver,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +112,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject srcDeliver, EObject trgConsumer,
-			EObject trgDeliver, EObject deliverToDeliver, EObject pair, EObject srcConsumer,
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcConsumer, EObject asset, EObject trgDeliver,
+			EObject trgConsumer, EObject srcDeliver, EObject pair, EObject deliverToDeliver,
 			EObject consumerToConsumer);
 
 	/**
@@ -130,7 +130,7 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_164(EMoflonEdge _edge_EnergyConsumer);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_38(EMoflonEdge _edge_EnergyConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,8 +154,8 @@ public interface EnergyConsumer extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAsset asset, ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer);
+	boolean checkDEC_FWD(gluemodel.CIM.IEC61970.Wires.EnergyConsumer srcConsumer, MeterAsset asset,
+			ServiceDeliveryPoint srcDeliver, MeterAssetPhysicalDevicePair pair);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

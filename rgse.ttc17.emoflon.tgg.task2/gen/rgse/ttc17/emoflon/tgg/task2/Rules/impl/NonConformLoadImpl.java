@@ -256,9 +256,9 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 						srcConsumer, srcDeliver, trgDeliver, deliverToDeliver, asset, pair);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[6];
 				// EMoflonEdge deliverToDeliver__srcDeliver____source = (EMoflonEdge) result3_green[7];
-				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge deliverToDeliver__trgDeliver____target = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge deliverToDeliver__trgDeliver____target = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[10];
 				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[11];
 				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[12];
 				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[13];
@@ -428,7 +428,7 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_153(EMoflonEdge _edge_EnergyConsumer) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_15(EMoflonEdge _edge_EnergyConsumer) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = NonConformLoadImpl
 				.pattern_NonConformLoad_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -608,8 +608,8 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 			return null;
 		case RulesPackage.NON_CONFORM_LOAD___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.NON_CONFORM_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_153__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_153((EMoflonEdge) arguments.get(0));
+		case RulesPackage.NON_CONFORM_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_15__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_15((EMoflonEdge) arguments.get(0));
 		case RulesPackage.NON_CONFORM_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.NON_CONFORM_LOAD___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -1081,8 +1081,8 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 			MeterAssetPhysicalDevicePair pair) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (srcDeliver.equals(deliverToDeliver.getSource())) {
-			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-				if (trgDeliver.equals(deliverToDeliver.getTarget())) {
+			if (trgDeliver.equals(deliverToDeliver.getTarget())) {
+				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
 					if (asset.equals(pair.getA())) {
 						if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
 							_result.add(new Object[] { srcConsumer, srcDeliver, trgDeliver, deliverToDeliver, asset,
@@ -1102,16 +1102,16 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 			MeterAssetPhysicalDevicePair pair) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge deliverToDeliver__srcDeliver____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge deliverToDeliver__trgDeliver____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge deliverToDeliver__trgDeliver____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String deliverToDeliver__srcDeliver____source_name_prime = "source";
+		String deliverToDeliver__trgDeliver____target_name_prime = "target";
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
-		String deliverToDeliver__trgDeliver____target_name_prime = "target";
 		String pair__asset____a_name_prime = "a";
 		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
 		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
@@ -1124,15 +1124,15 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 		deliverToDeliver__srcDeliver____source.setSrc(deliverToDeliver);
 		deliverToDeliver__srcDeliver____source.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(deliverToDeliver__srcDeliver____source);
+		deliverToDeliver__trgDeliver____target.setSrc(deliverToDeliver);
+		deliverToDeliver__trgDeliver____target.setTrg(trgDeliver);
+		isApplicableMatch.getAllContextElements().add(deliverToDeliver__trgDeliver____target);
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
-		deliverToDeliver__trgDeliver____target.setSrc(deliverToDeliver);
-		deliverToDeliver__trgDeliver____target.setTrg(trgDeliver);
-		isApplicableMatch.getAllContextElements().add(deliverToDeliver__trgDeliver____target);
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(pair__asset____a);
@@ -1143,16 +1143,16 @@ public class NonConformLoadImpl extends AbstractRuleImpl implements NonConformLo
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
 		deliverToDeliver__srcDeliver____source.setName(deliverToDeliver__srcDeliver____source_name_prime);
+		deliverToDeliver__trgDeliver____target.setName(deliverToDeliver__trgDeliver____target_name_prime);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		deliverToDeliver__trgDeliver____target.setName(deliverToDeliver__trgDeliver____target_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
 		return new Object[] { srcConsumer, srcDeliver, trgDeliver, deliverToDeliver, asset, pair, isApplicableMatch,
-				deliverToDeliver__srcDeliver____source, asset__srcDeliver____ServiceDeliveryPoint,
-				srcDeliver__asset____EndDeviceAssets, deliverToDeliver__trgDeliver____target, pair__asset____a,
+				deliverToDeliver__srcDeliver____source, deliverToDeliver__trgDeliver____target,
+				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets, pair__asset____a,
 				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 

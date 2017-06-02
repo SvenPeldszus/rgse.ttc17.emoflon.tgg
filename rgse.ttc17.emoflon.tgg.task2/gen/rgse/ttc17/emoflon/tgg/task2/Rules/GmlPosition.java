@@ -97,9 +97,9 @@ public interface GmlPosition extends EObject, AbstractRule {
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			gluemodel.CIM.IEC61970.Informative.InfGMLSupport.GmlPosition positionPoint,
-			outagePreventionJointarget.Location trgLocation, MeterAsset meter, Location location,
-			MeterAssetMMXUPair pair, LocationToLocation locationCorr);
+			gluemodel.CIM.IEC61970.Informative.InfGMLSupport.GmlPosition positionPoint, MeterAsset meter,
+			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetMMXUPair pair,
+			LocationToLocation locationCorr);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,9 +115,8 @@ public interface GmlPosition extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject positionPoint, EObject positionCorr,
-			EObject trgLocation, EObject meter, EObject location, EObject trgPositionPoint, EObject pair,
-			EObject locationCorr);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject positionPoint, EObject positionCorr, EObject meter,
+			EObject trgLocation, EObject location, EObject trgPositionPoint, EObject pair, EObject locationCorr);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,7 +132,7 @@ public interface GmlPosition extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_168(EMoflonEdge _edge_Position);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_29(EMoflonEdge _edge_Position);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -22,33 +22,6 @@ public interface RulesFactory extends EFactory {
 	RulesFactory eINSTANCE = rgse.ttc17.emoflon.tgg.task1.Rules.impl.RulesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer</em>'.
-	 * @generated
-	 */
-	EnergyConsumer createEnergyConsumer();
-
-	/**
-	 * Returns a new object of class '<em>Energy Consumer With ID Non Conf Load</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer With ID Non Conf Load</em>'.
-	 * @generated
-	 */
-	EnergyConsumerWithIDNonConfLoad createEnergyConsumerWithIDNonConfLoad();
-
-	/**
-	 * Returns a new object of class '<em>Position Point Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Position Point Link</em>'.
-	 * @generated
-	 */
-	PositionPointLink createPositionPointLink();
-
-	/**
 	 * Returns a new object of class '<em>Location</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,6 +29,15 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	Location createLocation();
+
+	/**
+	 * Returns a new object of class '<em>Position Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Position Point</em>'.
+	 * @generated
+	 */
+	PositionPoint createPositionPoint();
 
 	/**
 	 * Returns a new object of class '<em>Energy Consumer With ID</em>'.
@@ -67,13 +49,13 @@ public interface RulesFactory extends EFactory {
 	EnergyConsumerWithID createEnergyConsumerWithID();
 
 	/**
-	 * Returns a new object of class '<em>Zone</em>'.
+	 * Returns a new object of class '<em>Position Point Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Zone</em>'.
+	 * @return a new object of class '<em>Position Point Link</em>'.
 	 * @generated
 	 */
-	Zone createZone();
+	PositionPointLink createPositionPointLink();
 
 	/**
 	 * Returns a new object of class '<em>Service Location</em>'.
@@ -85,6 +67,24 @@ public interface RulesFactory extends EFactory {
 	ServiceLocation createServiceLocation();
 
 	/**
+	 * Returns a new object of class '<em>Work Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Work Location</em>'.
+	 * @generated
+	 */
+	WorkLocation createWorkLocation();
+
+	/**
+	 * Returns a new object of class '<em>Energy Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Energy Consumer</em>'.
+	 * @generated
+	 */
+	EnergyConsumer createEnergyConsumer();
+
+	/**
 	 * Returns a new object of class '<em>Energy Consumer With ID Conf Load</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,13 +94,13 @@ public interface RulesFactory extends EFactory {
 	EnergyConsumerWithIDConfLoad createEnergyConsumerWithIDConfLoad();
 
 	/**
-	 * Returns a new object of class '<em>Position Point</em>'.
+	 * Returns a new object of class '<em>Energy Consumer With ID Non Conf Load</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Position Point</em>'.
+	 * @return a new object of class '<em>Energy Consumer With ID Non Conf Load</em>'.
 	 * @generated
 	 */
-	PositionPoint createPositionPoint();
+	EnergyConsumerWithIDNonConfLoad createEnergyConsumerWithIDNonConfLoad();
 
 	/**
 	 * Returns a new object of class '<em>Gml Position</em>'.
@@ -130,13 +130,13 @@ public interface RulesFactory extends EFactory {
 	SDPLocation createSDPLocation();
 
 	/**
-	 * Returns a new object of class '<em>Work Location</em>'.
+	 * Returns a new object of class '<em>Zone</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Work Location</em>'.
+	 * @return a new object of class '<em>Zone</em>'.
 	 * @generated
 	 */
-	WorkLocation createWorkLocation();
+	Zone createZone();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -52,6 +52,13 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass positionPointToPositionPointEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass controlAreaToEnergyConsumerEClass = null;
 
 	/**
@@ -66,13 +73,6 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass meterAssetToEnergyConsumerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass physicalDeviceToEnergyConsumerEClass = null;
 
 	/**
@@ -80,7 +80,7 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass positionPointToPositionPointEClass = null;
+	private EClass meterAssetToEnergyConsumerEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -159,10 +159,41 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPositionPointToPositionPoint() {
+		if (positionPointToPositionPointEClass == null) {
+			positionPointToPositionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task1Package.eNS_URI)
+					.getEClassifiers().get(0);
+		}
+		return positionPointToPositionPointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionPointToPositionPoint_Source() {
+		return (EReference) getPositionPointToPositionPoint().getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPositionPointToPositionPoint_Target() {
+		return (EReference) getPositionPointToPositionPoint().getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getControlAreaToEnergyConsumer() {
 		if (controlAreaToEnergyConsumerEClass == null) {
 			controlAreaToEnergyConsumerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task1Package.eNS_URI)
-					.getEClassifiers().get(0);
+					.getEClassifiers().get(1);
 		}
 		return controlAreaToEnergyConsumerEClass;
 	}
@@ -193,7 +224,7 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	public EClass getLocationToLocation() {
 		if (locationToLocationEClass == null) {
 			locationToLocationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task1Package.eNS_URI)
-					.getEClassifiers().get(1);
+					.getEClassifiers().get(2);
 		}
 		return locationToLocationEClass;
 	}
@@ -214,37 +245,6 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 */
 	public EReference getLocationToLocation_Target() {
 		return (EReference) getLocationToLocation().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMeterAssetToEnergyConsumer() {
-		if (meterAssetToEnergyConsumerEClass == null) {
-			meterAssetToEnergyConsumerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task1Package.eNS_URI)
-					.getEClassifiers().get(2);
-		}
-		return meterAssetToEnergyConsumerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToEnergyConsumer_Source() {
-		return (EReference) getMeterAssetToEnergyConsumer().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMeterAssetToEnergyConsumer_Target() {
-		return (EReference) getMeterAssetToEnergyConsumer().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -283,12 +283,12 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPositionPointToPositionPoint() {
-		if (positionPointToPositionPointEClass == null) {
-			positionPointToPositionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task1Package.eNS_URI)
+	public EClass getMeterAssetToEnergyConsumer() {
+		if (meterAssetToEnergyConsumerEClass == null) {
+			meterAssetToEnergyConsumerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(Task1Package.eNS_URI)
 					.getEClassifiers().get(4);
 		}
-		return positionPointToPositionPointEClass;
+		return meterAssetToEnergyConsumerEClass;
 	}
 
 	/**
@@ -296,8 +296,8 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionPointToPositionPoint_Source() {
-		return (EReference) getPositionPointToPositionPoint().getEStructuralFeatures().get(0);
+	public EReference getMeterAssetToEnergyConsumer_Source() {
+		return (EReference) getMeterAssetToEnergyConsumer().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -305,8 +305,8 @@ public class Task1PackageImpl extends EPackageImpl implements Task1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPositionPointToPositionPoint_Target() {
-		return (EReference) getPositionPointToPositionPoint().getEStructuralFeatures().get(1);
+	public EReference getMeterAssetToEnergyConsumer_Target() {
+		return (EReference) getMeterAssetToEnergyConsumer().getEStructuralFeatures().get(1);
 	}
 
 	/**

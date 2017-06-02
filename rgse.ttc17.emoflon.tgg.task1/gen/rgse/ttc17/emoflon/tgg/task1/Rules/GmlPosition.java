@@ -116,8 +116,8 @@ public interface GmlPosition extends EObject, AbstractRule {
 	 * @generated
 	 */
 	void registerObjects_FWD(PerformRuleResult ruleresult, EObject positionPoint, EObject locationToLocation,
-			EObject positionCorr, EObject trgLocation, EObject srcLocation, EObject asset, EObject pair,
-			EObject trgPositionPoint);
+			EObject positionCorr, EObject trgLocation, EObject srcLocation, EObject asset, EObject trgPositionPoint,
+			EObject pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,7 +133,7 @@ public interface GmlPosition extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_140(EMoflonEdge _edge_Position);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_9(EMoflonEdge _edge_Position);
 
 	/**
 	 * <!-- begin-user-doc -->

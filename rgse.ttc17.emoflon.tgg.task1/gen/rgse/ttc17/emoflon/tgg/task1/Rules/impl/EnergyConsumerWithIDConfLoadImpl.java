@@ -236,14 +236,14 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 		Object[] result3_black = EnergyConsumerWithIDConfLoadImpl
 				.pattern_EnergyConsumerWithIDConfLoad_1_3_bookkeepingforedges_blackBBBBBBBBBBBBBB(ruleresult, area,
 						assetCorr, electric, deliver, control, deviceCorr, pair, asset, device, consumer, connect,
-						trgConsumer, group);
+						group, trgConsumer);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
 					+ "[ruleresult] = " + ruleresult + ", " + "[area] = " + area + ", " + "[assetCorr] = " + assetCorr
 					+ ", " + "[electric] = " + electric + ", " + "[deliver] = " + deliver + ", " + "[control] = "
 					+ control + ", " + "[deviceCorr] = " + deviceCorr + ", " + "[pair] = " + pair + ", " + "[asset] = "
 					+ asset + ", " + "[device] = " + device + ", " + "[consumer] = " + consumer + ", " + "[connect] = "
-					+ connect + ", " + "[trgConsumer] = " + trgConsumer + ", " + "[group] = " + group + ".");
+					+ connect + ", " + "[group] = " + group + ", " + "[trgConsumer] = " + trgConsumer + ".");
 		}
 		EnergyConsumerWithIDConfLoadImpl
 				.pattern_EnergyConsumerWithIDConfLoad_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(ruleresult, assetCorr,
@@ -260,7 +260,7 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 		EnergyConsumerWithIDConfLoadImpl
 				.pattern_EnergyConsumerWithIDConfLoad_1_5_registerobjects_expressionBBBBBBBBBBBBBBB(this, ruleresult,
 						area, assetCorr, electric, deliver, control, deviceCorr, pair, asset, device, consumer, connect,
-						trgConsumer, group);
+						group, trgConsumer);
 		return EnergyConsumerWithIDConfLoadImpl.pattern_EnergyConsumerWithIDConfLoad_1_6_expressionFB(ruleresult);
 	}
 
@@ -510,7 +510,7 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 	 */
 	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject area, EObject assetCorr, EObject electric,
 			EObject deliver, EObject control, EObject deviceCorr, EObject pair, EObject asset, EObject device,
-			EObject consumer, EObject connect, EObject trgConsumer, EObject group) {
+			EObject consumer, EObject connect, EObject group, EObject trgConsumer) {
 		ruleresult.registerObject("area", area);
 		ruleresult.registerObject("assetCorr", assetCorr);
 		ruleresult.registerObject("electric", electric);
@@ -522,8 +522,8 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 		ruleresult.registerObject("device", device);
 		ruleresult.registerObject("consumer", consumer);
 		ruleresult.registerObject("connect", connect);
-		ruleresult.registerObject("trgConsumer", trgConsumer);
 		ruleresult.registerObject("group", group);
+		ruleresult.registerObject("trgConsumer", trgConsumer);
 
 	}
 
@@ -542,7 +542,7 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_138(EMoflonEdge _edge_a) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_7(EMoflonEdge _edge_a) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerWithIDConfLoadImpl
 				.pattern_EnergyConsumerWithIDConfLoad_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -623,29 +623,29 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgConsumer_ControlAreaID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_ControlAreaID.setValue(__helper.getValue("trgConsumer", "ControlAreaID"));
-		var_trgConsumer_ControlAreaID.setType("String");
-
 		Variable var_control_mRID = CSPFactoryHelper.eINSTANCE.createVariable("control", true, csp);
 		var_control_mRID.setValue(__helper.getValue("control", "mRID"));
 		var_control_mRID.setType("String");
 
-		Variable var_trgConsumer_ID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_ID.setValue(__helper.getValue("trgConsumer", "ID"));
-		var_trgConsumer_ID.setType("String");
+		Variable var_trgConsumer_ControlAreaID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_ControlAreaID.setValue(__helper.getValue("trgConsumer", "ControlAreaID"));
+		var_trgConsumer_ControlAreaID.setType("String");
 
 		Variable var_consumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("consumer", true, csp);
 		var_consumer_mRID.setValue(__helper.getValue("consumer", "mRID"));
 		var_consumer_mRID.setType("String");
 
-		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
-		var_trgConsumer_PowerA.setType("double");
+		Variable var_trgConsumer_ID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_ID.setValue(__helper.getValue("trgConsumer", "ID"));
+		var_trgConsumer_ID.setType("String");
 
 		Variable var_electric_ApparentPowermL1 = CSPFactoryHelper.eINSTANCE.createVariable("electric", true, csp);
 		var_electric_ApparentPowermL1.setValue(__helper.getValue("electric", "ApparentPowermL1"));
 		var_electric_ApparentPowermL1.setType("double");
+
+		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
+		var_trgConsumer_PowerA.setType("double");
 
 		Variable var_trgConsumer_Reachability = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
 		var_trgConsumer_Reachability.setValue(__helper.getValue("trgConsumer", "Reachability"));
@@ -787,8 +787,8 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 			return null;
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_138__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_138((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD___IS_APPROPRIATE_FWD_EMOFLON_EDGE_7__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_7((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -1145,7 +1145,7 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 	public static final Object[] pattern_EnergyConsumerWithIDConfLoad_1_3_bookkeepingforedges_blackBBBBBBBBBBBBBB(
 			PerformRuleResult ruleresult, EObject area, EObject assetCorr, EObject electric, EObject deliver,
 			EObject control, EObject deviceCorr, EObject pair, EObject asset, EObject device, EObject consumer,
-			EObject connect, EObject trgConsumer, EObject group) {
+			EObject connect, EObject group, EObject trgConsumer) {
 		if (!area.equals(assetCorr)) {
 			if (!area.equals(electric)) {
 				if (!area.equals(deliver)) {
@@ -1156,8 +1156,8 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 									if (!area.equals(device)) {
 										if (!area.equals(consumer)) {
 											if (!area.equals(connect)) {
-												if (!area.equals(trgConsumer)) {
-													if (!area.equals(group)) {
+												if (!area.equals(group)) {
+													if (!area.equals(trgConsumer)) {
 														if (!assetCorr.equals(electric)) {
 															if (!assetCorr.equals(deliver)) {
 																if (!assetCorr.equals(control)) {
@@ -1166,16 +1166,15 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																			if (!assetCorr.equals(device)) {
 																				if (!assetCorr.equals(consumer)) {
 																					if (!assetCorr.equals(connect)) {
-																						if (!assetCorr
-																								.equals(trgConsumer)) {
-																							if (!assetCorr
-																									.equals(group)) {
+																						if (!assetCorr.equals(group)) {
+																							if (!assetCorr.equals(
+																									trgConsumer)) {
 																								if (!electric
 																										.equals(pair)) {
 																									if (!electric
-																											.equals(trgConsumer)) {
+																											.equals(group)) {
 																										if (!electric
-																												.equals(group)) {
+																												.equals(trgConsumer)) {
 																											if (!deliver
 																													.equals(electric)) {
 																												if (!deliver
@@ -1185,9 +1184,9 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																														if (!deliver
 																																.equals(device)) {
 																															if (!deliver
-																																	.equals(trgConsumer)) {
+																																	.equals(group)) {
 																																if (!deliver
-																																		.equals(group)) {
+																																		.equals(trgConsumer)) {
 																																	if (!control
 																																			.equals(electric)) {
 																																		if (!control
@@ -1199,17 +1198,17 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																																					if (!control
 																																							.equals(device)) {
 																																						if (!control
-																																								.equals(trgConsumer)) {
+																																								.equals(group)) {
 																																							if (!control
-																																									.equals(group)) {
+																																									.equals(trgConsumer)) {
 																																								if (!deviceCorr
 																																										.equals(electric)) {
 																																									if (!deviceCorr
 																																											.equals(pair)) {
 																																										if (!deviceCorr
-																																												.equals(trgConsumer)) {
+																																												.equals(group)) {
 																																											if (!deviceCorr
-																																													.equals(group)) {
+																																													.equals(trgConsumer)) {
 																																												if (!pair
 																																														.equals(trgConsumer)) {
 																																													if (!asset
@@ -1231,9 +1230,9 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																																																					if (!asset
 																																																							.equals(connect)) {
 																																																						if (!asset
-																																																								.equals(trgConsumer)) {
+																																																								.equals(group)) {
 																																																							if (!asset
-																																																									.equals(group)) {
+																																																									.equals(trgConsumer)) {
 																																																								if (!device
 																																																										.equals(electric)) {
 																																																									if (!device
@@ -1241,9 +1240,9 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																																																										if (!device
 																																																												.equals(pair)) {
 																																																											if (!device
-																																																													.equals(trgConsumer)) {
+																																																													.equals(group)) {
 																																																												if (!device
-																																																														.equals(group)) {
+																																																														.equals(trgConsumer)) {
 																																																													if (!consumer
 																																																															.equals(electric)) {
 																																																														if (!consumer
@@ -1257,9 +1256,9 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																																																																		if (!consumer
 																																																																				.equals(device)) {
 																																																																			if (!consumer
-																																																																					.equals(trgConsumer)) {
+																																																																					.equals(group)) {
 																																																																				if (!consumer
-																																																																						.equals(group)) {
+																																																																						.equals(trgConsumer)) {
 																																																																					if (!connect
 																																																																							.equals(electric)) {
 																																																																						if (!connect
@@ -1275,9 +1274,9 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																																																																											if (!connect
 																																																																													.equals(consumer)) {
 																																																																												if (!connect
-																																																																														.equals(trgConsumer)) {
+																																																																														.equals(group)) {
 																																																																													if (!connect
-																																																																															.equals(group)) {
+																																																																															.equals(trgConsumer)) {
 																																																																														if (!group
 																																																																																.equals(pair)) {
 																																																																															if (!group
@@ -1295,8 +1294,8 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 																																																																																		device,
 																																																																																		consumer,
 																																																																																		connect,
-																																																																																		trgConsumer,
-																																																																																		group };
+																																																																																		group,
+																																																																																		trgConsumer };
 																																																																															}
 																																																																														}
 																																																																													}
@@ -1427,9 +1426,9 @@ public class EnergyConsumerWithIDConfLoadImpl extends AbstractRuleImpl implement
 	public static final void pattern_EnergyConsumerWithIDConfLoad_1_5_registerobjects_expressionBBBBBBBBBBBBBBB(
 			EnergyConsumerWithIDConfLoad _this, PerformRuleResult ruleresult, EObject area, EObject assetCorr,
 			EObject electric, EObject deliver, EObject control, EObject deviceCorr, EObject pair, EObject asset,
-			EObject device, EObject consumer, EObject connect, EObject trgConsumer, EObject group) {
+			EObject device, EObject consumer, EObject connect, EObject group, EObject trgConsumer) {
 		_this.registerObjects_FWD(ruleresult, area, assetCorr, electric, deliver, control, deviceCorr, pair, asset,
-				device, consumer, connect, trgConsumer, group);
+				device, consumer, connect, group, trgConsumer);
 
 	}
 

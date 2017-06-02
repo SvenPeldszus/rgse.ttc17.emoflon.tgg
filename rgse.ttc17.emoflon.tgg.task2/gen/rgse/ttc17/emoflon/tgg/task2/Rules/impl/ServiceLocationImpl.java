@@ -161,9 +161,9 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		}
 		gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation = (gluemodel.CIM.IEC61968.Customers.ServiceLocation) result1_bindingAndBlack[0];
 		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[1];
-		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[2];
-		PMUVoltageMeter consumer = (PMUVoltageMeter) result1_bindingAndBlack[3];
-		MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result1_bindingAndBlack[4];
+		PMUVoltageMeter consumer = (PMUVoltageMeter) result1_bindingAndBlack[2];
+		MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result1_bindingAndBlack[3];
+		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result1_bindingAndBlack[4];
 		// CSP csp = (CSP) result1_bindingAndBlack[5];
 		Object[] result1_green = ServiceLocationImpl
 				.pattern_ServiceLocation_1_1_performtransformation_greenFBBF(srcLocation, consumer);
@@ -184,12 +184,12 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 
 		// bookkeeping for edges
 		Object[] result3_black = ServiceLocationImpl.pattern_ServiceLocation_1_3_bookkeepingforedges_blackBBBBBBBB(
-				ruleresult, trgLocation, srcLocation, asset, pair, consumer, assetToPMU, locationCorr);
+				ruleresult, trgLocation, srcLocation, asset, consumer, assetToPMU, pair, locationCorr);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
 					+ "[ruleresult] = " + ruleresult + ", " + "[trgLocation] = " + trgLocation + ", "
-					+ "[srcLocation] = " + srcLocation + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
-					+ "[consumer] = " + consumer + ", " + "[assetToPMU] = " + assetToPMU + ", " + "[locationCorr] = "
+					+ "[srcLocation] = " + srcLocation + ", " + "[asset] = " + asset + ", " + "[consumer] = " + consumer
+					+ ", " + "[assetToPMU] = " + assetToPMU + ", " + "[pair] = " + pair + ", " + "[locationCorr] = "
 					+ locationCorr + ".");
 		}
 		ServiceLocationImpl.pattern_ServiceLocation_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, trgLocation,
@@ -203,7 +203,7 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		// perform postprocessing story node is empty
 		// register objects
 		ServiceLocationImpl.pattern_ServiceLocation_1_5_registerobjects_expressionBBBBBBBBB(this, ruleresult,
-				trgLocation, srcLocation, asset, pair, consumer, assetToPMU, locationCorr);
+				trgLocation, srcLocation, asset, consumer, assetToPMU, pair, locationCorr);
 		return ServiceLocationImpl.pattern_ServiceLocation_1_6_expressionFB(ruleresult);
 	}
 
@@ -235,15 +235,15 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation = (gluemodel.CIM.IEC61968.Customers.ServiceLocation) result2_binding[0];
 		MeterAsset asset = (MeterAsset) result2_binding[1];
 		MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result2_binding[2];
-		for (Object[] result2_black : ServiceLocationImpl.pattern_ServiceLocation_2_2_corematch_blackBBBFFB(srcLocation,
+		for (Object[] result2_black : ServiceLocationImpl.pattern_ServiceLocation_2_2_corematch_blackBBFFBB(srcLocation,
 				asset, pair, match)) {
-			PMUVoltageMeter consumer = (PMUVoltageMeter) result2_black[3];
-			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result2_black[4];
+			PMUVoltageMeter consumer = (PMUVoltageMeter) result2_black[2];
+			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result2_black[3];
 			// ForEach find context
 			for (Object[] result3_black : ServiceLocationImpl.pattern_ServiceLocation_2_3_findcontext_blackBBBBB(
-					srcLocation, asset, pair, consumer, assetToPMU)) {
+					srcLocation, asset, consumer, assetToPMU, pair)) {
 				Object[] result3_green = ServiceLocationImpl.pattern_ServiceLocation_2_3_findcontext_greenBBBBBFFFFFF(
-						srcLocation, asset, pair, consumer, assetToPMU);
+						srcLocation, asset, consumer, assetToPMU, pair);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[5];
 				// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result3_green[6];
 				// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result3_green[7];
@@ -254,12 +254,12 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 				// solve CSP
 				Object[] result4_bindingAndBlack = ServiceLocationImpl
 						.pattern_ServiceLocation_2_4_solveCSP_bindingAndBlackFBBBBBBB(this, isApplicableMatch,
-								srcLocation, asset, pair, consumer, assetToPMU);
+								srcLocation, asset, consumer, assetToPMU, pair);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[srcLocation] = " + srcLocation + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair
-							+ ", " + "[consumer] = " + consumer + ", " + "[assetToPMU] = " + assetToPMU + ".");
+							+ "[srcLocation] = " + srcLocation + ", " + "[asset] = " + asset + ", " + "[consumer] = "
+							+ consumer + ", " + "[assetToPMU] = " + assetToPMU + ", " + "[pair] = " + pair + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -334,8 +334,8 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	 * @generated
 	 */
 	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, MeterAssetMMXUPair pair,
-			PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU) {// Create CSP
+			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, PMUVoltageMeter consumer,
+			MeterAssetToPMUVoltageMeter assetToPMU, MeterAssetMMXUPair pair) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -352,9 +352,9 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		// Snapshot pattern match on which CSP is solved
 		isApplicableMatch.registerObject("srcLocation", srcLocation);
 		isApplicableMatch.registerObject("asset", asset);
-		isApplicableMatch.registerObject("pair", pair);
 		isApplicableMatch.registerObject("consumer", consumer);
 		isApplicableMatch.registerObject("assetToPMU", assetToPMU);
+		isApplicableMatch.registerObject("pair", pair);
 		return csp;
 	}
 
@@ -373,13 +373,13 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	 * @generated
 	 */
 	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation,
-			EObject asset, EObject pair, EObject consumer, EObject assetToPMU, EObject locationCorr) {
+			EObject asset, EObject consumer, EObject assetToPMU, EObject pair, EObject locationCorr) {
 		ruleresult.registerObject("trgLocation", trgLocation);
 		ruleresult.registerObject("srcLocation", srcLocation);
 		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("pair", pair);
 		ruleresult.registerObject("consumer", consumer);
 		ruleresult.registerObject("assetToPMU", assetToPMU);
+		ruleresult.registerObject("pair", pair);
 		ruleresult.registerObject("locationCorr", locationCorr);
 
 	}
@@ -399,7 +399,7 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_166(EMoflonEdge _edge_Location) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_19(EMoflonEdge _edge_Location) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ServiceLocationImpl
 				.pattern_ServiceLocation_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -541,11 +541,11 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 					(MeterAssetMMXUPair) arguments.get(3));
 		case RulesPackage.SERVICE_LOCATION___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.SERVICE_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SERVICELOCATION_METERASSET_METERASSETMMXUPAIR_PMUVOLTAGEMETER_METERASSETTOPMUVOLTAGEMETER:
+		case RulesPackage.SERVICE_LOCATION___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SERVICELOCATION_METERASSET_PMUVOLTAGEMETER_METERASSETTOPMUVOLTAGEMETER_METERASSETMMXUPAIR:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
 					(gluemodel.CIM.IEC61968.Customers.ServiceLocation) arguments.get(1), (MeterAsset) arguments.get(2),
-					(MeterAssetMMXUPair) arguments.get(3), (PMUVoltageMeter) arguments.get(4),
-					(MeterAssetToPMUVoltageMeter) arguments.get(5));
+					(PMUVoltageMeter) arguments.get(3), (MeterAssetToPMUVoltageMeter) arguments.get(4),
+					(MeterAssetMMXUPair) arguments.get(5));
 		case RulesPackage.SERVICE_LOCATION___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.SERVICE_LOCATION___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -555,8 +555,8 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 			return null;
 		case RulesPackage.SERVICE_LOCATION___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.SERVICE_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_166__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_166((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SERVICE_LOCATION___IS_APPROPRIATE_FWD_EMOFLON_EDGE_19__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_19((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SERVICE_LOCATION___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SERVICE_LOCATION___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -674,25 +674,25 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 			IsApplicableMatch isApplicableMatch) {
 		EObject _localVariable_0 = isApplicableMatch.getObject("srcLocation");
 		EObject _localVariable_1 = isApplicableMatch.getObject("asset");
-		EObject _localVariable_2 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_3 = isApplicableMatch.getObject("consumer");
-		EObject _localVariable_4 = isApplicableMatch.getObject("assetToPMU");
+		EObject _localVariable_2 = isApplicableMatch.getObject("consumer");
+		EObject _localVariable_3 = isApplicableMatch.getObject("assetToPMU");
+		EObject _localVariable_4 = isApplicableMatch.getObject("pair");
 		EObject tmpSrcLocation = _localVariable_0;
 		EObject tmpAsset = _localVariable_1;
-		EObject tmpPair = _localVariable_2;
-		EObject tmpConsumer = _localVariable_3;
-		EObject tmpAssetToPMU = _localVariable_4;
+		EObject tmpConsumer = _localVariable_2;
+		EObject tmpAssetToPMU = _localVariable_3;
+		EObject tmpPair = _localVariable_4;
 		if (tmpSrcLocation instanceof gluemodel.CIM.IEC61968.Customers.ServiceLocation) {
 			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation = (gluemodel.CIM.IEC61968.Customers.ServiceLocation) tmpSrcLocation;
 			if (tmpAsset instanceof MeterAsset) {
 				MeterAsset asset = (MeterAsset) tmpAsset;
-				if (tmpPair instanceof MeterAssetMMXUPair) {
-					MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
-					if (tmpConsumer instanceof PMUVoltageMeter) {
-						PMUVoltageMeter consumer = (PMUVoltageMeter) tmpConsumer;
-						if (tmpAssetToPMU instanceof MeterAssetToPMUVoltageMeter) {
-							MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) tmpAssetToPMU;
-							return new Object[] { srcLocation, asset, pair, consumer, assetToPMU, isApplicableMatch };
+				if (tmpConsumer instanceof PMUVoltageMeter) {
+					PMUVoltageMeter consumer = (PMUVoltageMeter) tmpConsumer;
+					if (tmpAssetToPMU instanceof MeterAssetToPMUVoltageMeter) {
+						MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) tmpAssetToPMU;
+						if (tmpPair instanceof MeterAssetMMXUPair) {
+							MeterAssetMMXUPair pair = (MeterAssetMMXUPair) tmpPair;
+							return new Object[] { srcLocation, asset, consumer, assetToPMU, pair, isApplicableMatch };
 						}
 					}
 				}
@@ -702,13 +702,13 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	}
 
 	public static final Object[] pattern_ServiceLocation_1_1_performtransformation_blackBBBBBFBB(
-			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, MeterAssetMMXUPair pair,
-			PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU, ServiceLocation _this,
+			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, PMUVoltageMeter consumer,
+			MeterAssetToPMUVoltageMeter assetToPMU, MeterAssetMMXUPair pair, ServiceLocation _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { srcLocation, asset, pair, consumer, assetToPMU, csp, _this, isApplicableMatch };
+				return new Object[] { srcLocation, asset, consumer, assetToPMU, pair, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -721,16 +721,16 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		if (result_pattern_ServiceLocation_1_1_performtransformation_binding != null) {
 			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation = (gluemodel.CIM.IEC61968.Customers.ServiceLocation) result_pattern_ServiceLocation_1_1_performtransformation_binding[0];
 			MeterAsset asset = (MeterAsset) result_pattern_ServiceLocation_1_1_performtransformation_binding[1];
-			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_ServiceLocation_1_1_performtransformation_binding[2];
-			PMUVoltageMeter consumer = (PMUVoltageMeter) result_pattern_ServiceLocation_1_1_performtransformation_binding[3];
-			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result_pattern_ServiceLocation_1_1_performtransformation_binding[4];
+			PMUVoltageMeter consumer = (PMUVoltageMeter) result_pattern_ServiceLocation_1_1_performtransformation_binding[2];
+			MeterAssetToPMUVoltageMeter assetToPMU = (MeterAssetToPMUVoltageMeter) result_pattern_ServiceLocation_1_1_performtransformation_binding[3];
+			MeterAssetMMXUPair pair = (MeterAssetMMXUPair) result_pattern_ServiceLocation_1_1_performtransformation_binding[4];
 
 			Object[] result_pattern_ServiceLocation_1_1_performtransformation_black = pattern_ServiceLocation_1_1_performtransformation_blackBBBBBFBB(
-					srcLocation, asset, pair, consumer, assetToPMU, _this, isApplicableMatch);
+					srcLocation, asset, consumer, assetToPMU, pair, _this, isApplicableMatch);
 			if (result_pattern_ServiceLocation_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_ServiceLocation_1_1_performtransformation_black[5];
 
-				return new Object[] { srcLocation, asset, pair, consumer, assetToPMU, csp, _this, isApplicableMatch };
+				return new Object[] { srcLocation, asset, consumer, assetToPMU, pair, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -761,26 +761,26 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	}
 
 	public static final Object[] pattern_ServiceLocation_1_3_bookkeepingforedges_blackBBBBBBBB(
-			PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject asset, EObject pair,
-			EObject consumer, EObject assetToPMU, EObject locationCorr) {
+			PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject asset, EObject consumer,
+			EObject assetToPMU, EObject pair, EObject locationCorr) {
 		if (!srcLocation.equals(trgLocation)) {
 			if (!asset.equals(trgLocation)) {
 				if (!asset.equals(srcLocation)) {
-					if (!asset.equals(pair)) {
-						if (!asset.equals(consumer)) {
-							if (!asset.equals(assetToPMU)) {
+					if (!asset.equals(consumer)) {
+						if (!asset.equals(assetToPMU)) {
+							if (!asset.equals(pair)) {
 								if (!asset.equals(locationCorr)) {
-									if (!pair.equals(trgLocation)) {
-										if (!pair.equals(srcLocation)) {
-											if (!consumer.equals(trgLocation)) {
-												if (!consumer.equals(srcLocation)) {
-													if (!consumer.equals(pair)) {
-														if (!consumer.equals(locationCorr)) {
-															if (!assetToPMU.equals(trgLocation)) {
-																if (!assetToPMU.equals(srcLocation)) {
-																	if (!assetToPMU.equals(pair)) {
-																		if (!assetToPMU.equals(consumer)) {
-																			if (!assetToPMU.equals(locationCorr)) {
+									if (!consumer.equals(trgLocation)) {
+										if (!consumer.equals(srcLocation)) {
+											if (!consumer.equals(pair)) {
+												if (!consumer.equals(locationCorr)) {
+													if (!assetToPMU.equals(trgLocation)) {
+														if (!assetToPMU.equals(srcLocation)) {
+															if (!assetToPMU.equals(consumer)) {
+																if (!assetToPMU.equals(pair)) {
+																	if (!assetToPMU.equals(locationCorr)) {
+																		if (!pair.equals(trgLocation)) {
+																			if (!pair.equals(srcLocation)) {
 																				if (!locationCorr.equals(trgLocation)) {
 																					if (!locationCorr
 																							.equals(srcLocation)) {
@@ -790,8 +790,8 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 																									ruleresult,
 																									trgLocation,
 																									srcLocation, asset,
-																									pair, consumer,
-																									assetToPMU,
+																									consumer,
+																									assetToPMU, pair,
 																									locationCorr };
 																						}
 																					}
@@ -858,9 +858,9 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	}
 
 	public static final void pattern_ServiceLocation_1_5_registerobjects_expressionBBBBBBBBB(ServiceLocation _this,
-			PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject asset, EObject pair,
-			EObject consumer, EObject assetToPMU, EObject locationCorr) {
-		_this.registerObjects_FWD(ruleresult, trgLocation, srcLocation, asset, pair, consumer, assetToPMU,
+			PerformRuleResult ruleresult, EObject trgLocation, EObject srcLocation, EObject asset, EObject consumer,
+			EObject assetToPMU, EObject pair, EObject locationCorr) {
+		_this.registerObjects_FWD(ruleresult, trgLocation, srcLocation, asset, consumer, assetToPMU, pair,
 				locationCorr);
 
 	}
@@ -939,7 +939,7 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_ServiceLocation_2_2_corematch_blackBBBFFB(
+	public static final Iterable<Object[]> pattern_ServiceLocation_2_2_corematch_blackBBFFBB(
 			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, MeterAssetMMXUPair pair,
 			Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
@@ -947,7 +947,7 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 				.getOppositeReferenceTyped(asset, MeterAssetToPMUVoltageMeter.class, "source")) {
 			PMUVoltageMeter consumer = assetToPMU.getTarget();
 			if (consumer != null) {
-				_result.add(new Object[] { srcLocation, asset, pair, consumer, assetToPMU, match });
+				_result.add(new Object[] { srcLocation, asset, consumer, assetToPMU, pair, match });
 			}
 
 		}
@@ -955,14 +955,14 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	}
 
 	public static final Iterable<Object[]> pattern_ServiceLocation_2_3_findcontext_blackBBBBB(
-			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, MeterAssetMMXUPair pair,
-			PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU) {
+			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, PMUVoltageMeter consumer,
+			MeterAssetToPMUVoltageMeter assetToPMU, MeterAssetMMXUPair pair) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (srcLocation.equals(asset.getLocation())) {
 			if (consumer.equals(assetToPMU.getTarget())) {
 				if (asset.equals(assetToPMU.getSource())) {
 					if (asset.equals(pair.getA())) {
-						_result.add(new Object[] { srcLocation, asset, pair, consumer, assetToPMU });
+						_result.add(new Object[] { srcLocation, asset, consumer, assetToPMU, pair });
 					}
 				}
 			}
@@ -971,8 +971,8 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 	}
 
 	public static final Object[] pattern_ServiceLocation_2_3_findcontext_greenBBBBBFFFFFF(
-			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, MeterAssetMMXUPair pair,
-			PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU) {
+			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, PMUVoltageMeter consumer,
+			MeterAssetToPMUVoltageMeter assetToPMU, MeterAssetMMXUPair pair) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge asset__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__asset____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
@@ -986,9 +986,9 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		String pair__asset____a_name_prime = "a";
 		isApplicableMatch.getAllContextElements().add(srcLocation);
 		isApplicableMatch.getAllContextElements().add(asset);
-		isApplicableMatch.getAllContextElements().add(pair);
 		isApplicableMatch.getAllContextElements().add(consumer);
 		isApplicableMatch.getAllContextElements().add(assetToPMU);
+		isApplicableMatch.getAllContextElements().add(pair);
 		asset__srcLocation____Location.setSrc(asset);
 		asset__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(asset__srcLocation____Location);
@@ -1009,20 +1009,20 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 		assetToPMU__consumer____target.setName(assetToPMU__consumer____target_name_prime);
 		assetToPMU__asset____source.setName(assetToPMU__asset____source_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { srcLocation, asset, pair, consumer, assetToPMU, isApplicableMatch,
+		return new Object[] { srcLocation, asset, consumer, assetToPMU, pair, isApplicableMatch,
 				asset__srcLocation____Location, srcLocation__asset____Assets, assetToPMU__consumer____target,
 				assetToPMU__asset____source, pair__asset____a };
 	}
 
 	public static final Object[] pattern_ServiceLocation_2_4_solveCSP_bindingFBBBBBBB(ServiceLocation _this,
 			IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation,
-			MeterAsset asset, MeterAssetMMXUPair pair, PMUVoltageMeter consumer,
-			MeterAssetToPMUVoltageMeter assetToPMU) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcLocation, asset, pair, consumer,
-				assetToPMU);
+			MeterAsset asset, PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU,
+			MeterAssetMMXUPair pair) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcLocation, asset, consumer,
+				assetToPMU, pair);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, srcLocation, asset, pair, consumer, assetToPMU };
+			return new Object[] { csp, _this, isApplicableMatch, srcLocation, asset, consumer, assetToPMU, pair };
 		}
 		return null;
 	}
@@ -1033,10 +1033,10 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 
 	public static final Object[] pattern_ServiceLocation_2_4_solveCSP_bindingAndBlackFBBBBBBB(ServiceLocation _this,
 			IsApplicableMatch isApplicableMatch, gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation,
-			MeterAsset asset, MeterAssetMMXUPair pair, PMUVoltageMeter consumer,
-			MeterAssetToPMUVoltageMeter assetToPMU) {
+			MeterAsset asset, PMUVoltageMeter consumer, MeterAssetToPMUVoltageMeter assetToPMU,
+			MeterAssetMMXUPair pair) {
 		Object[] result_pattern_ServiceLocation_2_4_solveCSP_binding = pattern_ServiceLocation_2_4_solveCSP_bindingFBBBBBBB(
-				_this, isApplicableMatch, srcLocation, asset, pair, consumer, assetToPMU);
+				_this, isApplicableMatch, srcLocation, asset, consumer, assetToPMU, pair);
 		if (result_pattern_ServiceLocation_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_ServiceLocation_2_4_solveCSP_binding[0];
 
@@ -1044,7 +1044,7 @@ public class ServiceLocationImpl extends AbstractRuleImpl implements ServiceLoca
 					csp);
 			if (result_pattern_ServiceLocation_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, srcLocation, asset, pair, consumer, assetToPMU };
+				return new Object[] { csp, _this, isApplicableMatch, srcLocation, asset, consumer, assetToPMU, pair };
 			}
 		}
 		return null;

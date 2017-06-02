@@ -224,8 +224,8 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 		}
 		EnergyConsumerWithIDImpl.pattern_EnergyConsumerWithID_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(ruleresult,
 				assetCorr, deviceCorr, asset, device, pair, trgConsumer);
-		// EMoflonEdge deviceCorr__device____source = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge assetCorr__trgConsumer____target = (EMoflonEdge) result3_green[8];
+		// EMoflonEdge assetCorr__trgConsumer____target = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge deviceCorr__device____source = (EMoflonEdge) result3_green[8];
 		// EMoflonEdge assetCorr__asset____source = (EMoflonEdge) result3_green[9];
 		// EMoflonEdge deviceCorr__trgConsumer____target = (EMoflonEdge) result3_green[10];
 		// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[11];
@@ -483,7 +483,7 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_135(EMoflonEdge _edge_b) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_2(EMoflonEdge _edge_b) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerWithIDImpl
 				.pattern_EnergyConsumerWithID_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -558,21 +558,21 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgConsumer_ID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_ID.setValue(__helper.getValue("trgConsumer", "ID"));
-		var_trgConsumer_ID.setType("String");
-
 		Variable var_consumer_mRID = CSPFactoryHelper.eINSTANCE.createVariable("consumer", true, csp);
 		var_consumer_mRID.setValue(__helper.getValue("consumer", "mRID"));
 		var_consumer_mRID.setType("String");
 
-		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
-		var_trgConsumer_PowerA.setType("double");
+		Variable var_trgConsumer_ID = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_ID.setValue(__helper.getValue("trgConsumer", "ID"));
+		var_trgConsumer_ID.setType("String");
 
 		Variable var_electric_ApparentPowermL1 = CSPFactoryHelper.eINSTANCE.createVariable("electric", true, csp);
 		var_electric_ApparentPowermL1.setValue(__helper.getValue("electric", "ApparentPowermL1"));
 		var_electric_ApparentPowermL1.setType("double");
+
+		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
+		var_trgConsumer_PowerA.setType("double");
 
 		Variable var_trgConsumer_Reachability = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
 		var_trgConsumer_Reachability.setValue(__helper.getValue("trgConsumer", "Reachability"));
@@ -700,8 +700,8 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 			return null;
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID___IS_APPROPRIATE_FWD_EMOFLON_EDGE_135__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_135((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID___IS_APPROPRIATE_FWD_EMOFLON_EDGE_2__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_2((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -1119,25 +1119,25 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 	public static final Object[] pattern_EnergyConsumerWithID_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(
 			PerformRuleResult ruleresult, EObject assetCorr, EObject deviceCorr, EObject asset, EObject device,
 			EObject pair, EObject trgConsumer) {
-		EMoflonEdge deviceCorr__device____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge assetCorr__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge deviceCorr__device____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge assetCorr__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge deviceCorr__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "EnergyConsumerWithID";
-		String deviceCorr__device____source_name_prime = "source";
 		String assetCorr__trgConsumer____target_name_prime = "target";
+		String deviceCorr__device____source_name_prime = "source";
 		String assetCorr__asset____source_name_prime = "source";
 		String deviceCorr__trgConsumer____target_name_prime = "target";
 		String pair__device____b_name_prime = "b";
 		String pair__asset____a_name_prime = "a";
-		deviceCorr__device____source.setSrc(deviceCorr);
-		deviceCorr__device____source.setTrg(device);
-		ruleresult.getCreatedEdges().add(deviceCorr__device____source);
 		assetCorr__trgConsumer____target.setSrc(assetCorr);
 		assetCorr__trgConsumer____target.setTrg(trgConsumer);
 		ruleresult.getCreatedEdges().add(assetCorr__trgConsumer____target);
+		deviceCorr__device____source.setSrc(deviceCorr);
+		deviceCorr__device____source.setTrg(device);
+		ruleresult.getCreatedEdges().add(deviceCorr__device____source);
 		assetCorr__asset____source.setSrc(assetCorr);
 		assetCorr__asset____source.setTrg(asset);
 		ruleresult.getCreatedEdges().add(assetCorr__asset____source);
@@ -1151,14 +1151,14 @@ public class EnergyConsumerWithIDImpl extends AbstractRuleImpl implements Energy
 		pair__asset____a.setTrg(asset);
 		ruleresult.getTranslatedEdges().add(pair__asset____a);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		deviceCorr__device____source.setName(deviceCorr__device____source_name_prime);
 		assetCorr__trgConsumer____target.setName(assetCorr__trgConsumer____target_name_prime);
+		deviceCorr__device____source.setName(deviceCorr__device____source_name_prime);
 		assetCorr__asset____source.setName(assetCorr__asset____source_name_prime);
 		deviceCorr__trgConsumer____target.setName(deviceCorr__trgConsumer____target_name_prime);
 		pair__device____b.setName(pair__device____b_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
 		return new Object[] { ruleresult, assetCorr, deviceCorr, asset, device, pair, trgConsumer,
-				deviceCorr__device____source, assetCorr__trgConsumer____target, assetCorr__asset____source,
+				assetCorr__trgConsumer____target, deviceCorr__device____source, assetCorr__asset____source,
 				deviceCorr__trgConsumer____target, pair__device____b, pair__asset____a };
 	}
 

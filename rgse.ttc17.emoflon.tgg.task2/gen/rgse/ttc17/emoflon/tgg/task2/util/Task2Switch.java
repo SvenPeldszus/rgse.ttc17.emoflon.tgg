@@ -68,20 +68,29 @@ public class Task2Switch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case Task2Package.MMXU_TO_PMU_VOLTAGE_METER: {
-			MMXUToPMUVoltageMeter mmxuToPMUVoltageMeter = (MMXUToPMUVoltageMeter) theEObject;
-			T result = caseMMXUToPMUVoltageMeter(mmxuToPMUVoltageMeter);
+		case Task2Package.CONTROL_AREA_TO_CONTROL_SREA: {
+			ControlAreaToControlSrea controlAreaToControlSrea = (ControlAreaToControlSrea) theEObject;
+			T result = caseControlAreaToControlSrea(controlAreaToControlSrea);
 			if (result == null)
-				result = caseAbstractCorrespondence(mmxuToPMUVoltageMeter);
+				result = caseAbstractCorrespondence(controlAreaToControlSrea);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task2Package.LOCATION_TO_LOCATION: {
-			LocationToLocation locationToLocation = (LocationToLocation) theEObject;
-			T result = caseLocationToLocation(locationToLocation);
+		case Task2Package.SERVICE_DELIVERY_POINT_TO_SERVICE_DELIVERY_POINT: {
+			ServiceDeliveryPointToServiceDeliveryPoint serviceDeliveryPointToServiceDeliveryPoint = (ServiceDeliveryPointToServiceDeliveryPoint) theEObject;
+			T result = caseServiceDeliveryPointToServiceDeliveryPoint(serviceDeliveryPointToServiceDeliveryPoint);
 			if (result == null)
-				result = caseAbstractCorrespondence(locationToLocation);
+				result = caseAbstractCorrespondence(serviceDeliveryPointToServiceDeliveryPoint);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Task2Package.POWER_SYSTEM_RESOURCE_TO_POWER_SYSTEM_RESOURCE: {
+			PowerSystemResourceToPowerSystemResource powerSystemResourceToPowerSystemResource = (PowerSystemResourceToPowerSystemResource) theEObject;
+			T result = casePowerSystemResourceToPowerSystemResource(powerSystemResourceToPowerSystemResource);
+			if (result == null)
+				result = caseAbstractCorrespondence(powerSystemResourceToPowerSystemResource);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -95,20 +104,65 @@ public class Task2Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task2Package.NON_CONFORM_LOAD_GROUP_NON_TO_CONFORM_LOAD_GROUP: {
-			NonConformLoadGroupNonToConformLoadGroup nonConformLoadGroupNonToConformLoadGroup = (NonConformLoadGroupNonToConformLoadGroup) theEObject;
-			T result = caseNonConformLoadGroupNonToConformLoadGroup(nonConformLoadGroupNonToConformLoadGroup);
+		case Task2Package.LOCATION_TO_LOCATION: {
+			LocationToLocation locationToLocation = (LocationToLocation) theEObject;
+			T result = caseLocationToLocation(locationToLocation);
 			if (result == null)
-				result = caseAbstractCorrespondence(nonConformLoadGroupNonToConformLoadGroup);
+				result = caseAbstractCorrespondence(locationToLocation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task2Package.CONTROL_AREA_TO_CONTROL_SREA: {
-			ControlAreaToControlSrea controlAreaToControlSrea = (ControlAreaToControlSrea) theEObject;
-			T result = caseControlAreaToControlSrea(controlAreaToControlSrea);
+		case Task2Package.ENERGY_CONSUMER_TO_ENERGY_CONSUMER: {
+			EnergyConsumerToEnergyConsumer energyConsumerToEnergyConsumer = (EnergyConsumerToEnergyConsumer) theEObject;
+			T result = caseEnergyConsumerToEnergyConsumer(energyConsumerToEnergyConsumer);
 			if (result == null)
-				result = caseAbstractCorrespondence(controlAreaToControlSrea);
+				result = caseAbstractCorrespondence(energyConsumerToEnergyConsumer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Task2Package.METER_ASSET_TO_PRIVATE_METER_VOLTAGE: {
+			MeterAssetToPrivateMeterVoltage meterAssetToPrivateMeterVoltage = (MeterAssetToPrivateMeterVoltage) theEObject;
+			T result = caseMeterAssetToPrivateMeterVoltage(meterAssetToPrivateMeterVoltage);
+			if (result == null)
+				result = caseAbstractCorrespondence(meterAssetToPrivateMeterVoltage);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Task2Package.METER_ASSET_TO_MMXU_TO_VOLTAGE_METER: {
+			MeterAssetToMMXUToVoltageMeter meterAssetToMMXUToVoltageMeter = (MeterAssetToMMXUToVoltageMeter) theEObject;
+			T result = caseMeterAssetToMMXUToVoltageMeter(meterAssetToMMXUToVoltageMeter);
+			if (result == null)
+				result = caseAbstractCorrespondence(meterAssetToMMXUToVoltageMeter);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Task2Package.MMXU_TO_PMU_VOLTAGE_METER: {
+			MMXUToPMUVoltageMeter mmxuToPMUVoltageMeter = (MMXUToPMUVoltageMeter) theEObject;
+			T result = caseMMXUToPMUVoltageMeter(mmxuToPMUVoltageMeter);
+			if (result == null)
+				result = caseAbstractCorrespondence(mmxuToPMUVoltageMeter);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Task2Package.CONFORM_LOAD_GROUP_TO_CONFORM_LOAD_GROUP: {
+			ConformLoadGroupToConformLoadGroup conformLoadGroupToConformLoadGroup = (ConformLoadGroupToConformLoadGroup) theEObject;
+			T result = caseConformLoadGroupToConformLoadGroup(conformLoadGroupToConformLoadGroup);
+			if (result == null)
+				result = caseAbstractCorrespondence(conformLoadGroupToConformLoadGroup);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Task2Package.SUB_LOAD_AREA_TO_SUB_LOAD_AREA: {
+			SubLoadAreaToSubLoadArea subLoadAreaToSubLoadArea = (SubLoadAreaToSubLoadArea) theEObject;
+			T result = caseSubLoadAreaToSubLoadArea(subLoadAreaToSubLoadArea);
+			if (result == null)
+				result = caseAbstractCorrespondence(subLoadAreaToSubLoadArea);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -131,60 +185,6 @@ public class Task2Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task2Package.METER_ASSET_TO_MMXU_TO_VOLTAGE_METER: {
-			MeterAssetToMMXUToVoltageMeter meterAssetToMMXUToVoltageMeter = (MeterAssetToMMXUToVoltageMeter) theEObject;
-			T result = caseMeterAssetToMMXUToVoltageMeter(meterAssetToMMXUToVoltageMeter);
-			if (result == null)
-				result = caseAbstractCorrespondence(meterAssetToMMXUToVoltageMeter);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Task2Package.POWER_SYSTEM_RESOURCE_TO_POWER_SYSTEM_RESOURCE: {
-			PowerSystemResourceToPowerSystemResource powerSystemResourceToPowerSystemResource = (PowerSystemResourceToPowerSystemResource) theEObject;
-			T result = casePowerSystemResourceToPowerSystemResource(powerSystemResourceToPowerSystemResource);
-			if (result == null)
-				result = caseAbstractCorrespondence(powerSystemResourceToPowerSystemResource);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Task2Package.ENERGY_CONSUMER_TO_ENERGY_CONSUMER: {
-			EnergyConsumerToEnergyConsumer energyConsumerToEnergyConsumer = (EnergyConsumerToEnergyConsumer) theEObject;
-			T result = caseEnergyConsumerToEnergyConsumer(energyConsumerToEnergyConsumer);
-			if (result == null)
-				result = caseAbstractCorrespondence(energyConsumerToEnergyConsumer);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Task2Package.TIE_FLOW_TO_TIE_FLOW: {
-			TieFlowToTieFlow tieFlowToTieFlow = (TieFlowToTieFlow) theEObject;
-			T result = caseTieFlowToTieFlow(tieFlowToTieFlow);
-			if (result == null)
-				result = caseAbstractCorrespondence(tieFlowToTieFlow);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Task2Package.SUB_LOAD_AREA_TO_SUB_LOAD_AREA: {
-			SubLoadAreaToSubLoadArea subLoadAreaToSubLoadArea = (SubLoadAreaToSubLoadArea) theEObject;
-			T result = caseSubLoadAreaToSubLoadArea(subLoadAreaToSubLoadArea);
-			if (result == null)
-				result = caseAbstractCorrespondence(subLoadAreaToSubLoadArea);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Task2Package.SERVICE_DELIVERY_POINT_TO_SERVICE_DELIVERY_POINT: {
-			ServiceDeliveryPointToServiceDeliveryPoint serviceDeliveryPointToServiceDeliveryPoint = (ServiceDeliveryPointToServiceDeliveryPoint) theEObject;
-			T result = caseServiceDeliveryPointToServiceDeliveryPoint(serviceDeliveryPointToServiceDeliveryPoint);
-			if (result == null)
-				result = caseAbstractCorrespondence(serviceDeliveryPointToServiceDeliveryPoint);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Task2Package.POSITION_POINT_TO_POSITION_POINT: {
 			PositionPointToPositionPoint positionPointToPositionPoint = (PositionPointToPositionPoint) theEObject;
 			T result = casePositionPointToPositionPoint(positionPointToPositionPoint);
@@ -194,11 +194,11 @@ public class Task2Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task2Package.CONFORM_LOAD_GROUP_TO_CONFORM_LOAD_GROUP: {
-			ConformLoadGroupToConformLoadGroup conformLoadGroupToConformLoadGroup = (ConformLoadGroupToConformLoadGroup) theEObject;
-			T result = caseConformLoadGroupToConformLoadGroup(conformLoadGroupToConformLoadGroup);
+		case Task2Package.NON_CONFORM_LOAD_GROUP_NON_TO_CONFORM_LOAD_GROUP: {
+			NonConformLoadGroupNonToConformLoadGroup nonConformLoadGroupNonToConformLoadGroup = (NonConformLoadGroupNonToConformLoadGroup) theEObject;
+			T result = caseNonConformLoadGroupNonToConformLoadGroup(nonConformLoadGroupNonToConformLoadGroup);
 			if (result == null)
-				result = caseAbstractCorrespondence(conformLoadGroupToConformLoadGroup);
+				result = caseAbstractCorrespondence(nonConformLoadGroupNonToConformLoadGroup);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -212,11 +212,11 @@ public class Task2Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task2Package.METER_ASSET_TO_PRIVATE_METER_VOLTAGE: {
-			MeterAssetToPrivateMeterVoltage meterAssetToPrivateMeterVoltage = (MeterAssetToPrivateMeterVoltage) theEObject;
-			T result = caseMeterAssetToPrivateMeterVoltage(meterAssetToPrivateMeterVoltage);
+		case Task2Package.TIE_FLOW_TO_TIE_FLOW: {
+			TieFlowToTieFlow tieFlowToTieFlow = (TieFlowToTieFlow) theEObject;
+			T result = caseTieFlowToTieFlow(tieFlowToTieFlow);
 			if (result == null)
-				result = caseAbstractCorrespondence(meterAssetToPrivateMeterVoltage);
+				result = caseAbstractCorrespondence(tieFlowToTieFlow);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -227,32 +227,47 @@ public class Task2Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MMXU To PMU Voltage Meter</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Control Area To Control Srea</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MMXU To PMU Voltage Meter</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Control Area To Control Srea</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMMXUToPMUVoltageMeter(MMXUToPMUVoltageMeter object) {
+	public T caseControlAreaToControlSrea(ControlAreaToControlSrea object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Location To Location</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Service Delivery Point To Service Delivery Point</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Location To Location</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Service Delivery Point To Service Delivery Point</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLocationToLocation(LocationToLocation object) {
+	public T caseServiceDeliveryPointToServiceDeliveryPoint(ServiceDeliveryPointToServiceDeliveryPoint object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Power System Resource To Power System Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Power System Resource To Power System Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePowerSystemResourceToPowerSystemResource(PowerSystemResourceToPowerSystemResource object) {
 		return null;
 	}
 
@@ -272,32 +287,107 @@ public class Task2Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Non Conform Load Group Non To Conform Load Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Location To Location</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Non Conform Load Group Non To Conform Load Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Location To Location</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNonConformLoadGroupNonToConformLoadGroup(NonConformLoadGroupNonToConformLoadGroup object) {
+	public T caseLocationToLocation(LocationToLocation object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Control Area To Control Srea</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer To Energy Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Control Area To Control Srea</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Energy Consumer To Energy Consumer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseControlAreaToControlSrea(ControlAreaToControlSrea object) {
+	public T caseEnergyConsumerToEnergyConsumer(EnergyConsumerToEnergyConsumer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Meter Asset To Private Meter Voltage</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Meter Asset To Private Meter Voltage</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMeterAssetToPrivateMeterVoltage(MeterAssetToPrivateMeterVoltage object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Meter Asset To MMXU To Voltage Meter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Meter Asset To MMXU To Voltage Meter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMeterAssetToMMXUToVoltageMeter(MeterAssetToMMXUToVoltageMeter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MMXU To PMU Voltage Meter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MMXU To PMU Voltage Meter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMMXUToPMUVoltageMeter(MMXUToPMUVoltageMeter object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Conform Load Group To Conform Load Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Conform Load Group To Conform Load Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConformLoadGroupToConformLoadGroup(ConformLoadGroupToConformLoadGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sub Load Area To Sub Load Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sub Load Area To Sub Load Area</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSubLoadAreaToSubLoadArea(SubLoadAreaToSubLoadArea object) {
 		return null;
 	}
 
@@ -332,96 +422,6 @@ public class Task2Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Meter Asset To MMXU To Voltage Meter</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Meter Asset To MMXU To Voltage Meter</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMeterAssetToMMXUToVoltageMeter(MeterAssetToMMXUToVoltageMeter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Power System Resource To Power System Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Power System Resource To Power System Resource</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePowerSystemResourceToPowerSystemResource(PowerSystemResourceToPowerSystemResource object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer To Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Energy Consumer To Energy Consumer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnergyConsumerToEnergyConsumer(EnergyConsumerToEnergyConsumer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Tie Flow To Tie Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Tie Flow To Tie Flow</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTieFlowToTieFlow(TieFlowToTieFlow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sub Load Area To Sub Load Area</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sub Load Area To Sub Load Area</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSubLoadAreaToSubLoadArea(SubLoadAreaToSubLoadArea object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Service Delivery Point To Service Delivery Point</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Service Delivery Point To Service Delivery Point</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseServiceDeliveryPointToServiceDeliveryPoint(ServiceDeliveryPointToServiceDeliveryPoint object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Position Point To Position Point</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -437,17 +437,17 @@ public class Task2Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Conform Load Group To Conform Load Group</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Non Conform Load Group Non To Conform Load Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Conform Load Group To Conform Load Group</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Non Conform Load Group Non To Conform Load Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseConformLoadGroupToConformLoadGroup(ConformLoadGroupToConformLoadGroup object) {
+	public T caseNonConformLoadGroupNonToConformLoadGroup(NonConformLoadGroupNonToConformLoadGroup object) {
 		return null;
 	}
 
@@ -467,17 +467,17 @@ public class Task2Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Meter Asset To Private Meter Voltage</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Tie Flow To Tie Flow</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Meter Asset To Private Meter Voltage</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Tie Flow To Tie Flow</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMeterAssetToPrivateMeterVoltage(MeterAssetToPrivateMeterVoltage object) {
+	public T caseTieFlowToTieFlow(TieFlowToTieFlow object) {
 		return null;
 	}
 

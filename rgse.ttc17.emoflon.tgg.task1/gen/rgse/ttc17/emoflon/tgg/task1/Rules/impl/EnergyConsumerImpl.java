@@ -92,27 +92,27 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
+	public boolean isAppropriate_FWD(Match match, ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
 		// initial bindings
 		Object[] result1_black = EnergyConsumerImpl.pattern_EnergyConsumer_0_1_initialbindings_blackBBBBBBBB(this,
-				match, device, deliver, asset, pair, connect, electric);
+				match, electric, deliver, pair, connect, asset, device);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[device] = " + device + ", "
-					+ "[deliver] = " + deliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
-					+ "[connect] = " + connect + ", " + "[electric] = " + electric + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[electric] = " + electric + ", "
+					+ "[deliver] = " + deliver + ", " + "[pair] = " + pair + ", " + "[connect] = " + connect + ", "
+					+ "[asset] = " + asset + ", " + "[device] = " + device + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = EnergyConsumerImpl
-				.pattern_EnergyConsumer_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(this, match, device, deliver, asset, pair,
-						connect, electric);
+				.pattern_EnergyConsumer_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(this, match, electric, deliver, pair,
+						connect, asset, device);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[device] = " + device + ", " + "[deliver] = "
-					+ deliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", " + "[connect] = "
-					+ connect + ", " + "[electric] = " + electric + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[electric] = " + electric + ", " + "[deliver] = "
+					+ deliver + ", " + "[pair] = " + pair + ", " + "[connect] = " + connect + ", " + "[asset] = "
+					+ asset + ", " + "[device] = " + device + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -120,38 +120,38 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 
 			// collect elements to be translated
 			Object[] result4_black = EnergyConsumerImpl
-					.pattern_EnergyConsumer_0_4_collectelementstobetranslated_blackBBBBBBB(match, device, deliver,
-							asset, pair, connect, electric);
+					.pattern_EnergyConsumer_0_4_collectelementstobetranslated_blackBBBBBBB(match, electric, deliver,
+							pair, connect, asset, device);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[device] = " + device + ", " + "[deliver] = "
-						+ deliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", " + "[connect] = "
-						+ connect + ", " + "[electric] = " + electric + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[electric] = " + electric + ", "
+						+ "[deliver] = " + deliver + ", " + "[pair] = " + pair + ", " + "[connect] = " + connect + ", "
+						+ "[asset] = " + asset + ", " + "[device] = " + device + ".");
 			}
-			EnergyConsumerImpl.pattern_EnergyConsumer_0_4_collectelementstobetranslated_greenBBBBFF(match, device,
-					asset, pair);
+			EnergyConsumerImpl.pattern_EnergyConsumer_0_4_collectelementstobetranslated_greenBBBBFF(match, pair, asset,
+					device);
 			// EMoflonEdge pair__asset____a = (EMoflonEdge) result4_green[4];
 			// EMoflonEdge pair__device____b = (EMoflonEdge) result4_green[5];
 
 			// collect context elements
 			Object[] result5_black = EnergyConsumerImpl.pattern_EnergyConsumer_0_5_collectcontextelements_blackBBBBBBB(
-					match, device, deliver, asset, pair, connect, electric);
+					match, electric, deliver, pair, connect, asset, device);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[device] = " + device + ", " + "[deliver] = "
-						+ deliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", " + "[connect] = "
-						+ connect + ", " + "[electric] = " + electric + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[electric] = " + electric + ", "
+						+ "[deliver] = " + deliver + ", " + "[pair] = " + pair + ", " + "[connect] = " + connect + ", "
+						+ "[asset] = " + asset + ", " + "[device] = " + device + ".");
 			}
-			EnergyConsumerImpl.pattern_EnergyConsumer_0_5_collectcontextelements_greenBBBBBBFFFF(match, device, deliver,
-					asset, connect, electric);
+			EnergyConsumerImpl.pattern_EnergyConsumer_0_5_collectcontextelements_greenBBBBBBFFFF(match, electric,
+					deliver, connect, asset, device);
 			// EMoflonEdge asset__deliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[6];
 			// EMoflonEdge deliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[7];
 			// EMoflonEdge device__connect____AutoConnect = (EMoflonEdge) result5_green[8];
 			// EMoflonEdge device__electric____ElectricityValues = (EMoflonEdge) result5_green[9];
 
 			// register objects to match
-			EnergyConsumerImpl.pattern_EnergyConsumer_0_6_registerobjectstomatch_expressionBBBBBBBB(this, match, device,
-					deliver, asset, pair, connect, electric);
+			EnergyConsumerImpl.pattern_EnergyConsumer_0_6_registerobjectstomatch_expressionBBBBBBBB(this, match,
+					electric, deliver, pair, connect, asset, device);
 			return EnergyConsumerImpl.pattern_EnergyConsumer_0_7_expressionF();
 		} else {
 			return EnergyConsumerImpl.pattern_EnergyConsumer_0_8_expressionF();
@@ -172,54 +172,54 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		PhysicalDevice device = (PhysicalDevice) result1_bindingAndBlack[0];
+		ElectricityValues electric = (ElectricityValues) result1_bindingAndBlack[0];
 		ServiceDeliveryPoint deliver = (ServiceDeliveryPoint) result1_bindingAndBlack[1];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[2];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[3];
-		AutoConnectObject connect = (AutoConnectObject) result1_bindingAndBlack[4];
-		ElectricityValues electric = (ElectricityValues) result1_bindingAndBlack[5];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[2];
+		AutoConnectObject connect = (AutoConnectObject) result1_bindingAndBlack[3];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[4];
+		PhysicalDevice device = (PhysicalDevice) result1_bindingAndBlack[5];
 		CSP csp = (CSP) result1_bindingAndBlack[6];
-		Object[] result1_green = EnergyConsumerImpl.pattern_EnergyConsumer_1_1_performtransformation_greenFFBFBB(device,
-				asset, csp);
-		PhysicalDeviceToEnergyConsumer deviceCorr = (PhysicalDeviceToEnergyConsumer) result1_green[0];
-		outageDetectionJointarget.EnergyConsumer trgConsumer = (outageDetectionJointarget.EnergyConsumer) result1_green[1];
-		MeterAssetToEnergyConsumer assetCorr = (MeterAssetToEnergyConsumer) result1_green[3];
+		Object[] result1_green = EnergyConsumerImpl.pattern_EnergyConsumer_1_1_performtransformation_greenFFBBFB(asset,
+				device, csp);
+		outageDetectionJointarget.EnergyConsumer trgConsumer = (outageDetectionJointarget.EnergyConsumer) result1_green[0];
+		MeterAssetToEnergyConsumer assetCorr = (MeterAssetToEnergyConsumer) result1_green[1];
+		PhysicalDeviceToEnergyConsumer deviceCorr = (PhysicalDeviceToEnergyConsumer) result1_green[4];
 
 		// collect translated elements
-		Object[] result2_black = EnergyConsumerImpl.pattern_EnergyConsumer_1_2_collecttranslatedelements_blackBBBB(
-				deviceCorr, trgConsumer, assetCorr, pair);
+		Object[] result2_black = EnergyConsumerImpl.pattern_EnergyConsumer_1_2_collecttranslatedelements_blackBBBB(pair,
+				trgConsumer, assetCorr, deviceCorr);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[deviceCorr] = " + deviceCorr + ", " + "[trgConsumer] = " + trgConsumer + ", " + "[assetCorr] = "
-					+ assetCorr + ", " + "[pair] = " + pair + ".");
+					+ "[pair] = " + pair + ", " + "[trgConsumer] = " + trgConsumer + ", " + "[assetCorr] = " + assetCorr
+					+ ", " + "[deviceCorr] = " + deviceCorr + ".");
 		}
 		Object[] result2_green = EnergyConsumerImpl.pattern_EnergyConsumer_1_2_collecttranslatedelements_greenFBBBB(
-				deviceCorr, trgConsumer, assetCorr, pair);
+				pair, trgConsumer, assetCorr, deviceCorr);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = EnergyConsumerImpl.pattern_EnergyConsumer_1_3_bookkeepingforedges_blackBBBBBBBBBB(
-				ruleresult, deviceCorr, trgConsumer, device, assetCorr, deliver, asset, pair, connect, electric);
+				ruleresult, electric, deliver, pair, trgConsumer, assetCorr, connect, asset, device, deviceCorr);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[deviceCorr] = " + deviceCorr + ", " + "[trgConsumer] = "
-					+ trgConsumer + ", " + "[device] = " + device + ", " + "[assetCorr] = " + assetCorr + ", "
-					+ "[deliver] = " + deliver + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
-					+ "[connect] = " + connect + ", " + "[electric] = " + electric + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[electric] = " + electric + ", " + "[deliver] = "
+					+ deliver + ", " + "[pair] = " + pair + ", " + "[trgConsumer] = " + trgConsumer + ", "
+					+ "[assetCorr] = " + assetCorr + ", " + "[connect] = " + connect + ", " + "[asset] = " + asset
+					+ ", " + "[device] = " + device + ", " + "[deviceCorr] = " + deviceCorr + ".");
 		}
-		EnergyConsumerImpl.pattern_EnergyConsumer_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(ruleresult, deviceCorr,
-				trgConsumer, device, assetCorr, asset, pair);
-		// EMoflonEdge deviceCorr__trgConsumer____target = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge deviceCorr__device____source = (EMoflonEdge) result3_green[8];
+		EnergyConsumerImpl.pattern_EnergyConsumer_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(ruleresult, pair,
+				trgConsumer, assetCorr, asset, device, deviceCorr);
+		// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[8];
 		// EMoflonEdge assetCorr__trgConsumer____target = (EMoflonEdge) result3_green[9];
 		// EMoflonEdge assetCorr__asset____source = (EMoflonEdge) result3_green[10];
-		// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[11];
-		// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[12];
+		// EMoflonEdge deviceCorr__trgConsumer____target = (EMoflonEdge) result3_green[11];
+		// EMoflonEdge deviceCorr__device____source = (EMoflonEdge) result3_green[12];
 
 		// perform postprocessing story node is empty
 		// register objects
-		EnergyConsumerImpl.pattern_EnergyConsumer_1_5_registerobjects_expressionBBBBBBBBBBB(this, ruleresult,
-				deviceCorr, trgConsumer, device, assetCorr, deliver, asset, pair, connect, electric);
+		EnergyConsumerImpl.pattern_EnergyConsumer_1_5_registerobjects_expressionBBBBBBBBBBB(this, ruleresult, electric,
+				deliver, pair, trgConsumer, assetCorr, connect, asset, device, deviceCorr);
 		return EnergyConsumerImpl.pattern_EnergyConsumer_1_6_expressionFB(ruleresult);
 	}
 
@@ -248,37 +248,37 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		PhysicalDevice device = (PhysicalDevice) result2_binding[0];
+		ElectricityValues electric = (ElectricityValues) result2_binding[0];
 		ServiceDeliveryPoint deliver = (ServiceDeliveryPoint) result2_binding[1];
-		MeterAsset asset = (MeterAsset) result2_binding[2];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[3];
-		AutoConnectObject connect = (AutoConnectObject) result2_binding[4];
-		ElectricityValues electric = (ElectricityValues) result2_binding[5];
-		for (Object[] result2_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_2_corematch_blackBBBBBBB(device,
-				deliver, asset, pair, connect, electric, match)) {
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
+		AutoConnectObject connect = (AutoConnectObject) result2_binding[3];
+		MeterAsset asset = (MeterAsset) result2_binding[4];
+		PhysicalDevice device = (PhysicalDevice) result2_binding[5];
+		for (Object[] result2_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_2_corematch_blackBBBBBBB(electric,
+				deliver, pair, connect, asset, device, match)) {
 			// ForEach find context
-			for (Object[] result3_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(device,
-					deliver, asset, pair, connect, electric)) {
+			for (Object[] result3_black : EnergyConsumerImpl.pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(
+					electric, deliver, pair, connect, asset, device)) {
 				Object[] result3_green = EnergyConsumerImpl.pattern_EnergyConsumer_2_3_findcontext_greenBBBBBBFFFFFFF(
-						device, deliver, asset, pair, connect, electric);
+						electric, deliver, pair, connect, asset, device);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[6];
-				// EMoflonEdge asset__deliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[7];
-				// EMoflonEdge deliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge device__connect____AutoConnect = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge device__electric____ElectricityValues = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[7];
+				// EMoflonEdge pair__device____b = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge asset__deliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge deliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge device__connect____AutoConnect = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge device__electric____ElectricityValues = (EMoflonEdge) result3_green[12];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = EnergyConsumerImpl
-						.pattern_EnergyConsumer_2_4_solveCSP_bindingAndBlackFBBBBBBBB(this, isApplicableMatch, device,
-								deliver, asset, pair, connect, electric);
+						.pattern_EnergyConsumer_2_4_solveCSP_bindingAndBlackFBBBBBBBB(this, isApplicableMatch, electric,
+								deliver, pair, connect, asset, device);
 				if (result4_bindingAndBlack == null) {
-					throw new RuntimeException(
-							"Pattern matching in node [solve CSP] failed." + " Variables: " + "[this] = " + this + ", "
-									+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[device] = " + device
-									+ ", " + "[deliver] = " + deliver + ", " + "[asset] = " + asset + ", " + "[pair] = "
-									+ pair + ", " + "[connect] = " + connect + ", " + "[electric] = " + electric + ".");
+					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
+							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
+							+ "[electric] = " + electric + ", " + "[deliver] = " + deliver + ", " + "[pair] = " + pair
+							+ ", " + "[connect] = " + connect + ", " + "[asset] = " + asset + ", " + "[device] = "
+							+ device + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -309,15 +309,14 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, PhysicalDevice device, ServiceDeliveryPoint deliver,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
-			ElectricityValues electric) {
-		match.registerObject("device", device);
+	public void registerObjectsToMatch_FWD(Match match, ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		match.registerObject("electric", electric);
 		match.registerObject("deliver", deliver);
-		match.registerObject("asset", asset);
 		match.registerObject("pair", pair);
 		match.registerObject("connect", connect);
-		match.registerObject("electric", electric);
+		match.registerObject("asset", asset);
+		match.registerObject("device", device);
 
 	}
 
@@ -326,9 +325,8 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, PhysicalDevice device, ServiceDeliveryPoint deliver,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
-			ElectricityValues electric) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -357,9 +355,9 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, PhysicalDevice device,
-			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ElectricityValues electric,
+			ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
+			MeterAsset asset, PhysicalDevice device) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -395,12 +393,12 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		castBooleanToInteger.solve(var_connect_Connection, var_trgConsumer_Reachability);
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("device", device);
+		isApplicableMatch.registerObject("electric", electric);
 		isApplicableMatch.registerObject("deliver", deliver);
-		isApplicableMatch.registerObject("asset", asset);
 		isApplicableMatch.registerObject("pair", pair);
 		isApplicableMatch.registerObject("connect", connect);
-		isApplicableMatch.registerObject("electric", electric);
+		isApplicableMatch.registerObject("asset", asset);
+		isApplicableMatch.registerObject("device", device);
 		return csp;
 	}
 
@@ -418,18 +416,18 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject deviceCorr, EObject trgConsumer,
-			EObject device, EObject assetCorr, EObject deliver, EObject asset, EObject pair, EObject connect,
-			EObject electric) {
-		ruleresult.registerObject("deviceCorr", deviceCorr);
-		ruleresult.registerObject("trgConsumer", trgConsumer);
-		ruleresult.registerObject("device", device);
-		ruleresult.registerObject("assetCorr", assetCorr);
-		ruleresult.registerObject("deliver", deliver);
-		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("connect", connect);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject electric, EObject deliver, EObject pair,
+			EObject trgConsumer, EObject assetCorr, EObject connect, EObject asset, EObject device,
+			EObject deviceCorr) {
 		ruleresult.registerObject("electric", electric);
+		ruleresult.registerObject("deliver", deliver);
+		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("trgConsumer", trgConsumer);
+		ruleresult.registerObject("assetCorr", assetCorr);
+		ruleresult.registerObject("connect", connect);
+		ruleresult.registerObject("asset", asset);
+		ruleresult.registerObject("device", device);
+		ruleresult.registerObject("deviceCorr", deviceCorr);
 
 	}
 
@@ -448,7 +446,7 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_131(EMoflonEdge _edge_a) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_6(EMoflonEdge _edge_a) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = EnergyConsumerImpl
 				.pattern_EnergyConsumer_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -465,12 +463,12 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		// ForEach test core match and DECs
 		for (Object[] result2_black : EnergyConsumerImpl
 				.pattern_EnergyConsumer_10_2_testcorematchandDECs_blackFFFFFFB(_edge_a)) {
-			PhysicalDevice device = (PhysicalDevice) result2_black[0];
+			ElectricityValues electric = (ElectricityValues) result2_black[0];
 			ServiceDeliveryPoint deliver = (ServiceDeliveryPoint) result2_black[1];
-			MeterAsset asset = (MeterAsset) result2_black[2];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[3];
-			AutoConnectObject connect = (AutoConnectObject) result2_black[4];
-			ElectricityValues electric = (ElectricityValues) result2_black[5];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[2];
+			AutoConnectObject connect = (AutoConnectObject) result2_black[3];
+			MeterAsset asset = (MeterAsset) result2_black[4];
+			PhysicalDevice device = (PhysicalDevice) result2_black[5];
 			Object[] result2_green = EnergyConsumerImpl
 					.pattern_EnergyConsumer_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -478,7 +476,7 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			// bookkeeping with generic isAppropriate method
 			if (EnergyConsumerImpl
 					.pattern_EnergyConsumer_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBB(this,
-							match, device, deliver, asset, pair, connect, electric)) {
+							match, electric, deliver, pair, connect, asset, device)) {
 				// Ensure that the correct types of elements are matched
 				if (EnergyConsumerImpl
 						.pattern_EnergyConsumer_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
@@ -522,13 +520,13 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 
 		CheckAttributeHelper __helper = new CheckAttributeHelper(__tripleMatch);
 
-		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
-		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
-		var_trgConsumer_PowerA.setType("double");
-
 		Variable var_electric_ApparentPowermL1 = CSPFactoryHelper.eINSTANCE.createVariable("electric", true, csp);
 		var_electric_ApparentPowermL1.setValue(__helper.getValue("electric", "ApparentPowermL1"));
 		var_electric_ApparentPowermL1.setType("double");
+
+		Variable var_trgConsumer_PowerA = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
+		var_trgConsumer_PowerA.setValue(__helper.getValue("trgConsumer", "PowerA"));
+		var_trgConsumer_PowerA.setType("double");
 
 		Variable var_trgConsumer_Reachability = CSPFactoryHelper.eINSTANCE.createVariable("trgConsumer", true, csp);
 		var_trgConsumer_Reachability.setValue(__helper.getValue("trgConsumer", "Reachability"));
@@ -588,10 +586,10 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {// match tgg pattern
-		Object[] result1_black = EnergyConsumerImpl.pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBBBB(device,
-				deliver, asset, pair, connect, electric);
+	public boolean checkDEC_FWD(ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {// match tgg pattern
+		Object[] result1_black = EnergyConsumerImpl.pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBBBB(electric,
+				deliver, pair, connect, asset, device);
 		if (result1_black != null) {
 			return EnergyConsumerImpl.pattern_EnergyConsumer_13_2_expressionF();
 		} else {
@@ -608,33 +606,33 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD__MATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES:
-			return isAppropriate_FWD((Match) arguments.get(0), (PhysicalDevice) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4), (AutoConnectObject) arguments.get(5),
-					(ElectricityValues) arguments.get(6));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD__MATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE:
+			return isAppropriate_FWD((Match) arguments.get(0), (ElectricityValues) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(AutoConnectObject) arguments.get(4), (MeterAsset) arguments.get(5),
+					(PhysicalDevice) arguments.get(6));
 		case RulesPackage.ENERGY_CONSUMER___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (PhysicalDevice) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4), (AutoConnectObject) arguments.get(5),
-					(ElectricityValues) arguments.get(6));
+		case RulesPackage.ENERGY_CONSUMER___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (ElectricityValues) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(AutoConnectObject) arguments.get(4), (MeterAsset) arguments.get(5),
+					(PhysicalDevice) arguments.get(6));
 			return null;
-		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (PhysicalDevice) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4), (AutoConnectObject) arguments.get(5),
-					(ElectricityValues) arguments.get(6));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (ElectricityValues) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(AutoConnectObject) arguments.get(4), (MeterAsset) arguments.get(5),
+					(PhysicalDevice) arguments.get(6));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (PhysicalDevice) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4), (AutoConnectObject) arguments.get(5),
-					(ElectricityValues) arguments.get(6));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (ElectricityValues) arguments.get(1),
+					(ServiceDeliveryPoint) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(AutoConnectObject) arguments.get(4), (MeterAsset) arguments.get(5),
+					(PhysicalDevice) arguments.get(6));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -645,33 +643,33 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 			return null;
 		case RulesPackage.ENERGY_CONSUMER___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD_EMOFLON_EDGE_131__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_131((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ENERGY_CONSUMER___IS_APPROPRIATE_FWD_EMOFLON_EDGE_6__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_6((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ENERGY_CONSUMER___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.ENERGY_CONSUMER___CHECK_DEC_FWD__PHYSICALDEVICE_SERVICEDELIVERYPOINT_METERASSET_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_ELECTRICITYVALUES:
-			return checkDEC_FWD((PhysicalDevice) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
-					(MeterAsset) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
-					(AutoConnectObject) arguments.get(4), (ElectricityValues) arguments.get(5));
+		case RulesPackage.ENERGY_CONSUMER___CHECK_DEC_FWD__ELECTRICITYVALUES_SERVICEDELIVERYPOINT_METERASSETPHYSICALDEVICEPAIR_AUTOCONNECTOBJECT_METERASSET_PHYSICALDEVICE:
+			return checkDEC_FWD((ElectricityValues) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (AutoConnectObject) arguments.get(3),
+					(MeterAsset) arguments.get(4), (PhysicalDevice) arguments.get(5));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_1_initialbindings_blackBBBBBBBB(EnergyConsumer _this,
-			Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
-		return new Object[] { _this, match, device, deliver, asset, pair, connect, electric };
+			Match match, ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		return new Object[] { _this, match, electric, deliver, pair, connect, asset, device };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_2_SolveCSP_bindingFBBBBBBBB(EnergyConsumer _this, Match match,
-			PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, device, deliver, asset, pair, connect, electric);
+			ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, electric, deliver, pair, connect, asset, device);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, device, deliver, asset, pair, connect, electric };
+			return new Object[] { csp, _this, match, electric, deliver, pair, connect, asset, device };
 		}
 		return null;
 	}
@@ -681,17 +679,17 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(EnergyConsumer _this,
-			Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
+			Match match, ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
 		Object[] result_pattern_EnergyConsumer_0_2_SolveCSP_binding = pattern_EnergyConsumer_0_2_SolveCSP_bindingFBBBBBBBB(
-				_this, match, device, deliver, asset, pair, connect, electric);
+				_this, match, electric, deliver, pair, connect, asset, device);
 		if (result_pattern_EnergyConsumer_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_EnergyConsumer_0_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_EnergyConsumer_0_2_SolveCSP_black = pattern_EnergyConsumer_0_2_SolveCSP_blackB(csp);
 			if (result_pattern_EnergyConsumer_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, device, deliver, asset, pair, connect, electric };
+				return new Object[] { csp, _this, match, electric, deliver, pair, connect, asset, device };
 			}
 		}
 		return null;
@@ -704,13 +702,13 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_4_collectelementstobetranslated_blackBBBBBBB(Match match,
-			PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {
-		return new Object[] { match, device, deliver, asset, pair, connect, electric };
+			ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		return new Object[] { match, electric, deliver, pair, connect, asset, device };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_4_collectelementstobetranslated_greenBBBBFF(Match match,
-			PhysicalDevice device, MeterAsset asset, MeterAssetPhysicalDevicePair pair) {
+			MeterAssetPhysicalDevicePair pair, MeterAsset asset, PhysicalDevice device) {
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(pair);
@@ -724,27 +722,27 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		match.getToBeTranslatedEdges().add(pair__device____b);
 		pair__asset____a.setName(pair__asset____a_name_prime);
 		pair__device____b.setName(pair__device____b_name_prime);
-		return new Object[] { match, device, asset, pair, pair__asset____a, pair__device____b };
+		return new Object[] { match, pair, asset, device, pair__asset____a, pair__device____b };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_5_collectcontextelements_blackBBBBBBB(Match match,
-			PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {
-		return new Object[] { match, device, deliver, asset, pair, connect, electric };
+			ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		return new Object[] { match, electric, deliver, pair, connect, asset, device };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_0_5_collectcontextelements_greenBBBBBBFFFF(Match match,
-			PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset, AutoConnectObject connect,
-			ElectricityValues electric) {
+			ElectricityValues electric, ServiceDeliveryPoint deliver, AutoConnectObject connect, MeterAsset asset,
+			PhysicalDevice device) {
 		EMoflonEdge asset__deliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge deliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge device__connect____AutoConnect = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge device__electric____ElectricityValues = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(device);
-		match.getContextNodes().add(deliver);
-		match.getContextNodes().add(asset);
-		match.getContextNodes().add(connect);
 		match.getContextNodes().add(electric);
+		match.getContextNodes().add(deliver);
+		match.getContextNodes().add(connect);
+		match.getContextNodes().add(asset);
+		match.getContextNodes().add(device);
 		String asset__deliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String deliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
 		String device__connect____AutoConnect_name_prime = "AutoConnect";
@@ -765,15 +763,15 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		deliver__asset____EndDeviceAssets.setName(deliver__asset____EndDeviceAssets_name_prime);
 		device__connect____AutoConnect.setName(device__connect____AutoConnect_name_prime);
 		device__electric____ElectricityValues.setName(device__electric____ElectricityValues_name_prime);
-		return new Object[] { match, device, deliver, asset, connect, electric, asset__deliver____ServiceDeliveryPoint,
+		return new Object[] { match, electric, deliver, connect, asset, device, asset__deliver____ServiceDeliveryPoint,
 				deliver__asset____EndDeviceAssets, device__connect____AutoConnect,
 				device__electric____ElectricityValues };
 	}
 
 	public static final void pattern_EnergyConsumer_0_6_registerobjectstomatch_expressionBBBBBBBB(EnergyConsumer _this,
-			Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
-		_this.registerObjectsToMatch_FWD(match, device, deliver, asset, pair, connect, electric);
+			Match match, ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		_this.registerObjectsToMatch_FWD(match, electric, deliver, pair, connect, asset, device);
 
 	}
 
@@ -789,31 +787,31 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 
 	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_bindingFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("device");
+		EObject _localVariable_0 = isApplicableMatch.getObject("electric");
 		EObject _localVariable_1 = isApplicableMatch.getObject("deliver");
-		EObject _localVariable_2 = isApplicableMatch.getObject("asset");
-		EObject _localVariable_3 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_4 = isApplicableMatch.getObject("connect");
-		EObject _localVariable_5 = isApplicableMatch.getObject("electric");
-		EObject tmpDevice = _localVariable_0;
+		EObject _localVariable_2 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_3 = isApplicableMatch.getObject("connect");
+		EObject _localVariable_4 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_5 = isApplicableMatch.getObject("device");
+		EObject tmpElectric = _localVariable_0;
 		EObject tmpDeliver = _localVariable_1;
-		EObject tmpAsset = _localVariable_2;
-		EObject tmpPair = _localVariable_3;
-		EObject tmpConnect = _localVariable_4;
-		EObject tmpElectric = _localVariable_5;
-		if (tmpDevice instanceof PhysicalDevice) {
-			PhysicalDevice device = (PhysicalDevice) tmpDevice;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpConnect = _localVariable_3;
+		EObject tmpAsset = _localVariable_4;
+		EObject tmpDevice = _localVariable_5;
+		if (tmpElectric instanceof ElectricityValues) {
+			ElectricityValues electric = (ElectricityValues) tmpElectric;
 			if (tmpDeliver instanceof ServiceDeliveryPoint) {
 				ServiceDeliveryPoint deliver = (ServiceDeliveryPoint) tmpDeliver;
-				if (tmpAsset instanceof MeterAsset) {
-					MeterAsset asset = (MeterAsset) tmpAsset;
-					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-						if (tmpConnect instanceof AutoConnectObject) {
-							AutoConnectObject connect = (AutoConnectObject) tmpConnect;
-							if (tmpElectric instanceof ElectricityValues) {
-								ElectricityValues electric = (ElectricityValues) tmpElectric;
-								return new Object[] { device, deliver, asset, pair, connect, electric,
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					if (tmpConnect instanceof AutoConnectObject) {
+						AutoConnectObject connect = (AutoConnectObject) tmpConnect;
+						if (tmpAsset instanceof MeterAsset) {
+							MeterAsset asset = (MeterAsset) tmpAsset;
+							if (tmpDevice instanceof PhysicalDevice) {
+								PhysicalDevice device = (PhysicalDevice) tmpDevice;
+								return new Object[] { electric, deliver, pair, connect, asset, device,
 										isApplicableMatch };
 							}
 						}
@@ -824,14 +822,14 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return null;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_blackBBBBBBFBB(PhysicalDevice device,
-			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric, EnergyConsumer _this,
+	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_blackBBBBBBFBB(
+			ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device, EnergyConsumer _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { device, deliver, asset, pair, connect, electric, csp, _this, isApplicableMatch };
+				return new Object[] { electric, deliver, pair, connect, asset, device, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
@@ -842,125 +840,126 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		Object[] result_pattern_EnergyConsumer_1_1_performtransformation_binding = pattern_EnergyConsumer_1_1_performtransformation_bindingFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_EnergyConsumer_1_1_performtransformation_binding != null) {
-			PhysicalDevice device = (PhysicalDevice) result_pattern_EnergyConsumer_1_1_performtransformation_binding[0];
+			ElectricityValues electric = (ElectricityValues) result_pattern_EnergyConsumer_1_1_performtransformation_binding[0];
 			ServiceDeliveryPoint deliver = (ServiceDeliveryPoint) result_pattern_EnergyConsumer_1_1_performtransformation_binding[1];
-			MeterAsset asset = (MeterAsset) result_pattern_EnergyConsumer_1_1_performtransformation_binding[2];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_EnergyConsumer_1_1_performtransformation_binding[3];
-			AutoConnectObject connect = (AutoConnectObject) result_pattern_EnergyConsumer_1_1_performtransformation_binding[4];
-			ElectricityValues electric = (ElectricityValues) result_pattern_EnergyConsumer_1_1_performtransformation_binding[5];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_EnergyConsumer_1_1_performtransformation_binding[2];
+			AutoConnectObject connect = (AutoConnectObject) result_pattern_EnergyConsumer_1_1_performtransformation_binding[3];
+			MeterAsset asset = (MeterAsset) result_pattern_EnergyConsumer_1_1_performtransformation_binding[4];
+			PhysicalDevice device = (PhysicalDevice) result_pattern_EnergyConsumer_1_1_performtransformation_binding[5];
 
 			Object[] result_pattern_EnergyConsumer_1_1_performtransformation_black = pattern_EnergyConsumer_1_1_performtransformation_blackBBBBBBFBB(
-					device, deliver, asset, pair, connect, electric, _this, isApplicableMatch);
+					electric, deliver, pair, connect, asset, device, _this, isApplicableMatch);
 			if (result_pattern_EnergyConsumer_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_EnergyConsumer_1_1_performtransformation_black[6];
 
-				return new Object[] { device, deliver, asset, pair, connect, electric, csp, _this, isApplicableMatch };
+				return new Object[] { electric, deliver, pair, connect, asset, device, csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_greenFFBFBB(PhysicalDevice device,
-			MeterAsset asset, CSP csp) {
-		PhysicalDeviceToEnergyConsumer deviceCorr = Task1Factory.eINSTANCE.createPhysicalDeviceToEnergyConsumer();
+	public static final Object[] pattern_EnergyConsumer_1_1_performtransformation_greenFFBBFB(MeterAsset asset,
+			PhysicalDevice device, CSP csp) {
 		outageDetectionJointarget.EnergyConsumer trgConsumer = OutageDetectionJointargetFactory.eINSTANCE
 				.createEnergyConsumer();
 		MeterAssetToEnergyConsumer assetCorr = Task1Factory.eINSTANCE.createMeterAssetToEnergyConsumer();
+		PhysicalDeviceToEnergyConsumer deviceCorr = Task1Factory.eINSTANCE.createPhysicalDeviceToEnergyConsumer();
 		Object _localVariable_0 = csp.getValue("trgConsumer", "PowerA");
 		Object _localVariable_1 = csp.getValue("trgConsumer", "Reachability");
-		deviceCorr.setSource(device);
-		deviceCorr.setTarget(trgConsumer);
 		assetCorr.setTarget(trgConsumer);
 		assetCorr.setSource(asset);
+		deviceCorr.setTarget(trgConsumer);
+		deviceCorr.setSource(device);
 		double trgConsumer_PowerA_prime = (double) _localVariable_0;
 		int trgConsumer_Reachability_prime = (int) _localVariable_1;
 		trgConsumer.setPowerA(Double.valueOf(trgConsumer_PowerA_prime));
 		trgConsumer.setReachability(Integer.valueOf(trgConsumer_Reachability_prime));
-		return new Object[] { deviceCorr, trgConsumer, device, assetCorr, asset, csp };
+		return new Object[] { trgConsumer, assetCorr, asset, device, deviceCorr, csp };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_2_collecttranslatedelements_blackBBBB(
-			PhysicalDeviceToEnergyConsumer deviceCorr, outageDetectionJointarget.EnergyConsumer trgConsumer,
-			MeterAssetToEnergyConsumer assetCorr, MeterAssetPhysicalDevicePair pair) {
-		return new Object[] { deviceCorr, trgConsumer, assetCorr, pair };
+			MeterAssetPhysicalDevicePair pair, outageDetectionJointarget.EnergyConsumer trgConsumer,
+			MeterAssetToEnergyConsumer assetCorr, PhysicalDeviceToEnergyConsumer deviceCorr) {
+		return new Object[] { pair, trgConsumer, assetCorr, deviceCorr };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_2_collecttranslatedelements_greenFBBBB(
-			PhysicalDeviceToEnergyConsumer deviceCorr, outageDetectionJointarget.EnergyConsumer trgConsumer,
-			MeterAssetToEnergyConsumer assetCorr, MeterAssetPhysicalDevicePair pair) {
+			MeterAssetPhysicalDevicePair pair, outageDetectionJointarget.EnergyConsumer trgConsumer,
+			MeterAssetToEnergyConsumer assetCorr, PhysicalDeviceToEnergyConsumer deviceCorr) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedLinkElements().add(deviceCorr);
+		ruleresult.getTranslatedElements().add(pair);
 		ruleresult.getCreatedElements().add(trgConsumer);
 		ruleresult.getCreatedLinkElements().add(assetCorr);
-		ruleresult.getTranslatedElements().add(pair);
-		return new Object[] { ruleresult, deviceCorr, trgConsumer, assetCorr, pair };
+		ruleresult.getCreatedLinkElements().add(deviceCorr);
+		return new Object[] { ruleresult, pair, trgConsumer, assetCorr, deviceCorr };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_3_bookkeepingforedges_blackBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject deviceCorr, EObject trgConsumer, EObject device, EObject assetCorr,
-			EObject deliver, EObject asset, EObject pair, EObject connect, EObject electric) {
-		if (!deviceCorr.equals(trgConsumer)) {
-			if (!deviceCorr.equals(pair)) {
-				if (!deviceCorr.equals(electric)) {
-					if (!device.equals(deviceCorr)) {
-						if (!device.equals(trgConsumer)) {
-							if (!device.equals(pair)) {
-								if (!device.equals(electric)) {
-									if (!assetCorr.equals(deviceCorr)) {
-										if (!assetCorr.equals(trgConsumer)) {
-											if (!assetCorr.equals(device)) {
-												if (!assetCorr.equals(deliver)) {
-													if (!assetCorr.equals(pair)) {
+			PerformRuleResult ruleresult, EObject electric, EObject deliver, EObject pair, EObject trgConsumer,
+			EObject assetCorr, EObject connect, EObject asset, EObject device, EObject deviceCorr) {
+		if (!electric.equals(pair)) {
+			if (!electric.equals(trgConsumer)) {
+				if (!deliver.equals(electric)) {
+					if (!deliver.equals(pair)) {
+						if (!deliver.equals(trgConsumer)) {
+							if (!deliver.equals(device)) {
+								if (!deliver.equals(deviceCorr)) {
+									if (!pair.equals(trgConsumer)) {
+										if (!assetCorr.equals(electric)) {
+											if (!assetCorr.equals(deliver)) {
+												if (!assetCorr.equals(pair)) {
+													if (!assetCorr.equals(trgConsumer)) {
 														if (!assetCorr.equals(connect)) {
-															if (!assetCorr.equals(electric)) {
-																if (!deliver.equals(deviceCorr)) {
-																	if (!deliver.equals(trgConsumer)) {
-																		if (!deliver.equals(device)) {
-																			if (!deliver.equals(pair)) {
-																				if (!deliver.equals(electric)) {
-																					if (!asset.equals(deviceCorr)) {
-																						if (!asset
-																								.equals(trgConsumer)) {
-																							if (!asset.equals(device)) {
+															if (!assetCorr.equals(device)) {
+																if (!assetCorr.equals(deviceCorr)) {
+																	if (!connect.equals(electric)) {
+																		if (!connect.equals(deliver)) {
+																			if (!connect.equals(pair)) {
+																				if (!connect.equals(trgConsumer)) {
+																					if (!connect.equals(device)) {
+																						if (!connect
+																								.equals(deviceCorr)) {
+																							if (!asset
+																									.equals(electric)) {
 																								if (!asset.equals(
-																										assetCorr)) {
+																										deliver)) {
 																									if (!asset.equals(
-																											deliver)) {
+																											pair)) {
 																										if (!asset
-																												.equals(pair)) {
+																												.equals(trgConsumer)) {
 																											if (!asset
-																													.equals(connect)) {
+																													.equals(assetCorr)) {
 																												if (!asset
-																														.equals(electric)) {
-																													if (!pair
-																															.equals(trgConsumer)) {
-																														if (!connect
+																														.equals(connect)) {
+																													if (!asset
+																															.equals(device)) {
+																														if (!asset
 																																.equals(deviceCorr)) {
-																															if (!connect
-																																	.equals(trgConsumer)) {
-																																if (!connect
-																																		.equals(device)) {
-																																	if (!connect
-																																			.equals(deliver)) {
-																																		if (!connect
-																																				.equals(pair)) {
-																																			if (!connect
+																															if (!device
+																																	.equals(electric)) {
+																																if (!device
+																																		.equals(pair)) {
+																																	if (!device
+																																			.equals(trgConsumer)) {
+																																		if (!device
+																																				.equals(deviceCorr)) {
+																																			if (!deviceCorr
 																																					.equals(electric)) {
-																																				if (!electric
-																																						.equals(trgConsumer)) {
-																																					if (!electric
-																																							.equals(pair)) {
+																																				if (!deviceCorr
+																																						.equals(pair)) {
+																																					if (!deviceCorr
+																																							.equals(trgConsumer)) {
 																																						return new Object[] {
 																																								ruleresult,
-																																								deviceCorr,
-																																								trgConsumer,
-																																								device,
-																																								assetCorr,
+																																								electric,
 																																								deliver,
-																																								asset,
 																																								pair,
+																																								trgConsumer,
+																																								assetCorr,
 																																								connect,
-																																								electric };
+																																								asset,
+																																								device,
+																																								deviceCorr };
 																																					}
 																																				}
 																																			}
@@ -1001,56 +1000,56 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_1_3_bookkeepingforedges_greenBBBBBBBFFFFFF(
-			PerformRuleResult ruleresult, EObject deviceCorr, EObject trgConsumer, EObject device, EObject assetCorr,
-			EObject asset, EObject pair) {
-		EMoflonEdge deviceCorr__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge deviceCorr__device____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge assetCorr__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge assetCorr__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			PerformRuleResult ruleresult, EObject pair, EObject trgConsumer, EObject assetCorr, EObject asset,
+			EObject device, EObject deviceCorr) {
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge assetCorr__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge assetCorr__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge deviceCorr__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge deviceCorr__device____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "EnergyConsumer";
-		String deviceCorr__trgConsumer____target_name_prime = "target";
-		String deviceCorr__device____source_name_prime = "source";
-		String assetCorr__trgConsumer____target_name_prime = "target";
-		String assetCorr__asset____source_name_prime = "source";
 		String pair__asset____a_name_prime = "a";
 		String pair__device____b_name_prime = "b";
-		deviceCorr__trgConsumer____target.setSrc(deviceCorr);
-		deviceCorr__trgConsumer____target.setTrg(trgConsumer);
-		ruleresult.getCreatedEdges().add(deviceCorr__trgConsumer____target);
-		deviceCorr__device____source.setSrc(deviceCorr);
-		deviceCorr__device____source.setTrg(device);
-		ruleresult.getCreatedEdges().add(deviceCorr__device____source);
-		assetCorr__trgConsumer____target.setSrc(assetCorr);
-		assetCorr__trgConsumer____target.setTrg(trgConsumer);
-		ruleresult.getCreatedEdges().add(assetCorr__trgConsumer____target);
-		assetCorr__asset____source.setSrc(assetCorr);
-		assetCorr__asset____source.setTrg(asset);
-		ruleresult.getCreatedEdges().add(assetCorr__asset____source);
+		String assetCorr__trgConsumer____target_name_prime = "target";
+		String assetCorr__asset____source_name_prime = "source";
+		String deviceCorr__trgConsumer____target_name_prime = "target";
+		String deviceCorr__device____source_name_prime = "source";
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		ruleresult.getTranslatedEdges().add(pair__asset____a);
 		pair__device____b.setSrc(pair);
 		pair__device____b.setTrg(device);
 		ruleresult.getTranslatedEdges().add(pair__device____b);
+		assetCorr__trgConsumer____target.setSrc(assetCorr);
+		assetCorr__trgConsumer____target.setTrg(trgConsumer);
+		ruleresult.getCreatedEdges().add(assetCorr__trgConsumer____target);
+		assetCorr__asset____source.setSrc(assetCorr);
+		assetCorr__asset____source.setTrg(asset);
+		ruleresult.getCreatedEdges().add(assetCorr__asset____source);
+		deviceCorr__trgConsumer____target.setSrc(deviceCorr);
+		deviceCorr__trgConsumer____target.setTrg(trgConsumer);
+		ruleresult.getCreatedEdges().add(deviceCorr__trgConsumer____target);
+		deviceCorr__device____source.setSrc(deviceCorr);
+		deviceCorr__device____source.setTrg(device);
+		ruleresult.getCreatedEdges().add(deviceCorr__device____source);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
-		deviceCorr__trgConsumer____target.setName(deviceCorr__trgConsumer____target_name_prime);
-		deviceCorr__device____source.setName(deviceCorr__device____source_name_prime);
-		assetCorr__trgConsumer____target.setName(assetCorr__trgConsumer____target_name_prime);
-		assetCorr__asset____source.setName(assetCorr__asset____source_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
 		pair__device____b.setName(pair__device____b_name_prime);
-		return new Object[] { ruleresult, deviceCorr, trgConsumer, device, assetCorr, asset, pair,
-				deviceCorr__trgConsumer____target, deviceCorr__device____source, assetCorr__trgConsumer____target,
-				assetCorr__asset____source, pair__asset____a, pair__device____b };
+		assetCorr__trgConsumer____target.setName(assetCorr__trgConsumer____target_name_prime);
+		assetCorr__asset____source.setName(assetCorr__asset____source_name_prime);
+		deviceCorr__trgConsumer____target.setName(deviceCorr__trgConsumer____target_name_prime);
+		deviceCorr__device____source.setName(deviceCorr__device____source_name_prime);
+		return new Object[] { ruleresult, pair, trgConsumer, assetCorr, asset, device, deviceCorr, pair__asset____a,
+				pair__device____b, assetCorr__trgConsumer____target, assetCorr__asset____source,
+				deviceCorr__trgConsumer____target, deviceCorr__device____source };
 	}
 
 	public static final void pattern_EnergyConsumer_1_5_registerobjects_expressionBBBBBBBBBBB(EnergyConsumer _this,
-			PerformRuleResult ruleresult, EObject deviceCorr, EObject trgConsumer, EObject device, EObject assetCorr,
-			EObject deliver, EObject asset, EObject pair, EObject connect, EObject electric) {
-		_this.registerObjects_FWD(ruleresult, deviceCorr, trgConsumer, device, assetCorr, deliver, asset, pair, connect,
-				electric);
+			PerformRuleResult ruleresult, EObject electric, EObject deliver, EObject pair, EObject trgConsumer,
+			EObject assetCorr, EObject connect, EObject asset, EObject device, EObject deviceCorr) {
+		_this.registerObjects_FWD(ruleresult, electric, deliver, pair, trgConsumer, assetCorr, connect, asset, device,
+				deviceCorr);
 
 	}
 
@@ -1109,31 +1108,31 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_2_2_corematch_bindingFFFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("device");
+		EObject _localVariable_0 = match.getObject("electric");
 		EObject _localVariable_1 = match.getObject("deliver");
-		EObject _localVariable_2 = match.getObject("asset");
-		EObject _localVariable_3 = match.getObject("pair");
-		EObject _localVariable_4 = match.getObject("connect");
-		EObject _localVariable_5 = match.getObject("electric");
-		EObject tmpDevice = _localVariable_0;
+		EObject _localVariable_2 = match.getObject("pair");
+		EObject _localVariable_3 = match.getObject("connect");
+		EObject _localVariable_4 = match.getObject("asset");
+		EObject _localVariable_5 = match.getObject("device");
+		EObject tmpElectric = _localVariable_0;
 		EObject tmpDeliver = _localVariable_1;
-		EObject tmpAsset = _localVariable_2;
-		EObject tmpPair = _localVariable_3;
-		EObject tmpConnect = _localVariable_4;
-		EObject tmpElectric = _localVariable_5;
-		if (tmpDevice instanceof PhysicalDevice) {
-			PhysicalDevice device = (PhysicalDevice) tmpDevice;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpConnect = _localVariable_3;
+		EObject tmpAsset = _localVariable_4;
+		EObject tmpDevice = _localVariable_5;
+		if (tmpElectric instanceof ElectricityValues) {
+			ElectricityValues electric = (ElectricityValues) tmpElectric;
 			if (tmpDeliver instanceof ServiceDeliveryPoint) {
 				ServiceDeliveryPoint deliver = (ServiceDeliveryPoint) tmpDeliver;
-				if (tmpAsset instanceof MeterAsset) {
-					MeterAsset asset = (MeterAsset) tmpAsset;
-					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-						if (tmpConnect instanceof AutoConnectObject) {
-							AutoConnectObject connect = (AutoConnectObject) tmpConnect;
-							if (tmpElectric instanceof ElectricityValues) {
-								ElectricityValues electric = (ElectricityValues) tmpElectric;
-								return new Object[] { device, deliver, asset, pair, connect, electric, match };
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					if (tmpConnect instanceof AutoConnectObject) {
+						AutoConnectObject connect = (AutoConnectObject) tmpConnect;
+						if (tmpAsset instanceof MeterAsset) {
+							MeterAsset asset = (MeterAsset) tmpAsset;
+							if (tmpDevice instanceof PhysicalDevice) {
+								PhysicalDevice device = (PhysicalDevice) tmpDevice;
+								return new Object[] { electric, deliver, pair, connect, asset, device, match };
 							}
 						}
 					}
@@ -1143,24 +1142,24 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_EnergyConsumer_2_2_corematch_blackBBBBBBB(PhysicalDevice device,
-			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric, Match match) {
+	public static final Iterable<Object[]> pattern_EnergyConsumer_2_2_corematch_blackBBBBBBB(ElectricityValues electric,
+			ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
+			MeterAsset asset, PhysicalDevice device, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		_result.add(new Object[] { device, deliver, asset, pair, connect, electric, match });
+		_result.add(new Object[] { electric, deliver, pair, connect, asset, device, match });
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(PhysicalDevice device,
-			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {
+	public static final Iterable<Object[]> pattern_EnergyConsumer_2_3_findcontext_blackBBBBBB(
+			ElectricityValues electric, ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair,
+			AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (deliver.equals(asset.getServiceDeliveryPoint())) {
-			if (connect.equals(device.getAutoConnect())) {
-				if (electric.equals(device.getElectricityValues())) {
-					if (asset.equals(pair.getA())) {
-						if (device.equals(pair.getB())) {
-							_result.add(new Object[] { device, deliver, asset, pair, connect, electric });
+		if (asset.equals(pair.getA())) {
+			if (device.equals(pair.getB())) {
+				if (deliver.equals(asset.getServiceDeliveryPoint())) {
+					if (connect.equals(device.getAutoConnect())) {
+						if (electric.equals(device.getElectricityValues())) {
+							_result.add(new Object[] { electric, deliver, pair, connect, asset, device });
 						}
 					}
 				}
@@ -1169,28 +1168,34 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return _result;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_2_3_findcontext_greenBBBBBBFFFFFFF(PhysicalDevice device,
-			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {
+	public static final Object[] pattern_EnergyConsumer_2_3_findcontext_greenBBBBBBFFFFFFF(ElectricityValues electric,
+			ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
+			MeterAsset asset, PhysicalDevice device) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__deliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge deliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge device__connect____AutoConnect = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge device__electric____ElectricityValues = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__device____b = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String pair__asset____a_name_prime = "a";
+		String pair__device____b_name_prime = "b";
 		String asset__deliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String deliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
 		String device__connect____AutoConnect_name_prime = "AutoConnect";
 		String device__electric____ElectricityValues_name_prime = "ElectricityValues";
-		String pair__asset____a_name_prime = "a";
-		String pair__device____b_name_prime = "b";
-		isApplicableMatch.getAllContextElements().add(device);
+		isApplicableMatch.getAllContextElements().add(electric);
 		isApplicableMatch.getAllContextElements().add(deliver);
-		isApplicableMatch.getAllContextElements().add(asset);
 		isApplicableMatch.getAllContextElements().add(pair);
 		isApplicableMatch.getAllContextElements().add(connect);
-		isApplicableMatch.getAllContextElements().add(electric);
+		isApplicableMatch.getAllContextElements().add(asset);
+		isApplicableMatch.getAllContextElements().add(device);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
+		pair__device____b.setSrc(pair);
+		pair__device____b.setTrg(device);
+		isApplicableMatch.getAllContextElements().add(pair__device____b);
 		asset__deliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__deliver____ServiceDeliveryPoint.setTrg(deliver);
 		isApplicableMatch.getAllContextElements().add(asset__deliver____ServiceDeliveryPoint);
@@ -1203,32 +1208,25 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		device__electric____ElectricityValues.setSrc(device);
 		device__electric____ElectricityValues.setTrg(electric);
 		isApplicableMatch.getAllContextElements().add(device__electric____ElectricityValues);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		pair__device____b.setSrc(pair);
-		pair__device____b.setTrg(device);
-		isApplicableMatch.getAllContextElements().add(pair__device____b);
+		pair__asset____a.setName(pair__asset____a_name_prime);
+		pair__device____b.setName(pair__device____b_name_prime);
 		asset__deliver____ServiceDeliveryPoint.setName(asset__deliver____ServiceDeliveryPoint_name_prime);
 		deliver__asset____EndDeviceAssets.setName(deliver__asset____EndDeviceAssets_name_prime);
 		device__connect____AutoConnect.setName(device__connect____AutoConnect_name_prime);
 		device__electric____ElectricityValues.setName(device__electric____ElectricityValues_name_prime);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		pair__device____b.setName(pair__device____b_name_prime);
-		return new Object[] { device, deliver, asset, pair, connect, electric, isApplicableMatch,
-				asset__deliver____ServiceDeliveryPoint, deliver__asset____EndDeviceAssets,
-				device__connect____AutoConnect, device__electric____ElectricityValues, pair__asset____a,
-				pair__device____b };
+		return new Object[] { electric, deliver, pair, connect, asset, device, isApplicableMatch, pair__asset____a,
+				pair__device____b, asset__deliver____ServiceDeliveryPoint, deliver__asset____EndDeviceAssets,
+				device__connect____AutoConnect, device__electric____ElectricityValues };
 	}
 
 	public static final Object[] pattern_EnergyConsumer_2_4_solveCSP_bindingFBBBBBBBB(EnergyConsumer _this,
-			IsApplicableMatch isApplicableMatch, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, device, deliver, asset, pair, connect,
-				electric);
+			IsApplicableMatch isApplicableMatch, ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, electric, deliver, pair, connect,
+				asset, device);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, device, deliver, asset, pair, connect, electric };
+			return new Object[] { csp, _this, isApplicableMatch, electric, deliver, pair, connect, asset, device };
 		}
 		return null;
 	}
@@ -1238,17 +1236,17 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final Object[] pattern_EnergyConsumer_2_4_solveCSP_bindingAndBlackFBBBBBBBB(EnergyConsumer _this,
-			IsApplicableMatch isApplicableMatch, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
+			IsApplicableMatch isApplicableMatch, ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
 		Object[] result_pattern_EnergyConsumer_2_4_solveCSP_binding = pattern_EnergyConsumer_2_4_solveCSP_bindingFBBBBBBBB(
-				_this, isApplicableMatch, device, deliver, asset, pair, connect, electric);
+				_this, isApplicableMatch, electric, deliver, pair, connect, asset, device);
 		if (result_pattern_EnergyConsumer_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_EnergyConsumer_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_EnergyConsumer_2_4_solveCSP_black = pattern_EnergyConsumer_2_4_solveCSP_blackB(csp);
 			if (result_pattern_EnergyConsumer_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, device, deliver, asset, pair, connect, electric };
+				return new Object[] { csp, _this, isApplicableMatch, electric, deliver, pair, connect, asset, device };
 			}
 		}
 		return null;
@@ -1353,7 +1351,7 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 								ElectricityValues electric = device.getElectricityValues();
 								if (electric != null) {
 									_result.add(
-											new Object[] { device, deliver, asset, pair, connect, electric, _edge_a });
+											new Object[] { electric, deliver, pair, connect, asset, device, _edge_a });
 								}
 
 							}
@@ -1380,9 +1378,9 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 	}
 
 	public static final boolean pattern_EnergyConsumer_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBB(
-			EnergyConsumer _this, Match match, PhysicalDevice device, ServiceDeliveryPoint deliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, ElectricityValues electric) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, device, deliver, asset, pair, connect, electric);
+			EnergyConsumer _this, Match match, ElectricityValues electric, ServiceDeliveryPoint deliver,
+			MeterAssetPhysicalDevicePair pair, AutoConnectObject connect, MeterAsset asset, PhysicalDevice device) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, electric, deliver, pair, connect, asset, device);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1415,15 +1413,15 @@ public class EnergyConsumerImpl extends AbstractRuleImpl implements EnergyConsum
 		return _result;
 	}
 
-	public static final Object[] pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBBBB(PhysicalDevice device,
-			ServiceDeliveryPoint deliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			AutoConnectObject connect, ElectricityValues electric) {
-		if (deliver.equals(asset.getServiceDeliveryPoint())) {
-			if (connect.equals(device.getAutoConnect())) {
-				if (electric.equals(device.getElectricityValues())) {
-					if (asset.equals(pair.getA())) {
-						if (device.equals(pair.getB())) {
-							return new Object[] { device, deliver, asset, pair, connect, electric };
+	public static final Object[] pattern_EnergyConsumer_13_1_matchtggpattern_blackBBBBBB(ElectricityValues electric,
+			ServiceDeliveryPoint deliver, MeterAssetPhysicalDevicePair pair, AutoConnectObject connect,
+			MeterAsset asset, PhysicalDevice device) {
+		if (asset.equals(pair.getA())) {
+			if (device.equals(pair.getB())) {
+				if (deliver.equals(asset.getServiceDeliveryPoint())) {
+					if (connect.equals(device.getAutoConnect())) {
+						if (electric.equals(device.getElectricityValues())) {
+							return new Object[] { electric, deliver, pair, connect, asset, device };
 						}
 					}
 				}

@@ -92,27 +92,27 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
+	public boolean isAppropriate_FWD(Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
 		// initial bindings
 		Object[] result1_black = SubLoadAreaImpl.pattern_SubLoadArea_0_1_initialbindings_blackBBBBBBBB(this, match,
-				srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer);
+				asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", "
-					+ "[srcArea] = " + srcArea + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = " + asset + ", "
-					+ "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", "
+					+ "[srcGroup] = " + srcGroup + ", " + "[srcArea] = " + srcArea + ", " + "[pair] = " + pair + ", "
+					+ "[srcDeliver] = " + srcDeliver + ", " + "[srcConsumer] = " + srcConsumer + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = SubLoadAreaImpl.pattern_SubLoadArea_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(
-				this, match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer);
+				this, match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcArea] = "
-					+ srcArea + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = " + asset + ", " + "[pair] = "
-					+ pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcGroup] = "
+					+ srcGroup + ", " + "[srcArea] = " + srcArea + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = "
+					+ srcDeliver + ", " + "[srcConsumer] = " + srcConsumer + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -120,39 +120,39 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 
 			// collect elements to be translated
 			Object[] result4_black = SubLoadAreaImpl.pattern_SubLoadArea_0_4_collectelementstobetranslated_blackBBBBBBB(
-					match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer);
+					match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", "
-						+ "[srcArea] = " + srcArea + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = " + asset
-						+ ", " + "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcGroup] = "
+						+ srcGroup + ", " + "[srcArea] = " + srcArea + ", " + "[pair] = " + pair + ", "
+						+ "[srcDeliver] = " + srcDeliver + ", " + "[srcConsumer] = " + srcConsumer + ".");
 			}
-			SubLoadAreaImpl.pattern_SubLoadArea_0_4_collectelementstobetranslated_greenBBBFF(match, srcArea, srcGroup);
+			SubLoadAreaImpl.pattern_SubLoadArea_0_4_collectelementstobetranslated_greenBBBFF(match, srcGroup, srcArea);
 			// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result4_green[3];
 			// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result4_green[4];
 
 			// collect context elements
 			Object[] result5_black = SubLoadAreaImpl.pattern_SubLoadArea_0_5_collectcontextelements_blackBBBBBBB(match,
-					srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer);
+					asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", "
-						+ "[srcArea] = " + srcArea + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = " + asset
-						+ ", " + "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcGroup] = "
+						+ srcGroup + ", " + "[srcArea] = " + srcArea + ", " + "[pair] = " + pair + ", "
+						+ "[srcDeliver] = " + srcDeliver + ", " + "[srcConsumer] = " + srcConsumer + ".");
 			}
-			SubLoadAreaImpl.pattern_SubLoadArea_0_5_collectcontextelements_greenBBBBBBFFFFFFF(match, srcDeliver,
-					srcGroup, asset, pair, srcConsumer);
+			SubLoadAreaImpl.pattern_SubLoadArea_0_5_collectcontextelements_greenBBBBBBFFFFFFF(match, asset, srcGroup,
+					pair, srcDeliver, srcConsumer);
 			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[6];
 			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[7];
-			// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result5_green[8];
-			// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result5_green[9];
-			// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result5_green[10];
-			// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result5_green[11];
-			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[12];
+			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[8];
+			// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result5_green[9];
+			// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result5_green[10];
+			// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result5_green[11];
+			// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result5_green[12];
 
 			// register objects to match
-			SubLoadAreaImpl.pattern_SubLoadArea_0_6_registerobjectstomatch_expressionBBBBBBBB(this, match, srcDeliver,
-					srcArea, srcGroup, asset, pair, srcConsumer);
+			SubLoadAreaImpl.pattern_SubLoadArea_0_6_registerobjectstomatch_expressionBBBBBBBB(this, match, asset,
+					srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 			return SubLoadAreaImpl.pattern_SubLoadArea_0_7_expressionF();
 		} else {
 			return SubLoadAreaImpl.pattern_SubLoadArea_0_8_expressionF();
@@ -173,56 +173,56 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) result1_bindingAndBlack[0];
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[1];
-		gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result1_bindingAndBlack[2];
-		ConformLoadGroup srcGroup = (ConformLoadGroup) result1_bindingAndBlack[3];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[4];
-		ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) result1_bindingAndBlack[5];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[6];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[0];
+		ConformLoadGroup srcGroup = (ConformLoadGroup) result1_bindingAndBlack[1];
+		outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) result1_bindingAndBlack[2];
+		gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result1_bindingAndBlack[3];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[4];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[5];
+		ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) result1_bindingAndBlack[6];
 		ConformLoad srcConsumer = (ConformLoad) result1_bindingAndBlack[7];
 		// CSP csp = (CSP) result1_bindingAndBlack[8];
-		Object[] result1_green = SubLoadAreaImpl.pattern_SubLoadArea_1_1_performtransformation_greenBFBF(trgGroup,
+		Object[] result1_green = SubLoadAreaImpl.pattern_SubLoadArea_1_1_performtransformation_greenFBBF(trgGroup,
 				srcArea);
-		outagePreventionJointarget.SubLoadArea trgArea = (outagePreventionJointarget.SubLoadArea) result1_green[1];
-		SubLoadAreaToSubLoadArea areaToArea = (SubLoadAreaToSubLoadArea) result1_green[3];
+		SubLoadAreaToSubLoadArea areaToArea = (SubLoadAreaToSubLoadArea) result1_green[0];
+		outagePreventionJointarget.SubLoadArea trgArea = (outagePreventionJointarget.SubLoadArea) result1_green[3];
 
 		// collect translated elements
-		Object[] result2_black = SubLoadAreaImpl.pattern_SubLoadArea_1_2_collecttranslatedelements_blackBBB(trgArea,
-				srcArea, areaToArea);
+		Object[] result2_black = SubLoadAreaImpl.pattern_SubLoadArea_1_2_collecttranslatedelements_blackBBB(areaToArea,
+				srcArea, trgArea);
 		if (result2_black == null) {
-			throw new RuntimeException(
-					"Pattern matching in node [collect translated elements] failed." + " Variables: " + "[trgArea] = "
-							+ trgArea + ", " + "[srcArea] = " + srcArea + ", " + "[areaToArea] = " + areaToArea + ".");
+			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
+					+ "[areaToArea] = " + areaToArea + ", " + "[srcArea] = " + srcArea + ", " + "[trgArea] = " + trgArea
+					+ ".");
 		}
-		Object[] result2_green = SubLoadAreaImpl.pattern_SubLoadArea_1_2_collecttranslatedelements_greenFBBB(trgArea,
-				srcArea, areaToArea);
+		Object[] result2_green = SubLoadAreaImpl.pattern_SubLoadArea_1_2_collecttranslatedelements_greenFBBB(areaToArea,
+				srcArea, trgArea);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = SubLoadAreaImpl.pattern_SubLoadArea_1_3_bookkeepingforedges_blackBBBBBBBBBBB(
-				ruleresult, trgGroup, srcDeliver, trgArea, srcArea, srcGroup, areaToArea, asset, groupToGroup, pair,
+				ruleresult, areaToArea, asset, srcGroup, trgGroup, srcArea, trgArea, pair, srcDeliver, groupToGroup,
 				srcConsumer);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[trgGroup] = " + trgGroup + ", " + "[srcDeliver] = "
-					+ srcDeliver + ", " + "[trgArea] = " + trgArea + ", " + "[srcArea] = " + srcArea + ", "
-					+ "[srcGroup] = " + srcGroup + ", " + "[areaToArea] = " + areaToArea + ", " + "[asset] = " + asset
-					+ ", " + "[groupToGroup] = " + groupToGroup + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = "
-					+ srcConsumer + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[areaToArea] = " + areaToArea + ", " + "[asset] = "
+					+ asset + ", " + "[srcGroup] = " + srcGroup + ", " + "[trgGroup] = " + trgGroup + ", "
+					+ "[srcArea] = " + srcArea + ", " + "[trgArea] = " + trgArea + ", " + "[pair] = " + pair + ", "
+					+ "[srcDeliver] = " + srcDeliver + ", " + "[groupToGroup] = " + groupToGroup + ", "
+					+ "[srcConsumer] = " + srcConsumer + ".");
 		}
-		SubLoadAreaImpl.pattern_SubLoadArea_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, trgGroup, trgArea,
-				srcArea, srcGroup, areaToArea);
+		SubLoadAreaImpl.pattern_SubLoadArea_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, areaToArea, srcGroup,
+				trgGroup, srcArea, trgArea);
 		// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result3_green[6];
 		// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge areaToArea__trgArea____target = (EMoflonEdge) result3_green[8];
+		// EMoflonEdge trgGroup__trgArea____SubLoadArea = (EMoflonEdge) result3_green[8];
 		// EMoflonEdge areaToArea__srcArea____source = (EMoflonEdge) result3_green[9];
-		// EMoflonEdge trgGroup__trgArea____SubLoadArea = (EMoflonEdge) result3_green[10];
+		// EMoflonEdge areaToArea__trgArea____target = (EMoflonEdge) result3_green[10];
 
 		// perform postprocessing story node is empty
 		// register objects
-		SubLoadAreaImpl.pattern_SubLoadArea_1_5_registerobjects_expressionBBBBBBBBBBBB(this, ruleresult, trgGroup,
-				srcDeliver, trgArea, srcArea, srcGroup, areaToArea, asset, groupToGroup, pair, srcConsumer);
+		SubLoadAreaImpl.pattern_SubLoadArea_1_5_registerobjects_expressionBBBBBBBBBBBB(this, ruleresult, areaToArea,
+				asset, srcGroup, trgGroup, srcArea, trgArea, pair, srcDeliver, groupToGroup, srcConsumer);
 		return SubLoadAreaImpl.pattern_SubLoadArea_1_6_expressionFB(ruleresult);
 	}
 
@@ -250,45 +250,45 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[0];
-		gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result2_binding[1];
-		ConformLoadGroup srcGroup = (ConformLoadGroup) result2_binding[2];
-		MeterAsset asset = (MeterAsset) result2_binding[3];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[4];
+		MeterAsset asset = (MeterAsset) result2_binding[0];
+		ConformLoadGroup srcGroup = (ConformLoadGroup) result2_binding[1];
+		gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result2_binding[2];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[3];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[4];
 		ConformLoad srcConsumer = (ConformLoad) result2_binding[5];
-		for (Object[] result2_black : SubLoadAreaImpl.pattern_SubLoadArea_2_2_corematch_blackFBBBBFBBB(srcDeliver,
-				srcArea, srcGroup, asset, pair, srcConsumer, match)) {
-			outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) result2_black[0];
-			ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) result2_black[5];
+		for (Object[] result2_black : SubLoadAreaImpl.pattern_SubLoadArea_2_2_corematch_blackBBFBBBFBB(asset, srcGroup,
+				srcArea, pair, srcDeliver, srcConsumer, match)) {
+			outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) result2_black[2];
+			ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) result2_black[6];
 			// ForEach find context
-			for (Object[] result3_black : SubLoadAreaImpl.pattern_SubLoadArea_2_3_findcontext_blackBBBBBBBB(trgGroup,
-					srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer)) {
+			for (Object[] result3_black : SubLoadAreaImpl.pattern_SubLoadArea_2_3_findcontext_blackBBBBBBBB(asset,
+					srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer)) {
 				Object[] result3_green = SubLoadAreaImpl.pattern_SubLoadArea_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(
-						trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer);
+						asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[8];
-				// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[12];
-				// EMoflonEdge groupToGroup__trgGroup____target = (EMoflonEdge) result3_green[13];
-				// EMoflonEdge groupToGroup__srcGroup____source = (EMoflonEdge) result3_green[14];
-				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[15];
-				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[16];
-				// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[17];
-				// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[18];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[19];
+				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge groupToGroup__trgGroup____target = (EMoflonEdge) result3_green[14];
+				// EMoflonEdge groupToGroup__srcGroup____source = (EMoflonEdge) result3_green[15];
+				// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[16];
+				// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[17];
+				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[18];
+				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[19];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = SubLoadAreaImpl
-						.pattern_SubLoadArea_2_4_solveCSP_bindingAndBlackFBBBBBBBBBB(this, isApplicableMatch, trgGroup,
-								srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer);
+						.pattern_SubLoadArea_2_4_solveCSP_bindingAndBlackFBBBBBBBBBB(this, isApplicableMatch, asset,
+								srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[trgGroup] = " + trgGroup + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcArea] = "
-							+ srcArea + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = " + asset + ", "
-							+ "[groupToGroup] = " + groupToGroup + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = "
-							+ srcConsumer + ".");
+							+ "[asset] = " + asset + ", " + "[srcGroup] = " + srcGroup + ", " + "[trgGroup] = "
+							+ trgGroup + ", " + "[srcArea] = " + srcArea + ", " + "[pair] = " + pair + ", "
+							+ "[srcDeliver] = " + srcDeliver + ", " + "[groupToGroup] = " + groupToGroup + ", "
+							+ "[srcConsumer] = " + srcConsumer + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -318,14 +318,14 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		match.registerObject("srcDeliver", srcDeliver);
-		match.registerObject("srcArea", srcArea);
-		match.registerObject("srcGroup", srcGroup);
+	public void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
 		match.registerObject("asset", asset);
+		match.registerObject("srcGroup", srcGroup);
+		match.registerObject("srcArea", srcArea);
 		match.registerObject("pair", pair);
+		match.registerObject("srcDeliver", srcDeliver);
 		match.registerObject("srcConsumer", srcConsumer);
 
 	}
@@ -335,9 +335,9 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -366,11 +366,10 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ConformLoadGroup trgGroup, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			ConformLoadGroupToConformLoadGroup groupToGroup, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			ConformLoadGroup srcGroup, outagePreventionJointarget.ConformLoadGroup trgGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -385,13 +384,13 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("trgGroup", trgGroup);
-		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
-		isApplicableMatch.registerObject("srcArea", srcArea);
-		isApplicableMatch.registerObject("srcGroup", srcGroup);
 		isApplicableMatch.registerObject("asset", asset);
-		isApplicableMatch.registerObject("groupToGroup", groupToGroup);
+		isApplicableMatch.registerObject("srcGroup", srcGroup);
+		isApplicableMatch.registerObject("trgGroup", trgGroup);
+		isApplicableMatch.registerObject("srcArea", srcArea);
 		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
+		isApplicableMatch.registerObject("groupToGroup", groupToGroup);
 		isApplicableMatch.registerObject("srcConsumer", srcConsumer);
 		return csp;
 	}
@@ -410,18 +409,18 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgGroup, EObject srcDeliver, EObject trgArea,
-			EObject srcArea, EObject srcGroup, EObject areaToArea, EObject asset, EObject groupToGroup, EObject pair,
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject areaToArea, EObject asset, EObject srcGroup,
+			EObject trgGroup, EObject srcArea, EObject trgArea, EObject pair, EObject srcDeliver, EObject groupToGroup,
 			EObject srcConsumer) {
-		ruleresult.registerObject("trgGroup", trgGroup);
-		ruleresult.registerObject("srcDeliver", srcDeliver);
-		ruleresult.registerObject("trgArea", trgArea);
-		ruleresult.registerObject("srcArea", srcArea);
-		ruleresult.registerObject("srcGroup", srcGroup);
 		ruleresult.registerObject("areaToArea", areaToArea);
 		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("groupToGroup", groupToGroup);
+		ruleresult.registerObject("srcGroup", srcGroup);
+		ruleresult.registerObject("trgGroup", trgGroup);
+		ruleresult.registerObject("srcArea", srcArea);
+		ruleresult.registerObject("trgArea", trgArea);
 		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("srcDeliver", srcDeliver);
+		ruleresult.registerObject("groupToGroup", groupToGroup);
 		ruleresult.registerObject("srcConsumer", srcConsumer);
 
 	}
@@ -441,7 +440,7 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_162(EMoflonEdge _edge_SubLoadArea) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_37(EMoflonEdge _edge_SubLoadArea) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = SubLoadAreaImpl
 				.pattern_SubLoadArea_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -458,18 +457,18 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		// ForEach test core match and DECs
 		for (Object[] result2_black : SubLoadAreaImpl
 				.pattern_SubLoadArea_10_2_testcorematchandDECs_blackFFFFFFB(_edge_SubLoadArea)) {
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[0];
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result2_black[1];
-			ConformLoadGroup srcGroup = (ConformLoadGroup) result2_black[2];
-			MeterAsset asset = (MeterAsset) result2_black[3];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[4];
+			MeterAsset asset = (MeterAsset) result2_black[0];
+			ConformLoadGroup srcGroup = (ConformLoadGroup) result2_black[1];
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result2_black[2];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[3];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[4];
 			ConformLoad srcConsumer = (ConformLoad) result2_black[5];
 			Object[] result2_green = SubLoadAreaImpl.pattern_SubLoadArea_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
 
 			// bookkeeping with generic isAppropriate method
 			if (SubLoadAreaImpl.pattern_SubLoadArea_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBB(
-					this, match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer)) {
+					this, match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer)) {
 				// Ensure that the correct types of elements are matched
 				if (SubLoadAreaImpl
 						.pattern_SubLoadArea_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(this,
@@ -544,10 +543,11 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {// match tgg pattern
-		Object[] result1_black = SubLoadAreaImpl.pattern_SubLoadArea_13_1_matchtggpattern_blackBBBBBB(srcDeliver,
-				srcArea, srcGroup, asset, pair, srcConsumer);
+	public boolean checkDEC_FWD(MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {// match tgg pattern
+		Object[] result1_black = SubLoadAreaImpl.pattern_SubLoadArea_13_1_matchtggpattern_blackBBBBBB(asset, srcGroup,
+				srcArea, pair, srcDeliver, srcConsumer);
 		if (result1_black != null) {
 			return SubLoadAreaImpl.pattern_SubLoadArea_13_2_expressionF();
 		} else {
@@ -564,36 +564,37 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_FWD__MATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_CONFORMLOADGROUP_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return isAppropriate_FWD((Match) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
-					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(2),
-					(ConformLoadGroup) arguments.get(3), (MeterAsset) arguments.get(4),
-					(MeterAssetPhysicalDevicePair) arguments.get(5), (ConformLoad) arguments.get(6));
+		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_FWD__MATCH_METERASSET_CONFORMLOADGROUP_SUBLOADAREA_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_CONFORMLOAD:
+			return isAppropriate_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ConformLoadGroup) arguments.get(2),
+					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(3),
+					(MeterAssetPhysicalDevicePair) arguments.get(4), (ServiceDeliveryPoint) arguments.get(5),
+					(ConformLoad) arguments.get(6));
 		case RulesPackage.SUB_LOAD_AREA___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.SUB_LOAD_AREA___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.SUB_LOAD_AREA___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_CONFORMLOADGROUP_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
-					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(2),
-					(ConformLoadGroup) arguments.get(3), (MeterAsset) arguments.get(4),
-					(MeterAssetPhysicalDevicePair) arguments.get(5), (ConformLoad) arguments.get(6));
+		case RulesPackage.SUB_LOAD_AREA___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_CONFORMLOADGROUP_SUBLOADAREA_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_CONFORMLOAD:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ConformLoadGroup) arguments.get(2),
+					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(3),
+					(MeterAssetPhysicalDevicePair) arguments.get(4), (ServiceDeliveryPoint) arguments.get(5),
+					(ConformLoad) arguments.get(6));
 			return null;
-		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_CONFORMLOADGROUP_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
-					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(2),
-					(ConformLoadGroup) arguments.get(3), (MeterAsset) arguments.get(4),
-					(MeterAssetPhysicalDevicePair) arguments.get(5), (ConformLoad) arguments.get(6));
+		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_CONFORMLOADGROUP_SUBLOADAREA_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_CONFORMLOAD:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ConformLoadGroup) arguments.get(2),
+					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(3),
+					(MeterAssetPhysicalDevicePair) arguments.get(4), (ServiceDeliveryPoint) arguments.get(5),
+					(ConformLoad) arguments.get(6));
 		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.SUB_LOAD_AREA___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_CONFORMLOADGROUP_SERVICEDELIVERYPOINT_SUBLOADAREA_CONFORMLOADGROUP_METERASSET_CONFORMLOADGROUPTOCONFORMLOADGROUP_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
-					(outagePreventionJointarget.ConformLoadGroup) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2),
-					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(3),
-					(ConformLoadGroup) arguments.get(4), (MeterAsset) arguments.get(5),
-					(ConformLoadGroupToConformLoadGroup) arguments.get(6),
-					(MeterAssetPhysicalDevicePair) arguments.get(7), (ConformLoad) arguments.get(8));
+		case RulesPackage.SUB_LOAD_AREA___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSET_CONFORMLOADGROUP_CONFORMLOADGROUP_SUBLOADAREA_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_CONFORMLOADGROUPTOCONFORMLOADGROUP_CONFORMLOAD:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (MeterAsset) arguments.get(1),
+					(ConformLoadGroup) arguments.get(2), (outagePreventionJointarget.ConformLoadGroup) arguments.get(3),
+					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(4),
+					(MeterAssetPhysicalDevicePair) arguments.get(5), (ServiceDeliveryPoint) arguments.get(6),
+					(ConformLoadGroupToConformLoadGroup) arguments.get(7), (ConformLoad) arguments.get(8));
 		case RulesPackage.SUB_LOAD_AREA___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.SUB_LOAD_AREA___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -604,35 +605,35 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 			return null;
 		case RulesPackage.SUB_LOAD_AREA___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_FWD_EMOFLON_EDGE_162__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_162((EMoflonEdge) arguments.get(0));
+		case RulesPackage.SUB_LOAD_AREA___IS_APPROPRIATE_FWD_EMOFLON_EDGE_37__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_37((EMoflonEdge) arguments.get(0));
 		case RulesPackage.SUB_LOAD_AREA___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.SUB_LOAD_AREA___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.SUB_LOAD_AREA___CHECK_DEC_FWD__SERVICEDELIVERYPOINT_SUBLOADAREA_CONFORMLOADGROUP_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return checkDEC_FWD((ServiceDeliveryPoint) arguments.get(0),
-					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(1),
-					(ConformLoadGroup) arguments.get(2), (MeterAsset) arguments.get(3),
-					(MeterAssetPhysicalDevicePair) arguments.get(4), (ConformLoad) arguments.get(5));
+		case RulesPackage.SUB_LOAD_AREA___CHECK_DEC_FWD__METERASSET_CONFORMLOADGROUP_SUBLOADAREA_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_CONFORMLOAD:
+			return checkDEC_FWD((MeterAsset) arguments.get(0), (ConformLoadGroup) arguments.get(1),
+					(gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (ServiceDeliveryPoint) arguments.get(4),
+					(ConformLoad) arguments.get(5));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_1_initialbindings_blackBBBBBBBB(SubLoadArea _this, Match match,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		return new Object[] { _this, match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer };
+			MeterAsset asset, ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		return new Object[] { _this, match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer };
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_2_SolveCSP_bindingFBBBBBBBB(SubLoadArea _this, Match match,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcDeliver, srcArea, srcGroup, asset, pair,
+			MeterAsset asset, ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, asset, srcGroup, srcArea, pair, srcDeliver,
 				srcConsumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer };
+			return new Object[] { csp, _this, match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer };
 		}
 		return null;
 	}
@@ -642,17 +643,18 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_2_SolveCSP_bindingAndBlackFBBBBBBBB(SubLoadArea _this,
-			Match match, ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
+			Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
 		Object[] result_pattern_SubLoadArea_0_2_SolveCSP_binding = pattern_SubLoadArea_0_2_SolveCSP_bindingFBBBBBBBB(
-				_this, match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer);
+				_this, match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 		if (result_pattern_SubLoadArea_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SubLoadArea_0_2_SolveCSP_binding[0];
 
 			Object[] result_pattern_SubLoadArea_0_2_SolveCSP_black = pattern_SubLoadArea_0_2_SolveCSP_blackB(csp);
 			if (result_pattern_SubLoadArea_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer };
+				return new Object[] { csp, _this, match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer };
 			}
 		}
 		return null;
@@ -665,13 +667,13 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_4_collectelementstobetranslated_blackBBBBBBB(Match match,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		return new Object[] { match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer };
+			MeterAsset asset, ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		return new Object[] { match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer };
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_4_collectelementstobetranslated_greenBBBFF(Match match,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup) {
+			ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea) {
 		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(srcArea);
@@ -685,77 +687,78 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		match.getToBeTranslatedEdges().add(srcArea__srcGroup____LoadGroups);
 		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
 		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
-		return new Object[] { match, srcArea, srcGroup, srcGroup__srcArea____SubLoadArea,
+		return new Object[] { match, srcGroup, srcArea, srcGroup__srcArea____SubLoadArea,
 				srcArea__srcGroup____LoadGroups };
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_5_collectcontextelements_blackBBBBBBB(Match match,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		return new Object[] { match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer };
+			MeterAsset asset, ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		return new Object[] { match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer };
 	}
 
 	public static final Object[] pattern_SubLoadArea_0_5_collectcontextelements_greenBBBBBBFFFFFFF(Match match,
-			ServiceDeliveryPoint srcDeliver, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
+			MeterAsset asset, ConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(srcDeliver);
-		match.getContextNodes().add(srcGroup);
+		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getContextNodes().add(asset);
+		match.getContextNodes().add(srcGroup);
 		match.getContextNodes().add(pair);
+		match.getContextNodes().add(srcDeliver);
 		match.getContextNodes().add(srcConsumer);
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
-		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
-		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
+		String pair__asset____a_name_prime = "a";
 		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
 		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
-		String pair__asset____a_name_prime = "a";
+		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
+		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		match.getContextEdges().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		match.getContextEdges().add(srcDeliver__asset____EndDeviceAssets);
-		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
-		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
-		match.getContextEdges().add(srcDeliver__srcConsumer____EnergyConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
-		match.getContextEdges().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		match.getContextEdges().add(pair__asset____a);
 		srcConsumer__srcGroup____LoadGroup.setSrc(srcConsumer);
 		srcConsumer__srcGroup____LoadGroup.setTrg(srcGroup);
 		match.getContextEdges().add(srcConsumer__srcGroup____LoadGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setSrc(srcGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setTrg(srcConsumer);
 		match.getContextEdges().add(srcGroup__srcConsumer____EnergyConsumers);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		match.getContextEdges().add(pair__asset____a);
+		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
+		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
+		match.getContextEdges().add(srcDeliver__srcConsumer____EnergyConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
+		match.getContextEdges().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
+		pair__asset____a.setName(pair__asset____a_name_prime);
+		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
+		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
-		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { match, srcDeliver, srcGroup, asset, pair, srcConsumer,
-				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
-				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints,
-				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers, pair__asset____a };
+		return new Object[] { match, asset, srcGroup, pair, srcDeliver, srcConsumer,
+				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets, pair__asset____a,
+				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers,
+				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 
 	public static final void pattern_SubLoadArea_0_6_registerobjectstomatch_expressionBBBBBBBB(SubLoadArea _this,
-			Match match, ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		_this.registerObjectsToMatch_FWD(match, srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer);
+			Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		_this.registerObjectsToMatch_FWD(match, asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer);
 
 	}
 
@@ -771,40 +774,40 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 
 	public static final Object[] pattern_SubLoadArea_1_1_performtransformation_bindingFFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("trgGroup");
-		EObject _localVariable_1 = isApplicableMatch.getObject("srcDeliver");
-		EObject _localVariable_2 = isApplicableMatch.getObject("srcArea");
-		EObject _localVariable_3 = isApplicableMatch.getObject("srcGroup");
-		EObject _localVariable_4 = isApplicableMatch.getObject("asset");
-		EObject _localVariable_5 = isApplicableMatch.getObject("groupToGroup");
-		EObject _localVariable_6 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_0 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_1 = isApplicableMatch.getObject("srcGroup");
+		EObject _localVariable_2 = isApplicableMatch.getObject("trgGroup");
+		EObject _localVariable_3 = isApplicableMatch.getObject("srcArea");
+		EObject _localVariable_4 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_5 = isApplicableMatch.getObject("srcDeliver");
+		EObject _localVariable_6 = isApplicableMatch.getObject("groupToGroup");
 		EObject _localVariable_7 = isApplicableMatch.getObject("srcConsumer");
-		EObject tmpTrgGroup = _localVariable_0;
-		EObject tmpSrcDeliver = _localVariable_1;
-		EObject tmpSrcArea = _localVariable_2;
-		EObject tmpSrcGroup = _localVariable_3;
-		EObject tmpAsset = _localVariable_4;
-		EObject tmpGroupToGroup = _localVariable_5;
-		EObject tmpPair = _localVariable_6;
+		EObject tmpAsset = _localVariable_0;
+		EObject tmpSrcGroup = _localVariable_1;
+		EObject tmpTrgGroup = _localVariable_2;
+		EObject tmpSrcArea = _localVariable_3;
+		EObject tmpPair = _localVariable_4;
+		EObject tmpSrcDeliver = _localVariable_5;
+		EObject tmpGroupToGroup = _localVariable_6;
 		EObject tmpSrcConsumer = _localVariable_7;
-		if (tmpTrgGroup instanceof outagePreventionJointarget.ConformLoadGroup) {
-			outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) tmpTrgGroup;
-			if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-				ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-				if (tmpSrcArea instanceof gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) {
-					gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) tmpSrcArea;
-					if (tmpSrcGroup instanceof ConformLoadGroup) {
-						ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
-						if (tmpAsset instanceof MeterAsset) {
-							MeterAsset asset = (MeterAsset) tmpAsset;
-							if (tmpGroupToGroup instanceof ConformLoadGroupToConformLoadGroup) {
-								ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) tmpGroupToGroup;
-								if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-									MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
+			if (tmpSrcGroup instanceof ConformLoadGroup) {
+				ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
+				if (tmpTrgGroup instanceof outagePreventionJointarget.ConformLoadGroup) {
+					outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) tmpTrgGroup;
+					if (tmpSrcArea instanceof gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) {
+						gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) tmpSrcArea;
+						if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+							MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+							if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+								ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
+								if (tmpGroupToGroup instanceof ConformLoadGroupToConformLoadGroup) {
+									ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) tmpGroupToGroup;
 									if (tmpSrcConsumer instanceof ConformLoad) {
 										ConformLoad srcConsumer = (ConformLoad) tmpSrcConsumer;
-										return new Object[] { trgGroup, srcDeliver, srcArea, srcGroup, asset,
-												groupToGroup, pair, srcConsumer, isApplicableMatch };
+										return new Object[] { asset, srcGroup, trgGroup, srcArea, pair, srcDeliver,
+												groupToGroup, srcConsumer, isApplicableMatch };
 									}
 								}
 							}
@@ -816,15 +819,15 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		return null;
 	}
 
-	public static final Object[] pattern_SubLoadArea_1_1_performtransformation_blackBBBBBBBBFBB(
-			outagePreventionJointarget.ConformLoadGroup trgGroup, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			ConformLoadGroupToConformLoadGroup groupToGroup, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
+	public static final Object[] pattern_SubLoadArea_1_1_performtransformation_blackBBBBBBBBFBB(MeterAsset asset,
+			ConformLoadGroup srcGroup, outagePreventionJointarget.ConformLoadGroup trgGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer,
 			SubLoadArea _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer,
+				return new Object[] { asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer,
 						csp, _this, isApplicableMatch };
 			}
 		}
@@ -836,141 +839,140 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		Object[] result_pattern_SubLoadArea_1_1_performtransformation_binding = pattern_SubLoadArea_1_1_performtransformation_bindingFFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_SubLoadArea_1_1_performtransformation_binding != null) {
-			outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) result_pattern_SubLoadArea_1_1_performtransformation_binding[0];
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_SubLoadArea_1_1_performtransformation_binding[1];
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result_pattern_SubLoadArea_1_1_performtransformation_binding[2];
-			ConformLoadGroup srcGroup = (ConformLoadGroup) result_pattern_SubLoadArea_1_1_performtransformation_binding[3];
-			MeterAsset asset = (MeterAsset) result_pattern_SubLoadArea_1_1_performtransformation_binding[4];
-			ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) result_pattern_SubLoadArea_1_1_performtransformation_binding[5];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_SubLoadArea_1_1_performtransformation_binding[6];
+			MeterAsset asset = (MeterAsset) result_pattern_SubLoadArea_1_1_performtransformation_binding[0];
+			ConformLoadGroup srcGroup = (ConformLoadGroup) result_pattern_SubLoadArea_1_1_performtransformation_binding[1];
+			outagePreventionJointarget.ConformLoadGroup trgGroup = (outagePreventionJointarget.ConformLoadGroup) result_pattern_SubLoadArea_1_1_performtransformation_binding[2];
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) result_pattern_SubLoadArea_1_1_performtransformation_binding[3];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_SubLoadArea_1_1_performtransformation_binding[4];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_SubLoadArea_1_1_performtransformation_binding[5];
+			ConformLoadGroupToConformLoadGroup groupToGroup = (ConformLoadGroupToConformLoadGroup) result_pattern_SubLoadArea_1_1_performtransformation_binding[6];
 			ConformLoad srcConsumer = (ConformLoad) result_pattern_SubLoadArea_1_1_performtransformation_binding[7];
 
 			Object[] result_pattern_SubLoadArea_1_1_performtransformation_black = pattern_SubLoadArea_1_1_performtransformation_blackBBBBBBBBFBB(
-					trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer, _this,
+					asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer, _this,
 					isApplicableMatch);
 			if (result_pattern_SubLoadArea_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_SubLoadArea_1_1_performtransformation_black[8];
 
-				return new Object[] { trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer,
+				return new Object[] { asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer,
 						csp, _this, isApplicableMatch };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_SubLoadArea_1_1_performtransformation_greenBFBF(
+	public static final Object[] pattern_SubLoadArea_1_1_performtransformation_greenFBBF(
 			outagePreventionJointarget.ConformLoadGroup trgGroup,
 			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea) {
+		SubLoadAreaToSubLoadArea areaToArea = Task2Factory.eINSTANCE.createSubLoadAreaToSubLoadArea();
 		outagePreventionJointarget.SubLoadArea trgArea = OutagePreventionJointargetFactory.eINSTANCE
 				.createSubLoadArea();
-		SubLoadAreaToSubLoadArea areaToArea = Task2Factory.eINSTANCE.createSubLoadAreaToSubLoadArea();
+		areaToArea.setSource(srcArea);
 		trgGroup.setSubLoadArea(trgArea);
 		areaToArea.setTarget(trgArea);
-		areaToArea.setSource(srcArea);
-		return new Object[] { trgGroup, trgArea, srcArea, areaToArea };
+		return new Object[] { areaToArea, trgGroup, srcArea, trgArea };
 	}
 
 	public static final Object[] pattern_SubLoadArea_1_2_collecttranslatedelements_blackBBB(
-			outagePreventionJointarget.SubLoadArea trgArea, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			SubLoadAreaToSubLoadArea areaToArea) {
-		return new Object[] { trgArea, srcArea, areaToArea };
+			SubLoadAreaToSubLoadArea areaToArea, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			outagePreventionJointarget.SubLoadArea trgArea) {
+		return new Object[] { areaToArea, srcArea, trgArea };
 	}
 
 	public static final Object[] pattern_SubLoadArea_1_2_collecttranslatedelements_greenFBBB(
-			outagePreventionJointarget.SubLoadArea trgArea, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			SubLoadAreaToSubLoadArea areaToArea) {
+			SubLoadAreaToSubLoadArea areaToArea, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			outagePreventionJointarget.SubLoadArea trgArea) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
-		ruleresult.getCreatedElements().add(trgArea);
-		ruleresult.getTranslatedElements().add(srcArea);
 		ruleresult.getCreatedLinkElements().add(areaToArea);
-		return new Object[] { ruleresult, trgArea, srcArea, areaToArea };
+		ruleresult.getTranslatedElements().add(srcArea);
+		ruleresult.getCreatedElements().add(trgArea);
+		return new Object[] { ruleresult, areaToArea, srcArea, trgArea };
 	}
 
 	public static final Object[] pattern_SubLoadArea_1_3_bookkeepingforedges_blackBBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject trgGroup, EObject srcDeliver, EObject trgArea, EObject srcArea,
-			EObject srcGroup, EObject areaToArea, EObject asset, EObject groupToGroup, EObject pair,
+			PerformRuleResult ruleresult, EObject areaToArea, EObject asset, EObject srcGroup, EObject trgGroup,
+			EObject srcArea, EObject trgArea, EObject pair, EObject srcDeliver, EObject groupToGroup,
 			EObject srcConsumer) {
-		if (!srcDeliver.equals(trgGroup)) {
-			if (!srcDeliver.equals(trgArea)) {
-				if (!srcDeliver.equals(srcGroup)) {
-					if (!trgArea.equals(trgGroup)) {
-						if (!srcArea.equals(trgGroup)) {
-							if (!srcArea.equals(srcDeliver)) {
-								if (!srcArea.equals(trgArea)) {
-									if (!srcArea.equals(srcGroup)) {
-										if (!srcArea.equals(srcConsumer)) {
-											if (!srcGroup.equals(trgGroup)) {
-												if (!srcGroup.equals(trgArea)) {
-													if (!areaToArea.equals(trgGroup)) {
-														if (!areaToArea.equals(srcDeliver)) {
-															if (!areaToArea.equals(trgArea)) {
-																if (!areaToArea.equals(srcArea)) {
-																	if (!areaToArea.equals(srcGroup)) {
-																		if (!areaToArea.equals(asset)) {
-																			if (!areaToArea.equals(groupToGroup)) {
-																				if (!areaToArea.equals(pair)) {
-																					if (!areaToArea
-																							.equals(srcConsumer)) {
-																						if (!asset.equals(trgGroup)) {
-																							if (!asset.equals(
-																									srcDeliver)) {
-																								if (!asset.equals(
-																										trgArea)) {
-																									if (!asset.equals(
-																											srcArea)) {
-																										if (!asset
-																												.equals(srcGroup)) {
-																											if (!asset
-																													.equals(groupToGroup)) {
-																												if (!asset
-																														.equals(pair)) {
-																													if (!asset
-																															.equals(srcConsumer)) {
-																														if (!groupToGroup
-																																.equals(trgGroup)) {
-																															if (!groupToGroup
+		if (!areaToArea.equals(asset)) {
+			if (!areaToArea.equals(srcGroup)) {
+				if (!areaToArea.equals(trgGroup)) {
+					if (!areaToArea.equals(srcArea)) {
+						if (!areaToArea.equals(trgArea)) {
+							if (!areaToArea.equals(pair)) {
+								if (!areaToArea.equals(srcDeliver)) {
+									if (!areaToArea.equals(groupToGroup)) {
+										if (!areaToArea.equals(srcConsumer)) {
+											if (!asset.equals(srcGroup)) {
+												if (!asset.equals(trgGroup)) {
+													if (!asset.equals(srcArea)) {
+														if (!asset.equals(trgArea)) {
+															if (!asset.equals(pair)) {
+																if (!asset.equals(srcDeliver)) {
+																	if (!asset.equals(groupToGroup)) {
+																		if (!asset.equals(srcConsumer)) {
+																			if (!srcGroup.equals(trgGroup)) {
+																				if (!srcGroup.equals(trgArea)) {
+																					if (!srcArea.equals(srcGroup)) {
+																						if (!srcArea.equals(trgGroup)) {
+																							if (!srcArea
+																									.equals(trgArea)) {
+																								if (!srcArea.equals(
+																										srcDeliver)) {
+																									if (!srcArea.equals(
+																											srcConsumer)) {
+																										if (!trgArea
+																												.equals(trgGroup)) {
+																											if (!pair
+																													.equals(srcGroup)) {
+																												if (!pair
+																														.equals(trgGroup)) {
+																													if (!pair
+																															.equals(srcArea)) {
+																														if (!pair
+																																.equals(trgArea)) {
+																															if (!pair
 																																	.equals(srcDeliver)) {
-																																if (!groupToGroup
-																																		.equals(trgArea)) {
-																																	if (!groupToGroup
-																																			.equals(srcArea)) {
-																																		if (!groupToGroup
-																																				.equals(srcGroup)) {
-																																			if (!groupToGroup
-																																					.equals(pair)) {
+																																if (!pair
+																																		.equals(srcConsumer)) {
+																																	if (!srcDeliver
+																																			.equals(srcGroup)) {
+																																		if (!srcDeliver
+																																				.equals(trgGroup)) {
+																																			if (!srcDeliver
+																																					.equals(trgArea)) {
 																																				if (!groupToGroup
-																																						.equals(srcConsumer)) {
-																																					if (!pair
+																																						.equals(srcGroup)) {
+																																					if (!groupToGroup
 																																							.equals(trgGroup)) {
-																																						if (!pair
-																																								.equals(srcDeliver)) {
-																																							if (!pair
+																																						if (!groupToGroup
+																																								.equals(srcArea)) {
+																																							if (!groupToGroup
 																																									.equals(trgArea)) {
-																																								if (!pair
-																																										.equals(srcArea)) {
-																																									if (!pair
-																																											.equals(srcGroup)) {
-																																										if (!pair
+																																								if (!groupToGroup
+																																										.equals(pair)) {
+																																									if (!groupToGroup
+																																											.equals(srcDeliver)) {
+																																										if (!groupToGroup
 																																												.equals(srcConsumer)) {
 																																											if (!srcConsumer
-																																													.equals(trgGroup)) {
+																																													.equals(srcGroup)) {
 																																												if (!srcConsumer
-																																														.equals(srcDeliver)) {
+																																														.equals(trgGroup)) {
 																																													if (!srcConsumer
 																																															.equals(trgArea)) {
 																																														if (!srcConsumer
-																																																.equals(srcGroup)) {
+																																																.equals(srcDeliver)) {
 																																															return new Object[] {
 																																																	ruleresult,
-																																																	trgGroup,
-																																																	srcDeliver,
-																																																	trgArea,
-																																																	srcArea,
-																																																	srcGroup,
 																																																	areaToArea,
 																																																	asset,
-																																																	groupToGroup,
+																																																	srcGroup,
+																																																	trgGroup,
+																																																	srcArea,
+																																																	trgArea,
 																																																	pair,
+																																																	srcDeliver,
+																																																	groupToGroup,
 																																																	srcConsumer };
 																																														}
 																																													}
@@ -1021,51 +1023,51 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	}
 
 	public static final Object[] pattern_SubLoadArea_1_3_bookkeepingforedges_greenBBBBBBFFFFF(
-			PerformRuleResult ruleresult, EObject trgGroup, EObject trgArea, EObject srcArea, EObject srcGroup,
-			EObject areaToArea) {
+			PerformRuleResult ruleresult, EObject areaToArea, EObject srcGroup, EObject trgGroup, EObject srcArea,
+			EObject trgArea) {
 		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge areaToArea__trgArea____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge areaToArea__srcArea____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge trgGroup__trgArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge areaToArea__srcArea____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge areaToArea__trgArea____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "SubLoadArea";
 		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
 		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
-		String areaToArea__trgArea____target_name_prime = "target";
-		String areaToArea__srcArea____source_name_prime = "source";
 		String trgGroup__trgArea____SubLoadArea_name_prime = "SubLoadArea";
+		String areaToArea__srcArea____source_name_prime = "source";
+		String areaToArea__trgArea____target_name_prime = "target";
 		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
 		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
 		ruleresult.getTranslatedEdges().add(srcGroup__srcArea____SubLoadArea);
 		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
 		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
 		ruleresult.getTranslatedEdges().add(srcArea__srcGroup____LoadGroups);
-		areaToArea__trgArea____target.setSrc(areaToArea);
-		areaToArea__trgArea____target.setTrg(trgArea);
-		ruleresult.getCreatedEdges().add(areaToArea__trgArea____target);
-		areaToArea__srcArea____source.setSrc(areaToArea);
-		areaToArea__srcArea____source.setTrg(srcArea);
-		ruleresult.getCreatedEdges().add(areaToArea__srcArea____source);
 		trgGroup__trgArea____SubLoadArea.setSrc(trgGroup);
 		trgGroup__trgArea____SubLoadArea.setTrg(trgArea);
 		ruleresult.getCreatedEdges().add(trgGroup__trgArea____SubLoadArea);
+		areaToArea__srcArea____source.setSrc(areaToArea);
+		areaToArea__srcArea____source.setTrg(srcArea);
+		ruleresult.getCreatedEdges().add(areaToArea__srcArea____source);
+		areaToArea__trgArea____target.setSrc(areaToArea);
+		areaToArea__trgArea____target.setTrg(trgArea);
+		ruleresult.getCreatedEdges().add(areaToArea__trgArea____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
 		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
 		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
-		areaToArea__trgArea____target.setName(areaToArea__trgArea____target_name_prime);
-		areaToArea__srcArea____source.setName(areaToArea__srcArea____source_name_prime);
 		trgGroup__trgArea____SubLoadArea.setName(trgGroup__trgArea____SubLoadArea_name_prime);
-		return new Object[] { ruleresult, trgGroup, trgArea, srcArea, srcGroup, areaToArea,
-				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups, areaToArea__trgArea____target,
-				areaToArea__srcArea____source, trgGroup__trgArea____SubLoadArea };
+		areaToArea__srcArea____source.setName(areaToArea__srcArea____source_name_prime);
+		areaToArea__trgArea____target.setName(areaToArea__trgArea____target_name_prime);
+		return new Object[] { ruleresult, areaToArea, srcGroup, trgGroup, srcArea, trgArea,
+				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups, trgGroup__trgArea____SubLoadArea,
+				areaToArea__srcArea____source, areaToArea__trgArea____target };
 	}
 
 	public static final void pattern_SubLoadArea_1_5_registerobjects_expressionBBBBBBBBBBBB(SubLoadArea _this,
-			PerformRuleResult ruleresult, EObject trgGroup, EObject srcDeliver, EObject trgArea, EObject srcArea,
-			EObject srcGroup, EObject areaToArea, EObject asset, EObject groupToGroup, EObject pair,
+			PerformRuleResult ruleresult, EObject areaToArea, EObject asset, EObject srcGroup, EObject trgGroup,
+			EObject srcArea, EObject trgArea, EObject pair, EObject srcDeliver, EObject groupToGroup,
 			EObject srcConsumer) {
-		_this.registerObjects_FWD(ruleresult, trgGroup, srcDeliver, trgArea, srcArea, srcGroup, areaToArea, asset,
-				groupToGroup, pair, srcConsumer);
+		_this.registerObjects_FWD(ruleresult, areaToArea, asset, srcGroup, trgGroup, srcArea, trgArea, pair, srcDeliver,
+				groupToGroup, srcConsumer);
 
 	}
 
@@ -1122,31 +1124,31 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	}
 
 	public static final Object[] pattern_SubLoadArea_2_2_corematch_bindingFFFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("srcDeliver");
-		EObject _localVariable_1 = match.getObject("srcArea");
-		EObject _localVariable_2 = match.getObject("srcGroup");
-		EObject _localVariable_3 = match.getObject("asset");
-		EObject _localVariable_4 = match.getObject("pair");
+		EObject _localVariable_0 = match.getObject("asset");
+		EObject _localVariable_1 = match.getObject("srcGroup");
+		EObject _localVariable_2 = match.getObject("srcArea");
+		EObject _localVariable_3 = match.getObject("pair");
+		EObject _localVariable_4 = match.getObject("srcDeliver");
 		EObject _localVariable_5 = match.getObject("srcConsumer");
-		EObject tmpSrcDeliver = _localVariable_0;
-		EObject tmpSrcArea = _localVariable_1;
-		EObject tmpSrcGroup = _localVariable_2;
-		EObject tmpAsset = _localVariable_3;
-		EObject tmpPair = _localVariable_4;
+		EObject tmpAsset = _localVariable_0;
+		EObject tmpSrcGroup = _localVariable_1;
+		EObject tmpSrcArea = _localVariable_2;
+		EObject tmpPair = _localVariable_3;
+		EObject tmpSrcDeliver = _localVariable_4;
 		EObject tmpSrcConsumer = _localVariable_5;
-		if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-			if (tmpSrcArea instanceof gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) {
-				gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) tmpSrcArea;
-				if (tmpSrcGroup instanceof ConformLoadGroup) {
-					ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
-					if (tmpAsset instanceof MeterAsset) {
-						MeterAsset asset = (MeterAsset) tmpAsset;
-						if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-							MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
+			if (tmpSrcGroup instanceof ConformLoadGroup) {
+				ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
+				if (tmpSrcArea instanceof gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) {
+					gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea = (gluemodel.CIM.IEC61970.LoadModel.SubLoadArea) tmpSrcArea;
+					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+						if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+							ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
 							if (tmpSrcConsumer instanceof ConformLoad) {
 								ConformLoad srcConsumer = (ConformLoad) tmpSrcConsumer;
-								return new Object[] { srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer, match };
+								return new Object[] { asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer, match };
 							}
 						}
 					}
@@ -1156,16 +1158,15 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_SubLoadArea_2_2_corematch_blackFBBBBFBBB(
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
-			Match match) {
+	public static final Iterable<Object[]> pattern_SubLoadArea_2_2_corematch_blackBBFBBBFBB(MeterAsset asset,
+			ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (ConformLoadGroupToConformLoadGroup groupToGroup : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcGroup, ConformLoadGroupToConformLoadGroup.class, "source")) {
 			outagePreventionJointarget.ConformLoadGroup trgGroup = groupToGroup.getTarget();
 			if (trgGroup != null) {
-				_result.add(new Object[] { trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair,
+				_result.add(new Object[] { asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup,
 						srcConsumer, match });
 			}
 
@@ -1173,21 +1174,20 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_SubLoadArea_2_3_findcontext_blackBBBBBBBB(
-			outagePreventionJointarget.ConformLoadGroup trgGroup, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			ConformLoadGroupToConformLoadGroup groupToGroup, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
+	public static final Iterable<Object[]> pattern_SubLoadArea_2_3_findcontext_blackBBBBBBBB(MeterAsset asset,
+			ConformLoadGroup srcGroup, outagePreventionJointarget.ConformLoadGroup trgGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (srcArea.equals(srcGroup.getSubLoadArea())) {
-			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-				if (trgGroup.equals(groupToGroup.getTarget())) {
-					if (srcGroup.equals(groupToGroup.getSource())) {
-						if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+		if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+			if (srcArea.equals(srcGroup.getSubLoadArea())) {
+				if (asset.equals(pair.getA())) {
+					if (trgGroup.equals(groupToGroup.getTarget())) {
+						if (srcGroup.equals(groupToGroup.getSource())) {
 							if (srcGroup.equals(srcConsumer.getLoadGroup())) {
-								if (asset.equals(pair.getA())) {
-									_result.add(new Object[] { trgGroup, srcDeliver, srcArea, srcGroup, asset,
-											groupToGroup, pair, srcConsumer });
+								if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+									_result.add(new Object[] { asset, srcGroup, trgGroup, srcArea, pair, srcDeliver,
+											groupToGroup, srcConsumer });
 								}
 							}
 						}
@@ -1198,106 +1198,105 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 		return _result;
 	}
 
-	public static final Object[] pattern_SubLoadArea_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(
-			outagePreventionJointarget.ConformLoadGroup trgGroup, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			ConformLoadGroupToConformLoadGroup groupToGroup, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
+	public static final Object[] pattern_SubLoadArea_2_3_findcontext_greenBBBBBBBBFFFFFFFFFFFF(MeterAsset asset,
+			ConformLoadGroup srcGroup, outagePreventionJointarget.ConformLoadGroup trgGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge groupToGroup__trgGroup____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge groupToGroup__srcGroup____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
-		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
+		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
+		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
+		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
+		String pair__asset____a_name_prime = "a";
 		String groupToGroup__trgGroup____target_name_prime = "target";
 		String groupToGroup__srcGroup____source_name_prime = "source";
-		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
-		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
 		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
 		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
-		String pair__asset____a_name_prime = "a";
-		isApplicableMatch.getAllContextElements().add(trgGroup);
-		isApplicableMatch.getAllContextElements().add(srcDeliver);
-		isApplicableMatch.getAllContextElements().add(srcArea);
-		isApplicableMatch.getAllContextElements().add(srcGroup);
+		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
+		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
 		isApplicableMatch.getAllContextElements().add(asset);
-		isApplicableMatch.getAllContextElements().add(groupToGroup);
+		isApplicableMatch.getAllContextElements().add(srcGroup);
+		isApplicableMatch.getAllContextElements().add(trgGroup);
+		isApplicableMatch.getAllContextElements().add(srcArea);
 		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(groupToGroup);
 		isApplicableMatch.getAllContextElements().add(srcConsumer);
-		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
-		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
-		isApplicableMatch.getAllContextElements().add(srcGroup__srcArea____SubLoadArea);
-		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
-		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
-		isApplicableMatch.getAllContextElements().add(srcArea__srcGroup____LoadGroups);
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
+		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
+		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
+		isApplicableMatch.getAllContextElements().add(srcGroup__srcArea____SubLoadArea);
+		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
+		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
+		isApplicableMatch.getAllContextElements().add(srcArea__srcGroup____LoadGroups);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
 		groupToGroup__trgGroup____target.setSrc(groupToGroup);
 		groupToGroup__trgGroup____target.setTrg(trgGroup);
 		isApplicableMatch.getAllContextElements().add(groupToGroup__trgGroup____target);
 		groupToGroup__srcGroup____source.setSrc(groupToGroup);
 		groupToGroup__srcGroup____source.setTrg(srcGroup);
 		isApplicableMatch.getAllContextElements().add(groupToGroup__srcGroup____source);
-		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
-		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
-		isApplicableMatch.getAllContextElements().add(srcDeliver__srcConsumer____EnergyConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
-		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
-		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
 		srcConsumer__srcGroup____LoadGroup.setSrc(srcConsumer);
 		srcConsumer__srcGroup____LoadGroup.setTrg(srcGroup);
 		isApplicableMatch.getAllContextElements().add(srcConsumer__srcGroup____LoadGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setSrc(srcGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setTrg(srcConsumer);
 		isApplicableMatch.getAllContextElements().add(srcGroup__srcConsumer____EnergyConsumers);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
-		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
+		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
+		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
+		isApplicableMatch.getAllContextElements().add(srcDeliver__srcConsumer____EnergyConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
+		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
+		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
+		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
+		pair__asset____a.setName(pair__asset____a_name_prime);
 		groupToGroup__trgGroup____target.setName(groupToGroup__trgGroup____target_name_prime);
 		groupToGroup__srcGroup____source.setName(groupToGroup__srcGroup____source_name_prime);
+		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
+		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
-		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair, srcConsumer,
-				isApplicableMatch, srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups,
-				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
-				groupToGroup__trgGroup____target, groupToGroup__srcGroup____source,
-				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints,
-				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers, pair__asset____a };
+		return new Object[] { asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup, srcConsumer,
+				isApplicableMatch, asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
+				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups, pair__asset____a,
+				groupToGroup__trgGroup____target, groupToGroup__srcGroup____source, srcConsumer__srcGroup____LoadGroup,
+				srcGroup__srcConsumer____EnergyConsumers, srcDeliver__srcConsumer____EnergyConsumer,
+				srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 
 	public static final Object[] pattern_SubLoadArea_2_4_solveCSP_bindingFBBBBBBBBBB(SubLoadArea _this,
-			IsApplicableMatch isApplicableMatch, outagePreventionJointarget.ConformLoadGroup trgGroup,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, ConformLoadGroupToConformLoadGroup groupToGroup,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, trgGroup, srcDeliver, srcArea,
-				srcGroup, asset, groupToGroup, pair, srcConsumer);
+			IsApplicableMatch isApplicableMatch, MeterAsset asset, ConformLoadGroup srcGroup,
+			outagePreventionJointarget.ConformLoadGroup trgGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
+			ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, asset, srcGroup, trgGroup, srcArea,
+				pair, srcDeliver, groupToGroup, srcConsumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, trgGroup, srcDeliver, srcArea, srcGroup, asset,
-					groupToGroup, pair, srcConsumer };
+			return new Object[] { csp, _this, isApplicableMatch, asset, srcGroup, trgGroup, srcArea, pair, srcDeliver,
+					groupToGroup, srcConsumer };
 		}
 		return null;
 	}
@@ -1307,12 +1306,12 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	}
 
 	public static final Object[] pattern_SubLoadArea_2_4_solveCSP_bindingAndBlackFBBBBBBBBBB(SubLoadArea _this,
-			IsApplicableMatch isApplicableMatch, outagePreventionJointarget.ConformLoadGroup trgGroup,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, ConformLoadGroupToConformLoadGroup groupToGroup,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
+			IsApplicableMatch isApplicableMatch, MeterAsset asset, ConformLoadGroup srcGroup,
+			outagePreventionJointarget.ConformLoadGroup trgGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
+			ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer) {
 		Object[] result_pattern_SubLoadArea_2_4_solveCSP_binding = pattern_SubLoadArea_2_4_solveCSP_bindingFBBBBBBBBBB(
-				_this, isApplicableMatch, trgGroup, srcDeliver, srcArea, srcGroup, asset, groupToGroup, pair,
+				_this, isApplicableMatch, asset, srcGroup, trgGroup, srcArea, pair, srcDeliver, groupToGroup,
 				srcConsumer);
 		if (result_pattern_SubLoadArea_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_SubLoadArea_2_4_solveCSP_binding[0];
@@ -1320,8 +1319,8 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 			Object[] result_pattern_SubLoadArea_2_4_solveCSP_black = pattern_SubLoadArea_2_4_solveCSP_blackB(csp);
 			if (result_pattern_SubLoadArea_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, trgGroup, srcDeliver, srcArea, srcGroup, asset,
-						groupToGroup, pair, srcConsumer };
+				return new Object[] { csp, _this, isApplicableMatch, asset, srcGroup, trgGroup, srcArea, pair,
+						srcDeliver, groupToGroup, srcConsumer };
 			}
 		}
 		return null;
@@ -1407,8 +1406,8 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 
 	public static final Object[] pattern_SubLoadArea_10_2_testcorematchandDECs_black_nac_0BB(
 			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup) {
-		for (LoadGroup __DEC_srcArea_SubLoadArea_443794 : srcArea.getLoadGroups()) {
-			if (!srcGroup.equals(__DEC_srcArea_SubLoadArea_443794)) {
+		for (LoadGroup __DEC_srcArea_SubLoadArea_107359 : srcArea.getLoadGroups()) {
+			if (!srcGroup.equals(__DEC_srcArea_SubLoadArea_107359)) {
 				return new Object[] { srcArea, srcGroup };
 			}
 		}
@@ -1434,7 +1433,7 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 										for (MeterAssetPhysicalDevicePair pair : org.moflon.core.utilities.eMoflonEMFUtil
 												.getOppositeReferenceTyped(asset, MeterAssetPhysicalDevicePair.class,
 														"a")) {
-											_result.add(new Object[] { srcDeliver, srcArea, srcGroup, asset, pair,
+											_result.add(new Object[] { asset, srcGroup, srcArea, pair, srcDeliver,
 													srcConsumer, _edge_SubLoadArea });
 										}
 									}
@@ -1460,10 +1459,10 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 	}
 
 	public static final boolean pattern_SubLoadArea_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBB(
-			SubLoadArea _this, Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcDeliver, srcArea, srcGroup, asset, pair,
+			SubLoadArea _this, Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, asset, srcGroup, srcArea, pair, srcDeliver,
 				srcConsumer);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
@@ -1499,24 +1498,24 @@ public class SubLoadAreaImpl extends AbstractRuleImpl implements SubLoadArea {
 
 	public static final Object[] pattern_SubLoadArea_13_1_matchtggpattern_black_nac_0BB(
 			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup) {
-		for (LoadGroup __DEC_srcArea_SubLoadArea_467671 : srcArea.getLoadGroups()) {
-			if (!srcGroup.equals(__DEC_srcArea_SubLoadArea_467671)) {
+		for (LoadGroup __DEC_srcArea_SubLoadArea_125643 : srcArea.getLoadGroups()) {
+			if (!srcGroup.equals(__DEC_srcArea_SubLoadArea_125643)) {
 				return new Object[] { srcArea, srcGroup };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_SubLoadArea_13_1_matchtggpattern_blackBBBBBB(ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		if (srcArea.equals(srcGroup.getSubLoadArea())) {
-			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-				if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+	public static final Object[] pattern_SubLoadArea_13_1_matchtggpattern_blackBBBBBB(MeterAsset asset,
+			ConformLoadGroup srcGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer) {
+		if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+			if (srcArea.equals(srcGroup.getSubLoadArea())) {
+				if (asset.equals(pair.getA())) {
 					if (srcGroup.equals(srcConsumer.getLoadGroup())) {
-						if (asset.equals(pair.getA())) {
+						if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
 							if (pattern_SubLoadArea_13_1_matchtggpattern_black_nac_0BB(srcArea, srcGroup) == null) {
-								return new Object[] { srcDeliver, srcArea, srcGroup, asset, pair, srcConsumer };
+								return new Object[] { asset, srcGroup, srcArea, pair, srcDeliver, srcConsumer };
 							}
 						}
 					}

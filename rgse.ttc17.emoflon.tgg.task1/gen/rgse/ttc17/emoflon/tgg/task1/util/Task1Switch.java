@@ -68,6 +68,15 @@ public class Task1Switch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+		case Task1Package.POSITION_POINT_TO_POSITION_POINT: {
+			PositionPointToPositionPoint positionPointToPositionPoint = (PositionPointToPositionPoint) theEObject;
+			T result = casePositionPointToPositionPoint(positionPointToPositionPoint);
+			if (result == null)
+				result = caseAbstractCorrespondence(positionPointToPositionPoint);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case Task1Package.CONTROL_AREA_TO_ENERGY_CONSUMER: {
 			ControlAreaToEnergyConsumer controlAreaToEnergyConsumer = (ControlAreaToEnergyConsumer) theEObject;
 			T result = caseControlAreaToEnergyConsumer(controlAreaToEnergyConsumer);
@@ -86,15 +95,6 @@ public class Task1Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task1Package.METER_ASSET_TO_ENERGY_CONSUMER: {
-			MeterAssetToEnergyConsumer meterAssetToEnergyConsumer = (MeterAssetToEnergyConsumer) theEObject;
-			T result = caseMeterAssetToEnergyConsumer(meterAssetToEnergyConsumer);
-			if (result == null)
-				result = caseAbstractCorrespondence(meterAssetToEnergyConsumer);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Task1Package.PHYSICAL_DEVICE_TO_ENERGY_CONSUMER: {
 			PhysicalDeviceToEnergyConsumer physicalDeviceToEnergyConsumer = (PhysicalDeviceToEnergyConsumer) theEObject;
 			T result = casePhysicalDeviceToEnergyConsumer(physicalDeviceToEnergyConsumer);
@@ -104,11 +104,11 @@ public class Task1Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Task1Package.POSITION_POINT_TO_POSITION_POINT: {
-			PositionPointToPositionPoint positionPointToPositionPoint = (PositionPointToPositionPoint) theEObject;
-			T result = casePositionPointToPositionPoint(positionPointToPositionPoint);
+		case Task1Package.METER_ASSET_TO_ENERGY_CONSUMER: {
+			MeterAssetToEnergyConsumer meterAssetToEnergyConsumer = (MeterAssetToEnergyConsumer) theEObject;
+			T result = caseMeterAssetToEnergyConsumer(meterAssetToEnergyConsumer);
 			if (result == null)
-				result = caseAbstractCorrespondence(positionPointToPositionPoint);
+				result = caseAbstractCorrespondence(meterAssetToEnergyConsumer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -116,6 +116,21 @@ public class Task1Switch<T> extends Switch<T> {
 		default:
 			return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Position Point To Position Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Position Point To Position Point</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePositionPointToPositionPoint(PositionPointToPositionPoint object) {
+		return null;
 	}
 
 	/**
@@ -149,21 +164,6 @@ public class Task1Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Meter Asset To Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Meter Asset To Energy Consumer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMeterAssetToEnergyConsumer(MeterAssetToEnergyConsumer object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Physical Device To Energy Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -179,17 +179,17 @@ public class Task1Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Position Point To Position Point</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Meter Asset To Energy Consumer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Position Point To Position Point</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Meter Asset To Energy Consumer</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePositionPointToPositionPoint(PositionPointToPositionPoint object) {
+	public T caseMeterAssetToEnergyConsumer(MeterAssetToEnergyConsumer object) {
 		return null;
 	}
 

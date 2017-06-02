@@ -91,28 +91,28 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
+	public boolean isAppropriate_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
 		// initial bindings
 		Object[] result1_black = NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_1_initialbindings_blackBBBBBBB(
-				this, match, srcConsumer, pair, srcDeliver, srcGroup, asset);
+				this, match, asset, srcGroup, pair, srcDeliver, srcConsumer);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", "
-					+ "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcGroup] = " + srcGroup
-					+ ", " + "[asset] = " + asset + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", "
+					+ "[srcGroup] = " + srcGroup + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver
+					+ ", " + "[srcConsumer] = " + srcConsumer + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = NonConformLoadGroupImpl
-				.pattern_NonConformLoadGroup_0_2_SolveCSP_bindingAndBlackFBBBBBBB(this, match, srcConsumer, pair,
-						srcDeliver, srcGroup, asset);
+				.pattern_NonConformLoadGroup_0_2_SolveCSP_bindingAndBlackFBBBBBBB(this, match, asset, srcGroup, pair,
+						srcDeliver, srcConsumer);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", " + "[pair] = "
-					+ pair + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcGroup] = " + srcGroup + ", "
-					+ "[asset] = " + asset + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcGroup] = "
+					+ srcGroup + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", "
+					+ "[srcConsumer] = " + srcConsumer + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -120,31 +120,31 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 
 			// collect elements to be translated
 			Object[] result4_black = NonConformLoadGroupImpl
-					.pattern_NonConformLoadGroup_0_4_collectelementstobetranslated_blackBBBBBB(match, srcConsumer, pair,
-							srcDeliver, srcGroup, asset);
+					.pattern_NonConformLoadGroup_0_4_collectelementstobetranslated_blackBBBBBB(match, asset, srcGroup,
+							pair, srcDeliver, srcConsumer);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", "
-						+ "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcGroup] = " + srcGroup
-						+ ", " + "[asset] = " + asset + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcGroup] = "
+						+ srcGroup + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", "
+						+ "[srcConsumer] = " + srcConsumer + ".");
 			}
 			NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_4_collectelementstobetranslated_greenBBBFF(match,
-					srcConsumer, srcGroup);
+					srcGroup, srcConsumer);
 			// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result4_green[3];
 			// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result4_green[4];
 
 			// collect context elements
 			Object[] result5_black = NonConformLoadGroupImpl
-					.pattern_NonConformLoadGroup_0_5_collectcontextelements_blackBBBBBB(match, srcConsumer, pair,
-							srcDeliver, srcGroup, asset);
+					.pattern_NonConformLoadGroup_0_5_collectcontextelements_blackBBBBBB(match, asset, srcGroup, pair,
+							srcDeliver, srcConsumer);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcConsumer] = " + srcConsumer + ", "
-						+ "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcGroup] = " + srcGroup
-						+ ", " + "[asset] = " + asset + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[asset] = " + asset + ", " + "[srcGroup] = "
+						+ srcGroup + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", "
+						+ "[srcConsumer] = " + srcConsumer + ".");
 			}
-			NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_5_collectcontextelements_greenBBBBBFFFFF(match,
-					srcConsumer, pair, srcDeliver, asset);
+			NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_5_collectcontextelements_greenBBBBBFFFFF(match, asset,
+					pair, srcDeliver, srcConsumer);
 			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[5];
 			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[6];
 			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[7];
@@ -153,7 +153,7 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 
 			// register objects to match
 			NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_6_registerobjectstomatch_expressionBBBBBBB(this,
-					match, srcConsumer, pair, srcDeliver, srcGroup, asset);
+					match, asset, srcGroup, pair, srcDeliver, srcConsumer);
 			return NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_7_expressionF();
 		} else {
 			return NonConformLoadGroupImpl.pattern_NonConformLoadGroup_0_8_expressionF();
@@ -175,56 +175,55 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		NonConformLoad srcConsumer = (NonConformLoad) result1_bindingAndBlack[0];
-		EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result1_bindingAndBlack[1];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[0];
+		gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result1_bindingAndBlack[1];
 		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[2];
-		outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) result1_bindingAndBlack[3];
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[4];
-		gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result1_bindingAndBlack[5];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[6];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[3];
+		outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) result1_bindingAndBlack[4];
+		NonConformLoad srcConsumer = (NonConformLoad) result1_bindingAndBlack[5];
+		EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result1_bindingAndBlack[6];
 		// CSP csp = (CSP) result1_bindingAndBlack[7];
 		Object[] result1_green = NonConformLoadGroupImpl
-				.pattern_NonConformLoadGroup_1_1_performtransformation_greenBBFF(trgConsumer, srcGroup);
-		outagePreventionJointarget.NonConformLoadGroup trgGroup = (outagePreventionJointarget.NonConformLoadGroup) result1_green[2];
-		NonConformLoadGroupNonToConformLoadGroup groupToGroup = (NonConformLoadGroupNonToConformLoadGroup) result1_green[3];
+				.pattern_NonConformLoadGroup_1_1_performtransformation_greenBBFF(srcGroup, trgConsumer);
+		NonConformLoadGroupNonToConformLoadGroup groupToGroup = (NonConformLoadGroupNonToConformLoadGroup) result1_green[2];
+		outagePreventionJointarget.NonConformLoadGroup trgGroup = (outagePreventionJointarget.NonConformLoadGroup) result1_green[3];
 
 		// collect translated elements
 		Object[] result2_black = NonConformLoadGroupImpl
-				.pattern_NonConformLoadGroup_1_2_collecttranslatedelements_blackBBB(srcGroup, trgGroup, groupToGroup);
+				.pattern_NonConformLoadGroup_1_2_collecttranslatedelements_blackBBB(srcGroup, groupToGroup, trgGroup);
 		if (result2_black == null) {
 			throw new RuntimeException("Pattern matching in node [collect translated elements] failed." + " Variables: "
-					+ "[srcGroup] = " + srcGroup + ", " + "[trgGroup] = " + trgGroup + ", " + "[groupToGroup] = "
-					+ groupToGroup + ".");
+					+ "[srcGroup] = " + srcGroup + ", " + "[groupToGroup] = " + groupToGroup + ", " + "[trgGroup] = "
+					+ trgGroup + ".");
 		}
 		Object[] result2_green = NonConformLoadGroupImpl
-				.pattern_NonConformLoadGroup_1_2_collecttranslatedelements_greenFBBB(srcGroup, trgGroup, groupToGroup);
+				.pattern_NonConformLoadGroup_1_2_collecttranslatedelements_greenFBBB(srcGroup, groupToGroup, trgGroup);
 		PerformRuleResult ruleresult = (PerformRuleResult) result2_green[0];
 
 		// bookkeeping for edges
 		Object[] result3_black = NonConformLoadGroupImpl
-				.pattern_NonConformLoadGroup_1_3_bookkeepingforedges_blackBBBBBBBBBB(ruleresult, srcConsumer,
-						consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset, trgGroup, groupToGroup);
+				.pattern_NonConformLoadGroup_1_3_bookkeepingforedges_blackBBBBBBBBBB(ruleresult, asset, srcGroup, pair,
+						srcDeliver, trgConsumer, groupToGroup, srcConsumer, consumerToConsumer, trgGroup);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[srcConsumer] = " + srcConsumer + ", "
-					+ "[consumerToConsumer] = " + consumerToConsumer + ", " + "[pair] = " + pair + ", "
-					+ "[trgConsumer] = " + trgConsumer + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcGroup] = "
-					+ srcGroup + ", " + "[asset] = " + asset + ", " + "[trgGroup] = " + trgGroup + ", "
-					+ "[groupToGroup] = " + groupToGroup + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[asset] = " + asset + ", " + "[srcGroup] = " + srcGroup
+					+ ", " + "[pair] = " + pair + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[trgConsumer] = "
+					+ trgConsumer + ", " + "[groupToGroup] = " + groupToGroup + ", " + "[srcConsumer] = " + srcConsumer
+					+ ", " + "[consumerToConsumer] = " + consumerToConsumer + ", " + "[trgGroup] = " + trgGroup + ".");
 		}
 		NonConformLoadGroupImpl.pattern_NonConformLoadGroup_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult,
-				srcConsumer, trgConsumer, srcGroup, trgGroup, groupToGroup);
-		// EMoflonEdge trgConsumer__trgGroup____LoadGroup = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[7];
-		// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[8];
-		// EMoflonEdge groupToGroup__srcGroup____source = (EMoflonEdge) result3_green[9];
+				srcGroup, trgConsumer, groupToGroup, srcConsumer, trgGroup);
+		// EMoflonEdge groupToGroup__srcGroup____source = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge trgConsumer__trgGroup____LoadGroup = (EMoflonEdge) result3_green[7];
+		// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[8];
+		// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[9];
 		// EMoflonEdge groupToGroup__trgGroup____target = (EMoflonEdge) result3_green[10];
 
 		// perform postprocessing story node is empty
 		// register objects
 		NonConformLoadGroupImpl.pattern_NonConformLoadGroup_1_5_registerobjects_expressionBBBBBBBBBBB(this, ruleresult,
-				srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset, trgGroup,
-				groupToGroup);
+				asset, srcGroup, pair, srcDeliver, trgConsumer, groupToGroup, srcConsumer, consumerToConsumer,
+				trgGroup);
 		return NonConformLoadGroupImpl.pattern_NonConformLoadGroup_1_6_expressionFB(ruleresult);
 	}
 
@@ -254,44 +253,44 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		NonConformLoad srcConsumer = (NonConformLoad) result2_binding[0];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[1];
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[2];
-		gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result2_binding[3];
-		MeterAsset asset = (MeterAsset) result2_binding[4];
-		for (Object[] result2_black : NonConformLoadGroupImpl.pattern_NonConformLoadGroup_2_2_corematch_blackBFBFBBBB(
-				srcConsumer, pair, srcDeliver, srcGroup, asset, match)) {
-			EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result2_black[1];
-			outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) result2_black[3];
+		MeterAsset asset = (MeterAsset) result2_binding[0];
+		gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result2_binding[1];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[3];
+		NonConformLoad srcConsumer = (NonConformLoad) result2_binding[4];
+		for (Object[] result2_black : NonConformLoadGroupImpl.pattern_NonConformLoadGroup_2_2_corematch_blackBBBBFBFB(
+				asset, srcGroup, pair, srcDeliver, srcConsumer, match)) {
+			outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) result2_black[4];
+			EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result2_black[6];
 			// ForEach find context
 			for (Object[] result3_black : NonConformLoadGroupImpl
-					.pattern_NonConformLoadGroup_2_3_findcontext_blackBBBBBBB(srcConsumer, consumerToConsumer, pair,
-							trgConsumer, srcDeliver, srcGroup, asset)) {
+					.pattern_NonConformLoadGroup_2_3_findcontext_blackBBBBBBB(asset, srcGroup, pair, srcDeliver,
+							trgConsumer, srcConsumer, consumerToConsumer)) {
 				Object[] result3_green = NonConformLoadGroupImpl
-						.pattern_NonConformLoadGroup_2_3_findcontext_greenBBBBBBBFFFFFFFFFF(srcConsumer,
-								consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset);
+						.pattern_NonConformLoadGroup_2_3_findcontext_greenBBBBBBBFFFFFFFFFF(asset, srcGroup, pair,
+								srcDeliver, trgConsumer, srcConsumer, consumerToConsumer);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[7];
 				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[8];
-				// EMoflonEdge consumerToConsumer__trgConsumer____target = (EMoflonEdge) result3_green[9];
-				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[10];
-				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[11];
-				// EMoflonEdge consumerToConsumer__srcConsumer____source = (EMoflonEdge) result3_green[12];
-				// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[13];
-				// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[14];
-				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[15];
-				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[16];
+				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[9];
+				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[10];
+				// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[11];
+				// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[12];
+				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[14];
+				// EMoflonEdge consumerToConsumer__trgConsumer____target = (EMoflonEdge) result3_green[15];
+				// EMoflonEdge consumerToConsumer__srcConsumer____source = (EMoflonEdge) result3_green[16];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = NonConformLoadGroupImpl
 						.pattern_NonConformLoadGroup_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(this, isApplicableMatch,
-								srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset);
+								asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer, consumerToConsumer);
 				if (result4_bindingAndBlack == null) {
-					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
-							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[srcConsumer] = " + srcConsumer + ", " + "[consumerToConsumer] = " + consumerToConsumer
-							+ ", " + "[pair] = " + pair + ", " + "[trgConsumer] = " + trgConsumer + ", "
-							+ "[srcDeliver] = " + srcDeliver + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = "
-							+ asset + ".");
+					throw new RuntimeException(
+							"Pattern matching in node [solve CSP] failed." + " Variables: " + "[this] = " + this + ", "
+									+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[asset] = " + asset + ", "
+									+ "[srcGroup] = " + srcGroup + ", " + "[pair] = " + pair + ", " + "[srcDeliver] = "
+									+ srcDeliver + ", " + "[trgConsumer] = " + trgConsumer + ", " + "[srcConsumer] = "
+									+ srcConsumer + ", " + "[consumerToConsumer] = " + consumerToConsumer + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -323,14 +322,14 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
-		match.registerObject("srcConsumer", srcConsumer);
+	public void registerObjectsToMatch_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		match.registerObject("asset", asset);
+		match.registerObject("srcGroup", srcGroup);
 		match.registerObject("pair", pair);
 		match.registerObject("srcDeliver", srcDeliver);
-		match.registerObject("srcGroup", srcGroup);
-		match.registerObject("asset", asset);
+		match.registerObject("srcConsumer", srcConsumer);
 
 	}
 
@@ -339,9 +338,9 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -370,10 +369,10 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, NonConformLoad srcConsumer,
-			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAssetPhysicalDevicePair pair,
-			outagePreventionJointarget.NonConformLoad trgConsumer, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.NonConformLoad trgConsumer,
+			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -388,13 +387,13 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
+		isApplicableMatch.registerObject("asset", asset);
+		isApplicableMatch.registerObject("srcGroup", srcGroup);
+		isApplicableMatch.registerObject("pair", pair);
+		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
+		isApplicableMatch.registerObject("trgConsumer", trgConsumer);
 		isApplicableMatch.registerObject("srcConsumer", srcConsumer);
 		isApplicableMatch.registerObject("consumerToConsumer", consumerToConsumer);
-		isApplicableMatch.registerObject("pair", pair);
-		isApplicableMatch.registerObject("trgConsumer", trgConsumer);
-		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
-		isApplicableMatch.registerObject("srcGroup", srcGroup);
-		isApplicableMatch.registerObject("asset", asset);
 		return csp;
 	}
 
@@ -412,18 +411,18 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcConsumer, EObject consumerToConsumer,
-			EObject pair, EObject trgConsumer, EObject srcDeliver, EObject srcGroup, EObject asset, EObject trgGroup,
-			EObject groupToGroup) {
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject srcGroup, EObject pair,
+			EObject srcDeliver, EObject trgConsumer, EObject groupToGroup, EObject srcConsumer,
+			EObject consumerToConsumer, EObject trgGroup) {
+		ruleresult.registerObject("asset", asset);
+		ruleresult.registerObject("srcGroup", srcGroup);
+		ruleresult.registerObject("pair", pair);
+		ruleresult.registerObject("srcDeliver", srcDeliver);
+		ruleresult.registerObject("trgConsumer", trgConsumer);
+		ruleresult.registerObject("groupToGroup", groupToGroup);
 		ruleresult.registerObject("srcConsumer", srcConsumer);
 		ruleresult.registerObject("consumerToConsumer", consumerToConsumer);
-		ruleresult.registerObject("pair", pair);
-		ruleresult.registerObject("trgConsumer", trgConsumer);
-		ruleresult.registerObject("srcDeliver", srcDeliver);
-		ruleresult.registerObject("srcGroup", srcGroup);
-		ruleresult.registerObject("asset", asset);
 		ruleresult.registerObject("trgGroup", trgGroup);
-		ruleresult.registerObject("groupToGroup", groupToGroup);
 
 	}
 
@@ -442,7 +441,7 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_154(EMoflonEdge _edge_LoadGroup) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_30(EMoflonEdge _edge_LoadGroup) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = NonConformLoadGroupImpl
 				.pattern_NonConformLoadGroup_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -459,11 +458,11 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		// ForEach test core match and DECs
 		for (Object[] result2_black : NonConformLoadGroupImpl
 				.pattern_NonConformLoadGroup_10_2_testcorematchandDECs_blackFFFFFB(_edge_LoadGroup)) {
-			NonConformLoad srcConsumer = (NonConformLoad) result2_black[0];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[1];
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[2];
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result2_black[3];
-			MeterAsset asset = (MeterAsset) result2_black[4];
+			MeterAsset asset = (MeterAsset) result2_black[0];
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result2_black[1];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[2];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[3];
+			NonConformLoad srcConsumer = (NonConformLoad) result2_black[4];
 			Object[] result2_green = NonConformLoadGroupImpl
 					.pattern_NonConformLoadGroup_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -471,7 +470,7 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 			// bookkeeping with generic isAppropriate method
 			if (NonConformLoadGroupImpl
 					.pattern_NonConformLoadGroup_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBB(this,
-							match, srcConsumer, pair, srcDeliver, srcGroup, asset)) {
+							match, asset, srcGroup, pair, srcDeliver, srcConsumer)) {
 				// Ensure that the correct types of elements are matched
 				if (NonConformLoadGroupImpl
 						.pattern_NonConformLoadGroup_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -547,11 +546,10 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {// match tgg pattern
+	public boolean checkDEC_FWD(MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {// match tgg pattern
 		Object[] result1_black = NonConformLoadGroupImpl.pattern_NonConformLoadGroup_13_1_matchtggpattern_blackBBBBB(
-				srcConsumer, pair, srcDeliver, srcGroup, asset);
+				asset, srcGroup, pair, srcDeliver, srcConsumer);
 		if (result1_black != null) {
 			return NonConformLoadGroupImpl.pattern_NonConformLoadGroup_13_2_expressionF();
 		} else {
@@ -568,35 +566,34 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_FWD__MATCH_NONCONFORMLOAD_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOADGROUP_METERASSET:
-			return isAppropriate_FWD((Match) arguments.get(0), (NonConformLoad) arguments.get(1),
-					(MeterAssetPhysicalDevicePair) arguments.get(2), (ServiceDeliveryPoint) arguments.get(3),
-					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(4),
-					(MeterAsset) arguments.get(5));
+		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_FWD__MATCH_METERASSET_NONCONFORMLOADGROUP_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOAD:
+			return isAppropriate_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (ServiceDeliveryPoint) arguments.get(4),
+					(NonConformLoad) arguments.get(5));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.NON_CONFORM_LOAD_GROUP___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_NONCONFORMLOAD_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOADGROUP_METERASSET:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (NonConformLoad) arguments.get(1),
-					(MeterAssetPhysicalDevicePair) arguments.get(2), (ServiceDeliveryPoint) arguments.get(3),
-					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(4),
-					(MeterAsset) arguments.get(5));
+		case RulesPackage.NON_CONFORM_LOAD_GROUP___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_METERASSET_NONCONFORMLOADGROUP_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOAD:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (ServiceDeliveryPoint) arguments.get(4),
+					(NonConformLoad) arguments.get(5));
 			return null;
-		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_NONCONFORMLOAD_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOADGROUP_METERASSET:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (NonConformLoad) arguments.get(1),
-					(MeterAssetPhysicalDevicePair) arguments.get(2), (ServiceDeliveryPoint) arguments.get(3),
-					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(4),
-					(MeterAsset) arguments.get(5));
+		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_METERASSET_NONCONFORMLOADGROUP_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOAD:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (ServiceDeliveryPoint) arguments.get(4),
+					(NonConformLoad) arguments.get(5));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_NONCONFORMLOAD_ENERGYCONSUMERTOENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR_NONCONFORMLOAD_SERVICEDELIVERYPOINT_NONCONFORMLOADGROUP_METERASSET:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (NonConformLoad) arguments.get(1),
-					(EnergyConsumerToEnergyConsumer) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
-					(outagePreventionJointarget.NonConformLoad) arguments.get(4),
-					(ServiceDeliveryPoint) arguments.get(5),
-					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(6),
-					(MeterAsset) arguments.get(7));
+		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSET_NONCONFORMLOADGROUP_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOAD_NONCONFORMLOAD_ENERGYCONSUMERTOENERGYCONSUMER:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (MeterAsset) arguments.get(1),
+					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(2),
+					(MeterAssetPhysicalDevicePair) arguments.get(3), (ServiceDeliveryPoint) arguments.get(4),
+					(outagePreventionJointarget.NonConformLoad) arguments.get(5), (NonConformLoad) arguments.get(6),
+					(EnergyConsumerToEnergyConsumer) arguments.get(7));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -607,34 +604,34 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 			return null;
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_FWD_EMOFLON_EDGE_154__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_154((EMoflonEdge) arguments.get(0));
+		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPROPRIATE_FWD_EMOFLON_EDGE_30__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_30((EMoflonEdge) arguments.get(0));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.NON_CONFORM_LOAD_GROUP___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.NON_CONFORM_LOAD_GROUP___CHECK_DEC_FWD__NONCONFORMLOAD_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOADGROUP_METERASSET:
-			return checkDEC_FWD((NonConformLoad) arguments.get(0), (MeterAssetPhysicalDevicePair) arguments.get(1),
-					(ServiceDeliveryPoint) arguments.get(2),
-					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(3),
-					(MeterAsset) arguments.get(4));
+		case RulesPackage.NON_CONFORM_LOAD_GROUP___CHECK_DEC_FWD__METERASSET_NONCONFORMLOADGROUP_METERASSETPHYSICALDEVICEPAIR_SERVICEDELIVERYPOINT_NONCONFORMLOAD:
+			return checkDEC_FWD((MeterAsset) arguments.get(0),
+					(gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) arguments.get(1),
+					(MeterAssetPhysicalDevicePair) arguments.get(2), (ServiceDeliveryPoint) arguments.get(3),
+					(NonConformLoad) arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_1_initialbindings_blackBBBBBBB(NonConformLoadGroup _this,
-			Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
-		return new Object[] { _this, match, srcConsumer, pair, srcDeliver, srcGroup, asset };
+			Match match, MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		return new Object[] { _this, match, asset, srcGroup, pair, srcDeliver, srcConsumer };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_2_SolveCSP_bindingFBBBBBBB(NonConformLoadGroup _this,
-			Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcConsumer, pair, srcDeliver, srcGroup, asset);
+			Match match, MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, asset, srcGroup, pair, srcDeliver, srcConsumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, srcConsumer, pair, srcDeliver, srcGroup, asset };
+			return new Object[] { csp, _this, match, asset, srcGroup, pair, srcDeliver, srcConsumer };
 		}
 		return null;
 	}
@@ -644,11 +641,11 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_2_SolveCSP_bindingAndBlackFBBBBBBB(
-			NonConformLoadGroup _this, Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
+			NonConformLoadGroup _this, Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
 		Object[] result_pattern_NonConformLoadGroup_0_2_SolveCSP_binding = pattern_NonConformLoadGroup_0_2_SolveCSP_bindingFBBBBBBB(
-				_this, match, srcConsumer, pair, srcDeliver, srcGroup, asset);
+				_this, match, asset, srcGroup, pair, srcDeliver, srcConsumer);
 		if (result_pattern_NonConformLoadGroup_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_NonConformLoadGroup_0_2_SolveCSP_binding[0];
 
@@ -656,7 +653,7 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 					csp);
 			if (result_pattern_NonConformLoadGroup_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, srcConsumer, pair, srcDeliver, srcGroup, asset };
+				return new Object[] { csp, _this, match, asset, srcGroup, pair, srcDeliver, srcConsumer };
 			}
 		}
 		return null;
@@ -670,13 +667,13 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_4_collectelementstobetranslated_blackBBBBBB(Match match,
-			NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
-		return new Object[] { match, srcConsumer, pair, srcDeliver, srcGroup, asset };
+			MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		return new Object[] { match, asset, srcGroup, pair, srcDeliver, srcConsumer };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_4_collectelementstobetranslated_greenBBBFF(Match match,
-			NonConformLoad srcConsumer, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup) {
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer) {
 		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getToBeTranslatedNodes().add(srcGroup);
@@ -690,28 +687,28 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		match.getToBeTranslatedEdges().add(srcGroup__srcConsumer____EnergyConsumers);
 		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
 		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
-		return new Object[] { match, srcConsumer, srcGroup, srcConsumer__srcGroup____LoadGroup,
+		return new Object[] { match, srcGroup, srcConsumer, srcConsumer__srcGroup____LoadGroup,
 				srcGroup__srcConsumer____EnergyConsumers };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_5_collectcontextelements_blackBBBBBB(Match match,
-			NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
-		return new Object[] { match, srcConsumer, pair, srcDeliver, srcGroup, asset };
+			MeterAsset asset, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		return new Object[] { match, asset, srcGroup, pair, srcDeliver, srcConsumer };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_0_5_collectcontextelements_greenBBBBBFFFFF(Match match,
-			NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			MeterAsset asset) {
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
+			NonConformLoad srcConsumer) {
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(srcConsumer);
+		match.getContextNodes().add(asset);
 		match.getContextNodes().add(pair);
 		match.getContextNodes().add(srcDeliver);
-		match.getContextNodes().add(asset);
+		match.getContextNodes().add(srcConsumer);
 		String pair__asset____a_name_prime = "a";
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
@@ -738,16 +735,16 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		return new Object[] { match, srcConsumer, pair, srcDeliver, asset, pair__asset____a,
+		return new Object[] { match, asset, pair, srcDeliver, srcConsumer, pair__asset____a,
 				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
 				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints };
 	}
 
 	public static final void pattern_NonConformLoadGroup_0_6_registerobjectstomatch_expressionBBBBBBB(
-			NonConformLoadGroup _this, Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
-		_this.registerObjectsToMatch_FWD(match, srcConsumer, pair, srcDeliver, srcGroup, asset);
+			NonConformLoadGroup _this, Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		_this.registerObjectsToMatch_FWD(match, asset, srcGroup, pair, srcDeliver, srcConsumer);
 
 	}
 
@@ -763,36 +760,36 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 
 	public static final Object[] pattern_NonConformLoadGroup_1_1_performtransformation_bindingFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("srcConsumer");
-		EObject _localVariable_1 = isApplicableMatch.getObject("consumerToConsumer");
+		EObject _localVariable_0 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_1 = isApplicableMatch.getObject("srcGroup");
 		EObject _localVariable_2 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_3 = isApplicableMatch.getObject("trgConsumer");
-		EObject _localVariable_4 = isApplicableMatch.getObject("srcDeliver");
-		EObject _localVariable_5 = isApplicableMatch.getObject("srcGroup");
-		EObject _localVariable_6 = isApplicableMatch.getObject("asset");
-		EObject tmpSrcConsumer = _localVariable_0;
-		EObject tmpConsumerToConsumer = _localVariable_1;
+		EObject _localVariable_3 = isApplicableMatch.getObject("srcDeliver");
+		EObject _localVariable_4 = isApplicableMatch.getObject("trgConsumer");
+		EObject _localVariable_5 = isApplicableMatch.getObject("srcConsumer");
+		EObject _localVariable_6 = isApplicableMatch.getObject("consumerToConsumer");
+		EObject tmpAsset = _localVariable_0;
+		EObject tmpSrcGroup = _localVariable_1;
 		EObject tmpPair = _localVariable_2;
-		EObject tmpTrgConsumer = _localVariable_3;
-		EObject tmpSrcDeliver = _localVariable_4;
-		EObject tmpSrcGroup = _localVariable_5;
-		EObject tmpAsset = _localVariable_6;
-		if (tmpSrcConsumer instanceof NonConformLoad) {
-			NonConformLoad srcConsumer = (NonConformLoad) tmpSrcConsumer;
-			if (tmpConsumerToConsumer instanceof EnergyConsumerToEnergyConsumer) {
-				EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) tmpConsumerToConsumer;
+		EObject tmpSrcDeliver = _localVariable_3;
+		EObject tmpTrgConsumer = _localVariable_4;
+		EObject tmpSrcConsumer = _localVariable_5;
+		EObject tmpConsumerToConsumer = _localVariable_6;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
+			if (tmpSrcGroup instanceof gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) {
+				gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) tmpSrcGroup;
 				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
 					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-					if (tmpTrgConsumer instanceof outagePreventionJointarget.NonConformLoad) {
-						outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) tmpTrgConsumer;
-						if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-							ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-							if (tmpSrcGroup instanceof gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) {
-								gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) tmpSrcGroup;
-								if (tmpAsset instanceof MeterAsset) {
-									MeterAsset asset = (MeterAsset) tmpAsset;
-									return new Object[] { srcConsumer, consumerToConsumer, pair, trgConsumer,
-											srcDeliver, srcGroup, asset, isApplicableMatch };
+					if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+						ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
+						if (tmpTrgConsumer instanceof outagePreventionJointarget.NonConformLoad) {
+							outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) tmpTrgConsumer;
+							if (tmpSrcConsumer instanceof NonConformLoad) {
+								NonConformLoad srcConsumer = (NonConformLoad) tmpSrcConsumer;
+								if (tmpConsumerToConsumer instanceof EnergyConsumerToEnergyConsumer) {
+									EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) tmpConsumerToConsumer;
+									return new Object[] { asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer,
+											consumerToConsumer, isApplicableMatch };
 								}
 							}
 						}
@@ -803,15 +800,15 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		return null;
 	}
 
-	public static final Object[] pattern_NonConformLoadGroup_1_1_performtransformation_blackBBBBBBBFBB(
-			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.NonConformLoad trgConsumer,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset, NonConformLoadGroup _this, IsApplicableMatch isApplicableMatch) {
+	public static final Object[] pattern_NonConformLoadGroup_1_1_performtransformation_blackBBBBBBBFBB(MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.NonConformLoad trgConsumer,
+			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer, NonConformLoadGroup _this,
+			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset,
+				return new Object[] { asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer, consumerToConsumer,
 						csp, _this, isApplicableMatch };
 			}
 		}
@@ -823,21 +820,21 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		Object[] result_pattern_NonConformLoadGroup_1_1_performtransformation_binding = pattern_NonConformLoadGroup_1_1_performtransformation_bindingFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_NonConformLoadGroup_1_1_performtransformation_binding != null) {
-			NonConformLoad srcConsumer = (NonConformLoad) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[0];
-			EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[1];
+			MeterAsset asset = (MeterAsset) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[0];
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[1];
 			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[2];
-			outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[3];
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[4];
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[5];
-			MeterAsset asset = (MeterAsset) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[6];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[3];
+			outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[4];
+			NonConformLoad srcConsumer = (NonConformLoad) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[5];
+			EnergyConsumerToEnergyConsumer consumerToConsumer = (EnergyConsumerToEnergyConsumer) result_pattern_NonConformLoadGroup_1_1_performtransformation_binding[6];
 
 			Object[] result_pattern_NonConformLoadGroup_1_1_performtransformation_black = pattern_NonConformLoadGroup_1_1_performtransformation_blackBBBBBBBFBB(
-					srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset, _this,
+					asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer, consumerToConsumer, _this,
 					isApplicableMatch);
 			if (result_pattern_NonConformLoadGroup_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_NonConformLoadGroup_1_1_performtransformation_black[7];
 
-				return new Object[] { srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset,
+				return new Object[] { asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer, consumerToConsumer,
 						csp, _this, isApplicableMatch };
 			}
 		}
@@ -845,103 +842,104 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_1_1_performtransformation_greenBBFF(
-			outagePreventionJointarget.NonConformLoad trgConsumer,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup) {
-		outagePreventionJointarget.NonConformLoadGroup trgGroup = OutagePreventionJointargetFactory.eINSTANCE
-				.createNonConformLoadGroup();
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
+			outagePreventionJointarget.NonConformLoad trgConsumer) {
 		NonConformLoadGroupNonToConformLoadGroup groupToGroup = Task2Factory.eINSTANCE
 				.createNonConformLoadGroupNonToConformLoadGroup();
-		trgConsumer.setLoadGroup(trgGroup);
+		outagePreventionJointarget.NonConformLoadGroup trgGroup = OutagePreventionJointargetFactory.eINSTANCE
+				.createNonConformLoadGroup();
 		groupToGroup.setSource(srcGroup);
+		trgConsumer.setLoadGroup(trgGroup);
 		groupToGroup.setTarget(trgGroup);
-		return new Object[] { trgConsumer, srcGroup, trgGroup, groupToGroup };
+		return new Object[] { srcGroup, trgConsumer, groupToGroup, trgGroup };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_1_2_collecttranslatedelements_blackBBB(
 			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			outagePreventionJointarget.NonConformLoadGroup trgGroup,
-			NonConformLoadGroupNonToConformLoadGroup groupToGroup) {
-		return new Object[] { srcGroup, trgGroup, groupToGroup };
+			NonConformLoadGroupNonToConformLoadGroup groupToGroup,
+			outagePreventionJointarget.NonConformLoadGroup trgGroup) {
+		return new Object[] { srcGroup, groupToGroup, trgGroup };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_1_2_collecttranslatedelements_greenFBBB(
 			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			outagePreventionJointarget.NonConformLoadGroup trgGroup,
-			NonConformLoadGroupNonToConformLoadGroup groupToGroup) {
+			NonConformLoadGroupNonToConformLoadGroup groupToGroup,
+			outagePreventionJointarget.NonConformLoadGroup trgGroup) {
 		PerformRuleResult ruleresult = RuntimeFactory.eINSTANCE.createPerformRuleResult();
 		ruleresult.getTranslatedElements().add(srcGroup);
-		ruleresult.getCreatedElements().add(trgGroup);
 		ruleresult.getCreatedLinkElements().add(groupToGroup);
-		return new Object[] { ruleresult, srcGroup, trgGroup, groupToGroup };
+		ruleresult.getCreatedElements().add(trgGroup);
+		return new Object[] { ruleresult, srcGroup, groupToGroup, trgGroup };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_1_3_bookkeepingforedges_blackBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject srcConsumer, EObject consumerToConsumer, EObject pair,
-			EObject trgConsumer, EObject srcDeliver, EObject srcGroup, EObject asset, EObject trgGroup,
-			EObject groupToGroup) {
-		if (!srcConsumer.equals(trgConsumer)) {
-			if (!srcConsumer.equals(srcDeliver)) {
-				if (!srcConsumer.equals(srcGroup)) {
-					if (!srcConsumer.equals(trgGroup)) {
-						if (!consumerToConsumer.equals(srcConsumer)) {
-							if (!consumerToConsumer.equals(pair)) {
-								if (!consumerToConsumer.equals(trgConsumer)) {
-									if (!consumerToConsumer.equals(srcDeliver)) {
-										if (!consumerToConsumer.equals(srcGroup)) {
-											if (!consumerToConsumer.equals(trgGroup)) {
-												if (!consumerToConsumer.equals(groupToGroup)) {
-													if (!pair.equals(srcConsumer)) {
+			PerformRuleResult ruleresult, EObject asset, EObject srcGroup, EObject pair, EObject srcDeliver,
+			EObject trgConsumer, EObject groupToGroup, EObject srcConsumer, EObject consumerToConsumer,
+			EObject trgGroup) {
+		if (!asset.equals(srcGroup)) {
+			if (!asset.equals(pair)) {
+				if (!asset.equals(srcDeliver)) {
+					if (!asset.equals(trgConsumer)) {
+						if (!asset.equals(groupToGroup)) {
+							if (!asset.equals(srcConsumer)) {
+								if (!asset.equals(consumerToConsumer)) {
+									if (!asset.equals(trgGroup)) {
+										if (!srcGroup.equals(trgConsumer)) {
+											if (!srcGroup.equals(trgGroup)) {
+												if (!pair.equals(srcGroup)) {
+													if (!pair.equals(srcDeliver)) {
 														if (!pair.equals(trgConsumer)) {
-															if (!pair.equals(srcDeliver)) {
-																if (!pair.equals(srcGroup)) {
-																	if (!pair.equals(trgGroup)) {
-																		if (!trgConsumer.equals(trgGroup)) {
-																			if (!srcDeliver.equals(trgConsumer)) {
-																				if (!srcDeliver.equals(srcGroup)) {
-																					if (!srcDeliver.equals(trgGroup)) {
-																						if (!srcGroup
-																								.equals(trgConsumer)) {
-																							if (!srcGroup
-																									.equals(trgGroup)) {
-																								if (!asset.equals(
-																										srcConsumer)) {
-																									if (!asset.equals(
-																											consumerToConsumer)) {
-																										if (!asset
-																												.equals(pair)) {
-																											if (!asset
-																													.equals(trgConsumer)) {
-																												if (!asset
+															if (!pair.equals(srcConsumer)) {
+																if (!pair.equals(trgGroup)) {
+																	if (!srcDeliver.equals(srcGroup)) {
+																		if (!srcDeliver.equals(trgConsumer)) {
+																			if (!srcDeliver.equals(trgGroup)) {
+																				if (!trgConsumer.equals(trgGroup)) {
+																					if (!groupToGroup
+																							.equals(srcGroup)) {
+																						if (!groupToGroup
+																								.equals(pair)) {
+																							if (!groupToGroup.equals(
+																									srcDeliver)) {
+																								if (!groupToGroup
+																										.equals(trgConsumer)) {
+																									if (!groupToGroup
+																											.equals(srcConsumer)) {
+																										if (!groupToGroup
+																												.equals(trgGroup)) {
+																											if (!srcConsumer
+																													.equals(srcGroup)) {
+																												if (!srcConsumer
 																														.equals(srcDeliver)) {
-																													if (!asset
-																															.equals(srcGroup)) {
-																														if (!asset
+																													if (!srcConsumer
+																															.equals(trgConsumer)) {
+																														if (!srcConsumer
 																																.equals(trgGroup)) {
-																															if (!asset
-																																	.equals(groupToGroup)) {
-																																if (!groupToGroup
-																																		.equals(srcConsumer)) {
-																																	if (!groupToGroup
-																																			.equals(pair)) {
-																																		if (!groupToGroup
+																															if (!consumerToConsumer
+																																	.equals(srcGroup)) {
+																																if (!consumerToConsumer
+																																		.equals(pair)) {
+																																	if (!consumerToConsumer
+																																			.equals(srcDeliver)) {
+																																		if (!consumerToConsumer
 																																				.equals(trgConsumer)) {
-																																			if (!groupToGroup
-																																					.equals(srcDeliver)) {
-																																				if (!groupToGroup
-																																						.equals(srcGroup)) {
-																																					if (!groupToGroup
+																																			if (!consumerToConsumer
+																																					.equals(groupToGroup)) {
+																																				if (!consumerToConsumer
+																																						.equals(srcConsumer)) {
+																																					if (!consumerToConsumer
 																																							.equals(trgGroup)) {
 																																						return new Object[] {
 																																								ruleresult,
+																																								asset,
+																																								srcGroup,
+																																								pair,
+																																								srcDeliver,
+																																								trgConsumer,
+																																								groupToGroup,
 																																								srcConsumer,
 																																								consumerToConsumer,
-																																								pair,
-																																								trgConsumer,
-																																								srcDeliver,
-																																								srcGroup,
-																																								asset,
-																																								trgGroup,
-																																								groupToGroup };
+																																								trgGroup };
 																																					}
 																																				}
 																																			}
@@ -982,19 +980,22 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_1_3_bookkeepingforedges_greenBBBBBBFFFFF(
-			PerformRuleResult ruleresult, EObject srcConsumer, EObject trgConsumer, EObject srcGroup, EObject trgGroup,
-			EObject groupToGroup) {
+			PerformRuleResult ruleresult, EObject srcGroup, EObject trgConsumer, EObject groupToGroup,
+			EObject srcConsumer, EObject trgGroup) {
+		EMoflonEdge groupToGroup__srcGroup____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge trgConsumer__trgGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge groupToGroup__srcGroup____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge groupToGroup__trgGroup____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "NonConformLoadGroup";
+		String groupToGroup__srcGroup____source_name_prime = "source";
 		String trgConsumer__trgGroup____LoadGroup_name_prime = "LoadGroup";
 		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
 		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
-		String groupToGroup__srcGroup____source_name_prime = "source";
 		String groupToGroup__trgGroup____target_name_prime = "target";
+		groupToGroup__srcGroup____source.setSrc(groupToGroup);
+		groupToGroup__srcGroup____source.setTrg(srcGroup);
+		ruleresult.getCreatedEdges().add(groupToGroup__srcGroup____source);
 		trgConsumer__trgGroup____LoadGroup.setSrc(trgConsumer);
 		trgConsumer__trgGroup____LoadGroup.setTrg(trgGroup);
 		ruleresult.getCreatedEdges().add(trgConsumer__trgGroup____LoadGroup);
@@ -1004,30 +1005,27 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		srcGroup__srcConsumer____EnergyConsumers.setSrc(srcGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setTrg(srcConsumer);
 		ruleresult.getTranslatedEdges().add(srcGroup__srcConsumer____EnergyConsumers);
-		groupToGroup__srcGroup____source.setSrc(groupToGroup);
-		groupToGroup__srcGroup____source.setTrg(srcGroup);
-		ruleresult.getCreatedEdges().add(groupToGroup__srcGroup____source);
 		groupToGroup__trgGroup____target.setSrc(groupToGroup);
 		groupToGroup__trgGroup____target.setTrg(trgGroup);
 		ruleresult.getCreatedEdges().add(groupToGroup__trgGroup____target);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
+		groupToGroup__srcGroup____source.setName(groupToGroup__srcGroup____source_name_prime);
 		trgConsumer__trgGroup____LoadGroup.setName(trgConsumer__trgGroup____LoadGroup_name_prime);
 		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
 		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
-		groupToGroup__srcGroup____source.setName(groupToGroup__srcGroup____source_name_prime);
 		groupToGroup__trgGroup____target.setName(groupToGroup__trgGroup____target_name_prime);
-		return new Object[] { ruleresult, srcConsumer, trgConsumer, srcGroup, trgGroup, groupToGroup,
-				trgConsumer__trgGroup____LoadGroup, srcConsumer__srcGroup____LoadGroup,
-				srcGroup__srcConsumer____EnergyConsumers, groupToGroup__srcGroup____source,
+		return new Object[] { ruleresult, srcGroup, trgConsumer, groupToGroup, srcConsumer, trgGroup,
+				groupToGroup__srcGroup____source, trgConsumer__trgGroup____LoadGroup,
+				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers,
 				groupToGroup__trgGroup____target };
 	}
 
 	public static final void pattern_NonConformLoadGroup_1_5_registerobjects_expressionBBBBBBBBBBB(
-			NonConformLoadGroup _this, PerformRuleResult ruleresult, EObject srcConsumer, EObject consumerToConsumer,
-			EObject pair, EObject trgConsumer, EObject srcDeliver, EObject srcGroup, EObject asset, EObject trgGroup,
-			EObject groupToGroup) {
-		_this.registerObjects_FWD(ruleresult, srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup,
-				asset, trgGroup, groupToGroup);
+			NonConformLoadGroup _this, PerformRuleResult ruleresult, EObject asset, EObject srcGroup, EObject pair,
+			EObject srcDeliver, EObject trgConsumer, EObject groupToGroup, EObject srcConsumer,
+			EObject consumerToConsumer, EObject trgGroup) {
+		_this.registerObjects_FWD(ruleresult, asset, srcGroup, pair, srcDeliver, trgConsumer, groupToGroup, srcConsumer,
+				consumerToConsumer, trgGroup);
 
 	}
 
@@ -1088,27 +1086,27 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_2_2_corematch_bindingFFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("srcConsumer");
-		EObject _localVariable_1 = match.getObject("pair");
-		EObject _localVariable_2 = match.getObject("srcDeliver");
-		EObject _localVariable_3 = match.getObject("srcGroup");
-		EObject _localVariable_4 = match.getObject("asset");
-		EObject tmpSrcConsumer = _localVariable_0;
-		EObject tmpPair = _localVariable_1;
-		EObject tmpSrcDeliver = _localVariable_2;
-		EObject tmpSrcGroup = _localVariable_3;
-		EObject tmpAsset = _localVariable_4;
-		if (tmpSrcConsumer instanceof NonConformLoad) {
-			NonConformLoad srcConsumer = (NonConformLoad) tmpSrcConsumer;
-			if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-				MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-				if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-					ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-					if (tmpSrcGroup instanceof gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) {
-						gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) tmpSrcGroup;
-						if (tmpAsset instanceof MeterAsset) {
-							MeterAsset asset = (MeterAsset) tmpAsset;
-							return new Object[] { srcConsumer, pair, srcDeliver, srcGroup, asset, match };
+		EObject _localVariable_0 = match.getObject("asset");
+		EObject _localVariable_1 = match.getObject("srcGroup");
+		EObject _localVariable_2 = match.getObject("pair");
+		EObject _localVariable_3 = match.getObject("srcDeliver");
+		EObject _localVariable_4 = match.getObject("srcConsumer");
+		EObject tmpAsset = _localVariable_0;
+		EObject tmpSrcGroup = _localVariable_1;
+		EObject tmpPair = _localVariable_2;
+		EObject tmpSrcDeliver = _localVariable_3;
+		EObject tmpSrcConsumer = _localVariable_4;
+		if (tmpAsset instanceof MeterAsset) {
+			MeterAsset asset = (MeterAsset) tmpAsset;
+			if (tmpSrcGroup instanceof gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) {
+				gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup = (gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup) tmpSrcGroup;
+				if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+					MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+					if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+						ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
+						if (tmpSrcConsumer instanceof NonConformLoad) {
+							NonConformLoad srcConsumer = (NonConformLoad) tmpSrcConsumer;
+							return new Object[] { asset, srcGroup, pair, srcDeliver, srcConsumer, match };
 						}
 					}
 				}
@@ -1117,37 +1115,36 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_NonConformLoadGroup_2_2_corematch_blackBFBFBBBB(
-			NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset, Match match) {
+	public static final Iterable<Object[]> pattern_NonConformLoadGroup_2_2_corematch_blackBBBBFBFB(MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (EnergyConsumerToEnergyConsumer consumerToConsumer : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcConsumer, EnergyConsumerToEnergyConsumer.class, "source")) {
 			EnergyConsumer tmpTrgConsumer = consumerToConsumer.getTarget();
 			if (tmpTrgConsumer instanceof outagePreventionJointarget.NonConformLoad) {
 				outagePreventionJointarget.NonConformLoad trgConsumer = (outagePreventionJointarget.NonConformLoad) tmpTrgConsumer;
-				_result.add(new Object[] { srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup,
-						asset, match });
+				_result.add(new Object[] { asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer,
+						consumerToConsumer, match });
 			}
 
 		}
 		return _result;
 	}
 
-	public static final Iterable<Object[]> pattern_NonConformLoadGroup_2_3_findcontext_blackBBBBBBB(
-			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.NonConformLoad trgConsumer,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
+	public static final Iterable<Object[]> pattern_NonConformLoadGroup_2_3_findcontext_blackBBBBBBB(MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.NonConformLoad trgConsumer,
+			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		if (asset.equals(pair.getA())) {
-			if (trgConsumer.equals(consumerToConsumer.getTarget())) {
-				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-					if (srcConsumer.equals(consumerToConsumer.getSource())) {
-						if (srcGroup.equals(srcConsumer.getLoadGroup())) {
-							if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
-								_result.add(new Object[] { srcConsumer, consumerToConsumer, pair, trgConsumer,
-										srcDeliver, srcGroup, asset });
+			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+				if (srcGroup.equals(srcConsumer.getLoadGroup())) {
+					if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+						if (trgConsumer.equals(consumerToConsumer.getTarget())) {
+							if (srcConsumer.equals(consumerToConsumer.getSource())) {
+								_result.add(new Object[] { asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer,
+										consumerToConsumer });
 							}
 						}
 					}
@@ -1157,52 +1154,45 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		return _result;
 	}
 
-	public static final Object[] pattern_NonConformLoadGroup_2_3_findcontext_greenBBBBBBBFFFFFFFFFF(
-			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer,
-			MeterAssetPhysicalDevicePair pair, outagePreventionJointarget.NonConformLoad trgConsumer,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
+	public static final Object[] pattern_NonConformLoadGroup_2_3_findcontext_greenBBBBBBBFFFFFFFFFF(MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.NonConformLoad trgConsumer,
+			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge consumerToConsumer__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge consumerToConsumer__srcConsumer____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge consumerToConsumer__trgConsumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge consumerToConsumer__srcConsumer____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String pair__asset____a_name_prime = "a";
-		String consumerToConsumer__trgConsumer____target_name_prime = "target";
 		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
 		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
-		String consumerToConsumer__srcConsumer____source_name_prime = "source";
 		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
 		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
 		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
 		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
+		String consumerToConsumer__trgConsumer____target_name_prime = "target";
+		String consumerToConsumer__srcConsumer____source_name_prime = "source";
+		isApplicableMatch.getAllContextElements().add(asset);
+		isApplicableMatch.getAllContextElements().add(srcGroup);
+		isApplicableMatch.getAllContextElements().add(pair);
+		isApplicableMatch.getAllContextElements().add(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(trgConsumer);
 		isApplicableMatch.getAllContextElements().add(srcConsumer);
 		isApplicableMatch.getAllContextElements().add(consumerToConsumer);
-		isApplicableMatch.getAllContextElements().add(pair);
-		isApplicableMatch.getAllContextElements().add(trgConsumer);
-		isApplicableMatch.getAllContextElements().add(srcDeliver);
-		isApplicableMatch.getAllContextElements().add(srcGroup);
-		isApplicableMatch.getAllContextElements().add(asset);
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		consumerToConsumer__trgConsumer____target.setSrc(consumerToConsumer);
-		consumerToConsumer__trgConsumer____target.setTrg(trgConsumer);
-		isApplicableMatch.getAllContextElements().add(consumerToConsumer__trgConsumer____target);
 		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
 		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
 		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
 		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
-		consumerToConsumer__srcConsumer____source.setSrc(consumerToConsumer);
-		consumerToConsumer__srcConsumer____source.setTrg(srcConsumer);
-		isApplicableMatch.getAllContextElements().add(consumerToConsumer__srcConsumer____source);
 		srcConsumer__srcGroup____LoadGroup.setSrc(srcConsumer);
 		srcConsumer__srcGroup____LoadGroup.setTrg(srcGroup);
 		isApplicableMatch.getAllContextElements().add(srcConsumer__srcGroup____LoadGroup);
@@ -1215,35 +1205,41 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
+		consumerToConsumer__trgConsumer____target.setSrc(consumerToConsumer);
+		consumerToConsumer__trgConsumer____target.setTrg(trgConsumer);
+		isApplicableMatch.getAllContextElements().add(consumerToConsumer__trgConsumer____target);
+		consumerToConsumer__srcConsumer____source.setSrc(consumerToConsumer);
+		consumerToConsumer__srcConsumer____source.setTrg(srcConsumer);
+		isApplicableMatch.getAllContextElements().add(consumerToConsumer__srcConsumer____source);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		consumerToConsumer__trgConsumer____target.setName(consumerToConsumer__trgConsumer____target_name_prime);
 		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
 		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
-		consumerToConsumer__srcConsumer____source.setName(consumerToConsumer__srcConsumer____source_name_prime);
 		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
 		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
-		return new Object[] { srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup, asset,
-				isApplicableMatch, pair__asset____a, consumerToConsumer__trgConsumer____target,
-				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets,
-				consumerToConsumer__srcConsumer____source, srcConsumer__srcGroup____LoadGroup,
+		consumerToConsumer__trgConsumer____target.setName(consumerToConsumer__trgConsumer____target_name_prime);
+		consumerToConsumer__srcConsumer____source.setName(consumerToConsumer__srcConsumer____source_name_prime);
+		return new Object[] { asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer, consumerToConsumer,
+				isApplicableMatch, pair__asset____a, asset__srcDeliver____ServiceDeliveryPoint,
+				srcDeliver__asset____EndDeviceAssets, srcConsumer__srcGroup____LoadGroup,
 				srcGroup__srcConsumer____EnergyConsumers, srcDeliver__srcConsumer____EnergyConsumer,
-				srcConsumer__srcDeliver____ServiceDeliveryPoints };
+				srcConsumer__srcDeliver____ServiceDeliveryPoints, consumerToConsumer__trgConsumer____target,
+				consumerToConsumer__srcConsumer____source };
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_2_4_solveCSP_bindingFBBBBBBBBB(NonConformLoadGroup _this,
-			IsApplicableMatch isApplicableMatch, NonConformLoad srcConsumer,
-			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAssetPhysicalDevicePair pair,
-			outagePreventionJointarget.NonConformLoad trgConsumer, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcConsumer, consumerToConsumer, pair,
-				trgConsumer, srcDeliver, srcGroup, asset);
+			IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.NonConformLoad trgConsumer,
+			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, asset, srcGroup, pair, srcDeliver,
+				trgConsumer, srcConsumer, consumerToConsumer);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, srcConsumer, consumerToConsumer, pair, trgConsumer,
-					srcDeliver, srcGroup, asset };
+			return new Object[] { csp, _this, isApplicableMatch, asset, srcGroup, pair, srcDeliver, trgConsumer,
+					srcConsumer, consumerToConsumer };
 		}
 		return null;
 	}
@@ -1253,13 +1249,13 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final Object[] pattern_NonConformLoadGroup_2_4_solveCSP_bindingAndBlackFBBBBBBBBB(
-			NonConformLoadGroup _this, IsApplicableMatch isApplicableMatch, NonConformLoad srcConsumer,
-			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAssetPhysicalDevicePair pair,
-			outagePreventionJointarget.NonConformLoad trgConsumer, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
+			NonConformLoadGroup _this, IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, outagePreventionJointarget.NonConformLoad trgConsumer,
+			NonConformLoad srcConsumer, EnergyConsumerToEnergyConsumer consumerToConsumer) {
 		Object[] result_pattern_NonConformLoadGroup_2_4_solveCSP_binding = pattern_NonConformLoadGroup_2_4_solveCSP_bindingFBBBBBBBBB(
-				_this, isApplicableMatch, srcConsumer, consumerToConsumer, pair, trgConsumer, srcDeliver, srcGroup,
-				asset);
+				_this, isApplicableMatch, asset, srcGroup, pair, srcDeliver, trgConsumer, srcConsumer,
+				consumerToConsumer);
 		if (result_pattern_NonConformLoadGroup_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_NonConformLoadGroup_2_4_solveCSP_binding[0];
 
@@ -1267,8 +1263,8 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 					csp);
 			if (result_pattern_NonConformLoadGroup_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, srcConsumer, consumerToConsumer, pair, trgConsumer,
-						srcDeliver, srcGroup, asset };
+				return new Object[] { csp, _this, isApplicableMatch, asset, srcGroup, pair, srcDeliver, trgConsumer,
+						srcConsumer, consumerToConsumer };
 			}
 		}
 		return null;
@@ -1358,8 +1354,8 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 
 	public static final Object[] pattern_NonConformLoadGroup_10_2_testcorematchandDECs_black_nac_0BB(
 			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer) {
-		for (NonConformLoad __DEC_srcGroup_LoadGroup_537107 : srcGroup.getEnergyConsumers()) {
-			if (!srcConsumer.equals(__DEC_srcGroup_LoadGroup_537107)) {
+		for (NonConformLoad __DEC_srcGroup_LoadGroup_961504 : srcGroup.getEnergyConsumers()) {
+			if (!srcConsumer.equals(__DEC_srcGroup_LoadGroup_961504)) {
 				return new Object[] { srcGroup, srcConsumer };
 			}
 		}
@@ -1385,7 +1381,7 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 									for (MeterAssetPhysicalDevicePair pair : org.moflon.core.utilities.eMoflonEMFUtil
 											.getOppositeReferenceTyped(asset, MeterAssetPhysicalDevicePair.class,
 													"a")) {
-										_result.add(new Object[] { srcConsumer, pair, srcDeliver, srcGroup, asset,
+										_result.add(new Object[] { asset, srcGroup, pair, srcDeliver, srcConsumer,
 												_edge_LoadGroup });
 									}
 								}
@@ -1410,10 +1406,10 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 	}
 
 	public static final boolean pattern_NonConformLoadGroup_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBB(
-			NonConformLoadGroup _this, Match match, NonConformLoad srcConsumer, MeterAssetPhysicalDevicePair pair,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup,
-			MeterAsset asset) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcConsumer, pair, srcDeliver, srcGroup, asset);
+			NonConformLoadGroup _this, Match match, MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, asset, srcGroup, pair, srcDeliver, srcConsumer);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1448,24 +1444,24 @@ public class NonConformLoadGroupImpl extends AbstractRuleImpl implements NonConf
 
 	public static final Object[] pattern_NonConformLoadGroup_13_1_matchtggpattern_black_nac_0BB(
 			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, NonConformLoad srcConsumer) {
-		for (NonConformLoad __DEC_srcGroup_LoadGroup_576402 : srcGroup.getEnergyConsumers()) {
-			if (!srcConsumer.equals(__DEC_srcGroup_LoadGroup_576402)) {
+		for (NonConformLoad __DEC_srcGroup_LoadGroup_963093 : srcGroup.getEnergyConsumers()) {
+			if (!srcConsumer.equals(__DEC_srcGroup_LoadGroup_963093)) {
 				return new Object[] { srcGroup, srcConsumer };
 			}
 		}
 		return null;
 	}
 
-	public static final Object[] pattern_NonConformLoadGroup_13_1_matchtggpattern_blackBBBBB(NonConformLoad srcConsumer,
-			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAsset asset) {
+	public static final Object[] pattern_NonConformLoadGroup_13_1_matchtggpattern_blackBBBBB(MeterAsset asset,
+			gluemodel.CIM.IEC61970.LoadModel.NonConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, NonConformLoad srcConsumer) {
 		if (asset.equals(pair.getA())) {
 			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
 				if (srcGroup.equals(srcConsumer.getLoadGroup())) {
 					if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
 						if (pattern_NonConformLoadGroup_13_1_matchtggpattern_black_nac_0BB(srcGroup,
 								srcConsumer) == null) {
-							return new Object[] { srcConsumer, pair, srcDeliver, srcGroup, asset };
+							return new Object[] { asset, srcGroup, pair, srcDeliver, srcConsumer };
 						}
 					}
 				}

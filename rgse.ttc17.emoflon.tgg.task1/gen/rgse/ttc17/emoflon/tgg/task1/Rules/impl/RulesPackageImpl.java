@@ -34,28 +34,14 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass energyConsumerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass energyConsumerWithIDNonConfLoadEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass positionPointLinkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass locationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass positionPointEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +55,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass zoneEClass = null;
+	private EClass positionPointLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -83,6 +69,20 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass workLocationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass energyConsumerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass energyConsumerWithIDConfLoadEClass = null;
 
 	/**
@@ -90,7 +90,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass positionPointEClass = null;
+	private EClass energyConsumerWithIDNonConfLoadEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass workLocationEClass = null;
+	private EClass zoneEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -197,427 +197,10 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEnergyConsumer() {
-		if (energyConsumerEClass == null) {
-			energyConsumerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(0);
-		}
-		return energyConsumerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsAppropriate_FWD__Match_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues() {
-		return getEnergyConsumer().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__Perform_FWD__IsApplicableMatch() {
-		return getEnergyConsumer().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsApplicable_FWD__Match() {
-		return getEnergyConsumer().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__RegisterObjectsToMatch_FWD__Match_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues() {
-		return getEnergyConsumer().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsAppropriate_solveCsp_FWD__Match_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues() {
-		return getEnergyConsumer().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsAppropriate_checkCsp_FWD__CSP() {
-		return getEnergyConsumer().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsApplicable_solveCsp_FWD__IsApplicableMatch_PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues() {
-		return getEnergyConsumer().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsApplicable_checkCsp_FWD__CSP() {
-		return getEnergyConsumer().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getEnergyConsumer().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__CheckTypes_FWD__Match() {
-		return getEnergyConsumer().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsAppropriate_FWD_EMoflonEdge_131__EMoflonEdge() {
-		return getEnergyConsumer().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__CheckAttributes_FWD__TripleMatch() {
-		return getEnergyConsumer().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__IsApplicable_CC__Match_Match() {
-		return getEnergyConsumer().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumer__CheckDEC_FWD__PhysicalDevice_ServiceDeliveryPoint_MeterAsset_MeterAssetPhysicalDevicePair_AutoConnectObject_ElectricityValues() {
-		return getEnergyConsumer().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEnergyConsumerWithIDNonConfLoad() {
-		if (energyConsumerWithIDNonConfLoadEClass == null) {
-			energyConsumerWithIDNonConfLoadEClass = (EClass) EPackage.Registry.INSTANCE
-					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(1);
-		}
-		return energyConsumerWithIDNonConfLoadEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__Perform_FWD__IsApplicableMatch() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_FWD__Match() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjectsToMatch_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_solveCsp_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_checkCsp_FWD__CSP() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_solveCsp_FWD__IsApplicableMatch_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_checkCsp_FWD__CSP() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__CheckTypes_FWD__Match() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD_EMoflonEdge_132__EMoflonEdge() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__CheckAttributes_FWD__TripleMatch() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_CC__Match_Match() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getEnergyConsumerWithIDNonConfLoad__CheckDEC_FWD__SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
-		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPositionPointLink() {
-		if (positionPointLinkEClass == null) {
-			positionPointLinkEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(2);
-		}
-		return positionPointLinkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsAppropriate_FWD__Match_Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair() {
-		return getPositionPointLink().getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__Perform_FWD__IsApplicableMatch() {
-		return getPositionPointLink().getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsApplicable_FWD__Match() {
-		return getPositionPointLink().getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__RegisterObjectsToMatch_FWD__Match_Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair() {
-		return getPositionPointLink().getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsAppropriate_solveCsp_FWD__Match_Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair() {
-		return getPositionPointLink().getEOperations().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsAppropriate_checkCsp_FWD__CSP() {
-		return getPositionPointLink().getEOperations().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_LocationToLocation_Location_PositionPointToPositionPoint_MeterAsset_Location_PositionPoint_PositionPoint_MeterAssetPhysicalDevicePair() {
-		return getPositionPointLink().getEOperations().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsApplicable_checkCsp_FWD__CSP() {
-		return getPositionPointLink().getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getPositionPointLink().getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__CheckTypes_FWD__Match() {
-		return getPositionPointLink().getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsAppropriate_FWD_EMoflonEdge_133__EMoflonEdge() {
-		return getPositionPointLink().getEOperations().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__CheckAttributes_FWD__TripleMatch() {
-		return getPositionPointLink().getEOperations().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__IsApplicable_CC__Match_Match() {
-		return getPositionPointLink().getEOperations().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getPositionPointLink__CheckDEC_FWD__Location_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair() {
-		return getPositionPointLink().getEOperations().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getLocation() {
 		if (locationEClass == null) {
 			locationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI).getEClassifiers()
-					.get(3);
+					.get(0);
 		}
 		return locationEClass;
 	}
@@ -627,7 +210,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocation__IsAppropriate_FWD__Match_MeterAssetPhysicalDevicePair_Location_MeterAsset() {
+	public EOperation getLocation__IsAppropriate_FWD__Match_Location_MeterAssetPhysicalDevicePair_MeterAsset() {
 		return getLocation().getEOperations().get(0);
 	}
 
@@ -654,7 +237,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocation__RegisterObjectsToMatch_FWD__Match_MeterAssetPhysicalDevicePair_Location_MeterAsset() {
+	public EOperation getLocation__RegisterObjectsToMatch_FWD__Match_Location_MeterAssetPhysicalDevicePair_MeterAsset() {
 		return getLocation().getEOperations().get(3);
 	}
 
@@ -663,7 +246,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocation__IsAppropriate_solveCsp_FWD__Match_MeterAssetPhysicalDevicePair_Location_MeterAsset() {
+	public EOperation getLocation__IsAppropriate_solveCsp_FWD__Match_Location_MeterAssetPhysicalDevicePair_MeterAsset() {
 		return getLocation().getEOperations().get(4);
 	}
 
@@ -681,7 +264,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetPhysicalDevicePair_Location_MeterAsset_EnergyConsumer_MeterAssetToEnergyConsumer() {
+	public EOperation getLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_EnergyConsumer_Location_MeterAssetToEnergyConsumer_MeterAssetPhysicalDevicePair_MeterAsset() {
 		return getLocation().getEOperations().get(6);
 	}
 
@@ -717,7 +300,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocation__IsAppropriate_FWD_EMoflonEdge_134__EMoflonEdge() {
+	public EOperation getLocation__IsAppropriate_FWD_EMoflonEdge_0__EMoflonEdge() {
 		return getLocation().getEOperations().get(10);
 	}
 
@@ -744,8 +327,147 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocation__CheckDEC_FWD__MeterAssetPhysicalDevicePair_Location_MeterAsset() {
+	public EOperation getLocation__CheckDEC_FWD__Location_MeterAssetPhysicalDevicePair_MeterAsset() {
 		return getLocation().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPositionPoint() {
+		if (positionPointEClass == null) {
+			positionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(1);
+		}
+		return positionPointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsAppropriate_FWD__Match_PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
+		return getPositionPoint().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__Perform_FWD__IsApplicableMatch() {
+		return getPositionPoint().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsApplicable_FWD__Match() {
+		return getPositionPoint().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__RegisterObjectsToMatch_FWD__Match_PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
+		return getPositionPoint().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsAppropriate_solveCsp_FWD__Match_PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
+		return getPositionPoint().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsAppropriate_checkCsp_FWD__CSP() {
+		return getPositionPoint().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsApplicable_solveCsp_FWD__IsApplicableMatch_PositionPoint_Location_MeterAssetPhysicalDevicePair_MeterAsset_LocationToLocation_Location() {
+		return getPositionPoint().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsApplicable_checkCsp_FWD__CSP() {
+		return getPositionPoint().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getPositionPoint().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__CheckTypes_FWD__Match() {
+		return getPositionPoint().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsAppropriate_FWD_EMoflonEdge_1__EMoflonEdge() {
+		return getPositionPoint().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__CheckAttributes_FWD__TripleMatch() {
+		return getPositionPoint().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__IsApplicable_CC__Match_Match() {
+		return getPositionPoint().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getPositionPoint__CheckDEC_FWD__PositionPoint_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
+		return getPositionPoint().getEOperations().get(13);
 	}
 
 	/**
@@ -756,7 +478,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getEnergyConsumerWithID() {
 		if (energyConsumerWithIDEClass == null) {
 			energyConsumerWithIDEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(4);
+					.getEClassifiers().get(2);
 		}
 		return energyConsumerWithIDEClass;
 	}
@@ -856,7 +578,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnergyConsumerWithID__IsAppropriate_FWD_EMoflonEdge_135__EMoflonEdge() {
+	public EOperation getEnergyConsumerWithID__IsAppropriate_FWD_EMoflonEdge_2__EMoflonEdge() {
 		return getEnergyConsumerWithID().getEOperations().get(10);
 	}
 
@@ -892,11 +614,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getZone() {
-		if (zoneEClass == null) {
-			zoneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(5);
+	public EClass getPositionPointLink() {
+		if (positionPointLinkEClass == null) {
+			positionPointLinkEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(3);
 		}
-		return zoneEClass;
+		return positionPointLinkEClass;
 	}
 
 	/**
@@ -904,8 +627,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsAppropriate_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getZone().getEOperations().get(0);
+	public EOperation getPositionPointLink__IsAppropriate_FWD__Match_PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair() {
+		return getPositionPointLink().getEOperations().get(0);
 	}
 
 	/**
@@ -913,8 +636,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__Perform_FWD__IsApplicableMatch() {
-		return getZone().getEOperations().get(1);
+	public EOperation getPositionPointLink__Perform_FWD__IsApplicableMatch() {
+		return getPositionPointLink().getEOperations().get(1);
 	}
 
 	/**
@@ -922,8 +645,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsApplicable_FWD__Match() {
-		return getZone().getEOperations().get(2);
+	public EOperation getPositionPointLink__IsApplicable_FWD__Match() {
+		return getPositionPointLink().getEOperations().get(2);
 	}
 
 	/**
@@ -931,8 +654,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__RegisterObjectsToMatch_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getZone().getEOperations().get(3);
+	public EOperation getPositionPointLink__RegisterObjectsToMatch_FWD__Match_PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair() {
+		return getPositionPointLink().getEOperations().get(3);
 	}
 
 	/**
@@ -940,8 +663,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsAppropriate_solveCsp_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getZone().getEOperations().get(4);
+	public EOperation getPositionPointLink__IsAppropriate_solveCsp_FWD__Match_PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair() {
+		return getPositionPointLink().getEOperations().get(4);
 	}
 
 	/**
@@ -949,8 +672,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsAppropriate_checkCsp_FWD__CSP() {
-		return getZone().getEOperations().get(5);
+	public EOperation getPositionPointLink__IsAppropriate_checkCsp_FWD__CSP() {
+		return getPositionPointLink().getEOperations().get(5);
 	}
 
 	/**
@@ -958,8 +681,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_Zone_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer() {
-		return getZone().getEOperations().get(6);
+	public EOperation getPositionPointLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_PositionPoint_PositionPointToPositionPoint_Location_MeterAsset_Location_PositionPoint_MeterAssetPhysicalDevicePair_LocationToLocation() {
+		return getPositionPointLink().getEOperations().get(6);
 	}
 
 	/**
@@ -967,8 +690,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsApplicable_checkCsp_FWD__CSP() {
-		return getZone().getEOperations().get(7);
+	public EOperation getPositionPointLink__IsApplicable_checkCsp_FWD__CSP() {
+		return getPositionPointLink().getEOperations().get(7);
 	}
 
 	/**
@@ -976,8 +699,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getZone().getEOperations().get(8);
+	public EOperation getPositionPointLink__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getPositionPointLink().getEOperations().get(8);
 	}
 
 	/**
@@ -985,8 +708,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__CheckTypes_FWD__Match() {
-		return getZone().getEOperations().get(9);
+	public EOperation getPositionPointLink__CheckTypes_FWD__Match() {
+		return getPositionPointLink().getEOperations().get(9);
 	}
 
 	/**
@@ -994,8 +717,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsAppropriate_FWD_EMoflonEdge_136__EMoflonEdge() {
-		return getZone().getEOperations().get(10);
+	public EOperation getPositionPointLink__IsAppropriate_FWD_EMoflonEdge_3__EMoflonEdge() {
+		return getPositionPointLink().getEOperations().get(10);
 	}
 
 	/**
@@ -1003,8 +726,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__CheckAttributes_FWD__TripleMatch() {
-		return getZone().getEOperations().get(11);
+	public EOperation getPositionPointLink__CheckAttributes_FWD__TripleMatch() {
+		return getPositionPointLink().getEOperations().get(11);
 	}
 
 	/**
@@ -1012,8 +735,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__IsApplicable_CC__Match_Match() {
-		return getZone().getEOperations().get(12);
+	public EOperation getPositionPointLink__IsApplicable_CC__Match_Match() {
+		return getPositionPointLink().getEOperations().get(12);
 	}
 
 	/**
@@ -1021,8 +744,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getZone__CheckDEC_FWD__Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getZone().getEOperations().get(13);
+	public EOperation getPositionPointLink__CheckDEC_FWD__PositionPoint_MeterAsset_Location_MeterAssetPhysicalDevicePair() {
+		return getPositionPointLink().getEOperations().get(13);
 	}
 
 	/**
@@ -1033,7 +756,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	public EClass getServiceLocation() {
 		if (serviceLocationEClass == null) {
 			serviceLocationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(6);
+					.getEClassifiers().get(4);
 		}
 		return serviceLocationEClass;
 	}
@@ -1097,7 +820,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getServiceLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_ServiceLocation_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer() {
+	public EOperation getServiceLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_ServiceLocation_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair() {
 		return getServiceLocation().getEOperations().get(6);
 	}
 
@@ -1133,7 +856,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getServiceLocation__IsAppropriate_FWD_EMoflonEdge_137__EMoflonEdge() {
+	public EOperation getServiceLocation__IsAppropriate_FWD_EMoflonEdge_4__EMoflonEdge() {
 		return getServiceLocation().getEOperations().get(10);
 	}
 
@@ -1162,6 +885,284 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 */
 	public EOperation getServiceLocation__CheckDEC_FWD__ServiceLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
 		return getServiceLocation().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWorkLocation() {
+		if (workLocationEClass == null) {
+			workLocationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI).getEClassifiers()
+					.get(5);
+		}
+		return workLocationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsAppropriate_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getWorkLocation().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__Perform_FWD__IsApplicableMatch() {
+		return getWorkLocation().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsApplicable_FWD__Match() {
+		return getWorkLocation().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__RegisterObjectsToMatch_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getWorkLocation().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsAppropriate_solveCsp_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getWorkLocation().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsAppropriate_checkCsp_FWD__CSP() {
+		return getWorkLocation().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_WorkLocation_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair() {
+		return getWorkLocation().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsApplicable_checkCsp_FWD__CSP() {
+		return getWorkLocation().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getWorkLocation().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__CheckTypes_FWD__Match() {
+		return getWorkLocation().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsAppropriate_FWD_EMoflonEdge_5__EMoflonEdge() {
+		return getWorkLocation().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__CheckAttributes_FWD__TripleMatch() {
+		return getWorkLocation().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__IsApplicable_CC__Match_Match() {
+		return getWorkLocation().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getWorkLocation__CheckDEC_FWD__WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getWorkLocation().getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEnergyConsumer() {
+		if (energyConsumerEClass == null) {
+			energyConsumerEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
+					.getEClassifiers().get(6);
+		}
+		return energyConsumerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsAppropriate_FWD__Match_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice() {
+		return getEnergyConsumer().getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__Perform_FWD__IsApplicableMatch() {
+		return getEnergyConsumer().getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsApplicable_FWD__Match() {
+		return getEnergyConsumer().getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__RegisterObjectsToMatch_FWD__Match_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice() {
+		return getEnergyConsumer().getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsAppropriate_solveCsp_FWD__Match_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice() {
+		return getEnergyConsumer().getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsAppropriate_checkCsp_FWD__CSP() {
+		return getEnergyConsumer().getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsApplicable_solveCsp_FWD__IsApplicableMatch_ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice() {
+		return getEnergyConsumer().getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsApplicable_checkCsp_FWD__CSP() {
+		return getEnergyConsumer().getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getEnergyConsumer().getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__CheckTypes_FWD__Match() {
+		return getEnergyConsumer().getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsAppropriate_FWD_EMoflonEdge_6__EMoflonEdge() {
+		return getEnergyConsumer().getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__CheckAttributes_FWD__TripleMatch() {
+		return getEnergyConsumer().getEOperations().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__IsApplicable_CC__Match_Match() {
+		return getEnergyConsumer().getEOperations().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getEnergyConsumer__CheckDEC_FWD__ElectricityValues_ServiceDeliveryPoint_MeterAssetPhysicalDevicePair_AutoConnectObject_MeterAsset_PhysicalDevice() {
+		return getEnergyConsumer().getEOperations().get(13);
 	}
 
 	/**
@@ -1272,7 +1273,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getEnergyConsumerWithIDConfLoad__IsAppropriate_FWD_EMoflonEdge_138__EMoflonEdge() {
+	public EOperation getEnergyConsumerWithIDConfLoad__IsAppropriate_FWD_EMoflonEdge_7__EMoflonEdge() {
 		return getEnergyConsumerWithIDConfLoad().getEOperations().get(10);
 	}
 
@@ -1308,12 +1309,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getPositionPoint() {
-		if (positionPointEClass == null) {
-			positionPointEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI)
-					.getEClassifiers().get(8);
+	public EClass getEnergyConsumerWithIDNonConfLoad() {
+		if (energyConsumerWithIDNonConfLoadEClass == null) {
+			energyConsumerWithIDNonConfLoadEClass = (EClass) EPackage.Registry.INSTANCE
+					.getEPackage(RulesPackage.eNS_URI).getEClassifiers().get(8);
 		}
-		return positionPointEClass;
+		return energyConsumerWithIDNonConfLoadEClass;
 	}
 
 	/**
@@ -1321,8 +1322,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsAppropriate_FWD__Match_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location() {
-		return getPositionPoint().getEOperations().get(0);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(0);
 	}
 
 	/**
@@ -1330,8 +1331,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__Perform_FWD__IsApplicableMatch() {
-		return getPositionPoint().getEOperations().get(1);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__Perform_FWD__IsApplicableMatch() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(1);
 	}
 
 	/**
@@ -1339,8 +1340,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsApplicable_FWD__Match() {
-		return getPositionPoint().getEOperations().get(2);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_FWD__Match() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(2);
 	}
 
 	/**
@@ -1348,8 +1349,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__RegisterObjectsToMatch_FWD__Match_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location() {
-		return getPositionPoint().getEOperations().get(3);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjectsToMatch_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(3);
 	}
 
 	/**
@@ -1357,8 +1358,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsAppropriate_solveCsp_FWD__Match_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location() {
-		return getPositionPoint().getEOperations().get(4);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_solveCsp_FWD__Match_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(4);
 	}
 
 	/**
@@ -1366,8 +1367,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsAppropriate_checkCsp_FWD__CSP() {
-		return getPositionPoint().getEOperations().get(5);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_checkCsp_FWD__CSP() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(5);
 	}
 
 	/**
@@ -1375,8 +1376,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location_LocationToLocation_Location() {
-		return getPositionPoint().getEOperations().get(6);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_solveCsp_FWD__IsApplicableMatch_SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(6);
 	}
 
 	/**
@@ -1384,8 +1385,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsApplicable_checkCsp_FWD__CSP() {
-		return getPositionPoint().getEOperations().get(7);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_checkCsp_FWD__CSP() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(7);
 	}
 
 	/**
@@ -1393,8 +1394,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getPositionPoint().getEOperations().get(8);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(8);
 	}
 
 	/**
@@ -1402,8 +1403,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__CheckTypes_FWD__Match() {
-		return getPositionPoint().getEOperations().get(9);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__CheckTypes_FWD__Match() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(9);
 	}
 
 	/**
@@ -1411,8 +1412,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsAppropriate_FWD_EMoflonEdge_139__EMoflonEdge() {
-		return getPositionPoint().getEOperations().get(10);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsAppropriate_FWD_EMoflonEdge_8__EMoflonEdge() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(10);
 	}
 
 	/**
@@ -1420,8 +1421,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__CheckAttributes_FWD__TripleMatch() {
-		return getPositionPoint().getEOperations().get(11);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__CheckAttributes_FWD__TripleMatch() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(11);
 	}
 
 	/**
@@ -1429,8 +1430,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__IsApplicable_CC__Match_Match() {
-		return getPositionPoint().getEOperations().get(12);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__IsApplicable_CC__Match_Match() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(12);
 	}
 
 	/**
@@ -1438,8 +1439,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getPositionPoint__CheckDEC_FWD__MeterAsset_PositionPoint_MeterAssetPhysicalDevicePair_Location() {
-		return getPositionPoint().getEOperations().get(13);
+	public EOperation getEnergyConsumerWithIDNonConfLoad__CheckDEC_FWD__SubLoadArea_ElectricityValues_ServiceDeliveryPoint_ControlArea_MeterAssetPhysicalDevicePair_MeterAsset_PhysicalDevice_NonConformLoad_AutoConnectObject_NonConformLoadGroup() {
+		return getEnergyConsumerWithIDNonConfLoad().getEOperations().get(13);
 	}
 
 	/**
@@ -1550,7 +1551,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getGmlPosition__IsAppropriate_FWD_EMoflonEdge_140__EMoflonEdge() {
+	public EOperation getGmlPosition__IsAppropriate_FWD_EMoflonEdge_9__EMoflonEdge() {
 		return getGmlPosition().getEOperations().get(10);
 	}
 
@@ -1599,7 +1600,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocationLink__IsAppropriate_FWD__Match_MeterAsset_MeterAssetPhysicalDevicePair_Location() {
+	public EOperation getLocationLink__IsAppropriate_FWD__Match_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
 		return getLocationLink().getEOperations().get(0);
 	}
 
@@ -1626,7 +1627,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocationLink__RegisterObjectsToMatch_FWD__Match_MeterAsset_MeterAssetPhysicalDevicePair_Location() {
+	public EOperation getLocationLink__RegisterObjectsToMatch_FWD__Match_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
 		return getLocationLink().getEOperations().get(3);
 	}
 
@@ -1635,7 +1636,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocationLink__IsAppropriate_solveCsp_FWD__Match_MeterAsset_MeterAssetPhysicalDevicePair_Location() {
+	public EOperation getLocationLink__IsAppropriate_solveCsp_FWD__Match_MeterAssetPhysicalDevicePair_MeterAsset_Location() {
 		return getLocationLink().getEOperations().get(4);
 	}
 
@@ -1653,7 +1654,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocationLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair_Location_LocationToLocation_Location_MeterAssetToEnergyConsumer() {
+	public EOperation getLocationLink__IsApplicable_solveCsp_FWD__IsApplicableMatch_LocationToLocation_MeterAssetToEnergyConsumer_MeterAssetPhysicalDevicePair_EnergyConsumer_Location_MeterAsset_Location() {
 		return getLocationLink().getEOperations().get(6);
 	}
 
@@ -1689,7 +1690,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocationLink__IsAppropriate_FWD_EMoflonEdge_141__EMoflonEdge() {
+	public EOperation getLocationLink__IsAppropriate_FWD_EMoflonEdge_10__EMoflonEdge() {
 		return getLocationLink().getEOperations().get(10);
 	}
 
@@ -1716,7 +1717,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getLocationLink__CheckDEC_FWD__MeterAsset_MeterAssetPhysicalDevicePair_Location() {
+	public EOperation getLocationLink__CheckDEC_FWD__MeterAssetPhysicalDevicePair_MeterAsset_Location() {
 		return getLocationLink().getEOperations().get(13);
 	}
 
@@ -1792,7 +1793,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSDPLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_SDPLocation_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer() {
+	public EOperation getSDPLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_SDPLocation_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair() {
 		return getSDPLocation().getEOperations().get(6);
 	}
 
@@ -1828,7 +1829,7 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getSDPLocation__IsAppropriate_FWD_EMoflonEdge_142__EMoflonEdge() {
+	public EOperation getSDPLocation__IsAppropriate_FWD_EMoflonEdge_11__EMoflonEdge() {
 		return getSDPLocation().getEOperations().get(10);
 	}
 
@@ -1864,12 +1865,12 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWorkLocation() {
-		if (workLocationEClass == null) {
-			workLocationEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI).getEClassifiers()
+	public EClass getZone() {
+		if (zoneEClass == null) {
+			zoneEClass = (EClass) EPackage.Registry.INSTANCE.getEPackage(RulesPackage.eNS_URI).getEClassifiers()
 					.get(12);
 		}
-		return workLocationEClass;
+		return zoneEClass;
 	}
 
 	/**
@@ -1877,8 +1878,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsAppropriate_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getWorkLocation().getEOperations().get(0);
+	public EOperation getZone__IsAppropriate_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getZone().getEOperations().get(0);
 	}
 
 	/**
@@ -1886,8 +1887,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__Perform_FWD__IsApplicableMatch() {
-		return getWorkLocation().getEOperations().get(1);
+	public EOperation getZone__Perform_FWD__IsApplicableMatch() {
+		return getZone().getEOperations().get(1);
 	}
 
 	/**
@@ -1895,8 +1896,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsApplicable_FWD__Match() {
-		return getWorkLocation().getEOperations().get(2);
+	public EOperation getZone__IsApplicable_FWD__Match() {
+		return getZone().getEOperations().get(2);
 	}
 
 	/**
@@ -1904,8 +1905,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__RegisterObjectsToMatch_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getWorkLocation().getEOperations().get(3);
+	public EOperation getZone__RegisterObjectsToMatch_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getZone().getEOperations().get(3);
 	}
 
 	/**
@@ -1913,8 +1914,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsAppropriate_solveCsp_FWD__Match_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getWorkLocation().getEOperations().get(4);
+	public EOperation getZone__IsAppropriate_solveCsp_FWD__Match_Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getZone().getEOperations().get(4);
 	}
 
 	/**
@@ -1922,8 +1923,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsAppropriate_checkCsp_FWD__CSP() {
-		return getWorkLocation().getEOperations().get(5);
+	public EOperation getZone__IsAppropriate_checkCsp_FWD__CSP() {
+		return getZone().getEOperations().get(5);
 	}
 
 	/**
@@ -1931,8 +1932,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair_EnergyConsumer() {
-		return getWorkLocation().getEOperations().get(6);
+	public EOperation getZone__IsApplicable_solveCsp_FWD__IsApplicableMatch_MeterAssetToEnergyConsumer_Zone_MeterAsset_EnergyConsumer_MeterAssetPhysicalDevicePair() {
+		return getZone().getEOperations().get(6);
 	}
 
 	/**
@@ -1940,8 +1941,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsApplicable_checkCsp_FWD__CSP() {
-		return getWorkLocation().getEOperations().get(7);
+	public EOperation getZone__IsApplicable_checkCsp_FWD__CSP() {
+		return getZone().getEOperations().get(7);
 	}
 
 	/**
@@ -1949,8 +1950,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
-		return getWorkLocation().getEOperations().get(8);
+	public EOperation getZone__RegisterObjects_FWD__PerformRuleResult_EObject_EObject_EObject_EObject_EObject_EObject_EObject() {
+		return getZone().getEOperations().get(8);
 	}
 
 	/**
@@ -1958,8 +1959,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__CheckTypes_FWD__Match() {
-		return getWorkLocation().getEOperations().get(9);
+	public EOperation getZone__CheckTypes_FWD__Match() {
+		return getZone().getEOperations().get(9);
 	}
 
 	/**
@@ -1967,8 +1968,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsAppropriate_FWD_EMoflonEdge_143__EMoflonEdge() {
-		return getWorkLocation().getEOperations().get(10);
+	public EOperation getZone__IsAppropriate_FWD_EMoflonEdge_12__EMoflonEdge() {
+		return getZone().getEOperations().get(10);
 	}
 
 	/**
@@ -1976,8 +1977,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__CheckAttributes_FWD__TripleMatch() {
-		return getWorkLocation().getEOperations().get(11);
+	public EOperation getZone__CheckAttributes_FWD__TripleMatch() {
+		return getZone().getEOperations().get(11);
 	}
 
 	/**
@@ -1985,8 +1986,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__IsApplicable_CC__Match_Match() {
-		return getWorkLocation().getEOperations().get(12);
+	public EOperation getZone__IsApplicable_CC__Match_Match() {
+		return getZone().getEOperations().get(12);
 	}
 
 	/**
@@ -1994,8 +1995,8 @@ public class RulesPackageImpl extends EPackageImpl implements RulesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getWorkLocation__CheckDEC_FWD__WorkLocation_MeterAsset_MeterAssetPhysicalDevicePair() {
-		return getWorkLocation().getEOperations().get(13);
+	public EOperation getZone__CheckDEC_FWD__Zone_MeterAsset_MeterAssetPhysicalDevicePair() {
+		return getZone().getEOperations().get(13);
 	}
 
 	/**

@@ -68,38 +68,20 @@ public class RulesSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case RulesPackage.ENERGY_CONSUMER: {
-			EnergyConsumer energyConsumer = (EnergyConsumer) theEObject;
-			T result = caseEnergyConsumer(energyConsumer);
-			if (result == null)
-				result = caseAbstractRule(energyConsumer);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD: {
-			EnergyConsumerWithIDNonConfLoad energyConsumerWithIDNonConfLoad = (EnergyConsumerWithIDNonConfLoad) theEObject;
-			T result = caseEnergyConsumerWithIDNonConfLoad(energyConsumerWithIDNonConfLoad);
-			if (result == null)
-				result = caseAbstractRule(energyConsumerWithIDNonConfLoad);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RulesPackage.POSITION_POINT_LINK: {
-			PositionPointLink positionPointLink = (PositionPointLink) theEObject;
-			T result = casePositionPointLink(positionPointLink);
-			if (result == null)
-				result = caseAbstractRule(positionPointLink);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case RulesPackage.LOCATION: {
 			Location location = (Location) theEObject;
 			T result = caseLocation(location);
 			if (result == null)
 				result = caseAbstractRule(location);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RulesPackage.POSITION_POINT: {
+			PositionPoint positionPoint = (PositionPoint) theEObject;
+			T result = casePositionPoint(positionPoint);
+			if (result == null)
+				result = caseAbstractRule(positionPoint);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -113,11 +95,11 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.ZONE: {
-			Zone zone = (Zone) theEObject;
-			T result = caseZone(zone);
+		case RulesPackage.POSITION_POINT_LINK: {
+			PositionPointLink positionPointLink = (PositionPointLink) theEObject;
+			T result = casePositionPointLink(positionPointLink);
 			if (result == null)
-				result = caseAbstractRule(zone);
+				result = caseAbstractRule(positionPointLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -131,6 +113,24 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case RulesPackage.WORK_LOCATION: {
+			WorkLocation workLocation = (WorkLocation) theEObject;
+			T result = caseWorkLocation(workLocation);
+			if (result == null)
+				result = caseAbstractRule(workLocation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case RulesPackage.ENERGY_CONSUMER: {
+			EnergyConsumer energyConsumer = (EnergyConsumer) theEObject;
+			T result = caseEnergyConsumer(energyConsumer);
+			if (result == null)
+				result = caseAbstractRule(energyConsumer);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case RulesPackage.ENERGY_CONSUMER_WITH_ID_CONF_LOAD: {
 			EnergyConsumerWithIDConfLoad energyConsumerWithIDConfLoad = (EnergyConsumerWithIDConfLoad) theEObject;
 			T result = caseEnergyConsumerWithIDConfLoad(energyConsumerWithIDConfLoad);
@@ -140,11 +140,11 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.POSITION_POINT: {
-			PositionPoint positionPoint = (PositionPoint) theEObject;
-			T result = casePositionPoint(positionPoint);
+		case RulesPackage.ENERGY_CONSUMER_WITH_ID_NON_CONF_LOAD: {
+			EnergyConsumerWithIDNonConfLoad energyConsumerWithIDNonConfLoad = (EnergyConsumerWithIDNonConfLoad) theEObject;
+			T result = caseEnergyConsumerWithIDNonConfLoad(energyConsumerWithIDNonConfLoad);
 			if (result == null)
-				result = caseAbstractRule(positionPoint);
+				result = caseAbstractRule(energyConsumerWithIDNonConfLoad);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -176,11 +176,11 @@ public class RulesSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case RulesPackage.WORK_LOCATION: {
-			WorkLocation workLocation = (WorkLocation) theEObject;
-			T result = caseWorkLocation(workLocation);
+		case RulesPackage.ZONE: {
+			Zone zone = (Zone) theEObject;
+			T result = caseZone(zone);
 			if (result == null)
-				result = caseAbstractRule(workLocation);
+				result = caseAbstractRule(zone);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -188,51 +188,6 @@ public class RulesSwitch<T> extends Switch<T> {
 		default:
 			return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Energy Consumer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnergyConsumer(EnergyConsumer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer With ID Non Conf Load</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Energy Consumer With ID Non Conf Load</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEnergyConsumerWithIDNonConfLoad(EnergyConsumerWithIDNonConfLoad object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Position Point Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Position Point Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePositionPointLink(PositionPointLink object) {
-		return null;
 	}
 
 	/**
@@ -247,6 +202,21 @@ public class RulesSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLocation(Location object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Position Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Position Point</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePositionPoint(PositionPoint object) {
 		return null;
 	}
 
@@ -266,17 +236,17 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Zone</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Position Point Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Zone</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Position Point Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseZone(Zone object) {
+	public T casePositionPointLink(PositionPointLink object) {
 		return null;
 	}
 
@@ -296,6 +266,36 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Work Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Work Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWorkLocation(WorkLocation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Energy Consumer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEnergyConsumer(EnergyConsumer object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer With ID Conf Load</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -311,17 +311,17 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Position Point</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Energy Consumer With ID Non Conf Load</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Position Point</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Energy Consumer With ID Non Conf Load</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePositionPoint(PositionPoint object) {
+	public T caseEnergyConsumerWithIDNonConfLoad(EnergyConsumerWithIDNonConfLoad object) {
 		return null;
 	}
 
@@ -371,17 +371,17 @@ public class RulesSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Work Location</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Zone</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Work Location</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Zone</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWorkLocation(WorkLocation object) {
+	public T caseZone(Zone object) {
 		return null;
 	}
 

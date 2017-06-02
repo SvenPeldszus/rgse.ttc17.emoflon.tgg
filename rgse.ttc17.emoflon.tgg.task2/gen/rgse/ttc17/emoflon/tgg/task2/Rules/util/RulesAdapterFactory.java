@@ -69,18 +69,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected RulesSwitch<Adapter> modelSwitch = new RulesSwitch<Adapter>() {
 		@Override
-		public Adapter caseWorkLocation(WorkLocation object) {
-			return createWorkLocationAdapter();
-		}
-
-		@Override
-		public Adapter caseConformLoadGroup(ConformLoadGroup object) {
-			return createConformLoadGroupAdapter();
-		}
-
-		@Override
-		public Adapter casePowerSystemResource(PowerSystemResource object) {
-			return createPowerSystemResourceAdapter();
+		public Adapter caseTieFlow(TieFlow object) {
+			return createTieFlowAdapter();
 		}
 
 		@Override
@@ -89,48 +79,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTieFlowLinkControlArea(TieFlowLinkControlArea object) {
-			return createTieFlowLinkControlAreaAdapter();
-		}
-
-		@Override
-		public Adapter casePMUVoltageMeter(PMUVoltageMeter object) {
-			return createPMUVoltageMeterAdapter();
-		}
-
-		@Override
-		public Adapter caseZone(Zone object) {
-			return createZoneAdapter();
-		}
-
-		@Override
-		public Adapter caseSDPLocation(SDPLocation object) {
-			return createSDPLocationAdapter();
-		}
-
-		@Override
-		public Adapter casePrivateMeterVoltage(PrivateMeterVoltage object) {
-			return createPrivateMeterVoltageAdapter();
-		}
-
-		@Override
 		public Adapter caseNonConformLoad(NonConformLoad object) {
 			return createNonConformLoadAdapter();
-		}
-
-		@Override
-		public Adapter caseNonConformLoadGroup(NonConformLoadGroup object) {
-			return createNonConformLoadGroupAdapter();
-		}
-
-		@Override
-		public Adapter caseTieFlow(TieFlow object) {
-			return createTieFlowAdapter();
-		}
-
-		@Override
-		public Adapter caseLoadArea(LoadArea object) {
-			return createLoadAreaAdapter();
 		}
 
 		@Override
@@ -139,18 +89,28 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLocationLink(LocationLink object) {
-			return createLocationLinkAdapter();
+		public Adapter caseZone(Zone object) {
+			return createZoneAdapter();
 		}
 
 		@Override
-		public Adapter caseEnergyConsumerLinkServiceDeliveryPoint(EnergyConsumerLinkServiceDeliveryPoint object) {
-			return createEnergyConsumerLinkServiceDeliveryPointAdapter();
+		public Adapter caseLoadArea(LoadArea object) {
+			return createLoadAreaAdapter();
+		}
+
+		@Override
+		public Adapter caseServiceLocation(ServiceLocation object) {
+			return createServiceLocationAdapter();
 		}
 
 		@Override
 		public Adapter caseLocation(Location object) {
 			return createLocationAdapter();
+		}
+
+		@Override
+		public Adapter caseSDPLocation(SDPLocation object) {
+			return createSDPLocationAdapter();
 		}
 
 		@Override
@@ -164,18 +124,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseSubLoadArea(SubLoadArea object) {
-			return createSubLoadAreaAdapter();
-		}
-
-		@Override
-		public Adapter caseLoadAreaLinkControlArea(LoadAreaLinkControlArea object) {
-			return createLoadAreaLinkControlAreaAdapter();
-		}
-
-		@Override
-		public Adapter caseEnergyConsumer(EnergyConsumer object) {
-			return createEnergyConsumerAdapter();
+		public Adapter caseConformLoadGroup(ConformLoadGroup object) {
+			return createConformLoadGroupAdapter();
 		}
 
 		@Override
@@ -184,13 +134,23 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseServiceLocation(ServiceLocation object) {
-			return createServiceLocationAdapter();
+		public Adapter caseTerminal(Terminal object) {
+			return createTerminalAdapter();
 		}
 
 		@Override
-		public Adapter caseTerminal(Terminal object) {
-			return createTerminalAdapter();
+		public Adapter caseServiceDeliveryPoint(ServiceDeliveryPoint object) {
+			return createServiceDeliveryPointAdapter();
+		}
+
+		@Override
+		public Adapter caseEnergyConsumerLinkServiceDeliveryPoint(EnergyConsumerLinkServiceDeliveryPoint object) {
+			return createEnergyConsumerLinkServiceDeliveryPointAdapter();
+		}
+
+		@Override
+		public Adapter caseLoadAreaLinkControlArea(LoadAreaLinkControlArea object) {
+			return createLoadAreaLinkControlAreaAdapter();
 		}
 
 		@Override
@@ -199,8 +159,48 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseServiceDeliveryPoint(ServiceDeliveryPoint object) {
-			return createServiceDeliveryPointAdapter();
+		public Adapter caseNonConformLoadGroup(NonConformLoadGroup object) {
+			return createNonConformLoadGroupAdapter();
+		}
+
+		@Override
+		public Adapter caseWorkLocation(WorkLocation object) {
+			return createWorkLocationAdapter();
+		}
+
+		@Override
+		public Adapter caseTieFlowLinkControlArea(TieFlowLinkControlArea object) {
+			return createTieFlowLinkControlAreaAdapter();
+		}
+
+		@Override
+		public Adapter casePowerSystemResource(PowerSystemResource object) {
+			return createPowerSystemResourceAdapter();
+		}
+
+		@Override
+		public Adapter casePrivateMeterVoltage(PrivateMeterVoltage object) {
+			return createPrivateMeterVoltageAdapter();
+		}
+
+		@Override
+		public Adapter caseLocationLink(LocationLink object) {
+			return createLocationLinkAdapter();
+		}
+
+		@Override
+		public Adapter casePMUVoltageMeter(PMUVoltageMeter object) {
+			return createPMUVoltageMeterAdapter();
+		}
+
+		@Override
+		public Adapter caseSubLoadArea(SubLoadArea object) {
+			return createSubLoadAreaAdapter();
+		}
+
+		@Override
+		public Adapter caseEnergyConsumer(EnergyConsumer object) {
+			return createEnergyConsumerAdapter();
 		}
 
 		@Override
@@ -228,44 +228,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.WorkLocation <em>Work Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.TieFlow <em>Tie Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.WorkLocation
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.TieFlow
 	 * @generated
 	 */
-	public Adapter createWorkLocationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.ConformLoadGroup <em>Conform Load Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.ConformLoadGroup
-	 * @generated
-	 */
-	public Adapter createConformLoadGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.PowerSystemResource <em>Power System Resource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.PowerSystemResource
-	 * @generated
-	 */
-	public Adapter createPowerSystemResourceAdapter() {
+	public Adapter createTieFlowAdapter() {
 		return null;
 	}
 
@@ -284,76 +256,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.TieFlowLinkControlArea <em>Tie Flow Link Control Area</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.TieFlowLinkControlArea
-	 * @generated
-	 */
-	public Adapter createTieFlowLinkControlAreaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.PMUVoltageMeter <em>PMU Voltage Meter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.PMUVoltageMeter
-	 * @generated
-	 */
-	public Adapter createPMUVoltageMeterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.Zone <em>Zone</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.Zone
-	 * @generated
-	 */
-	public Adapter createZoneAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.SDPLocation <em>SDP Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.SDPLocation
-	 * @generated
-	 */
-	public Adapter createSDPLocationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.PrivateMeterVoltage <em>Private Meter Voltage</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.PrivateMeterVoltage
-	 * @generated
-	 */
-	public Adapter createPrivateMeterVoltageAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.NonConformLoad <em>Non Conform Load</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -364,48 +266,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNonConformLoadAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.NonConformLoadGroup <em>Non Conform Load Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.NonConformLoadGroup
-	 * @generated
-	 */
-	public Adapter createNonConformLoadGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.TieFlow <em>Tie Flow</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.TieFlow
-	 * @generated
-	 */
-	public Adapter createTieFlowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.LoadArea <em>Load Area</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.LoadArea
-	 * @generated
-	 */
-	public Adapter createLoadAreaAdapter() {
 		return null;
 	}
 
@@ -424,30 +284,44 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.LocationLink <em>Location Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.Zone <em>Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.LocationLink
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.Zone
 	 * @generated
 	 */
-	public Adapter createLocationLinkAdapter() {
+	public Adapter createZoneAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumerLinkServiceDeliveryPoint <em>Energy Consumer Link Service Delivery Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.LoadArea <em>Load Area</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumerLinkServiceDeliveryPoint
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.LoadArea
 	 * @generated
 	 */
-	public Adapter createEnergyConsumerLinkServiceDeliveryPointAdapter() {
+	public Adapter createLoadAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.ServiceLocation <em>Service Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.ServiceLocation
+	 * @generated
+	 */
+	public Adapter createServiceLocationAdapter() {
 		return null;
 	}
 
@@ -462,6 +336,20 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.SDPLocation <em>SDP Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.SDPLocation
+	 * @generated
+	 */
+	public Adapter createSDPLocationAdapter() {
 		return null;
 	}
 
@@ -494,44 +382,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.SubLoadArea <em>Sub Load Area</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.ConformLoadGroup <em>Conform Load Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.SubLoadArea
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.ConformLoadGroup
 	 * @generated
 	 */
-	public Adapter createSubLoadAreaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.LoadAreaLinkControlArea <em>Load Area Link Control Area</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.LoadAreaLinkControlArea
-	 * @generated
-	 */
-	public Adapter createLoadAreaLinkControlAreaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumer <em>Energy Consumer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumer
-	 * @generated
-	 */
-	public Adapter createEnergyConsumerAdapter() {
+	public Adapter createConformLoadGroupAdapter() {
 		return null;
 	}
 
@@ -550,20 +410,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.ServiceLocation <em>Service Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.ServiceLocation
-	 * @generated
-	 */
-	public Adapter createServiceLocationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.Terminal <em>Terminal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -574,6 +420,48 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTerminalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.ServiceDeliveryPoint <em>Service Delivery Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.ServiceDeliveryPoint
+	 * @generated
+	 */
+	public Adapter createServiceDeliveryPointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumerLinkServiceDeliveryPoint <em>Energy Consumer Link Service Delivery Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumerLinkServiceDeliveryPoint
+	 * @generated
+	 */
+	public Adapter createEnergyConsumerLinkServiceDeliveryPointAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.LoadAreaLinkControlArea <em>Load Area Link Control Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.LoadAreaLinkControlArea
+	 * @generated
+	 */
+	public Adapter createLoadAreaLinkControlAreaAdapter() {
 		return null;
 	}
 
@@ -592,16 +480,128 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.ServiceDeliveryPoint <em>Service Delivery Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.NonConformLoadGroup <em>Non Conform Load Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.ServiceDeliveryPoint
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.NonConformLoadGroup
 	 * @generated
 	 */
-	public Adapter createServiceDeliveryPointAdapter() {
+	public Adapter createNonConformLoadGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.WorkLocation <em>Work Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.WorkLocation
+	 * @generated
+	 */
+	public Adapter createWorkLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.TieFlowLinkControlArea <em>Tie Flow Link Control Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.TieFlowLinkControlArea
+	 * @generated
+	 */
+	public Adapter createTieFlowLinkControlAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.PowerSystemResource <em>Power System Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.PowerSystemResource
+	 * @generated
+	 */
+	public Adapter createPowerSystemResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.PrivateMeterVoltage <em>Private Meter Voltage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.PrivateMeterVoltage
+	 * @generated
+	 */
+	public Adapter createPrivateMeterVoltageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.LocationLink <em>Location Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.LocationLink
+	 * @generated
+	 */
+	public Adapter createLocationLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.PMUVoltageMeter <em>PMU Voltage Meter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.PMUVoltageMeter
+	 * @generated
+	 */
+	public Adapter createPMUVoltageMeterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.SubLoadArea <em>Sub Load Area</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.SubLoadArea
+	 * @generated
+	 */
+	public Adapter createSubLoadAreaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumer <em>Energy Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task2.Rules.EnergyConsumer
+	 * @generated
+	 */
+	public Adapter createEnergyConsumerAdapter() {
 		return null;
 	}
 

@@ -43,8 +43,8 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver);
+	boolean isAppropriate_FWD(Match match, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +68,8 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver);
+	void registerObjectsToMatch_FWD(Match match, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,8 +77,8 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver);
+	CSP isAppropriate_solveCsp_FWD(Match match, gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,9 +94,10 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
-			MeterAssetToPrivateMeterVoltage assetToMeter, PrivateMeterVoltage meter, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
+			gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver,
+			MeterAssetToPrivateMeterVoltage assetToMeter, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			PrivateMeterVoltage meter);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +113,8 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgDeliver, EObject asset, EObject deliverToDeliver,
-			EObject assetToMeter, EObject meter, EObject pair, EObject srcDeliver);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgDeliver, EObject deliverToDeliver,
+			EObject srcDeliver, EObject assetToMeter, EObject asset, EObject pair, EObject meter);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +130,7 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_169(EMoflonEdge _edge_ServiceDeliveryPoint);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_26(EMoflonEdge _edge_ServiceDeliveryPoint);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,8 +154,8 @@ public interface ServiceDeliveryPoint extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver);
+	boolean checkDEC_FWD(gluemodel.CIM.IEC61968.Metering.ServiceDeliveryPoint srcDeliver, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

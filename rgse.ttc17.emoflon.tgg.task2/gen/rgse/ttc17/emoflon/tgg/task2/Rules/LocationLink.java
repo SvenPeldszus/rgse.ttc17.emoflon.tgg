@@ -46,7 +46,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, Location location, MeterAsset asset);
+	boolean isAppropriate_FWD(Match match, MeterAssetMMXUPair pair, MeterAsset asset, Location location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair, Location location, MeterAsset asset);
+	void registerObjectsToMatch_FWD(Match match, MeterAssetMMXUPair pair, MeterAsset asset, Location location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,7 +78,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair, Location location, MeterAsset asset);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAssetMMXUPair pair, MeterAsset asset, Location location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,9 +94,9 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair,
-			outagePreventionJointarget.Location trgLocation, Location location, MeterAssetToPMUVoltageMeter assetToPMU,
-			LocationToLocation locationCorr, MeterAsset asset, PMUVoltageMeter consumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetMMXUPair pair, MeterAsset asset,
+			LocationToLocation locationCorr, Location location, PMUVoltageMeter consumer,
+			outagePreventionJointarget.Location trgLocation, MeterAssetToPMUVoltageMeter assetToPMU);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,8 +112,8 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject trgLocation, EObject location,
-			EObject assetToPMU, EObject locationCorr, EObject asset, EObject consumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject pair, EObject asset, EObject locationCorr,
+			EObject location, EObject consumer, EObject trgLocation, EObject assetToPMU);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_158(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_35(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,7 +153,7 @@ public interface LocationLink extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAssetMMXUPair pair, Location location, MeterAsset asset);
+	boolean checkDEC_FWD(MeterAssetMMXUPair pair, MeterAsset asset, Location location);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

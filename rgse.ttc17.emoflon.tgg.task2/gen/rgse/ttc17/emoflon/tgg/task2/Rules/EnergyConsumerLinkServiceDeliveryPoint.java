@@ -45,8 +45,8 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer srcConsumer);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,8 +70,8 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer srcConsumer);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,8 +79,8 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer srcConsumer);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			EnergyConsumer srcConsumer, ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,11 +97,10 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			EnergyConsumerToEnergyConsumer consumerToConsumer, ServiceDeliveryPoint srcDeliver, MeterAsset asset,
-			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver,
-			outagePreventionJointarget.EnergyConsumer trgConsumer,
-			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, MeterAssetPhysicalDevicePair pair,
-			EnergyConsumer srcConsumer);
+			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAsset asset,
+			outagePreventionJointarget.EnergyConsumer trgConsumer, MeterAssetPhysicalDevicePair pair,
+			outagePreventionJointarget.ServiceDeliveryPoint trgDeliver, EnergyConsumer srcConsumer,
+			ServiceDeliveryPointToServiceDeliveryPoint deliverToDeliver, ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -117,9 +116,9 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject consumerToConsumer, EObject srcDeliver,
-			EObject asset, EObject trgDeliver, EObject trgConsumer, EObject deliverToDeliver, EObject pair,
-			EObject srcConsumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject consumerToConsumer, EObject asset,
+			EObject trgConsumer, EObject pair, EObject trgDeliver, EObject srcConsumer, EObject deliverToDeliver,
+			EObject srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,7 +134,7 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_159(EMoflonEdge _edge_EnergyConsumer);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_27(EMoflonEdge _edge_EnergyConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,8 +158,8 @@ public interface EnergyConsumerLinkServiceDeliveryPoint extends EObject, Abstrac
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			EnergyConsumer srcConsumer);
+	boolean checkDEC_FWD(MeterAsset asset, MeterAssetPhysicalDevicePair pair, EnergyConsumer srcConsumer,
+			ServiceDeliveryPoint srcDeliver);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

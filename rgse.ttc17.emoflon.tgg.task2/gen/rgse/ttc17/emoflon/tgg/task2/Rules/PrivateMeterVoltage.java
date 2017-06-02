@@ -43,8 +43,8 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
-			ElectricityValues values);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ElectricityValues values, PhysicalDevice device);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,8 +68,8 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset, ElectricityValues values);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ElectricityValues values, PhysicalDevice device);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -77,8 +77,8 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, PhysicalDevice device, MeterAssetPhysicalDevicePair pair,
-			MeterAsset asset, ElectricityValues values);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ElectricityValues values, PhysicalDevice device);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,8 +94,8 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, PhysicalDevice device,
-			MeterAssetPhysicalDevicePair pair, MeterAsset asset, ElectricityValues values);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ElectricityValues values, PhysicalDevice device);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,8 +111,8 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject assetToMeter, EObject mmxuToMeter, EObject device,
-			EObject meter, EObject pair, EObject asset, EObject values);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject assetToMeter, EObject mmxuToMeter,
+			EObject pair, EObject meter, EObject values, EObject device);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -128,7 +128,7 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_152(EMoflonEdge _edge_a);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_34(EMoflonEdge _edge_a);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,8 +152,8 @@ public interface PrivateMeterVoltage extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(PhysicalDevice device, MeterAssetPhysicalDevicePair pair, MeterAsset asset,
-			ElectricityValues values);
+	boolean checkDEC_FWD(MeterAsset asset, MeterAssetPhysicalDevicePair pair, ElectricityValues values,
+			PhysicalDevice device);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

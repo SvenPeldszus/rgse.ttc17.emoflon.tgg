@@ -95,8 +95,8 @@ public interface ServiceLocation extends EObject, AbstractRule {
 	 * @generated
 	 */
 	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetToEnergyConsumer assetToConumer,
-			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer);
+			gluemodel.CIM.IEC61968.Customers.ServiceLocation srcLocation, MeterAsset asset, EnergyConsumer consumer,
+			MeterAssetPhysicalDevicePair pair);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,7 +113,7 @@ public interface ServiceLocation extends EObject, AbstractRule {
 	 * @generated
 	 */
 	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject assetToConumer,
-			EObject srcLocation, EObject asset, EObject pair, EObject consumer, EObject srcLocationCorr);
+			EObject srcLocation, EObject asset, EObject consumer, EObject pair, EObject srcLocationCorr);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -129,7 +129,7 @@ public interface ServiceLocation extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_137(EMoflonEdge _edge_Location);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_4(EMoflonEdge _edge_Location);
 
 	/**
 	 * <!-- begin-user-doc -->

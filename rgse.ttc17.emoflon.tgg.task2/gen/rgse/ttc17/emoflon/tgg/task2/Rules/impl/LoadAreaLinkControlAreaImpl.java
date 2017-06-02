@@ -92,31 +92,31 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isAppropriate_FWD(Match match, ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl,
-			SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
+	public boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		// initial bindings
 		Object[] result1_black = LoadAreaLinkControlAreaImpl
-				.pattern_LoadAreaLinkControlArea_0_1_initialbindings_blackBBBBBBBBBB(this, match, srcGroup, asset,
-						srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+				.pattern_LoadAreaLinkControlArea_0_1_initialbindings_blackBBBBBBBBBB(this, match, srcDeliver, srcArea,
+						asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
 		if (result1_black == null) {
 			throw new RuntimeException("Pattern matching in node [initial bindings] failed." + " Variables: "
-					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcGroup] = " + srcGroup + ", "
-					+ "[asset] = " + asset + ", " + "[srcControl] = " + srcControl + ", " + "[srcArea] = " + srcArea
-					+ ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcLoadArea] = " + srcLoadArea + ", "
-					+ "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+					+ "[this] = " + this + ", " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", "
+					+ "[srcArea] = " + srcArea + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
+					+ "[srcConsumer] = " + srcConsumer + ", " + "[srcControl] = " + srcControl + ", " + "[srcGroup] = "
+					+ srcGroup + ", " + "[srcLoadArea] = " + srcLoadArea + ".");
 		}
 
 		// Solve CSP
 		Object[] result2_bindingAndBlack = LoadAreaLinkControlAreaImpl
-				.pattern_LoadAreaLinkControlArea_0_2_SolveCSP_bindingAndBlackFBBBBBBBBBB(this, match, srcGroup, asset,
-						srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+				.pattern_LoadAreaLinkControlArea_0_2_SolveCSP_bindingAndBlackFBBBBBBBBBB(this, match, srcDeliver,
+						srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
 		if (result2_bindingAndBlack == null) {
 			throw new RuntimeException("Pattern matching in node [Solve CSP] failed." + " Variables: " + "[this] = "
-					+ this + ", " + "[match] = " + match + ", " + "[srcGroup] = " + srcGroup + ", " + "[asset] = "
-					+ asset + ", " + "[srcControl] = " + srcControl + ", " + "[srcArea] = " + srcArea + ", "
-					+ "[srcDeliver] = " + srcDeliver + ", " + "[srcLoadArea] = " + srcLoadArea + ", " + "[pair] = "
-					+ pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+					+ this + ", " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcArea] = "
+					+ srcArea + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = "
+					+ srcConsumer + ", " + "[srcControl] = " + srcControl + ", " + "[srcGroup] = " + srcGroup + ", "
+					+ "[srcLoadArea] = " + srcLoadArea + ".");
 		}
 		CSP csp = (CSP) result2_bindingAndBlack[0];
 		// Check CSP
@@ -124,14 +124,14 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 
 			// collect elements to be translated
 			Object[] result4_black = LoadAreaLinkControlAreaImpl
-					.pattern_LoadAreaLinkControlArea_0_4_collectelementstobetranslated_blackBBBBBBBBB(match, srcGroup,
-							asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+					.pattern_LoadAreaLinkControlArea_0_4_collectelementstobetranslated_blackBBBBBBBBB(match, srcDeliver,
+							srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
 			if (result4_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect elements to be translated] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcGroup] = " + srcGroup + ", "
-						+ "[asset] = " + asset + ", " + "[srcControl] = " + srcControl + ", " + "[srcArea] = " + srcArea
-						+ ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcLoadArea] = " + srcLoadArea + ", "
-						+ "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", "
+						+ "[srcArea] = " + srcArea + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
+						+ "[srcConsumer] = " + srcConsumer + ", " + "[srcControl] = " + srcControl + ", "
+						+ "[srcGroup] = " + srcGroup + ", " + "[srcLoadArea] = " + srcLoadArea + ".");
 			}
 			LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_0_4_collectelementstobetranslated_greenBBBFF(
 					match, srcControl, srcLoadArea);
@@ -140,33 +140,33 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 
 			// collect context elements
 			Object[] result5_black = LoadAreaLinkControlAreaImpl
-					.pattern_LoadAreaLinkControlArea_0_5_collectcontextelements_blackBBBBBBBBB(match, srcGroup, asset,
-							srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+					.pattern_LoadAreaLinkControlArea_0_5_collectcontextelements_blackBBBBBBBBB(match, srcDeliver,
+							srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
 			if (result5_black == null) {
 				throw new RuntimeException("Pattern matching in node [collect context elements] failed."
-						+ " Variables: " + "[match] = " + match + ", " + "[srcGroup] = " + srcGroup + ", "
-						+ "[asset] = " + asset + ", " + "[srcControl] = " + srcControl + ", " + "[srcArea] = " + srcArea
-						+ ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcLoadArea] = " + srcLoadArea + ", "
-						+ "[pair] = " + pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+						+ " Variables: " + "[match] = " + match + ", " + "[srcDeliver] = " + srcDeliver + ", "
+						+ "[srcArea] = " + srcArea + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
+						+ "[srcConsumer] = " + srcConsumer + ", " + "[srcControl] = " + srcControl + ", "
+						+ "[srcGroup] = " + srcGroup + ", " + "[srcLoadArea] = " + srcLoadArea + ".");
 			}
 			LoadAreaLinkControlAreaImpl
 					.pattern_LoadAreaLinkControlArea_0_5_collectcontextelements_greenBBBBBBBBBFFFFFFFFFFF(match,
-							srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
-			// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result5_green[9];
-			// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result5_green[10];
-			// EMoflonEdge srcArea__srcLoadArea____LoadArea = (EMoflonEdge) result5_green[11];
-			// EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = (EMoflonEdge) result5_green[12];
-			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[13];
-			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[14];
-			// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result5_green[15];
-			// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result5_green[16];
-			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[17];
-			// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result5_green[18];
-			// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result5_green[19];
+							srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
+			// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result5_green[9];
+			// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result5_green[10];
+			// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result5_green[11];
+			// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result5_green[12];
+			// EMoflonEdge pair__asset____a = (EMoflonEdge) result5_green[13];
+			// EMoflonEdge srcArea__srcLoadArea____LoadArea = (EMoflonEdge) result5_green[14];
+			// EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = (EMoflonEdge) result5_green[15];
+			// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result5_green[16];
+			// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result5_green[17];
+			// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result5_green[18];
+			// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result5_green[19];
 
 			// register objects to match
 			LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_0_6_registerobjectstomatch_expressionBBBBBBBBBB(
-					this, match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+					this, match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
 			return LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_0_7_expressionF();
 		} else {
 			return LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_0_8_expressionF();
@@ -188,18 +188,18 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 			throw new RuntimeException("Pattern matching in node [perform transformation] failed." + " Variables: "
 					+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ".");
 		}
-		ConformLoadGroup srcGroup = (ConformLoadGroup) result1_bindingAndBlack[0];
-		ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) result1_bindingAndBlack[1];
-		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[2];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[0];
+		SubLoadArea srcArea = (SubLoadArea) result1_bindingAndBlack[1];
+		LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) result1_bindingAndBlack[2];
 		outagePreventionJointarget.ControlArea trgControl = (outagePreventionJointarget.ControlArea) result1_bindingAndBlack[3];
-		ControlArea srcControl = (ControlArea) result1_bindingAndBlack[4];
-		SubLoadArea srcArea = (SubLoadArea) result1_bindingAndBlack[5];
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result1_bindingAndBlack[6];
-		LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) result1_bindingAndBlack[7];
-		LoadArea srcLoadArea = (LoadArea) result1_bindingAndBlack[8];
-		outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) result1_bindingAndBlack[9];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[10];
-		ConformLoad srcConsumer = (ConformLoad) result1_bindingAndBlack[11];
+		outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) result1_bindingAndBlack[4];
+		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[5];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[6];
+		ConformLoad srcConsumer = (ConformLoad) result1_bindingAndBlack[7];
+		ControlArea srcControl = (ControlArea) result1_bindingAndBlack[8];
+		ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) result1_bindingAndBlack[9];
+		ConformLoadGroup srcGroup = (ConformLoadGroup) result1_bindingAndBlack[10];
+		LoadArea srcLoadArea = (LoadArea) result1_bindingAndBlack[11];
 		// CSP csp = (CSP) result1_bindingAndBlack[12];
 		LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_1_1_performtransformation_greenBB(trgControl,
 				trgLoadArea);
@@ -214,29 +214,29 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 
 		// bookkeeping for edges
 		Object[] result3_black = LoadAreaLinkControlAreaImpl
-				.pattern_LoadAreaLinkControlArea_1_3_bookkeepingforedges_blackBBBBBBBBBBBBB(ruleresult, srcGroup,
-						controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver, laodToLoad, srcLoadArea,
-						trgLoadArea, pair, srcConsumer);
+				.pattern_LoadAreaLinkControlArea_1_3_bookkeepingforedges_blackBBBBBBBBBBBBB(ruleresult, srcDeliver,
+						srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair, srcConsumer, srcControl,
+						controlToControl, srcGroup, srcLoadArea);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
-					+ "[ruleresult] = " + ruleresult + ", " + "[srcGroup] = " + srcGroup + ", "
-					+ "[controlToControl] = " + controlToControl + ", " + "[asset] = " + asset + ", "
-					+ "[trgControl] = " + trgControl + ", " + "[srcControl] = " + srcControl + ", " + "[srcArea] = "
-					+ srcArea + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[laodToLoad] = " + laodToLoad + ", "
-					+ "[srcLoadArea] = " + srcLoadArea + ", " + "[trgLoadArea] = " + trgLoadArea + ", " + "[pair] = "
-					+ pair + ", " + "[srcConsumer] = " + srcConsumer + ".");
+					+ "[ruleresult] = " + ruleresult + ", " + "[srcDeliver] = " + srcDeliver + ", " + "[srcArea] = "
+					+ srcArea + ", " + "[laodToLoad] = " + laodToLoad + ", " + "[trgControl] = " + trgControl + ", "
+					+ "[trgLoadArea] = " + trgLoadArea + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair + ", "
+					+ "[srcConsumer] = " + srcConsumer + ", " + "[srcControl] = " + srcControl + ", "
+					+ "[controlToControl] = " + controlToControl + ", " + "[srcGroup] = " + srcGroup + ", "
+					+ "[srcLoadArea] = " + srcLoadArea + ".");
 		}
 		LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_1_3_bookkeepingforedges_greenBBBBBFFF(ruleresult,
-				trgControl, srcControl, srcLoadArea, trgLoadArea);
-		// EMoflonEdge srcLoadArea__srcControl____ControlArea = (EMoflonEdge) result3_green[5];
-		// EMoflonEdge srcControl__srcLoadArea____EnergyArea = (EMoflonEdge) result3_green[6];
-		// EMoflonEdge trgLoadArea__trgControl____ControlArea = (EMoflonEdge) result3_green[7];
+				trgControl, trgLoadArea, srcControl, srcLoadArea);
+		// EMoflonEdge trgLoadArea__trgControl____ControlArea = (EMoflonEdge) result3_green[5];
+		// EMoflonEdge srcLoadArea__srcControl____ControlArea = (EMoflonEdge) result3_green[6];
+		// EMoflonEdge srcControl__srcLoadArea____EnergyArea = (EMoflonEdge) result3_green[7];
 
 		// perform postprocessing story node is empty
 		// register objects
 		LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_1_5_registerobjects_expressionBBBBBBBBBBBBBB(this,
-				ruleresult, srcGroup, controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver, laodToLoad,
-				srcLoadArea, trgLoadArea, pair, srcConsumer);
+				ruleresult, srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair, srcConsumer,
+				srcControl, controlToControl, srcGroup, srcLoadArea);
 		return LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_1_6_expressionFB(ruleresult);
 	}
 
@@ -266,63 +266,63 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 			throw new RuntimeException(
 					"Binding in node core match failed." + " Variables: " + "[match] = " + match + ".");
 		}
-		ConformLoadGroup srcGroup = (ConformLoadGroup) result2_binding[0];
-		MeterAsset asset = (MeterAsset) result2_binding[1];
-		ControlArea srcControl = (ControlArea) result2_binding[2];
-		SubLoadArea srcArea = (SubLoadArea) result2_binding[3];
-		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[4];
-		LoadArea srcLoadArea = (LoadArea) result2_binding[5];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[6];
-		ConformLoad srcConsumer = (ConformLoad) result2_binding[7];
+		ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_binding[0];
+		SubLoadArea srcArea = (SubLoadArea) result2_binding[1];
+		MeterAsset asset = (MeterAsset) result2_binding[2];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[3];
+		ConformLoad srcConsumer = (ConformLoad) result2_binding[4];
+		ControlArea srcControl = (ControlArea) result2_binding[5];
+		ConformLoadGroup srcGroup = (ConformLoadGroup) result2_binding[6];
+		LoadArea srcLoadArea = (LoadArea) result2_binding[7];
 		for (Object[] result2_black : LoadAreaLinkControlAreaImpl
-				.pattern_LoadAreaLinkControlArea_2_2_corematch_blackBFBFBBBFBFBBB(srcGroup, asset, srcControl, srcArea,
-						srcDeliver, srcLoadArea, pair, srcConsumer, match)) {
-			ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) result2_black[1];
+				.pattern_LoadAreaLinkControlArea_2_2_corematch_blackBBFFFBBBBFBBB(srcDeliver, srcArea, asset, pair,
+						srcConsumer, srcControl, srcGroup, srcLoadArea, match)) {
+			LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) result2_black[2];
 			outagePreventionJointarget.ControlArea trgControl = (outagePreventionJointarget.ControlArea) result2_black[3];
-			LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) result2_black[7];
-			outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) result2_black[9];
+			outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) result2_black[4];
+			ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) result2_black[9];
 			// ForEach find context
 			for (Object[] result3_black : LoadAreaLinkControlAreaImpl
-					.pattern_LoadAreaLinkControlArea_2_3_findcontext_blackBBBBBBBBBBBB(srcGroup, controlToControl,
-							asset, trgControl, srcControl, srcArea, srcDeliver, laodToLoad, srcLoadArea, trgLoadArea,
-							pair, srcConsumer)) {
+					.pattern_LoadAreaLinkControlArea_2_3_findcontext_blackBBBBBBBBBBBB(srcDeliver, srcArea, laodToLoad,
+							trgControl, trgLoadArea, asset, pair, srcConsumer, srcControl, controlToControl, srcGroup,
+							srcLoadArea)) {
 				Object[] result3_green = LoadAreaLinkControlAreaImpl
-						.pattern_LoadAreaLinkControlArea_2_3_findcontext_greenBBBBBBBBBBBBFFFFFFFFFFFFFFFFFF(srcGroup,
-								controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver, laodToLoad,
-								srcLoadArea, trgLoadArea, pair, srcConsumer);
+						.pattern_LoadAreaLinkControlArea_2_3_findcontext_greenBBBBBBBBBBBBFFFFFFFFFFFFFFFFFF(srcDeliver,
+								srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair, srcConsumer, srcControl,
+								controlToControl, srcGroup, srcLoadArea);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[12];
-				// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result3_green[13];
-				// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result3_green[14];
-				// EMoflonEdge controlToControl__trgControl____target = (EMoflonEdge) result3_green[15];
-				// EMoflonEdge srcArea__srcLoadArea____LoadArea = (EMoflonEdge) result3_green[16];
-				// EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = (EMoflonEdge) result3_green[17];
-				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[18];
-				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[19];
-				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[20];
-				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[21];
-				// EMoflonEdge laodToLoad__srcLoadArea____source = (EMoflonEdge) result3_green[22];
-				// EMoflonEdge srcLoadArea__srcControl____ControlArea = (EMoflonEdge) result3_green[23];
-				// EMoflonEdge srcControl__srcLoadArea____EnergyArea = (EMoflonEdge) result3_green[24];
-				// EMoflonEdge controlToControl__srcControl____source = (EMoflonEdge) result3_green[25];
-				// EMoflonEdge laodToLoad__trgLoadArea____target = (EMoflonEdge) result3_green[26];
-				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[27];
-				// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[28];
-				// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[29];
+				// EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = (EMoflonEdge) result3_green[13];
+				// EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = (EMoflonEdge) result3_green[14];
+				// EMoflonEdge laodToLoad__trgLoadArea____target = (EMoflonEdge) result3_green[15];
+				// EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = (EMoflonEdge) result3_green[16];
+				// EMoflonEdge srcDeliver__asset____EndDeviceAssets = (EMoflonEdge) result3_green[17];
+				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[18];
+				// EMoflonEdge srcArea__srcLoadArea____LoadArea = (EMoflonEdge) result3_green[19];
+				// EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = (EMoflonEdge) result3_green[20];
+				// EMoflonEdge controlToControl__trgControl____target = (EMoflonEdge) result3_green[21];
+				// EMoflonEdge srcConsumer__srcGroup____LoadGroup = (EMoflonEdge) result3_green[22];
+				// EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = (EMoflonEdge) result3_green[23];
+				// EMoflonEdge srcGroup__srcArea____SubLoadArea = (EMoflonEdge) result3_green[24];
+				// EMoflonEdge srcArea__srcGroup____LoadGroups = (EMoflonEdge) result3_green[25];
+				// EMoflonEdge laodToLoad__srcLoadArea____source = (EMoflonEdge) result3_green[26];
+				// EMoflonEdge srcLoadArea__srcControl____ControlArea = (EMoflonEdge) result3_green[27];
+				// EMoflonEdge srcControl__srcLoadArea____EnergyArea = (EMoflonEdge) result3_green[28];
+				// EMoflonEdge controlToControl__srcControl____source = (EMoflonEdge) result3_green[29];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = LoadAreaLinkControlAreaImpl
 						.pattern_LoadAreaLinkControlArea_2_4_solveCSP_bindingAndBlackFBBBBBBBBBBBBBB(this,
-								isApplicableMatch, srcGroup, controlToControl, asset, trgControl, srcControl, srcArea,
-								srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer);
+								isApplicableMatch, srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset,
+								pair, srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException("Pattern matching in node [solve CSP] failed." + " Variables: "
 							+ "[this] = " + this + ", " + "[isApplicableMatch] = " + isApplicableMatch + ", "
-							+ "[srcGroup] = " + srcGroup + ", " + "[controlToControl] = " + controlToControl + ", "
-							+ "[asset] = " + asset + ", " + "[trgControl] = " + trgControl + ", " + "[srcControl] = "
-							+ srcControl + ", " + "[srcArea] = " + srcArea + ", " + "[srcDeliver] = " + srcDeliver
-							+ ", " + "[laodToLoad] = " + laodToLoad + ", " + "[srcLoadArea] = " + srcLoadArea + ", "
-							+ "[trgLoadArea] = " + trgLoadArea + ", " + "[pair] = " + pair + ", " + "[srcConsumer] = "
-							+ srcConsumer + ".");
+							+ "[srcDeliver] = " + srcDeliver + ", " + "[srcArea] = " + srcArea + ", "
+							+ "[laodToLoad] = " + laodToLoad + ", " + "[trgControl] = " + trgControl + ", "
+							+ "[trgLoadArea] = " + trgLoadArea + ", " + "[asset] = " + asset + ", " + "[pair] = " + pair
+							+ ", " + "[srcConsumer] = " + srcConsumer + ", " + "[srcControl] = " + srcControl + ", "
+							+ "[controlToControl] = " + controlToControl + ", " + "[srcGroup] = " + srcGroup + ", "
+							+ "[srcLoadArea] = " + srcLoadArea + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -354,17 +354,17 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjectsToMatch_FWD(Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		match.registerObject("srcGroup", srcGroup);
-		match.registerObject("asset", asset);
-		match.registerObject("srcControl", srcControl);
-		match.registerObject("srcArea", srcArea);
+	public void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		match.registerObject("srcDeliver", srcDeliver);
-		match.registerObject("srcLoadArea", srcLoadArea);
+		match.registerObject("srcArea", srcArea);
+		match.registerObject("asset", asset);
 		match.registerObject("pair", pair);
 		match.registerObject("srcConsumer", srcConsumer);
+		match.registerObject("srcControl", srcControl);
+		match.registerObject("srcGroup", srcGroup);
+		match.registerObject("srcLoadArea", srcLoadArea);
 
 	}
 
@@ -373,9 +373,9 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isAppropriate_solveCsp_FWD(Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {// Create CSP
+	public CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 
 		// Create literals
@@ -404,12 +404,11 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ConformLoadGroup srcGroup,
-			ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {// Create CSP
+	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, ServiceDeliveryPoint srcDeliver,
+			SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad, outagePreventionJointarget.ControlArea trgControl,
+			outagePreventionJointarget.LoadArea trgLoadArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ControlAreaToControlSrea controlToControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -424,18 +423,18 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 		// Solve CSP
 
 		// Snapshot pattern match on which CSP is solved
-		isApplicableMatch.registerObject("srcGroup", srcGroup);
-		isApplicableMatch.registerObject("controlToControl", controlToControl);
-		isApplicableMatch.registerObject("asset", asset);
-		isApplicableMatch.registerObject("trgControl", trgControl);
-		isApplicableMatch.registerObject("srcControl", srcControl);
-		isApplicableMatch.registerObject("srcArea", srcArea);
 		isApplicableMatch.registerObject("srcDeliver", srcDeliver);
+		isApplicableMatch.registerObject("srcArea", srcArea);
 		isApplicableMatch.registerObject("laodToLoad", laodToLoad);
-		isApplicableMatch.registerObject("srcLoadArea", srcLoadArea);
+		isApplicableMatch.registerObject("trgControl", trgControl);
 		isApplicableMatch.registerObject("trgLoadArea", trgLoadArea);
+		isApplicableMatch.registerObject("asset", asset);
 		isApplicableMatch.registerObject("pair", pair);
 		isApplicableMatch.registerObject("srcConsumer", srcConsumer);
+		isApplicableMatch.registerObject("srcControl", srcControl);
+		isApplicableMatch.registerObject("controlToControl", controlToControl);
+		isApplicableMatch.registerObject("srcGroup", srcGroup);
+		isApplicableMatch.registerObject("srcLoadArea", srcLoadArea);
 		return csp;
 	}
 
@@ -453,21 +452,21 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcGroup, EObject controlToControl,
-			EObject asset, EObject trgControl, EObject srcControl, EObject srcArea, EObject srcDeliver,
-			EObject laodToLoad, EObject srcLoadArea, EObject trgLoadArea, EObject pair, EObject srcConsumer) {
-		ruleresult.registerObject("srcGroup", srcGroup);
-		ruleresult.registerObject("controlToControl", controlToControl);
-		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("trgControl", trgControl);
-		ruleresult.registerObject("srcControl", srcControl);
-		ruleresult.registerObject("srcArea", srcArea);
+	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject srcDeliver, EObject srcArea,
+			EObject laodToLoad, EObject trgControl, EObject trgLoadArea, EObject asset, EObject pair,
+			EObject srcConsumer, EObject srcControl, EObject controlToControl, EObject srcGroup, EObject srcLoadArea) {
 		ruleresult.registerObject("srcDeliver", srcDeliver);
+		ruleresult.registerObject("srcArea", srcArea);
 		ruleresult.registerObject("laodToLoad", laodToLoad);
-		ruleresult.registerObject("srcLoadArea", srcLoadArea);
+		ruleresult.registerObject("trgControl", trgControl);
 		ruleresult.registerObject("trgLoadArea", trgLoadArea);
+		ruleresult.registerObject("asset", asset);
 		ruleresult.registerObject("pair", pair);
 		ruleresult.registerObject("srcConsumer", srcConsumer);
+		ruleresult.registerObject("srcControl", srcControl);
+		ruleresult.registerObject("controlToControl", controlToControl);
+		ruleresult.registerObject("srcGroup", srcGroup);
+		ruleresult.registerObject("srcLoadArea", srcLoadArea);
 
 	}
 
@@ -485,7 +484,7 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_163(EMoflonEdge _edge_ControlArea) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_28(EMoflonEdge _edge_ControlArea) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = LoadAreaLinkControlAreaImpl
 				.pattern_LoadAreaLinkControlArea_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
@@ -503,14 +502,14 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 		// ForEach test core match and DECs
 		for (Object[] result2_black : LoadAreaLinkControlAreaImpl
 				.pattern_LoadAreaLinkControlArea_10_2_testcorematchandDECs_blackFFFFFFFFB(_edge_ControlArea)) {
-			ConformLoadGroup srcGroup = (ConformLoadGroup) result2_black[0];
-			MeterAsset asset = (MeterAsset) result2_black[1];
-			ControlArea srcControl = (ControlArea) result2_black[2];
-			SubLoadArea srcArea = (SubLoadArea) result2_black[3];
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[4];
-			LoadArea srcLoadArea = (LoadArea) result2_black[5];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[6];
-			ConformLoad srcConsumer = (ConformLoad) result2_black[7];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result2_black[0];
+			SubLoadArea srcArea = (SubLoadArea) result2_black[1];
+			MeterAsset asset = (MeterAsset) result2_black[2];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_black[3];
+			ConformLoad srcConsumer = (ConformLoad) result2_black[4];
+			ControlArea srcControl = (ControlArea) result2_black[5];
+			ConformLoadGroup srcGroup = (ConformLoadGroup) result2_black[6];
+			LoadArea srcLoadArea = (LoadArea) result2_black[7];
 			Object[] result2_green = LoadAreaLinkControlAreaImpl
 					.pattern_LoadAreaLinkControlArea_10_2_testcorematchandDECs_greenFB(__eClass);
 			Match match = (Match) result2_green[0];
@@ -518,8 +517,8 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 			// bookkeeping with generic isAppropriate method
 			if (LoadAreaLinkControlAreaImpl
 					.pattern_LoadAreaLinkControlArea_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBBBB(
-							this, match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair,
-							srcConsumer)) {
+							this, match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup,
+							srcLoadArea)) {
 				// Ensure that the correct types of elements are matched
 				if (LoadAreaLinkControlAreaImpl
 						.pattern_LoadAreaLinkControlArea_10_4_Ensurethatthecorrecttypesofelementsarematched_expressionFBB(
@@ -595,12 +594,12 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean checkDEC_FWD(ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl,
-			SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {// match tgg pattern
+	public boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {// match tgg pattern
 		Object[] result1_black = LoadAreaLinkControlAreaImpl
-				.pattern_LoadAreaLinkControlArea_13_1_matchtggpattern_blackBBBBBBBB(srcGroup, asset, srcControl,
-						srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+				.pattern_LoadAreaLinkControlArea_13_1_matchtggpattern_blackBBBBBBBB(srcDeliver, srcArea, asset, pair,
+						srcConsumer, srcControl, srcGroup, srcLoadArea);
 		if (result1_black != null) {
 			return LoadAreaLinkControlAreaImpl.pattern_LoadAreaLinkControlArea_13_2_expressionF();
 		} else {
@@ -617,36 +616,36 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_FWD__MATCH_CONFORMLOADGROUP_METERASSET_CONTROLAREA_SUBLOADAREA_SERVICEDELIVERYPOINT_LOADAREA_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return isAppropriate_FWD((Match) arguments.get(0), (ConformLoadGroup) arguments.get(1),
-					(MeterAsset) arguments.get(2), (ControlArea) arguments.get(3), (SubLoadArea) arguments.get(4),
-					(ServiceDeliveryPoint) arguments.get(5), (LoadArea) arguments.get(6),
-					(MeterAssetPhysicalDevicePair) arguments.get(7), (ConformLoad) arguments.get(8));
+		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_FWD__MATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD_CONTROLAREA_CONFORMLOADGROUP_LOADAREA:
+			return isAppropriate_FWD((Match) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
+					(SubLoadArea) arguments.get(2), (MeterAsset) arguments.get(3),
+					(MeterAssetPhysicalDevicePair) arguments.get(4), (ConformLoad) arguments.get(5),
+					(ControlArea) arguments.get(6), (ConformLoadGroup) arguments.get(7), (LoadArea) arguments.get(8));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___PERFORM_FWD__ISAPPLICABLEMATCH:
 			return perform_FWD((IsApplicableMatch) arguments.get(0));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPLICABLE_FWD__MATCH:
 			return isApplicable_FWD((Match) arguments.get(0));
-		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_CONFORMLOADGROUP_METERASSET_CONTROLAREA_SUBLOADAREA_SERVICEDELIVERYPOINT_LOADAREA_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			registerObjectsToMatch_FWD((Match) arguments.get(0), (ConformLoadGroup) arguments.get(1),
-					(MeterAsset) arguments.get(2), (ControlArea) arguments.get(3), (SubLoadArea) arguments.get(4),
-					(ServiceDeliveryPoint) arguments.get(5), (LoadArea) arguments.get(6),
-					(MeterAssetPhysicalDevicePair) arguments.get(7), (ConformLoad) arguments.get(8));
+		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___REGISTER_OBJECTS_TO_MATCH_FWD__MATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD_CONTROLAREA_CONFORMLOADGROUP_LOADAREA:
+			registerObjectsToMatch_FWD((Match) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
+					(SubLoadArea) arguments.get(2), (MeterAsset) arguments.get(3),
+					(MeterAssetPhysicalDevicePair) arguments.get(4), (ConformLoad) arguments.get(5),
+					(ControlArea) arguments.get(6), (ConformLoadGroup) arguments.get(7), (LoadArea) arguments.get(8));
 			return null;
-		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_CONFORMLOADGROUP_METERASSET_CONTROLAREA_SUBLOADAREA_SERVICEDELIVERYPOINT_LOADAREA_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (ConformLoadGroup) arguments.get(1),
-					(MeterAsset) arguments.get(2), (ControlArea) arguments.get(3), (SubLoadArea) arguments.get(4),
-					(ServiceDeliveryPoint) arguments.get(5), (LoadArea) arguments.get(6),
-					(MeterAssetPhysicalDevicePair) arguments.get(7), (ConformLoad) arguments.get(8));
+		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_SOLVE_CSP_FWD__MATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD_CONTROLAREA_CONFORMLOADGROUP_LOADAREA:
+			return isAppropriate_solveCsp_FWD((Match) arguments.get(0), (ServiceDeliveryPoint) arguments.get(1),
+					(SubLoadArea) arguments.get(2), (MeterAsset) arguments.get(3),
+					(MeterAssetPhysicalDevicePair) arguments.get(4), (ConformLoad) arguments.get(5),
+					(ControlArea) arguments.get(6), (ConformLoadGroup) arguments.get(7), (LoadArea) arguments.get(8));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_CONFORMLOADGROUP_CONTROLAREATOCONTROLSREA_METERASSET_CONTROLAREA_CONTROLAREA_SUBLOADAREA_SERVICEDELIVERYPOINT_LOADAREATOLOADAREA_LOADAREA_LOADAREA_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0), (ConformLoadGroup) arguments.get(1),
-					(ControlAreaToControlSrea) arguments.get(2), (MeterAsset) arguments.get(3),
-					(outagePreventionJointarget.ControlArea) arguments.get(4), (ControlArea) arguments.get(5),
-					(SubLoadArea) arguments.get(6), (ServiceDeliveryPoint) arguments.get(7),
-					(LoadAreaToLoadArea) arguments.get(8), (LoadArea) arguments.get(9),
-					(outagePreventionJointarget.LoadArea) arguments.get(10),
-					(MeterAssetPhysicalDevicePair) arguments.get(11), (ConformLoad) arguments.get(12));
+		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_SERVICEDELIVERYPOINT_SUBLOADAREA_LOADAREATOLOADAREA_CONTROLAREA_LOADAREA_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD_CONTROLAREA_CONTROLAREATOCONTROLSREA_CONFORMLOADGROUP_LOADAREA:
+			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
+					(ServiceDeliveryPoint) arguments.get(1), (SubLoadArea) arguments.get(2),
+					(LoadAreaToLoadArea) arguments.get(3), (outagePreventionJointarget.ControlArea) arguments.get(4),
+					(outagePreventionJointarget.LoadArea) arguments.get(5), (MeterAsset) arguments.get(6),
+					(MeterAssetPhysicalDevicePair) arguments.get(7), (ConformLoad) arguments.get(8),
+					(ControlArea) arguments.get(9), (ControlAreaToControlSrea) arguments.get(10),
+					(ConformLoadGroup) arguments.get(11), (LoadArea) arguments.get(12));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -658,39 +657,39 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 			return null;
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_FWD_EMOFLON_EDGE_163__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_163((EMoflonEdge) arguments.get(0));
+		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPROPRIATE_FWD_EMOFLON_EDGE_28__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_28((EMoflonEdge) arguments.get(0));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___IS_APPLICABLE_CC__MATCH_MATCH:
 			return isApplicable_CC((Match) arguments.get(0), (Match) arguments.get(1));
-		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___CHECK_DEC_FWD__CONFORMLOADGROUP_METERASSET_CONTROLAREA_SUBLOADAREA_SERVICEDELIVERYPOINT_LOADAREA_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD:
-			return checkDEC_FWD((ConformLoadGroup) arguments.get(0), (MeterAsset) arguments.get(1),
-					(ControlArea) arguments.get(2), (SubLoadArea) arguments.get(3),
-					(ServiceDeliveryPoint) arguments.get(4), (LoadArea) arguments.get(5),
-					(MeterAssetPhysicalDevicePair) arguments.get(6), (ConformLoad) arguments.get(7));
+		case RulesPackage.LOAD_AREA_LINK_CONTROL_AREA___CHECK_DEC_FWD__SERVICEDELIVERYPOINT_SUBLOADAREA_METERASSET_METERASSETPHYSICALDEVICEPAIR_CONFORMLOAD_CONTROLAREA_CONFORMLOADGROUP_LOADAREA:
+			return checkDEC_FWD((ServiceDeliveryPoint) arguments.get(0), (SubLoadArea) arguments.get(1),
+					(MeterAsset) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3),
+					(ConformLoad) arguments.get(4), (ControlArea) arguments.get(5), (ConformLoadGroup) arguments.get(6),
+					(LoadArea) arguments.get(7));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_1_initialbindings_blackBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		return new Object[] { _this, match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair,
-				srcConsumer };
+			LoadAreaLinkControlArea _this, Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		return new Object[] { _this, match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup,
+				srcLoadArea };
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_2_SolveCSP_bindingFBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcGroup, asset, srcControl, srcArea, srcDeliver,
-				srcLoadArea, pair, srcConsumer);
+			LoadAreaLinkControlArea _this, Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		CSP _localVariable_0 = _this.isAppropriate_solveCsp_FWD(match, srcDeliver, srcArea, asset, pair, srcConsumer,
+				srcControl, srcGroup, srcLoadArea);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea,
-					pair, srcConsumer };
+			return new Object[] { csp, _this, match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl,
+					srcGroup, srcLoadArea };
 		}
 		return null;
 	}
@@ -700,11 +699,11 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_2_SolveCSP_bindingAndBlackFBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
+			LoadAreaLinkControlArea _this, Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		Object[] result_pattern_LoadAreaLinkControlArea_0_2_SolveCSP_binding = pattern_LoadAreaLinkControlArea_0_2_SolveCSP_bindingFBBBBBBBBBB(
-				_this, match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer);
+				_this, match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea);
 		if (result_pattern_LoadAreaLinkControlArea_0_2_SolveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_LoadAreaLinkControlArea_0_2_SolveCSP_binding[0];
 
@@ -712,8 +711,8 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 					csp);
 			if (result_pattern_LoadAreaLinkControlArea_0_2_SolveCSP_black != null) {
 
-				return new Object[] { csp, _this, match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea,
-						pair, srcConsumer };
+				return new Object[] { csp, _this, match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl,
+						srcGroup, srcLoadArea };
 			}
 		}
 		return null;
@@ -727,10 +726,10 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_4_collectelementstobetranslated_blackBBBBBBBBB(
-			Match match, ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
-		return new Object[] { match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer };
+			Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		return new Object[] { match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea };
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_4_collectelementstobetranslated_greenBBBFF(
@@ -752,105 +751,104 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_5_collectcontextelements_blackBBBBBBBBB(Match match,
-			ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
-		return new Object[] { match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer };
+			ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		return new Object[] { match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea };
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_0_5_collectcontextelements_greenBBBBBBBBBFFFFFFFFFFF(
-			Match match, ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
-		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcArea__srcLoadArea____LoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+			Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset,
+			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcArea__srcLoadArea____LoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		match.getContextNodes().add(srcGroup);
-		match.getContextNodes().add(asset);
-		match.getContextNodes().add(srcControl);
-		match.getContextNodes().add(srcArea);
+		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		match.getContextNodes().add(srcDeliver);
-		match.getContextNodes().add(srcLoadArea);
+		match.getContextNodes().add(srcArea);
+		match.getContextNodes().add(asset);
 		match.getContextNodes().add(pair);
 		match.getContextNodes().add(srcConsumer);
-		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
-		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
-		String srcArea__srcLoadArea____LoadArea_name_prime = "LoadArea";
-		String srcLoadArea__srcArea____SubLoadAreas_name_prime = "SubLoadAreas";
-		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
-		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
+		match.getContextNodes().add(srcControl);
+		match.getContextNodes().add(srcGroup);
+		match.getContextNodes().add(srcLoadArea);
 		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
 		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
+		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
+		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
 		String pair__asset____a_name_prime = "a";
+		String srcArea__srcLoadArea____LoadArea_name_prime = "LoadArea";
+		String srcLoadArea__srcArea____SubLoadAreas_name_prime = "SubLoadAreas";
 		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
 		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
-		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
-		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
-		match.getContextEdges().add(srcGroup__srcArea____SubLoadArea);
-		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
-		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
-		match.getContextEdges().add(srcArea__srcGroup____LoadGroups);
-		srcArea__srcLoadArea____LoadArea.setSrc(srcArea);
-		srcArea__srcLoadArea____LoadArea.setTrg(srcLoadArea);
-		match.getContextEdges().add(srcArea__srcLoadArea____LoadArea);
-		srcLoadArea__srcArea____SubLoadAreas.setSrc(srcLoadArea);
-		srcLoadArea__srcArea____SubLoadAreas.setTrg(srcArea);
-		match.getContextEdges().add(srcLoadArea__srcArea____SubLoadAreas);
-		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
-		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
-		match.getContextEdges().add(asset__srcDeliver____ServiceDeliveryPoint);
-		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
-		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
-		match.getContextEdges().add(srcDeliver__asset____EndDeviceAssets);
+		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
+		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
 		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
 		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
 		match.getContextEdges().add(srcDeliver__srcConsumer____EnergyConsumer);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
 		match.getContextEdges().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
+		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
+		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
+		match.getContextEdges().add(asset__srcDeliver____ServiceDeliveryPoint);
+		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
+		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
+		match.getContextEdges().add(srcDeliver__asset____EndDeviceAssets);
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		match.getContextEdges().add(pair__asset____a);
+		srcArea__srcLoadArea____LoadArea.setSrc(srcArea);
+		srcArea__srcLoadArea____LoadArea.setTrg(srcLoadArea);
+		match.getContextEdges().add(srcArea__srcLoadArea____LoadArea);
+		srcLoadArea__srcArea____SubLoadAreas.setSrc(srcLoadArea);
+		srcLoadArea__srcArea____SubLoadAreas.setTrg(srcArea);
+		match.getContextEdges().add(srcLoadArea__srcArea____SubLoadAreas);
 		srcConsumer__srcGroup____LoadGroup.setSrc(srcConsumer);
 		srcConsumer__srcGroup____LoadGroup.setTrg(srcGroup);
 		match.getContextEdges().add(srcConsumer__srcGroup____LoadGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setSrc(srcGroup);
 		srcGroup__srcConsumer____EnergyConsumers.setTrg(srcConsumer);
 		match.getContextEdges().add(srcGroup__srcConsumer____EnergyConsumers);
-		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
-		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
-		srcArea__srcLoadArea____LoadArea.setName(srcArea__srcLoadArea____LoadArea_name_prime);
-		srcLoadArea__srcArea____SubLoadAreas.setName(srcLoadArea__srcArea____SubLoadAreas_name_prime);
-		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
-		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
+		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
+		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
+		match.getContextEdges().add(srcGroup__srcArea____SubLoadArea);
+		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
+		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
+		match.getContextEdges().add(srcArea__srcGroup____LoadGroups);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
+		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
+		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
+		srcArea__srcLoadArea____LoadArea.setName(srcArea__srcLoadArea____LoadArea_name_prime);
+		srcLoadArea__srcArea____SubLoadAreas.setName(srcLoadArea__srcArea____SubLoadAreas_name_prime);
 		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
 		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
-		return new Object[] { match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair, srcConsumer,
-				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups, srcArea__srcLoadArea____LoadArea,
-				srcLoadArea__srcArea____SubLoadAreas, asset__srcDeliver____ServiceDeliveryPoint,
-				srcDeliver__asset____EndDeviceAssets, srcDeliver__srcConsumer____EnergyConsumer,
-				srcConsumer__srcDeliver____ServiceDeliveryPoints, pair__asset____a, srcConsumer__srcGroup____LoadGroup,
-				srcGroup__srcConsumer____EnergyConsumers };
+		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
+		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
+		return new Object[] { match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup, srcLoadArea,
+				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints,
+				asset__srcDeliver____ServiceDeliveryPoint, srcDeliver__asset____EndDeviceAssets, pair__asset____a,
+				srcArea__srcLoadArea____LoadArea, srcLoadArea__srcArea____SubLoadAreas,
+				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers,
+				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups };
 	}
 
 	public static final void pattern_LoadAreaLinkControlArea_0_6_registerobjectstomatch_expressionBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		_this.registerObjectsToMatch_FWD(match, srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea, pair,
-				srcConsumer);
+			LoadAreaLinkControlArea _this, Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		_this.registerObjectsToMatch_FWD(match, srcDeliver, srcArea, asset, pair, srcConsumer, srcControl, srcGroup,
+				srcLoadArea);
 
 	}
 
@@ -866,57 +864,57 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_1_1_performtransformation_bindingFFFFFFFFFFFFB(
 			IsApplicableMatch isApplicableMatch) {
-		EObject _localVariable_0 = isApplicableMatch.getObject("srcGroup");
-		EObject _localVariable_1 = isApplicableMatch.getObject("controlToControl");
-		EObject _localVariable_2 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_0 = isApplicableMatch.getObject("srcDeliver");
+		EObject _localVariable_1 = isApplicableMatch.getObject("srcArea");
+		EObject _localVariable_2 = isApplicableMatch.getObject("laodToLoad");
 		EObject _localVariable_3 = isApplicableMatch.getObject("trgControl");
-		EObject _localVariable_4 = isApplicableMatch.getObject("srcControl");
-		EObject _localVariable_5 = isApplicableMatch.getObject("srcArea");
-		EObject _localVariable_6 = isApplicableMatch.getObject("srcDeliver");
-		EObject _localVariable_7 = isApplicableMatch.getObject("laodToLoad");
-		EObject _localVariable_8 = isApplicableMatch.getObject("srcLoadArea");
-		EObject _localVariable_9 = isApplicableMatch.getObject("trgLoadArea");
-		EObject _localVariable_10 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_11 = isApplicableMatch.getObject("srcConsumer");
-		EObject tmpSrcGroup = _localVariable_0;
-		EObject tmpControlToControl = _localVariable_1;
-		EObject tmpAsset = _localVariable_2;
+		EObject _localVariable_4 = isApplicableMatch.getObject("trgLoadArea");
+		EObject _localVariable_5 = isApplicableMatch.getObject("asset");
+		EObject _localVariable_6 = isApplicableMatch.getObject("pair");
+		EObject _localVariable_7 = isApplicableMatch.getObject("srcConsumer");
+		EObject _localVariable_8 = isApplicableMatch.getObject("srcControl");
+		EObject _localVariable_9 = isApplicableMatch.getObject("controlToControl");
+		EObject _localVariable_10 = isApplicableMatch.getObject("srcGroup");
+		EObject _localVariable_11 = isApplicableMatch.getObject("srcLoadArea");
+		EObject tmpSrcDeliver = _localVariable_0;
+		EObject tmpSrcArea = _localVariable_1;
+		EObject tmpLaodToLoad = _localVariable_2;
 		EObject tmpTrgControl = _localVariable_3;
-		EObject tmpSrcControl = _localVariable_4;
-		EObject tmpSrcArea = _localVariable_5;
-		EObject tmpSrcDeliver = _localVariable_6;
-		EObject tmpLaodToLoad = _localVariable_7;
-		EObject tmpSrcLoadArea = _localVariable_8;
-		EObject tmpTrgLoadArea = _localVariable_9;
-		EObject tmpPair = _localVariable_10;
-		EObject tmpSrcConsumer = _localVariable_11;
-		if (tmpSrcGroup instanceof ConformLoadGroup) {
-			ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
-			if (tmpControlToControl instanceof ControlAreaToControlSrea) {
-				ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) tmpControlToControl;
-				if (tmpAsset instanceof MeterAsset) {
-					MeterAsset asset = (MeterAsset) tmpAsset;
+		EObject tmpTrgLoadArea = _localVariable_4;
+		EObject tmpAsset = _localVariable_5;
+		EObject tmpPair = _localVariable_6;
+		EObject tmpSrcConsumer = _localVariable_7;
+		EObject tmpSrcControl = _localVariable_8;
+		EObject tmpControlToControl = _localVariable_9;
+		EObject tmpSrcGroup = _localVariable_10;
+		EObject tmpSrcLoadArea = _localVariable_11;
+		if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
+			if (tmpSrcArea instanceof SubLoadArea) {
+				SubLoadArea srcArea = (SubLoadArea) tmpSrcArea;
+				if (tmpLaodToLoad instanceof LoadAreaToLoadArea) {
+					LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) tmpLaodToLoad;
 					if (tmpTrgControl instanceof outagePreventionJointarget.ControlArea) {
 						outagePreventionJointarget.ControlArea trgControl = (outagePreventionJointarget.ControlArea) tmpTrgControl;
-						if (tmpSrcControl instanceof ControlArea) {
-							ControlArea srcControl = (ControlArea) tmpSrcControl;
-							if (tmpSrcArea instanceof SubLoadArea) {
-								SubLoadArea srcArea = (SubLoadArea) tmpSrcArea;
-								if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-									ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-									if (tmpLaodToLoad instanceof LoadAreaToLoadArea) {
-										LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) tmpLaodToLoad;
-										if (tmpSrcLoadArea instanceof LoadArea) {
-											LoadArea srcLoadArea = (LoadArea) tmpSrcLoadArea;
-											if (tmpTrgLoadArea instanceof outagePreventionJointarget.LoadArea) {
-												outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) tmpTrgLoadArea;
-												if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-													MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-													if (tmpSrcConsumer instanceof ConformLoad) {
-														ConformLoad srcConsumer = (ConformLoad) tmpSrcConsumer;
-														return new Object[] { srcGroup, controlToControl, asset,
-																trgControl, srcControl, srcArea, srcDeliver, laodToLoad,
-																srcLoadArea, trgLoadArea, pair, srcConsumer,
+						if (tmpTrgLoadArea instanceof outagePreventionJointarget.LoadArea) {
+							outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) tmpTrgLoadArea;
+							if (tmpAsset instanceof MeterAsset) {
+								MeterAsset asset = (MeterAsset) tmpAsset;
+								if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+									MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+									if (tmpSrcConsumer instanceof ConformLoad) {
+										ConformLoad srcConsumer = (ConformLoad) tmpSrcConsumer;
+										if (tmpSrcControl instanceof ControlArea) {
+											ControlArea srcControl = (ControlArea) tmpSrcControl;
+											if (tmpControlToControl instanceof ControlAreaToControlSrea) {
+												ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) tmpControlToControl;
+												if (tmpSrcGroup instanceof ConformLoadGroup) {
+													ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
+													if (tmpSrcLoadArea instanceof LoadArea) {
+														LoadArea srcLoadArea = (LoadArea) tmpSrcLoadArea;
+														return new Object[] { srcDeliver, srcArea, laodToLoad,
+																trgControl, trgLoadArea, asset, pair, srcConsumer,
+																srcControl, controlToControl, srcGroup, srcLoadArea,
 																isApplicableMatch };
 													}
 												}
@@ -934,16 +932,17 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_1_1_performtransformation_blackBBBBBBBBBBBBFBB(
-			ConformLoadGroup srcGroup, ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
+			ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad,
+			outagePreventionJointarget.ControlArea trgControl, outagePreventionJointarget.LoadArea trgLoadArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ControlAreaToControlSrea controlToControl, ConformLoadGroup srcGroup, LoadArea srcLoadArea,
 			LoadAreaLinkControlArea _this, IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { srcGroup, controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver,
-						laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer, csp, _this, isApplicableMatch };
+				return new Object[] { srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair,
+						srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea, csp, _this,
+						isApplicableMatch };
 			}
 		}
 		return null;
@@ -954,27 +953,28 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 		Object[] result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding = pattern_LoadAreaLinkControlArea_1_1_performtransformation_bindingFFFFFFFFFFFFB(
 				isApplicableMatch);
 		if (result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding != null) {
-			ConformLoadGroup srcGroup = (ConformLoadGroup) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[0];
-			ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[1];
-			MeterAsset asset = (MeterAsset) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[2];
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[0];
+			SubLoadArea srcArea = (SubLoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[1];
+			LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[2];
 			outagePreventionJointarget.ControlArea trgControl = (outagePreventionJointarget.ControlArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[3];
-			ControlArea srcControl = (ControlArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[4];
-			SubLoadArea srcArea = (SubLoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[5];
-			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[6];
-			LoadAreaToLoadArea laodToLoad = (LoadAreaToLoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[7];
-			LoadArea srcLoadArea = (LoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[8];
-			outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[9];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[10];
-			ConformLoad srcConsumer = (ConformLoad) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[11];
+			outagePreventionJointarget.LoadArea trgLoadArea = (outagePreventionJointarget.LoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[4];
+			MeterAsset asset = (MeterAsset) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[5];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[6];
+			ConformLoad srcConsumer = (ConformLoad) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[7];
+			ControlArea srcControl = (ControlArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[8];
+			ControlAreaToControlSrea controlToControl = (ControlAreaToControlSrea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[9];
+			ConformLoadGroup srcGroup = (ConformLoadGroup) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[10];
+			LoadArea srcLoadArea = (LoadArea) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_binding[11];
 
 			Object[] result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_black = pattern_LoadAreaLinkControlArea_1_1_performtransformation_blackBBBBBBBBBBBBFBB(
-					srcGroup, controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver, laodToLoad,
-					srcLoadArea, trgLoadArea, pair, srcConsumer, _this, isApplicableMatch);
+					srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair, srcConsumer, srcControl,
+					controlToControl, srcGroup, srcLoadArea, _this, isApplicableMatch);
 			if (result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_LoadAreaLinkControlArea_1_1_performtransformation_black[12];
 
-				return new Object[] { srcGroup, controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver,
-						laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer, csp, _this, isApplicableMatch };
+				return new Object[] { srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair,
+						srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea, csp, _this,
+						isApplicableMatch };
 			}
 		}
 		return null;
@@ -992,135 +992,136 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_1_3_bookkeepingforedges_blackBBBBBBBBBBBBB(
-			PerformRuleResult ruleresult, EObject srcGroup, EObject controlToControl, EObject asset, EObject trgControl,
-			EObject srcControl, EObject srcArea, EObject srcDeliver, EObject laodToLoad, EObject srcLoadArea,
-			EObject trgLoadArea, EObject pair, EObject srcConsumer) {
-		if (!srcGroup.equals(trgControl)) {
-			if (!srcGroup.equals(srcLoadArea)) {
-				if (!srcGroup.equals(trgLoadArea)) {
-					if (!controlToControl.equals(srcGroup)) {
-						if (!controlToControl.equals(trgControl)) {
-							if (!controlToControl.equals(srcControl)) {
-								if (!controlToControl.equals(srcArea)) {
-									if (!controlToControl.equals(srcDeliver)) {
-										if (!controlToControl.equals(laodToLoad)) {
-											if (!controlToControl.equals(srcLoadArea)) {
-												if (!controlToControl.equals(trgLoadArea)) {
-													if (!controlToControl.equals(pair)) {
-														if (!controlToControl.equals(srcConsumer)) {
-															if (!asset.equals(srcGroup)) {
-																if (!asset.equals(controlToControl)) {
-																	if (!asset.equals(trgControl)) {
-																		if (!asset.equals(srcControl)) {
-																			if (!asset.equals(srcArea)) {
-																				if (!asset.equals(srcDeliver)) {
-																					if (!asset.equals(laodToLoad)) {
-																						if (!asset
-																								.equals(srcLoadArea)) {
+			PerformRuleResult ruleresult, EObject srcDeliver, EObject srcArea, EObject laodToLoad, EObject trgControl,
+			EObject trgLoadArea, EObject asset, EObject pair, EObject srcConsumer, EObject srcControl,
+			EObject controlToControl, EObject srcGroup, EObject srcLoadArea) {
+		if (!srcDeliver.equals(trgControl)) {
+			if (!srcDeliver.equals(trgLoadArea)) {
+				if (!srcDeliver.equals(srcGroup)) {
+					if (!srcDeliver.equals(srcLoadArea)) {
+						if (!srcArea.equals(srcDeliver)) {
+							if (!srcArea.equals(trgControl)) {
+								if (!srcArea.equals(trgLoadArea)) {
+									if (!srcArea.equals(srcConsumer)) {
+										if (!srcArea.equals(srcControl)) {
+											if (!srcArea.equals(srcGroup)) {
+												if (!srcArea.equals(srcLoadArea)) {
+													if (!laodToLoad.equals(srcDeliver)) {
+														if (!laodToLoad.equals(srcArea)) {
+															if (!laodToLoad.equals(trgControl)) {
+																if (!laodToLoad.equals(trgLoadArea)) {
+																	if (!laodToLoad.equals(pair)) {
+																		if (!laodToLoad.equals(srcConsumer)) {
+																			if (!laodToLoad.equals(srcControl)) {
+																				if (!laodToLoad.equals(srcGroup)) {
+																					if (!laodToLoad
+																							.equals(srcLoadArea)) {
+																						if (!trgControl
+																								.equals(trgLoadArea)) {
 																							if (!asset.equals(
-																									trgLoadArea)) {
-																								if (!asset
-																										.equals(pair)) {
+																									srcDeliver)) {
+																								if (!asset.equals(
+																										srcArea)) {
 																									if (!asset.equals(
-																											srcConsumer)) {
-																										if (!trgControl
-																												.equals(trgLoadArea)) {
-																											if (!srcControl
-																													.equals(srcGroup)) {
-																												if (!srcControl
-																														.equals(trgControl)) {
-																													if (!srcControl
-																															.equals(srcDeliver)) {
-																														if (!srcControl
-																																.equals(srcLoadArea)) {
-																															if (!srcControl
-																																	.equals(trgLoadArea)) {
-																																if (!srcArea
+																											laodToLoad)) {
+																										if (!asset
+																												.equals(trgControl)) {
+																											if (!asset
+																													.equals(trgLoadArea)) {
+																												if (!asset
+																														.equals(pair)) {
+																													if (!asset
+																															.equals(srcConsumer)) {
+																														if (!asset
+																																.equals(srcControl)) {
+																															if (!asset
+																																	.equals(controlToControl)) {
+																																if (!asset
 																																		.equals(srcGroup)) {
-																																	if (!srcArea
-																																			.equals(trgControl)) {
-																																		if (!srcArea
-																																				.equals(srcControl)) {
-																																			if (!srcArea
-																																					.equals(srcDeliver)) {
-																																				if (!srcArea
-																																						.equals(srcLoadArea)) {
-																																					if (!srcArea
+																																	if (!asset
+																																			.equals(srcLoadArea)) {
+																																		if (!pair
+																																				.equals(srcDeliver)) {
+																																			if (!pair
+																																					.equals(srcArea)) {
+																																				if (!pair
+																																						.equals(trgControl)) {
+																																					if (!pair
 																																							.equals(trgLoadArea)) {
-																																						if (!srcArea
+																																						if (!pair
 																																								.equals(srcConsumer)) {
-																																							if (!srcDeliver
-																																									.equals(srcGroup)) {
-																																								if (!srcDeliver
-																																										.equals(trgControl)) {
-																																									if (!srcDeliver
+																																							if (!pair
+																																									.equals(srcControl)) {
+																																								if (!pair
+																																										.equals(srcGroup)) {
+																																									if (!pair
 																																											.equals(srcLoadArea)) {
-																																										if (!srcDeliver
-																																												.equals(trgLoadArea)) {
-																																											if (!laodToLoad
-																																													.equals(srcGroup)) {
-																																												if (!laodToLoad
-																																														.equals(trgControl)) {
-																																													if (!laodToLoad
+																																										if (!srcConsumer
+																																												.equals(srcDeliver)) {
+																																											if (!srcConsumer
+																																													.equals(trgControl)) {
+																																												if (!srcConsumer
+																																														.equals(trgLoadArea)) {
+																																													if (!srcConsumer
 																																															.equals(srcControl)) {
-																																														if (!laodToLoad
-																																																.equals(srcArea)) {
-																																															if (!laodToLoad
-																																																	.equals(srcDeliver)) {
-																																																if (!laodToLoad
-																																																		.equals(srcLoadArea)) {
-																																																	if (!laodToLoad
-																																																			.equals(trgLoadArea)) {
-																																																		if (!laodToLoad
-																																																				.equals(pair)) {
-																																																			if (!laodToLoad
-																																																					.equals(srcConsumer)) {
-																																																				if (!srcLoadArea
-																																																						.equals(trgControl)) {
-																																																					if (!srcLoadArea
-																																																							.equals(trgLoadArea)) {
-																																																						if (!pair
-																																																								.equals(srcGroup)) {
-																																																							if (!pair
-																																																									.equals(trgControl)) {
-																																																								if (!pair
-																																																										.equals(srcControl)) {
-																																																									if (!pair
-																																																											.equals(srcArea)) {
-																																																										if (!pair
-																																																												.equals(srcDeliver)) {
-																																																											if (!pair
-																																																													.equals(srcLoadArea)) {
-																																																												if (!pair
-																																																														.equals(trgLoadArea)) {
-																																																													if (!pair
-																																																															.equals(srcConsumer)) {
-																																																														if (!srcConsumer
-																																																																.equals(srcGroup)) {
-																																																															if (!srcConsumer
+																																														if (!srcConsumer
+																																																.equals(srcGroup)) {
+																																															if (!srcConsumer
+																																																	.equals(srcLoadArea)) {
+																																																if (!srcControl
+																																																		.equals(srcDeliver)) {
+																																																	if (!srcControl
+																																																			.equals(trgControl)) {
+																																																		if (!srcControl
+																																																				.equals(trgLoadArea)) {
+																																																			if (!srcControl
+																																																					.equals(srcGroup)) {
+																																																				if (!srcControl
+																																																						.equals(srcLoadArea)) {
+																																																					if (!controlToControl
+																																																							.equals(srcDeliver)) {
+																																																						if (!controlToControl
+																																																								.equals(srcArea)) {
+																																																							if (!controlToControl
+																																																									.equals(laodToLoad)) {
+																																																								if (!controlToControl
+																																																										.equals(trgControl)) {
+																																																									if (!controlToControl
+																																																											.equals(trgLoadArea)) {
+																																																										if (!controlToControl
+																																																												.equals(pair)) {
+																																																											if (!controlToControl
+																																																													.equals(srcConsumer)) {
+																																																												if (!controlToControl
+																																																														.equals(srcControl)) {
+																																																													if (!controlToControl
+																																																															.equals(srcGroup)) {
+																																																														if (!controlToControl
+																																																																.equals(srcLoadArea)) {
+																																																															if (!srcGroup
 																																																																	.equals(trgControl)) {
-																																																																if (!srcConsumer
-																																																																		.equals(srcControl)) {
-																																																																	if (!srcConsumer
-																																																																			.equals(srcDeliver)) {
-																																																																		if (!srcConsumer
-																																																																				.equals(srcLoadArea)) {
-																																																																			if (!srcConsumer
+																																																																if (!srcGroup
+																																																																		.equals(trgLoadArea)) {
+																																																																	if (!srcGroup
+																																																																			.equals(srcLoadArea)) {
+																																																																		if (!srcLoadArea
+																																																																				.equals(trgControl)) {
+																																																																			if (!srcLoadArea
 																																																																					.equals(trgLoadArea)) {
 																																																																				return new Object[] {
 																																																																						ruleresult,
-																																																																						srcGroup,
-																																																																						controlToControl,
-																																																																						asset,
-																																																																						trgControl,
-																																																																						srcControl,
-																																																																						srcArea,
 																																																																						srcDeliver,
+																																																																						srcArea,
 																																																																						laodToLoad,
-																																																																						srcLoadArea,
+																																																																						trgControl,
 																																																																						trgLoadArea,
+																																																																						asset,
 																																																																						pair,
-																																																																						srcConsumer };
+																																																																						srcConsumer,
+																																																																						srcControl,
+																																																																						controlToControl,
+																																																																						srcGroup,
+																																																																						srcLoadArea };
 																																																																			}
 																																																																		}
 																																																																	}
@@ -1191,39 +1192,39 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_1_3_bookkeepingforedges_greenBBBBBFFF(
-			PerformRuleResult ruleresult, EObject trgControl, EObject srcControl, EObject srcLoadArea,
-			EObject trgLoadArea) {
+			PerformRuleResult ruleresult, EObject trgControl, EObject trgLoadArea, EObject srcControl,
+			EObject srcLoadArea) {
+		EMoflonEdge trgLoadArea__trgControl____ControlArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLoadArea__srcControl____ControlArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcControl__srcLoadArea____EnergyArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge trgLoadArea__trgControl____ControlArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		String ruleresult_ruleName_prime = "LoadAreaLinkControlArea";
+		String trgLoadArea__trgControl____ControlArea_name_prime = "ControlArea";
 		String srcLoadArea__srcControl____ControlArea_name_prime = "ControlArea";
 		String srcControl__srcLoadArea____EnergyArea_name_prime = "EnergyArea";
-		String trgLoadArea__trgControl____ControlArea_name_prime = "ControlArea";
+		trgLoadArea__trgControl____ControlArea.setSrc(trgLoadArea);
+		trgLoadArea__trgControl____ControlArea.setTrg(trgControl);
+		ruleresult.getCreatedEdges().add(trgLoadArea__trgControl____ControlArea);
 		srcLoadArea__srcControl____ControlArea.setSrc(srcLoadArea);
 		srcLoadArea__srcControl____ControlArea.setTrg(srcControl);
 		ruleresult.getTranslatedEdges().add(srcLoadArea__srcControl____ControlArea);
 		srcControl__srcLoadArea____EnergyArea.setSrc(srcControl);
 		srcControl__srcLoadArea____EnergyArea.setTrg(srcLoadArea);
 		ruleresult.getTranslatedEdges().add(srcControl__srcLoadArea____EnergyArea);
-		trgLoadArea__trgControl____ControlArea.setSrc(trgLoadArea);
-		trgLoadArea__trgControl____ControlArea.setTrg(trgControl);
-		ruleresult.getCreatedEdges().add(trgLoadArea__trgControl____ControlArea);
 		ruleresult.setRuleName(ruleresult_ruleName_prime);
+		trgLoadArea__trgControl____ControlArea.setName(trgLoadArea__trgControl____ControlArea_name_prime);
 		srcLoadArea__srcControl____ControlArea.setName(srcLoadArea__srcControl____ControlArea_name_prime);
 		srcControl__srcLoadArea____EnergyArea.setName(srcControl__srcLoadArea____EnergyArea_name_prime);
-		trgLoadArea__trgControl____ControlArea.setName(trgLoadArea__trgControl____ControlArea_name_prime);
-		return new Object[] { ruleresult, trgControl, srcControl, srcLoadArea, trgLoadArea,
-				srcLoadArea__srcControl____ControlArea, srcControl__srcLoadArea____EnergyArea,
-				trgLoadArea__trgControl____ControlArea };
+		return new Object[] { ruleresult, trgControl, trgLoadArea, srcControl, srcLoadArea,
+				trgLoadArea__trgControl____ControlArea, srcLoadArea__srcControl____ControlArea,
+				srcControl__srcLoadArea____EnergyArea };
 	}
 
 	public static final void pattern_LoadAreaLinkControlArea_1_5_registerobjects_expressionBBBBBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, PerformRuleResult ruleresult, EObject srcGroup, EObject controlToControl,
-			EObject asset, EObject trgControl, EObject srcControl, EObject srcArea, EObject srcDeliver,
-			EObject laodToLoad, EObject srcLoadArea, EObject trgLoadArea, EObject pair, EObject srcConsumer) {
-		_this.registerObjects_FWD(ruleresult, srcGroup, controlToControl, asset, trgControl, srcControl, srcArea,
-				srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer);
+			LoadAreaLinkControlArea _this, PerformRuleResult ruleresult, EObject srcDeliver, EObject srcArea,
+			EObject laodToLoad, EObject trgControl, EObject trgLoadArea, EObject asset, EObject pair,
+			EObject srcConsumer, EObject srcControl, EObject controlToControl, EObject srcGroup, EObject srcLoadArea) {
+		_this.registerObjects_FWD(ruleresult, srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair,
+				srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea);
 
 	}
 
@@ -1285,40 +1286,40 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_2_2_corematch_bindingFFFFFFFFB(Match match) {
-		EObject _localVariable_0 = match.getObject("srcGroup");
-		EObject _localVariable_1 = match.getObject("asset");
-		EObject _localVariable_2 = match.getObject("srcControl");
-		EObject _localVariable_3 = match.getObject("srcArea");
-		EObject _localVariable_4 = match.getObject("srcDeliver");
-		EObject _localVariable_5 = match.getObject("srcLoadArea");
-		EObject _localVariable_6 = match.getObject("pair");
-		EObject _localVariable_7 = match.getObject("srcConsumer");
-		EObject tmpSrcGroup = _localVariable_0;
-		EObject tmpAsset = _localVariable_1;
-		EObject tmpSrcControl = _localVariable_2;
-		EObject tmpSrcArea = _localVariable_3;
-		EObject tmpSrcDeliver = _localVariable_4;
-		EObject tmpSrcLoadArea = _localVariable_5;
-		EObject tmpPair = _localVariable_6;
-		EObject tmpSrcConsumer = _localVariable_7;
-		if (tmpSrcGroup instanceof ConformLoadGroup) {
-			ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
-			if (tmpAsset instanceof MeterAsset) {
-				MeterAsset asset = (MeterAsset) tmpAsset;
-				if (tmpSrcControl instanceof ControlArea) {
-					ControlArea srcControl = (ControlArea) tmpSrcControl;
-					if (tmpSrcArea instanceof SubLoadArea) {
-						SubLoadArea srcArea = (SubLoadArea) tmpSrcArea;
-						if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
-							ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
-							if (tmpSrcLoadArea instanceof LoadArea) {
-								LoadArea srcLoadArea = (LoadArea) tmpSrcLoadArea;
-								if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-									MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-									if (tmpSrcConsumer instanceof ConformLoad) {
-										ConformLoad srcConsumer = (ConformLoad) tmpSrcConsumer;
-										return new Object[] { srcGroup, asset, srcControl, srcArea, srcDeliver,
-												srcLoadArea, pair, srcConsumer, match };
+		EObject _localVariable_0 = match.getObject("srcDeliver");
+		EObject _localVariable_1 = match.getObject("srcArea");
+		EObject _localVariable_2 = match.getObject("asset");
+		EObject _localVariable_3 = match.getObject("pair");
+		EObject _localVariable_4 = match.getObject("srcConsumer");
+		EObject _localVariable_5 = match.getObject("srcControl");
+		EObject _localVariable_6 = match.getObject("srcGroup");
+		EObject _localVariable_7 = match.getObject("srcLoadArea");
+		EObject tmpSrcDeliver = _localVariable_0;
+		EObject tmpSrcArea = _localVariable_1;
+		EObject tmpAsset = _localVariable_2;
+		EObject tmpPair = _localVariable_3;
+		EObject tmpSrcConsumer = _localVariable_4;
+		EObject tmpSrcControl = _localVariable_5;
+		EObject tmpSrcGroup = _localVariable_6;
+		EObject tmpSrcLoadArea = _localVariable_7;
+		if (tmpSrcDeliver instanceof ServiceDeliveryPoint) {
+			ServiceDeliveryPoint srcDeliver = (ServiceDeliveryPoint) tmpSrcDeliver;
+			if (tmpSrcArea instanceof SubLoadArea) {
+				SubLoadArea srcArea = (SubLoadArea) tmpSrcArea;
+				if (tmpAsset instanceof MeterAsset) {
+					MeterAsset asset = (MeterAsset) tmpAsset;
+					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+						if (tmpSrcConsumer instanceof ConformLoad) {
+							ConformLoad srcConsumer = (ConformLoad) tmpSrcConsumer;
+							if (tmpSrcControl instanceof ControlArea) {
+								ControlArea srcControl = (ControlArea) tmpSrcControl;
+								if (tmpSrcGroup instanceof ConformLoadGroup) {
+									ConformLoadGroup srcGroup = (ConformLoadGroup) tmpSrcGroup;
+									if (tmpSrcLoadArea instanceof LoadArea) {
+										LoadArea srcLoadArea = (LoadArea) tmpSrcLoadArea;
+										return new Object[] { srcDeliver, srcArea, asset, pair, srcConsumer, srcControl,
+												srcGroup, srcLoadArea, match };
 									}
 								}
 							}
@@ -1330,10 +1331,10 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_LoadAreaLinkControlArea_2_2_corematch_blackBFBFBBBFBFBBB(
-			ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer, Match match) {
+	public static final Iterable<Object[]> pattern_LoadAreaLinkControlArea_2_2_corematch_blackBBFFFBBBBFBBB(
+			ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ConformLoadGroup srcGroup, LoadArea srcLoadArea,
+			Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
 		for (LoadAreaToLoadArea laodToLoad : org.moflon.core.utilities.eMoflonEMFUtil
 				.getOppositeReferenceTyped(srcLoadArea, LoadAreaToLoadArea.class, "source")) {
@@ -1343,8 +1344,8 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 						.getOppositeReferenceTyped(srcControl, ControlAreaToControlSrea.class, "source")) {
 					outagePreventionJointarget.ControlArea trgControl = controlToControl.getTarget();
 					if (trgControl != null) {
-						_result.add(new Object[] { srcGroup, controlToControl, asset, trgControl, srcControl, srcArea,
-								srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer, match });
+						_result.add(new Object[] { srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset,
+								pair, srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea, match });
 					}
 
 				}
@@ -1355,26 +1356,25 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Iterable<Object[]> pattern_LoadAreaLinkControlArea_2_3_findcontext_blackBBBBBBBBBBBB(
-			ConformLoadGroup srcGroup, ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
+			ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad,
+			outagePreventionJointarget.ControlArea trgControl, outagePreventionJointarget.LoadArea trgLoadArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ControlAreaToControlSrea controlToControl, ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (srcArea.equals(srcGroup.getSubLoadArea())) {
-			if (trgControl.equals(controlToControl.getTarget())) {
-				if (srcLoadArea.equals(srcArea.getLoadArea())) {
-					if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-						if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
-							if (srcLoadArea.equals(laodToLoad.getSource())) {
-								if (srcControl.equals(srcLoadArea.getControlArea())) {
-									if (srcControl.equals(controlToControl.getSource())) {
-										if (trgLoadArea.equals(laodToLoad.getTarget())) {
-											if (asset.equals(pair.getA())) {
-												if (srcGroup.equals(srcConsumer.getLoadGroup())) {
-													_result.add(new Object[] { srcGroup, controlToControl, asset,
-															trgControl, srcControl, srcArea, srcDeliver, laodToLoad,
-															srcLoadArea, trgLoadArea, pair, srcConsumer });
+		if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+			if (trgLoadArea.equals(laodToLoad.getTarget())) {
+				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+					if (asset.equals(pair.getA())) {
+						if (srcLoadArea.equals(srcArea.getLoadArea())) {
+							if (trgControl.equals(controlToControl.getTarget())) {
+								if (srcGroup.equals(srcConsumer.getLoadGroup())) {
+									if (srcArea.equals(srcGroup.getSubLoadArea())) {
+										if (srcLoadArea.equals(laodToLoad.getSource())) {
+											if (srcControl.equals(srcLoadArea.getControlArea())) {
+												if (srcControl.equals(controlToControl.getSource())) {
+													_result.add(new Object[] { srcDeliver, srcArea, laodToLoad,
+															trgControl, trgLoadArea, asset, pair, srcConsumer,
+															srcControl, controlToControl, srcGroup, srcLoadArea });
 												}
 											}
 										}
@@ -1390,85 +1390,96 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_2_3_findcontext_greenBBBBBBBBBBBBFFFFFFFFFFFFFFFFFF(
-			ConformLoadGroup srcGroup, ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
+			ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad,
+			outagePreventionJointarget.ControlArea trgControl, outagePreventionJointarget.LoadArea trgLoadArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ControlAreaToControlSrea controlToControl, ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
-		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge controlToControl__trgControl____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcArea__srcLoadArea____LoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcDeliver__srcConsumer____EnergyConsumer = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcConsumer__srcDeliver____ServiceDeliveryPoints = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge laodToLoad__trgLoadArea____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge asset__srcDeliver____ServiceDeliveryPoint = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcDeliver__asset____EndDeviceAssets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcArea__srcLoadArea____LoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcLoadArea__srcArea____SubLoadAreas = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge controlToControl__trgControl____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcGroup__srcArea____SubLoadArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		EMoflonEdge srcArea__srcGroup____LoadGroups = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge laodToLoad__srcLoadArea____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLoadArea__srcControl____ControlArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcControl__srcLoadArea____EnergyArea = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge controlToControl__srcControl____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge laodToLoad__trgLoadArea____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcConsumer__srcGroup____LoadGroup = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge srcGroup__srcConsumer____EnergyConsumers = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
-		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
-		String controlToControl__trgControl____target_name_prime = "target";
-		String srcArea__srcLoadArea____LoadArea_name_prime = "LoadArea";
-		String srcLoadArea__srcArea____SubLoadAreas_name_prime = "SubLoadAreas";
-		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
-		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
 		String srcDeliver__srcConsumer____EnergyConsumer_name_prime = "EnergyConsumer";
 		String srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime = "ServiceDeliveryPoints";
+		String laodToLoad__trgLoadArea____target_name_prime = "target";
+		String asset__srcDeliver____ServiceDeliveryPoint_name_prime = "ServiceDeliveryPoint";
+		String srcDeliver__asset____EndDeviceAssets_name_prime = "EndDeviceAssets";
+		String pair__asset____a_name_prime = "a";
+		String srcArea__srcLoadArea____LoadArea_name_prime = "LoadArea";
+		String srcLoadArea__srcArea____SubLoadAreas_name_prime = "SubLoadAreas";
+		String controlToControl__trgControl____target_name_prime = "target";
+		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
+		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
+		String srcGroup__srcArea____SubLoadArea_name_prime = "SubLoadArea";
+		String srcArea__srcGroup____LoadGroups_name_prime = "LoadGroups";
 		String laodToLoad__srcLoadArea____source_name_prime = "source";
 		String srcLoadArea__srcControl____ControlArea_name_prime = "ControlArea";
 		String srcControl__srcLoadArea____EnergyArea_name_prime = "EnergyArea";
 		String controlToControl__srcControl____source_name_prime = "source";
-		String laodToLoad__trgLoadArea____target_name_prime = "target";
-		String pair__asset____a_name_prime = "a";
-		String srcConsumer__srcGroup____LoadGroup_name_prime = "LoadGroup";
-		String srcGroup__srcConsumer____EnergyConsumers_name_prime = "EnergyConsumers";
-		isApplicableMatch.getAllContextElements().add(srcGroup);
-		isApplicableMatch.getAllContextElements().add(controlToControl);
-		isApplicableMatch.getAllContextElements().add(asset);
-		isApplicableMatch.getAllContextElements().add(trgControl);
-		isApplicableMatch.getAllContextElements().add(srcControl);
-		isApplicableMatch.getAllContextElements().add(srcArea);
 		isApplicableMatch.getAllContextElements().add(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(srcArea);
 		isApplicableMatch.getAllContextElements().add(laodToLoad);
-		isApplicableMatch.getAllContextElements().add(srcLoadArea);
+		isApplicableMatch.getAllContextElements().add(trgControl);
 		isApplicableMatch.getAllContextElements().add(trgLoadArea);
+		isApplicableMatch.getAllContextElements().add(asset);
 		isApplicableMatch.getAllContextElements().add(pair);
 		isApplicableMatch.getAllContextElements().add(srcConsumer);
-		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
-		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
-		isApplicableMatch.getAllContextElements().add(srcGroup__srcArea____SubLoadArea);
-		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
-		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
-		isApplicableMatch.getAllContextElements().add(srcArea__srcGroup____LoadGroups);
-		controlToControl__trgControl____target.setSrc(controlToControl);
-		controlToControl__trgControl____target.setTrg(trgControl);
-		isApplicableMatch.getAllContextElements().add(controlToControl__trgControl____target);
-		srcArea__srcLoadArea____LoadArea.setSrc(srcArea);
-		srcArea__srcLoadArea____LoadArea.setTrg(srcLoadArea);
-		isApplicableMatch.getAllContextElements().add(srcArea__srcLoadArea____LoadArea);
-		srcLoadArea__srcArea____SubLoadAreas.setSrc(srcLoadArea);
-		srcLoadArea__srcArea____SubLoadAreas.setTrg(srcArea);
-		isApplicableMatch.getAllContextElements().add(srcLoadArea__srcArea____SubLoadAreas);
-		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
-		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
-		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
-		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
-		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
+		isApplicableMatch.getAllContextElements().add(srcControl);
+		isApplicableMatch.getAllContextElements().add(controlToControl);
+		isApplicableMatch.getAllContextElements().add(srcGroup);
+		isApplicableMatch.getAllContextElements().add(srcLoadArea);
 		srcDeliver__srcConsumer____EnergyConsumer.setSrc(srcDeliver);
 		srcDeliver__srcConsumer____EnergyConsumer.setTrg(srcConsumer);
 		isApplicableMatch.getAllContextElements().add(srcDeliver__srcConsumer____EnergyConsumer);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setSrc(srcConsumer);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints.setTrg(srcDeliver);
 		isApplicableMatch.getAllContextElements().add(srcConsumer__srcDeliver____ServiceDeliveryPoints);
+		laodToLoad__trgLoadArea____target.setSrc(laodToLoad);
+		laodToLoad__trgLoadArea____target.setTrg(trgLoadArea);
+		isApplicableMatch.getAllContextElements().add(laodToLoad__trgLoadArea____target);
+		asset__srcDeliver____ServiceDeliveryPoint.setSrc(asset);
+		asset__srcDeliver____ServiceDeliveryPoint.setTrg(srcDeliver);
+		isApplicableMatch.getAllContextElements().add(asset__srcDeliver____ServiceDeliveryPoint);
+		srcDeliver__asset____EndDeviceAssets.setSrc(srcDeliver);
+		srcDeliver__asset____EndDeviceAssets.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(srcDeliver__asset____EndDeviceAssets);
+		pair__asset____a.setSrc(pair);
+		pair__asset____a.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(pair__asset____a);
+		srcArea__srcLoadArea____LoadArea.setSrc(srcArea);
+		srcArea__srcLoadArea____LoadArea.setTrg(srcLoadArea);
+		isApplicableMatch.getAllContextElements().add(srcArea__srcLoadArea____LoadArea);
+		srcLoadArea__srcArea____SubLoadAreas.setSrc(srcLoadArea);
+		srcLoadArea__srcArea____SubLoadAreas.setTrg(srcArea);
+		isApplicableMatch.getAllContextElements().add(srcLoadArea__srcArea____SubLoadAreas);
+		controlToControl__trgControl____target.setSrc(controlToControl);
+		controlToControl__trgControl____target.setTrg(trgControl);
+		isApplicableMatch.getAllContextElements().add(controlToControl__trgControl____target);
+		srcConsumer__srcGroup____LoadGroup.setSrc(srcConsumer);
+		srcConsumer__srcGroup____LoadGroup.setTrg(srcGroup);
+		isApplicableMatch.getAllContextElements().add(srcConsumer__srcGroup____LoadGroup);
+		srcGroup__srcConsumer____EnergyConsumers.setSrc(srcGroup);
+		srcGroup__srcConsumer____EnergyConsumers.setTrg(srcConsumer);
+		isApplicableMatch.getAllContextElements().add(srcGroup__srcConsumer____EnergyConsumers);
+		srcGroup__srcArea____SubLoadArea.setSrc(srcGroup);
+		srcGroup__srcArea____SubLoadArea.setTrg(srcArea);
+		isApplicableMatch.getAllContextElements().add(srcGroup__srcArea____SubLoadArea);
+		srcArea__srcGroup____LoadGroups.setSrc(srcArea);
+		srcArea__srcGroup____LoadGroups.setTrg(srcGroup);
+		isApplicableMatch.getAllContextElements().add(srcArea__srcGroup____LoadGroups);
 		laodToLoad__srcLoadArea____source.setSrc(laodToLoad);
 		laodToLoad__srcLoadArea____source.setTrg(srcLoadArea);
 		isApplicableMatch.getAllContextElements().add(laodToLoad__srcLoadArea____source);
@@ -1481,61 +1492,48 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 		controlToControl__srcControl____source.setSrc(controlToControl);
 		controlToControl__srcControl____source.setTrg(srcControl);
 		isApplicableMatch.getAllContextElements().add(controlToControl__srcControl____source);
-		laodToLoad__trgLoadArea____target.setSrc(laodToLoad);
-		laodToLoad__trgLoadArea____target.setTrg(trgLoadArea);
-		isApplicableMatch.getAllContextElements().add(laodToLoad__trgLoadArea____target);
-		pair__asset____a.setSrc(pair);
-		pair__asset____a.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(pair__asset____a);
-		srcConsumer__srcGroup____LoadGroup.setSrc(srcConsumer);
-		srcConsumer__srcGroup____LoadGroup.setTrg(srcGroup);
-		isApplicableMatch.getAllContextElements().add(srcConsumer__srcGroup____LoadGroup);
-		srcGroup__srcConsumer____EnergyConsumers.setSrc(srcGroup);
-		srcGroup__srcConsumer____EnergyConsumers.setTrg(srcConsumer);
-		isApplicableMatch.getAllContextElements().add(srcGroup__srcConsumer____EnergyConsumers);
-		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
-		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
-		controlToControl__trgControl____target.setName(controlToControl__trgControl____target_name_prime);
-		srcArea__srcLoadArea____LoadArea.setName(srcArea__srcLoadArea____LoadArea_name_prime);
-		srcLoadArea__srcArea____SubLoadAreas.setName(srcLoadArea__srcArea____SubLoadAreas_name_prime);
-		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
-		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
 		srcDeliver__srcConsumer____EnergyConsumer.setName(srcDeliver__srcConsumer____EnergyConsumer_name_prime);
 		srcConsumer__srcDeliver____ServiceDeliveryPoints
 				.setName(srcConsumer__srcDeliver____ServiceDeliveryPoints_name_prime);
+		laodToLoad__trgLoadArea____target.setName(laodToLoad__trgLoadArea____target_name_prime);
+		asset__srcDeliver____ServiceDeliveryPoint.setName(asset__srcDeliver____ServiceDeliveryPoint_name_prime);
+		srcDeliver__asset____EndDeviceAssets.setName(srcDeliver__asset____EndDeviceAssets_name_prime);
+		pair__asset____a.setName(pair__asset____a_name_prime);
+		srcArea__srcLoadArea____LoadArea.setName(srcArea__srcLoadArea____LoadArea_name_prime);
+		srcLoadArea__srcArea____SubLoadAreas.setName(srcLoadArea__srcArea____SubLoadAreas_name_prime);
+		controlToControl__trgControl____target.setName(controlToControl__trgControl____target_name_prime);
+		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
+		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
+		srcGroup__srcArea____SubLoadArea.setName(srcGroup__srcArea____SubLoadArea_name_prime);
+		srcArea__srcGroup____LoadGroups.setName(srcArea__srcGroup____LoadGroups_name_prime);
 		laodToLoad__srcLoadArea____source.setName(laodToLoad__srcLoadArea____source_name_prime);
 		srcLoadArea__srcControl____ControlArea.setName(srcLoadArea__srcControl____ControlArea_name_prime);
 		srcControl__srcLoadArea____EnergyArea.setName(srcControl__srcLoadArea____EnergyArea_name_prime);
 		controlToControl__srcControl____source.setName(controlToControl__srcControl____source_name_prime);
-		laodToLoad__trgLoadArea____target.setName(laodToLoad__trgLoadArea____target_name_prime);
-		pair__asset____a.setName(pair__asset____a_name_prime);
-		srcConsumer__srcGroup____LoadGroup.setName(srcConsumer__srcGroup____LoadGroup_name_prime);
-		srcGroup__srcConsumer____EnergyConsumers.setName(srcGroup__srcConsumer____EnergyConsumers_name_prime);
-		return new Object[] { srcGroup, controlToControl, asset, trgControl, srcControl, srcArea, srcDeliver,
-				laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer, isApplicableMatch,
-				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups,
-				controlToControl__trgControl____target, srcArea__srcLoadArea____LoadArea,
-				srcLoadArea__srcArea____SubLoadAreas, asset__srcDeliver____ServiceDeliveryPoint,
-				srcDeliver__asset____EndDeviceAssets, srcDeliver__srcConsumer____EnergyConsumer,
-				srcConsumer__srcDeliver____ServiceDeliveryPoints, laodToLoad__srcLoadArea____source,
+		return new Object[] { srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair, srcConsumer,
+				srcControl, controlToControl, srcGroup, srcLoadArea, isApplicableMatch,
+				srcDeliver__srcConsumer____EnergyConsumer, srcConsumer__srcDeliver____ServiceDeliveryPoints,
+				laodToLoad__trgLoadArea____target, asset__srcDeliver____ServiceDeliveryPoint,
+				srcDeliver__asset____EndDeviceAssets, pair__asset____a, srcArea__srcLoadArea____LoadArea,
+				srcLoadArea__srcArea____SubLoadAreas, controlToControl__trgControl____target,
+				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers,
+				srcGroup__srcArea____SubLoadArea, srcArea__srcGroup____LoadGroups, laodToLoad__srcLoadArea____source,
 				srcLoadArea__srcControl____ControlArea, srcControl__srcLoadArea____EnergyArea,
-				controlToControl__srcControl____source, laodToLoad__trgLoadArea____target, pair__asset____a,
-				srcConsumer__srcGroup____LoadGroup, srcGroup__srcConsumer____EnergyConsumers };
+				controlToControl__srcControl____source };
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_2_4_solveCSP_bindingFBBBBBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, IsApplicableMatch isApplicableMatch, ConformLoadGroup srcGroup,
-			ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
-		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcGroup, controlToControl, asset,
-				trgControl, srcControl, srcArea, srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer);
+			LoadAreaLinkControlArea _this, IsApplicableMatch isApplicableMatch, ServiceDeliveryPoint srcDeliver,
+			SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad, outagePreventionJointarget.ControlArea trgControl,
+			outagePreventionJointarget.LoadArea trgLoadArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ControlAreaToControlSrea controlToControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, srcDeliver, srcArea, laodToLoad,
+				trgControl, trgLoadArea, asset, pair, srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, srcGroup, controlToControl, asset, trgControl,
-					srcControl, srcArea, srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer };
+			return new Object[] { csp, _this, isApplicableMatch, srcDeliver, srcArea, laodToLoad, trgControl,
+					trgLoadArea, asset, pair, srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea };
 		}
 		return null;
 	}
@@ -1545,15 +1543,14 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_2_4_solveCSP_bindingAndBlackFBBBBBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, IsApplicableMatch isApplicableMatch, ConformLoadGroup srcGroup,
-			ControlAreaToControlSrea controlToControl, MeterAsset asset,
-			outagePreventionJointarget.ControlArea trgControl, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadAreaToLoadArea laodToLoad, LoadArea srcLoadArea,
-			outagePreventionJointarget.LoadArea trgLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
+			LoadAreaLinkControlArea _this, IsApplicableMatch isApplicableMatch, ServiceDeliveryPoint srcDeliver,
+			SubLoadArea srcArea, LoadAreaToLoadArea laodToLoad, outagePreventionJointarget.ControlArea trgControl,
+			outagePreventionJointarget.LoadArea trgLoadArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ControlAreaToControlSrea controlToControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
 		Object[] result_pattern_LoadAreaLinkControlArea_2_4_solveCSP_binding = pattern_LoadAreaLinkControlArea_2_4_solveCSP_bindingFBBBBBBBBBBBBBB(
-				_this, isApplicableMatch, srcGroup, controlToControl, asset, trgControl, srcControl, srcArea,
-				srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer);
+				_this, isApplicableMatch, srcDeliver, srcArea, laodToLoad, trgControl, trgLoadArea, asset, pair,
+				srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea);
 		if (result_pattern_LoadAreaLinkControlArea_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_LoadAreaLinkControlArea_2_4_solveCSP_binding[0];
 
@@ -1561,8 +1558,8 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 					csp);
 			if (result_pattern_LoadAreaLinkControlArea_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, srcGroup, controlToControl, asset, trgControl,
-						srcControl, srcArea, srcDeliver, laodToLoad, srcLoadArea, trgLoadArea, pair, srcConsumer };
+				return new Object[] { csp, _this, isApplicableMatch, srcDeliver, srcArea, laodToLoad, trgControl,
+						trgLoadArea, asset, pair, srcConsumer, srcControl, controlToControl, srcGroup, srcLoadArea };
 			}
 		}
 		return null;
@@ -1672,8 +1669,8 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 												for (MeterAssetPhysicalDevicePair pair : org.moflon.core.utilities.eMoflonEMFUtil
 														.getOppositeReferenceTyped(asset,
 																MeterAssetPhysicalDevicePair.class, "a")) {
-													_result.add(new Object[] { srcGroup, asset, srcControl, srcArea,
-															srcDeliver, srcLoadArea, pair, srcConsumer,
+													_result.add(new Object[] { srcDeliver, srcArea, asset, pair,
+															srcConsumer, srcControl, srcGroup, srcLoadArea,
 															_edge_ControlArea });
 												}
 											}
@@ -1701,11 +1698,11 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final boolean pattern_LoadAreaLinkControlArea_10_3_bookkeepingwithgenericisAppropriatemethod_expressionFBBBBBBBBBB(
-			LoadAreaLinkControlArea _this, Match match, ConformLoadGroup srcGroup, MeterAsset asset,
-			ControlArea srcControl, SubLoadArea srcArea, ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer) {
-		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcGroup, asset, srcControl, srcArea, srcDeliver,
-				srcLoadArea, pair, srcConsumer);
+			LoadAreaLinkControlArea _this, Match match, ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea,
+			MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer, ControlArea srcControl,
+			ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		boolean _localVariable_0 = _this.isAppropriate_FWD(match, srcDeliver, srcArea, asset, pair, srcConsumer,
+				srcControl, srcGroup, srcLoadArea);
 		boolean _result = Boolean.valueOf(_localVariable_0);
 		return _result;
 	}
@@ -1739,18 +1736,17 @@ public class LoadAreaLinkControlAreaImpl extends AbstractRuleImpl implements Loa
 	}
 
 	public static final Object[] pattern_LoadAreaLinkControlArea_13_1_matchtggpattern_blackBBBBBBBB(
-			ConformLoadGroup srcGroup, MeterAsset asset, ControlArea srcControl, SubLoadArea srcArea,
-			ServiceDeliveryPoint srcDeliver, LoadArea srcLoadArea, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer) {
-		if (srcArea.equals(srcGroup.getSubLoadArea())) {
-			if (srcLoadArea.equals(srcArea.getLoadArea())) {
-				if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
-					if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
-						if (srcControl.equals(srcLoadArea.getControlArea())) {
-							if (asset.equals(pair.getA())) {
-								if (srcGroup.equals(srcConsumer.getLoadGroup())) {
-									return new Object[] { srcGroup, asset, srcControl, srcArea, srcDeliver, srcLoadArea,
-											pair, srcConsumer };
+			ServiceDeliveryPoint srcDeliver, SubLoadArea srcArea, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
+			ConformLoad srcConsumer, ControlArea srcControl, ConformLoadGroup srcGroup, LoadArea srcLoadArea) {
+		if (srcConsumer.equals(srcDeliver.getEnergyConsumer())) {
+			if (srcDeliver.equals(asset.getServiceDeliveryPoint())) {
+				if (asset.equals(pair.getA())) {
+					if (srcLoadArea.equals(srcArea.getLoadArea())) {
+						if (srcGroup.equals(srcConsumer.getLoadGroup())) {
+							if (srcArea.equals(srcGroup.getSubLoadArea())) {
+								if (srcControl.equals(srcLoadArea.getControlArea())) {
+									return new Object[] { srcDeliver, srcArea, asset, pair, srcConsumer, srcControl,
+											srcGroup, srcLoadArea };
 								}
 							}
 						}

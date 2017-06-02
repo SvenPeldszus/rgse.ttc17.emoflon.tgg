@@ -130,7 +130,7 @@ public interface NonConformLoad extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_153(EMoflonEdge _edge_EnergyConsumer);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_15(EMoflonEdge _edge_EnergyConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -69,23 +69,13 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected RulesSwitch<Adapter> modelSwitch = new RulesSwitch<Adapter>() {
 		@Override
-		public Adapter caseEnergyConsumer(EnergyConsumer object) {
-			return createEnergyConsumerAdapter();
-		}
-
-		@Override
-		public Adapter caseEnergyConsumerWithIDNonConfLoad(EnergyConsumerWithIDNonConfLoad object) {
-			return createEnergyConsumerWithIDNonConfLoadAdapter();
-		}
-
-		@Override
-		public Adapter casePositionPointLink(PositionPointLink object) {
-			return createPositionPointLinkAdapter();
-		}
-
-		@Override
 		public Adapter caseLocation(Location object) {
 			return createLocationAdapter();
+		}
+
+		@Override
+		public Adapter casePositionPoint(PositionPoint object) {
+			return createPositionPointAdapter();
 		}
 
 		@Override
@@ -94,8 +84,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseZone(Zone object) {
-			return createZoneAdapter();
+		public Adapter casePositionPointLink(PositionPointLink object) {
+			return createPositionPointLinkAdapter();
 		}
 
 		@Override
@@ -104,13 +94,23 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseWorkLocation(WorkLocation object) {
+			return createWorkLocationAdapter();
+		}
+
+		@Override
+		public Adapter caseEnergyConsumer(EnergyConsumer object) {
+			return createEnergyConsumerAdapter();
+		}
+
+		@Override
 		public Adapter caseEnergyConsumerWithIDConfLoad(EnergyConsumerWithIDConfLoad object) {
 			return createEnergyConsumerWithIDConfLoadAdapter();
 		}
 
 		@Override
-		public Adapter casePositionPoint(PositionPoint object) {
-			return createPositionPointAdapter();
+		public Adapter caseEnergyConsumerWithIDNonConfLoad(EnergyConsumerWithIDNonConfLoad object) {
+			return createEnergyConsumerWithIDNonConfLoadAdapter();
 		}
 
 		@Override
@@ -129,8 +129,8 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseWorkLocation(WorkLocation object) {
-			return createWorkLocationAdapter();
+		public Adapter caseZone(Zone object) {
+			return createZoneAdapter();
 		}
 
 		@Override
@@ -158,48 +158,6 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer <em>Energy Consumer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer
-	 * @generated
-	 */
-	public Adapter createEnergyConsumerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad <em>Energy Consumer With ID Non Conf Load</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad
-	 * @generated
-	 */
-	public Adapter createEnergyConsumerWithIDNonConfLoadAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink <em>Position Point Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink
-	 * @generated
-	 */
-	public Adapter createPositionPointLinkAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -210,6 +168,20 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint <em>Position Point</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint
+	 * @generated
+	 */
+	public Adapter createPositionPointAdapter() {
 		return null;
 	}
 
@@ -228,16 +200,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone <em>Zone</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink <em>Position Point Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPointLink
 	 * @generated
 	 */
-	public Adapter createZoneAdapter() {
+	public Adapter createPositionPointLinkAdapter() {
 		return null;
 	}
 
@@ -256,6 +228,34 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation <em>Work Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation
+	 * @generated
+	 */
+	public Adapter createWorkLocationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer <em>Energy Consumer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumer
+	 * @generated
+	 */
+	public Adapter createEnergyConsumerAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDConfLoad <em>Energy Consumer With ID Conf Load</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -270,16 +270,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint <em>Position Point</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad <em>Energy Consumer With ID Non Conf Load</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.PositionPoint
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.EnergyConsumerWithIDNonConfLoad
 	 * @generated
 	 */
-	public Adapter createPositionPointAdapter() {
+	public Adapter createEnergyConsumerWithIDNonConfLoadAdapter() {
 		return null;
 	}
 
@@ -326,16 +326,16 @@ public class RulesAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation <em>Work Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link rgse.ttc17.emoflon.tgg.task1.Rules.Zone <em>Zone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.WorkLocation
+	 * @see rgse.ttc17.emoflon.tgg.task1.Rules.Zone
 	 * @generated
 	 */
-	public Adapter createWorkLocationAdapter() {
+	public Adapter createZoneAdapter() {
 		return null;
 	}
 

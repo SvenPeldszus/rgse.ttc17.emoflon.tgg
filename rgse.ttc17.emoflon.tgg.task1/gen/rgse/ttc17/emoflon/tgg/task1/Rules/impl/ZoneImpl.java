@@ -159,8 +159,8 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 		MeterAssetToEnergyConsumer assetToConumer = (MeterAssetToEnergyConsumer) result1_bindingAndBlack[0];
 		gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation = (gluemodel.CIM.IEC61970.Informative.InfLocations.Zone) result1_bindingAndBlack[1];
 		MeterAsset asset = (MeterAsset) result1_bindingAndBlack[2];
-		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[3];
-		EnergyConsumer consumer = (EnergyConsumer) result1_bindingAndBlack[4];
+		EnergyConsumer consumer = (EnergyConsumer) result1_bindingAndBlack[3];
+		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result1_bindingAndBlack[4];
 		// CSP csp = (CSP) result1_bindingAndBlack[5];
 		Object[] result1_green = ZoneImpl.pattern_Zone_1_1_performtransformation_greenFBBF(srcLocation, consumer);
 		Location trgLocation = (Location) result1_green[0];
@@ -180,12 +180,12 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 
 		// bookkeeping for edges
 		Object[] result3_black = ZoneImpl.pattern_Zone_1_3_bookkeepingforedges_blackBBBBBBBB(ruleresult, trgLocation,
-				assetToConumer, srcLocation, asset, pair, consumer, srcLocationCorr);
+				assetToConumer, srcLocation, asset, consumer, pair, srcLocationCorr);
 		if (result3_black == null) {
 			throw new RuntimeException("Pattern matching in node [bookkeeping for edges] failed." + " Variables: "
 					+ "[ruleresult] = " + ruleresult + ", " + "[trgLocation] = " + trgLocation + ", "
 					+ "[assetToConumer] = " + assetToConumer + ", " + "[srcLocation] = " + srcLocation + ", "
-					+ "[asset] = " + asset + ", " + "[pair] = " + pair + ", " + "[consumer] = " + consumer + ", "
+					+ "[asset] = " + asset + ", " + "[consumer] = " + consumer + ", " + "[pair] = " + pair + ", "
 					+ "[srcLocationCorr] = " + srcLocationCorr + ".");
 		}
 		ZoneImpl.pattern_Zone_1_3_bookkeepingforedges_greenBBBBBBFFFFF(ruleresult, trgLocation, srcLocation, asset,
@@ -199,7 +199,7 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 		// perform postprocessing story node is empty
 		// register objects
 		ZoneImpl.pattern_Zone_1_5_registerobjects_expressionBBBBBBBBB(this, ruleresult, trgLocation, assetToConumer,
-				srcLocation, asset, pair, consumer, srcLocationCorr);
+				srcLocation, asset, consumer, pair, srcLocationCorr);
 		return ZoneImpl.pattern_Zone_1_6_expressionFB(ruleresult);
 	}
 
@@ -229,31 +229,31 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 		gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation = (gluemodel.CIM.IEC61970.Informative.InfLocations.Zone) result2_binding[0];
 		MeterAsset asset = (MeterAsset) result2_binding[1];
 		MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result2_binding[2];
-		for (Object[] result2_black : ZoneImpl.pattern_Zone_2_2_corematch_blackFBBBFB(srcLocation, asset, pair,
+		for (Object[] result2_black : ZoneImpl.pattern_Zone_2_2_corematch_blackFBBFBB(srcLocation, asset, pair,
 				match)) {
 			MeterAssetToEnergyConsumer assetToConumer = (MeterAssetToEnergyConsumer) result2_black[0];
-			EnergyConsumer consumer = (EnergyConsumer) result2_black[4];
+			EnergyConsumer consumer = (EnergyConsumer) result2_black[3];
 			// ForEach find context
 			for (Object[] result3_black : ZoneImpl.pattern_Zone_2_3_findcontext_blackBBBBB(assetToConumer, srcLocation,
-					asset, pair, consumer)) {
+					asset, consumer, pair)) {
 				Object[] result3_green = ZoneImpl.pattern_Zone_2_3_findcontext_greenBBBBBFFFFFF(assetToConumer,
-						srcLocation, asset, pair, consumer);
+						srcLocation, asset, consumer, pair);
 				IsApplicableMatch isApplicableMatch = (IsApplicableMatch) result3_green[5];
-				// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result3_green[6];
-				// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result3_green[7];
-				// EMoflonEdge assetToConumer__asset____source = (EMoflonEdge) result3_green[8];
+				// EMoflonEdge assetToConumer__asset____source = (EMoflonEdge) result3_green[6];
+				// EMoflonEdge asset__srcLocation____Location = (EMoflonEdge) result3_green[7];
+				// EMoflonEdge srcLocation__asset____Assets = (EMoflonEdge) result3_green[8];
 				// EMoflonEdge assetToConumer__consumer____target = (EMoflonEdge) result3_green[9];
 				// EMoflonEdge pair__asset____a = (EMoflonEdge) result3_green[10];
 
 				// solve CSP
 				Object[] result4_bindingAndBlack = ZoneImpl.pattern_Zone_2_4_solveCSP_bindingAndBlackFBBBBBBB(this,
-						isApplicableMatch, assetToConumer, srcLocation, asset, pair, consumer);
+						isApplicableMatch, assetToConumer, srcLocation, asset, consumer, pair);
 				if (result4_bindingAndBlack == null) {
 					throw new RuntimeException(
 							"Pattern matching in node [solve CSP] failed." + " Variables: " + "[this] = " + this + ", "
 									+ "[isApplicableMatch] = " + isApplicableMatch + ", " + "[assetToConumer] = "
 									+ assetToConumer + ", " + "[srcLocation] = " + srcLocation + ", " + "[asset] = "
-									+ asset + ", " + "[pair] = " + pair + ", " + "[consumer] = " + consumer + ".");
+									+ asset + ", " + "[consumer] = " + consumer + ", " + "[pair] = " + pair + ".");
 				}
 				CSP csp = (CSP) result4_bindingAndBlack[0];
 				// check CSP
@@ -328,8 +328,8 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 	 * @generated
 	 */
 	public CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAssetToEnergyConsumer assetToConumer,
-			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer) {// Create CSP
+			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset, EnergyConsumer consumer,
+			MeterAssetPhysicalDevicePair pair) {// Create CSP
 		CSP csp = CspFactory.eINSTANCE.createCSP();
 		isApplicableMatch.getAttributeInfo().add(csp);
 
@@ -347,8 +347,8 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 		isApplicableMatch.registerObject("assetToConumer", assetToConumer);
 		isApplicableMatch.registerObject("srcLocation", srcLocation);
 		isApplicableMatch.registerObject("asset", asset);
-		isApplicableMatch.registerObject("pair", pair);
 		isApplicableMatch.registerObject("consumer", consumer);
+		isApplicableMatch.registerObject("pair", pair);
 		return csp;
 	}
 
@@ -367,13 +367,13 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 	 * @generated
 	 */
 	public void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgLocation, EObject assetToConumer,
-			EObject srcLocation, EObject asset, EObject pair, EObject consumer, EObject srcLocationCorr) {
+			EObject srcLocation, EObject asset, EObject consumer, EObject pair, EObject srcLocationCorr) {
 		ruleresult.registerObject("trgLocation", trgLocation);
 		ruleresult.registerObject("assetToConumer", assetToConumer);
 		ruleresult.registerObject("srcLocation", srcLocation);
 		ruleresult.registerObject("asset", asset);
-		ruleresult.registerObject("pair", pair);
 		ruleresult.registerObject("consumer", consumer);
+		ruleresult.registerObject("pair", pair);
 		ruleresult.registerObject("srcLocationCorr", srcLocationCorr);
 
 	}
@@ -393,7 +393,7 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObjectContainer isAppropriate_FWD_EMoflonEdge_136(EMoflonEdge _edge_Location) {
+	public EObjectContainer isAppropriate_FWD_EMoflonEdge_12(EMoflonEdge _edge_Location) {
 		// prepare return value
 		Object[] result1_bindingAndBlack = ZoneImpl.pattern_Zone_10_1_preparereturnvalue_bindingAndBlackFFBF(this);
 		if (result1_bindingAndBlack == null) {
@@ -528,12 +528,12 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 					(MeterAsset) arguments.get(2), (MeterAssetPhysicalDevicePair) arguments.get(3));
 		case RulesPackage.ZONE___IS_APPROPRIATE_CHECK_CSP_FWD__CSP:
 			return isAppropriate_checkCsp_FWD((CSP) arguments.get(0));
-		case RulesPackage.ZONE___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_ZONE_METERASSET_METERASSETPHYSICALDEVICEPAIR_ENERGYCONSUMER:
+		case RulesPackage.ZONE___IS_APPLICABLE_SOLVE_CSP_FWD__ISAPPLICABLEMATCH_METERASSETTOENERGYCONSUMER_ZONE_METERASSET_ENERGYCONSUMER_METERASSETPHYSICALDEVICEPAIR:
 			return isApplicable_solveCsp_FWD((IsApplicableMatch) arguments.get(0),
 					(MeterAssetToEnergyConsumer) arguments.get(1),
 					(gluemodel.CIM.IEC61970.Informative.InfLocations.Zone) arguments.get(2),
-					(MeterAsset) arguments.get(3), (MeterAssetPhysicalDevicePair) arguments.get(4),
-					(EnergyConsumer) arguments.get(5));
+					(MeterAsset) arguments.get(3), (EnergyConsumer) arguments.get(4),
+					(MeterAssetPhysicalDevicePair) arguments.get(5));
 		case RulesPackage.ZONE___IS_APPLICABLE_CHECK_CSP_FWD__CSP:
 			return isApplicable_checkCsp_FWD((CSP) arguments.get(0));
 		case RulesPackage.ZONE___REGISTER_OBJECTS_FWD__PERFORMRULERESULT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT_EOBJECT:
@@ -543,8 +543,8 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 			return null;
 		case RulesPackage.ZONE___CHECK_TYPES_FWD__MATCH:
 			return checkTypes_FWD((Match) arguments.get(0));
-		case RulesPackage.ZONE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_136__EMOFLONEDGE:
-			return isAppropriate_FWD_EMoflonEdge_136((EMoflonEdge) arguments.get(0));
+		case RulesPackage.ZONE___IS_APPROPRIATE_FWD_EMOFLON_EDGE_12__EMOFLONEDGE:
+			return isAppropriate_FWD_EMoflonEdge_12((EMoflonEdge) arguments.get(0));
 		case RulesPackage.ZONE___CHECK_ATTRIBUTES_FWD__TRIPLEMATCH:
 			return checkAttributes_FWD((TripleMatch) arguments.get(0));
 		case RulesPackage.ZONE___IS_APPLICABLE_CC__MATCH_MATCH:
@@ -665,24 +665,24 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 		EObject _localVariable_0 = isApplicableMatch.getObject("assetToConumer");
 		EObject _localVariable_1 = isApplicableMatch.getObject("srcLocation");
 		EObject _localVariable_2 = isApplicableMatch.getObject("asset");
-		EObject _localVariable_3 = isApplicableMatch.getObject("pair");
-		EObject _localVariable_4 = isApplicableMatch.getObject("consumer");
+		EObject _localVariable_3 = isApplicableMatch.getObject("consumer");
+		EObject _localVariable_4 = isApplicableMatch.getObject("pair");
 		EObject tmpAssetToConumer = _localVariable_0;
 		EObject tmpSrcLocation = _localVariable_1;
 		EObject tmpAsset = _localVariable_2;
-		EObject tmpPair = _localVariable_3;
-		EObject tmpConsumer = _localVariable_4;
+		EObject tmpConsumer = _localVariable_3;
+		EObject tmpPair = _localVariable_4;
 		if (tmpAssetToConumer instanceof MeterAssetToEnergyConsumer) {
 			MeterAssetToEnergyConsumer assetToConumer = (MeterAssetToEnergyConsumer) tmpAssetToConumer;
 			if (tmpSrcLocation instanceof gluemodel.CIM.IEC61970.Informative.InfLocations.Zone) {
 				gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation = (gluemodel.CIM.IEC61970.Informative.InfLocations.Zone) tmpSrcLocation;
 				if (tmpAsset instanceof MeterAsset) {
 					MeterAsset asset = (MeterAsset) tmpAsset;
-					if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
-						MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
-						if (tmpConsumer instanceof EnergyConsumer) {
-							EnergyConsumer consumer = (EnergyConsumer) tmpConsumer;
-							return new Object[] { assetToConumer, srcLocation, asset, pair, consumer,
+					if (tmpConsumer instanceof EnergyConsumer) {
+						EnergyConsumer consumer = (EnergyConsumer) tmpConsumer;
+						if (tmpPair instanceof MeterAssetPhysicalDevicePair) {
+							MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) tmpPair;
+							return new Object[] { assetToConumer, srcLocation, asset, consumer, pair,
 									isApplicableMatch };
 						}
 					}
@@ -694,12 +694,12 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 
 	public static final Object[] pattern_Zone_1_1_performtransformation_blackBBBBBFBB(
 			MeterAssetToEnergyConsumer assetToConumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer, Zone _this,
+			MeterAsset asset, EnergyConsumer consumer, MeterAssetPhysicalDevicePair pair, Zone _this,
 			IsApplicableMatch isApplicableMatch) {
 		for (EObject tmpCsp : isApplicableMatch.getAttributeInfo()) {
 			if (tmpCsp instanceof CSP) {
 				CSP csp = (CSP) tmpCsp;
-				return new Object[] { assetToConumer, srcLocation, asset, pair, consumer, csp, _this,
+				return new Object[] { assetToConumer, srcLocation, asset, consumer, pair, csp, _this,
 						isApplicableMatch };
 			}
 		}
@@ -714,15 +714,15 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 			MeterAssetToEnergyConsumer assetToConumer = (MeterAssetToEnergyConsumer) result_pattern_Zone_1_1_performtransformation_binding[0];
 			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation = (gluemodel.CIM.IEC61970.Informative.InfLocations.Zone) result_pattern_Zone_1_1_performtransformation_binding[1];
 			MeterAsset asset = (MeterAsset) result_pattern_Zone_1_1_performtransformation_binding[2];
-			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_Zone_1_1_performtransformation_binding[3];
-			EnergyConsumer consumer = (EnergyConsumer) result_pattern_Zone_1_1_performtransformation_binding[4];
+			EnergyConsumer consumer = (EnergyConsumer) result_pattern_Zone_1_1_performtransformation_binding[3];
+			MeterAssetPhysicalDevicePair pair = (MeterAssetPhysicalDevicePair) result_pattern_Zone_1_1_performtransformation_binding[4];
 
 			Object[] result_pattern_Zone_1_1_performtransformation_black = pattern_Zone_1_1_performtransformation_blackBBBBBFBB(
-					assetToConumer, srcLocation, asset, pair, consumer, _this, isApplicableMatch);
+					assetToConumer, srcLocation, asset, consumer, pair, _this, isApplicableMatch);
 			if (result_pattern_Zone_1_1_performtransformation_black != null) {
 				CSP csp = (CSP) result_pattern_Zone_1_1_performtransformation_black[5];
 
-				return new Object[] { assetToConumer, srcLocation, asset, pair, consumer, csp, _this,
+				return new Object[] { assetToConumer, srcLocation, asset, consumer, pair, csp, _this,
 						isApplicableMatch };
 			}
 		}
@@ -754,29 +754,28 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 	}
 
 	public static final Object[] pattern_Zone_1_3_bookkeepingforedges_blackBBBBBBBB(PerformRuleResult ruleresult,
-			EObject trgLocation, EObject assetToConumer, EObject srcLocation, EObject asset, EObject pair,
-			EObject consumer, EObject srcLocationCorr) {
+			EObject trgLocation, EObject assetToConumer, EObject srcLocation, EObject asset, EObject consumer,
+			EObject pair, EObject srcLocationCorr) {
 		if (!assetToConumer.equals(trgLocation)) {
 			if (!assetToConumer.equals(srcLocation)) {
-				if (!assetToConumer.equals(pair)) {
-					if (!assetToConumer.equals(consumer)) {
+				if (!assetToConumer.equals(consumer)) {
+					if (!assetToConumer.equals(pair)) {
 						if (!assetToConumer.equals(srcLocationCorr)) {
 							if (!srcLocation.equals(trgLocation)) {
 								if (!srcLocation.equals(srcLocationCorr)) {
 									if (!asset.equals(trgLocation)) {
 										if (!asset.equals(assetToConumer)) {
 											if (!asset.equals(srcLocation)) {
-												if (!asset.equals(pair)) {
-													if (!asset.equals(consumer)) {
+												if (!asset.equals(consumer)) {
+													if (!asset.equals(pair)) {
 														if (!asset.equals(srcLocationCorr)) {
-															if (!pair.equals(trgLocation)) {
-																if (!pair.equals(srcLocation)) {
-																	if (!pair.equals(srcLocationCorr)) {
-																		if (!consumer.equals(trgLocation)) {
-																			if (!consumer.equals(srcLocation)) {
-																				if (!consumer.equals(pair)) {
-																					if (!consumer
-																							.equals(srcLocationCorr)) {
+															if (!consumer.equals(trgLocation)) {
+																if (!consumer.equals(srcLocation)) {
+																	if (!consumer.equals(pair)) {
+																		if (!consumer.equals(srcLocationCorr)) {
+																			if (!pair.equals(trgLocation)) {
+																				if (!pair.equals(srcLocation)) {
+																					if (!pair.equals(srcLocationCorr)) {
 																						if (!srcLocationCorr
 																								.equals(trgLocation)) {
 																							return new Object[] {
@@ -784,7 +783,7 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 																									trgLocation,
 																									assetToConumer,
 																									srcLocation, asset,
-																									pair, consumer,
+																									consumer, pair,
 																									srcLocationCorr };
 																						}
 																					}
@@ -851,8 +850,8 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 
 	public static final void pattern_Zone_1_5_registerobjects_expressionBBBBBBBBB(Zone _this,
 			PerformRuleResult ruleresult, EObject trgLocation, EObject assetToConumer, EObject srcLocation,
-			EObject asset, EObject pair, EObject consumer, EObject srcLocationCorr) {
-		_this.registerObjects_FWD(ruleresult, trgLocation, assetToConumer, srcLocation, asset, pair, consumer,
+			EObject asset, EObject consumer, EObject pair, EObject srcLocationCorr) {
+		_this.registerObjects_FWD(ruleresult, trgLocation, assetToConumer, srcLocation, asset, consumer, pair,
 				srcLocationCorr);
 
 	}
@@ -929,7 +928,7 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 		return null;
 	}
 
-	public static final Iterable<Object[]> pattern_Zone_2_2_corematch_blackFBBBFB(
+	public static final Iterable<Object[]> pattern_Zone_2_2_corematch_blackFBBFBB(
 			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset,
 			MeterAssetPhysicalDevicePair pair, Match match) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
@@ -937,7 +936,7 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 				.getOppositeReferenceTyped(asset, MeterAssetToEnergyConsumer.class, "source")) {
 			EnergyConsumer consumer = assetToConumer.getTarget();
 			if (consumer != null) {
-				_result.add(new Object[] { assetToConumer, srcLocation, asset, pair, consumer, match });
+				_result.add(new Object[] { assetToConumer, srcLocation, asset, consumer, pair, match });
 			}
 
 		}
@@ -946,13 +945,13 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 
 	public static final Iterable<Object[]> pattern_Zone_2_3_findcontext_blackBBBBB(
 			MeterAssetToEnergyConsumer assetToConumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer) {
+			MeterAsset asset, EnergyConsumer consumer, MeterAssetPhysicalDevicePair pair) {
 		LinkedList<Object[]> _result = new LinkedList<Object[]>();
-		if (srcLocation.equals(asset.getLocation())) {
-			if (asset.equals(assetToConumer.getSource())) {
+		if (asset.equals(assetToConumer.getSource())) {
+			if (srcLocation.equals(asset.getLocation())) {
 				if (consumer.equals(assetToConumer.getTarget())) {
 					if (asset.equals(pair.getA())) {
-						_result.add(new Object[] { assetToConumer, srcLocation, asset, pair, consumer });
+						_result.add(new Object[] { assetToConumer, srcLocation, asset, consumer, pair });
 					}
 				}
 			}
@@ -962,57 +961,57 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 
 	public static final Object[] pattern_Zone_2_3_findcontext_greenBBBBBFFFFFF(
 			MeterAssetToEnergyConsumer assetToConumer, gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation,
-			MeterAsset asset, MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer) {
+			MeterAsset asset, EnergyConsumer consumer, MeterAssetPhysicalDevicePair pair) {
 		IsApplicableMatch isApplicableMatch = RuntimeFactory.eINSTANCE.createIsApplicableMatch();
+		EMoflonEdge assetToConumer__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge asset__srcLocation____Location = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge srcLocation__asset____Assets = RuntimeFactory.eINSTANCE.createEMoflonEdge();
-		EMoflonEdge assetToConumer__asset____source = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge assetToConumer__consumer____target = RuntimeFactory.eINSTANCE.createEMoflonEdge();
 		EMoflonEdge pair__asset____a = RuntimeFactory.eINSTANCE.createEMoflonEdge();
+		String assetToConumer__asset____source_name_prime = "source";
 		String asset__srcLocation____Location_name_prime = "Location";
 		String srcLocation__asset____Assets_name_prime = "Assets";
-		String assetToConumer__asset____source_name_prime = "source";
 		String assetToConumer__consumer____target_name_prime = "target";
 		String pair__asset____a_name_prime = "a";
 		isApplicableMatch.getAllContextElements().add(assetToConumer);
 		isApplicableMatch.getAllContextElements().add(srcLocation);
 		isApplicableMatch.getAllContextElements().add(asset);
-		isApplicableMatch.getAllContextElements().add(pair);
 		isApplicableMatch.getAllContextElements().add(consumer);
+		isApplicableMatch.getAllContextElements().add(pair);
+		assetToConumer__asset____source.setSrc(assetToConumer);
+		assetToConumer__asset____source.setTrg(asset);
+		isApplicableMatch.getAllContextElements().add(assetToConumer__asset____source);
 		asset__srcLocation____Location.setSrc(asset);
 		asset__srcLocation____Location.setTrg(srcLocation);
 		isApplicableMatch.getAllContextElements().add(asset__srcLocation____Location);
 		srcLocation__asset____Assets.setSrc(srcLocation);
 		srcLocation__asset____Assets.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(srcLocation__asset____Assets);
-		assetToConumer__asset____source.setSrc(assetToConumer);
-		assetToConumer__asset____source.setTrg(asset);
-		isApplicableMatch.getAllContextElements().add(assetToConumer__asset____source);
 		assetToConumer__consumer____target.setSrc(assetToConumer);
 		assetToConumer__consumer____target.setTrg(consumer);
 		isApplicableMatch.getAllContextElements().add(assetToConumer__consumer____target);
 		pair__asset____a.setSrc(pair);
 		pair__asset____a.setTrg(asset);
 		isApplicableMatch.getAllContextElements().add(pair__asset____a);
+		assetToConumer__asset____source.setName(assetToConumer__asset____source_name_prime);
 		asset__srcLocation____Location.setName(asset__srcLocation____Location_name_prime);
 		srcLocation__asset____Assets.setName(srcLocation__asset____Assets_name_prime);
-		assetToConumer__asset____source.setName(assetToConumer__asset____source_name_prime);
 		assetToConumer__consumer____target.setName(assetToConumer__consumer____target_name_prime);
 		pair__asset____a.setName(pair__asset____a_name_prime);
-		return new Object[] { assetToConumer, srcLocation, asset, pair, consumer, isApplicableMatch,
-				asset__srcLocation____Location, srcLocation__asset____Assets, assetToConumer__asset____source,
+		return new Object[] { assetToConumer, srcLocation, asset, consumer, pair, isApplicableMatch,
+				assetToConumer__asset____source, asset__srcLocation____Location, srcLocation__asset____Assets,
 				assetToConumer__consumer____target, pair__asset____a };
 	}
 
 	public static final Object[] pattern_Zone_2_4_solveCSP_bindingFBBBBBBB(Zone _this,
 			IsApplicableMatch isApplicableMatch, MeterAssetToEnergyConsumer assetToConumer,
-			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer) {
+			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset, EnergyConsumer consumer,
+			MeterAssetPhysicalDevicePair pair) {
 		CSP _localVariable_0 = _this.isApplicable_solveCsp_FWD(isApplicableMatch, assetToConumer, srcLocation, asset,
-				pair, consumer);
+				consumer, pair);
 		CSP csp = _localVariable_0;
 		if (csp != null) {
-			return new Object[] { csp, _this, isApplicableMatch, assetToConumer, srcLocation, asset, pair, consumer };
+			return new Object[] { csp, _this, isApplicableMatch, assetToConumer, srcLocation, asset, consumer, pair };
 		}
 		return null;
 	}
@@ -1023,18 +1022,18 @@ public class ZoneImpl extends AbstractRuleImpl implements Zone {
 
 	public static final Object[] pattern_Zone_2_4_solveCSP_bindingAndBlackFBBBBBBB(Zone _this,
 			IsApplicableMatch isApplicableMatch, MeterAssetToEnergyConsumer assetToConumer,
-			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, EnergyConsumer consumer) {
+			gluemodel.CIM.IEC61970.Informative.InfLocations.Zone srcLocation, MeterAsset asset, EnergyConsumer consumer,
+			MeterAssetPhysicalDevicePair pair) {
 		Object[] result_pattern_Zone_2_4_solveCSP_binding = pattern_Zone_2_4_solveCSP_bindingFBBBBBBB(_this,
-				isApplicableMatch, assetToConumer, srcLocation, asset, pair, consumer);
+				isApplicableMatch, assetToConumer, srcLocation, asset, consumer, pair);
 		if (result_pattern_Zone_2_4_solveCSP_binding != null) {
 			CSP csp = (CSP) result_pattern_Zone_2_4_solveCSP_binding[0];
 
 			Object[] result_pattern_Zone_2_4_solveCSP_black = pattern_Zone_2_4_solveCSP_blackB(csp);
 			if (result_pattern_Zone_2_4_solveCSP_black != null) {
 
-				return new Object[] { csp, _this, isApplicableMatch, assetToConumer, srcLocation, asset, pair,
-						consumer };
+				return new Object[] { csp, _this, isApplicableMatch, assetToConumer, srcLocation, asset, consumer,
+						pair };
 			}
 		}
 		return null;

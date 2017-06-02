@@ -44,8 +44,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, ConformLoad srcConsumer,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,9 +70,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ConformLoad srcConsumer,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,9 +80,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ConformLoad srcConsumer,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,10 +98,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset,
-			EnergyConsumerToEnergyConsumer consumerToConsumer, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup,
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset, ConformLoad srcConsumer,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, EnergyConsumerToEnergyConsumer consumerToConsumer,
 			outagePreventionJointarget.ConformLoad trgConsumer);
 
 	/**
@@ -117,9 +117,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgGroup, EObject asset, EObject consumerToConsumer,
-			EObject pair, EObject groupToGroup, EObject srcConsumer, EObject srcDeliver, EObject srcGroup,
-			EObject trgConsumer);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject srcConsumer, EObject srcGroup,
+			EObject pair, EObject groupToGroup, EObject srcDeliver, EObject consumerToConsumer, EObject trgConsumer,
+			EObject trgGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,7 +135,7 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_145(EMoflonEdge _edge_LoadGroup);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_23(EMoflonEdge _edge_LoadGroup);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,8 +159,9 @@ public interface ConformLoadGroup extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer,
-			ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup);
+	boolean checkDEC_FWD(MeterAsset asset, ConformLoad srcConsumer,
+			gluemodel.CIM.IEC61970.LoadModel.ConformLoadGroup srcGroup, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

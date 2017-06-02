@@ -41,7 +41,7 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, MMXU mmxu, MeterAsset asset, MeterAssetMMXUPair pair);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, MeterAssetMMXUPair pair, MMXU mmxu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, MMXU mmxu, MeterAsset asset, MeterAssetMMXUPair pair);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, MeterAssetMMXUPair pair, MMXU mmxu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, MMXU mmxu, MeterAsset asset, MeterAssetMMXUPair pair);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, MeterAssetMMXUPair pair, MMXU mmxu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -89,8 +89,8 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MMXU mmxu, MeterAsset asset,
-			MeterAssetMMXUPair pair);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset, MeterAssetMMXUPair pair,
+			MMXU mmxu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,8 +106,8 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject assetToMeter, EObject meter, EObject mmxu,
-			EObject asset, EObject pairToMeter, EObject pair, EObject mmxuToMeter);
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject asset, EObject pairToMeter, EObject mmxuToMeter,
+			EObject meter, EObject assetToMeter, EObject pair, EObject mmxu);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_149(EMoflonEdge _edge_a);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_36(EMoflonEdge _edge_a);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,7 +147,7 @@ public interface PMUVoltageMeter extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(MMXU mmxu, MeterAsset asset, MeterAssetMMXUPair pair);
+	boolean checkDEC_FWD(MeterAsset asset, MeterAssetMMXUPair pair, MMXU mmxu);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->

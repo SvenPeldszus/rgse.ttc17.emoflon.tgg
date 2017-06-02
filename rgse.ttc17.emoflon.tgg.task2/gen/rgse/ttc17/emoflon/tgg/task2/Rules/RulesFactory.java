@@ -22,31 +22,13 @@ public interface RulesFactory extends EFactory {
 	RulesFactory eINSTANCE = rgse.ttc17.emoflon.tgg.task2.Rules.impl.RulesFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Work Location</em>'.
+	 * Returns a new object of class '<em>Tie Flow</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Work Location</em>'.
+	 * @return a new object of class '<em>Tie Flow</em>'.
 	 * @generated
 	 */
-	WorkLocation createWorkLocation();
-
-	/**
-	 * Returns a new object of class '<em>Conform Load Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conform Load Group</em>'.
-	 * @generated
-	 */
-	ConformLoadGroup createConformLoadGroup();
-
-	/**
-	 * Returns a new object of class '<em>Power System Resource</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Power System Resource</em>'.
-	 * @generated
-	 */
-	PowerSystemResource createPowerSystemResource();
+	TieFlow createTieFlow();
 
 	/**
 	 * Returns a new object of class '<em>Position Point</em>'.
@@ -58,51 +40,6 @@ public interface RulesFactory extends EFactory {
 	PositionPoint createPositionPoint();
 
 	/**
-	 * Returns a new object of class '<em>Tie Flow Link Control Area</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tie Flow Link Control Area</em>'.
-	 * @generated
-	 */
-	TieFlowLinkControlArea createTieFlowLinkControlArea();
-
-	/**
-	 * Returns a new object of class '<em>PMU Voltage Meter</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>PMU Voltage Meter</em>'.
-	 * @generated
-	 */
-	PMUVoltageMeter createPMUVoltageMeter();
-
-	/**
-	 * Returns a new object of class '<em>Zone</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Zone</em>'.
-	 * @generated
-	 */
-	Zone createZone();
-
-	/**
-	 * Returns a new object of class '<em>SDP Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>SDP Location</em>'.
-	 * @generated
-	 */
-	SDPLocation createSDPLocation();
-
-	/**
-	 * Returns a new object of class '<em>Private Meter Voltage</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Private Meter Voltage</em>'.
-	 * @generated
-	 */
-	PrivateMeterVoltage createPrivateMeterVoltage();
-
-	/**
 	 * Returns a new object of class '<em>Non Conform Load</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,33 +47,6 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	NonConformLoad createNonConformLoad();
-
-	/**
-	 * Returns a new object of class '<em>Non Conform Load Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Non Conform Load Group</em>'.
-	 * @generated
-	 */
-	NonConformLoadGroup createNonConformLoadGroup();
-
-	/**
-	 * Returns a new object of class '<em>Tie Flow</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Tie Flow</em>'.
-	 * @generated
-	 */
-	TieFlow createTieFlow();
-
-	/**
-	 * Returns a new object of class '<em>Load Area</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Load Area</em>'.
-	 * @generated
-	 */
-	LoadArea createLoadArea();
 
 	/**
 	 * Returns a new object of class '<em>Service Delivery Point Link Meter Asset</em>'.
@@ -148,22 +58,31 @@ public interface RulesFactory extends EFactory {
 	ServiceDeliveryPointLinkMeterAsset createServiceDeliveryPointLinkMeterAsset();
 
 	/**
-	 * Returns a new object of class '<em>Location Link</em>'.
+	 * Returns a new object of class '<em>Zone</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Location Link</em>'.
+	 * @return a new object of class '<em>Zone</em>'.
 	 * @generated
 	 */
-	LocationLink createLocationLink();
+	Zone createZone();
 
 	/**
-	 * Returns a new object of class '<em>Energy Consumer Link Service Delivery Point</em>'.
+	 * Returns a new object of class '<em>Load Area</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer Link Service Delivery Point</em>'.
+	 * @return a new object of class '<em>Load Area</em>'.
 	 * @generated
 	 */
-	EnergyConsumerLinkServiceDeliveryPoint createEnergyConsumerLinkServiceDeliveryPoint();
+	LoadArea createLoadArea();
+
+	/**
+	 * Returns a new object of class '<em>Service Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service Location</em>'.
+	 * @generated
+	 */
+	ServiceLocation createServiceLocation();
 
 	/**
 	 * Returns a new object of class '<em>Location</em>'.
@@ -173,6 +92,15 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	Location createLocation();
+
+	/**
+	 * Returns a new object of class '<em>SDP Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SDP Location</em>'.
+	 * @generated
+	 */
+	SDPLocation createSDPLocation();
 
 	/**
 	 * Returns a new object of class '<em>Conform Load</em>'.
@@ -193,31 +121,13 @@ public interface RulesFactory extends EFactory {
 	ControlArea createControlArea();
 
 	/**
-	 * Returns a new object of class '<em>Sub Load Area</em>'.
+	 * Returns a new object of class '<em>Conform Load Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sub Load Area</em>'.
+	 * @return a new object of class '<em>Conform Load Group</em>'.
 	 * @generated
 	 */
-	SubLoadArea createSubLoadArea();
-
-	/**
-	 * Returns a new object of class '<em>Load Area Link Control Area</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Load Area Link Control Area</em>'.
-	 * @generated
-	 */
-	LoadAreaLinkControlArea createLoadAreaLinkControlArea();
-
-	/**
-	 * Returns a new object of class '<em>Energy Consumer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Energy Consumer</em>'.
-	 * @generated
-	 */
-	EnergyConsumer createEnergyConsumer();
+	ConformLoadGroup createConformLoadGroup();
 
 	/**
 	 * Returns a new object of class '<em>Station Supply</em>'.
@@ -229,15 +139,6 @@ public interface RulesFactory extends EFactory {
 	StationSupply createStationSupply();
 
 	/**
-	 * Returns a new object of class '<em>Service Location</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service Location</em>'.
-	 * @generated
-	 */
-	ServiceLocation createServiceLocation();
-
-	/**
 	 * Returns a new object of class '<em>Terminal</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -245,6 +146,33 @@ public interface RulesFactory extends EFactory {
 	 * @generated
 	 */
 	Terminal createTerminal();
+
+	/**
+	 * Returns a new object of class '<em>Service Delivery Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service Delivery Point</em>'.
+	 * @generated
+	 */
+	ServiceDeliveryPoint createServiceDeliveryPoint();
+
+	/**
+	 * Returns a new object of class '<em>Energy Consumer Link Service Delivery Point</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Energy Consumer Link Service Delivery Point</em>'.
+	 * @generated
+	 */
+	EnergyConsumerLinkServiceDeliveryPoint createEnergyConsumerLinkServiceDeliveryPoint();
+
+	/**
+	 * Returns a new object of class '<em>Load Area Link Control Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Load Area Link Control Area</em>'.
+	 * @generated
+	 */
+	LoadAreaLinkControlArea createLoadAreaLinkControlArea();
 
 	/**
 	 * Returns a new object of class '<em>Gml Position</em>'.
@@ -256,13 +184,85 @@ public interface RulesFactory extends EFactory {
 	GmlPosition createGmlPosition();
 
 	/**
-	 * Returns a new object of class '<em>Service Delivery Point</em>'.
+	 * Returns a new object of class '<em>Non Conform Load Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service Delivery Point</em>'.
+	 * @return a new object of class '<em>Non Conform Load Group</em>'.
 	 * @generated
 	 */
-	ServiceDeliveryPoint createServiceDeliveryPoint();
+	NonConformLoadGroup createNonConformLoadGroup();
+
+	/**
+	 * Returns a new object of class '<em>Work Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Work Location</em>'.
+	 * @generated
+	 */
+	WorkLocation createWorkLocation();
+
+	/**
+	 * Returns a new object of class '<em>Tie Flow Link Control Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tie Flow Link Control Area</em>'.
+	 * @generated
+	 */
+	TieFlowLinkControlArea createTieFlowLinkControlArea();
+
+	/**
+	 * Returns a new object of class '<em>Power System Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Power System Resource</em>'.
+	 * @generated
+	 */
+	PowerSystemResource createPowerSystemResource();
+
+	/**
+	 * Returns a new object of class '<em>Private Meter Voltage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Private Meter Voltage</em>'.
+	 * @generated
+	 */
+	PrivateMeterVoltage createPrivateMeterVoltage();
+
+	/**
+	 * Returns a new object of class '<em>Location Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Location Link</em>'.
+	 * @generated
+	 */
+	LocationLink createLocationLink();
+
+	/**
+	 * Returns a new object of class '<em>PMU Voltage Meter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>PMU Voltage Meter</em>'.
+	 * @generated
+	 */
+	PMUVoltageMeter createPMUVoltageMeter();
+
+	/**
+	 * Returns a new object of class '<em>Sub Load Area</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sub Load Area</em>'.
+	 * @generated
+	 */
+	SubLoadArea createSubLoadArea();
+
+	/**
+	 * Returns a new object of class '<em>Energy Consumer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Energy Consumer</em>'.
+	 * @generated
+	 */
+	EnergyConsumer createEnergyConsumer();
 
 	/**
 	 * Returns the package supported by this factory.

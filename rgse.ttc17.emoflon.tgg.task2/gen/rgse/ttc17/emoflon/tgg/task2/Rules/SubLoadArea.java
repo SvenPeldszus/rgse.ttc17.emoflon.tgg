@@ -45,9 +45,9 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean isAppropriate_FWD(Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	boolean isAppropriate_FWD(Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,9 +71,9 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjectsToMatch_FWD(Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	void registerObjectsToMatch_FWD(Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,9 +81,9 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isAppropriate_solveCsp_FWD(Match match, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	CSP isAppropriate_solveCsp_FWD(Match match, MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,11 +99,10 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch,
-			outagePreventionJointarget.ConformLoadGroup trgGroup, ServiceDeliveryPoint srcDeliver,
-			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, ConformLoadGroup srcGroup, MeterAsset asset,
-			ConformLoadGroupToConformLoadGroup groupToGroup, MeterAssetPhysicalDevicePair pair,
-			ConformLoad srcConsumer);
+	CSP isApplicable_solveCsp_FWD(IsApplicableMatch isApplicableMatch, MeterAsset asset, ConformLoadGroup srcGroup,
+			outagePreventionJointarget.ConformLoadGroup trgGroup, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
+			MeterAssetPhysicalDevicePair pair, ServiceDeliveryPoint srcDeliver,
+			ConformLoadGroupToConformLoadGroup groupToGroup, ConformLoad srcConsumer);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,8 +118,8 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	void registerObjects_FWD(PerformRuleResult ruleresult, EObject trgGroup, EObject srcDeliver, EObject trgArea,
-			EObject srcArea, EObject srcGroup, EObject areaToArea, EObject asset, EObject groupToGroup, EObject pair,
+	void registerObjects_FWD(PerformRuleResult ruleresult, EObject areaToArea, EObject asset, EObject srcGroup,
+			EObject trgGroup, EObject srcArea, EObject trgArea, EObject pair, EObject srcDeliver, EObject groupToGroup,
 			EObject srcConsumer);
 
 	/**
@@ -137,7 +136,7 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	EObjectContainer isAppropriate_FWD_EMoflonEdge_162(EMoflonEdge _edge_SubLoadArea);
+	EObjectContainer isAppropriate_FWD_EMoflonEdge_37(EMoflonEdge _edge_SubLoadArea);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,8 +160,9 @@ public interface SubLoadArea extends EObject, AbstractRule {
 	 * @model
 	 * @generated
 	 */
-	boolean checkDEC_FWD(ServiceDeliveryPoint srcDeliver, gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea,
-			ConformLoadGroup srcGroup, MeterAsset asset, MeterAssetPhysicalDevicePair pair, ConformLoad srcConsumer);
+	boolean checkDEC_FWD(MeterAsset asset, ConformLoadGroup srcGroup,
+			gluemodel.CIM.IEC61970.LoadModel.SubLoadArea srcArea, MeterAssetPhysicalDevicePair pair,
+			ServiceDeliveryPoint srcDeliver, ConformLoad srcConsumer);
 	// <-- [user code injected with eMoflon]
 
 	// [user code injected with eMoflon] -->
