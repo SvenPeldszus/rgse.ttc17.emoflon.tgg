@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: rgse.ttc17.metamodels.trg.outage.detection;singleton:=true
+Bundle-SymbolicName: rgse.ttc17.metamodels.trg;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
