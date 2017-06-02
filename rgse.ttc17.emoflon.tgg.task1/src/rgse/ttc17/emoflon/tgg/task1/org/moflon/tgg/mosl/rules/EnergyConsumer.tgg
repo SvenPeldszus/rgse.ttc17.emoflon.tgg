@@ -45,6 +45,6 @@
 }
 
 #attributeConditions {
-	setReachability(connect.Connection, trgConsumer.Reachability)
+	castBooleanToInteger(connect.Connection, trgConsumer.Reachability)
 	eq(electric.ApparentPowermL1, trgConsumer.PowerA)
 }

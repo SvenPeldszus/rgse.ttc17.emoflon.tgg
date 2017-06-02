@@ -19,5 +19,5 @@
     </addedElement>
   </changes>
   <changes xsi:type="changes:CompositionListDeletion" deletedElement="COSEM-out000.xmi#//@PhysicalDevice.1" index="1" affectedElement="COSEM-out000.xmi#//" feature="ecore:EReference http://www.transformation-tool-contest.eu/2017/smartGrids/cosem#//COSEMRoot/PhysicalDevice" />
-  <changes xsi:type="changes:CompositionListDeletion" deletedElement="#//@changes.0/addedElement" index="1" affectedElement="COSEM-out000.xmi#//" feature="ecore:EReference http://www.transformation-tool-contest.eu/2017/smartGrids/cosem#//COSEMRoot/PhysicalDevice" />
+  <changes xsi:type="changes:CompositionListDeletion" deletedElement="#//@changes.0/@addedElement" index="1" affectedElement="COSEM-out000.xmi#//" feature="ecore:EReference http://www.transformation-tool-contest.eu/2017/smartGrids/cosem#//COSEMRoot/PhysicalDevice" />
 </changes:ModelChangeSet>

@@ -51,7 +51,7 @@ public class Changes2DeltaSpecification {
 		return affected.eResource().getContents().get(0);
 	}
 
-	private static void convert(ModelChange change, DeltaSpecification result) {
+	public static void convert(ModelChange change, DeltaSpecification result) {
 		// ElementaryChangeTransaction a;
 		if (change instanceof ElementaryChangeTransaction) {
 			ElementaryChangeTransaction trx = (ElementaryChangeTransaction) change;

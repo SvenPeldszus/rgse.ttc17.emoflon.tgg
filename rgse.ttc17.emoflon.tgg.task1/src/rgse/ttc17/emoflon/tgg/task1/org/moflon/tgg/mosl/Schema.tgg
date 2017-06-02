@@ -41,7 +41,7 @@
 #attributeConditions {
 	
 	#userDefined
-	setReachability(0:EBoolean,1:EInt){
+	castBooleanToInteger(0:EBoolean,1:EInt){
 		#sync: BB, BF
 		#gen:
 	}

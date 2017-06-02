@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <changes:ModelChangeSet xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xmi="http://www.omg.org/XMI" xmlns:changes="http://nmf.codeplex.com/changes" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
-  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.2/addedElement" index="1" affectedElement="CIM_DCIM-out000.xmi#_2879322Loc" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Common/Location/Assets" />
-  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.2/addedElement" affectedElement="CIM_DCIM-out000.xmi#_5850201SDL" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Metering/ServiceDeliveryPoint/EndDeviceAssets" />
+  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.2/@addedElement" index="1" affectedElement="CIM_DCIM-out000.xmi#_2879322Loc" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Common/Location/Assets" />
+  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.2/@addedElement" affectedElement="CIM_DCIM-out000.xmi#_5850201SDL" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Metering/ServiceDeliveryPoint/EndDeviceAssets" />
   <changes xsi:type="changes:CompositionListInsertion" index="10339" affectedElement="CIM_DCIM-out000.xmi#//" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//CIMRoot/IDobject">
     <addedElement xmlns:cimMetering="http://iec.ch/TC57/2009/CIM-schema-cim14#Metering" xsi:type="cimMetering:MeterAsset" ServiceDeliveryPoint="CIM_DCIM-out000.xmi#_5850201SDL" Location="CIM_DCIM-out000.xmi#_2879322Loc" mRID="1d2976e8-8318-4f64-9d20-1df6717ca6c8" name="1d2976e8-8318-4f64-9d20-1df6717ca6c8" UUID="1d2976e8-8318-4f64-9d20-1df6717ca6c8" />
   </changes>
@@ -13,8 +13,8 @@
     <nestedChanges xsi:type="changes:AssociationListDeletion" deletedElement="CIM_DCIM-out000.xmi#_8197201PMUMeter" affectedElement="CIM_DCIM-out000.xmi#_8197201Loc" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Common/Location/Assets" />
     <nestedChanges xsi:type="changes:AssociationListInsertion" addedElement="CIM_DCIM-out000.xmi#_8197201PMUMeter" affectedElement="CIM_DCIM-out000.xmi#_2017201Loc" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Common/Location/Assets" />
   </changes>
-  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.9/addedElement" affectedElement="CIM_DCIM-out000.xmi#_2825201Loc" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Common/Location/Assets" />
-  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.9/addedElement" index="1" affectedElement="CIM_DCIM-out000.xmi#_50310201SDL" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Metering/ServiceDeliveryPoint/EndDeviceAssets" />
+  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.9/@addedElement" affectedElement="CIM_DCIM-out000.xmi#_2825201Loc" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Common/Location/Assets" />
+  <changes xsi:type="changes:AssociationListInsertion" addedElement="#//@changes.9/@addedElement" index="1" affectedElement="CIM_DCIM-out000.xmi#_50310201SDL" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//IEC61968/Metering/ServiceDeliveryPoint/EndDeviceAssets" />
   <changes xsi:type="changes:CompositionListInsertion" index="10339" affectedElement="CIM_DCIM-out000.xmi#//" feature="ecore:EReference http://iec.ch/TC57/2009/CIM-schema-cim14#//CIMRoot/IDobject">
     <addedElement xmlns:cimMetering="http://iec.ch/TC57/2009/CIM-schema-cim14#Metering" xsi:type="cimMetering:MeterAsset" ServiceDeliveryPoint="CIM_DCIM-out000.xmi#_50310201SDL" Location="CIM_DCIM-out000.xmi#_2825201Loc" mRID="1d738a52-9109-423e-9a5d-10fd09a7ef74" name="1d738a52-9109-423e-9a5d-10fd09a7ef74" UUID="1d738a52-9109-423e-9a5d-10fd09a7ef74" />
   </changes>

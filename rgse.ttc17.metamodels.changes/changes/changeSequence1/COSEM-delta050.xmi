@@ -24,5 +24,5 @@
       <ElectricityValues ActivePowerpL1="45" ActivePowerpall="45" ActivePowermL1="230" ActivePowermall="230" ReactivePowerpL1="10" ReactivePowerpall="10" ReactivePowermL1="32" ReactivePowermall="32" ReactivePowerQIall="22" ReactivePowerQIIIL1="22" ApparentPowerpL1="68" ApparentPowerpAll="68" ApparentPowermL1="303.1" ApparentPowermL2="0.1" ApparentPowermL3="0.1" ApparentPowermAll="300" CurrentL1="382" CurrentAll="382" VoltageL1="40.5" VoltageL2="0.1" VoltageL3="0.1" VoltageAll="40" SupplyFrequencyL1="50" SupplyFrequencyL2="50" SupplyFrequencyL3="50" SupplyFrequencyAll="50" Angles="90" logical_name="7b0faf90-33b5-4254-802a-a762792e4120" xmi:id="$20" />
     </addedElement>
   </changes>
-  <changes xsi:type="changes:CompositionListDeletion" deletedElement="#//@changes.13/addedElement" index="3" affectedElement="COSEM-out000.xmi#//" feature="ecore:EReference http://www.transformation-tool-contest.eu/2017/smartGrids/cosem#//COSEMRoot/PhysicalDevice" />
+  <changes xsi:type="changes:CompositionListDeletion" deletedElement="#//@changes.13/@addedElement" index="3" affectedElement="COSEM-out000.xmi#//" feature="ecore:EReference http://www.transformation-tool-contest.eu/2017/smartGrids/cosem#//COSEMRoot/PhysicalDevice" />
 </changes:ModelChangeSet>

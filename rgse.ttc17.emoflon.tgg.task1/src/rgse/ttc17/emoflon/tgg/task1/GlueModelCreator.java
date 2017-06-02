@@ -46,17 +46,17 @@ public class GlueModelCreator {
 	
 	@Test
 	public void test() {
-		String cimString = "CIM_DCIM.xmi";
-		String cosemString = "COSEM.xmi";
+		String cimString = "CIM_DCIM-out000.xmi";
+		String cosemString = "COSEM-out000.xmi";
 		
 		Task1Trafo tgg = new Task1Trafo();				
 		ResourceSet rs = tgg.getResourceSet();
 		
-		Bundle plugin = Platform.getBundle("rgse.ttc17.emoflon.tgg.task1");
+		Bundle plugin = Platform.getBundle("rgse.ttc17.metamodels.src");
 		
 		Resource cimResource = rs.createResource(URI.createURI(cimString));
 		try {
-			URL cimUrl = plugin.getEntry("instances/"+ cimString);
+			URL cimUrl = plugin.getEntry("changes/changeSequence1"+ cimString);
 			cimResource.load(cimUrl.openConnection().getInputStream(), Collections.EMPTY_MAP);
 		} catch (IOException e) {
 			e.printStackTrace();
