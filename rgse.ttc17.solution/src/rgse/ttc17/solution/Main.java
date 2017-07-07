@@ -13,7 +13,6 @@ import gluemodel.substationStandard.Substandard;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.OpenOption;
 import java.util.ArrayList;
@@ -22,7 +21,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -101,9 +99,9 @@ public class Main {
 				changePath + "/Substandard-out000.xmi", 0, changeSet, runIndex, "Initial");
 
 		for (int i = 1; i <= sequenceLength; i++) {
-			if ("outagePrevention".equals(transformation)) {
+			if ("OutagePrevention".equalsIgnoreCase(transformation)) {
 				tgg = new Task2Sync(rs, false);
-			} else if ("outageDetection".equals(transformation)) {
+			} else if ("OutageDetection".equalsIgnoreCase(transformation)) {
 				tgg = new Task1Sync(rs, false);
 			} else {
 				return;
@@ -130,7 +128,7 @@ public class Main {
 
 		long start = System.nanoTime();
 		Root root;
-		if ("outagePrevention".equals(transformation)) {
+		if ("OutagePrevention".equalsIgnoreCase(transformation)) {
 			root = GlueModelCreator.createGlueModel(cimRoot, subRoot, cosemRoot);
 		} else {
 			root = GlueModelCreator.createGlueModel(cimRoot, null, cosemRoot);
@@ -227,7 +225,7 @@ public class Main {
 			Changes2DeltaSpecification.convert(change, emoflonDelta);
 		}
 
-		if ("outagePrevention".equals(transformation)) {
+		if ("OutagePrevention".equalsIgnoreCase(transformation)) {
 			for (ModelChange change : substationModelChangeSet.getChanges()) {
 				Changes2DeltaSpecification.convert(change, emoflonDelta);
 			}
