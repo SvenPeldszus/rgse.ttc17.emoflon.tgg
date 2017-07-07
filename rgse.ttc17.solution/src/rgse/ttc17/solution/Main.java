@@ -35,9 +35,12 @@ import rgse.ttc17.emoflon.tgg.task2.org.moflon.tie.Task2Sync;
 import rgse.ttc17.metamodels.src.GlueModelCreator;
 
 public class Main {
+	
+	// Set to true if you are debugging inside of Eclipse
 	private static final boolean DEBUG = false;
+	
 	@com.beust.jcommander.Parameter(names = {
-			"-view" }, description = "The view that should be computed", required = true)
+			"-view"}, description = "The view that should be computed", required = true)
 	private String transformation;
 	private ResourceSet rs;
 	private SynchronizationHelper tgg;
@@ -82,9 +85,9 @@ public class Main {
 		long start = System.nanoTime();
 
 		if ("OutagePrevention".equalsIgnoreCase(transformation)) {
-			tgg = new Task2Sync(false);
+			tgg = new Task2Sync(DEBUG);
 		} else if ("OutageDetection".equalsIgnoreCase(transformation)) {
-			tgg = new Task1Sync(false);
+			tgg = new Task1Sync(DEBUG);
 		} else {
 			return;
 		}
@@ -100,9 +103,9 @@ public class Main {
 
 		for (int i = 1; i <= sequenceLength; i++) {
 			if ("OutagePrevention".equalsIgnoreCase(transformation)) {
-				tgg = new Task2Sync(rs, false);
+				tgg = new Task2Sync(rs, DEBUG);
 			} else if ("OutageDetection".equalsIgnoreCase(transformation)) {
-				tgg = new Task1Sync(rs, false);
+				tgg = new Task1Sync(rs, DEBUG);
 			} else {
 				return;
 			}
