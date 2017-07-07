@@ -83,9 +83,9 @@ public class Main {
 
 		long start = System.nanoTime();
 
-		if ("outagePrevention".equals(transformation)) {
+		if ("OutagePrevention".equalsIgnoreCase(transformation)) {
 			tgg = new Task2Sync(false);
-		} else if ("outageDetection".equals(transformation)) {
+		} else if ("OutageDetection".equalsIgnoreCase(transformation)) {
 			tgg = new Task1Sync(false);
 		} else {
 			return;
@@ -158,7 +158,7 @@ public class Main {
 		}
 
 		System.out.println("RGSEeMoflonTGG;" + transformation + ";" + changeSet + ";" + runIndex + ";"
-				+ Integer.toString(index) + ";" + phase + ";TrafoTime;" + Long.toString(end - start));
+				+ Integer.toString(index) + ";" + phase + ";Time;" + Long.toString(end - start));
 		System.out.println(
 				"RGSEeMoflonTGG;" + transformation + ";" + changeSet + ";" + runIndex + ";" + Integer.toString(index)
 						+ ";" + phase + ";Elements;" + Integer.toString(targetResource.getContents().size()));
