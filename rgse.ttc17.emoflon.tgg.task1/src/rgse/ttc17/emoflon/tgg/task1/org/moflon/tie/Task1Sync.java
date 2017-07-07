@@ -2,9 +2,9 @@ package rgse.ttc17.emoflon.tgg.task1.org.moflon.tie;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URISyntaxException;
 import java.util.Collections;
 
+import org.apache.log4j.BasicConfigurator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -32,7 +32,6 @@ public class Task1Sync extends SynchronizationHelper {
 
 	public Task1Sync(ResourceSet rs, boolean debug) throws IOException {
 		this.set = rs;
-		
 		initialize(debug);
 	}
 
@@ -42,6 +41,8 @@ public class Task1Sync extends SynchronizationHelper {
 	}
 
 	private void initialize(boolean debug) throws IOException {
+		BasicConfigurator.configure();
+		setMute(true);
 		setCorrPackage(Task1Package.eINSTANCE);
 		if (debug) {
 			String pathToProject = "../rgse.ttc17.emoflon.tgg.task1";
@@ -49,7 +50,7 @@ public class Task1Sync extends SynchronizationHelper {
 					+ MoflonUtil.getDefaultNameOfFileInProjectWithoutExtension("Task1") + ".sma.xmi", true), true);
 			setRules((StaticAnalysis) r.getContents().get(0));
 		} else {
-			InputStream in = getClass().getResourceAsStream("/model/Task1.sma.xmi");
+			InputStream in = getClass().getResourceAsStream("/Task1.sma.xmi");
 			Resource r = set.createResource(URI.createURI("Task1.sma.xmi"));
 			r.load(in, Collections.EMPTY_MAP);
 			setRules((StaticAnalysis) r.getContents().get(0));
